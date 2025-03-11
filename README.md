@@ -111,10 +111,10 @@ Add `VariablesSchema` and `DataSchema` (`data` field in the query response) usin
 
 It's possible to export additional schemas like `ClipSchema` or `UserSchema` if needed (exports should end with `Schema`). Use `LegacyRef` to link them to main schemas.
 
-### Step 3: Run build
+### Step 3: Generate types
 
 ```bash
-pnpm build
+pnpm gen
 ```
 
 ### Step 4: Add http requests
