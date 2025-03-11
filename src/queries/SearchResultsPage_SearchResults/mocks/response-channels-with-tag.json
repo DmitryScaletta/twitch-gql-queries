@@ -1,0 +1,2408 @@
+{
+  "data": {
+    "searchFor": {
+      "channels": {
+        "cursor": "",
+        "edges": [],
+        "score": 0,
+        "totalMatches": 0,
+        "__typename": "SearchForResultUsers"
+      },
+      "channelsWithTag": {
+        "cursor": "",
+        "edges": [
+          {
+            "trackingID": "276ea9a3-484f-4a8a-b076-1775cd07ed2e",
+            "item": {
+              "broadcastSettings": {
+                "id": "29400754",
+                "title": "🔴ANGELA WAS RIGHT 🔴 80 HOURS DEEP RUINA 🔴 PMA SAFE HAVEN 🔴 THE GOLDEN AGE OF VARIETY 🔴 ALL SHALL PROSPER 🔴 VODS CHANNEL COMING 🔴",
+                "__typename": "BroadcastSettings"
+              },
+              "displayName": "Lacari",
+              "followers": {
+                "totalCount": 362065,
+                "__typename": "FollowerConnection"
+              },
+              "id": "29400754",
+              "lastBroadcast": {
+                "id": "317626751356",
+                "startedAt": "2025-03-11T08:45:47.559409Z",
+                "__typename": "Broadcast"
+              },
+              "login": "lacari",
+              "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/lacari-profile_image-decef76ca583dfaa-150x150.png",
+              "description": "The Boshy, Camp Knut Champion, BGC Pillar, Recovering Gacha Addict.",
+              "channel": {
+                "id": "29400754",
+                "schedule": {
+                  "id": "schedule-29400754",
+                  "nextSegment": null,
+                  "__typename": "Schedule"
+                },
+                "__typename": "Channel"
+              },
+              "self": null,
+              "latestVideo": {
+                "edges": [
+                  {
+                    "node": {
+                      "id": "2402818598",
+                      "lengthSeconds": 7858,
+                      "title": "🔴ANGELA WAS RIGHT 🔴 80 HOURS DEEP RUINA 🔴 PMA SAFE HAVEN 🔴 THE GOLDEN AGE OF VARIETY 🔴 ALL SHALL PROSPER 🔴 VODS CHANNEL COMING 🔴",
+                      "previewThumbnailURL": "https://vod-secure.twitch.tv/_404/404_processing_100x56.png",
+                      "__typename": "Video"
+                    },
+                    "__typename": "VideoEdge"
+                  }
+                ],
+                "__typename": "VideoConnection"
+              },
+              "topClip": {
+                "edges": [
+                  {
+                    "node": {
+                      "id": "199539208",
+                      "title": "first cart alkLFG",
+                      "durationSeconds": 34,
+                      "thumbnailURL": "https://static-cdn.jtvnw.net/twitch-clips-thumbnails-prod/AbrasiveQuaintPeafowlChocolateRain-_lMDD1uQ5sjkmzzw/bd7394ab-6182-4fad-a546-e02f5764cd30/preview.jpg",
+                      "slug": "AbrasiveQuaintPeafowlChocolateRain-_lMDD1uQ5sjkmzzw",
+                      "__typename": "Clip"
+                    },
+                    "__typename": "ClipEdge"
+                  }
+                ],
+                "__typename": "ClipConnection"
+              },
+              "roles": { "isPartner": true, "__typename": "UserRoles" },
+              "stream": {
+                "game": {
+                  "id": "517515",
+                  "slug": "library-of-ruina",
+                  "name": "Library of Ruina",
+                  "displayName": "Library of Ruina",
+                  "__typename": "Game"
+                },
+                "id": "317626751356",
+                "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_lacari-214x120.jpg",
+                "freeformTags": [
+                  {
+                    "id": "fft:CHANNEL:29400754:0",
+                    "name": "Bald",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:29400754:1",
+                    "name": "Loud",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:29400754:2",
+                    "name": "Forsen",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:29400754:3",
+                    "name": "Vtuber",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:29400754:4",
+                    "name": "Black",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:29400754:5",
+                    "name": "Anime",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:29400754:6",
+                    "name": "English",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:29400754:7",
+                    "name": "Weeb",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:29400754:8",
+                    "name": "Gooner",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:29400754:9",
+                    "name": "Variety",
+                    "__typename": "FreeformTag"
+                  }
+                ],
+                "type": "live",
+                "viewersCount": 2630,
+                "__typename": "Stream"
+              },
+              "watchParty": null,
+              "__typename": "User"
+            },
+            "__typename": "SearchForEdge"
+          },
+          {
+            "trackingID": "0e366418-83db-4223-b218-671b2dcde696",
+            "item": {
+              "broadcastSettings": {
+                "id": "188887325",
+                "title": "⚠️actually FINAL CLIMB =D we are climbing??? HAHA u wont believe the op champion im playing =D ⚠️ !kick",
+                "__typename": "BroadcastSettings"
+              },
+              "displayName": "yamatosdeath",
+              "followers": {
+                "totalCount": 294144,
+                "__typename": "FollowerConnection"
+              },
+              "id": "188887325",
+              "lastBroadcast": {
+                "id": "317019781241",
+                "startedAt": "2025-03-11T09:32:23.073131Z",
+                "__typename": "Broadcast"
+              },
+              "login": "yamatosdeath",
+              "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/ad44bd24-e9e1-4f18-a73b-a431bd36873b-profile_image-150x150.png",
+              "description": "new frog friendly stream :) welcome to this friendly stream ask any question u want to ask!!! smiley face! Love qiyana katarina kassadin league of legends and hot choccy milk and anime",
+              "channel": {
+                "id": "188887325",
+                "schedule": {
+                  "id": "schedule-188887325",
+                  "nextSegment": null,
+                  "__typename": "Schedule"
+                },
+                "__typename": "Channel"
+              },
+              "self": null,
+              "latestVideo": {
+                "edges": [
+                  {
+                    "node": {
+                      "id": "2402831395",
+                      "lengthSeconds": 5062,
+                      "title": "⚠️actually FINAL CLIMB =D we are climbing??? HAHA u wont believe the op champion im playing =D ⚠️ !kick",
+                      "previewThumbnailURL": "https://vod-secure.twitch.tv/_404/404_processing_100x56.png",
+                      "__typename": "Video"
+                    },
+                    "__typename": "VideoEdge"
+                  }
+                ],
+                "__typename": "VideoConnection"
+              },
+              "topClip": {
+                "edges": [
+                  {
+                    "node": {
+                      "id": "1575665572",
+                      "title": "ragey",
+                      "durationSeconds": 60,
+                      "thumbnailURL": "https://static-cdn.jtvnw.net/twitch-clips-thumbnails-prod/MildCovertChoughOMGScoots-Y36jc7VEQi7ZJ7HO/5ddfb08a-919a-4d9a-9084-6d0466cf654e/preview.jpg",
+                      "slug": "MildCovertChoughOMGScoots-Y36jc7VEQi7ZJ7HO",
+                      "__typename": "Clip"
+                    },
+                    "__typename": "ClipEdge"
+                  }
+                ],
+                "__typename": "ClipConnection"
+              },
+              "roles": { "isPartner": true, "__typename": "UserRoles" },
+              "stream": {
+                "game": {
+                  "id": "21779",
+                  "slug": "league-of-legends",
+                  "name": "League of Legends",
+                  "displayName": "League of Legends",
+                  "__typename": "Game"
+                },
+                "id": "317019781241",
+                "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_yamatosdeath-214x120.jpg",
+                "freeformTags": [
+                  {
+                    "id": "fft:CHANNEL:188887325:0",
+                    "name": "Deutsch",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:188887325:1",
+                    "name": "happy",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:188887325:2",
+                    "name": "Smile",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:188887325:3",
+                    "name": "KEKW",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:188887325:4",
+                    "name": "LULE",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:188887325:5",
+                    "name": "forsen",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:188887325:6",
+                    "name": "LOL",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:188887325:7",
+                    "name": "English",
+                    "__typename": "FreeformTag"
+                  }
+                ],
+                "type": "live",
+                "viewersCount": 971,
+                "__typename": "Stream"
+              },
+              "watchParty": null,
+              "__typename": "User"
+            },
+            "__typename": "SearchForEdge"
+          },
+          {
+            "trackingID": "5f96f77b-ca93-447a-b065-8c0ccbfee67e",
+            "item": {
+              "broadcastSettings": {
+                "id": "99009608",
+                "title": "🔴CS 30,000 RATING GAMEPLAY🔴OHNEPIXEL WAITING ROOM🔴!discord !twitter !update",
+                "__typename": "BroadcastSettings"
+              },
+              "displayName": "Exerpas",
+              "followers": {
+                "totalCount": 14189,
+                "__typename": "FollowerConnection"
+              },
+              "id": "99009608",
+              "lastBroadcast": {
+                "id": "317020837369",
+                "startedAt": "2025-03-11T10:09:18.426687Z",
+                "__typename": "Broadcast"
+              },
+              "login": "exerpas",
+              "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/1dc7c7bf-eecf-4d78-a253-757d87ea8349-profile_image-150x150.png",
+              "description": "Exerpas streams CS2. He is skins enthusiast and DreamHack Winter 2014 collector; also doing price checks, inventory reviews, CS News Reporting and pro gameplay reviewing.",
+              "channel": {
+                "id": "99009608",
+                "schedule": {
+                  "id": "schedule-99009608",
+                  "nextSegment": null,
+                  "__typename": "Schedule"
+                },
+                "__typename": "Channel"
+              },
+              "self": null,
+              "latestVideo": {
+                "edges": [
+                  {
+                    "node": {
+                      "id": "2402023204",
+                      "lengthSeconds": 11160,
+                      "title": "🔴CS YAPPING INTO RDR2🔴OHNEPIXEL WAITING ROOM🔴!discord !twitter !update",
+                      "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/36cda4d3ea25e6ab4486_exerpas_316976520313_1741601740//thumb/thumb0-100x56.jpg",
+                      "__typename": "Video"
+                    },
+                    "__typename": "VideoEdge"
+                  }
+                ],
+                "__typename": "VideoConnection"
+              },
+              "topClip": {
+                "edges": [
+                  {
+                    "node": {
+                      "id": "3782058179",
+                      "title": "mildest russian podcast reaction",
+                      "durationSeconds": 28,
+                      "thumbnailURL": "https://static-cdn.jtvnw.net/twitch-clips-thumbnails-prod/AbrasiveManlyGnatPeanutButterJellyTime-weZkmIWlBray9Cjg/b4633fc2-da8f-41b6-8c0b-ed1655102b7a/preview.jpg",
+                      "slug": "AbrasiveManlyGnatPeanutButterJellyTime-weZkmIWlBray9Cjg",
+                      "__typename": "Clip"
+                    },
+                    "__typename": "ClipEdge"
+                  }
+                ],
+                "__typename": "ClipConnection"
+              },
+              "roles": { "isPartner": true, "__typename": "UserRoles" },
+              "stream": {
+                "game": {
+                  "id": "32399",
+                  "slug": "counter-strike",
+                  "name": "Counter-Strike",
+                  "displayName": "Counter-Strike",
+                  "__typename": "Game"
+                },
+                "id": "317020837369",
+                "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_exerpas-214x120.jpg",
+                "freeformTags": [
+                  {
+                    "id": "fft:CHANNEL:99009608:0",
+                    "name": "English",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:99009608:1",
+                    "name": "CS",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:99009608:2",
+                    "name": "skins",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:99009608:3",
+                    "name": "faceit",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:99009608:4",
+                    "name": "pro",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:99009608:5",
+                    "name": "ASMR",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:99009608:6",
+                    "name": "forsen",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:99009608:7",
+                    "name": "cases",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:99009608:8",
+                    "name": "140IQ",
+                    "__typename": "FreeformTag"
+                  }
+                ],
+                "type": "live",
+                "viewersCount": 130,
+                "__typename": "Stream"
+              },
+              "watchParty": null,
+              "__typename": "User"
+            },
+            "__typename": "SearchForEdge"
+          },
+          {
+            "trackingID": "01774c1c-5e77-40a9-8b54-b59573a8cdae",
+            "item": {
+              "broadcastSettings": {
+                "id": "32582950",
+                "title": "🔴 !SUPER KAIZO 🔴 | \u003c/thinking\u003e | !discord",
+                "__typename": "BroadcastSettings"
+              },
+              "displayName": "Orin",
+              "followers": {
+                "totalCount": 3615,
+                "__typename": "FollowerConnection"
+              },
+              "id": "32582950",
+              "lastBroadcast": {
+                "id": "314217353847",
+                "startedAt": "2025-03-11T08:54:53.06784Z",
+                "__typename": "Broadcast"
+              },
+              "login": "orin",
+              "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/13eaaf39-49e1-460c-911a-d618b3730233-profile_image-150x150.png",
+              "description": "probably tilted",
+              "channel": {
+                "id": "32582950",
+                "schedule": null,
+                "__typename": "Channel"
+              },
+              "self": null,
+              "latestVideo": {
+                "edges": [
+                  {
+                    "node": {
+                      "id": "2402820837",
+                      "lengthSeconds": 7313,
+                      "title": "🔴 !SUPER KAIZO 🔴 | \u003c/thinking\u003e | !discord",
+                      "previewThumbnailURL": "https://vod-secure.twitch.tv/_404/404_processing_100x56.png",
+                      "__typename": "Video"
+                    },
+                    "__typename": "VideoEdge"
+                  }
+                ],
+                "__typename": "VideoConnection"
+              },
+              "topClip": {
+                "edges": [
+                  {
+                    "node": {
+                      "id": "2359213477",
+                      "title": "bluh",
+                      "durationSeconds": 5,
+                      "thumbnailURL": "https://static-cdn.jtvnw.net/twitch-clips-thumbnails-prod/BillowingSwissCiderLitty-8ugC9jMkuCcamOWT/50b979c0-f1fb-4f50-aec9-16b0ad6a23f3/preview.jpg",
+                      "slug": "BillowingSwissCiderLitty-8ugC9jMkuCcamOWT",
+                      "__typename": "Clip"
+                    },
+                    "__typename": "ClipEdge"
+                  }
+                ],
+                "__typename": "ClipConnection"
+              },
+              "roles": { "isPartner": true, "__typename": "UserRoles" },
+              "stream": {
+                "game": {
+                  "id": "13332",
+                  "slug": "pokemon-firered-leafgreen",
+                  "name": "Pokémon FireRed/LeafGreen",
+                  "displayName": "Pokémon FireRed/LeafGreen",
+                  "__typename": "Game"
+                },
+                "id": "314217353847",
+                "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_orin-214x120.jpg",
+                "freeformTags": [
+                  {
+                    "id": "fft:CHANNEL:32582950:0",
+                    "name": "IronMON",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:32582950:1",
+                    "name": "egirl",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:32582950:2",
+                    "name": "mommy",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:32582950:3",
+                    "name": "cringe",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:32582950:4",
+                    "name": "femboy",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:32582950:5",
+                    "name": "forsen",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:32582950:6",
+                    "name": "English",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:32582950:7",
+                    "name": "Australia",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:32582950:8",
+                    "name": "drama",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:32582950:9",
+                    "name": "notAsmongold",
+                    "__typename": "FreeformTag"
+                  }
+                ],
+                "type": "live",
+                "viewersCount": 116,
+                "__typename": "Stream"
+              },
+              "watchParty": null,
+              "__typename": "User"
+            },
+            "__typename": "SearchForEdge"
+          },
+          {
+            "trackingID": "7cb15f12-8b98-4b04-8c46-240023a11d0b",
+            "item": {
+              "broadcastSettings": {
+                "id": "179992320",
+                "title": "[🔴🥚] ABRAN PASO YA REGRESÓ EL WE QUE SE VA VARIOS DÍAS Y VUELVE COMO SI NADA A CHNGAR LA MADRE OTRA VEZ",
+                "__typename": "BroadcastSettings"
+              },
+              "displayName": "FapParaMoar",
+              "followers": {
+                "totalCount": 29687,
+                "__typename": "FollowerConnection"
+              },
+              "id": "179992320",
+              "lastBroadcast": {
+                "id": "318641767165",
+                "startedAt": "2025-03-11T01:46:52.178605Z",
+                "__typename": "Broadcast"
+              },
+              "login": "fapparamoar",
+              "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/b637e64c-130f-4b98-a346-0f24b21b3b10-profile_image-150x150.png",
+              "description": "OMEGALUL",
+              "channel": {
+                "id": "179992320",
+                "schedule": {
+                  "id": "schedule-179992320",
+                  "nextSegment": null,
+                  "__typename": "Schedule"
+                },
+                "__typename": "Channel"
+              },
+              "self": null,
+              "latestVideo": {
+                "edges": [
+                  {
+                    "node": {
+                      "id": "2402633844",
+                      "lengthSeconds": 32994,
+                      "title": "[🔴🥚] ABRAN PASO YA REGRESÓ EL WE QUE SE VA VARIOS DÍAS Y VUELVE COMO SI NADA A CHNGAR LA MADRE OTRA VEZ",
+                      "previewThumbnailURL": "https://vod-secure.twitch.tv/_404/404_processing_100x56.png",
+                      "__typename": "Video"
+                    },
+                    "__typename": "VideoEdge"
+                  }
+                ],
+                "__typename": "VideoConnection"
+              },
+              "topClip": {
+                "edges": [
+                  {
+                    "node": {
+                      "id": "2109549295",
+                      "title": "SPIDER-MAN REFERENCIA EN DAREDEVIL BORN AGAIN",
+                      "durationSeconds": 36,
+                      "thumbnailURL": "https://static-cdn.jtvnw.net/twitch-clips-thumbnails-prod/SarcasticRepleteCheesecakeWholeWheat-LaXMRzHR-yqu9jeH/26f34192-eb16-4d6c-ba6d-db9d4917ee91/preview.jpg",
+                      "slug": "SarcasticRepleteCheesecakeWholeWheat-LaXMRzHR-yqu9jeH",
+                      "__typename": "Clip"
+                    },
+                    "__typename": "ClipEdge"
+                  }
+                ],
+                "__typename": "ClipConnection"
+              },
+              "roles": { "isPartner": true, "__typename": "UserRoles" },
+              "stream": {
+                "game": {
+                  "id": "509658",
+                  "slug": "just-chatting",
+                  "name": "Just Chatting",
+                  "displayName": "Just Chatting",
+                  "__typename": "Game"
+                },
+                "id": "318641767165",
+                "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_fapparamoar-214x120.jpg",
+                "freeformTags": [
+                  {
+                    "id": "fft:CHANNEL:179992320:0",
+                    "name": "7tv",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:179992320:1",
+                    "name": "bttv",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:179992320:2",
+                    "name": "forsen",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:179992320:3",
+                    "name": "Español",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:179992320:4",
+                    "name": "México",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:179992320:5",
+                    "name": "momos",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:179992320:6",
+                    "name": "VarietyStreamer",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:179992320:7",
+                    "name": "Latinoamérica",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:179992320:8",
+                    "name": "furro",
+                    "__typename": "FreeformTag"
+                  }
+                ],
+                "type": "live",
+                "viewersCount": 69,
+                "__typename": "Stream"
+              },
+              "watchParty": null,
+              "__typename": "User"
+            },
+            "__typename": "SearchForEdge"
+          },
+          {
+            "trackingID": "16154cdb-85a8-4f9d-9d8e-9b1de7041b52",
+            "item": {
+              "broadcastSettings": {
+                "id": "181875638",
+                "title": "💗 ... 💗 lurkers welcome 💗 !mypp !furry !igad 💗",
+                "__typename": "BroadcastSettings"
+              },
+              "displayName": "charliibearr",
+              "followers": {
+                "totalCount": 9196,
+                "__typename": "FollowerConnection"
+              },
+              "id": "181875638",
+              "lastBroadcast": {
+                "id": "314165919739",
+                "startedAt": "2025-03-11T09:25:29.034969Z",
+                "__typename": "Broadcast"
+              },
+              "login": "charliibearr",
+              "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/7417b516-49c9-48df-b96a-cd99ffa36de5-profile_image-150x150.png",
+              "description": "charli",
+              "channel": {
+                "id": "181875638",
+                "schedule": {
+                  "id": "schedule-181875638",
+                  "nextSegment": null,
+                  "__typename": "Schedule"
+                },
+                "__typename": "Channel"
+              },
+              "self": null,
+              "latestVideo": {
+                "edges": [
+                  {
+                    "node": {
+                      "id": "2402829439",
+                      "lengthSeconds": 5477,
+                      "title": "💗 ... 💗 lurkers welcome 💗 !mypp !furry !igad 💗",
+                      "previewThumbnailURL": "https://vod-secure.twitch.tv/_404/404_processing_100x56.png",
+                      "__typename": "Video"
+                    },
+                    "__typename": "VideoEdge"
+                  }
+                ],
+                "__typename": "VideoConnection"
+              },
+              "topClip": {
+                "edges": [
+                  {
+                    "node": {
+                      "id": "1181423049",
+                      "title": "white boy cant jump",
+                      "durationSeconds": 10,
+                      "thumbnailURL": "https://static-cdn.jtvnw.net/twitch-clips-thumbnails-prod/TemperedDeliciousTarsierHoneyBadger-5zdbZb9-YafyPE5J/ae771f8a-2851-471e-9176-e59486e355f8/preview.jpg",
+                      "slug": "TemperedDeliciousTarsierHoneyBadger-5zdbZb9-YafyPE5J",
+                      "__typename": "Clip"
+                    },
+                    "__typename": "ClipEdge"
+                  }
+                ],
+                "__typename": "ClipConnection"
+              },
+              "roles": { "isPartner": false, "__typename": "UserRoles" },
+              "stream": {
+                "game": {
+                  "id": "509658",
+                  "slug": "just-chatting",
+                  "name": "Just Chatting",
+                  "displayName": "Just Chatting",
+                  "__typename": "Game"
+                },
+                "id": "314165919739",
+                "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_charliibearr-214x120.jpg",
+                "freeformTags": [
+                  {
+                    "id": "fft:CHANNEL:181875638:0",
+                    "name": "forsen",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:181875638:1",
+                    "name": "7tv",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:181875638:2",
+                    "name": "australia",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:181875638:3",
+                    "name": "English",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:181875638:4",
+                    "name": "woman",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:181875638:5",
+                    "name": "chill",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:181875638:6",
+                    "name": "chatty",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:181875638:7",
+                    "name": "FirstPlaythough",
+                    "__typename": "FreeformTag"
+                  }
+                ],
+                "type": "live",
+                "viewersCount": 29,
+                "__typename": "Stream"
+              },
+              "watchParty": null,
+              "__typename": "User"
+            },
+            "__typename": "SearchForEdge"
+          },
+          {
+            "trackingID": "41e57b90-ad01-40a3-bfd6-2fb18fb68f25",
+            "item": {
+              "broadcastSettings": {
+                "id": "64140473",
+                "title": "first time repo | shadowbringers MSQ later | c2 mag/doom/spidey | I love being dinosaur 🦖 | !socials !perks !catvibes !anddeysay",
+                "__typename": "BroadcastSettings"
+              },
+              "displayName": "SaltyStingray",
+              "followers": {
+                "totalCount": 1042,
+                "__typename": "FollowerConnection"
+              },
+              "id": "64140473",
+              "lastBroadcast": {
+                "id": "317615267196",
+                "startedAt": "2025-03-11T02:10:38.741447Z",
+                "__typename": "Broadcast"
+              },
+              "login": "saltystingray",
+              "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/be244e13-801e-4050-a104-8647af4bb7db-profile_image-150x150.png",
+              "description": "just started streaming but been a gamer forever, from southern california.",
+              "channel": {
+                "id": "64140473",
+                "schedule": null,
+                "__typename": "Channel"
+              },
+              "self": null,
+              "latestVideo": {
+                "edges": [
+                  {
+                    "node": {
+                      "id": "2402652526",
+                      "lengthSeconds": 31567,
+                      "title": "first time shadowbringers MSQ | c2 mag/doom/spidey | I love being dinosaur 🦖 | !socials !perks !catvibes !anddeysay",
+                      "previewThumbnailURL": "https://vod-secure.twitch.tv/_404/404_processing_100x56.png",
+                      "__typename": "Video"
+                    },
+                    "__typename": "VideoEdge"
+                  }
+                ],
+                "__typename": "VideoConnection"
+              },
+              "topClip": {
+                "edges": [
+                  {
+                    "node": {
+                      "id": "8246600",
+                      "title": "cross map 4k emp punch",
+                      "durationSeconds": 15,
+                      "thumbnailURL": "https://static-cdn.jtvnw.net/twitch-clips-thumbnails-prod/ImportantSilkyDotterelOSsloth-xjt1on8MrFY3o0pP/dfe5e6bd-fa01-4507-b7b8-8c8046bee0d3/preview.jpg",
+                      "slug": "ImportantSilkyDotterelOSsloth-xjt1on8MrFY3o0pP",
+                      "__typename": "Clip"
+                    },
+                    "__typename": "ClipEdge"
+                  }
+                ],
+                "__typename": "ClipConnection"
+              },
+              "roles": { "isPartner": false, "__typename": "UserRoles" },
+              "stream": {
+                "game": {
+                  "id": "515025",
+                  "slug": "overwatch-2",
+                  "name": "Overwatch 2",
+                  "displayName": "Overwatch 2",
+                  "__typename": "Game"
+                },
+                "id": "317615267196",
+                "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_saltystingray-214x120.jpg",
+                "freeformTags": [
+                  {
+                    "id": "fft:CHANNEL:64140473:0",
+                    "name": "FLESHTUBER",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:64140473:1",
+                    "name": "English",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:64140473:2",
+                    "name": "homiesexual",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:64140473:3",
+                    "name": "edm",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:64140473:4",
+                    "name": "spiderman",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:64140473:5",
+                    "name": "sticky",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:64140473:6",
+                    "name": "chill",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:64140473:7",
+                    "name": "Drops",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:64140473:8",
+                    "name": "dropsenabled",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:64140473:9",
+                    "name": "forsen",
+                    "__typename": "FreeformTag"
+                  }
+                ],
+                "type": "live",
+                "viewersCount": 29,
+                "__typename": "Stream"
+              },
+              "watchParty": null,
+              "__typename": "User"
+            },
+            "__typename": "SearchForEdge"
+          },
+          {
+            "trackingID": "5d5032bc-4d4b-4d42-bfd3-d500a64be823",
+            "item": {
+              "broadcastSettings": {
+                "id": "32630397",
+                "title": "Inspector Jack Colt - CIU Vicpol - GigaCop | QuantumRP -  Everhood 2 or Marvel Rivals later",
+                "__typename": "BroadcastSettings"
+              },
+              "displayName": "LaughingManES",
+              "followers": {
+                "totalCount": 3717,
+                "__typename": "FollowerConnection"
+              },
+              "id": "32630397",
+              "lastBroadcast": {
+                "id": "314165944315",
+                "startedAt": "2025-03-11T09:36:52.083195Z",
+                "__typename": "Broadcast"
+              },
+              "login": "laughingmanes",
+              "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/laughingmanes-profile_image-383070134ed9fffb-150x150.png",
+              "description": "Former Starcraft II Grandmaster and Commentator and High Level LoL now moved to Roleplay and other things",
+              "channel": {
+                "id": "32630397",
+                "schedule": {
+                  "id": "schedule-32630397",
+                  "nextSegment": {
+                    "id": "eyJzZWdtZW50SUQiOiJjNzUzNjk0YS1hY2VhLTRhZmMtOTMxZi03ODdlYzNhOTlhYjIiLCJpc29ZZWFyIjoyMDI1LCJpc29XZWVrIjoxMX0=",
+                    "startAt": "2025-03-12T09:00:00Z",
+                    "endAt": "2025-03-12T13:00:00Z",
+                    "title": "",
+                    "hasReminder": false,
+                    "categories": [],
+                    "__typename": "ScheduleSegment"
+                  },
+                  "__typename": "Schedule"
+                },
+                "__typename": "Channel"
+              },
+              "self": null,
+              "latestVideo": {
+                "edges": [
+                  {
+                    "node": {
+                      "id": "2402832571",
+                      "lengthSeconds": 4794,
+                      "title": "Inspector Jack Colt - CIU Vicpol - GigaCop | QuantumRP -  Everhood 2 or Marvel Rivals later",
+                      "previewThumbnailURL": "https://vod-secure.twitch.tv/_404/404_processing_100x56.png",
+                      "__typename": "Video"
+                    },
+                    "__typename": "VideoEdge"
+                  }
+                ],
+                "__typename": "VideoConnection"
+              },
+              "topClip": { "edges": [], "__typename": "ClipConnection" },
+              "roles": { "isPartner": false, "__typename": "UserRoles" },
+              "stream": {
+                "game": {
+                  "id": "32982",
+                  "slug": "grand-theft-auto-v",
+                  "name": "Grand Theft Auto V",
+                  "displayName": "Grand Theft Auto V",
+                  "__typename": "Game"
+                },
+                "id": "314165944315",
+                "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_laughingmanes-214x120.jpg",
+                "freeformTags": [
+                  {
+                    "id": "fft:CHANNEL:32630397:0",
+                    "name": "Meditation",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:32630397:1",
+                    "name": "Roleplay",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:32630397:2",
+                    "name": "Australian",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:32630397:3",
+                    "name": "Anxiety",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:32630397:4",
+                    "name": "forsen",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:32630397:5",
+                    "name": "bajs",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:32630397:6",
+                    "name": "GodGamer",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:32630397:7",
+                    "name": "English",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:32630397:8",
+                    "name": "speedrunning",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:32630397:9",
+                    "name": "Speedrun",
+                    "__typename": "FreeformTag"
+                  }
+                ],
+                "type": "live",
+                "viewersCount": 19,
+                "__typename": "Stream"
+              },
+              "watchParty": null,
+              "__typename": "User"
+            },
+            "__typename": "SearchForEdge"
+          },
+          {
+            "trackingID": "8e1b3044-6210-49fe-98b3-0bcf803fae27",
+            "item": {
+              "broadcastSettings": {
+                "id": "722490662",
+                "title": "2/17/2025 Never forget",
+                "__typename": "BroadcastSettings"
+              },
+              "displayName": "forsen_impostor",
+              "followers": {
+                "totalCount": 9364,
+                "__typename": "FollowerConnection"
+              },
+              "id": "722490662",
+              "lastBroadcast": {
+                "id": "316975652857",
+                "startedAt": "2025-03-10T09:45:30.238034Z",
+                "__typename": "Broadcast"
+              },
+              "login": "forsen_impostor",
+              "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/2d793244-d901-443a-a7db-1eafbb5628ee-profile_image-150x150.png",
+              "description": "Real Forsen never managed to escape T̷̡̧̠̫̞̤̭̮̰̩̲̗͓͚̪̙̹̥̱̱̲͂̆̉͘h̷̤̝̦̟̥͈̠͉̺̥̰̝̫̄̒̋͑̀̊̃͂͐͌͘͝͝è̸̯͉̦͈̬̩̼̣͍͖̻̙̫̘̱̓̒̓̀̈́̓͊͋̅͆͐̽͊̓̿̈̔̓̂̕ ̶͔̥͉̺͔̦̺̲̗̪͙̜͖͔̘̜̆͛̒̍̿͘̚͜ͅͅB̴̡̧̙̹̥̜͈͚͉̫͚͕͓̞̲̾̑̍́̍͋̍̿̈́̒͜͝ͅŏ̶̡̧̦̪͕͇̥̹̫̝̮̣̩̹͖̦̯̤͉̥̮̃̒̀̉̋͋̆̕ǵ̶̛̲͇̺̗͖̘̟̥̫̯͎̭͕̤̭̘̉̔͑͌͊͌̑̓̑̉̎̉̓̾̔͑͋̾͘͝͝ͅ  since the end of 2019",
+              "channel": {
+                "id": "722490662",
+                "schedule": null,
+                "__typename": "Channel"
+              },
+              "self": null,
+              "latestVideo": { "edges": [], "__typename": "VideoConnection" },
+              "topClip": {
+                "edges": [
+                  {
+                    "node": {
+                      "id": "3886193655",
+                      "title": "pielokpokpll",
+                      "durationSeconds": 60,
+                      "thumbnailURL": "https://static-cdn.jtvnw.net/twitch-clips-thumbnails-prod/RenownedBraveUdonMingLee-qzrcFFp4-wu2az0d/4d9d1cdb-c335-4c9e-bdeb-961d9fd91b88/preview.jpg",
+                      "slug": "RenownedBraveUdonMingLee-qzrcFFp4-wu2az0d",
+                      "__typename": "Clip"
+                    },
+                    "__typename": "ClipEdge"
+                  }
+                ],
+                "__typename": "ClipConnection"
+              },
+              "roles": { "isPartner": false, "__typename": "UserRoles" },
+              "stream": {
+                "game": {
+                  "id": "16937",
+                  "slug": "artifact",
+                  "name": "Artifact",
+                  "displayName": "Artifact",
+                  "__typename": "Game"
+                },
+                "id": "316975652857",
+                "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_forsen_impostor-214x120.jpg",
+                "freeformTags": [
+                  {
+                    "id": "fft:CHANNEL:722490662:0",
+                    "name": "English",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:722490662:1",
+                    "name": "Uganda",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:722490662:2",
+                    "name": "forsen",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:722490662:3",
+                    "name": "vcu",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:722490662:4",
+                    "name": "AI",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:722490662:5",
+                    "name": "GPT",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:722490662:6",
+                    "name": "AiVtuber",
+                    "__typename": "FreeformTag"
+                  }
+                ],
+                "type": "live",
+                "viewersCount": 18,
+                "__typename": "Stream"
+              },
+              "watchParty": null,
+              "__typename": "User"
+            },
+            "__typename": "SearchForEdge"
+          },
+          {
+            "trackingID": "6b6b7e01-bfb0-468e-b88f-90447749d818",
+            "item": {
+              "broadcastSettings": {
+                "id": "69252244",
+                "title": "Split Fiction with beb!",
+                "__typename": "BroadcastSettings"
+              },
+              "displayName": "mrstiara",
+              "followers": {
+                "totalCount": 3329,
+                "__typename": "FollowerConnection"
+              },
+              "id": "69252244",
+              "lastBroadcast": {
+                "id": "317020195833",
+                "startedAt": "2025-03-11T09:48:15.945529Z",
+                "__typename": "Broadcast"
+              },
+              "login": "mrstiara",
+              "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/29754b8d-5759-43ff-b444-05302a0a77ce-profile_image-150x150.png",
+              "description": "princess",
+              "channel": {
+                "id": "69252244",
+                "schedule": {
+                  "id": "schedule-69252244",
+                  "nextSegment": null,
+                  "__typename": "Schedule"
+                },
+                "__typename": "Channel"
+              },
+              "self": null,
+              "latestVideo": {
+                "edges": [
+                  {
+                    "node": {
+                      "id": "2402835439",
+                      "lengthSeconds": 4110,
+                      "title": "Split Fiction with beb!",
+                      "previewThumbnailURL": "https://vod-secure.twitch.tv/_404/404_processing_100x56.png",
+                      "__typename": "Video"
+                    },
+                    "__typename": "VideoEdge"
+                  }
+                ],
+                "__typename": "VideoConnection"
+              },
+              "topClip": { "edges": [], "__typename": "ClipConnection" },
+              "roles": { "isPartner": false, "__typename": "UserRoles" },
+              "stream": {
+                "game": {
+                  "id": "1354355809",
+                  "slug": "split-fiction",
+                  "name": "Split Fiction",
+                  "displayName": "Split Fiction",
+                  "__typename": "Game"
+                },
+                "id": "317020195833",
+                "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_mrstiara-214x120.jpg",
+                "freeformTags": [
+                  {
+                    "id": "fft:CHANNEL:69252244:0",
+                    "name": "urmom",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:69252244:1",
+                    "name": "dab",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:69252244:2",
+                    "name": "anxiety",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:69252244:3",
+                    "name": "depression",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:69252244:4",
+                    "name": "English",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:69252244:5",
+                    "name": "anime",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:69252244:6",
+                    "name": "girl",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:69252244:7",
+                    "name": "forsen",
+                    "__typename": "FreeformTag"
+                  }
+                ],
+                "type": "live",
+                "viewersCount": 12,
+                "__typename": "Stream"
+              },
+              "watchParty": null,
+              "__typename": "User"
+            },
+            "__typename": "SearchForEdge"
+          },
+          {
+            "trackingID": "709dcf33-17ae-4a55-a4bb-faad17de821f",
+            "item": {
+              "broadcastSettings": {
+                "id": "757102582",
+                "title": "!TwitchCon - 24/7 Twitch Global Badge/Emote Stream - !discord !x",
+                "__typename": "BroadcastSettings"
+              },
+              "displayName": "StreamDatabase",
+              "followers": {
+                "totalCount": 11899,
+                "__typename": "FollowerConnection"
+              },
+              "id": "757102582",
+              "lastBroadcast": {
+                "id": "316969709689",
+                "startedAt": "2025-03-10T03:40:12.476574Z",
+                "__typename": "Broadcast"
+              },
+              "login": "streamdatabase",
+              "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/6289b83b-75bb-4343-bce9-6dbaad1de8d3-profile_image-150x150.png",
+              "description": null,
+              "channel": {
+                "id": "757102582",
+                "schedule": null,
+                "__typename": "Channel"
+              },
+              "self": null,
+              "latestVideo": {
+                "edges": [
+                  {
+                    "node": {
+                      "id": "2401895328",
+                      "lengthSeconds": 112593,
+                      "title": "!TwitchCon - 24/7 Twitch Global Badge/Emote Stream - !discord !x",
+                      "previewThumbnailURL": "https://vod-secure.twitch.tv/_404/404_processing_100x56.png",
+                      "__typename": "Video"
+                    },
+                    "__typename": "VideoEdge"
+                  }
+                ],
+                "__typename": "VideoConnection"
+              },
+              "topClip": {
+                "edges": [
+                  {
+                    "node": {
+                      "id": "3395194360",
+                      "title": "jjfjg",
+                      "durationSeconds": 30,
+                      "thumbnailURL": "https://static-cdn.jtvnw.net/twitch-clips-thumbnails-prod/SmallExpensiveDonkeyPartyTime-uozuzOuQET5t_EfM/bef5f263-9936-4ce9-8eeb-8783b307c0f7/preview.jpg",
+                      "slug": "SmallExpensiveDonkeyPartyTime-uozuzOuQET5t_EfM",
+                      "__typename": "Clip"
+                    },
+                    "__typename": "ClipEdge"
+                  }
+                ],
+                "__typename": "ClipConnection"
+              },
+              "roles": { "isPartner": false, "__typename": "UserRoles" },
+              "stream": {
+                "game": {
+                  "id": "499973",
+                  "slug": "always-on",
+                  "name": "Always On",
+                  "displayName": "Always On",
+                  "__typename": "Game"
+                },
+                "id": "316969709689",
+                "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_streamdatabase-214x120.jpg",
+                "freeformTags": [
+                  {
+                    "id": "fft:CHANNEL:757102582:0",
+                    "name": "English",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:757102582:1",
+                    "name": "xQc",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:757102582:2",
+                    "name": "forsen",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:757102582:3",
+                    "name": "Mizkif",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:757102582:4",
+                    "name": "KaiCenat",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:757102582:5",
+                    "name": "IShowSpeed",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:757102582:6",
+                    "name": "Baj",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:757102582:7",
+                    "name": "Juicer",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:757102582:8",
+                    "name": "7TV",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:757102582:9",
+                    "name": "OTK",
+                    "__typename": "FreeformTag"
+                  }
+                ],
+                "type": "live",
+                "viewersCount": 6,
+                "__typename": "Stream"
+              },
+              "watchParty": null,
+              "__typename": "User"
+            },
+            "__typename": "SearchForEdge"
+          },
+          {
+            "trackingID": "b44c194c-ad3e-492c-b32b-492bc9945894",
+            "item": {
+              "broadcastSettings": {
+                "id": "160874862",
+                "title": "😂 sleep/stream schedule might be a lil messy",
+                "__typename": "BroadcastSettings"
+              },
+              "displayName": "Tuesdave",
+              "followers": {
+                "totalCount": 545,
+                "__typename": "FollowerConnection"
+              },
+              "id": "160874862",
+              "lastBroadcast": {
+                "id": "318638489085",
+                "startedAt": "2025-03-11T00:56:05.974101Z",
+                "__typename": "Broadcast"
+              },
+              "login": "tuesdave",
+              "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/d9a52738-be09-4d2f-a5e3-1341da97749b-profile_image-150x150.png",
+              "description": "I live in front of the computer, might as well click the button and do it with friends. I stream every Tuesday. Every. Tuesday. No promises on other days, but it happens.",
+              "channel": {
+                "id": "160874862",
+                "schedule": {
+                  "id": "schedule-160874862",
+                  "nextSegment": {
+                    "id": "eyJzZWdtZW50SUQiOiIxYTAxYTE1MS1jZWM4LTRmNjAtODg3MS02Mzg2YzY4OGYxODgiLCJpc29ZZWFyIjoyMDI1LCJpc29XZWVrIjoxMX0=",
+                    "startAt": "2025-03-11T21:00:00Z",
+                    "endAt": null,
+                    "title": "",
+                    "hasReminder": false,
+                    "categories": [],
+                    "__typename": "ScheduleSegment"
+                  },
+                  "__typename": "Schedule"
+                },
+                "__typename": "Channel"
+              },
+              "self": null,
+              "latestVideo": {
+                "edges": [
+                  {
+                    "node": {
+                      "id": "2402592782",
+                      "lengthSeconds": 36040,
+                      "title": "😂 sleep/stream schedule might be a lil messy",
+                      "previewThumbnailURL": "https://vod-secure.twitch.tv/_404/404_processing_100x56.png",
+                      "__typename": "Video"
+                    },
+                    "__typename": "VideoEdge"
+                  }
+                ],
+                "__typename": "VideoConnection"
+              },
+              "topClip": {
+                "edges": [
+                  {
+                    "node": {
+                      "id": "42468821",
+                      "title": "Riveting Gameplay!",
+                      "durationSeconds": 27,
+                      "thumbnailURL": "https://static-cdn.jtvnw.net/twitch-clips-thumbnails-prod/RelatedInquisitiveMarrowAMPEnergyCherry-8RTU2ZAL7VaMLIAx/8917c4f8-f981-49e8-89ff-1555cfdeeb1f/preview.jpg",
+                      "slug": "RelatedInquisitiveMarrowAMPEnergyCherry-8RTU2ZAL7VaMLIAx",
+                      "__typename": "Clip"
+                    },
+                    "__typename": "ClipEdge"
+                  }
+                ],
+                "__typename": "ClipConnection"
+              },
+              "roles": { "isPartner": false, "__typename": "UserRoles" },
+              "stream": {
+                "game": {
+                  "id": "509658",
+                  "slug": "just-chatting",
+                  "name": "Just Chatting",
+                  "displayName": "Just Chatting",
+                  "__typename": "Game"
+                },
+                "id": "318638489085",
+                "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_tuesdave-214x120.jpg",
+                "freeformTags": [
+                  {
+                    "id": "fft:CHANNEL:160874862:0",
+                    "name": "English",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:160874862:1",
+                    "name": "forsen",
+                    "__typename": "FreeformTag"
+                  }
+                ],
+                "type": "live",
+                "viewersCount": 5,
+                "__typename": "Stream"
+              },
+              "watchParty": null,
+              "__typename": "User"
+            },
+            "__typename": "SearchForEdge"
+          },
+          {
+            "trackingID": "1c732d4c-88da-4336-b8fc-55edd5ebf2fc",
+            "item": {
+              "broadcastSettings": {
+                "id": "632109222",
+                "title": "DAY 1 OF TOUCHING GRASS. FIRST TIME R.E.P.O. solo dolo because i have no friends! ** that wanna play it with me :( **",
+                "__typename": "BroadcastSettings"
+              },
+              "displayName": "Killarel42069",
+              "followers": {
+                "totalCount": 232,
+                "__typename": "FollowerConnection"
+              },
+              "id": "632109222",
+              "lastBroadcast": {
+                "id": "317018527481",
+                "startedAt": "2025-03-11T08:43:59.584217Z",
+                "__typename": "Broadcast"
+              },
+              "login": "killarel42069",
+              "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/84b93b57-88dc-4d1e-9052-6ec98ee53708-profile_image-150x150.png",
+              "description": "TRUTH TELLER. TRUTH SEEKER. HOT HEADED. Sometimes I do a lil trollin' ;D",
+              "channel": {
+                "id": "632109222",
+                "schedule": null,
+                "__typename": "Channel"
+              },
+              "self": null,
+              "latestVideo": {
+                "edges": [
+                  {
+                    "node": {
+                      "id": "2402818144",
+                      "lengthSeconds": 7966,
+                      "title": "DAY 1 OF TOUCHING GRASS. FIRST TIME R.E.P.O. solo dolo because i have no friends! ** that wanna play it with me :( **",
+                      "previewThumbnailURL": "https://vod-secure.twitch.tv/_404/404_processing_100x56.png",
+                      "__typename": "Video"
+                    },
+                    "__typename": "VideoEdge"
+                  }
+                ],
+                "__typename": "VideoConnection"
+              },
+              "topClip": {
+                "edges": [
+                  {
+                    "node": {
+                      "id": "3886902069",
+                      "title": "kok",
+                      "durationSeconds": 11,
+                      "thumbnailURL": "https://static-cdn.jtvnw.net/twitch-clips-thumbnails-prod/HelpfulTawdryWerewolfJonCarnage-aW4V8rqe9xCjojeK/58977eb7-f29c-4ba2-8add-c2279fcb5b93/preview.jpg",
+                      "slug": "HelpfulTawdryWerewolfJonCarnage-aW4V8rqe9xCjojeK",
+                      "__typename": "Clip"
+                    },
+                    "__typename": "ClipEdge"
+                  }
+                ],
+                "__typename": "ClipConnection"
+              },
+              "roles": { "isPartner": false, "__typename": "UserRoles" },
+              "stream": {
+                "game": {
+                  "id": "1294658629",
+                  "slug": "r-e-p-o",
+                  "name": "R.E.P.O.",
+                  "displayName": "R.E.P.O.",
+                  "__typename": "Game"
+                },
+                "id": "317018527481",
+                "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_killarel42069-214x120.jpg",
+                "freeformTags": [
+                  {
+                    "id": "fft:CHANNEL:632109222:0",
+                    "name": "Quin69",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:632109222:1",
+                    "name": "Quin69IsAClown",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:632109222:2",
+                    "name": "forsen",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:632109222:3",
+                    "name": "SouthAfrican",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:632109222:4",
+                    "name": "Autistic",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:632109222:5",
+                    "name": "D4BAD",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:632109222:6",
+                    "name": "English",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:632109222:7",
+                    "name": "SleepDeprivedMostly",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:632109222:8",
+                    "name": "Killarel",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:632109222:9",
+                    "name": "baj",
+                    "__typename": "FreeformTag"
+                  }
+                ],
+                "type": "live",
+                "viewersCount": 4,
+                "__typename": "Stream"
+              },
+              "watchParty": null,
+              "__typename": "User"
+            },
+            "__typename": "SearchForEdge"
+          },
+          {
+            "trackingID": "2384a462-8d28-434f-9696-2386633cf67f",
+            "item": {
+              "broadcastSettings": {
+                "id": "870305203",
+                "title": "kino",
+                "__typename": "BroadcastSettings"
+              },
+              "displayName": "cure_ah",
+              "followers": {
+                "totalCount": 167,
+                "__typename": "FollowerConnection"
+              },
+              "id": "870305203",
+              "lastBroadcast": {
+                "id": "318661192061",
+                "startedAt": "2025-03-11T09:04:11.54077Z",
+                "__typename": "Broadcast"
+              },
+              "login": "cure_ah",
+              "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/eaeb25dc-0d5b-4c1c-9921-fccc2b3d8302-profile_image-150x150.png",
+              "description": "finding the cure",
+              "channel": {
+                "id": "870305203",
+                "schedule": null,
+                "__typename": "Channel"
+              },
+              "self": null,
+              "latestVideo": { "edges": [], "__typename": "VideoConnection" },
+              "topClip": {
+                "edges": [
+                  {
+                    "node": {
+                      "id": "1684819073",
+                      "title": "idiot",
+                      "durationSeconds": 30,
+                      "thumbnailURL": "https://static-cdn.jtvnw.net/twitch-clips-thumbnails-prod/StrongAmorphousMulePermaSmug-T7A83iQa4RnPj-Ku/ae22ef17-8621-405c-8b42-b014384bb5e1/preview.jpg",
+                      "slug": "StrongAmorphousMulePermaSmug-T7A83iQa4RnPj-Ku",
+                      "__typename": "Clip"
+                    },
+                    "__typename": "ClipEdge"
+                  }
+                ],
+                "__typename": "ClipConnection"
+              },
+              "roles": { "isPartner": false, "__typename": "UserRoles" },
+              "stream": {
+                "game": {
+                  "id": "12273",
+                  "slug": "n-2004",
+                  "name": "N",
+                  "displayName": "N",
+                  "__typename": "Game"
+                },
+                "id": "318661192061",
+                "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_cure_ah-214x120.jpg",
+                "freeformTags": [
+                  {
+                    "id": "fft:CHANNEL:870305203:0",
+                    "name": "English",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:870305203:1",
+                    "name": "xqcL",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:870305203:2",
+                    "name": "forsen",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:870305203:3",
+                    "name": "womandriving",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:870305203:4",
+                    "name": "gooffline",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:870305203:5",
+                    "name": "mentalhealth",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:870305203:6",
+                    "name": "xqcL",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:870305203:7",
+                    "name": "leech",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:870305203:8",
+                    "name": "cringe",
+                    "__typename": "FreeformTag"
+                  }
+                ],
+                "type": "live",
+                "viewersCount": 3,
+                "__typename": "Stream"
+              },
+              "watchParty": null,
+              "__typename": "User"
+            },
+            "__typename": "SearchForEdge"
+          },
+          {
+            "trackingID": "2521c419-84b2-41d4-8516-015f56c3f839",
+            "item": {
+              "broadcastSettings": {
+                "id": "128799847",
+                "title": "🔴 REACTIONS ALL DAY REACTIONS 🔴 !emotes 🔴",
+                "__typename": "BroadcastSettings"
+              },
+              "displayName": "Mateescu122",
+              "followers": {
+                "totalCount": 183,
+                "__typename": "FollowerConnection"
+              },
+              "id": "128799847",
+              "lastBroadcast": {
+                "id": "317022108793",
+                "startedAt": "2025-03-11T10:50:44.860422Z",
+                "__typename": "Broadcast"
+              },
+              "login": "mateescu122",
+              "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/af457315-1727-4f3f-8147-ade922777458-profile_image-150x150.png",
+              "description": "Professional Gamer, Elite Entertainer, Global Voice, Woman Magnet.",
+              "channel": {
+                "id": "128799847",
+                "schedule": {
+                  "id": "schedule-128799847",
+                  "nextSegment": {
+                    "id": "eyJzZWdtZW50SUQiOiIxNzViNWM3Zi00NzdlLTRlYTUtYjExZi0xYjg1MmJlNzBhZTciLCJpc29ZZWFyIjoyMDI1LCJpc29XZWVrIjoxMX0=",
+                    "startAt": "2025-03-11T13:00:00Z",
+                    "endAt": "2025-03-11T19:00:00Z",
+                    "title": "",
+                    "hasReminder": false,
+                    "categories": [],
+                    "__typename": "ScheduleSegment"
+                  },
+                  "__typename": "Schedule"
+                },
+                "__typename": "Channel"
+              },
+              "self": null,
+              "latestVideo": {
+                "edges": [
+                  {
+                    "node": {
+                      "id": "2402853731",
+                      "lengthSeconds": 361,
+                      "title": "🔴 ALT ACCOUNT TO ETERNITY 🔴 !emotes 🔴",
+                      "previewThumbnailURL": "https://vod-secure.twitch.tv/_404/404_processing_100x56.png",
+                      "__typename": "Video"
+                    },
+                    "__typename": "VideoEdge"
+                  }
+                ],
+                "__typename": "VideoConnection"
+              },
+              "topClip": { "edges": [], "__typename": "ClipConnection" },
+              "roles": { "isPartner": false, "__typename": "UserRoles" },
+              "stream": {
+                "game": {
+                  "id": "509658",
+                  "slug": "just-chatting",
+                  "name": "Just Chatting",
+                  "displayName": "Just Chatting",
+                  "__typename": "Game"
+                },
+                "id": "317022108793",
+                "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_mateescu122-214x120.jpg",
+                "freeformTags": [
+                  {
+                    "id": "fft:CHANNEL:128799847:0",
+                    "name": "ADHD",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:128799847:1",
+                    "name": "xqc",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:128799847:2",
+                    "name": "English",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:128799847:3",
+                    "name": "Drops",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:128799847:4",
+                    "name": "vtuber",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:128799847:5",
+                    "name": "NoBackseating",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:128799847:6",
+                    "name": "forsen",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:128799847:7",
+                    "name": "BackseatingAllowed",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:128799847:8",
+                    "name": "chill",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:128799847:9",
+                    "name": "Anime",
+                    "__typename": "FreeformTag"
+                  }
+                ],
+                "type": "live",
+                "viewersCount": 3,
+                "__typename": "Stream"
+              },
+              "watchParty": null,
+              "__typename": "User"
+            },
+            "__typename": "SearchForEdge"
+          },
+          {
+            "trackingID": "fb4b8aab-6de5-4cd5-9174-eea4f6354342",
+            "item": {
+              "broadcastSettings": {
+                "id": "450316640",
+                "title": "Chillin",
+                "__typename": "BroadcastSettings"
+              },
+              "displayName": "CheRokeeBTW",
+              "followers": {
+                "totalCount": 143,
+                "__typename": "FollowerConnection"
+              },
+              "id": "450316640",
+              "lastBroadcast": {
+                "id": "317020617849",
+                "startedAt": "2025-03-11T10:02:13.493522Z",
+                "__typename": "Broadcast"
+              },
+              "login": "cherokeebtw",
+              "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/c39bb3c4-9e76-4eb4-b0f9-8798fa314a63-profile_image-150x150.png",
+              "description": null,
+              "channel": {
+                "id": "450316640",
+                "schedule": null,
+                "__typename": "Channel"
+              },
+              "self": null,
+              "latestVideo": { "edges": [], "__typename": "VideoConnection" },
+              "topClip": { "edges": [], "__typename": "ClipConnection" },
+              "roles": { "isPartner": false, "__typename": "UserRoles" },
+              "stream": {
+                "game": {
+                  "id": "493057",
+                  "slug": "pubg-battlegrounds",
+                  "name": "PUBG: BATTLEGROUNDS",
+                  "displayName": "PUBG: BATTLEGROUNDS",
+                  "__typename": "Game"
+                },
+                "id": "317020617849",
+                "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_cherokeebtw-214x120.jpg",
+                "freeformTags": [
+                  {
+                    "id": "fft:CHANNEL:450316640:0",
+                    "name": "Русский",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:450316640:1",
+                    "name": "Благотворительность",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:450316640:2",
+                    "name": "forsen",
+                    "__typename": "FreeformTag"
+                  }
+                ],
+                "type": "live",
+                "viewersCount": 3,
+                "__typename": "Stream"
+              },
+              "watchParty": null,
+              "__typename": "User"
+            },
+            "__typename": "SearchForEdge"
+          },
+          {
+            "trackingID": "bfa37312-b358-44d3-89dd-4f4390363554",
+            "item": {
+              "broadcastSettings": {
+                "id": "723527891",
+                "title": "🔴GAMING🔴0 TILT🔴FULLY LOCKED IN🔴CHAMPIONS LEAGUE 2ND LEG TONIGHT🔴",
+                "__typename": "BroadcastSettings"
+              },
+              "displayName": "owReformed",
+              "followers": {
+                "totalCount": 632,
+                "__typename": "FollowerConnection"
+              },
+              "id": "723527891",
+              "lastBroadcast": {
+                "id": "317020869113",
+                "startedAt": "2025-03-11T10:10:25.105543Z",
+                "__typename": "Broadcast"
+              },
+              "login": "owreformed",
+              "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/b72b047b-9416-41a6-9f33-d386a6ad0bb9-profile_image-150x150.png",
+              "description": "Solo Q to Grand Master 1 Bap on 170 ms + 79% ! Getting The Juice Daily on Every Game. CoD Nukes With Every Gun✔️Sub 20 MC Speedrun✔️Zombies Easter Eggs Speedruns✔️OW Highest Rank✔️",
+              "channel": {
+                "id": "723527891",
+                "schedule": {
+                  "id": "schedule-723527891",
+                  "nextSegment": null,
+                  "__typename": "Schedule"
+                },
+                "__typename": "Channel"
+              },
+              "self": null,
+              "latestVideo": {
+                "edges": [
+                  {
+                    "node": {
+                      "id": "2402842008",
+                      "lengthSeconds": 2780,
+                      "title": "🔴GAMING🔴0 TILT🔴FULLY LOCKED IN🔴CHAMPIONS LEAGUE 2ND LEG TONIGHT🔴",
+                      "previewThumbnailURL": "https://vod-secure.twitch.tv/_404/404_processing_100x56.png",
+                      "__typename": "Video"
+                    },
+                    "__typename": "VideoEdge"
+                  }
+                ],
+                "__typename": "VideoConnection"
+              },
+              "topClip": {
+                "edges": [
+                  {
+                    "node": {
+                      "id": "671679208",
+                      "title": "Nothing LULE",
+                      "durationSeconds": 52,
+                      "thumbnailURL": "https://static-cdn.jtvnw.net/twitch-clips-thumbnails-prod/AmusedAgitatedMonkeyKappaWealth-M5ZhQbF7zaRxKi3M/286d3cc9-9150-449e-ae95-b7fec1e41c6f/preview.jpg",
+                      "slug": "AmusedAgitatedMonkeyKappaWealth-M5ZhQbF7zaRxKi3M",
+                      "__typename": "Clip"
+                    },
+                    "__typename": "ClipEdge"
+                  }
+                ],
+                "__typename": "ClipConnection"
+              },
+              "roles": { "isPartner": false, "__typename": "UserRoles" },
+              "stream": {
+                "game": {
+                  "id": "1264310518",
+                  "slug": "marvel-rivals",
+                  "name": "Marvel Rivals",
+                  "displayName": "Marvel Rivals",
+                  "__typename": "Game"
+                },
+                "id": "317020869113",
+                "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_owreformed-214x120.jpg",
+                "freeformTags": [
+                  {
+                    "id": "fft:CHANNEL:723527891:0",
+                    "name": "English",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:723527891:1",
+                    "name": "pointless",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:723527891:2",
+                    "name": "xqc",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:723527891:3",
+                    "name": "forsen",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:723527891:4",
+                    "name": "marvelrivals",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:723527891:5",
+                    "name": "react",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:723527891:6",
+                    "name": "reformed",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:723527891:7",
+                    "name": "juicers",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:723527891:8",
+                    "name": "bajs",
+                    "__typename": "FreeformTag"
+                  }
+                ],
+                "type": "live",
+                "viewersCount": 2,
+                "__typename": "Stream"
+              },
+              "watchParty": null,
+              "__typename": "User"
+            },
+            "__typename": "SearchForEdge"
+          },
+          {
+            "trackingID": "e787fbf5-e133-4a0e-a213-47c3ae7ba792",
+            "item": {
+              "broadcastSettings": {
+                "id": "37886486",
+                "title": "drink \u0026 Drive simulator",
+                "__typename": "BroadcastSettings"
+              },
+              "displayName": "LiLppo",
+              "followers": {
+                "totalCount": 41,
+                "__typename": "FollowerConnection"
+              },
+              "id": "37886486",
+              "lastBroadcast": {
+                "id": "317019678713",
+                "startedAt": "2025-03-11T09:29:00.529858Z",
+                "__typename": "Broadcast"
+              },
+              "login": "lilppo",
+              "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/aba85b13-d2db-451f-b0d2-29718117f10d-profile_image-150x150.png",
+              "description": "25y and then you stop counting from finland.",
+              "channel": {
+                "id": "37886486",
+                "schedule": null,
+                "__typename": "Channel"
+              },
+              "self": null,
+              "latestVideo": { "edges": [], "__typename": "VideoConnection" },
+              "topClip": { "edges": [], "__typename": "ClipConnection" },
+              "roles": { "isPartner": false, "__typename": "UserRoles" },
+              "stream": {
+                "game": {
+                  "id": "509698",
+                  "slug": "dirt-rally-2-0",
+                  "name": "DiRT Rally 2.0",
+                  "displayName": "DiRT Rally 2.0",
+                  "__typename": "Game"
+                },
+                "id": "317019678713",
+                "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_lilppo-214x120.jpg",
+                "freeformTags": [
+                  {
+                    "id": "fft:CHANNEL:37886486:0",
+                    "name": "Suomi",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:37886486:1",
+                    "name": "Uusiajo",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:37886486:2",
+                    "name": "ovewartch2",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:37886486:3",
+                    "name": "WorldfofWarcraft",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:37886486:4",
+                    "name": "fullham",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:37886486:5",
+                    "name": "dps",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:37886486:6",
+                    "name": "heal",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:37886486:7",
+                    "name": "forsen",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:37886486:8",
+                    "name": "brainrot",
+                    "__typename": "FreeformTag"
+                  }
+                ],
+                "type": "live",
+                "viewersCount": 1,
+                "__typename": "Stream"
+              },
+              "watchParty": null,
+              "__typename": "User"
+            },
+            "__typename": "SearchForEdge"
+          },
+          {
+            "trackingID": "8e6fb01a-2658-48b2-a5e7-b64d28589e78",
+            "item": {
+              "broadcastSettings": {
+                "id": "737228618",
+                "title": "Am I crazy or is there someone here",
+                "__typename": "BroadcastSettings"
+              },
+              "displayName": "M1ind1",
+              "followers": {
+                "totalCount": 170,
+                "__typename": "FollowerConnection"
+              },
+              "id": "737228618",
+              "lastBroadcast": {
+                "id": "317019718777",
+                "startedAt": "2025-03-11T09:30:20.632894Z",
+                "__typename": "Broadcast"
+              },
+              "login": "m1ind1",
+              "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/51c63dcc-53df-4947-b1d1-ec97cd32ea66-profile_image-150x150.png",
+              "description": "I love to play weird and obscure games. Don't be surprised if you gonna join the stream and see some WAYTOODANK shit.",
+              "channel": {
+                "id": "737228618",
+                "schedule": {
+                  "id": "schedule-737228618",
+                  "nextSegment": null,
+                  "__typename": "Schedule"
+                },
+                "__typename": "Channel"
+              },
+              "self": null,
+              "latestVideo": {
+                "edges": [
+                  {
+                    "node": {
+                      "id": "2402830782",
+                      "lengthSeconds": 5185,
+                      "title": "Am I crazy or is there someone here",
+                      "previewThumbnailURL": "https://vod-secure.twitch.tv/_404/404_processing_100x56.png",
+                      "__typename": "Video"
+                    },
+                    "__typename": "VideoEdge"
+                  }
+                ],
+                "__typename": "VideoConnection"
+              },
+              "topClip": {
+                "edges": [
+                  {
+                    "node": {
+                      "id": "1213226482",
+                      "title": "WTF",
+                      "durationSeconds": 6,
+                      "thumbnailURL": "https://static-cdn.jtvnw.net/twitch-clips-thumbnails-prod/SweetMoralYogurtBabyRage-UbvIoHq8Dx3MooFG/5a57ae4d-a6d2-4e01-8ea7-b453dadc7f53/preview.jpg",
+                      "slug": "SweetMoralYogurtBabyRage-UbvIoHq8Dx3MooFG",
+                      "__typename": "Clip"
+                    },
+                    "__typename": "ClipEdge"
+                  }
+                ],
+                "__typename": "ClipConnection"
+              },
+              "roles": { "isPartner": false, "__typename": "UserRoles" },
+              "stream": {
+                "game": {
+                  "id": "16937",
+                  "slug": "artifact",
+                  "name": "Artifact",
+                  "displayName": "Artifact",
+                  "__typename": "Game"
+                },
+                "id": "317019718777",
+                "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_m1ind1-214x120.jpg",
+                "freeformTags": [
+                  {
+                    "id": "fft:CHANNEL:737228618:0",
+                    "name": "PC",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:737228618:1",
+                    "name": "forsen",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:737228618:2",
+                    "name": "bajs",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:737228618:3",
+                    "name": "English",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:737228618:4",
+                    "name": "Українська",
+                    "__typename": "FreeformTag"
+                  }
+                ],
+                "type": "live",
+                "viewersCount": 1,
+                "__typename": "Stream"
+              },
+              "watchParty": null,
+              "__typename": "User"
+            },
+            "__typename": "SearchForEdge"
+          },
+          {
+            "trackingID": "bf7cf4c6-992d-4cb5-a174-fa5b5134b49c",
+            "item": {
+              "broadcastSettings": {
+                "id": "418942076",
+                "title": "Not what i used to be...",
+                "__typename": "BroadcastSettings"
+              },
+              "displayName": "ozzybozzy7",
+              "followers": {
+                "totalCount": 93,
+                "__typename": "FollowerConnection"
+              },
+              "id": "418942076",
+              "lastBroadcast": {
+                "id": "317021979897",
+                "startedAt": "2025-03-11T10:46:36.470615Z",
+                "__typename": "Broadcast"
+              },
+              "login": "ozzybozzy7",
+              "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/b57e84a4-2120-4cc8-8f36-b9ced7e13cb5-profile_image-150x150.png",
+              "description": "Worst Gamer To Ever Exist",
+              "channel": {
+                "id": "418942076",
+                "schedule": null,
+                "__typename": "Channel"
+              },
+              "self": null,
+              "latestVideo": {
+                "edges": [
+                  {
+                    "node": {
+                      "id": "2402852502",
+                      "lengthSeconds": 609,
+                      "title": "Not what i used to be...",
+                      "previewThumbnailURL": "https://vod-secure.twitch.tv/_404/404_processing_100x56.png",
+                      "__typename": "Video"
+                    },
+                    "__typename": "VideoEdge"
+                  }
+                ],
+                "__typename": "VideoConnection"
+              },
+              "topClip": {
+                "edges": [
+                  {
+                    "node": {
+                      "id": "3529071203",
+                      "title": "wierdos",
+                      "durationSeconds": 30,
+                      "thumbnailURL": "https://static-cdn.jtvnw.net/twitch-clips-thumbnails-prod/HelplessIgnorantKittenRaccAttack-pGH5Ef8h3dCkonVs/9f111f3c-c4a0-45a4-a5f8-f26d511b6e34/preview.jpg",
+                      "slug": "HelplessIgnorantKittenRaccAttack-pGH5Ef8h3dCkonVs",
+                      "__typename": "Clip"
+                    },
+                    "__typename": "ClipEdge"
+                  }
+                ],
+                "__typename": "ClipConnection"
+              },
+              "roles": { "isPartner": false, "__typename": "UserRoles" },
+              "stream": {
+                "game": {
+                  "id": "508455",
+                  "slug": "valheim",
+                  "name": "Valheim",
+                  "displayName": "Valheim",
+                  "__typename": "Game"
+                },
+                "id": "317021979897",
+                "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_ozzybozzy7-214x120.jpg",
+                "freeformTags": [
+                  {
+                    "id": "fft:CHANNEL:418942076:0",
+                    "name": "forsen",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:418942076:1",
+                    "name": "ChillSometimes",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:418942076:2",
+                    "name": "ShivFPS",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:418942076:3",
+                    "name": "LULE",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:418942076:4",
+                    "name": "English",
+                    "__typename": "FreeformTag"
+                  }
+                ],
+                "type": "live",
+                "viewersCount": 1,
+                "__typename": "Stream"
+              },
+              "watchParty": null,
+              "__typename": "User"
+            },
+            "__typename": "SearchForEdge"
+          }
+        ],
+        "score": 0,
+        "totalMatches": 20,
+        "__typename": "SearchForResultUsers"
+      },
+      "games": {
+        "cursor": "",
+        "edges": [],
+        "score": 0,
+        "totalMatches": 0,
+        "__typename": "SearchForResultGames"
+      },
+      "videos": {
+        "cursor": "",
+        "edges": [],
+        "score": 0,
+        "totalMatches": 0,
+        "__typename": "SearchForResultVideos"
+      },
+      "relatedLiveChannels": {
+        "edges": [],
+        "score": null,
+        "__typename": "SearchForResultRelatedLiveChannels"
+      },
+      "__typename": "SearchFor"
+    }
+  },
+  "extensions": {
+    "durationMilliseconds": 148,
+    "operationName": "SearchResultsPage_SearchResults",
+    "requestID": "01JP2DK574NCSNHRHV3XQMTMAP"
+  }
+}

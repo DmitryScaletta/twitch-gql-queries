@@ -1,0 +1,1466 @@
+{
+  "data": {
+    "searchFor": {
+      "channels": {
+        "cursor": "MTA=",
+        "edges": [
+          {
+            "trackingID": "133ce613-5dfe-4e42-8a50-333755c30aea",
+            "item": {
+              "broadcastSettings": {
+                "id": "22484632",
+                "title": "Games and shit!",
+                "__typename": "BroadcastSettings"
+              },
+              "displayName": "forsen",
+              "followers": {
+                "totalCount": 1761529,
+                "__typename": "FollowerConnection"
+              },
+              "id": "22484632",
+              "lastBroadcast": {
+                "id": "318597564669",
+                "startedAt": "2025-03-10T20:45:07.662676Z",
+                "__typename": "Broadcast"
+              },
+              "login": "forsen",
+              "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/forsen-profile_image-48b43e1e4f54b5c8-150x150.png",
+              "description": "Approach with caution! No roleplaying or  tryharding allowed.",
+              "channel": {
+                "id": "22484632",
+                "schedule": null,
+                "__typename": "Channel"
+              },
+              "self": null,
+              "latestVideo": {
+                "edges": [
+                  {
+                    "node": {
+                      "id": "2402143711",
+                      "lengthSeconds": 20774,
+                      "title": "Games and shit!",
+                      "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d1m7jfoe9zdc1j/8a34adb423cdb7488a2a_forsen_318597564669_1741618724//thumb/thumb0-100x56.jpg",
+                      "__typename": "Video"
+                    },
+                    "__typename": "VideoEdge"
+                  }
+                ],
+                "__typename": "VideoConnection"
+              },
+              "topClip": {
+                "edges": [
+                  {
+                    "node": {
+                      "id": "2976418779",
+                      "title": "Another Forsen horse incident dropped",
+                      "durationSeconds": 30,
+                      "thumbnailURL": "https://static-cdn.jtvnw.net/twitch-clips-thumbnails-prod/HonestGenerousGrouseBloodTrail-xdbPLc1YObS0L5Zg/2588e0d5-ce4c-4f07-9051-59e7fb74b545/preview.jpg",
+                      "slug": "HonestGenerousGrouseBloodTrail-xdbPLc1YObS0L5Zg",
+                      "__typename": "Clip"
+                    },
+                    "__typename": "ClipEdge"
+                  }
+                ],
+                "__typename": "ClipConnection"
+              },
+              "roles": { "isPartner": true, "__typename": "UserRoles" },
+              "stream": null,
+              "watchParty": null,
+              "__typename": "User"
+            },
+            "__typename": "SearchForEdge"
+          },
+          {
+            "trackingID": "f58dcd89-627d-4674-a626-4022e5dec265",
+            "item": {
+              "broadcastSettings": {
+                "id": "722490662",
+                "title": "2/17/2025 Never forget",
+                "__typename": "BroadcastSettings"
+              },
+              "displayName": "forsen_impostor",
+              "followers": {
+                "totalCount": 9364,
+                "__typename": "FollowerConnection"
+              },
+              "id": "722490662",
+              "lastBroadcast": {
+                "id": "316975652857",
+                "startedAt": "2025-03-10T09:45:30.238034Z",
+                "__typename": "Broadcast"
+              },
+              "login": "forsen_impostor",
+              "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/2d793244-d901-443a-a7db-1eafbb5628ee-profile_image-150x150.png",
+              "description": "Real Forsen never managed to escape T̷̡̧̠̫̞̤̭̮̰̩̲̗͓͚̪̙̹̥̱̱̲͂̆̉͘h̷̤̝̦̟̥͈̠͉̺̥̰̝̫̄̒̋͑̀̊̃͂͐͌͘͝͝è̸̯͉̦͈̬̩̼̣͍͖̻̙̫̘̱̓̒̓̀̈́̓͊͋̅͆͐̽͊̓̿̈̔̓̂̕ ̶͔̥͉̺͔̦̺̲̗̪͙̜͖͔̘̜̆͛̒̍̿͘̚͜ͅͅB̴̡̧̙̹̥̜͈͚͉̫͚͕͓̞̲̾̑̍́̍͋̍̿̈́̒͜͝ͅŏ̶̡̧̦̪͕͇̥̹̫̝̮̣̩̹͖̦̯̤͉̥̮̃̒̀̉̋͋̆̕ǵ̶̛̲͇̺̗͖̘̟̥̫̯͎̭͕̤̭̘̉̔͑͌͊͌̑̓̑̉̎̉̓̾̔͑͋̾͘͝͝ͅ  since the end of 2019",
+              "channel": {
+                "id": "722490662",
+                "schedule": null,
+                "__typename": "Channel"
+              },
+              "self": null,
+              "latestVideo": { "edges": [], "__typename": "VideoConnection" },
+              "topClip": {
+                "edges": [
+                  {
+                    "node": {
+                      "id": "3886193655",
+                      "title": "pielokpokpll",
+                      "durationSeconds": 60,
+                      "thumbnailURL": "https://static-cdn.jtvnw.net/twitch-clips-thumbnails-prod/RenownedBraveUdonMingLee-qzrcFFp4-wu2az0d/4d9d1cdb-c335-4c9e-bdeb-961d9fd91b88/preview.jpg",
+                      "slug": "RenownedBraveUdonMingLee-qzrcFFp4-wu2az0d",
+                      "__typename": "Clip"
+                    },
+                    "__typename": "ClipEdge"
+                  }
+                ],
+                "__typename": "ClipConnection"
+              },
+              "roles": { "isPartner": false, "__typename": "UserRoles" },
+              "stream": {
+                "game": {
+                  "id": "16937",
+                  "slug": "artifact",
+                  "name": "Artifact",
+                  "displayName": "Artifact",
+                  "__typename": "Game"
+                },
+                "id": "316975652857",
+                "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_forsen_impostor-214x120.jpg",
+                "freeformTags": [
+                  {
+                    "id": "fft:CHANNEL:722490662:0",
+                    "name": "English",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:722490662:1",
+                    "name": "Uganda",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:722490662:2",
+                    "name": "forsen",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:722490662:3",
+                    "name": "vcu",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:722490662:4",
+                    "name": "AI",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:722490662:5",
+                    "name": "GPT",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:722490662:6",
+                    "name": "AiVtuber",
+                    "__typename": "FreeformTag"
+                  }
+                ],
+                "type": "live",
+                "viewersCount": 15,
+                "__typename": "Stream"
+              },
+              "watchParty": null,
+              "__typename": "User"
+            },
+            "__typename": "SearchForEdge"
+          },
+          {
+            "trackingID": "8b0cf069-a3d7-46da-aed2-8122221c68bd",
+            "item": {
+              "broadcastSettings": {
+                "id": "67148962",
+                "title": "MySQL a novinky",
+                "__typename": "BroadcastSettings"
+              },
+              "displayName": "forsenpls1",
+              "followers": {
+                "totalCount": 10197,
+                "__typename": "FollowerConnection"
+              },
+              "id": "67148962",
+              "lastBroadcast": {
+                "id": "42196895484",
+                "startedAt": "2021-05-28T13:34:54.276408Z",
+                "__typename": "Broadcast"
+              },
+              "login": "forsenpls1",
+              "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/862f941e-9aac-4417-838a-d2bd5378909b-profile_image-150x150.png",
+              "description": "The two time! 2018, 2020 back to back school teaching champion",
+              "channel": {
+                "id": "67148962",
+                "schedule": {
+                  "id": "schedule-67148962",
+                  "nextSegment": null,
+                  "__typename": "Schedule"
+                },
+                "__typename": "Channel"
+              },
+              "self": null,
+              "latestVideo": { "edges": [], "__typename": "VideoConnection" },
+              "topClip": { "edges": [], "__typename": "ClipConnection" },
+              "roles": { "isPartner": false, "__typename": "UserRoles" },
+              "stream": null,
+              "watchParty": null,
+              "__typename": "User"
+            },
+            "__typename": "SearchForEdge"
+          },
+          {
+            "trackingID": "cc7e6a59-a0cb-468c-9a33-51600bba55c7",
+            "item": {
+              "broadcastSettings": {
+                "id": "101620143",
+                "title": "Not Felix Lengyel",
+                "__typename": "BroadcastSettings"
+              },
+              "displayName": "forsenV1",
+              "followers": {
+                "totalCount": 8272,
+                "__typename": "FollowerConnection"
+              },
+              "id": "101620143",
+              "lastBroadcast": {
+                "id": "40863887911",
+                "startedAt": "2023-12-08T10:13:09.151047Z",
+                "__typename": "Broadcast"
+              },
+              "login": "forsenv1",
+              "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/5426b4ff-4ed4-4dc0-b914-ced47902a1f7-profile_image-150x150.png",
+              "description": "DLC Site : https://www.bajs.tv  |  Discord https://discord.gg/wUjGsJ5awe",
+              "channel": {
+                "id": "101620143",
+                "schedule": {
+                  "id": "schedule-101620143",
+                  "nextSegment": {
+                    "id": "eyJzZWdtZW50SUQiOiJiODQ0YmVjYS1mN2E1LTQ4ZmItOTBlNi1kODJlZDBlZjE0ZWUiLCJpc29ZZWFyIjoyMDI1LCJpc29XZWVrIjoxMX0=",
+                    "startAt": "2025-03-13T07:00:00Z",
+                    "endAt": "2025-03-13T17:00:00Z",
+                    "title": "",
+                    "hasReminder": false,
+                    "categories": [
+                      {
+                        "id": "510975",
+                        "name": "Help Me Doctor",
+                        "__typename": "Game"
+                      }
+                    ],
+                    "__typename": "ScheduleSegment"
+                  },
+                  "__typename": "Schedule"
+                },
+                "__typename": "Channel"
+              },
+              "self": null,
+              "latestVideo": { "edges": [], "__typename": "VideoConnection" },
+              "topClip": { "edges": [], "__typename": "ClipConnection" },
+              "roles": { "isPartner": false, "__typename": "UserRoles" },
+              "stream": null,
+              "watchParty": null,
+              "__typename": "User"
+            },
+            "__typename": "SearchForEdge"
+          },
+          {
+            "trackingID": "5ff4cd36-61be-4f67-9c27-d9d7b6e649b8",
+            "item": {
+              "broadcastSettings": {
+                "id": "1075773331",
+                "title": "REAL FORSEN SPECTATE STREAM !sr !rule2 !chatunban !line",
+                "__typename": "BroadcastSettings"
+              },
+              "displayName": "forsenSpectate",
+              "followers": {
+                "totalCount": 5497,
+                "__typename": "FollowerConnection"
+              },
+              "id": "1075773331",
+              "lastBroadcast": {
+                "id": "318421106173",
+                "startedAt": "2025-03-08T16:24:35.383607Z",
+                "__typename": "Broadcast"
+              },
+              "login": "forsenspectate",
+              "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/cddf9b2b-ef85-4228-b105-4377986764a1-profile_image-150x150.png",
+              "description": "forsen",
+              "channel": {
+                "id": "1075773331",
+                "schedule": null,
+                "__typename": "Channel"
+              },
+              "self": null,
+              "latestVideo": {
+                "edges": [
+                  {
+                    "node": {
+                      "id": "2396043075",
+                      "lengthSeconds": 28967,
+                      "title": "forsenLevel LEVELING PUBG THIS TIME I WILL GET OUT OF BOT LOBBIES, WEIGHT LOSS PROGRESS DAY forsenLevel !sr !rule2 !chatunban",
+                      "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/2af90365c7ee0b3e5846_forsenspectate_316629997177_1741007657//thumb/thumb0-100x56.jpg",
+                      "__typename": "Video"
+                    },
+                    "__typename": "VideoEdge"
+                  }
+                ],
+                "__typename": "VideoConnection"
+              },
+              "topClip": {
+                "edges": [
+                  {
+                    "node": {
+                      "id": "4031680671",
+                      "title": "xd",
+                      "durationSeconds": 14,
+                      "thumbnailURL": "https://static-cdn.jtvnw.net/twitch-clips-thumbnails-prod/InterestingEnergeticNigiriKreygasm-TcQHUZzgL6Q-1QUi/6bb505a2-1291-490a-9c62-cb1556d64b72/preview.jpg",
+                      "slug": "InterestingEnergeticNigiriKreygasm-TcQHUZzgL6Q-1QUi",
+                      "__typename": "Clip"
+                    },
+                    "__typename": "ClipEdge"
+                  }
+                ],
+                "__typename": "ClipConnection"
+              },
+              "roles": { "isPartner": false, "__typename": "UserRoles" },
+              "stream": null,
+              "watchParty": null,
+              "__typename": "User"
+            },
+            "__typename": "SearchForEdge"
+          },
+          {
+            "trackingID": "798c51cd-1398-4fef-867d-56d40b4e8abb",
+            "item": {
+              "broadcastSettings": {
+                "id": "64313691",
+                "title": "🔴AO VIVO🔴 Plataforma que ajuda Streamers na Twitch:🔥STREAMAKER.TV🔥-\u003e❗sm -\u003e (LINK DE CADASTRO)",
+                "__typename": "BroadcastSettings"
+              },
+              "displayName": "forsekyn",
+              "followers": {
+                "totalCount": 2043,
+                "__typename": "FollowerConnection"
+              },
+              "id": "64313691",
+              "lastBroadcast": {
+                "id": "314170036853",
+                "startedAt": "2025-01-26T22:43:25.919315Z",
+                "__typename": "Broadcast"
+              },
+              "login": "forsekyn",
+              "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/a9ddc4ae-3e72-40f2-9289-2211a0cb7fb9-profile_image-150x150.png",
+              "description": "",
+              "channel": {
+                "id": "64313691",
+                "schedule": null,
+                "__typename": "Channel"
+              },
+              "self": null,
+              "latestVideo": { "edges": [], "__typename": "VideoConnection" },
+              "topClip": { "edges": [], "__typename": "ClipConnection" },
+              "roles": { "isPartner": false, "__typename": "UserRoles" },
+              "stream": null,
+              "watchParty": null,
+              "__typename": "User"
+            },
+            "__typename": "SearchForEdge"
+          },
+          {
+            "trackingID": "2ed29958-3f18-4b5a-810a-d531efe1f55f",
+            "item": {
+              "broadcastSettings": {
+                "id": "154798445",
+                "title": "Пивной фреш",
+                "__typename": "BroadcastSettings"
+              },
+              "displayName": "forsega96",
+              "followers": {
+                "totalCount": 1797,
+                "__typename": "FollowerConnection"
+              },
+              "id": "154798445",
+              "lastBroadcast": {
+                "id": "40025940712",
+                "startedAt": "2022-11-02T20:58:47.786181Z",
+                "__typename": "Broadcast"
+              },
+              "login": "forsega96",
+              "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/f7a16ce4-c52c-4cf8-95b0-5463b7e2c034-profile_image-150x150.png",
+              "description": null,
+              "channel": {
+                "id": "154798445",
+                "schedule": null,
+                "__typename": "Channel"
+              },
+              "self": null,
+              "latestVideo": { "edges": [], "__typename": "VideoConnection" },
+              "topClip": { "edges": [], "__typename": "ClipConnection" },
+              "roles": { "isPartner": false, "__typename": "UserRoles" },
+              "stream": null,
+              "watchParty": null,
+              "__typename": "User"
+            },
+            "__typename": "SearchForEdge"
+          },
+          {
+            "trackingID": "caa84ce7-42e6-4af9-abb0-aaad508354d4",
+            "item": {
+              "broadcastSettings": {
+                "id": "41291638",
+                "title": "69/365 nice",
+                "__typename": "BroadcastSettings"
+              },
+              "displayName": "forsenK",
+              "followers": {
+                "totalCount": 914,
+                "__typename": "FollowerConnection"
+              },
+              "id": "41291638",
+              "lastBroadcast": {
+                "id": "316994695417",
+                "startedAt": "2025-03-10T20:03:56.790725Z",
+                "__typename": "Broadcast"
+              },
+              "login": "forsenk",
+              "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/b0dad4dc-ac06-4e5b-892f-6f84e56c09b0-profile_image-150x150.png",
+              "description": "What to expect from this: dank streams (loud music and flashy images) and some gaming maybe (mostlikely something with strategic aspect). I dont have a real streaming shedule, so I'll be online at random",
+              "channel": {
+                "id": "41291638",
+                "schedule": null,
+                "__typename": "Channel"
+              },
+              "self": null,
+              "latestVideo": {
+                "edges": [
+                  {
+                    "node": {
+                      "id": "2402273221",
+                      "lengthSeconds": 6567,
+                      "title": "68/365 random stream",
+                      "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/a783599727a6e637b138_forsenk_316994695417_1741630457//thumb/thumb0-100x56.jpg",
+                      "__typename": "Video"
+                    },
+                    "__typename": "VideoEdge"
+                  }
+                ],
+                "__typename": "VideoConnection"
+              },
+              "topClip": {
+                "edges": [
+                  {
+                    "node": {
+                      "id": "2797345544",
+                      "title": "AAAAAAA",
+                      "durationSeconds": 60,
+                      "thumbnailURL": "https://static-cdn.jtvnw.net/twitch-clips-thumbnails-prod/StormyGiftedRutabagaKippa-dB935XN-YV7ermpC/a125d077-0ed0-48b2-9a5e-3aa50712d4c4/preview.jpg",
+                      "slug": "StormyGiftedRutabagaKippa-dB935XN-YV7ermpC",
+                      "__typename": "Clip"
+                    },
+                    "__typename": "ClipEdge"
+                  }
+                ],
+                "__typename": "ClipConnection"
+              },
+              "roles": { "isPartner": false, "__typename": "UserRoles" },
+              "stream": null,
+              "watchParty": null,
+              "__typename": "User"
+            },
+            "__typename": "SearchForEdge"
+          },
+          {
+            "trackingID": "f959cbc3-98bd-44ed-91d6-128b9c5944ea",
+            "item": {
+              "broadcastSettings": {
+                "id": "215441257",
+                "title": "Another Manic Sunday! | VRChat",
+                "__typename": "BroadcastSettings"
+              },
+              "displayName": "Forsettin",
+              "followers": {
+                "totalCount": 794,
+                "__typename": "FollowerConnection"
+              },
+              "id": "215441257",
+              "lastBroadcast": {
+                "id": "317553848188",
+                "startedAt": "2025-03-10T01:49:39.184946Z",
+                "__typename": "Broadcast"
+              },
+              "login": "forsettin",
+              "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/c31098b8-6a18-4191-8b0d-841b8d18920a-profile_image-150x150.png",
+              "description": "Hi, I'm Setti! I'm a ballroom dancer, who has been dabbling in contemporary, and a gamer who enjoys a wide variety of genres. Get comfortable and I hope you stay awhile, my friends!",
+              "channel": {
+                "id": "215441257",
+                "schedule": {
+                  "id": "schedule-215441257",
+                  "nextSegment": {
+                    "id": "eyJzZWdtZW50SUQiOiJlZDVmYmViMC1hMmNlLTRjZDQtYjUzZi0zYTI2MmUxNWEwYjIiLCJpc29ZZWFyIjoyMDI1LCJpc29XZWVrIjoxMX0=",
+                    "startAt": "2025-03-12T02:00:00Z",
+                    "endAt": "2025-03-12T05:00:00Z",
+                    "title": "Satisfaction to Save Humanity: Satisfactory 1.0 (Starting after September 10th)",
+                    "hasReminder": false,
+                    "categories": [
+                      {
+                        "id": "506456",
+                        "name": "Satisfactory",
+                        "__typename": "Game"
+                      }
+                    ],
+                    "__typename": "ScheduleSegment"
+                  },
+                  "__typename": "Schedule"
+                },
+                "__typename": "Channel"
+              },
+              "self": null,
+              "latestVideo": {
+                "edges": [
+                  {
+                    "node": {
+                      "id": "2401745508",
+                      "lengthSeconds": 6524,
+                      "title": "Another Manic Sunday! | VRChat",
+                      "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/34bdd47ab12e56701286_forsettin_317553848188_1741564847//thumb/thumb0-100x56.jpg",
+                      "__typename": "Video"
+                    },
+                    "__typename": "VideoEdge"
+                  }
+                ],
+                "__typename": "VideoConnection"
+              },
+              "topClip": { "edges": [], "__typename": "ClipConnection" },
+              "roles": { "isPartner": false, "__typename": "UserRoles" },
+              "stream": null,
+              "watchParty": null,
+              "__typename": "User"
+            },
+            "__typename": "SearchForEdge"
+          },
+          {
+            "trackingID": "12869fa3-25e0-495d-8118-9b268cef4a3e",
+            "item": {
+              "broadcastSettings": {
+                "id": "417018918",
+                "title": "Opening 80 Pass Stars [ITA/ENG] !cmd !telegram !nextcontest !ultimovideo",
+                "__typename": "BroadcastSettings"
+              },
+              "displayName": "forsevalerio",
+              "followers": {
+                "totalCount": 749,
+                "__typename": "FollowerConnection"
+              },
+              "id": "417018918",
+              "lastBroadcast": {
+                "id": "315870504825",
+                "startedAt": "2025-02-16T22:33:34.370455Z",
+                "__typename": "Broadcast"
+              },
+              "login": "forsevalerio",
+              "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/a77d0517-af12-4dde-bd08-5bcbfb2102b5-profile_image-150x150.png",
+              "description": "🇮🇹 @forsevalerio on all socials!",
+              "channel": {
+                "id": "417018918",
+                "schedule": {
+                  "id": "schedule-417018918",
+                  "nextSegment": {
+                    "id": "eyJzZWdtZW50SUQiOiIxOTBkNmMxNi0zZWFjLTRmZmYtOTU2Yi0xYWJlNWMxNDMwYjIiLCJpc29ZZWFyIjoyMDI1LCJpc29XZWVrIjoxMn0=",
+                    "startAt": "2025-03-17T20:30:00Z",
+                    "endAt": "2025-03-17T22:30:00Z",
+                    "title": "Livee",
+                    "hasReminder": false,
+                    "categories": [],
+                    "__typename": "ScheduleSegment"
+                  },
+                  "__typename": "Schedule"
+                },
+                "__typename": "Channel"
+              },
+              "self": null,
+              "latestVideo": {
+                "edges": [
+                  {
+                    "node": {
+                      "id": "1641395807",
+                      "lengthSeconds": 4250,
+                      "title": "Live pomeridianan| !cmd !id !ts !prime",
+                      "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/5b02c1d70607c70bf5ee_forsevalerio_40024577960_1667399116//thumb/thumb0-100x56.jpg",
+                      "__typename": "Video"
+                    },
+                    "__typename": "VideoEdge"
+                  }
+                ],
+                "__typename": "VideoConnection"
+              },
+              "topClip": { "edges": [], "__typename": "ClipConnection" },
+              "roles": { "isPartner": false, "__typename": "UserRoles" },
+              "stream": null,
+              "watchParty": null,
+              "__typename": "User"
+            },
+            "__typename": "SearchForEdge"
+          }
+        ],
+        "score": 1,
+        "totalMatches": 10019,
+        "__typename": "SearchForResultUsers"
+      },
+      "channelsWithTag": {
+        "cursor": "",
+        "edges": [],
+        "score": 2,
+        "totalMatches": 0,
+        "__typename": "SearchForResultUsers"
+      },
+      "games": {
+        "cursor": "MTA=",
+        "edges": [
+          {
+            "trackingID": "a876e12a-d3f2-4bbe-ae88-19c0fbcf6d95",
+            "item": {
+              "id": "1282866981",
+              "slug": "delta-force-hawk-ops",
+              "name": "Delta Force",
+              "displayName": "Delta Force",
+              "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/1282866981_IGDB-90x120.jpg",
+              "tags": [
+                {
+                  "id": "a69f7ffb-ddda-4c05-8d7d-f0b24975a2c3",
+                  "isLanguageTag": false,
+                  "localizedName": "FPS",
+                  "tagName": "FPS",
+                  "__typename": "Tag"
+                },
+                {
+                  "id": "523fe736-fa95-44c7-b22f-13008ca2172c",
+                  "isLanguageTag": false,
+                  "localizedName": "Shooter",
+                  "tagName": "Shooter",
+                  "__typename": "Tag"
+                },
+                {
+                  "id": "643fe658-c4fc-45f0-9aed-cbe54a7c1d10",
+                  "isLanguageTag": false,
+                  "localizedName": "MMO",
+                  "tagName": "MMO",
+                  "__typename": "Tag"
+                },
+                {
+                  "id": "4d1eaa36-f750-4862-b7e9-d0a13970d535",
+                  "isLanguageTag": false,
+                  "localizedName": "Action",
+                  "tagName": "Action",
+                  "__typename": "Tag"
+                }
+              ],
+              "viewersCount": 5615,
+              "__typename": "Game"
+            },
+            "__typename": "SearchForEdge"
+          },
+          {
+            "trackingID": "35b25dd8-8a11-4ab6-a0db-65db0106dfa2",
+            "item": {
+              "id": "518402",
+              "slug": "earth-defense-force-6",
+              "name": "Earth Defense Force 6",
+              "displayName": "Earth Defense Force 6",
+              "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/518402_IGDB-90x120.jpg",
+              "tags": [
+                {
+                  "id": "523fe736-fa95-44c7-b22f-13008ca2172c",
+                  "isLanguageTag": false,
+                  "localizedName": "Shooter",
+                  "tagName": "Shooter",
+                  "__typename": "Tag"
+                },
+                {
+                  "id": "4d1eaa36-f750-4862-b7e9-d0a13970d535",
+                  "isLanguageTag": false,
+                  "localizedName": "Action",
+                  "tagName": "Action",
+                  "__typename": "Tag"
+                }
+              ],
+              "viewersCount": 4,
+              "__typename": "Game"
+            },
+            "__typename": "SearchForEdge"
+          },
+          {
+            "trackingID": "f4864157-0731-48bb-9cea-04509d85e10d",
+            "item": {
+              "id": "504651",
+              "slug": "marvel-strike-force",
+              "name": "MARVEL Strike Force",
+              "displayName": "MARVEL Strike Force",
+              "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/504651_IGDB-90x120.jpg",
+              "tags": [
+                {
+                  "id": "84719fd0-8b81-4c0f-900d-f78860b1194e",
+                  "isLanguageTag": false,
+                  "localizedName": "Mobile Game",
+                  "tagName": "Mobile Game",
+                  "__typename": "Tag"
+                },
+                {
+                  "id": "9d38085e-ee62-4203-877b-81797052a18b",
+                  "isLanguageTag": false,
+                  "localizedName": "RPG",
+                  "tagName": "RPG",
+                  "__typename": "Tag"
+                },
+                {
+                  "id": "857fce92-df0c-4c8c-8c60-28e0c5f7d8ae",
+                  "isLanguageTag": false,
+                  "localizedName": "Strategy",
+                  "tagName": "Strategy",
+                  "__typename": "Tag"
+                },
+                {
+                  "id": "4d1eaa36-f750-4862-b7e9-d0a13970d535",
+                  "isLanguageTag": false,
+                  "localizedName": "Action",
+                  "tagName": "Action",
+                  "__typename": "Tag"
+                }
+              ],
+              "viewersCount": 478,
+              "__typename": "Game"
+            },
+            "__typename": "SearchForEdge"
+          },
+          {
+            "trackingID": "691c40cb-d2df-4b8c-a387-6765a51b5776",
+            "item": {
+              "id": "3951",
+              "slug": "rf-online",
+              "name": "RF Online",
+              "displayName": "RF Online",
+              "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/3951_IGDB-90x120.jpg",
+              "tags": [
+                {
+                  "id": "9d38085e-ee62-4203-877b-81797052a18b",
+                  "isLanguageTag": false,
+                  "localizedName": "RPG",
+                  "tagName": "RPG",
+                  "__typename": "Tag"
+                },
+                {
+                  "id": "643fe658-c4fc-45f0-9aed-cbe54a7c1d10",
+                  "isLanguageTag": false,
+                  "localizedName": "MMO",
+                  "tagName": "MMO",
+                  "__typename": "Tag"
+                },
+                {
+                  "id": "4d1eaa36-f750-4862-b7e9-d0a13970d535",
+                  "isLanguageTag": false,
+                  "localizedName": "Action",
+                  "tagName": "Action",
+                  "__typename": "Tag"
+                }
+              ],
+              "viewersCount": 100,
+              "__typename": "Game"
+            },
+            "__typename": "SearchForEdge"
+          },
+          {
+            "trackingID": "32df6ba9-8aea-4bf4-884b-e5b2e1c28083",
+            "item": {
+              "id": "490438",
+              "slug": "ultimate-chicken-horse",
+              "name": "Ultimate Chicken Horse",
+              "displayName": "Ultimate Chicken Horse",
+              "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/490438_IGDB-90x120.jpg",
+              "tags": [
+                {
+                  "id": "523fe736-fa95-44c7-b22f-13008ca2172c",
+                  "isLanguageTag": false,
+                  "localizedName": "Shooter",
+                  "tagName": "Shooter",
+                  "__typename": "Tag"
+                },
+                {
+                  "id": "5d289cf9-d75a-42b5-a635-0d117609e6a6",
+                  "isLanguageTag": false,
+                  "localizedName": "Platformer",
+                  "tagName": "Platformer",
+                  "__typename": "Tag"
+                },
+                {
+                  "id": "80427d95-bb46-42d3-bf4d-408e9bdca49a",
+                  "isLanguageTag": false,
+                  "localizedName": "Adventure Game",
+                  "tagName": "Adventure Game",
+                  "__typename": "Tag"
+                },
+                {
+                  "id": "d72d9de6-1df8-4c4e-b6a2-74e6f4c80557",
+                  "isLanguageTag": false,
+                  "localizedName": "Indie Game",
+                  "tagName": "Indie Game",
+                  "__typename": "Tag"
+                },
+                {
+                  "id": "7ff66192-68ef-4b69-8906-24736bf66ed0",
+                  "isLanguageTag": false,
+                  "localizedName": "Arcade",
+                  "tagName": "Arcade",
+                  "__typename": "Tag"
+                }
+              ],
+              "viewersCount": null,
+              "__typename": "Game"
+            },
+            "__typename": "SearchForEdge"
+          },
+          {
+            "trackingID": "60bd0c5f-b02a-4783-a58c-8dbc9f1f38e3",
+            "item": {
+              "id": "507427",
+              "slug": "door-kickers-2",
+              "name": "Door Kickers 2",
+              "displayName": "Door Kickers 2",
+              "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/507427_IGDB-90x120.jpg",
+              "tags": [
+                {
+                  "id": "22e434b6-ca88-46e8-91ef-c18ee1cb8a67",
+                  "isLanguageTag": false,
+                  "localizedName": "Simulation",
+                  "tagName": "Simulation",
+                  "__typename": "Tag"
+                },
+                {
+                  "id": "857fce92-df0c-4c8c-8c60-28e0c5f7d8ae",
+                  "isLanguageTag": false,
+                  "localizedName": "Strategy",
+                  "tagName": "Strategy",
+                  "__typename": "Tag"
+                },
+                {
+                  "id": "d72d9de6-1df8-4c4e-b6a2-74e6f4c80557",
+                  "isLanguageTag": false,
+                  "localizedName": "Indie Game",
+                  "tagName": "Indie Game",
+                  "__typename": "Tag"
+                },
+                {
+                  "id": "4d1eaa36-f750-4862-b7e9-d0a13970d535",
+                  "isLanguageTag": false,
+                  "localizedName": "Action",
+                  "tagName": "Action",
+                  "__typename": "Tag"
+                }
+              ],
+              "viewersCount": null,
+              "__typename": "Game"
+            },
+            "__typename": "SearchForEdge"
+          },
+          {
+            "trackingID": "aaacde49-8c9a-47e8-b1d8-42b9fb665050",
+            "item": {
+              "id": "3948",
+              "slug": "delta-force",
+              "name": "Delta Force",
+              "displayName": "Delta Force",
+              "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/3948_IGDB-90x120.jpg",
+              "tags": [
+                {
+                  "id": "a69f7ffb-ddda-4c05-8d7d-f0b24975a2c3",
+                  "isLanguageTag": false,
+                  "localizedName": "FPS",
+                  "tagName": "FPS",
+                  "__typename": "Tag"
+                },
+                {
+                  "id": "9751ee1d-0e5a-4fd3-8e9f-bc3c5d3230f0",
+                  "isLanguageTag": false,
+                  "localizedName": "Fighting",
+                  "tagName": "Fighting",
+                  "__typename": "Tag"
+                },
+                {
+                  "id": "523fe736-fa95-44c7-b22f-13008ca2172c",
+                  "isLanguageTag": false,
+                  "localizedName": "Shooter",
+                  "tagName": "Shooter",
+                  "__typename": "Tag"
+                },
+                {
+                  "id": "4d1eaa36-f750-4862-b7e9-d0a13970d535",
+                  "isLanguageTag": false,
+                  "localizedName": "Action",
+                  "tagName": "Action",
+                  "__typename": "Tag"
+                }
+              ],
+              "viewersCount": null,
+              "__typename": "Game"
+            },
+            "__typename": "SearchForEdge"
+          },
+          {
+            "trackingID": "1d09e418-aa10-425f-88c4-20dd6c6a1f32",
+            "item": {
+              "id": "645836116",
+              "slug": "task-force-admiral-vol-1-american-carrier-battles",
+              "name": "Task Force Admiral: Vol.1 - American Carrier Battles",
+              "displayName": "Task Force Admiral: Vol.1 - American Carrier Battles",
+              "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/645836116_IGDB-90x120.jpg",
+              "tags": [
+                {
+                  "id": "22e434b6-ca88-46e8-91ef-c18ee1cb8a67",
+                  "isLanguageTag": false,
+                  "localizedName": "Simulation",
+                  "tagName": "Simulation",
+                  "__typename": "Tag"
+                },
+                {
+                  "id": "857fce92-df0c-4c8c-8c60-28e0c5f7d8ae",
+                  "isLanguageTag": false,
+                  "localizedName": "Strategy",
+                  "tagName": "Strategy",
+                  "__typename": "Tag"
+                },
+                {
+                  "id": "4d1eaa36-f750-4862-b7e9-d0a13970d535",
+                  "isLanguageTag": false,
+                  "localizedName": "Action",
+                  "tagName": "Action",
+                  "__typename": "Tag"
+                }
+              ],
+              "viewersCount": null,
+              "__typename": "Game"
+            },
+            "__typename": "SearchForEdge"
+          },
+          {
+            "trackingID": "6ecb2644-8cc4-4e39-840c-018935276db1",
+            "item": {
+              "id": "11665",
+              "slug": "jet-force-gemini",
+              "name": "Jet Force Gemini",
+              "displayName": "Jet Force Gemini",
+              "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/11665_IGDB-90x120.jpg",
+              "tags": [
+                {
+                  "id": "523fe736-fa95-44c7-b22f-13008ca2172c",
+                  "isLanguageTag": false,
+                  "localizedName": "Shooter",
+                  "tagName": "Shooter",
+                  "__typename": "Tag"
+                },
+                {
+                  "id": "5d289cf9-d75a-42b5-a635-0d117609e6a6",
+                  "isLanguageTag": false,
+                  "localizedName": "Platformer",
+                  "tagName": "Platformer",
+                  "__typename": "Tag"
+                },
+                {
+                  "id": "80427d95-bb46-42d3-bf4d-408e9bdca49a",
+                  "isLanguageTag": false,
+                  "localizedName": "Adventure Game",
+                  "tagName": "Adventure Game",
+                  "__typename": "Tag"
+                },
+                {
+                  "id": "4d1eaa36-f750-4862-b7e9-d0a13970d535",
+                  "isLanguageTag": false,
+                  "localizedName": "Action",
+                  "tagName": "Action",
+                  "__typename": "Tag"
+                }
+              ],
+              "viewersCount": null,
+              "__typename": "Game"
+            },
+            "__typename": "SearchForEdge"
+          },
+          {
+            "trackingID": "930b141f-cf33-4a76-8efb-cf64c1eb068c",
+            "item": {
+              "id": "496236",
+              "slug": "sonic-forces",
+              "name": "Sonic Forces",
+              "displayName": "Sonic Forces",
+              "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/496236_IGDB-90x120.jpg",
+              "tags": [
+                {
+                  "id": "5d289cf9-d75a-42b5-a635-0d117609e6a6",
+                  "isLanguageTag": false,
+                  "localizedName": "Platformer",
+                  "tagName": "Platformer",
+                  "__typename": "Tag"
+                },
+                {
+                  "id": "857fce92-df0c-4c8c-8c60-28e0c5f7d8ae",
+                  "isLanguageTag": false,
+                  "localizedName": "Strategy",
+                  "tagName": "Strategy",
+                  "__typename": "Tag"
+                },
+                {
+                  "id": "80427d95-bb46-42d3-bf4d-408e9bdca49a",
+                  "isLanguageTag": false,
+                  "localizedName": "Adventure Game",
+                  "tagName": "Adventure Game",
+                  "__typename": "Tag"
+                },
+                {
+                  "id": "4d1eaa36-f750-4862-b7e9-d0a13970d535",
+                  "isLanguageTag": false,
+                  "localizedName": "Action",
+                  "tagName": "Action",
+                  "__typename": "Tag"
+                }
+              ],
+              "viewersCount": null,
+              "__typename": "Game"
+            },
+            "__typename": "SearchForEdge"
+          }
+        ],
+        "score": 4,
+        "totalMatches": 965,
+        "__typename": "SearchForResultGames"
+      },
+      "videos": {
+        "cursor": "MTA=",
+        "edges": [
+          {
+            "trackingID": "46fdd8a3-68cd-44a6-8edf-c0a67b3c3899",
+            "item": {
+              "createdAt": "2025-03-10T14:58:49Z",
+              "owner": {
+                "id": "22484632",
+                "displayName": "forsen",
+                "login": "forsen",
+                "roles": { "isPartner": true, "__typename": "UserRoles" },
+                "__typename": "User"
+              },
+              "id": "2402143711",
+              "game": {
+                "id": "509658",
+                "slug": "just-chatting",
+                "name": "Just Chatting",
+                "displayName": "Just Chatting",
+                "__typename": "Game"
+              },
+              "lengthSeconds": 20774,
+              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d1m7jfoe9zdc1j/8a34adb423cdb7488a2a_forsen_318597564669_1741618724//thumb/thumb0-214x120.jpg",
+              "title": "Games and shit!",
+              "viewCount": 150888,
+              "__typename": "Video"
+            },
+            "__typename": "SearchForEdge"
+          },
+          {
+            "trackingID": "8d11664a-22d7-4267-a1f6-70d2e8ee4b47",
+            "item": {
+              "createdAt": "2025-03-09T15:00:22Z",
+              "owner": {
+                "id": "22484632",
+                "displayName": "forsen",
+                "login": "forsen",
+                "roles": { "isPartner": true, "__typename": "UserRoles" },
+                "__typename": "User"
+              },
+              "id": "2401312686",
+              "game": {
+                "id": "509658",
+                "slug": "just-chatting",
+                "name": "Just Chatting",
+                "displayName": "Just Chatting",
+                "__typename": "Game"
+              },
+              "lengthSeconds": 21616,
+              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d1m7jfoe9zdc1j/e0a54cb4984e56873587_forsen_318517664125_1741532417//thumb/thumb0-214x120.jpg",
+              "title": "Games and shit!",
+              "viewCount": 156646,
+              "__typename": "Video"
+            },
+            "__typename": "SearchForEdge"
+          },
+          {
+            "trackingID": "679371e4-67e5-4c6d-9e27-72414d07f81b",
+            "item": {
+              "createdAt": "2025-03-08T15:00:24Z",
+              "owner": {
+                "id": "22484632",
+                "displayName": "forsen",
+                "login": "forsen",
+                "roles": { "isPartner": true, "__typename": "UserRoles" },
+                "__typename": "User"
+              },
+              "id": "2400390266",
+              "game": {
+                "id": "509658",
+                "slug": "just-chatting",
+                "name": "Just Chatting",
+                "displayName": "Just Chatting",
+                "__typename": "Game"
+              },
+              "lengthSeconds": 20948,
+              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/1c9f31968837a6989ffc_forsen_316887156729_1741446017//thumb/thumb0-214x120.jpg",
+              "title": "Games and shit!",
+              "viewCount": 138425,
+              "__typename": "Video"
+            },
+            "__typename": "SearchForEdge"
+          },
+          {
+            "trackingID": "e6304ebc-1eff-4df1-a943-9ff46c6f2b83",
+            "item": {
+              "createdAt": "2025-03-10T19:32:21Z",
+              "owner": {
+                "id": "431823891",
+                "displayName": "danteforse",
+                "login": "danteforse",
+                "roles": { "isPartner": false, "__typename": "UserRoles" },
+                "__typename": "User"
+              },
+              "id": "2402335454",
+              "game": {
+                "id": "516575",
+                "slug": "valorant",
+                "name": "VALORANT",
+                "displayName": "VALORANT",
+                "__typename": "Game"
+              },
+              "lengthSeconds": 7795,
+              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/bc9bb19477c5b0f36aa4_danteforse_316997668473_1741635135//thumb/thumb0-214x120.jpg",
+              "title": "Аккуратненькая игра душевнобольных🤓| ранкед до последней нервной клетки !tg @m1strall_",
+              "viewCount": 50,
+              "__typename": "Video"
+            },
+            "__typename": "SearchForEdge"
+          },
+          {
+            "trackingID": "8e19d073-1c32-4b5b-803f-560ccacb031e",
+            "item": {
+              "createdAt": "2025-03-06T15:11:57Z",
+              "owner": {
+                "id": "22484632",
+                "displayName": "forsen",
+                "login": "forsen",
+                "roles": { "isPartner": true, "__typename": "UserRoles" },
+                "__typename": "User"
+              },
+              "id": "2398627810",
+              "game": {
+                "id": "509658",
+                "slug": "just-chatting",
+                "name": "Just Chatting",
+                "displayName": "Just Chatting",
+                "__typename": "Game"
+              },
+              "lengthSeconds": 21136,
+              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/83ccd7a8325bc1a10c1f_forsen_316778849273_1741273911//thumb/thumb0-214x120.jpg",
+              "title": "Games and shit!",
+              "viewCount": 143635,
+              "__typename": "Video"
+            },
+            "__typename": "SearchForEdge"
+          },
+          {
+            "trackingID": "a1cbade8-9329-4c9b-b877-541af9cd367f",
+            "item": {
+              "createdAt": "2025-03-10T00:00:52Z",
+              "owner": {
+                "id": "215441257",
+                "displayName": "Forsettin",
+                "login": "forsettin",
+                "roles": { "isPartner": false, "__typename": "UserRoles" },
+                "__typename": "User"
+              },
+              "id": "2401745508",
+              "game": {
+                "id": "499003",
+                "slug": "vrchat",
+                "name": "VRChat",
+                "displayName": "VRChat",
+                "__typename": "Game"
+              },
+              "lengthSeconds": 6524,
+              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/34bdd47ab12e56701286_forsettin_317553848188_1741564847//thumb/thumb0-214x120.jpg",
+              "title": "Another Manic Sunday! | VRChat",
+              "viewCount": 46,
+              "__typename": "Video"
+            },
+            "__typename": "SearchForEdge"
+          },
+          {
+            "trackingID": "0e88f7fd-8123-46cb-baea-71f97793bd15",
+            "item": {
+              "createdAt": "2025-03-04T14:55:55Z",
+              "owner": {
+                "id": "22484632",
+                "displayName": "forsen",
+                "login": "forsen",
+                "roles": { "isPartner": true, "__typename": "UserRoles" },
+                "__typename": "User"
+              },
+              "id": "2396928540",
+              "game": {
+                "id": "509658",
+                "slug": "just-chatting",
+                "name": "Just Chatting",
+                "displayName": "Just Chatting",
+                "__typename": "Game"
+              },
+              "lengthSeconds": 22115,
+              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/4cc49a911eeb47eb81e4_forsen_317232907644_1741100150//thumb/thumb0-214x120.jpg",
+              "title": "Games and shit!",
+              "viewCount": 151113,
+              "__typename": "Video"
+            },
+            "__typename": "SearchForEdge"
+          },
+          {
+            "trackingID": "807bd52f-3ef2-4345-bdc6-bde663fb7b8b",
+            "item": {
+              "createdAt": "2025-03-05T15:01:11Z",
+              "owner": {
+                "id": "22484632",
+                "displayName": "forsen",
+                "login": "forsen",
+                "roles": { "isPartner": true, "__typename": "UserRoles" },
+                "__typename": "User"
+              },
+              "id": "2397777329",
+              "game": {
+                "id": "509658",
+                "slug": "just-chatting",
+                "name": "Just Chatting",
+                "displayName": "Just Chatting",
+                "__typename": "Game"
+              },
+              "lengthSeconds": 20131,
+              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d1m7jfoe9zdc1j/fa73d22271410b96c592_forsen_318201225469_1741186866//thumb/thumb0-214x120.jpg",
+              "title": "Games and shit!",
+              "viewCount": 98972,
+              "__typename": "Video"
+            },
+            "__typename": "SearchForEdge"
+          },
+          {
+            "trackingID": "d8aa34e9-af43-4a75-95d7-02bef8604430",
+            "item": {
+              "createdAt": "2025-03-09T03:59:47Z",
+              "owner": {
+                "id": "205281163",
+                "displayName": "kabizzle",
+                "login": "kabizzle",
+                "roles": { "isPartner": false, "__typename": "UserRoles" },
+                "__typename": "User"
+              },
+              "id": "2400998882",
+              "game": {
+                "id": "32982",
+                "slug": "grand-theft-auto-v",
+                "name": "Grand Theft Auto V",
+                "displayName": "Grand Theft Auto V",
+                "__typename": "Game"
+              },
+              "lengthSeconds": 9756,
+              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/7b6e53b94979ac9047a0_kabizzle_317505341564_1741492783//thumb/thumb0-214x120.jpg",
+              "title": "ON THE HUNT!!! FOR FREEDOM!!! | Huck Forse - Apex RP",
+              "viewCount": 298,
+              "__typename": "Video"
+            },
+            "__typename": "SearchForEdge"
+          },
+          {
+            "trackingID": "bcefb89c-41e6-43c6-9667-fec3a948491d",
+            "item": {
+              "createdAt": "2025-03-08T20:59:52Z",
+              "owner": {
+                "id": "230111520",
+                "displayName": "MrBobTNT",
+                "login": "mrbobtnt",
+                "roles": { "isPartner": false, "__typename": "UserRoles" },
+                "__typename": "User"
+              },
+              "id": "2400678974",
+              "game": {
+                "id": "509658",
+                "slug": "just-chatting",
+                "name": "Just Chatting",
+                "displayName": "Just Chatting",
+                "__typename": "Game"
+              },
+              "lengthSeconds": 13180,
+              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/a27047a3ca99d89e5b32_mrbobtnt_317480596092_1741467588//thumb/thumb0-214x120.jpg",
+              "title": "SNL BOB: il lato del Week End, Film, Quiz e forse altro",
+              "viewCount": 369,
+              "__typename": "Video"
+            },
+            "__typename": "SearchForEdge"
+          }
+        ],
+        "score": 5,
+        "totalMatches": 2267,
+        "__typename": "SearchForResultVideos"
+      },
+      "relatedLiveChannels": {
+        "edges": [
+          {
+            "trackingID": "563a8498-9cb9-4dd9-afeb-da48c34da263",
+            "item": {
+              "id": "92038375",
+              "stream": {
+                "id": "317016332409",
+                "viewersCount": 66962,
+                "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_caedrel-200x112.jpg",
+                "game": {
+                  "name": "League of Legends",
+                  "id": "21779",
+                  "slug": "league-of-legends",
+                  "__typename": "Game"
+                },
+                "broadcaster": {
+                  "id": "92038375",
+                  "primaryColorHex": "8205B3",
+                  "login": "caedrel",
+                  "displayName": "Caedrel",
+                  "broadcastSettings": {
+                    "id": "92038375",
+                    "title": "🔴FIRST STAND INTERNATIONAL DAY 2 TL VS TES #FirstStandWatchParty !dpmlol !discord !displate",
+                    "__typename": "BroadcastSettings"
+                  },
+                  "roles": { "isPartner": true, "__typename": "UserRoles" },
+                  "__typename": "User"
+                },
+                "__typename": "Stream"
+              },
+              "watchParty": null,
+              "__typename": "User"
+            },
+            "__typename": "SearchForEdgeRelatedLiveChannels"
+          },
+          {
+            "trackingID": "86a59d99-b375-4cc5-919f-1b8b9d47f906",
+            "item": {
+              "id": "151368796",
+              "stream": {
+                "id": "317625068796",
+                "viewersCount": 5579,
+                "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_piratesoftware-200x112.jpg",
+                "game": {
+                  "name": "Monster Hunter Wilds",
+                  "id": "1286077738",
+                  "slug": "monster-hunter-wilds",
+                  "__typename": "Game"
+                },
+                "broadcaster": {
+                  "id": "151368796",
+                  "primaryColorHex": "096900",
+                  "login": "piratesoftware",
+                  "displayName": "PirateSoftware",
+                  "broadcastSettings": {
+                    "id": "151368796",
+                    "title": "HR 190+ 💜 !Build 💛 @FerretSoftware !Heartbound !Website !TTS",
+                    "__typename": "BroadcastSettings"
+                  },
+                  "roles": { "isPartner": true, "__typename": "UserRoles" },
+                  "__typename": "User"
+                },
+                "__typename": "Stream"
+              },
+              "watchParty": null,
+              "__typename": "User"
+            },
+            "__typename": "SearchForEdgeRelatedLiveChannels"
+          },
+          {
+            "trackingID": "bd4cc68b-ff2e-4009-a502-5b79ecf6134c",
+            "item": {
+              "id": "25653002",
+              "stream": {
+                "id": "318659714301",
+                "viewersCount": 5241,
+                "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_iwdominate-200x112.jpg",
+                "game": {
+                  "name": "League of Legends",
+                  "id": "21779",
+                  "slug": "league-of-legends",
+                  "__typename": "Game"
+                },
+                "broadcaster": {
+                  "id": "25653002",
+                  "primaryColorHex": null,
+                  "login": "iwdominate",
+                  "displayName": "IWDominate",
+                  "broadcastSettings": {
+                    "id": "25653002",
+                    "title": "🔴FIRST STAND : FULL FEARLESS INTERNATIONAL TOURNAMENT // CFO (APAC) VS KC (EU)🔴#FirstStandWatchParty",
+                    "__typename": "BroadcastSettings"
+                  },
+                  "roles": { "isPartner": true, "__typename": "UserRoles" },
+                  "__typename": "User"
+                },
+                "__typename": "Stream"
+              },
+              "watchParty": null,
+              "__typename": "User"
+            },
+            "__typename": "SearchForEdgeRelatedLiveChannels"
+          },
+          {
+            "trackingID": "e1edb767-acfa-42a2-90aa-5f1c93d8bb59",
+            "item": {
+              "id": "6094619",
+              "stream": {
+                "id": "317016454649",
+                "viewersCount": 1376,
+                "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_jankos-200x112.jpg",
+                "game": {
+                  "name": "League of Legends",
+                  "id": "21779",
+                  "slug": "league-of-legends",
+                  "__typename": "Game"
+                },
+                "broadcaster": {
+                  "id": "6094619",
+                  "primaryColorHex": null,
+                  "login": "jankos",
+                  "displayName": "Jankos",
+                  "broadcastSettings": {
+                    "id": "6094619",
+                    "title": "📢📢FIRST STAND TR DAY 2 KC/TL MUST DO IT #FirstStandWatchParty 📢📢 !YOUTUBE !CLIPS !DISCORD !PRIME",
+                    "__typename": "BroadcastSettings"
+                  },
+                  "roles": { "isPartner": true, "__typename": "UserRoles" },
+                  "__typename": "User"
+                },
+                "__typename": "Stream"
+              },
+              "watchParty": null,
+              "__typename": "User"
+            },
+            "__typename": "SearchForEdgeRelatedLiveChannels"
+          }
+        ],
+        "score": 3,
+        "__typename": "SearchForResultRelatedLiveChannels"
+      },
+      "__typename": "SearchFor"
+    }
+  },
+  "extensions": {
+    "durationMilliseconds": 192,
+    "operationName": "SearchResultsPage_SearchResults",
+    "requestID": "01JP2BHW3CTNR8G75EWPHTDEDX"
+  }
+}

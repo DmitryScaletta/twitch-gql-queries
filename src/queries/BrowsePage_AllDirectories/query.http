@@ -1,0 +1,49 @@
+### BrowsePage_AllDirectories
+
+POST https://gql.twitch.tv/gql
+Content-Type: application/json
+Client-Id: {{$dotenv CLIENT_ID}}
+
+{
+  "operationName": "BrowsePage_AllDirectories",
+  "variables": {
+    "cursor": null,
+    "limit": 100,
+    "options": {
+      "sort": "RELEVANCE",
+    }
+  },
+  "extensions": {
+    "persistedQuery": {
+      "version": 1,
+      "sha256Hash": "2f67f71ba89f3c0ed26a141ec00da1defecb2303595f5cda4298169549783d9e"
+    }
+  }
+}
+
+### with tags
+
+POST https://gql.twitch.tv/gql
+Content-Type: application/json
+Client-Id: {{$dotenv CLIENT_ID}}
+
+{
+  "operationName": "BrowsePage_AllDirectories",
+  "variables": {
+    "cursor": null,
+    "limit": 100,
+    "options": {
+      "recommendationsContext": {
+        "platform": "web"
+      },
+      "sort": "RELEVANCE",
+      "tags": ["4d1eaa36-f750-4862-b7e9-d0a13970d535"]
+    }
+  },
+  "extensions": {
+    "persistedQuery": {
+      "version": 1,
+      "sha256Hash": "2f67f71ba89f3c0ed26a141ec00da1defecb2303595f5cda4298169549783d9e"
+    }
+  }
+}

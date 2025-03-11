@@ -1,0 +1,43 @@
+{
+  "data": {
+    "userOrError": {
+      "id": "12826",
+      "login": "twitch",
+      "displayName": "Twitch",
+      "primaryColorHex": "5C16C5",
+      "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/d5e6ebb4-a245-4ebf-bea6-2183e2f39600-profile_image-70x70.png",
+      "stream": null,
+      "__typename": "User",
+      "bannerImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/7df5542c-173a-4784-8f2b-a14f5af061dc-profile_banner-480.png",
+      "channel": {
+        "id": "12826",
+        "self": {
+          "isAuthorized": true,
+          "restrictionType": null,
+          "__typename": "ChannelSelfEdge"
+        },
+        "trailer": {
+          "video": {
+            "id": "1816688726",
+            "self": { "viewingHistory": null, "__typename": "VideoSelfEdge" },
+            "__typename": "Video"
+          },
+          "__typename": "Trailer"
+        },
+        "home": {
+          "preferences": {
+            "heroPreset": "PRESET_2",
+            "__typename": "ChannelHomePreferences"
+          },
+          "__typename": "ChannelHome"
+        },
+        "__typename": "Channel"
+      }
+    }
+  },
+  "extensions": {
+    "durationMilliseconds": 63,
+    "operationName": "ChannelShell",
+    "requestID": "01JP08TKTD1YFCX1WJXXS01Z0J"
+  }
+}

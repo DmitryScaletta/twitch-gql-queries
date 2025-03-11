@@ -1,0 +1,642 @@
+{
+  "data": {
+    "searchFor": {
+      "channels": {
+        "cursor": "",
+        "edges": [],
+        "score": 0,
+        "totalMatches": 0,
+        "__typename": "SearchForResultUsers"
+      },
+      "channelsWithTag": {
+        "cursor": "",
+        "edges": [],
+        "score": 0,
+        "totalMatches": 0,
+        "__typename": "SearchForResultUsers"
+      },
+      "games": {
+        "cursor": "MTU=",
+        "edges": [
+          {
+            "trackingID": "5509f24a-e0db-4958-8837-ffc6572b5204",
+            "item": {
+              "id": "1286077738",
+              "slug": "monster-hunter-wilds",
+              "name": "Monster Hunter Wilds",
+              "displayName": "Monster Hunter Wilds",
+              "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/1286077738_IGDB-90x120.jpg",
+              "tags": [
+                {
+                  "id": "9d38085e-ee62-4203-877b-81797052a18b",
+                  "isLanguageTag": false,
+                  "localizedName": "RPG",
+                  "tagName": "RPG",
+                  "__typename": "Tag"
+                },
+                {
+                  "id": "4d1eaa36-f750-4862-b7e9-d0a13970d535",
+                  "isLanguageTag": false,
+                  "localizedName": "Action",
+                  "tagName": "Action",
+                  "__typename": "Tag"
+                },
+                {
+                  "id": "80427d95-bb46-42d3-bf4d-408e9bdca49a",
+                  "isLanguageTag": false,
+                  "localizedName": "Adventure Game",
+                  "tagName": "Adventure Game",
+                  "__typename": "Tag"
+                },
+                {
+                  "id": "a682f560-5186-4871-b97a-8d8e3f4308e9",
+                  "isLanguageTag": false,
+                  "localizedName": "Open World",
+                  "tagName": "Open World",
+                  "__typename": "Tag"
+                }
+              ],
+              "viewersCount": 32710,
+              "__typename": "Game"
+            },
+            "__typename": "SearchForEdge"
+          },
+          {
+            "trackingID": "e4669fd8-5188-4305-9bc4-3c0f591ae0dc",
+            "item": {
+              "id": "497467",
+              "slug": "monster-hunter-world",
+              "name": "Monster Hunter: World",
+              "displayName": "Monster Hunter: World",
+              "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/497467_IGDB-90x120.jpg",
+              "tags": [
+                {
+                  "id": "9d38085e-ee62-4203-877b-81797052a18b",
+                  "isLanguageTag": false,
+                  "localizedName": "RPG",
+                  "tagName": "RPG",
+                  "__typename": "Tag"
+                },
+                {
+                  "id": "80427d95-bb46-42d3-bf4d-408e9bdca49a",
+                  "isLanguageTag": false,
+                  "localizedName": "Adventure Game",
+                  "tagName": "Adventure Game",
+                  "__typename": "Tag"
+                },
+                {
+                  "id": "4d1eaa36-f750-4862-b7e9-d0a13970d535",
+                  "isLanguageTag": false,
+                  "localizedName": "Action",
+                  "tagName": "Action",
+                  "__typename": "Tag"
+                }
+              ],
+              "viewersCount": 145,
+              "__typename": "Game"
+            },
+            "__typename": "SearchForEdge"
+          },
+          {
+            "trackingID": "aef0e167-d820-49a0-bfb9-3454031f0e56",
+            "item": {
+              "id": "375403621",
+              "slug": "pokemon-trading-card-game-pocket",
+              "name": "Pokémon Trading Card Game Pocket",
+              "displayName": "Pokémon Trading Card Game Pocket",
+              "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/375403621_IGDB-90x120.jpg",
+              "tags": [
+                {
+                  "id": "84719fd0-8b81-4c0f-900d-f78860b1194e",
+                  "isLanguageTag": false,
+                  "localizedName": "Mobile Game",
+                  "tagName": "Mobile Game",
+                  "__typename": "Tag"
+                },
+                {
+                  "id": "857fce92-df0c-4c8c-8c60-28e0c5f7d8ae",
+                  "isLanguageTag": false,
+                  "localizedName": "Strategy",
+                  "tagName": "Strategy",
+                  "__typename": "Tag"
+                },
+                {
+                  "id": "8d39b307-d3ad-4f4a-98a4-d1951f55ceb7",
+                  "isLanguageTag": false,
+                  "localizedName": "Card \u0026 Board Game",
+                  "tagName": "Card \u0026 Board Game",
+                  "__typename": "Tag"
+                }
+              ],
+              "viewersCount": 2068,
+              "__typename": "Game"
+            },
+            "__typename": "SearchForEdge"
+          },
+          {
+            "trackingID": "2f9b7c34-9f96-438f-aabc-6f6dd91f5a1a",
+            "item": {
+              "id": "1275666892",
+              "slug": "monster-hunter-rise",
+              "name": "Monster Hunter Rise",
+              "displayName": "Monster Hunter Rise",
+              "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/1275666892_IGDB-90x120.jpg",
+              "tags": [
+                {
+                  "id": "9d38085e-ee62-4203-877b-81797052a18b",
+                  "isLanguageTag": false,
+                  "localizedName": "RPG",
+                  "tagName": "RPG",
+                  "__typename": "Tag"
+                },
+                {
+                  "id": "4d1eaa36-f750-4862-b7e9-d0a13970d535",
+                  "isLanguageTag": false,
+                  "localizedName": "Action",
+                  "tagName": "Action",
+                  "__typename": "Tag"
+                },
+                {
+                  "id": "80427d95-bb46-42d3-bf4d-408e9bdca49a",
+                  "isLanguageTag": false,
+                  "localizedName": "Adventure Game",
+                  "tagName": "Adventure Game",
+                  "__typename": "Tag"
+                },
+                {
+                  "id": "ae7d0652-8b2e-476b-8b51-a076550b234f",
+                  "isLanguageTag": false,
+                  "localizedName": "Survival",
+                  "tagName": "Survival",
+                  "__typename": "Tag"
+                }
+              ],
+              "viewersCount": 100,
+              "__typename": "Game"
+            },
+            "__typename": "SearchForEdge"
+          },
+          {
+            "trackingID": "0e9995d4-8812-45a1-be02-d9f6a8a0a979",
+            "item": {
+              "id": "10609",
+              "slug": "pokemon-emerald",
+              "name": "Pokémon Emerald Version",
+              "displayName": "Pokémon Emerald Version",
+              "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/10609_IGDB-90x120.jpg",
+              "tags": [
+                {
+                  "id": "9d38085e-ee62-4203-877b-81797052a18b",
+                  "isLanguageTag": false,
+                  "localizedName": "RPG",
+                  "tagName": "RPG",
+                  "__typename": "Tag"
+                },
+                {
+                  "id": "857fce92-df0c-4c8c-8c60-28e0c5f7d8ae",
+                  "isLanguageTag": false,
+                  "localizedName": "Strategy",
+                  "tagName": "Strategy",
+                  "__typename": "Tag"
+                },
+                {
+                  "id": "80427d95-bb46-42d3-bf4d-408e9bdca49a",
+                  "isLanguageTag": false,
+                  "localizedName": "Adventure Game",
+                  "tagName": "Adventure Game",
+                  "__typename": "Tag"
+                },
+                {
+                  "id": "4d1eaa36-f750-4862-b7e9-d0a13970d535",
+                  "isLanguageTag": false,
+                  "localizedName": "Action",
+                  "tagName": "Action",
+                  "__typename": "Tag"
+                }
+              ],
+              "viewersCount": 1276,
+              "__typename": "Game"
+            },
+            "__typename": "SearchForEdge"
+          },
+          {
+            "trackingID": "7a93c4ea-fc25-4924-bee8-eca80c9b9afe",
+            "item": {
+              "id": "504371622",
+              "slug": "monster-train-2",
+              "name": "Monster Train 2",
+              "displayName": "Monster Train 2",
+              "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/504371622_IGDB-90x120.jpg",
+              "tags": [
+                {
+                  "id": "857fce92-df0c-4c8c-8c60-28e0c5f7d8ae",
+                  "isLanguageTag": false,
+                  "localizedName": "Strategy",
+                  "tagName": "Strategy",
+                  "__typename": "Tag"
+                },
+                {
+                  "id": "8d39b307-d3ad-4f4a-98a4-d1951f55ceb7",
+                  "isLanguageTag": false,
+                  "localizedName": "Card \u0026 Board Game",
+                  "tagName": "Card \u0026 Board Game",
+                  "__typename": "Tag"
+                },
+                {
+                  "id": "4d1eaa36-f750-4862-b7e9-d0a13970d535",
+                  "isLanguageTag": false,
+                  "localizedName": "Action",
+                  "tagName": "Action",
+                  "__typename": "Tag"
+                }
+              ],
+              "viewersCount": 1,
+              "__typename": "Game"
+            },
+            "__typename": "SearchForEdge"
+          },
+          {
+            "trackingID": "8a7d02d5-b08a-4e2b-b712-9db29d87301a",
+            "item": {
+              "id": "27602",
+              "slug": "pokemon-black-white",
+              "name": "Pokémon Black/White",
+              "displayName": "Pokémon Black/White",
+              "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/27602-90x120.jpg",
+              "tags": [
+                {
+                  "id": "9d38085e-ee62-4203-877b-81797052a18b",
+                  "isLanguageTag": false,
+                  "localizedName": "RPG",
+                  "tagName": "RPG",
+                  "__typename": "Tag"
+                },
+                {
+                  "id": "857fce92-df0c-4c8c-8c60-28e0c5f7d8ae",
+                  "isLanguageTag": false,
+                  "localizedName": "Strategy",
+                  "tagName": "Strategy",
+                  "__typename": "Tag"
+                },
+                {
+                  "id": "80427d95-bb46-42d3-bf4d-408e9bdca49a",
+                  "isLanguageTag": false,
+                  "localizedName": "Adventure Game",
+                  "tagName": "Adventure Game",
+                  "__typename": "Tag"
+                },
+                {
+                  "id": "4d1eaa36-f750-4862-b7e9-d0a13970d535",
+                  "isLanguageTag": false,
+                  "localizedName": "Action",
+                  "tagName": "Action",
+                  "__typename": "Tag"
+                }
+              ],
+              "viewersCount": 17,
+              "__typename": "Game"
+            },
+            "__typename": "SearchForEdge"
+          },
+          {
+            "trackingID": "07616123-5e2a-4f3f-81ed-cbd46d2f8efc",
+            "item": {
+              "id": "494141",
+              "slug": "monster-hunter-generations-ultimate",
+              "name": "Monster Hunter Generations Ultimate",
+              "displayName": "Monster Hunter Generations Ultimate",
+              "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/494141_IGDB-90x120.jpg",
+              "tags": [
+                {
+                  "id": "9d38085e-ee62-4203-877b-81797052a18b",
+                  "isLanguageTag": false,
+                  "localizedName": "RPG",
+                  "tagName": "RPG",
+                  "__typename": "Tag"
+                },
+                {
+                  "id": "4d1eaa36-f750-4862-b7e9-d0a13970d535",
+                  "isLanguageTag": false,
+                  "localizedName": "Action",
+                  "tagName": "Action",
+                  "__typename": "Tag"
+                }
+              ],
+              "viewersCount": null,
+              "__typename": "Game"
+            },
+            "__typename": "SearchForEdge"
+          },
+          {
+            "trackingID": "4001028a-ce13-470f-9ae5-831002e1ee18",
+            "item": {
+              "id": "103828",
+              "slug": "pokemon-x-y",
+              "name": "Pokémon X/Y",
+              "displayName": "Pokémon X/Y",
+              "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/103828-90x120.jpg",
+              "tags": [
+                {
+                  "id": "9d38085e-ee62-4203-877b-81797052a18b",
+                  "isLanguageTag": false,
+                  "localizedName": "RPG",
+                  "tagName": "RPG",
+                  "__typename": "Tag"
+                },
+                {
+                  "id": "857fce92-df0c-4c8c-8c60-28e0c5f7d8ae",
+                  "isLanguageTag": false,
+                  "localizedName": "Strategy",
+                  "tagName": "Strategy",
+                  "__typename": "Tag"
+                },
+                {
+                  "id": "80427d95-bb46-42d3-bf4d-408e9bdca49a",
+                  "isLanguageTag": false,
+                  "localizedName": "Adventure Game",
+                  "tagName": "Adventure Game",
+                  "__typename": "Tag"
+                },
+                {
+                  "id": "a682f560-5186-4871-b97a-8d8e3f4308e9",
+                  "isLanguageTag": false,
+                  "localizedName": "Open World",
+                  "tagName": "Open World",
+                  "__typename": "Tag"
+                }
+              ],
+              "viewersCount": null,
+              "__typename": "Game"
+            },
+            "__typename": "SearchForEdge"
+          },
+          {
+            "trackingID": "7752868b-cf31-46f7-8669-3ac8ee04beb3",
+            "item": {
+              "id": "19745",
+              "slug": "pokemon-platinum",
+              "name": "Pokémon Platinum Version",
+              "displayName": "Pokémon Platinum Version",
+              "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/19745_IGDB-90x120.jpg",
+              "tags": [
+                {
+                  "id": "9d38085e-ee62-4203-877b-81797052a18b",
+                  "isLanguageTag": false,
+                  "localizedName": "RPG",
+                  "tagName": "RPG",
+                  "__typename": "Tag"
+                },
+                {
+                  "id": "857fce92-df0c-4c8c-8c60-28e0c5f7d8ae",
+                  "isLanguageTag": false,
+                  "localizedName": "Strategy",
+                  "tagName": "Strategy",
+                  "__typename": "Tag"
+                },
+                {
+                  "id": "80427d95-bb46-42d3-bf4d-408e9bdca49a",
+                  "isLanguageTag": false,
+                  "localizedName": "Adventure Game",
+                  "tagName": "Adventure Game",
+                  "__typename": "Tag"
+                },
+                {
+                  "id": "4d1eaa36-f750-4862-b7e9-d0a13970d535",
+                  "isLanguageTag": false,
+                  "localizedName": "Action",
+                  "tagName": "Action",
+                  "__typename": "Tag"
+                }
+              ],
+              "viewersCount": 45,
+              "__typename": "Game"
+            },
+            "__typename": "SearchForEdge"
+          },
+          {
+            "trackingID": "35fb95a7-cd9f-4c37-853e-2f5a8fb28856",
+            "item": {
+              "id": "33734",
+              "slug": "pokemon-black-white-version-2",
+              "name": "Pokémon Black/White Version 2",
+              "displayName": "Pokémon Black/White Version 2",
+              "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/33734-90x120.jpg",
+              "tags": [
+                {
+                  "id": "9d38085e-ee62-4203-877b-81797052a18b",
+                  "isLanguageTag": false,
+                  "localizedName": "RPG",
+                  "tagName": "RPG",
+                  "__typename": "Tag"
+                },
+                {
+                  "id": "4d1eaa36-f750-4862-b7e9-d0a13970d535",
+                  "isLanguageTag": false,
+                  "localizedName": "Action",
+                  "tagName": "Action",
+                  "__typename": "Tag"
+                },
+                {
+                  "id": "80427d95-bb46-42d3-bf4d-408e9bdca49a",
+                  "isLanguageTag": false,
+                  "localizedName": "Adventure Game",
+                  "tagName": "Adventure Game",
+                  "__typename": "Tag"
+                },
+                {
+                  "id": "857fce92-df0c-4c8c-8c60-28e0c5f7d8ae",
+                  "isLanguageTag": false,
+                  "localizedName": "Strategy",
+                  "tagName": "Strategy",
+                  "__typename": "Tag"
+                },
+                {
+                  "id": "366847c7-b25b-47aa-8e77-e7ec4cdbe9ae",
+                  "isLanguageTag": false,
+                  "localizedName": "Educational Game",
+                  "tagName": "Educational Game",
+                  "__typename": "Tag"
+                }
+              ],
+              "viewersCount": null,
+              "__typename": "Game"
+            },
+            "__typename": "SearchForEdge"
+          },
+          {
+            "trackingID": "b39d4f6d-98a3-4d8a-aa96-9e78728ca16a",
+            "item": {
+              "id": "3623",
+              "slug": "pokemon-red-blue",
+              "name": "Pokémon Red/Blue",
+              "displayName": "Pokémon Red/Blue",
+              "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/3623-90x120.jpg",
+              "tags": [
+                {
+                  "id": "9d38085e-ee62-4203-877b-81797052a18b",
+                  "isLanguageTag": false,
+                  "localizedName": "RPG",
+                  "tagName": "RPG",
+                  "__typename": "Tag"
+                },
+                {
+                  "id": "80427d95-bb46-42d3-bf4d-408e9bdca49a",
+                  "isLanguageTag": false,
+                  "localizedName": "Adventure Game",
+                  "tagName": "Adventure Game",
+                  "__typename": "Tag"
+                },
+                {
+                  "id": "a682f560-5186-4871-b97a-8d8e3f4308e9",
+                  "isLanguageTag": false,
+                  "localizedName": "Open World",
+                  "tagName": "Open World",
+                  "__typename": "Tag"
+                }
+              ],
+              "viewersCount": 924,
+              "__typename": "Game"
+            },
+            "__typename": "SearchForEdge"
+          },
+          {
+            "trackingID": "bb414fb4-d693-4a55-9f7f-5e8415f76c20",
+            "item": {
+              "id": "207",
+              "slug": "yu-gi-oh-forbidden-memories",
+              "name": "Yu-Gi-Oh! Forbidden Memories",
+              "displayName": "Yu-Gi-Oh! Forbidden Memories",
+              "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/207_IGDB-90x120.jpg",
+              "tags": [
+                {
+                  "id": "857fce92-df0c-4c8c-8c60-28e0c5f7d8ae",
+                  "isLanguageTag": false,
+                  "localizedName": "Strategy",
+                  "tagName": "Strategy",
+                  "__typename": "Tag"
+                },
+                {
+                  "id": "8d39b307-d3ad-4f4a-98a4-d1951f55ceb7",
+                  "isLanguageTag": false,
+                  "localizedName": "Card \u0026 Board Game",
+                  "tagName": "Card \u0026 Board Game",
+                  "__typename": "Tag"
+                }
+              ],
+              "viewersCount": null,
+              "__typename": "Game"
+            },
+            "__typename": "SearchForEdge"
+          },
+          {
+            "trackingID": "19b93a04-af87-4428-aa9d-e57b5c2f33ac",
+            "item": {
+              "id": "494508",
+              "slug": "yu-gi-oh-duel-links",
+              "name": "Yu-Gi-Oh! Duel Links",
+              "displayName": "Yu-Gi-Oh! Duel Links",
+              "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/494508_IGDB-90x120.jpg",
+              "tags": [
+                {
+                  "id": "9d38085e-ee62-4203-877b-81797052a18b",
+                  "isLanguageTag": false,
+                  "localizedName": "RPG",
+                  "tagName": "RPG",
+                  "__typename": "Tag"
+                },
+                {
+                  "id": "22e434b6-ca88-46e8-91ef-c18ee1cb8a67",
+                  "isLanguageTag": false,
+                  "localizedName": "Simulation",
+                  "tagName": "Simulation",
+                  "__typename": "Tag"
+                },
+                {
+                  "id": "857fce92-df0c-4c8c-8c60-28e0c5f7d8ae",
+                  "isLanguageTag": false,
+                  "localizedName": "Strategy",
+                  "tagName": "Strategy",
+                  "__typename": "Tag"
+                },
+                {
+                  "id": "80427d95-bb46-42d3-bf4d-408e9bdca49a",
+                  "isLanguageTag": false,
+                  "localizedName": "Adventure Game",
+                  "tagName": "Adventure Game",
+                  "__typename": "Tag"
+                },
+                {
+                  "id": "8d39b307-d3ad-4f4a-98a4-d1951f55ceb7",
+                  "isLanguageTag": false,
+                  "localizedName": "Card \u0026 Board Game",
+                  "tagName": "Card \u0026 Board Game",
+                  "__typename": "Tag"
+                }
+              ],
+              "viewersCount": null,
+              "__typename": "Game"
+            },
+            "__typename": "SearchForEdge"
+          },
+          {
+            "trackingID": "1b2c8570-a70d-4d95-b19b-a2f3fdc2a0cf",
+            "item": {
+              "id": "14543",
+              "slug": "pokemon-crystal",
+              "name": "Pokémon Crystal Version",
+              "displayName": "Pokémon Crystal Version",
+              "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/14543_IGDB-90x120.jpg",
+              "tags": [
+                {
+                  "id": "9d38085e-ee62-4203-877b-81797052a18b",
+                  "isLanguageTag": false,
+                  "localizedName": "RPG",
+                  "tagName": "RPG",
+                  "__typename": "Tag"
+                },
+                {
+                  "id": "80427d95-bb46-42d3-bf4d-408e9bdca49a",
+                  "isLanguageTag": false,
+                  "localizedName": "Adventure Game",
+                  "tagName": "Adventure Game",
+                  "__typename": "Tag"
+                },
+                {
+                  "id": "4d1eaa36-f750-4862-b7e9-d0a13970d535",
+                  "isLanguageTag": false,
+                  "localizedName": "Action",
+                  "tagName": "Action",
+                  "__typename": "Tag"
+                }
+              ],
+              "viewersCount": 3,
+              "__typename": "Game"
+            },
+            "__typename": "SearchForEdge"
+          }
+        ],
+        "score": 0,
+        "totalMatches": 1293,
+        "__typename": "SearchForResultGames"
+      },
+      "videos": {
+        "cursor": "",
+        "edges": [],
+        "score": 0,
+        "totalMatches": 0,
+        "__typename": "SearchForResultVideos"
+      },
+      "relatedLiveChannels": {
+        "edges": [],
+        "score": null,
+        "__typename": "SearchForResultRelatedLiveChannels"
+      },
+      "__typename": "SearchFor"
+    }
+  },
+  "extensions": {
+    "durationMilliseconds": 80,
+    "operationName": "SearchResultsPage_SearchResults",
+    "requestID": "01JP2DKQ2ZNQEM9JJTD3Q2B8EF"
+  }
+}

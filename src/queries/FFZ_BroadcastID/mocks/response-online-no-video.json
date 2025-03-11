@@ -1,0 +1,18 @@
+{
+  "data": {
+    "user": {
+      "id": "26819117",
+      "stream": {
+        "id": "316975501561",
+        "archiveVideo": null,
+        "__typename": "Stream"
+      },
+      "__typename": "User"
+    }
+  },
+  "extensions": {
+    "durationMilliseconds": 42,
+    "operationName": "FFZ_BroadcastID",
+    "requestID": "01JP0BVSQX1ANTJN5EC5PG5G22"
+  }
+}

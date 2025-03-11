@@ -1,0 +1,19 @@
+### SearchTray_SearchSuggestions
+
+POST https://gql.twitch.tv/gql
+Content-Type: application/json
+Client-Id: {{$dotenv CLIENT_ID}}
+
+{
+  "operationName": "SearchTray_SearchSuggestions",
+  "variables": {
+    "queryFragment": "forse",
+    "withOfflineChannelContent": true
+  },
+  "extensions": {
+    "persistedQuery": {
+      "version": 1,
+      "sha256Hash": "34e1899cd559b7d6a4ac25e3bdaad37a83324644b0085b4cc478d0f845f8f0de"
+    }
+  }
+}

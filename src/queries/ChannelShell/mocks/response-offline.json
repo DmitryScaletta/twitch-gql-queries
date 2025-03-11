@@ -1,0 +1,36 @@
+{
+  "data": {
+    "userOrError": {
+      "id": "71092938",
+      "login": "xqc",
+      "displayName": "xQc",
+      "primaryColorHex": "FFBF00",
+      "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/xqc-profile_image-9298dca608632101-70x70.jpeg",
+      "stream": null,
+      "__typename": "User",
+      "bannerImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/657b6efd-e507-4df6-9cc5-25c3d1a67a3f-profile_banner-480.jpeg",
+      "channel": {
+        "id": "71092938",
+        "self": {
+          "isAuthorized": true,
+          "restrictionType": null,
+          "__typename": "ChannelSelfEdge"
+        },
+        "trailer": { "video": null, "__typename": "Trailer" },
+        "home": {
+          "preferences": {
+            "heroPreset": "PRESET_2",
+            "__typename": "ChannelHomePreferences"
+          },
+          "__typename": "ChannelHome"
+        },
+        "__typename": "Channel"
+      }
+    }
+  },
+  "extensions": {
+    "durationMilliseconds": 57,
+    "operationName": "ChannelShell",
+    "requestID": "01JP07M9T51TKJA6RH47CX90KR"
+  }
+}

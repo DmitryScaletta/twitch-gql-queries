@@ -1,0 +1,45 @@
+{
+  "data": {
+    "user": {
+      "id": "26490481",
+      "primaryColorHex": "2A292E",
+      "isPartner": true,
+      "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/99aa4739-21d6-40af-86ae-4b4d3457fce4-profile_image-70x70.png",
+      "primaryTeam": {
+        "id": "2570",
+        "name": "1gsquad",
+        "displayName": "1G SQUAD",
+        "__typename": "Team"
+      },
+      "squadStream": null,
+      "channel": {
+        "id": "26490481",
+        "chanlets": null,
+        "__typename": "Channel"
+      },
+      "lastBroadcast": {
+        "id": "318597135869",
+        "title": "wow raid @summit1g !starforge @starforgesystems",
+        "__typename": "Broadcast"
+      },
+      "stream": {
+        "id": "318597135869",
+        "type": "live",
+        "createdAt": "2025-03-10T14:51:04Z",
+        "game": {
+          "id": "18122",
+          "slug": "world-of-warcraft",
+          "name": "World of Warcraft",
+          "__typename": "Game"
+        },
+        "__typename": "Stream"
+      },
+      "__typename": "User"
+    }
+  },
+  "extensions": {
+    "durationMilliseconds": 60,
+    "operationName": "StreamMetadata",
+    "requestID": "01JP0Q7P3W10ZJG8KBC82CEGB5"
+  }
+}

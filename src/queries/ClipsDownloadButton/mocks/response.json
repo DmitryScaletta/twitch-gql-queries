@@ -1,0 +1,42 @@
+{
+  "data": {
+    "clip": {
+      "id": "3942697259",
+      "createdAt": "2020-12-09T19:18:10Z",
+      "durationSeconds": 44,
+      "viewCount": 899934,
+      "broadcaster": { "id": "71092938", "__typename": "User" },
+      "curator": { "id": "61838539", "__typename": "User" },
+      "game": { "id": "65876", "name": "Cyberpunk 2077", "__typename": "Game" },
+      "playbackAccessToken": {
+        "signature": "d3764c90c322484dc6a83f8afc6fccc030f06643",
+        "value": "{\"authorization\":{\"forbidden\":false,\"reason\":\"\"},\"clip_uri\":\"https://production.assets.clips.twitchcdn.net/AT-cm%7C961443378.mp4\",\"clip_slug\":\"DeliciousDelightfulPicklesWOOP\",\"device_id\":null,\"expires\":1741692631,\"user_id\":\"\",\"version\":2}",
+        "__typename": "PlaybackAccessToken"
+      },
+      "videoQualities": [
+        {
+          "sourceURL": "https://production.assets.clips.twitchcdn.net/AT-cm%7C961443378.mp4",
+          "__typename": "ClipVideoQuality"
+        },
+        {
+          "sourceURL": "https://production.assets.clips.twitchcdn.net/AT-cm%7C961443378-720.mp4",
+          "__typename": "ClipVideoQuality"
+        },
+        {
+          "sourceURL": "https://production.assets.clips.twitchcdn.net/AT-cm%7C961443378-480.mp4",
+          "__typename": "ClipVideoQuality"
+        },
+        {
+          "sourceURL": "https://production.assets.clips.twitchcdn.net/AT-cm%7C961443378-360.mp4",
+          "__typename": "ClipVideoQuality"
+        }
+      ],
+      "__typename": "Clip"
+    }
+  },
+  "extensions": {
+    "durationMilliseconds": 84,
+    "operationName": "ClipsDownloadButton",
+    "requestID": "01JP0AVND2DDS0P00P0C43BSVZ"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "data": {
+    "user": {
+      "id": "26490481",
+      "login": "summit1g",
+      "stream": null,
+      "__typename": "User"
+    }
+  },
+  "extensions": {
+    "durationMilliseconds": 40,
+    "operationName": "UseLive",
+    "requestID": "01JP2A1SKGN2VFZ0CDQX012VQA"
+  }
+}

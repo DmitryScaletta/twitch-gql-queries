@@ -1,0 +1,451 @@
+{
+  "data": {
+    "searchFor": {
+      "channels": {
+        "cursor": "",
+        "edges": [],
+        "score": 0,
+        "totalMatches": 0,
+        "__typename": "SearchForResultUsers"
+      },
+      "channelsWithTag": {
+        "cursor": "",
+        "edges": [],
+        "score": 0,
+        "totalMatches": 0,
+        "__typename": "SearchForResultUsers"
+      },
+      "games": {
+        "cursor": "",
+        "edges": [],
+        "score": 0,
+        "totalMatches": 0,
+        "__typename": "SearchForResultGames"
+      },
+      "videos": {
+        "cursor": "MTU=",
+        "edges": [
+          {
+            "trackingID": "7f0a68de-600d-4705-a65f-b3fde14f012b",
+            "item": {
+              "createdAt": "2025-03-09T06:09:19Z",
+              "owner": {
+                "id": "69856798",
+                "displayName": "Ivalol",
+                "login": "ivalol",
+                "roles": { "isPartner": false, "__typename": "UserRoles" },
+                "__typename": "User"
+              },
+              "id": "2401071123",
+              "game": {
+                "id": "27471",
+                "slug": "minecraft",
+                "name": "Minecraft",
+                "displayName": "Minecraft",
+                "__typename": "Game"
+              },
+              "lengthSeconds": 20170,
+              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/cd19c3ebee2d658be018_ivalol_316920338041_1741500554//thumb/thumb0-214x120.jpg",
+              "title": "Garden of Grind . GTNH 2.7.2",
+              "viewCount": 152,
+              "__typename": "Video"
+            },
+            "__typename": "SearchForEdge"
+          },
+          {
+            "trackingID": "1fafffa2-d249-45c5-b056-dd4200ea8db4",
+            "item": {
+              "createdAt": "2025-03-08T11:36:43Z",
+              "owner": {
+                "id": "70993493",
+                "displayName": "RUMisthepower",
+                "login": "rumisthepower",
+                "roles": { "isPartner": false, "__typename": "UserRoles" },
+                "__typename": "User"
+              },
+              "id": "2400280423",
+              "game": {
+                "id": "27471",
+                "slug": "minecraft",
+                "name": "Minecraft",
+                "displayName": "Minecraft",
+                "__typename": "Game"
+              },
+              "lengthSeconds": 17552,
+              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/ddd3bde5f3fa9ec547f0_rumisthepower_316878069113_1741433797//thumb/thumb0-214x120.jpg",
+              "title": "GTNH+Twist. HV. Стройка и подготовка к древохимии.",
+              "viewCount": 245,
+              "__typename": "Video"
+            },
+            "__typename": "SearchForEdge"
+          },
+          {
+            "trackingID": "b2a6ab61-8b15-4c84-8456-075757c40c8a",
+            "item": {
+              "createdAt": "2025-03-08T07:52:53Z",
+              "owner": {
+                "id": "1090652991",
+                "displayName": "r1ll1kotv",
+                "login": "r1ll1kotv",
+                "roles": { "isPartner": false, "__typename": "UserRoles" },
+                "__typename": "User"
+              },
+              "id": "2400197963",
+              "game": {
+                "id": "27471",
+                "slug": "minecraft",
+                "name": "Minecraft",
+                "displayName": "Minecraft",
+                "__typename": "Game"
+              },
+              "lengthSeconds": 13221,
+              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/7c5e879e4235860a87c0_r1ll1kotv_314209843191_1741420369//thumb/thumb0-214x120.jpg",
+              "title": "GTNH 2.7 - WE'RE FINALLY BACK! | chill 'n chat through MV",
+              "viewCount": 267,
+              "__typename": "Video"
+            },
+            "__typename": "SearchForEdge"
+          },
+          {
+            "trackingID": "5f30798e-d5d0-471e-b469-8d164e429b8f",
+            "item": {
+              "createdAt": "2025-03-10T09:30:05Z",
+              "owner": {
+                "id": "26989299",
+                "displayName": "Evangil",
+                "login": "evangil",
+                "roles": { "isPartner": false, "__typename": "UserRoles" },
+                "__typename": "User"
+              },
+              "id": "2402010393",
+              "game": {
+                "id": "27471",
+                "slug": "minecraft",
+                "name": "Minecraft",
+                "displayName": "Minecraft",
+                "__typename": "Game"
+              },
+              "lengthSeconds": 11229,
+              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/cedea4c83f860116b749_evangil_316975250809_1741598999//thumb/thumb0-214x120.jpg",
+              "title": "[GTNH][2.7.2] Slogging onwards",
+              "viewCount": 50,
+              "__typename": "Video"
+            },
+            "__typename": "SearchForEdge"
+          },
+          {
+            "trackingID": "69e2baa0-2906-4c59-8480-f1d3f6e94459",
+            "item": {
+              "createdAt": "2025-03-09T11:41:14Z",
+              "owner": {
+                "id": "24416773",
+                "displayName": "thejimsLP",
+                "login": "thejimslp",
+                "roles": { "isPartner": false, "__typename": "UserRoles" },
+                "__typename": "User"
+              },
+              "id": "2401199312",
+              "game": {
+                "id": "27471",
+                "slug": "minecraft",
+                "name": "Minecraft",
+                "displayName": "Minecraft",
+                "__typename": "Game"
+              },
+              "lengthSeconds": 10004,
+              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d1m7jfoe9zdc1j/86b98eee5588f96cb091_thejimslp_318505746557_1741520469//thumb/thumb0-214x120.jpg",
+              "title": "GTNH - #vanguardrun - Beees",
+              "viewCount": 65,
+              "__typename": "Video"
+            },
+            "__typename": "SearchForEdge"
+          },
+          {
+            "trackingID": "b2082663-c70e-4019-be21-604d9440e658",
+            "item": {
+              "createdAt": "2025-03-08T15:38:03Z",
+              "owner": {
+                "id": "227311493",
+                "displayName": "VeTeRoKChannel",
+                "login": "veterokchannel",
+                "roles": { "isPartner": false, "__typename": "UserRoles" },
+                "__typename": "User"
+              },
+              "id": "2400414315",
+              "game": {
+                "id": "27471",
+                "slug": "minecraft",
+                "name": "Minecraft",
+                "displayName": "Minecraft",
+                "__typename": "Game"
+              },
+              "lengthSeconds": 8710,
+              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/b417e848027d6d44a4ca_veterokchannel_316888624121_1741448277//thumb/thumb0-214x120.jpg",
+              "title": "Чистая комната! Minecraft. GT New Horizons(GTNH). Стрим 24",
+              "viewCount": 138,
+              "__typename": "Video"
+            },
+            "__typename": "SearchForEdge"
+          },
+          {
+            "trackingID": "88c15bbc-ec06-43ec-b9ba-527048be2905",
+            "item": {
+              "createdAt": "2025-03-07T18:59:28Z",
+              "owner": {
+                "id": "179059192",
+                "displayName": "CimmerianHydra",
+                "login": "cimmerianhydra",
+                "roles": { "isPartner": false, "__typename": "UserRoles" },
+                "__typename": "User"
+              },
+              "id": "2399638383",
+              "game": {
+                "id": "27471",
+                "slug": "minecraft",
+                "name": "Minecraft",
+                "displayName": "Minecraft",
+                "__typename": "Game"
+              },
+              "lengthSeconds": 13320,
+              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/3e11e0903dab4f90f394_cimmerianhydra_316839387001_1741373963//thumb/thumb0-214x120.jpg",
+              "title": "🐉🏙️ 【 GTNH 2.7+ 】 help me I've been gregnapped | !yt !discord !songrequests",
+              "viewCount": 150,
+              "__typename": "Video"
+            },
+            "__typename": "SearchForEdge"
+          },
+          {
+            "trackingID": "3cc053fc-4f79-4566-9291-3a3507cd4c91",
+            "item": {
+              "createdAt": "2025-03-08T18:31:06Z",
+              "owner": {
+                "id": "36337213",
+                "displayName": "ReedTheFloof",
+                "login": "reedthefloof",
+                "roles": { "isPartner": false, "__typename": "UserRoles" },
+                "__typename": "User"
+              },
+              "id": "2400547135",
+              "game": {
+                "id": "27471",
+                "slug": "minecraft",
+                "name": "Minecraft",
+                "displayName": "Minecraft",
+                "__typename": "Game"
+              },
+              "lengthSeconds": 22287,
+              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d1m7jfoe9zdc1j/0d68304d1fc7bd1db157_reedthefloof_318445227005_1741458661//thumb/thumb0-214x120.jpg",
+              "title": "GTNH Way to LV",
+              "viewCount": 60,
+              "__typename": "Video"
+            },
+            "__typename": "SearchForEdge"
+          },
+          {
+            "trackingID": "20d8bd47-575e-4c3b-9ced-19cb84a74e6a",
+            "item": {
+              "createdAt": "2025-03-10T10:11:28Z",
+              "owner": {
+                "id": "492257275",
+                "displayName": "The_Otter_Games",
+                "login": "the_otter_games",
+                "roles": { "isPartner": false, "__typename": "UserRoles" },
+                "__typename": "User"
+              },
+              "id": "2402022028",
+              "game": {
+                "id": "27471",
+                "slug": "minecraft",
+                "name": "Minecraft",
+                "displayName": "Minecraft",
+                "__typename": "Game"
+              },
+              "lengthSeconds": 11501,
+              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/814e09766e7ad07eba5e_the_otter_games_314215302903_1741601483//thumb/thumb0-214x120.jpg",
+              "title": "GTNH Community Server",
+              "viewCount": 25,
+              "__typename": "Video"
+            },
+            "__typename": "SearchForEdge"
+          },
+          {
+            "trackingID": "30cc0aca-085f-4684-8da0-16b5b2d39b82",
+            "item": {
+              "createdAt": "2025-03-08T16:23:58Z",
+              "owner": {
+                "id": "256301195",
+                "displayName": "Jhreks",
+                "login": "jhreks",
+                "roles": { "isPartner": false, "__typename": "UserRoles" },
+                "__typename": "User"
+              },
+              "id": "2400445780",
+              "game": {
+                "id": "27471",
+                "slug": "minecraft",
+                "name": "Minecraft",
+                "displayName": "Minecraft",
+                "__typename": "Game"
+              },
+              "lengthSeconds": 20493,
+              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d1m7jfoe9zdc1j/8baf493138f0218e5b23_jhreks_318435378813_1741451033//thumb/thumb0-214x120.jpg",
+              "title": "✨GTNH v2.7.2 EV age✨ - day 85 - Let's get to IV age!!! ---WoW Retail later?!  !youtube |",
+              "viewCount": 85,
+              "__typename": "Video"
+            },
+            "__typename": "SearchForEdge"
+          },
+          {
+            "trackingID": "3f7f6509-c718-4912-9498-d1e63610f6d8",
+            "item": {
+              "createdAt": "2025-03-06T17:23:23Z",
+              "owner": {
+                "id": "119850884",
+                "displayName": "Mr__SiB",
+                "login": "mr__sib",
+                "roles": { "isPartner": false, "__typename": "UserRoles" },
+                "__typename": "User"
+              },
+              "id": "2398710521",
+              "game": {
+                "id": "27471",
+                "slug": "minecraft",
+                "name": "Minecraft",
+                "displayName": "Minecraft",
+                "__typename": "Game"
+              },
+              "lengthSeconds": 9551,
+              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/70b6aa26e0322f626841_mr__sib_316784146937_1741281798//thumb/thumb0-214x120.jpg",
+              "title": "[18+] GTNH 2.7.3. Биолабы, петри... Выводим чужого (нет)",
+              "viewCount": 215,
+              "__typename": "Video"
+            },
+            "__typename": "SearchForEdge"
+          },
+          {
+            "trackingID": "6f241e4b-6736-45a6-803d-738768dce63b",
+            "item": {
+              "createdAt": "2025-03-06T10:35:53Z",
+              "owner": {
+                "id": "227311493",
+                "displayName": "VeTeRoKChannel",
+                "login": "veterokchannel",
+                "roles": { "isPartner": false, "__typename": "UserRoles" },
+                "__typename": "User"
+              },
+              "id": "2398503808",
+              "game": {
+                "id": "27471",
+                "slug": "minecraft",
+                "name": "Minecraft",
+                "displayName": "Minecraft",
+                "__typename": "Game"
+              },
+              "lengthSeconds": 18620,
+              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/51baa6596d6e040eaf95_veterokchannel_316767925497_1741257347//thumb/thumb0-214x120.jpg",
+              "title": "Вползаем в HV! Minecraft. GT New Horizons(GTNH). Стрим 22",
+              "viewCount": 221,
+              "__typename": "Video"
+            },
+            "__typename": "SearchForEdge"
+          },
+          {
+            "trackingID": "55ad2ec9-e802-4bce-b3a4-a5cb4fe9ee08",
+            "item": {
+              "createdAt": "2025-03-10T23:58:09Z",
+              "owner": {
+                "id": "49178534",
+                "displayName": "YannickMG",
+                "login": "yannickmg",
+                "roles": { "isPartner": false, "__typename": "UserRoles" },
+                "__typename": "User"
+              },
+              "id": "2402544286",
+              "game": {
+                "id": "27471",
+                "slug": "minecraft",
+                "name": "Minecraft",
+                "displayName": "Minecraft",
+                "__typename": "Game"
+              },
+              "lengthSeconds": 11025,
+              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d1m7jfoe9zdc1j/5943daca640309fd3082_yannickmg_318634748413_1741651084//thumb/thumb0-214x120.jpg",
+              "title": "GTNH Game \u0026 Dev stream || Playing in MV \u0026 fixing bugs",
+              "viewCount": 21,
+              "__typename": "Video"
+            },
+            "__typename": "SearchForEdge"
+          },
+          {
+            "trackingID": "b36ab464-633d-41ef-902d-def0a0689d1f",
+            "item": {
+              "createdAt": "2025-03-07T08:05:02Z",
+              "owner": {
+                "id": "227311493",
+                "displayName": "VeTeRoKChannel",
+                "login": "veterokchannel",
+                "roles": { "isPartner": false, "__typename": "UserRoles" },
+                "__typename": "User"
+              },
+              "id": "2399303704",
+              "game": {
+                "id": "27471",
+                "slug": "minecraft",
+                "name": "Minecraft",
+                "displayName": "Minecraft",
+                "__typename": "Game"
+              },
+              "lengthSeconds": 6070,
+              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/1a0eade3833052d7c59b_veterokchannel_316813984121_1741334696//thumb/thumb0-214x120.jpg",
+              "title": "Рудопереработка! Minecraft. GT New Horizons(GTNH). Стрим 23",
+              "viewCount": 102,
+              "__typename": "Video"
+            },
+            "__typename": "SearchForEdge"
+          },
+          {
+            "trackingID": "26d1ce45-d22d-4d5b-9d0d-dba26bc3f928",
+            "item": {
+              "createdAt": "2025-03-09T23:59:52Z",
+              "owner": {
+                "id": "430459615",
+                "displayName": "RuckusThePiercer",
+                "login": "ruckusthepiercer",
+                "roles": { "isPartner": false, "__typename": "UserRoles" },
+                "__typename": "User"
+              },
+              "id": "2401744330",
+              "game": {
+                "id": "27471",
+                "slug": "minecraft",
+                "name": "Minecraft",
+                "displayName": "Minecraft",
+                "__typename": "Game"
+              },
+              "lengthSeconds": 2930,
+              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/52ac56311773d1de77ec_ruckusthepiercer_317553763964_1741564787//thumb/thumb0-214x120.jpg",
+              "title": "[GTNH Server] #39 Sunday Chill Stream  (Fishing and Spin the Wheel Channel point redemption ...A Modded Minecraft Story",
+              "viewCount": 37,
+              "__typename": "Video"
+            },
+            "__typename": "SearchForEdge"
+          }
+        ],
+        "score": 0,
+        "totalMatches": 1004,
+        "__typename": "SearchForResultVideos"
+      },
+      "relatedLiveChannels": {
+        "edges": [],
+        "score": null,
+        "__typename": "SearchForResultRelatedLiveChannels"
+      },
+      "__typename": "SearchFor"
+    }
+  },
+  "extensions": {
+    "durationMilliseconds": 126,
+    "operationName": "SearchResultsPage_SearchResults",
+    "requestID": "01JP2DM41ECJW4R1ZMHFFX7G02"
+  }
+}

@@ -1,0 +1,204 @@
+### SearchResultsPage_SearchResults
+
+POST https://gql.twitch.tv/gql
+Content-Type: application/json
+Client-Id: {{$dotenv CLIENT_ID}}
+
+{
+  "operationName": "SearchResultsPage_SearchResults",
+  "variables": {
+    "platform": "web",
+    "query": "forse",
+    "options": {
+      "targets": null,
+      "shouldSkipDiscoveryControl": false
+    },
+    "includeIsDJ": true
+  },
+  "extensions": {
+    "persistedQuery": {
+      "version": 1,
+      "sha256Hash": "f4964f83289fa2d6b6454e7d765e32a1f2d1d2b63884ff919c96a3d597a35518"
+    }
+  }
+}
+
+### minimal
+
+POST https://gql.twitch.tv/gql
+Content-Type: application/json
+Client-Id: {{$dotenv CLIENT_ID}}
+
+{
+  "operationName": "SearchResultsPage_SearchResults",
+  "variables": {
+    "query": "forse"
+  },
+  "extensions": {
+    "persistedQuery": {
+      "version": 1,
+      "sha256Hash": "f4964f83289fa2d6b6454e7d765e32a1f2d1d2b63884ff919c96a3d597a35518"
+    }
+  }
+}
+
+### with channelsWithTag
+
+POST https://gql.twitch.tv/gql
+Content-Type: application/json
+Client-Id: {{$dotenv CLIENT_ID}}
+
+{
+  "operationName": "SearchResultsPage_SearchResults",
+  "variables": {
+    "platform": "web",
+    "query": "gtnh",
+    "options": {
+      "targets": null,
+      "shouldSkipDiscoveryControl": false
+    },
+    "includeIsDJ": true
+  },
+  "extensions": {
+    "persistedQuery": {
+      "version": 1,
+      "sha256Hash": "f4964f83289fa2d6b6454e7d765e32a1f2d1d2b63884ff919c96a3d597a35518"
+    }
+  }
+}
+
+### CHANNEL
+
+POST https://gql.twitch.tv/gql
+Content-Type: application/json
+Client-Id: {{$dotenv CLIENT_ID}}
+
+{
+  "operationName": "SearchResultsPage_SearchResults",
+  "variables": {
+    "platform": "web",
+    "query": "forsen",
+    "options": {
+      "targets": [
+        { "index": "CHANNEL" }
+      ],
+      "shouldSkipDiscoveryControl": false
+    },
+    "includeIsDJ": true
+  },
+  "extensions": {
+    "persistedQuery": {
+      "version": 1,
+      "sha256Hash": "f4964f83289fa2d6b6454e7d765e32a1f2d1d2b63884ff919c96a3d597a35518"
+    }
+  }
+}
+
+### CHANNEL with schedule
+
+POST https://gql.twitch.tv/gql
+Content-Type: application/json
+Client-Id: {{$dotenv CLIENT_ID}}
+
+{
+  "operationName": "SearchResultsPage_SearchResults",
+  "variables": {
+    "platform": "web",
+    "query": "cohhcarnage",
+    "options": {
+      "targets": [
+        { "index": "CHANNEL" }
+      ],
+      "shouldSkipDiscoveryControl": false
+    },
+    "includeIsDJ": true
+  },
+  "extensions": {
+    "persistedQuery": {
+      "version": 1,
+      "sha256Hash": "f4964f83289fa2d6b6454e7d765e32a1f2d1d2b63884ff919c96a3d597a35518"
+    }
+  }
+}
+
+### CHANNEL_WITH_TAG
+
+POST https://gql.twitch.tv/gql
+Content-Type: application/json
+Client-Id: {{$dotenv CLIENT_ID}}
+
+{
+  "operationName": "SearchResultsPage_SearchResults",
+  "variables": {
+    "platform": "web",
+    "query": "forsen",
+    "options": {
+      "targets": [
+        { "index": "CHANNEL_WITH_TAG" }
+      ],
+      "shouldSkipDiscoveryControl": false
+    },
+    "includeIsDJ": true
+  },
+  "extensions": {
+    "persistedQuery": {
+      "version": 1,
+      "sha256Hash": "f4964f83289fa2d6b6454e7d765e32a1f2d1d2b63884ff919c96a3d597a35518"
+    }
+  }
+}
+
+
+### GAME
+
+POST https://gql.twitch.tv/gql
+Content-Type: application/json
+Client-Id: {{$dotenv CLIENT_ID}}
+
+{
+  "operationName": "SearchResultsPage_SearchResults",
+  "variables": {
+    "platform": "web",
+    "query": "monster",
+    "options": {
+      "targets": [
+        { "index": "GAME" }
+      ],
+      "shouldSkipDiscoveryControl": false
+    },
+    "includeIsDJ": true
+  },
+  "extensions": {
+    "persistedQuery": {
+      "version": 1,
+      "sha256Hash": "f4964f83289fa2d6b6454e7d765e32a1f2d1d2b63884ff919c96a3d597a35518"
+    }
+  }
+}
+
+### VOD
+
+POST https://gql.twitch.tv/gql
+Content-Type: application/json
+Client-Id: {{$dotenv CLIENT_ID}}
+
+{
+  "operationName": "SearchResultsPage_SearchResults",
+  "variables": {
+    "platform": "web",
+    "query": "gtnh",
+    "options": {
+      "targets": [
+        { "index": "VOD" }
+      ],
+      "shouldSkipDiscoveryControl": false
+    },
+    "includeIsDJ": true
+  },
+  "extensions": {
+    "persistedQuery": {
+      "version": 1,
+      "sha256Hash": "f4964f83289fa2d6b6454e7d765e32a1f2d1d2b63884ff919c96a3d597a35518"
+    }
+  }
+}

@@ -1,0 +1,37 @@
+### ClipsDownloadButton
+
+POST https://gql.twitch.tv/gql
+Content-Type: application/json
+Client-Id: {{$dotenv CLIENT_ID}}
+
+{
+  "operationName": "ClipsDownloadButton",
+  "variables": {
+    "slug": "DeliciousDelightfulPicklesWOOP"
+  },
+  "extensions": {
+    "persistedQuery": {
+      "version": 1,
+       "sha256Hash": "9c0a5b51612a41b06bfb93065deb6fd7bb7e011db2beb6e5e5d7588ae7f3ff4b"
+    }
+  }
+}
+
+### not exists
+
+POST https://gql.twitch.tv/gql
+Content-Type: application/json
+Client-Id: {{$dotenv CLIENT_ID}}
+
+{
+  "operationName": "ClipsDownloadButton",
+  "variables": {
+    "slug": "not-exists"
+  },
+  "extensions": {
+    "persistedQuery": {
+      "version": 1,
+       "sha256Hash": "9c0a5b51612a41b06bfb93065deb6fd7bb7e011db2beb6e5e5d7588ae7f3ff4b"
+    }
+  }
+}

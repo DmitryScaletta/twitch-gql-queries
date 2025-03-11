@@ -1,0 +1,14 @@
+{
+  "data": {
+    "userOrError": {
+      "userDoesNotExist": "EmjayPlayss",
+      "reason": "TOS_TEMPORARY",
+      "__typename": "UserDoesNotExist"
+    }
+  },
+  "extensions": {
+    "durationMilliseconds": 38,
+    "operationName": "ChannelShell",
+    "requestID": "01JP07YCRS563EW73KXYMG6Q26"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "data": {
+    "userOrError": {
+      "userDoesNotExist": "this_user_doesnt_exist_",
+      "reason": "UNKNOWN",
+      "__typename": "UserDoesNotExist"
+    }
+  },
+  "extensions": {
+    "durationMilliseconds": 41,
+    "operationName": "ChannelShell",
+    "requestID": "01JP07TWVW80X3ZCYFEFAYTD6Q"
+  }
+}

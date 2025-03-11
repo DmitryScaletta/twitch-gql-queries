@@ -1,0 +1,799 @@
+{
+  "data": {
+    "user": {
+      "id": "71092938",
+      "clips": {
+        "pageInfo": { "hasNextPage": true, "__typename": "PageInfo" },
+        "edges": [
+          {
+            "cursor": null,
+            "node": {
+              "id": "4019039899",
+              "slug": "ObliqueRichWrenDatBoi-DE5qkDgd7zg_ORyq",
+              "url": "https://clips.twitch.tv/ObliqueRichWrenDatBoi-DE5qkDgd7zg_ORyq",
+              "embedURL": "https://clips.twitch.tv/embed?clip=ObliqueRichWrenDatBoi-DE5qkDgd7zg_ORyq",
+              "title": "ogre",
+              "viewCount": 352283,
+              "language": "EN",
+              "curator": {
+                "id": "43111392",
+                "login": "scrib5",
+                "displayName": "scrib5",
+                "__typename": "User"
+              },
+              "game": {
+                "id": "509672",
+                "name": "IRL",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509672-52x72.jpg",
+                "__typename": "Game"
+              },
+              "broadcaster": {
+                "id": "71092938",
+                "login": "xqc",
+                "displayName": "xQc",
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/xqc-profile_image-9298dca608632101-50x50.jpeg",
+                "primaryColorHex": "FFBF00",
+                "__typename": "User"
+              },
+              "thumbnailURL": "https://static-cdn.jtvnw.net/twitch-clips-thumbnails-prod/ObliqueRichWrenDatBoi-DE5qkDgd7zg_ORyq/83b77872-ad19-4a1f-8e5d-2a25c50b58f0/preview.jpg",
+              "createdAt": "2025-03-06T19:58:54Z",
+              "durationSeconds": 60,
+              "champBadge": null,
+              "isFeatured": false,
+              "__typename": "Clip"
+            },
+            "__typename": "ClipEdge"
+          },
+          {
+            "cursor": null,
+            "node": {
+              "id": "211469861",
+              "slug": "MoldyFreezingSandpiperBibleThump-apB3hrvWV66CYmmi",
+              "url": "https://clips.twitch.tv/MoldyFreezingSandpiperBibleThump-apB3hrvWV66CYmmi",
+              "embedURL": "https://clips.twitch.tv/embed?clip=MoldyFreezingSandpiperBibleThump-apB3hrvWV66CYmmi",
+              "title": "Twitch BAN POLICY for leftist",
+              "viewCount": 6262,
+              "language": "EN",
+              "curator": {
+                "id": "38551761",
+                "login": "pkmnlover9000",
+                "displayName": "PkmnLover9000",
+                "__typename": "User"
+              },
+              "game": {
+                "id": "509658",
+                "name": "Just Chatting",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509658-52x72.jpg",
+                "__typename": "Game"
+              },
+              "broadcaster": {
+                "id": "71092938",
+                "login": "xqc",
+                "displayName": "xQc",
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/xqc-profile_image-9298dca608632101-50x50.jpeg",
+                "primaryColorHex": "FFBF00",
+                "__typename": "User"
+              },
+              "thumbnailURL": "https://static-cdn.jtvnw.net/twitch-clips-thumbnails-prod/MoldyFreezingSandpiperBibleThump-apB3hrvWV66CYmmi/5ae26c83-ea79-4a6c-a11d-e8be92520951/preview.jpg",
+              "createdAt": "2025-03-05T21:20:55Z",
+              "durationSeconds": 31,
+              "champBadge": null,
+              "isFeatured": false,
+              "__typename": "Clip"
+            },
+            "__typename": "ClipEdge"
+          },
+          {
+            "cursor": null,
+            "node": {
+              "id": "1153741609",
+              "slug": "MistyVictoriousTeaPRChase-t4GQ3k4oGM5FF0rS",
+              "url": "https://clips.twitch.tv/MistyVictoriousTeaPRChase-t4GQ3k4oGM5FF0rS",
+              "embedURL": "https://clips.twitch.tv/embed?clip=MistyVictoriousTeaPRChase-t4GQ3k4oGM5FF0rS",
+              "title": "xQc says that illegal immigrants are invading the country",
+              "viewCount": 5219,
+              "language": "EN",
+              "curator": {
+                "id": "228477370",
+                "login": "user_name_is_unavailable",
+                "displayName": "user_name_is_unavailable",
+                "__typename": "User"
+              },
+              "game": {
+                "id": "509658",
+                "name": "Just Chatting",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509658-52x72.jpg",
+                "__typename": "Game"
+              },
+              "broadcaster": {
+                "id": "71092938",
+                "login": "xqc",
+                "displayName": "xQc",
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/xqc-profile_image-9298dca608632101-50x50.jpeg",
+                "primaryColorHex": "FFBF00",
+                "__typename": "User"
+              },
+              "thumbnailURL": "https://static-cdn.jtvnw.net/twitch-clips-thumbnails-prod/MistyVictoriousTeaPRChase-t4GQ3k4oGM5FF0rS/e15e30ee-e3f8-4fc6-b5bb-cd11810132c3/preview.jpg",
+              "createdAt": "2025-03-04T05:54:57Z",
+              "durationSeconds": 22,
+              "champBadge": null,
+              "isFeatured": false,
+              "__typename": "Clip"
+            },
+            "__typename": "ClipEdge"
+          },
+          {
+            "cursor": null,
+            "node": {
+              "id": "3221963695",
+              "slug": "TardyCrackyBobaRlyTho-Q9T0jHsBmxvCz4-2",
+              "url": "https://clips.twitch.tv/TardyCrackyBobaRlyTho-Q9T0jHsBmxvCz4-2",
+              "embedURL": "https://clips.twitch.tv/embed?clip=TardyCrackyBobaRlyTho-Q9T0jHsBmxvCz4-2",
+              "title": "asdafrsef",
+              "viewCount": 5207,
+              "language": "EN",
+              "curator": {
+                "id": "199354711",
+                "login": "onzuu",
+                "displayName": "onzuu",
+                "__typename": "User"
+              },
+              "game": {
+                "id": "509658",
+                "name": "Just Chatting",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509658-52x72.jpg",
+                "__typename": "Game"
+              },
+              "broadcaster": {
+                "id": "71092938",
+                "login": "xqc",
+                "displayName": "xQc",
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/xqc-profile_image-9298dca608632101-50x50.jpeg",
+                "primaryColorHex": "FFBF00",
+                "__typename": "User"
+              },
+              "thumbnailURL": "https://static-cdn.jtvnw.net/twitch-clips-thumbnails-prod/TardyCrackyBobaRlyTho-Q9T0jHsBmxvCz4-2/c591cc73-483f-43e2-b918-7b5040638eed/preview.jpg",
+              "createdAt": "2025-03-04T04:13:30Z",
+              "durationSeconds": 5,
+              "champBadge": null,
+              "isFeatured": false,
+              "__typename": "Clip"
+            },
+            "__typename": "ClipEdge"
+          },
+          {
+            "cursor": null,
+            "node": {
+              "id": "145431199",
+              "slug": "CooperativeWrongNostrilMrDestructoid-7_aWioWMokVSgp8m",
+              "url": "https://clips.twitch.tv/CooperativeWrongNostrilMrDestructoid-7_aWioWMokVSgp8m",
+              "embedURL": "https://clips.twitch.tv/embed?clip=CooperativeWrongNostrilMrDestructoid-7_aWioWMokVSgp8m",
+              "title": "Pfft",
+              "viewCount": 4463,
+              "language": "EN",
+              "curator": {
+                "id": "918709472",
+                "login": "liar1214",
+                "displayName": "liar1214",
+                "__typename": "User"
+              },
+              "game": {
+                "id": "509672",
+                "name": "IRL",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509672-52x72.jpg",
+                "__typename": "Game"
+              },
+              "broadcaster": {
+                "id": "71092938",
+                "login": "xqc",
+                "displayName": "xQc",
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/xqc-profile_image-9298dca608632101-50x50.jpeg",
+                "primaryColorHex": "FFBF00",
+                "__typename": "User"
+              },
+              "thumbnailURL": "https://static-cdn.jtvnw.net/twitch-clips-thumbnails-prod/CooperativeWrongNostrilMrDestructoid-7_aWioWMokVSgp8m/455720b6-247f-438b-9084-ca1740091fb4/preview.jpg",
+              "createdAt": "2025-03-06T18:46:30Z",
+              "durationSeconds": 32,
+              "champBadge": null,
+              "isFeatured": false,
+              "__typename": "Clip"
+            },
+            "__typename": "ClipEdge"
+          },
+          {
+            "cursor": null,
+            "node": {
+              "id": "836961900",
+              "slug": "TolerantCrypticFerretHeyGuys-a5oCeJloylXmRxsE",
+              "url": "https://clips.twitch.tv/TolerantCrypticFerretHeyGuys-a5oCeJloylXmRxsE",
+              "embedURL": "https://clips.twitch.tv/embed?clip=TolerantCrypticFerretHeyGuys-a5oCeJloylXmRxsE",
+              "title": "Smartest thing to shout in London :)",
+              "viewCount": 4162,
+              "language": "EN",
+              "curator": {
+                "id": "160337225",
+                "login": "dado_hajduk",
+                "displayName": "Dado_Hajduk",
+                "__typename": "User"
+              },
+              "game": {
+                "id": "509672",
+                "name": "IRL",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509672-52x72.jpg",
+                "__typename": "Game"
+              },
+              "broadcaster": {
+                "id": "71092938",
+                "login": "xqc",
+                "displayName": "xQc",
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/xqc-profile_image-9298dca608632101-50x50.jpeg",
+                "primaryColorHex": "FFBF00",
+                "__typename": "User"
+              },
+              "thumbnailURL": "https://static-cdn.jtvnw.net/twitch-clips-thumbnails-prod/TolerantCrypticFerretHeyGuys-a5oCeJloylXmRxsE/0442c2af-c228-488e-bafb-637283d4b0a2/preview.jpg",
+              "createdAt": "2025-03-06T22:18:01Z",
+              "durationSeconds": 29,
+              "champBadge": null,
+              "isFeatured": false,
+              "__typename": "Clip"
+            },
+            "__typename": "ClipEdge"
+          },
+          {
+            "cursor": null,
+            "node": {
+              "id": "1564246209",
+              "slug": "AbstruseEntertainingLorisYouDontSay-0FtNUzG4NmdVcMi4",
+              "url": "https://clips.twitch.tv/AbstruseEntertainingLorisYouDontSay-0FtNUzG4NmdVcMi4",
+              "embedURL": "https://clips.twitch.tv/embed?clip=AbstruseEntertainingLorisYouDontSay-0FtNUzG4NmdVcMi4",
+              "title": "..",
+              "viewCount": 4097,
+              "language": "EN",
+              "curator": {
+                "id": "233096669",
+                "login": "hazard_j",
+                "displayName": "hazard_j",
+                "__typename": "User"
+              },
+              "game": {
+                "id": "509658",
+                "name": "Just Chatting",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509658-52x72.jpg",
+                "__typename": "Game"
+              },
+              "broadcaster": {
+                "id": "71092938",
+                "login": "xqc",
+                "displayName": "xQc",
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/xqc-profile_image-9298dca608632101-50x50.jpeg",
+                "primaryColorHex": "FFBF00",
+                "__typename": "User"
+              },
+              "thumbnailURL": "https://static-cdn.jtvnw.net/twitch-clips-thumbnails-prod/AbstruseEntertainingLorisYouDontSay-0FtNUzG4NmdVcMi4/a84956a6-2f0f-47c8-ae84-df1098465cf6/preview.jpg",
+              "createdAt": "2025-03-05T20:52:18Z",
+              "durationSeconds": 45,
+              "champBadge": null,
+              "isFeatured": false,
+              "__typename": "Clip"
+            },
+            "__typename": "ClipEdge"
+          },
+          {
+            "cursor": null,
+            "node": {
+              "id": "3220167486",
+              "slug": "CoweringWimpyDootKAPOW-un8SmQ2rU7qxoQP1",
+              "url": "https://clips.twitch.tv/CoweringWimpyDootKAPOW-un8SmQ2rU7qxoQP1",
+              "embedURL": "https://clips.twitch.tv/embed?clip=CoweringWimpyDootKAPOW-un8SmQ2rU7qxoQP1",
+              "title": "xQc hype is real",
+              "viewCount": 3277,
+              "language": "EN",
+              "curator": {
+                "id": "620588078",
+                "login": "xxxcocainebadgerxxx",
+                "displayName": "xXxCocaineBadgerXxX",
+                "__typename": "User"
+              },
+              "game": {
+                "id": "509672",
+                "name": "IRL",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509672-52x72.jpg",
+                "__typename": "Game"
+              },
+              "broadcaster": {
+                "id": "71092938",
+                "login": "xqc",
+                "displayName": "xQc",
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/xqc-profile_image-9298dca608632101-50x50.jpeg",
+                "primaryColorHex": "FFBF00",
+                "__typename": "User"
+              },
+              "thumbnailURL": "https://static-cdn.jtvnw.net/twitch-clips-thumbnails-prod/CoweringWimpyDootKAPOW-un8SmQ2rU7qxoQP1/9fe5e655-c709-4f96-bed6-960750f4f26f/preview.jpg",
+              "createdAt": "2025-03-06T19:24:08Z",
+              "durationSeconds": 60,
+              "champBadge": null,
+              "isFeatured": false,
+              "__typename": "Clip"
+            },
+            "__typename": "ClipEdge"
+          },
+          {
+            "cursor": null,
+            "node": {
+              "id": "2674856776",
+              "slug": "ProductiveBraveFriesNerfRedBlaster-t1GD9r0hUe1nXxzC",
+              "url": "https://clips.twitch.tv/ProductiveBraveFriesNerfRedBlaster-t1GD9r0hUe1nXxzC",
+              "embedURL": "https://clips.twitch.tv/embed?clip=ProductiveBraveFriesNerfRedBlaster-t1GD9r0hUe1nXxzC",
+              "title": "LOL",
+              "viewCount": 735,
+              "language": "EN",
+              "curator": {
+                "id": "137379315",
+                "login": "afroakatsuki",
+                "displayName": "afroakatsuki",
+                "__typename": "User"
+              },
+              "game": {
+                "id": "509658",
+                "name": "Just Chatting",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509658-52x72.jpg",
+                "__typename": "Game"
+              },
+              "broadcaster": {
+                "id": "71092938",
+                "login": "xqc",
+                "displayName": "xQc",
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/xqc-profile_image-9298dca608632101-50x50.jpeg",
+                "primaryColorHex": "FFBF00",
+                "__typename": "User"
+              },
+              "thumbnailURL": "https://static-cdn.jtvnw.net/twitch-clips-thumbnails-prod/ProductiveBraveFriesNerfRedBlaster-t1GD9r0hUe1nXxzC/04660ba9-e109-414d-bfc4-ecf3df84c2b5/preview.jpg",
+              "createdAt": "2025-03-04T03:29:05Z",
+              "durationSeconds": 60,
+              "champBadge": null,
+              "isFeatured": false,
+              "__typename": "Clip"
+            },
+            "__typename": "ClipEdge"
+          },
+          {
+            "cursor": null,
+            "node": {
+              "id": "3943053497",
+              "slug": "AgitatedStylishBibimbapDuDudu-qmUViLa0S7gwk2h9",
+              "url": "https://clips.twitch.tv/AgitatedStylishBibimbapDuDudu-qmUViLa0S7gwk2h9",
+              "embedURL": "https://clips.twitch.tv/embed?clip=AgitatedStylishBibimbapDuDudu-qmUViLa0S7gwk2h9",
+              "title": "JANET IS SO CUTE",
+              "viewCount": 517,
+              "language": "EN",
+              "curator": {
+                "id": "47972177",
+                "login": "joseqh",
+                "displayName": "Joseqh",
+                "__typename": "User"
+              },
+              "game": {
+                "id": "1294658629",
+                "name": "R.E.P.O.",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/1294658629_IGDB-52x72.jpg",
+                "__typename": "Game"
+              },
+              "broadcaster": {
+                "id": "71092938",
+                "login": "xqc",
+                "displayName": "xQc",
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/xqc-profile_image-9298dca608632101-50x50.jpeg",
+                "primaryColorHex": "FFBF00",
+                "__typename": "User"
+              },
+              "thumbnailURL": "https://static-cdn.jtvnw.net/twitch-clips-thumbnails-prod/AgitatedStylishBibimbapDuDudu-qmUViLa0S7gwk2h9/490c3c7a-bf79-4c7f-9f69-ddd4772937a1/preview.jpg",
+              "createdAt": "2025-03-06T01:37:45Z",
+              "durationSeconds": 21,
+              "champBadge": null,
+              "isFeatured": false,
+              "__typename": "Clip"
+            },
+            "__typename": "ClipEdge"
+          },
+          {
+            "cursor": null,
+            "node": {
+              "id": "3969879595",
+              "slug": "LightBumblingGnatRalpherZ-VFhmdCDlGQJmPatX",
+              "url": "https://clips.twitch.tv/LightBumblingGnatRalpherZ-VFhmdCDlGQJmPatX",
+              "embedURL": "https://clips.twitch.tv/embed?clip=LightBumblingGnatRalpherZ-VFhmdCDlGQJmPatX",
+              "title": "rondale",
+              "viewCount": 343,
+              "language": "EN",
+              "curator": {
+                "id": "511042557",
+                "login": "eugeney1",
+                "displayName": "eugeney1",
+                "__typename": "User"
+              },
+              "game": {
+                "id": "509658",
+                "name": "Just Chatting",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509658-52x72.jpg",
+                "__typename": "Game"
+              },
+              "broadcaster": {
+                "id": "71092938",
+                "login": "xqc",
+                "displayName": "xQc",
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/xqc-profile_image-9298dca608632101-50x50.jpeg",
+                "primaryColorHex": "FFBF00",
+                "__typename": "User"
+              },
+              "thumbnailURL": "https://static-cdn.jtvnw.net/twitch-clips-thumbnails-prod/LightBumblingGnatRalpherZ-VFhmdCDlGQJmPatX/0ec3abcf-6e8a-4c39-8c92-6ce40e1e12c6/preview.jpg",
+              "createdAt": "2025-03-04T03:56:51Z",
+              "durationSeconds": 26,
+              "champBadge": null,
+              "isFeatured": false,
+              "__typename": "Clip"
+            },
+            "__typename": "ClipEdge"
+          },
+          {
+            "cursor": null,
+            "node": {
+              "id": "3040176656",
+              "slug": "PiercingCooperativeApeYouWHY-oc-YPWzXCIdWqcpy",
+              "url": "https://clips.twitch.tv/PiercingCooperativeApeYouWHY-oc-YPWzXCIdWqcpy",
+              "embedURL": "https://clips.twitch.tv/embed?clip=PiercingCooperativeApeYouWHY-oc-YPWzXCIdWqcpy",
+              "title": "xqc shouts out lacy thugs",
+              "viewCount": 321,
+              "language": "EN",
+              "curator": {
+                "id": "46053327",
+                "login": "aetherrr12",
+                "displayName": "aetherrr12",
+                "__typename": "User"
+              },
+              "game": {
+                "id": "509658",
+                "name": "Just Chatting",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509658-52x72.jpg",
+                "__typename": "Game"
+              },
+              "broadcaster": {
+                "id": "71092938",
+                "login": "xqc",
+                "displayName": "xQc",
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/xqc-profile_image-9298dca608632101-50x50.jpeg",
+                "primaryColorHex": "FFBF00",
+                "__typename": "User"
+              },
+              "thumbnailURL": "https://static-cdn.jtvnw.net/twitch-clips-thumbnails-prod/PiercingCooperativeApeYouWHY-oc-YPWzXCIdWqcpy/6a00342e-1afd-4d37-b8c2-9c90aef8654c/preview.jpg",
+              "createdAt": "2025-03-04T04:02:59Z",
+              "durationSeconds": 13,
+              "champBadge": null,
+              "isFeatured": false,
+              "__typename": "Clip"
+            },
+            "__typename": "ClipEdge"
+          },
+          {
+            "cursor": null,
+            "node": {
+              "id": "2929904833",
+              "slug": "CoweringDeadDurianTwitchRaid-jK0D1Qs0wXgJ0Ona",
+              "url": "https://clips.twitch.tv/CoweringDeadDurianTwitchRaid-jK0D1Qs0wXgJ0Ona",
+              "embedURL": "https://clips.twitch.tv/embed?clip=CoweringDeadDurianTwitchRaid-jK0D1Qs0wXgJ0Ona",
+              "title": "caught",
+              "viewCount": 306,
+              "language": "EN",
+              "curator": {
+                "id": "183944194",
+                "login": "wolfey3",
+                "displayName": "Wolfey3",
+                "__typename": "User"
+              },
+              "game": {
+                "id": "509672",
+                "name": "IRL",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509672-52x72.jpg",
+                "__typename": "Game"
+              },
+              "broadcaster": {
+                "id": "71092938",
+                "login": "xqc",
+                "displayName": "xQc",
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/xqc-profile_image-9298dca608632101-50x50.jpeg",
+                "primaryColorHex": "FFBF00",
+                "__typename": "User"
+              },
+              "thumbnailURL": "https://static-cdn.jtvnw.net/twitch-clips-thumbnails-prod/CoweringDeadDurianTwitchRaid-jK0D1Qs0wXgJ0Ona/757d50df-4d9f-4e0f-a795-eae7f69e91b5/preview.jpg",
+              "createdAt": "2025-03-06T18:41:19Z",
+              "durationSeconds": 39,
+              "champBadge": null,
+              "isFeatured": false,
+              "__typename": "Clip"
+            },
+            "__typename": "ClipEdge"
+          },
+          {
+            "cursor": null,
+            "node": {
+              "id": "3471908073",
+              "slug": "AlertPiliableMonkeyOSsloth-lVh3dVrrrsYArSS4",
+              "url": "https://clips.twitch.tv/AlertPiliableMonkeyOSsloth-lVh3dVrrrsYArSS4",
+              "embedURL": "https://clips.twitch.tv/embed?clip=AlertPiliableMonkeyOSsloth-lVh3dVrrrsYArSS4",
+              "title": "counting",
+              "viewCount": 287,
+              "language": "EN",
+              "curator": {
+                "id": "123415347",
+                "login": "equinox2k",
+                "displayName": "equinox2k",
+                "__typename": "User"
+              },
+              "game": {
+                "id": "509658",
+                "name": "Just Chatting",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509658-52x72.jpg",
+                "__typename": "Game"
+              },
+              "broadcaster": {
+                "id": "71092938",
+                "login": "xqc",
+                "displayName": "xQc",
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/xqc-profile_image-9298dca608632101-50x50.jpeg",
+                "primaryColorHex": "FFBF00",
+                "__typename": "User"
+              },
+              "thumbnailURL": "https://static-cdn.jtvnw.net/twitch-clips-thumbnails-prod/AlertPiliableMonkeyOSsloth-lVh3dVrrrsYArSS4/99e12d85-603f-419f-80c5-f64abc842fed/preview.jpg",
+              "createdAt": "2025-03-05T21:48:54Z",
+              "durationSeconds": 48,
+              "champBadge": null,
+              "isFeatured": false,
+              "__typename": "Clip"
+            },
+            "__typename": "ClipEdge"
+          },
+          {
+            "cursor": null,
+            "node": {
+              "id": "1253715266",
+              "slug": "DeafMuddyCiderFreakinStinkin-XcQGGFsJL6sFwkcc",
+              "url": "https://clips.twitch.tv/DeafMuddyCiderFreakinStinkin-XcQGGFsJL6sFwkcc",
+              "embedURL": "https://clips.twitch.tv/embed?clip=DeafMuddyCiderFreakinStinkin-XcQGGFsJL6sFwkcc",
+              "title": "xQc really dud?",
+              "viewCount": 237,
+              "language": "EN",
+              "curator": {
+                "id": "89501915",
+                "login": "anaxestv",
+                "displayName": "AnaxesTV",
+                "__typename": "User"
+              },
+              "game": {
+                "id": "509658",
+                "name": "Just Chatting",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509658-52x72.jpg",
+                "__typename": "Game"
+              },
+              "broadcaster": {
+                "id": "71092938",
+                "login": "xqc",
+                "displayName": "xQc",
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/xqc-profile_image-9298dca608632101-50x50.jpeg",
+                "primaryColorHex": "FFBF00",
+                "__typename": "User"
+              },
+              "thumbnailURL": "https://static-cdn.jtvnw.net/twitch-clips-thumbnails-prod/DeafMuddyCiderFreakinStinkin-XcQGGFsJL6sFwkcc/a9c57fd0-3613-4a83-91aa-a5669f2ceb9e/preview.jpg",
+              "createdAt": "2025-03-04T05:53:30Z",
+              "durationSeconds": 33,
+              "champBadge": null,
+              "isFeatured": false,
+              "__typename": "Clip"
+            },
+            "__typename": "ClipEdge"
+          },
+          {
+            "cursor": null,
+            "node": {
+              "id": "1492503873",
+              "slug": "GlamorousResourcefulSquidStinkyCheese-fkYDvDQub5KocyNh",
+              "url": "https://clips.twitch.tv/GlamorousResourcefulSquidStinkyCheese-fkYDvDQub5KocyNh",
+              "embedURL": "https://clips.twitch.tv/embed?clip=GlamorousResourcefulSquidStinkyCheese-fkYDvDQub5KocyNh",
+              "title": "dafranJam",
+              "viewCount": 145,
+              "language": "EN",
+              "curator": {
+                "id": "723527891",
+                "login": "owreformed",
+                "displayName": "owReformed",
+                "__typename": "User"
+              },
+              "game": {
+                "id": "509658",
+                "name": "Just Chatting",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509658-52x72.jpg",
+                "__typename": "Game"
+              },
+              "broadcaster": {
+                "id": "71092938",
+                "login": "xqc",
+                "displayName": "xQc",
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/xqc-profile_image-9298dca608632101-50x50.jpeg",
+                "primaryColorHex": "FFBF00",
+                "__typename": "User"
+              },
+              "thumbnailURL": "https://static-cdn.jtvnw.net/twitch-clips-thumbnails-prod/GlamorousResourcefulSquidStinkyCheese-fkYDvDQub5KocyNh/736ab230-effc-42df-be70-54303ce1c331/preview.jpg",
+              "createdAt": "2025-03-05T10:13:54Z",
+              "durationSeconds": 21,
+              "champBadge": null,
+              "isFeatured": false,
+              "__typename": "Clip"
+            },
+            "__typename": "ClipEdge"
+          },
+          {
+            "cursor": null,
+            "node": {
+              "id": "1280431068",
+              "slug": "SneakyCrepuscularGooseStrawBeary-v7h_xUS87x5IqO5p",
+              "url": "https://clips.twitch.tv/SneakyCrepuscularGooseStrawBeary-v7h_xUS87x5IqO5p",
+              "embedURL": "https://clips.twitch.tv/embed?clip=SneakyCrepuscularGooseStrawBeary-v7h_xUS87x5IqO5p",
+              "title": "GYAT",
+              "viewCount": 139,
+              "language": "EN",
+              "curator": {
+                "id": "254169489",
+                "login": "fariasu__",
+                "displayName": "Fariasu__",
+                "__typename": "User"
+              },
+              "game": {
+                "id": "509672",
+                "name": "IRL",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509672-52x72.jpg",
+                "__typename": "Game"
+              },
+              "broadcaster": {
+                "id": "71092938",
+                "login": "xqc",
+                "displayName": "xQc",
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/xqc-profile_image-9298dca608632101-50x50.jpeg",
+                "primaryColorHex": "FFBF00",
+                "__typename": "User"
+              },
+              "thumbnailURL": "https://static-cdn.jtvnw.net/twitch-clips-thumbnails-prod/SneakyCrepuscularGooseStrawBeary-v7h_xUS87x5IqO5p/3f4a5a5a-b4cc-4208-9ccb-60f4e2cfcdfd/preview.jpg",
+              "createdAt": "2025-03-07T00:37:20Z",
+              "durationSeconds": 13,
+              "champBadge": null,
+              "isFeatured": false,
+              "__typename": "Clip"
+            },
+            "__typename": "ClipEdge"
+          },
+          {
+            "cursor": null,
+            "node": {
+              "id": "1609338212",
+              "slug": "UnusualViscousMageFailFish-ueNG9w9fKS0_Kn38",
+              "url": "https://clips.twitch.tv/UnusualViscousMageFailFish-ueNG9w9fKS0_Kn38",
+              "embedURL": "https://clips.twitch.tv/embed?clip=UnusualViscousMageFailFish-ueNG9w9fKS0_Kn38",
+              "title": "wtf",
+              "viewCount": 119,
+              "language": "EN",
+              "curator": {
+                "id": "431564093",
+                "login": "14mak",
+                "displayName": "14mak",
+                "__typename": "User"
+              },
+              "game": {
+                "id": "509672",
+                "name": "IRL",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509672-52x72.jpg",
+                "__typename": "Game"
+              },
+              "broadcaster": {
+                "id": "71092938",
+                "login": "xqc",
+                "displayName": "xQc",
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/xqc-profile_image-9298dca608632101-50x50.jpeg",
+                "primaryColorHex": "FFBF00",
+                "__typename": "User"
+              },
+              "thumbnailURL": "https://static-cdn.jtvnw.net/twitch-clips-thumbnails-prod/UnusualViscousMageFailFish-ueNG9w9fKS0_Kn38/f33c1d5a-c760-48ca-a416-7fbf9ceeec14/preview.jpg",
+              "createdAt": "2025-03-06T19:20:29Z",
+              "durationSeconds": 15,
+              "champBadge": null,
+              "isFeatured": false,
+              "__typename": "Clip"
+            },
+            "__typename": "ClipEdge"
+          },
+          {
+            "cursor": null,
+            "node": {
+              "id": "1637533105",
+              "slug": "BlushingRelatedClipsmomPeanutButterJellyTime-cwMs2whc-eCAr0eB",
+              "url": "https://clips.twitch.tv/BlushingRelatedClipsmomPeanutButterJellyTime-cwMs2whc-eCAr0eB",
+              "embedURL": "https://clips.twitch.tv/embed?clip=BlushingRelatedClipsmomPeanutButterJellyTime-cwMs2whc-eCAr0eB",
+              "title": "🇬🇧 LONDON 🇬🇧 IRL 🇬🇧 NO PLANS 🇬🇧 GET IN 🇬🇧 OI 🇬🇧 BRUV 🇬🇧 INNIT 🇬🇧 WITH @Stableronaldo",
+              "viewCount": 105,
+              "language": "EN",
+              "curator": {
+                "id": "157144356",
+                "login": "slushire",
+                "displayName": "slushire",
+                "__typename": "User"
+              },
+              "game": {
+                "id": "509672",
+                "name": "IRL",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509672-52x72.jpg",
+                "__typename": "Game"
+              },
+              "broadcaster": {
+                "id": "71092938",
+                "login": "xqc",
+                "displayName": "xQc",
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/xqc-profile_image-9298dca608632101-50x50.jpeg",
+                "primaryColorHex": "FFBF00",
+                "__typename": "User"
+              },
+              "thumbnailURL": "https://static-cdn.jtvnw.net/twitch-clips/Z22SMHMDLNsIXPnggK9HgQ/317349374204-offset-5154-preview-260x147.jpg",
+              "createdAt": "2025-03-06T19:36:35Z",
+              "durationSeconds": 30,
+              "champBadge": null,
+              "isFeatured": false,
+              "__typename": "Clip"
+            },
+            "__typename": "ClipEdge"
+          },
+          {
+            "cursor": "MjA=",
+            "node": {
+              "id": "1933456419",
+              "slug": "AttractiveCrackyDogePartyTime-CLJenFk2NfcOgnnP",
+              "url": "https://clips.twitch.tv/AttractiveCrackyDogePartyTime-CLJenFk2NfcOgnnP",
+              "embedURL": "https://clips.twitch.tv/embed?clip=AttractiveCrackyDogePartyTime-CLJenFk2NfcOgnnP",
+              "title": "03 March 2025 2246 EDT - Yo You Got Da Moves!!",
+              "viewCount": 99,
+              "language": "EN",
+              "curator": {
+                "id": "39215463",
+                "login": "lotware",
+                "displayName": "Lotware",
+                "__typename": "User"
+              },
+              "game": {
+                "id": "509658",
+                "name": "Just Chatting",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509658-52x72.jpg",
+                "__typename": "Game"
+              },
+              "broadcaster": {
+                "id": "71092938",
+                "login": "xqc",
+                "displayName": "xQc",
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/xqc-profile_image-9298dca608632101-50x50.jpeg",
+                "primaryColorHex": "FFBF00",
+                "__typename": "User"
+              },
+              "thumbnailURL": "https://static-cdn.jtvnw.net/twitch-clips-thumbnails-prod/AttractiveCrackyDogePartyTime-CLJenFk2NfcOgnnP/bf906826-6c21-46ff-b095-bf8f968c053d/preview.jpg",
+              "createdAt": "2025-03-04T03:48:40Z",
+              "durationSeconds": 46,
+              "champBadge": null,
+              "isFeatured": false,
+              "__typename": "Clip"
+            },
+            "__typename": "ClipEdge"
+          }
+        ],
+        "__typename": "ClipConnection"
+      },
+      "__typename": "User"
+    }
+  },
+  "extensions": {
+    "durationMilliseconds": 94,
+    "operationName": "ClipsCards__User",
+    "requestID": "01JNZQHESTF64P5TTAJ316MMMD"
+  }
+}

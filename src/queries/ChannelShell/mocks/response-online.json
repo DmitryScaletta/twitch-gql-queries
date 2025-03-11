@@ -1,0 +1,40 @@
+{
+  "data": {
+    "userOrError": {
+      "id": "21841789",
+      "login": "nmplol",
+      "displayName": "Nmplol",
+      "primaryColorHex": null,
+      "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/e4d9bf96-311d-487a-b5eb-9f9a94e0f795-profile_image-70x70.png",
+      "stream": {
+        "id": "317578415356",
+        "viewersCount": 9306,
+        "__typename": "Stream"
+      },
+      "__typename": "User",
+      "bannerImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/29a2c2a3-7877-4ae8-a386-2e2e76f33844-profile_banner-480.png",
+      "channel": {
+        "id": "21841789",
+        "self": {
+          "isAuthorized": true,
+          "restrictionType": null,
+          "__typename": "ChannelSelfEdge"
+        },
+        "trailer": { "video": null, "__typename": "Trailer" },
+        "home": {
+          "preferences": {
+            "heroPreset": "PRESET_2",
+            "__typename": "ChannelHomePreferences"
+          },
+          "__typename": "ChannelHome"
+        },
+        "__typename": "Channel"
+      }
+    }
+  },
+  "extensions": {
+    "durationMilliseconds": 56,
+    "operationName": "ChannelShell",
+    "requestID": "01JP07RJR7AM164YDF9JBH7999"
+  }
+}

@@ -1,0 +1,209 @@
+{
+  "data": {
+    "searchSuggestions": {
+      "edges": [
+        {
+          "node": {
+            "content": {
+              "__typename": "SearchSuggestionChannel",
+              "id": "22484632",
+              "isLive": true,
+              "isVerified": true,
+              "login": "forsen",
+              "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/forsen-profile_image-48b43e1e4f54b5c8-50x50.png",
+              "user": {
+                "id": "22484632",
+                "stream": {
+                  "id": "318597564669",
+                  "game": { "id": "32399", "__typename": "Game" },
+                  "__typename": "Stream"
+                },
+                "__typename": "User"
+              }
+            },
+            "matchingCharacters": {
+              "start": 0,
+              "end": 5,
+              "__typename": "SearchSuggestionHighlight"
+            },
+            "id": "2c10b7d5-89a2-485f-afae-9c73e0944f85",
+            "text": "forsen",
+            "__typename": "SearchSuggestion"
+          },
+          "__typename": "SearchSuggestionEdge"
+        },
+        {
+          "node": {
+            "content": {
+              "__typename": "SearchSuggestionChannel",
+              "id": "41291638",
+              "isLive": true,
+              "isVerified": false,
+              "login": "forsenk",
+              "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/b0dad4dc-ac06-4e5b-892f-6f84e56c09b0-profile_image-50x50.png",
+              "user": {
+                "id": "41291638",
+                "stream": {
+                  "id": "316994695417",
+                  "game": { "id": "175629385", "__typename": "Game" },
+                  "__typename": "Stream"
+                },
+                "__typename": "User"
+              }
+            },
+            "matchingCharacters": {
+              "start": 0,
+              "end": 5,
+              "__typename": "SearchSuggestionHighlight"
+            },
+            "id": "5a1f17f6-ad8d-4233-90b6-6ad660c9e4d1",
+            "text": "forsenK",
+            "__typename": "SearchSuggestion"
+          },
+          "__typename": "SearchSuggestionEdge"
+        },
+        {
+          "node": {
+            "content": {
+              "__typename": "SearchSuggestionChannel",
+              "id": "1075773331",
+              "isLive": false,
+              "isVerified": false,
+              "login": "forsenspectate",
+              "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/cddf9b2b-ef85-4228-b105-4377986764a1-profile_image-50x50.png",
+              "user": {
+                "id": "1075773331",
+                "stream": null,
+                "__typename": "User"
+              }
+            },
+            "matchingCharacters": {
+              "start": 0,
+              "end": 5,
+              "__typename": "SearchSuggestionHighlight"
+            },
+            "id": "2dc12f8b-8937-4cf1-854c-0f13311aafd7",
+            "text": "forsenspectate",
+            "__typename": "SearchSuggestion"
+          },
+          "__typename": "SearchSuggestionEdge"
+        },
+        {
+          "node": {
+            "content": {
+              "__typename": "SearchSuggestionChannel",
+              "id": "946269547",
+              "isLive": false,
+              "isVerified": false,
+              "login": "forsengodseed",
+              "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/c57ffe27-011c-4495-9254-aab8341a649c-profile_image-50x50.png",
+              "user": {
+                "id": "946269547",
+                "stream": null,
+                "__typename": "User"
+              }
+            },
+            "matchingCharacters": {
+              "start": 0,
+              "end": 5,
+              "__typename": "SearchSuggestionHighlight"
+            },
+            "id": "875b1f2a-9487-43fa-9b4b-9fcd809dcef0",
+            "text": "forsengodseed",
+            "__typename": "SearchSuggestion"
+          },
+          "__typename": "SearchSuggestionEdge"
+        },
+        {
+          "node": {
+            "content": {
+              "__typename": "SearchSuggestionChannel",
+              "id": "1217223602",
+              "isLive": false,
+              "isVerified": false,
+              "login": "forseenbottwitch",
+              "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/488b6ff4-1c98-45ca-bea6-c0b8747a330b-profile_image-50x50.png",
+              "user": {
+                "id": "1217223602",
+                "stream": null,
+                "__typename": "User"
+              }
+            },
+            "matchingCharacters": {
+              "start": 0,
+              "end": 5,
+              "__typename": "SearchSuggestionHighlight"
+            },
+            "id": "0bc246b2-1828-47fb-809f-3625d0504fbf",
+            "text": "forseenbottwitch",
+            "__typename": "SearchSuggestion"
+          },
+          "__typename": "SearchSuggestionEdge"
+        },
+        {
+          "node": {
+            "content": {
+              "__typename": "SearchSuggestionChannel",
+              "id": "1235411492",
+              "isLive": false,
+              "isVerified": false,
+              "login": "forseenjay",
+              "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/83e5d5e2-6acf-495b-ac63-7645a751c0b9-profile_image-50x50.png",
+              "user": {
+                "id": "1235411492",
+                "stream": null,
+                "__typename": "User"
+              }
+            },
+            "matchingCharacters": {
+              "start": 0,
+              "end": 5,
+              "__typename": "SearchSuggestionHighlight"
+            },
+            "id": "8b937cd3-456a-405c-aca7-0e68ff217cda",
+            "text": "forseenjay",
+            "__typename": "SearchSuggestion"
+          },
+          "__typename": "SearchSuggestionEdge"
+        },
+        {
+          "node": {
+            "content": {
+              "__typename": "SearchSuggestionChannel",
+              "id": "540372341",
+              "isLive": false,
+              "isVerified": false,
+              "login": "f0rsetii",
+              "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/50667c20-4f77-425f-a449-77875eb13e32-profile_image-50x50.png",
+              "user": {
+                "id": "540372341",
+                "stream": null,
+                "__typename": "User"
+              }
+            },
+            "matchingCharacters": {
+              "start": 0,
+              "end": 0,
+              "__typename": "SearchSuggestionHighlight"
+            },
+            "id": "89c41420-df91-447f-a6a3-55a735e1006a",
+            "text": "f0rsetii",
+            "__typename": "SearchSuggestion"
+          },
+          "__typename": "SearchSuggestionEdge"
+        }
+      ],
+      "tracking": {
+        "modelTrackingID": "45003516f07ee19667e3fb448c80d82a",
+        "responseID": "fb2a9423-635b-40bc-9e6b-1fe001550eb7",
+        "__typename": "SearchSuggestionTracking"
+      },
+      "__typename": "SearchSuggestionConnection"
+    }
+  },
+  "extensions": {
+    "durationMilliseconds": 71,
+    "operationName": "SearchTray_SearchSuggestions",
+    "requestID": "01JP0SZN8V52906SKR3Z257N1E"
+  }
+}

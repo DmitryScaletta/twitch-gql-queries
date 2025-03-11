@@ -1,0 +1,29 @@
+{
+  "data": {
+    "user": {
+      "id": "71092938",
+      "primaryColorHex": "FFBF00",
+      "isPartner": true,
+      "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/xqc-profile_image-9298dca608632101-70x70.jpeg",
+      "primaryTeam": null,
+      "squadStream": null,
+      "channel": {
+        "id": "71092938",
+        "chanlets": null,
+        "__typename": "Channel"
+      },
+      "lastBroadcast": {
+        "id": "317349374204",
+        "title": "🇬🇧 LONDON 🇬🇧 IRL 🇬🇧 NO PLANS 🇬🇧 GET IN 🇬🇧 OI 🇬🇧 BRUV 🇬🇧 INNIT 🇬🇧 WITH @Stableronaldo",
+        "__typename": "Broadcast"
+      },
+      "stream": null,
+      "__typename": "User"
+    }
+  },
+  "extensions": {
+    "durationMilliseconds": 40,
+    "operationName": "StreamMetadata",
+    "requestID": "01JP0Q96VVD7BHT8CTKYKMHHAE"
+  }
+}

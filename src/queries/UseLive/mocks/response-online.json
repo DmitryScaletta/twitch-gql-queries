@@ -1,0 +1,19 @@
+{
+  "data": {
+    "user": {
+      "id": "160504245",
+      "login": "39daph",
+      "stream": {
+        "id": "317620031996",
+        "createdAt": "2025-03-11T04:02:38Z",
+        "__typename": "Stream"
+      },
+      "__typename": "User"
+    }
+  },
+  "extensions": {
+    "durationMilliseconds": 40,
+    "operationName": "UseLive",
+    "requestID": "01JP2A3CGG7XAQCATECKE585SX"
+  }
+}

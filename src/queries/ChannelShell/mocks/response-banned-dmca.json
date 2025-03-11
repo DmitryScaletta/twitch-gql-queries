@@ -1,0 +1,14 @@
+{
+  "data": {
+    "userOrError": {
+      "userDoesNotExist": "gaechkatm",
+      "reason": "DMCA",
+      "__typename": "UserDoesNotExist"
+    }
+  },
+  "extensions": {
+    "durationMilliseconds": 45,
+    "operationName": "ChannelShell",
+    "requestID": "01JP07X5ZMXMAWP2C44FCMZEPT"
+  }
+}

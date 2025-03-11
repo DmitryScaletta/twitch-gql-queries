@@ -1,0 +1,18 @@
+### FFZ_BroadcastID
+
+POST https://gql.twitch.tv/gql
+Content-Type: application/json
+Client-Id: {{$dotenv CLIENT_ID}}
+
+{
+  "operationName": "FFZ_BroadcastID",
+  "variables": {
+    "id": "26490481"
+  },
+  "extensions": {
+    "persistedQuery": {
+      "version": 1,
+      "sha256Hash": "cc89dfe8fcfe71235313b05b34799eaa519d162ebf85faf0c51d17c274614f0f"
+    }
+  }
+}

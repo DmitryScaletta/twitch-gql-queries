@@ -1,0 +1,14 @@
+{
+  "data": {
+    "userOrError": {
+      "userDoesNotExist": "qmaxgaren",
+      "reason": "TOS_INDEFINITE",
+      "__typename": "UserDoesNotExist"
+    }
+  },
+  "extensions": {
+    "durationMilliseconds": 39,
+    "operationName": "ChannelShell",
+    "requestID": "01JP081M3BAWGYDD7XB63MGM4A"
+  }
+}

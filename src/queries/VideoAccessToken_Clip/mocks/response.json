@@ -1,0 +1,44 @@
+{
+  "data": {
+    "clip": {
+      "id": "3942697259",
+      "playbackAccessToken": {
+        "signature": "daea9471d8b796bfcc91adb605650bb7da98a76d",
+        "value": "{\"authorization\":{\"forbidden\":false,\"reason\":\"\"},\"clip_uri\":\"https://production.assets.clips.twitchcdn.net/AT-cm%7C961443378.mp4\",\"clip_slug\":\"DeliciousDelightfulPicklesWOOP\",\"device_id\":null,\"expires\":1741758474,\"user_id\":\"\",\"version\":2}",
+        "__typename": "PlaybackAccessToken"
+      },
+      "videoQualities": [
+        {
+          "frameRate": 60.0133362969549,
+          "quality": "1080",
+          "sourceURL": "https://production.assets.clips.twitchcdn.net/AT-cm%7C961443378.mp4",
+          "__typename": "ClipVideoQuality"
+        },
+        {
+          "frameRate": 60.0133362969549,
+          "quality": "720",
+          "sourceURL": "https://production.assets.clips.twitchcdn.net/AT-cm%7C961443378-720.mp4",
+          "__typename": "ClipVideoQuality"
+        },
+        {
+          "frameRate": 30.0066681484774,
+          "quality": "480",
+          "sourceURL": "https://production.assets.clips.twitchcdn.net/AT-cm%7C961443378-480.mp4",
+          "__typename": "ClipVideoQuality"
+        },
+        {
+          "frameRate": 30.0066681484774,
+          "quality": "360",
+          "sourceURL": "https://production.assets.clips.twitchcdn.net/AT-cm%7C961443378-360.mp4",
+          "__typename": "ClipVideoQuality"
+        }
+      ],
+      "__typename": "Clip"
+    }
+  },
+  "extensions": {
+    "durationMilliseconds": 85,
+    "operationName": "VideoAccessToken_Clip",
+    "requestID": "01JP29N21GTT0TVC1E39SCGCY7"
+  }
+}

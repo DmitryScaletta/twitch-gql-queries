@@ -1,0 +1,30 @@
+{
+  "data": {
+    "clip": {
+      "id": "3666079080",
+      "videoOffsetSeconds": null,
+      "durationSeconds": 30,
+      "title": "затащат ли нам осирис?",
+      "isFeatured": false,
+      "broadcaster": null,
+      "video": null,
+      "game": {
+        "id": "280721",
+        "displayName": "Destiny",
+        "__typename": "Game"
+      },
+      "__typename": "Clip",
+      "createdAt": "2016-07-31T21:49:42Z",
+      "broadcast": { "id": "22594802816", "__typename": "Broadcast" },
+      "isPublished": true,
+      "viewCount": 140,
+      "curator": { "id": "38259425", "__typename": "User" },
+      "language": "RU"
+    }
+  },
+  "extensions": {
+    "durationMilliseconds": 46,
+    "operationName": "ClipsActionButtons",
+    "requestID": "01JP0A2T2E8R8DFXP8HSMGVE1D"
+  }
+}
