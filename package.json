@@ -12,19 +12,34 @@
     "type": "git",
     "url": "git+https://github.com/DmitryScaletta/twitch-gql-queries.git"
   },
+  "bugs": {
+    "url": "https://github.com/DmitryScaletta/twitch-gql-queries/issues"
+  },
+  "types": "dist/index.d.ts",
+  "module": "dist/index.js",
+  "main": "dist/index.cjs",
+  "exports": {
+    "import": "./dist/index.js",
+    "require": "./dist/index.cjs"
+  },
+  "files": [
+    "dist"
+  ],
   "type": "module",
-  "main": "index.ts",
   "scripts": {
-    "build": "node --no-warnings=ExperimentalWarning scripts/build.ts",
+    "build": "tsup",
+    "gen": "node --no-warnings=ExperimentalWarning scripts/gen.ts",
     "new-query": "node --no-warnings=ExperimentalWarning scripts/new-query.ts",
     "test": "node --no-warnings=ExperimentalWarning --test",
     "test:watch": "node --no-warnings=ExperimentalWarning --test --watch"
   },
   "devDependencies": {
-    "@sinclair/typebox": "^0.34.28",
+    "@sinclair/typebox": "^0.34.30",
     "@types/node": "^22.13.10",
     "json-schema-to-typescript": "^15.0.4",
-    "prettier": "^3.5.3"
+    "prettier": "^3.5.3",
+    "tsup": "^8.4.0",
+    "typescript": "^5.8.2"
   },
   "packageManager": "pnpm@10.6.2+sha512.47870716bea1572b53df34ad8647b42962bc790ce2bf4562ba0f643237d7302a3d6a8ecef9e4bdfc01d23af1969aa90485d4cebb0b9638fa5ef1daef656f6c1b"
 }
