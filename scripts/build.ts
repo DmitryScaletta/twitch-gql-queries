@@ -1,66 +1,22 @@
 import fsp from 'node:fs/promises';
 import { type TSchema } from '@sinclair/typebox';
 import { compile } from 'json-schema-to-typescript';
-import * as BrowsePageAllDirectories from '../src/queries/BrowsePage_AllDirectories/schema.ts';
-import * as ChannelShell from '../src/queries/ChannelShell/schema.ts';
-import * as ClipsActionButtons from '../src/queries/ClipsActionButtons/schema.ts';
-import * as ClipsCards from '../src/queries/ClipsCards.schema.ts';
-import * as ClipsCardsGame from '../src/queries/ClipsCards__Game/schema.ts';
-import * as ClipsCardsUser from '../src/queries/ClipsCards__User/schema.ts';
-import * as ClipsDownloadButton from '../src/queries/ClipsDownloadButton/schema.ts';
-import * as FfzBroadcastId from '../src/queries/FFZ_BroadcastID/schema.ts';
-import * as SearchResultsPageSearchResults from '../src/queries/SearchResultsPage_SearchResults/schema.ts';
-import * as SearchTraySearchSuggestions from '../src/queries/SearchTray_SearchSuggestions/schema.ts';
-import * as StreamMetadata from '../src/queries/StreamMetadata/schema.ts';
-import * as UseLive from '../src/queries/UseLive/schema.ts';
-import * as UseViewCount from '../src/queries/UseViewCount/schema.ts';
-import * as VideoAccessTokenClip from '../src/queries/VideoAccessToken_Clip/schema.ts';
 
-const schemas = [
-  BrowsePageAllDirectories.SortSchema,
-  BrowsePageAllDirectories.GameSchema,
-  BrowsePageAllDirectories.VariablesSchema,
-  BrowsePageAllDirectories.DataSchema,
-  ChannelShell.UserSchema,
-  ChannelShell.UserDoesNotExistSchema,
-  ChannelShell.VariablesSchema,
-  ChannelShell.DataSchema,
-  ClipsActionButtons.ClipSchema,
-  ClipsActionButtons.VariablesSchema,
-  ClipsActionButtons.DataSchema,
-  ClipsCards.ClipsCardsFilter,
-  ClipsCards.ClipsCardsClip,
-  ClipsCardsGame.VariablesSchema,
-  ClipsCardsGame.DataSchema,
-  ClipsCardsUser.VariablesSchema,
-  ClipsCardsUser.DataSchema,
-  ClipsDownloadButton.ClipSchema,
-  ClipsDownloadButton.VariablesSchema,
-  ClipsDownloadButton.DataSchema,
-  FfzBroadcastId.UserSchema,
-  FfzBroadcastId.VariablesSchema,
-  FfzBroadcastId.DataSchema,
-  SearchResultsPageSearchResults.ChannelSchema,
-  SearchResultsPageSearchResults.RelatedLiveChannelSchema,
-  SearchResultsPageSearchResults.GameSchema,
-  SearchResultsPageSearchResults.VideoSchema,
-  SearchResultsPageSearchResults.VariablesSchema,
-  SearchResultsPageSearchResults.DataSchema,
-  SearchTraySearchSuggestions.SuggestionChannelSchema,
-  SearchTraySearchSuggestions.SuggestionCategorySchema,
-  SearchTraySearchSuggestions.SuggestionSchema,
-  SearchTraySearchSuggestions.SuggestionsSchema,
-  SearchTraySearchSuggestions.VariablesSchema,
-  SearchTraySearchSuggestions.DataSchema,
-  StreamMetadata.UserSchema,
-  StreamMetadata.VariablesSchema,
-  StreamMetadata.DataSchema,
-  UseLive.VariablesSchema,
-  UseLive.DataSchema,
-  UseViewCount.VariablesSchema,
-  UseViewCount.DataSchema,
-  VideoAccessTokenClip.VariablesSchema,
-  VideoAccessTokenClip.DataSchema,
+const schemasPromises = [
+  import('../src/queries/BrowsePage_AllDirectories/schema.ts'),
+  import('../src/queries/ChannelShell/schema.ts'),
+  import('../src/queries/ClipsActionButtons/schema.ts'),
+  import('../src/queries/ClipsCards.schema.ts'),
+  import('../src/queries/ClipsCards__Game/schema.ts'),
+  import('../src/queries/ClipsCards__User/schema.ts'),
+  import('../src/queries/ClipsDownloadButton/schema.ts'),
+  import('../src/queries/FFZ_BroadcastID/schema.ts'),
+  import('../src/queries/SearchResultsPage_SearchResults/schema.ts'),
+  import('../src/queries/SearchTray_SearchSuggestions/schema.ts'),
+  import('../src/queries/StreamMetadata/schema.ts'),
+  import('../src/queries/UseLive/schema.ts'),
+  import('../src/queries/UseViewCount/schema.ts'),
+  import('../src/queries/VideoAccessToken_Clip/schema.ts'),
 ];
 
 const replaceRefsWithIds = (schema: TSchema) => {
@@ -94,13 +50,28 @@ const jsonSchemaToTs = (schema: any) =>
   );
 
 const main = async () => {
-  const ts: string[] = [];
+  const tsPromises: Promise<string>[] = [];
+  const schemas = await Promise.all(schemasPromises);
 
-  for (const schema of schemas) {
-    const tsDefinition = await jsonSchemaToTs(schema);
-    ts.push(tsDefinition);
+  for (const querySchemas of schemas) {
+    for (const [schemaName, schema] of Object.entries(querySchemas)) {
+      if (
+        !schemaName.endsWith('Schema') ||
+        ['VariablesSchema', 'DataSchema', 'ResponseSchema'].includes(schemaName)
+      ) {
+        continue;
+      }
+      tsPromises.push(jsonSchemaToTs(schema));
+    }
+    if ('VariablesSchema' in querySchemas) {
+      tsPromises.push(jsonSchemaToTs(querySchemas.VariablesSchema));
+    }
+    if ('DataSchema' in querySchemas) {
+      tsPromises.push(jsonSchemaToTs(querySchemas.DataSchema));
+    }
   }
 
+  const ts = await Promise.all(tsPromises);
   const tsContent = ts
     .join('\n')
     // TODO: fix using multiple refs in the same schema
