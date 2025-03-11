@@ -1,6 +1,9 @@
 import { Type as T } from '@sinclair/typebox';
 import { getResponseSchema, LegacyRef } from '../../schema.ts';
-import { ClipsCardsClip, ClipsCardsFilter } from '../ClipsCards.schema.ts';
+import {
+  ClipsCardsClipSchema,
+  ClipsCardsFilterSchema,
+} from '../ClipsCards.schema.ts';
 
 const name = 'ClipsCards__User';
 const displayName = 'ClipsCardsUser';
@@ -12,7 +15,9 @@ export const VariablesSchema = T.Object(
     criteria: T.Optional(
       T.Object(
         {
-          filter: T.Optional(T.Union([LegacyRef(ClipsCardsFilter), T.Null()])),
+          filter: T.Optional(
+            T.Union([LegacyRef(ClipsCardsFilterSchema), T.Null()]),
+          ),
           isFeatured: T.Optional(T.Union([T.Boolean(), T.Null()])),
         },
         { additionalProperties: false },
@@ -44,7 +49,7 @@ export const DataSchema = T.Object(
               T.Object(
                 {
                   cursor: T.Union([T.Null(), T.String()]),
-                  node: LegacyRef(ClipsCardsClip),
+                  node: LegacyRef(ClipsCardsClipSchema),
                   __typename: T.Literal('ClipEdge'),
                 },
                 { additionalProperties: false },

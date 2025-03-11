@@ -2,7 +2,7 @@ import { Type as T } from '@sinclair/typebox';
 
 const category = 'ClipsCards';
 
-export const ClipsCardsFilter = T.Union(
+export const ClipsCardsFilterSchema = T.Union(
   [
     T.Literal('LAST_DAY'),
     T.Literal('LAST_WEEK'),
@@ -12,7 +12,7 @@ export const ClipsCardsFilter = T.Union(
   { $id: `${category}Filter` },
 );
 
-export const ClipsCardsClip = T.Object(
+export const ClipsCardsClipSchema = T.Object(
   {
     id: T.String(),
     slug: T.String(),
