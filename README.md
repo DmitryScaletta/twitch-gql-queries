@@ -109,12 +109,7 @@ pnpm new-query QueryName
 
 Add `VariablesSchema` and `DataSchema` (`data` field in the query response) using [TypeBox](https://github.com/sinclairzx81/typebox).
 
-It's possible to add additional schemas like `ClipSchema` or `UserSchema` if needed. Use `LegacyRef` to connect additional schemas to main schemas, then add them to `scripts/build.ts` file.
-
-<!-- will be automated later -->
-Add schemas to `scripts/build.ts` file.  
-Add exports to `index.ts` file.  
-Add types to `src/types.ts` file.
+It's possible to export additional schemas like `ClipSchema` or `UserSchema` if needed (exports should end with `Schema`). Use `LegacyRef` to link them to main schemas.
 
 ### Step 3: Run build
 
