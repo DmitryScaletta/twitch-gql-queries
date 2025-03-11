@@ -1,5 +1,3 @@
-export type BrowsePageSort = 'RELEVANCE' | 'VIEWER_COUNT';
-
 export interface BrowsePageGame {
   id: string;
   slug: string;
@@ -17,6 +15,8 @@ export interface BrowsePageGame {
   originalReleaseDate: string | null;
   __typename: 'Game';
 }
+
+export type BrowsePageSort = 'RELEVANCE' | 'VIEWER_COUNT';
 
 export interface BrowsePageAllDirectoriesVariables {
   limit: number;
@@ -44,6 +44,12 @@ export interface BrowsePageAllDirectoriesData {
     };
     __typename: 'GameConnection';
   };
+}
+
+export interface ChannelShellUserDoesNotExist {
+  userDoesNotExist: string;
+  reason: 'UNKNOWN' | 'TOS_INDEFINITE' | 'TOS_TEMPORARY' | 'DMCA';
+  __typename: 'UserDoesNotExist';
 }
 
 export interface ChannelShellUser {
@@ -86,12 +92,6 @@ export interface ChannelShellUser {
     __typename: 'Channel';
   };
   __typename: 'User';
-}
-
-export interface ChannelShellUserDoesNotExist {
-  userDoesNotExist: string;
-  reason: 'UNKNOWN' | 'TOS_INDEFINITE' | 'TOS_TEMPORARY' | 'DMCA';
-  __typename: 'UserDoesNotExist';
 }
 
 export interface ChannelShellVariables {
@@ -147,8 +147,6 @@ export interface ClipsActionButtonsData {
   clip: null | ClipsActionButtonsClip;
 }
 
-export type ClipsCardsFilter = 'LAST_DAY' | 'LAST_WEEK' | 'LAST_MONTH' | 'ALL_TIME';
-
 export interface ClipsCardsClip {
   id: string;
   slug: string;
@@ -184,6 +182,8 @@ export interface ClipsCardsClip {
   champBadge: null;
   __typename: 'Clip';
 }
+
+export type ClipsCardsFilter = 'LAST_DAY' | 'LAST_WEEK' | 'LAST_MONTH' | 'ALL_TIME';
 
 export interface ClipsCardsGameVariables {
   categorySlug: string;
@@ -396,6 +396,23 @@ export interface SearchResultsPageChannel {
   __typename: 'User';
 }
 
+export interface SearchResultsPageGame {
+  id: string;
+  slug: string;
+  name: string;
+  displayName: string;
+  boxArtURL: string;
+  tags: {
+    id: string;
+    isLanguageTag: boolean;
+    localizedName: string;
+    tagName: string;
+    __typename: 'Tag';
+  }[];
+  viewersCount: null | number;
+  __typename: 'Game';
+}
+
 export interface SearchResultsPageRelatedLiveChannel {
   id: string;
   stream: {
@@ -428,23 +445,6 @@ export interface SearchResultsPageRelatedLiveChannel {
   };
   watchParty: unknown;
   __typename: 'User';
-}
-
-export interface SearchResultsPageGame {
-  id: string;
-  slug: string;
-  name: string;
-  displayName: string;
-  boxArtURL: string;
-  tags: {
-    id: string;
-    isLanguageTag: boolean;
-    localizedName: string;
-    tagName: string;
-    __typename: 'Tag';
-  }[];
-  viewersCount: null | number;
-  __typename: 'Game';
 }
 
 export interface SearchResultsPageVideo {
@@ -547,6 +547,17 @@ export interface SearchResultsPageSearchResultsData {
   };
 }
 
+export interface SearchTraySuggestionCategory {
+  id: string;
+  boxArtURL: string;
+  game: {
+    id: string;
+    slug: string;
+    __typename: 'Game';
+  };
+  __typename: 'SearchSuggestionCategory';
+}
+
 export interface SearchTraySuggestionChannel {
   id: string;
   login: string;
@@ -566,17 +577,6 @@ export interface SearchTraySuggestionChannel {
     __typename: 'User';
   };
   __typename: 'SearchSuggestionChannel';
-}
-
-export interface SearchTraySuggestionCategory {
-  id: string;
-  boxArtURL: string;
-  game: {
-    id: string;
-    slug: string;
-    __typename: 'Game';
-  };
-  __typename: 'SearchSuggestionCategory';
 }
 
 export interface SearchTraySuggestion {
