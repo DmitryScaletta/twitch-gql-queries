@@ -3,7 +3,7 @@ import fsp from 'node:fs/promises';
 import path from 'node:path';
 import { parseArgs } from 'node:util';
 
-const SYNTAX = 'pnpm new-query QueryName [QueryDisplayName]';
+const SYNTAX = 'Syntax: pnpm new-query QueryName [QueryDisplayName]';
 
 const getFileTemplates = async () => {
   const queryFilesTemplate = await fsp.readFile(
@@ -20,6 +20,33 @@ const getFileTemplates = async () => {
     templates.push([name, template.match(/```[^\n]+\s*(.*)\s*```/s)![1]]);
   }
   return templates;
+};
+
+const addLineAndSort = (
+  content: string,
+  newLine: string,
+  lineRegex: RegExp,
+) => {
+  const lines = content.match(lineRegex);
+  if (!lines) throw new Error('Wrong lineRegex');
+  const oldLinesContent = lines.join('\n');
+  if (lines.includes(newLine)) return null;
+  lines.push(newLine);
+  lines.sort();
+  const newLinesContent = lines.join('\n');
+  return content.replace(oldLinesContent, newLinesContent);
+};
+
+const getTypesNewLine = async (queryName: string, queryDisplayName: string) => {
+  const content = await fsp.readFile('src/types.ts', 'utf8');
+  const m = content.match(/(  \w+:\s+)(QueryResponse<'[^']+',\s+)[^>]+>;/);
+  if (!m) throw new Error();
+  const [, part1, part2] = m;
+  return [
+    `  ${queryName}:`.padEnd(part1.length),
+    `QueryResponse<'${queryName}',`.padEnd(part2.length),
+    `${queryDisplayName}Data>;`,
+  ].join('');
 };
 
 const main = async () => {
@@ -41,10 +68,7 @@ const main = async () => {
 
   for (const [name, template] of fileTemplates) {
     const filePath = path.join('src', 'queries', queryName, name);
-    if (fs.existsSync(filePath)) {
-      console.log(`= ${filePath}`);
-      continue;
-    }
+    if (fs.existsSync(filePath)) continue;
     await fsp.writeFile(
       filePath,
       template
@@ -54,12 +78,53 @@ const main = async () => {
     console.log(`+ \x1b[32m${filePath}\x1b[0m`);
   }
 
-  // order should be alphabetical
-  // TODO: write schemas to build.ts
-  // TODO: write exports to index.ts
-  // TODO: write query response to types.ts
-  // TODO: write query to the list in README.md
-  // console.log(`* \x1b[33m${filePath}\x1b[0m`); // file changed
+  const writeToFiles = [
+    {
+      filePath: 'scripts/build.ts',
+      newLines: [
+        [
+          `  import('../src/queries/${queryName}/schema.ts'),`,
+          /  import\('\.\.\/src\/queries\/.+\.ts'\),/,
+        ],
+      ],
+    },
+    {
+      filePath: 'index.ts',
+      newLines: [
+        [
+          `export * from './src/queries/${queryName}/query.ts';`,
+          /export \* from '\.\/src\/queries\/.+\/query\.ts';/,
+        ],
+      ],
+    },
+    {
+      filePath: 'src/types.ts',
+      newLines: [
+        [`  ${queryDisplayName}Data,`, /  [A-Za-z]+,/],
+        [
+          await getTypesNewLine(queryName, queryDisplayName),
+          /  \w+:\s+QueryResponse<'[^']+',\s+[^>]+>;/,
+        ],
+      ],
+    },
+    {
+      filePath: 'README.md',
+      newLines: [[`* ${queryName}`, /\* \w+/]],
+    },
+  ] as const;
+
+  for (const { filePath, newLines } of writeToFiles) {
+    const content = await fsp.readFile(filePath, 'utf8');
+    let newContent = content;
+    for (const [newLine, lineRegex] of newLines) {
+      const result = addLineAndSort(newContent, newLine, lineRegex);
+      if (result) newContent = result;
+    }
+    if (content !== newContent) {
+      await fsp.writeFile(filePath, newContent);
+      console.log(`* \x1b[33m${filePath}\x1b[0m`);
+    }
+  }
 };
 
 main();
