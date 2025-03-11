@@ -8,6 +8,10 @@
   ],
   "author": "DmitryScaletta",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DmitryScaletta/twitch-gql-queries.git"
+  },
   "type": "module",
   "main": "index.ts",
   "scripts": {
