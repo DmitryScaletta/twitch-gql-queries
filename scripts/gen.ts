@@ -2,7 +2,7 @@ import fsp from 'node:fs/promises';
 import { type TSchema } from '@sinclair/typebox';
 import { compile } from 'json-schema-to-typescript';
 
-const schemasPromises = [
+const schemaImportsPromises = [
   import('../src/queries/BrowsePage_AllDirectories/schema.ts'),
   import('../src/queries/ChannelShell/schema.ts'),
   import('../src/queries/ClipsActionButtons/schema.ts'),
@@ -33,7 +33,7 @@ const replaceRefsWithIds = (schema: TSchema) => {
   return schema;
 };
 
-const jsonSchemaToTs = (schema: any) =>
+const jsonSchemaToTs = (schema: TSchema) =>
   compile(
     replaceRefsWithIds(structuredClone(schema)),
     '__PLEASE_ADD_AN_ID_TO_THIS_SCHEMA__',
@@ -50,34 +50,39 @@ const jsonSchemaToTs = (schema: any) =>
   );
 
 const main = async () => {
-  const tsPromises: Promise<string>[] = [];
-  const schemas = await Promise.all(schemasPromises);
+  const schemaImports = await Promise.all(schemaImportsPromises);
+  const tsSchemas: TSchema[] = [];
 
-  for (const querySchemas of schemas) {
-    for (const [schemaName, schema] of Object.entries(querySchemas)) {
+  for (const schemas of schemaImports) {
+    for (const [schemaName, schema] of Object.entries(schemas)) {
       if (
         !schemaName.endsWith('Schema') ||
         ['VariablesSchema', 'DataSchema', 'ResponseSchema'].includes(schemaName)
       ) {
         continue;
       }
-      tsPromises.push(jsonSchemaToTs(schema));
+      tsSchemas.push(schema);
     }
-    if ('VariablesSchema' in querySchemas) {
-      tsPromises.push(jsonSchemaToTs(querySchemas.VariablesSchema));
+    if ('VariablesSchema' in schemas) {
+      tsSchemas.push(schemas.VariablesSchema);
     }
-    if ('DataSchema' in querySchemas) {
-      tsPromises.push(jsonSchemaToTs(querySchemas.DataSchema));
+    if ('DataSchema' in schemas) {
+      tsSchemas.push(schemas.DataSchema);
     }
   }
 
-  const ts = await Promise.all(tsPromises);
-  const tsContent = ts
-    .join('\n')
-    // TODO: fix using multiple refs in the same schema
-    .replaceAll('SearchResultsPageChannel1', 'SearchResultsPageChannel');
+  const tsDefs = await Promise.all(tsSchemas.map(jsonSchemaToTs));
+  let ts = tsDefs.join('\n');
 
-  await fsp.writeFile('./src/queries/types.generated.ts', tsContent);
+  // TODO: add better fix
+  // when linking the same schema with another schema multiple times
+  // `json-schema-to-typescript` adds numbers to the end of the schema name
+  for (const schema of tsSchemas) {
+    if (!schema.$id) continue;
+    ts = ts.replaceAll(new RegExp(`(${schema.$id})\\d+`, 'g'), '$1');
+  }
+
+  await fsp.writeFile('./src/queries/types.generated.ts', ts);
 };
 
 main();
