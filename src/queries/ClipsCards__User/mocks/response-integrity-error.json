@@ -1,0 +1,12 @@
+{
+  "errors": [
+    { "message": "failed integrity check", "path": ["user", "clips"] }
+  ],
+  "data": { "user": { "id": "71092938", "clips": null, "__typename": "User" } },
+  "extensions": {
+    "challenge": { "type": "integrity" },
+    "durationMilliseconds": 22,
+    "operationName": "ClipsCards__User",
+    "requestID": "01JP4JGWGRAWD1PB7JAWCQR518"
+  }
+}

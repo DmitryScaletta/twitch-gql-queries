@@ -1,0 +1,19 @@
+{
+  "errors": [
+    { "message": "failed integrity check", "path": ["game", "clips"] }
+  ],
+  "data": {
+    "game": {
+      "id": "509658",
+      "displayName": "Just Chatting",
+      "clips": null,
+      "__typename": "Game"
+    }
+  },
+  "extensions": {
+    "challenge": { "type": "integrity" },
+    "durationMilliseconds": 5,
+    "operationName": "ClipsCards__Game",
+    "requestID": "01JP4JKMPK902G33XJB4YDD9FP"
+  }
+}

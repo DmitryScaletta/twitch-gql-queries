@@ -200,7 +200,7 @@ export interface ClipsCardsGameData {
   game: {
     id: string;
     displayName: string;
-    clips: {
+    clips: null | {
       pageInfo: {
         hasNextPage: boolean;
         __typename: 'PageInfo';
@@ -229,7 +229,7 @@ export interface ClipsCardsUserVariables {
 export interface ClipsCardsUserData {
   user: {
     id: string;
-    clips: {
+    clips: null | {
       pageInfo: {
         hasNextPage: boolean;
         __typename: 'PageInfo';

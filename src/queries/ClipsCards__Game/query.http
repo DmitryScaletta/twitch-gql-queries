@@ -25,3 +25,29 @@ Client-Id: {{$dotenv CLIENT_ID}}
     }
   }
 }
+
+### integrity error
+
+POST https://gql.twitch.tv/gql
+Content-Type: application/json
+Client-Id: {{$dotenv CLIENT_ID}}
+
+{
+  "operationName": "ClipsCards__Game",
+  "variables": {
+    "categorySlug": "just-chatting",
+    "limit": 20,
+    "criteria": {
+      "languages": [],
+      "filter": "LAST_WEEK",
+      "isFeatured": true
+    },
+    "cursor": "MjA="
+  },
+  "extensions": {
+    "persistedQuery": {
+      "version": 1,
+      "sha256Hash": "ed57101f7f38b69456f50413b05e044e505a0bdcad819ad5ee734b9c3b74cf8c"
+    }
+  }
+}

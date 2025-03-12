@@ -14,11 +14,38 @@ describe('ClipsCards__Game', () => {
     ClipsCardsFilterSchema,
   ]);
 
-  test('real request', async () => {
+  test('real request: only required variables', async () => {
     const [queryResponse] = await gqlRequest([
       getQueryClipsCardsGame({
         categorySlug: 'just-chatting',
-        limit: 30,
+        limit: 20,
+      }),
+    ]);
+    validate(queryResponse);
+  });
+
+  test('real request: all variables', async () => {
+    const [queryResponse] = await gqlRequest([
+      getQueryClipsCardsGame({
+        categorySlug: 'just-chatting',
+        limit: 20,
+        criteria: {
+          languages: ['EN'],
+          filter: 'LAST_WEEK',
+          isFeatured: true,
+        },
+        cursor: null,
+      }),
+    ]);
+    validate(queryResponse);
+  });
+
+  test('real request: integrity error', async () => {
+    const [queryResponse] = await gqlRequest([
+      getQueryClipsCardsGame({
+        categorySlug: 'just-chatting',
+        limit: 20,
+        cursor: 'MjA=',
       }),
     ]);
     validate(queryResponse);

@@ -24,3 +24,28 @@ Client-Id: {{$dotenv CLIENT_ID}}
     }
   }
 }
+
+### integrity error
+
+POST https://gql.twitch.tv/gql
+Content-Type: application/json
+Client-Id: {{$dotenv CLIENT_ID}}
+
+{
+  "operationName": "ClipsCards__User",
+  "variables": {
+    "login": "xqc",
+    "limit": 20,
+    "criteria": {
+      "filter": "LAST_WEEK",
+      "isFeatured": false
+    },
+    "cursor": "MjA="
+  },
+  "extensions": {
+    "persistedQuery": {
+      "version": 1,
+      "sha256Hash": "af4bd82dcacdda3d693ed274e29b2c97b4990de2b1e683994b16ea26f3abd1af"
+    }
+  }
+}

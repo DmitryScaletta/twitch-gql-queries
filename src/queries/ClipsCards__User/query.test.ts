@@ -14,11 +14,37 @@ describe('ClipsCards__User', () => {
     ClipsCardsFilterSchema,
   ]);
 
-  test('real request', async () => {
+  test('real request: only required variables', async () => {
     const [queryResponse] = await gqlRequest([
       getQueryClipsCardsUser({
         login: 'xqc',
-        limit: 30,
+        limit: 20,
+      }),
+    ]);
+    validate(queryResponse);
+  });
+
+  test('real request: all variables', async () => {
+    const [queryResponse] = await gqlRequest([
+      getQueryClipsCardsUser({
+        login: 'xqc',
+        limit: 20,
+        criteria: {
+          filter: 'LAST_WEEK',
+          isFeatured: false,
+        },
+        cursor: null,
+      }),
+    ]);
+    validate(queryResponse);
+  });
+
+  test('real request: integrity error', async () => {
+    const [queryResponse] = await gqlRequest([
+      getQueryClipsCardsUser({
+        login: 'xqc',
+        limit: 20,
+        cursor: 'MjA=',
       }),
     ]);
     validate(queryResponse);

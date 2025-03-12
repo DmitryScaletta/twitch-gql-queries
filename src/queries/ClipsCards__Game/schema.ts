@@ -38,29 +38,32 @@ export const DataSchema = T.Object(
       {
         id: T.String(),
         displayName: T.String(),
-        clips: T.Object(
-          {
-            pageInfo: T.Object(
-              {
-                hasNextPage: T.Boolean(),
-                __typename: T.Literal('PageInfo'),
-              },
-              { additionalProperties: false },
-            ),
-            edges: T.Array(
-              T.Object(
+        clips: T.Union([
+          T.Null(),
+          T.Object(
+            {
+              pageInfo: T.Object(
                 {
-                  cursor: T.Union([T.Null(), T.String()]),
-                  node: LegacyRef(ClipsCardsClipSchema),
-                  __typename: T.Literal('ClipEdge'),
+                  hasNextPage: T.Boolean(),
+                  __typename: T.Literal('PageInfo'),
                 },
                 { additionalProperties: false },
               ),
-            ),
-            __typename: T.Literal('ClipConnection'),
-          },
-          { additionalProperties: false },
-        ),
+              edges: T.Array(
+                T.Object(
+                  {
+                    cursor: T.Union([T.Null(), T.String()]),
+                    node: LegacyRef(ClipsCardsClipSchema),
+                    __typename: T.Literal('ClipEdge'),
+                  },
+                  { additionalProperties: false },
+                ),
+              ),
+              __typename: T.Literal('ClipConnection'),
+            },
+            { additionalProperties: false },
+          ),
+        ]),
         __typename: T.Literal('Game'),
       },
       { additionalProperties: false },
@@ -72,4 +75,4 @@ export const DataSchema = T.Object(
   },
 );
 
-export const ResponseSchema = getResponseSchema(name, DataSchema);
+export const ResponseSchema = getResponseSchema(name, DataSchema, true);
