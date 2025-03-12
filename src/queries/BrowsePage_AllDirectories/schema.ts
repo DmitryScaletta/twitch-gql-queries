@@ -79,30 +79,33 @@ export const GameSchema = T.Object(
 
 export const DataSchema = T.Object(
   {
-    directoriesWithTags: T.Object(
-      {
-        edges: T.Array(
-          T.Object(
+    directoriesWithTags: T.Union([
+      T.Null(),
+      T.Object(
+        {
+          edges: T.Array(
+            T.Object(
+              {
+                cursor: T.String(),
+                trackingID: T.Union([T.Null(), T.String()]),
+                node: LegacyRef(GameSchema),
+                __typename: T.Literal('GameEdge'),
+              },
+              { additionalProperties: false },
+            ),
+          ),
+          pageInfo: T.Object(
             {
-              cursor: T.String(),
-              trackingID: T.String(),
-              node: LegacyRef(GameSchema),
-              __typename: T.Literal('GameEdge'),
+              hasNextPage: T.Boolean(),
+              __typename: T.Literal('PageInfo'),
             },
             { additionalProperties: false },
           ),
-        ),
-        pageInfo: T.Object(
-          {
-            hasNextPage: T.Boolean(),
-            __typename: T.Literal('PageInfo'),
-          },
-          { additionalProperties: false },
-        ),
-        __typename: T.Literal('GameConnection'),
-      },
-      { additionalProperties: false },
-    ),
+          __typename: T.Literal('GameConnection'),
+        },
+        { additionalProperties: false },
+      ),
+    ]),
   },
   {
     $id: `${displayName}Data`,
@@ -110,4 +113,4 @@ export const DataSchema = T.Object(
   },
 );
 
-export const ResponseSchema = getResponseSchema(name, DataSchema);
+export const ResponseSchema = getResponseSchema(name, DataSchema, true);

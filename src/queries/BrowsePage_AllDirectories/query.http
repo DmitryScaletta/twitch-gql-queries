@@ -10,7 +10,7 @@ Client-Id: {{$dotenv CLIENT_ID}}
     "cursor": null,
     "limit": 100,
     "options": {
-      "sort": "RELEVANCE",
+      "sort": "RELEVANCE"
     }
   },
   "extensions": {
@@ -38,6 +38,29 @@ Client-Id: {{$dotenv CLIENT_ID}}
       },
       "sort": "RELEVANCE",
       "tags": ["4d1eaa36-f750-4862-b7e9-d0a13970d535"]
+    }
+  },
+  "extensions": {
+    "persistedQuery": {
+      "version": 1,
+      "sha256Hash": "2f67f71ba89f3c0ed26a141ec00da1defecb2303595f5cda4298169549783d9e"
+    }
+  }
+}
+
+### integrity error
+
+POST https://gql.twitch.tv/gql
+Content-Type: application/json
+Client-Id: {{$dotenv CLIENT_ID}}
+
+{
+  "operationName": "BrowsePage_AllDirectories",
+  "variables": {
+    "cursor": "eyJzIjoxMDAsImQiOmZhbHNlLCJ0Ijp0cnVlfQ==",
+    "limit": 100,
+    "options": {
+      "sort": "RELEVANCE"
     }
   },
   "extensions": {

@@ -1,0 +1,12 @@
+{
+  "errors": [
+    { "message": "failed integrity check", "path": ["directoriesWithTags"] }
+  ],
+  "data": { "directoriesWithTags": null },
+  "extensions": {
+    "challenge": { "type": "integrity" },
+    "durationMilliseconds": 2,
+    "operationName": "BrowsePage_AllDirectories",
+    "requestID": "01JP4KZVNY2X7BVAC2YD8AEJF2"
+  }
+}

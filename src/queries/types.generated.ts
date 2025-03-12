@@ -31,10 +31,10 @@ export interface BrowsePageAllDirectoriesVariables {
 }
 
 export interface BrowsePageAllDirectoriesData {
-  directoriesWithTags: {
+  directoriesWithTags: null | {
     edges: {
       cursor: string;
-      trackingID: string;
+      trackingID: null | string;
       node: BrowsePageGame;
       __typename: 'GameEdge';
     }[];
