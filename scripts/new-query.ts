@@ -23,10 +23,11 @@ const getFileTemplates = async () => {
 };
 
 const addLineAndSort = (
-  content: string,
+  _content: string,
   newLine: string,
   lineRegex: RegExp,
 ) => {
+  const content = _content.replaceAll('\r', '');
   const lines = content.match(lineRegex);
   if (!lines) throw new Error('Wrong lineRegex');
   const oldLinesContent = lines.join('\n');
@@ -72,7 +73,7 @@ const main = async () => {
       [
         [
           `  '../src/queries/${queryName}/schema.ts',`,
-          /  '\.\.\/src\/queries\/.+\.ts',/,
+          /  '\.\.\/src\/queries\/.+\.ts',/g,
         ],
       ],
     ],
@@ -81,11 +82,11 @@ const main = async () => {
       [
         [
           `export * from './src/queries/${queryName}/query.ts';`,
-          /export \* from '\.\/src\/queries\/.+\/query\.ts';/,
+          /export \* from '\.\/src\/queries\/.+\/query\.ts';/g,
         ],
       ],
     ],
-    ['README.md', [[`* ${queryName}`, /\* \w+/]]],
+    ['README.md', [[`* ${queryName}`, /\* \w+/g]]],
   ] as const;
 
   for (const [filePath, newLines] of writeToFiles) {
