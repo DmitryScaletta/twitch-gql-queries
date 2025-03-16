@@ -37,18 +37,6 @@ const addLineAndSort = (
   return content.replace(oldLinesContent, newLinesContent);
 };
 
-const getTypesNewLine = async (queryName: string, queryDisplayName: string) => {
-  const content = await fsp.readFile('src/types.ts', 'utf8');
-  const m = content.match(/(  \w+:\s+)(QueryResponse<'[^']+',\s+)[^>]+>;/);
-  if (!m) throw new Error();
-  const [, part1, part2] = m;
-  return [
-    `  ${queryName}:`.padEnd(part1.length),
-    `QueryResponse<'${queryName}',`.padEnd(part2.length),
-    `${queryDisplayName}Data>;`,
-  ].join('');
-};
-
 const main = async () => {
   const args = parseArgs({
     args: process.argv.slice(2),
@@ -79,41 +67,28 @@ const main = async () => {
   }
 
   const writeToFiles = [
-    {
-      filePath: 'scripts/build.ts',
-      newLines: [
+    [
+      'scripts/gen.ts',
+      [
         [
-          `  import('../src/queries/${queryName}/schema.ts'),`,
-          /  import\('\.\.\/src\/queries\/.+\.ts'\),/,
+          `  '../src/queries/${queryName}/schema.ts',`,
+          /  '\.\.\/src\/queries\/.+\.ts',/,
         ],
       ],
-    },
-    {
-      filePath: 'index.ts',
-      newLines: [
+    ],
+    [
+      'index.ts',
+      [
         [
           `export * from './src/queries/${queryName}/query.ts';`,
           /export \* from '\.\/src\/queries\/.+\/query\.ts';/,
         ],
       ],
-    },
-    {
-      filePath: 'src/types.ts',
-      newLines: [
-        [`  ${queryDisplayName}Data,`, /  [A-Za-z]+,/],
-        [
-          await getTypesNewLine(queryName, queryDisplayName),
-          /  \w+:\s+QueryResponse<'[^']+',\s+[^>]+>;/,
-        ],
-      ],
-    },
-    {
-      filePath: 'README.md',
-      newLines: [[`* ${queryName}`, /\* \w+/]],
-    },
+    ],
+    ['README.md', [[`* ${queryName}`, /\* \w+/]]],
   ] as const;
 
-  for (const { filePath, newLines } of writeToFiles) {
+  for (const [filePath, newLines] of writeToFiles) {
     const content = await fsp.readFile(filePath, 'utf8');
     let newContent = content;
     for (const [newLine, lineRegex] of newLines) {
