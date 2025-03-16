@@ -69,15 +69,6 @@ const main = async () => {
 
   const writeToFiles = [
     [
-      'scripts/gen.ts',
-      [
-        [
-          `  '../src/queries/${queryName}/schema.ts',`,
-          /  '\.\.\/src\/queries\/.+\.ts',/g,
-        ],
-      ],
-    ],
-    [
       'index.ts',
       [
         [
