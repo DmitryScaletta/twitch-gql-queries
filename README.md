@@ -25,6 +25,7 @@ import {
   getQueryClipsCardsUser,
   getQueryStreamMetadata,
   getQueryFfzBroadcastId,
+  getQueryUseViewCount,
   gqlRequest,
 } from 'twitch-gql-queries';
 
@@ -47,39 +48,15 @@ console.log({
   ffzBroadcastIdResponse,
   clipsCardsUserResponse,
 });
+
+const channels = await gqlRequest(
+  ['lirik', 'forsen'].map((channelLogin) =>
+    getQueryUseViewCount({ channelLogin }),
+  ),
+);
+
+console.log(channels);
 ```
-
-<details>
-  <summary>If you want to use custom fetcher</summary>
-
-```ts
-import type { getQueryStreamMetadata, Query, QueryMapping } from 'twitch-gql-queries';
-
-export const gqlRequest = async <const T extends Query[]>(
-  queries: T,
-  requestInit?: RequestInit,
-): Promise<QueryMapping<T>> => {
-  const res = await fetch('https://gql.twitch.tv/gql', {
-    method: 'POST',
-    body: JSON.stringify(queries),
-    headers: {
-      'Client-Id': process.env.CLIENT_ID,
-      ...requestInit?.headers,
-    },
-    ...requestInit,
-  });
-  if (!res.ok) throw new Error();
-  return res.json();
-};
-
-const [streamMetadataResponse] = await gqlRequest([
-  getQueryStreamMetadata({ channelLogin: 'forsen' }),
-]);
-
-console.log(streamMetadataResponse);
-```
-
-</details>
 
 ## Available queries
 
