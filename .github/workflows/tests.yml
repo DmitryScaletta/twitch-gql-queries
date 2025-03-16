@@ -1,0 +1,39 @@
+name: Tests
+
+on:
+  push:
+    paths-ignore:
+      - 'README.md'
+      - '.gitignore'
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  tests:
+    name: Tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - name: Use Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: 'pnpm'
+      - name: Run tests
+        run: pnpm test
+
+  type-tests:
+    name: Type Tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - name: Use Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: 'pnpm'
+      - name: Run type tests
+        run: pnpm test:types
