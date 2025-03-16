@@ -1,0 +1,18 @@
+{
+  "data": {
+    "channel": {
+      "id": "71092938",
+      "pinnedChatMessages": {
+        "edges": [],
+        "pageInfo": { "hasNextPage": false, "__typename": "PageInfo" },
+        "__typename": "PinnedChatMessageConnection"
+      },
+      "__typename": "Channel"
+    }
+  },
+  "extensions": {
+    "durationMilliseconds": 27,
+    "operationName": "GetPinnedChat",
+    "requestID": "01JPG1Z0ACW1YN84AXVNDPRWWJ"
+  }
+}

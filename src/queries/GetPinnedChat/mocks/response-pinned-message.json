@@ -1,0 +1,85 @@
+{
+  "data": {
+    "channel": {
+      "id": "26921830",
+      "pinnedChatMessages": {
+        "edges": [
+          {
+            "node": {
+              "id": "9fe735a9-9de4-4989-a0d2-c52ac4bacb68",
+              "type": "MOD",
+              "pinnedMessage": {
+                "id": "13c3dbfb-1376-4715-a3d0-8c0c8ff2931d",
+                "content": {
+                  "text": "DS2 Randomizer by Chainsboyo https://www.nexusmods.com/darksouls2/mods/1317",
+                  "fragments": [
+                    {
+                      "content": null,
+                      "text": "DS2 Randomizer by Chainsboyo ",
+                      "__typename": "MessageFragment"
+                    },
+                    {
+                      "content": null,
+                      "text": "https://www.nexusmods.com/darksouls2/mods/1317",
+                      "__typename": "MessageFragment"
+                    }
+                  ],
+                  "__typename": "MessageContent"
+                },
+                "parentMessage": null,
+                "threadParentMessage": null,
+                "sentAt": "2025-03-16T14:59:20.673964564Z",
+                "sender": {
+                  "id": "100135110",
+                  "chatColor": "#5B99FF",
+                  "displayName": "StreamElements",
+                  "displayBadges": [
+                    {
+                      "id": "bW9kZXJhdG9yOzE7",
+                      "setID": "moderator",
+                      "version": "1",
+                      "__typename": "Badge"
+                    },
+                    {
+                      "id": "c3Vic2NyaWJlcjs2NjsyNjkyMTgzMA==",
+                      "setID": "subscriber",
+                      "version": "66",
+                      "__typename": "Badge"
+                    },
+                    {
+                      "id": "cGFydG5lcjsxOw==",
+                      "setID": "partner",
+                      "version": "1",
+                      "__typename": "Badge"
+                    }
+                  ],
+                  "__typename": "User"
+                },
+                "__typename": "Message"
+              },
+              "startsAt": "2025-03-16T14:59:25Z",
+              "updatedAt": "2025-03-16T14:59:27Z",
+              "endsAt": null,
+              "pinnedBy": {
+                "id": "40179359",
+                "displayName": "DandorXCIX",
+                "__typename": "User"
+              },
+              "__typename": "PinnedChatMessage"
+            },
+            "cursor": "",
+            "__typename": "PinnedChatMessageEdge"
+          }
+        ],
+        "pageInfo": { "hasNextPage": false, "__typename": "PageInfo" },
+        "__typename": "PinnedChatMessageConnection"
+      },
+      "__typename": "Channel"
+    }
+  },
+  "extensions": {
+    "durationMilliseconds": 75,
+    "operationName": "GetPinnedChat",
+    "requestID": "01JPG2537MSP3RKBXNFVB71329"
+  }
+}

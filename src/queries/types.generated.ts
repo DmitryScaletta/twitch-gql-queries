@@ -48,56 +48,6 @@ export interface BrowsePageAllDirectoriesData {
   };
 }
 
-export interface GlobalBadgesBadge {
-  id: string;
-  setID: string;
-  version: string;
-  title: string;
-  image1x: string;
-  image2x: string;
-  image4x: string;
-  clickAction: null | 'VISIT_URL' | 'SUBSCRIBE' | 'GET_TURBO';
-  clickURL: null | string;
-  __typename: 'Badge';
-}
-
-export interface GlobalBadgesData {
-  badges: GlobalBadgesBadge[];
-}
-
-export interface GetUserIdVariables {
-  login: string;
-  /**
-   * ACTIVE – only active users
-   * ALL – all users, including suspended
-   */
-  lookupType: 'ACTIVE' | 'ALL';
-}
-
-export interface GetUserIdData {
-  user: null | {
-    id: string;
-    __typename: 'User';
-  };
-}
-
-export interface VideoPreviewOverlayVariables {
-  login: string;
-}
-
-export interface VideoPreviewOverlayData {
-  user: null | {
-    id: string;
-    stream: null | {
-      id: string;
-      previewImageURL: string;
-      restrictionType: unknown;
-      __typename: 'Stream';
-    };
-    __typename: 'User';
-  };
-}
-
 export interface ChannelRootUser {
   id: string;
   description: null | string;
@@ -437,6 +387,107 @@ export interface FfzBroadcastIdVariables {
 
 export interface FfzBroadcastIdData {
   user: null | FfzBroadcastIdUser;
+}
+
+export interface GetPinnedChatMessage {
+  id: string;
+  content: {
+    text: string;
+    fragments: {
+      content: unknown;
+      text: string;
+      __typename: 'MessageFragment';
+    }[];
+    __typename: 'MessageContent';
+  };
+  parentMessage: unknown;
+  threadParentMessage: unknown;
+  sentAt: string;
+  sender: {
+    id: string;
+    chatColor: null | string;
+    displayName: string;
+    displayBadges: {
+      id: string;
+      setID: string;
+      version: string;
+      __typename: 'Badge';
+    }[];
+    __typename: 'User';
+  };
+  __typename: 'Message';
+}
+
+export interface GetPinnedChatPinnedChatMessage {
+  id: string;
+  type: 'MOD' | string;
+  pinnedMessage: GetPinnedChatMessage;
+  startsAt: string;
+  updatedAt: string;
+  endsAt: null | string;
+  pinnedBy: {
+    id: string;
+    displayName: string;
+    __typename: 'User';
+  };
+  __typename: 'PinnedChatMessage';
+}
+
+export interface GetPinnedChatVariables {
+  channelID: string;
+  count: number;
+}
+
+export interface GetPinnedChatData {
+  channel: null | {
+    id: string;
+    pinnedChatMessages: null | {
+      edges: {
+        node: GetPinnedChatPinnedChatMessage;
+        cursor: null | string;
+        __typename: 'PinnedChatMessageEdge';
+      }[];
+      pageInfo: {
+        hasNextPage: boolean;
+        __typename: 'PageInfo';
+      };
+      __typename: 'PinnedChatMessageConnection';
+    };
+    __typename: 'Channel';
+  };
+}
+
+export interface GetUserIdVariables {
+  login: string;
+  /**
+   * ACTIVE – only active users
+   * ALL – all users, including suspended
+   */
+  lookupType: 'ACTIVE' | 'ALL';
+}
+
+export interface GetUserIdData {
+  user: null | {
+    id: string;
+    __typename: 'User';
+  };
+}
+
+export interface GlobalBadgesBadge {
+  id: string;
+  setID: string;
+  version: string;
+  title: string;
+  image1x: string;
+  image2x: string;
+  image4x: string;
+  clickAction: null | 'VISIT_URL' | 'SUBSCRIBE' | 'GET_TURBO';
+  clickURL: null | string;
+  __typename: 'Badge';
+}
+
+export interface GlobalBadgesData {
+  badges: GlobalBadgesBadge[];
 }
 
 export interface SearchResultsPageChannel {
@@ -848,10 +899,24 @@ export interface VideoAccessTokenClipData {
   };
 }
 
+export interface VideoPreviewOverlayVariables {
+  login: string;
+}
+
+export interface VideoPreviewOverlayData {
+  user: null | {
+    id: string;
+    stream: null | {
+      id: string;
+      previewImageURL: string;
+      restrictionType: unknown;
+      __typename: 'Stream';
+    };
+    __typename: 'User';
+  };
+}
+
 export type BrowsePageAllDirectoriesResponse = QueryResponse<'BrowsePage_AllDirectories', BrowsePageAllDirectoriesData>;
-export type GlobalBadgesResponse = QueryResponse<'GlobalBadges', GlobalBadgesData>;
-export type GetUserIdResponse = QueryResponse<'GetUserID', GetUserIdData>;
-export type VideoPreviewOverlayResponse = QueryResponse<'VideoPreviewOverlay', VideoPreviewOverlayData>;
 export type ChannelRootAboutPanelResponse = QueryResponse<'ChannelRoot_AboutPanel', ChannelRootAboutPanelData>;
 export type ChannelShellResponse = QueryResponse<'ChannelShell', ChannelShellData>;
 export type ClipsActionButtonsResponse = QueryResponse<'ClipsActionButtons', ClipsActionButtonsData>;
@@ -859,18 +924,19 @@ export type ClipsCardsGameResponse = QueryResponse<'ClipsCards__Game', ClipsCard
 export type ClipsCardsUserResponse = QueryResponse<'ClipsCards__User', ClipsCardsUserData>;
 export type ClipsDownloadButtonResponse = QueryResponse<'ClipsDownloadButton', ClipsDownloadButtonData>;
 export type FfzBroadcastIdResponse = QueryResponse<'FFZ_BroadcastID', FfzBroadcastIdData>;
+export type GetPinnedChatResponse = QueryResponse<'GetPinnedChat', GetPinnedChatData>;
+export type GetUserIdResponse = QueryResponse<'GetUserID', GetUserIdData>;
+export type GlobalBadgesResponse = QueryResponse<'GlobalBadges', GlobalBadgesData>;
 export type SearchResultsPageSearchResultsResponse = QueryResponse<'SearchResultsPage_SearchResults', SearchResultsPageSearchResultsData>;
 export type SearchTraySearchSuggestionsResponse = QueryResponse<'SearchTray_SearchSuggestions', SearchTraySearchSuggestionsData>;
 export type StreamMetadataResponse = QueryResponse<'StreamMetadata', StreamMetadataData>;
 export type UseLiveResponse = QueryResponse<'UseLive', UseLiveData>;
 export type UseViewCountResponse = QueryResponse<'UseViewCount', UseViewCountData>;
 export type VideoAccessTokenClipResponse = QueryResponse<'VideoAccessToken_Clip', VideoAccessTokenClipData>;
+export type VideoPreviewOverlayResponse = QueryResponse<'VideoPreviewOverlay', VideoPreviewOverlayData>;
 
 export type QueryResponseMap = {
   BrowsePage_AllDirectories: BrowsePageAllDirectoriesResponse;
-  GlobalBadges: GlobalBadgesResponse;
-  GetUserID: GetUserIdResponse;
-  VideoPreviewOverlay: VideoPreviewOverlayResponse;
   ChannelRoot_AboutPanel: ChannelRootAboutPanelResponse;
   ChannelShell: ChannelShellResponse;
   ClipsActionButtons: ClipsActionButtonsResponse;
@@ -878,10 +944,14 @@ export type QueryResponseMap = {
   ClipsCards__User: ClipsCardsUserResponse;
   ClipsDownloadButton: ClipsDownloadButtonResponse;
   FFZ_BroadcastID: FfzBroadcastIdResponse;
+  GetPinnedChat: GetPinnedChatResponse;
+  GetUserID: GetUserIdResponse;
+  GlobalBadges: GlobalBadgesResponse;
   SearchResultsPage_SearchResults: SearchResultsPageSearchResultsResponse;
   SearchTray_SearchSuggestions: SearchTraySearchSuggestionsResponse;
   StreamMetadata: StreamMetadataResponse;
   UseLive: UseLiveResponse;
   UseViewCount: UseViewCountResponse;
   VideoAccessToken_Clip: VideoAccessTokenClipResponse;
+  VideoPreviewOverlay: VideoPreviewOverlayResponse;
 };

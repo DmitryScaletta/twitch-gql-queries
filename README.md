@@ -61,9 +61,6 @@ console.log(channels);
 ## Available queries
 
 * BrowsePage_AllDirectories
-* GlobalBadges
-* GetUserID
-* VideoPreviewOverlay
 * ChannelRoot_AboutPanel
 * ChannelShell
 * ClipsActionButtons
@@ -71,12 +68,16 @@ console.log(channels);
 * ClipsCards__User
 * ClipsDownloadButton
 * FFZ_BroadcastID
+* GetPinnedChat
+* GetUserID
+* GlobalBadges
 * SearchResultsPage_SearchResults
 * SearchTray_SearchSuggestions
 * StreamMetadata
 * UseLive
 * UseViewCount
 * VideoAccessToken_Clip
+* VideoPreviewOverlay
 
 ## Adding new query
 

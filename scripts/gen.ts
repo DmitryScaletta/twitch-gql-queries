@@ -4,9 +4,6 @@ import { compile } from 'json-schema-to-typescript';
 
 const schemaPaths = [
   '../src/queries/BrowsePage_AllDirectories/schema.ts',
-  '../src/queries/GlobalBadges/schema.ts',
-  '../src/queries/GetUserID/schema.ts',
-  '../src/queries/VideoPreviewOverlay/schema.ts',
   '../src/queries/ChannelRoot_AboutPanel/schema.ts',
   '../src/queries/ChannelShell/schema.ts',
   '../src/queries/ClipsActionButtons/schema.ts',
@@ -15,12 +12,16 @@ const schemaPaths = [
   '../src/queries/ClipsCards__User/schema.ts',
   '../src/queries/ClipsDownloadButton/schema.ts',
   '../src/queries/FFZ_BroadcastID/schema.ts',
+  '../src/queries/GetPinnedChat/schema.ts',
+  '../src/queries/GetUserID/schema.ts',
+  '../src/queries/GlobalBadges/schema.ts',
   '../src/queries/SearchResultsPage_SearchResults/schema.ts',
   '../src/queries/SearchTray_SearchSuggestions/schema.ts',
   '../src/queries/StreamMetadata/schema.ts',
   '../src/queries/UseLive/schema.ts',
   '../src/queries/UseViewCount/schema.ts',
   '../src/queries/VideoAccessToken_Clip/schema.ts',
+  '../src/queries/VideoPreviewOverlay/schema.ts',
 ];
 
 const replaceRefsWithIds = (schema: TSchema) => {
