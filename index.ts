@@ -2,6 +2,7 @@ export * from './src/gqlRequest.ts';
 export * from './src/queries/types.generated.ts';
 
 export * from './src/queries/BrowsePage_AllDirectories/query.ts';
+export * from './src/queries/GetUserID/query.ts';
 export * from './src/queries/VideoPreviewOverlay/query.ts';
 export * from './src/queries/ChannelRoot_AboutPanel/query.ts';
 export * from './src/queries/ChannelShell/query.ts';

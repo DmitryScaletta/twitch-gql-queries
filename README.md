@@ -61,6 +61,7 @@ console.log(channels);
 ## Available queries
 
 * BrowsePage_AllDirectories
+* GetUserID
 * VideoPreviewOverlay
 * ChannelRoot_AboutPanel
 * ChannelShell

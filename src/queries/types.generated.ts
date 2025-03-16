@@ -48,6 +48,22 @@ export interface BrowsePageAllDirectoriesData {
   };
 }
 
+export interface GetUserIdVariables {
+  login: string;
+  /**
+   * ACTIVE – only active users
+   * ALL – all users, including suspended
+   */
+  lookupType: 'ACTIVE' | 'ALL';
+}
+
+export interface GetUserIdData {
+  user: null | {
+    id: string;
+    __typename: 'User';
+  };
+}
+
 export interface VideoPreviewOverlayVariables {
   login: string;
 }
@@ -816,6 +832,7 @@ export interface VideoAccessTokenClipData {
 }
 
 export type BrowsePageAllDirectoriesResponse = QueryResponse<'BrowsePage_AllDirectories', BrowsePageAllDirectoriesData>;
+export type GetUserIdResponse = QueryResponse<'GetUserID', GetUserIdData>;
 export type VideoPreviewOverlayResponse = QueryResponse<'VideoPreviewOverlay', VideoPreviewOverlayData>;
 export type ChannelRootAboutPanelResponse = QueryResponse<'ChannelRoot_AboutPanel', ChannelRootAboutPanelData>;
 export type ChannelShellResponse = QueryResponse<'ChannelShell', ChannelShellData>;
@@ -833,6 +850,7 @@ export type VideoAccessTokenClipResponse = QueryResponse<'VideoAccessToken_Clip'
 
 export type QueryResponseMap = {
   BrowsePage_AllDirectories: BrowsePageAllDirectoriesResponse;
+  GetUserID: GetUserIdResponse;
   VideoPreviewOverlay: VideoPreviewOverlayResponse;
   ChannelRoot_AboutPanel: ChannelRootAboutPanelResponse;
   ChannelShell: ChannelShellResponse;

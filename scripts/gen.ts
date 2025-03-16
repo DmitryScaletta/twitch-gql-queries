@@ -4,6 +4,7 @@ import { compile } from 'json-schema-to-typescript';
 
 const schemaPaths = [
   '../src/queries/BrowsePage_AllDirectories/schema.ts',
+  '../src/queries/GetUserID/schema.ts',
   '../src/queries/VideoPreviewOverlay/schema.ts',
   '../src/queries/ChannelRoot_AboutPanel/schema.ts',
   '../src/queries/ChannelShell/schema.ts',
