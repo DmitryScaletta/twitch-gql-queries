@@ -24,7 +24,7 @@ export const getQuery%QUERY_DISPLAY_NAME% = (
 
 ```ts
 import { describe, test } from 'node:test';
-import { gqlRequest } from '../../main.ts';
+import { gqlRequest } from '../../gqlRequest.ts';
 import { createValidate } from '../testHelpers.ts';
 import { getQuery%QUERY_DISPLAY_NAME% } from './query.ts';
 import { ResponseSchema } from './schema.ts';
