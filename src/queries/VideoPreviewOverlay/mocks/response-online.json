@@ -1,0 +1,19 @@
+{
+  "data": {
+    "user": {
+      "id": "23161357",
+      "stream": {
+        "id": "317283027449",
+        "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_lirik-1280x720.jpg",
+        "restrictionType": null,
+        "__typename": "Stream"
+      },
+      "__typename": "User"
+    }
+  },
+  "extensions": {
+    "durationMilliseconds": 37,
+    "operationName": "VideoPreviewOverlay",
+    "requestID": "01JPFY34C4P3MMJKP3KTD5CRMG"
+  }
+}

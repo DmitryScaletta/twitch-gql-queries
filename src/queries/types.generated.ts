@@ -48,6 +48,23 @@ export interface BrowsePageAllDirectoriesData {
   };
 }
 
+export interface VideoPreviewOverlayVariables {
+  login: string;
+}
+
+export interface VideoPreviewOverlayData {
+  user: null | {
+    id: string;
+    stream: null | {
+      id: string;
+      previewImageURL: string;
+      restrictionType: unknown;
+      __typename: 'Stream';
+    };
+    __typename: 'User';
+  };
+}
+
 export interface ChannelRootUser {
   id: string;
   description: null | string;
@@ -799,6 +816,7 @@ export interface VideoAccessTokenClipData {
 }
 
 export type BrowsePageAllDirectoriesResponse = QueryResponse<'BrowsePage_AllDirectories', BrowsePageAllDirectoriesData>;
+export type VideoPreviewOverlayResponse = QueryResponse<'VideoPreviewOverlay', VideoPreviewOverlayData>;
 export type ChannelRootAboutPanelResponse = QueryResponse<'ChannelRoot_AboutPanel', ChannelRootAboutPanelData>;
 export type ChannelShellResponse = QueryResponse<'ChannelShell', ChannelShellData>;
 export type ClipsActionButtonsResponse = QueryResponse<'ClipsActionButtons', ClipsActionButtonsData>;
@@ -815,6 +833,7 @@ export type VideoAccessTokenClipResponse = QueryResponse<'VideoAccessToken_Clip'
 
 export type QueryResponseMap = {
   BrowsePage_AllDirectories: BrowsePageAllDirectoriesResponse;
+  VideoPreviewOverlay: VideoPreviewOverlayResponse;
   ChannelRoot_AboutPanel: ChannelRootAboutPanelResponse;
   ChannelShell: ChannelShellResponse;
   ClipsActionButtons: ClipsActionButtonsResponse;

@@ -61,6 +61,7 @@ console.log(channels);
 ## Available queries
 
 * BrowsePage_AllDirectories
+* VideoPreviewOverlay
 * ChannelRoot_AboutPanel
 * ChannelShell
 * ClipsActionButtons

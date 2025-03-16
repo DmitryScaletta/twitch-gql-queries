@@ -1,0 +1,10 @@
+{
+  "data": {
+    "user": { "id": "71092938", "stream": null, "__typename": "User" }
+  },
+  "extensions": {
+    "durationMilliseconds": 40,
+    "operationName": "VideoPreviewOverlay",
+    "requestID": "01JPFY1WFQGYFZHA2V22JZFTRG"
+  }
+}

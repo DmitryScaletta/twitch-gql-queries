@@ -1,0 +1,37 @@
+### VideoPreviewOverlay
+
+POST https://gql.twitch.tv/gql
+Content-Type: application/json
+Client-Id: {{$dotenv CLIENT_ID}}
+
+{
+  "operationName": "VideoPreviewOverlay",
+  "variables": {
+    "login": "lirik"
+  },
+  "extensions": {
+    "persistedQuery": {
+      "version": 1,
+      "sha256Hash": "9515480dee68a77e667cb19de634739d33f243572b007e98e67184b1a5d8369f"
+    }
+  }
+}
+
+### not exists
+
+POST https://gql.twitch.tv/gql
+Content-Type: application/json
+Client-Id: {{$dotenv CLIENT_ID}}
+
+{
+  "operationName": "VideoPreviewOverlay",
+  "variables": {
+    "login": "user-not-exists"
+  },
+  "extensions": {
+    "persistedQuery": {
+      "version": 1,
+      "sha256Hash": "9515480dee68a77e667cb19de634739d33f243572b007e98e67184b1a5d8369f"
+    }
+  }
+}
