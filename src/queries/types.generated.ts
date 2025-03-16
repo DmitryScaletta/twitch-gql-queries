@@ -48,6 +48,23 @@ export interface BrowsePageAllDirectoriesData {
   };
 }
 
+export interface GlobalBadgesBadge {
+  id: string;
+  setID: string;
+  version: string;
+  title: string;
+  image1x: string;
+  image2x: string;
+  image4x: string;
+  clickAction: null | 'VISIT_URL' | 'SUBSCRIBE' | 'GET_TURBO';
+  clickURL: null | string;
+  __typename: 'Badge';
+}
+
+export interface GlobalBadgesData {
+  badges: GlobalBadgesBadge[];
+}
+
 export interface GetUserIdVariables {
   login: string;
   /**
@@ -832,6 +849,7 @@ export interface VideoAccessTokenClipData {
 }
 
 export type BrowsePageAllDirectoriesResponse = QueryResponse<'BrowsePage_AllDirectories', BrowsePageAllDirectoriesData>;
+export type GlobalBadgesResponse = QueryResponse<'GlobalBadges', GlobalBadgesData>;
 export type GetUserIdResponse = QueryResponse<'GetUserID', GetUserIdData>;
 export type VideoPreviewOverlayResponse = QueryResponse<'VideoPreviewOverlay', VideoPreviewOverlayData>;
 export type ChannelRootAboutPanelResponse = QueryResponse<'ChannelRoot_AboutPanel', ChannelRootAboutPanelData>;
@@ -850,6 +868,7 @@ export type VideoAccessTokenClipResponse = QueryResponse<'VideoAccessToken_Clip'
 
 export type QueryResponseMap = {
   BrowsePage_AllDirectories: BrowsePageAllDirectoriesResponse;
+  GlobalBadges: GlobalBadgesResponse;
   GetUserID: GetUserIdResponse;
   VideoPreviewOverlay: VideoPreviewOverlayResponse;
   ChannelRoot_AboutPanel: ChannelRootAboutPanelResponse;
