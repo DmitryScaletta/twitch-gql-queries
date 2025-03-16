@@ -1,0 +1,490 @@
+{
+  "data": {
+    "currentUser": null,
+    "user": {
+      "id": "26610234",
+      "description": "Happy, helpful and respectful people welcome. Come say hello!",
+      "displayName": "CohhCarnage",
+      "primaryColorHex": "780B0D",
+      "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/148c3b8a-a78b-4139-a429-7d3d90ce8a27-profile_image-300x300.png",
+      "followers": {
+        "totalCount": 1630903,
+        "__typename": "FollowerConnection"
+      },
+      "roles": {
+        "isPartner": true,
+        "isAffiliate": false,
+        "isStaff": null,
+        "isParticipatingDJ": false,
+        "__typename": "UserRoles"
+      },
+      "channel": {
+        "id": "26610234",
+        "socialMedias": [
+          {
+            "id": "30d1dc93-46e1-41de-b36a-c040b5cf25c6",
+            "name": "Youtube",
+            "title": "Cohh on YouTube",
+            "url": "https://Youtube.com/CohhCarnage",
+            "__typename": "SocialMedia"
+          },
+          {
+            "id": "fccc137a-3bc1-4f03-be55-d8b8e5f5dd70",
+            "name": "TikTok",
+            "title": "Cohh on TikTok",
+            "url": "https://TikTok.com/@cohhcarnage",
+            "__typename": "SocialMedia"
+          },
+          {
+            "id": "9432230c-2fc8-4340-91bb-8340700581a6",
+            "name": "Twitter",
+            "title": "Cohh on Twitter",
+            "url": "https://Twitter.com/CohhCarnage",
+            "__typename": "SocialMedia"
+          },
+          {
+            "id": "437b17b2-0dd3-42e5-98e6-341f10532e8e",
+            "name": "Cohhilition",
+            "title": "The Cohhilition Website",
+            "url": "https://www.Cohhilition.com",
+            "__typename": "SocialMedia"
+          },
+          {
+            "id": "44a527ba-753f-4c98-8535-f8552bb96ce3",
+            "name": "steamcommunity",
+            "title": "The Cohhilition on Steam",
+            "url": "https://steamcommunity.com/groups/TheCohhilition",
+            "__typename": "SocialMedia"
+          }
+        ],
+        "schedule": {
+          "id": "schedule-26610234",
+          "nextSegment": {
+            "id": "eyJzZWdtZW50SUQiOiI2MWQxOTY4My1kMDU0LTQ2MTMtODJjOC0wM2MxMGNkNGZhNDkiLCJpc29ZZWFyIjoyMDI1LCJpc29XZWVrIjoxMX0=",
+            "startAt": "2025-03-16T15:00:00Z",
+            "hasReminder": false,
+            "__typename": "ScheduleSegment"
+          },
+          "__typename": "Schedule"
+        },
+        "__typename": "Channel"
+      },
+      "lastBroadcast": {
+        "id": "318956054269",
+        "game": {
+          "id": "36799602",
+          "displayName": "Clair Obscur: Expedition 33",
+          "__typename": "Game"
+        },
+        "__typename": "Broadcast"
+      },
+      "primaryTeam": {
+        "id": "5467",
+        "name": "loadedllc",
+        "displayName": "Loaded",
+        "__typename": "Team"
+      },
+      "videos": {
+        "edges": [
+          {
+            "node": {
+              "id": "2365882528",
+              "game": {
+                "id": "1499221970",
+                "displayName": "Eternal Strands",
+                "__typename": "Game"
+              },
+              "status": "RECORDED",
+              "__typename": "Video"
+            },
+            "__typename": "VideoEdge"
+          },
+          {
+            "node": {
+              "id": "2359485640",
+              "game": {
+                "id": "1901799151",
+                "displayName": "DYNASTY WARRIORS: ORIGINS",
+                "__typename": "Game"
+              },
+              "status": "RECORDED",
+              "__typename": "Video"
+            },
+            "__typename": "VideoEdge"
+          },
+          {
+            "node": {
+              "id": "2333311854",
+              "game": {
+                "id": "29106",
+                "displayName": "S.T.A.L.K.E.R. 2: Heart of Chornobyl",
+                "__typename": "Game"
+              },
+              "status": "RECORDED",
+              "__typename": "Video"
+            },
+            "__typename": "VideoEdge"
+          },
+          {
+            "node": {
+              "id": "2331487043",
+              "game": {
+                "id": "1397606945",
+                "displayName": "Indiana Jones and the Great Circle",
+                "__typename": "Game"
+              },
+              "status": "RECORDED",
+              "__typename": "Video"
+            },
+            "__typename": "VideoEdge"
+          },
+          {
+            "node": {
+              "id": "2329182249",
+              "game": {
+                "id": "66170",
+                "displayName": "Warframe",
+                "__typename": "Game"
+              },
+              "status": "RECORDED",
+              "__typename": "Video"
+            },
+            "__typename": "VideoEdge"
+          },
+          {
+            "node": {
+              "id": "2325248261",
+              "game": {
+                "id": "509663",
+                "displayName": "Special Events",
+                "__typename": "Game"
+              },
+              "status": "RECORDED",
+              "__typename": "Video"
+            },
+            "__typename": "VideoEdge"
+          },
+          {
+            "node": {
+              "id": "2322319185",
+              "game": {
+                "id": "1702520304",
+                "displayName": "Path of Exile 2",
+                "__typename": "Game"
+              },
+              "status": "RECORDED",
+              "__typename": "Video"
+            },
+            "__typename": "VideoEdge"
+          },
+          {
+            "node": {
+              "id": "2319091200",
+              "game": {
+                "id": "509663",
+                "displayName": "Special Events",
+                "__typename": "Game"
+              },
+              "status": "RECORDED",
+              "__typename": "Video"
+            },
+            "__typename": "VideoEdge"
+          },
+          {
+            "node": {
+              "id": "2264112141",
+              "game": {
+                "id": "506456",
+                "displayName": "Satisfactory",
+                "__typename": "Game"
+              },
+              "status": "RECORDED",
+              "__typename": "Video"
+            },
+            "__typename": "VideoEdge"
+          },
+          {
+            "node": {
+              "id": "2230348683",
+              "game": {
+                "id": "509663",
+                "displayName": "Special Events",
+                "__typename": "Game"
+              },
+              "status": "RECORDED",
+              "__typename": "Video"
+            },
+            "__typename": "VideoEdge"
+          },
+          {
+            "node": {
+              "id": "1902273140",
+              "game": {
+                "id": "29307",
+                "displayName": "Path of Exile",
+                "__typename": "Game"
+              },
+              "status": "RECORDED",
+              "__typename": "Video"
+            },
+            "__typename": "VideoEdge"
+          },
+          {
+            "node": {
+              "id": "1818014772",
+              "game": {
+                "id": "512998",
+                "displayName": "The Legend of Zelda: Tears of the Kingdom",
+                "__typename": "Game"
+              },
+              "status": "RECORDED",
+              "__typename": "Video"
+            },
+            "__typename": "VideoEdge"
+          },
+          {
+            "node": {
+              "id": "1817885427",
+              "game": {
+                "id": "512998",
+                "displayName": "The Legend of Zelda: Tears of the Kingdom",
+                "__typename": "Game"
+              },
+              "status": "RECORDED",
+              "__typename": "Video"
+            },
+            "__typename": "VideoEdge"
+          },
+          {
+            "node": {
+              "id": "1779107415",
+              "game": {
+                "id": "1681462442",
+                "displayName": "Jurassic World Evolution 2",
+                "__typename": "Game"
+              },
+              "status": "RECORDED",
+              "__typename": "Video"
+            },
+            "__typename": "VideoEdge"
+          },
+          {
+            "node": {
+              "id": "1727394529",
+              "game": {
+                "id": "696017724",
+                "displayName": "Spellforce: Conquest of EO",
+                "__typename": "Game"
+              },
+              "status": "RECORDED",
+              "__typename": "Video"
+            },
+            "__typename": "VideoEdge"
+          },
+          {
+            "node": {
+              "id": "1721512785",
+              "game": {
+                "id": "415409",
+                "displayName": "Pantheon: Rise of the Fallen",
+                "__typename": "Game"
+              },
+              "status": "RECORDED",
+              "__typename": "Video"
+            },
+            "__typename": "VideoEdge"
+          },
+          {
+            "node": {
+              "id": "1675741780",
+              "game": {
+                "id": "415409",
+                "displayName": "Pantheon: Rise of the Fallen",
+                "__typename": "Game"
+              },
+              "status": "RECORDED",
+              "__typename": "Video"
+            },
+            "__typename": "VideoEdge"
+          },
+          {
+            "node": {
+              "id": "1675304184",
+              "game": {
+                "id": "518012",
+                "displayName": "FORSPOKEN",
+                "__typename": "Game"
+              },
+              "status": "RECORDED",
+              "__typename": "Video"
+            },
+            "__typename": "VideoEdge"
+          },
+          {
+            "node": {
+              "id": "1671911032",
+              "game": {
+                "id": "735602708",
+                "displayName": "Marvel's Midnight Suns",
+                "__typename": "Game"
+              },
+              "status": "RECORDED",
+              "__typename": "Video"
+            },
+            "__typename": "VideoEdge"
+          },
+          {
+            "node": {
+              "id": "1668367598",
+              "game": {
+                "id": "735602708",
+                "displayName": "Marvel's Midnight Suns",
+                "__typename": "Game"
+              },
+              "status": "RECORDED",
+              "__typename": "Video"
+            },
+            "__typename": "VideoEdge"
+          },
+          {
+            "node": {
+              "id": "1668190445",
+              "game": {
+                "id": "838226069",
+                "displayName": "The Callisto Protocol",
+                "__typename": "Game"
+              },
+              "status": "RECORDED",
+              "__typename": "Video"
+            },
+            "__typename": "VideoEdge"
+          },
+          {
+            "node": {
+              "id": "1665296237",
+              "game": {
+                "id": "508455",
+                "displayName": "Valheim",
+                "__typename": "Game"
+              },
+              "status": "RECORDED",
+              "__typename": "Video"
+            },
+            "__typename": "VideoEdge"
+          },
+          {
+            "node": {
+              "id": "1659157047",
+              "game": {
+                "id": "1488417149",
+                "displayName": "Evil West",
+                "__typename": "Game"
+              },
+              "status": "RECORDED",
+              "__typename": "Video"
+            },
+            "__typename": "VideoEdge"
+          },
+          {
+            "node": {
+              "id": "1655380470",
+              "game": {
+                "id": "518873",
+                "displayName": "Warhammer 40,000: Darktide",
+                "__typename": "Game"
+              },
+              "status": "RECORDED",
+              "__typename": "Video"
+            },
+            "__typename": "VideoEdge"
+          },
+          {
+            "node": {
+              "id": "1636970536",
+              "game": {
+                "id": "766548668",
+                "displayName": "V Rising",
+                "__typename": "Game"
+              },
+              "status": "RECORDED",
+              "__typename": "Video"
+            },
+            "__typename": "VideoEdge"
+          },
+          {
+            "node": {
+              "id": "1634414662",
+              "game": {
+                "id": "538283315",
+                "displayName": "Eyes in the Dark",
+                "__typename": "Game"
+              },
+              "status": "RECORDED",
+              "__typename": "Video"
+            },
+            "__typename": "VideoEdge"
+          },
+          {
+            "node": {
+              "id": "1624165349",
+              "game": {
+                "id": "509658",
+                "displayName": "Just Chatting",
+                "__typename": "Game"
+              },
+              "status": "RECORDED",
+              "__typename": "Video"
+            },
+            "__typename": "VideoEdge"
+          },
+          {
+            "node": {
+              "id": "1603796448",
+              "game": {
+                "id": "493388",
+                "displayName": "Foxhole",
+                "__typename": "Game"
+              },
+              "status": "RECORDED",
+              "__typename": "Video"
+            },
+            "__typename": "VideoEdge"
+          },
+          {
+            "node": {
+              "id": "1597227652",
+              "game": {
+                "id": "494081",
+                "displayName": "Scorn",
+                "__typename": "Game"
+              },
+              "status": "RECORDED",
+              "__typename": "Video"
+            },
+            "__typename": "VideoEdge"
+          },
+          {
+            "node": {
+              "id": "1591664029",
+              "game": {
+                "id": "1514063382",
+                "displayName": "Showgunners",
+                "__typename": "Game"
+              },
+              "status": "RECORDED",
+              "__typename": "Video"
+            },
+            "__typename": "VideoEdge"
+          }
+        ],
+        "__typename": "VideoConnection"
+      },
+      "__typename": "User"
+    }
+  },
+  "extensions": {
+    "durationMilliseconds": 96,
+    "operationName": "ChannelRoot_AboutPanel",
+    "requestID": "01JPFMPARRNN4QT3QFHMHHT5MK"
+  }
+}

@@ -48,6 +48,89 @@ export interface BrowsePageAllDirectoriesData {
   };
 }
 
+export interface ChannelRootUser {
+  id: string;
+  description: null | string;
+  displayName: string;
+  primaryColorHex: null | string;
+  profileImageURL: string;
+  followers: {
+    totalCount: number;
+    __typename: 'FollowerConnection';
+  };
+  roles: {
+    isPartner: boolean;
+    isAffiliate: boolean;
+    isStaff: null | boolean;
+    isParticipatingDJ?: boolean;
+    __typename: 'UserRoles';
+  };
+  channel: {
+    id: string;
+    socialMedias: {
+      id: string;
+      name: string;
+      title: string;
+      url: string;
+      __typename: 'SocialMedia';
+    }[];
+    schedule?: null | {
+      id: string;
+      nextSegment: null | {
+        id: string;
+        startAt: string;
+        hasReminder: boolean;
+        __typename: 'ScheduleSegment';
+      };
+      __typename: 'Schedule';
+    };
+    __typename: 'Channel';
+  };
+  lastBroadcast: {
+    id: null | string;
+    game: null | {
+      id: string;
+      displayName: string;
+      __typename: 'Game';
+    };
+    __typename: 'Broadcast';
+  };
+  primaryTeam: null | {
+    id: string;
+    name: string;
+    displayName: string;
+    __typename: 'Team';
+  };
+  videos: {
+    edges: {
+      node: {
+        id: string;
+        game: null | {
+          id: string;
+          displayName: string;
+          __typename: 'Game';
+        };
+        status: 'RECORDED' | string;
+        __typename: 'Video';
+      };
+      __typename: 'VideoEdge';
+    }[];
+    __typename: 'VideoConnection';
+  };
+  __typename: 'User';
+}
+
+export interface ChannelRootAboutPanelVariables {
+  channelLogin: string;
+  skipSchedule: boolean;
+  includeIsDJ: boolean;
+}
+
+export interface ChannelRootAboutPanelData {
+  currentUser: unknown;
+  user: null | ChannelRootUser;
+}
+
 export interface ChannelShellUserDoesNotExist {
   userDoesNotExist: string;
   reason: 'UNKNOWN' | 'TOS_INDEFINITE' | 'TOS_TEMPORARY' | 'DMCA';
@@ -716,6 +799,7 @@ export interface VideoAccessTokenClipData {
 }
 
 export type BrowsePageAllDirectoriesResponse = QueryResponse<'BrowsePage_AllDirectories', BrowsePageAllDirectoriesData>;
+export type ChannelRootAboutPanelResponse = QueryResponse<'ChannelRoot_AboutPanel', ChannelRootAboutPanelData>;
 export type ChannelShellResponse = QueryResponse<'ChannelShell', ChannelShellData>;
 export type ClipsActionButtonsResponse = QueryResponse<'ClipsActionButtons', ClipsActionButtonsData>;
 export type ClipsCardsGameResponse = QueryResponse<'ClipsCards__Game', ClipsCardsGameData>;
@@ -731,6 +815,7 @@ export type VideoAccessTokenClipResponse = QueryResponse<'VideoAccessToken_Clip'
 
 export type QueryResponseMap = {
   BrowsePage_AllDirectories: BrowsePageAllDirectoriesResponse;
+  ChannelRoot_AboutPanel: ChannelRootAboutPanelResponse;
   ChannelShell: ChannelShellResponse;
   ClipsActionButtons: ClipsActionButtonsResponse;
   ClipsCards__Game: ClipsCardsGameResponse;

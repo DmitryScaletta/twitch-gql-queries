@@ -1,0 +1,469 @@
+{
+  "data": {
+    "currentUser": null,
+    "user": {
+      "id": "71092938",
+      "description": "THE BEST AT ABSOLUTELY EVERYTHING. THE JUICER. LEADER OF THE JUICERS.",
+      "displayName": "xQc",
+      "primaryColorHex": "FFBF00",
+      "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/xqc-profile_image-9298dca608632101-300x300.jpeg",
+      "followers": {
+        "totalCount": 12041843,
+        "__typename": "FollowerConnection"
+      },
+      "roles": {
+        "isPartner": true,
+        "isAffiliate": false,
+        "isStaff": null,
+        "isParticipatingDJ": false,
+        "__typename": "UserRoles"
+      },
+      "channel": {
+        "id": "71092938",
+        "socialMedias": [
+          {
+            "id": "0ce657ed-e53e-4eb8-a1e2-c9b72065b896",
+            "name": "twitter",
+            "title": "Twitter",
+            "url": "https://twitter.com/xQc",
+            "__typename": "SocialMedia"
+          },
+          {
+            "id": "350b096e-ed37-4b08-9fec-9fa02d92d986",
+            "name": "discord",
+            "title": "Discord",
+            "url": "https://discord.com/invite/xqcow",
+            "__typename": "SocialMedia"
+          },
+          {
+            "id": "4b861d10-1ce9-4f44-838e-55a662908c66",
+            "name": "reddit",
+            "title": "reddit",
+            "url": "https://www.reddit.com/r/xqcow/",
+            "__typename": "SocialMedia"
+          },
+          {
+            "id": "a1599738-7dd5-433d-86a5-0d4a337f21a1",
+            "name": "youtube",
+            "title": "youtube",
+            "url": "https://www.youtube.com/channel/UCmDTrq0LNgPodDOFZiSbsww",
+            "__typename": "SocialMedia"
+          }
+        ],
+        "schedule": null,
+        "__typename": "Channel"
+      },
+      "lastBroadcast": {
+        "id": "319007840765",
+        "game": {
+          "id": "296636215",
+          "displayName": "WWE 2K25",
+          "__typename": "Game"
+        },
+        "__typename": "Broadcast"
+      },
+      "primaryTeam": null,
+      "videos": {
+        "edges": [
+          {
+            "node": {
+              "id": "2406804356",
+              "game": {
+                "id": "509658",
+                "displayName": "Just Chatting",
+                "__typename": "Game"
+              },
+              "status": "RECORDED",
+              "__typename": "Video"
+            },
+            "__typename": "VideoEdge"
+          },
+          {
+            "node": {
+              "id": "2405711951",
+              "game": {
+                "id": "509658",
+                "displayName": "Just Chatting",
+                "__typename": "Game"
+              },
+              "status": "RECORDED",
+              "__typename": "Video"
+            },
+            "__typename": "VideoEdge"
+          },
+          {
+            "node": {
+              "id": "2404731075",
+              "game": {
+                "id": "509658",
+                "displayName": "Just Chatting",
+                "__typename": "Game"
+              },
+              "status": "RECORDED",
+              "__typename": "Video"
+            },
+            "__typename": "VideoEdge"
+          },
+          {
+            "node": {
+              "id": "2404063784",
+              "game": {
+                "id": "509658",
+                "displayName": "Just Chatting",
+                "__typename": "Game"
+              },
+              "status": "RECORDED",
+              "__typename": "Video"
+            },
+            "__typename": "VideoEdge"
+          },
+          {
+            "node": {
+              "id": "2403141934",
+              "game": {
+                "id": "509658",
+                "displayName": "Just Chatting",
+                "__typename": "Game"
+              },
+              "status": "RECORDED",
+              "__typename": "Video"
+            },
+            "__typename": "VideoEdge"
+          },
+          {
+            "node": {
+              "id": "2398746319",
+              "game": {
+                "id": "509658",
+                "displayName": "Just Chatting",
+                "__typename": "Game"
+              },
+              "status": "RECORDED",
+              "__typename": "Video"
+            },
+            "__typename": "VideoEdge"
+          },
+          {
+            "node": {
+              "id": "2398004543",
+              "game": {
+                "id": "509658",
+                "displayName": "Just Chatting",
+                "__typename": "Game"
+              },
+              "status": "RECORDED",
+              "__typename": "Video"
+            },
+            "__typename": "VideoEdge"
+          },
+          {
+            "node": {
+              "id": "2396644786",
+              "game": {
+                "id": "509658",
+                "displayName": "Just Chatting",
+                "__typename": "Game"
+              },
+              "status": "RECORDED",
+              "__typename": "Video"
+            },
+            "__typename": "VideoEdge"
+          },
+          {
+            "node": {
+              "id": "2395751737",
+              "game": {
+                "id": "509658",
+                "displayName": "Just Chatting",
+                "__typename": "Game"
+              },
+              "status": "RECORDED",
+              "__typename": "Video"
+            },
+            "__typename": "VideoEdge"
+          },
+          {
+            "node": {
+              "id": "2394442214",
+              "game": {
+                "id": "509658",
+                "displayName": "Just Chatting",
+                "__typename": "Game"
+              },
+              "status": "RECORDED",
+              "__typename": "Video"
+            },
+            "__typename": "VideoEdge"
+          },
+          {
+            "node": {
+              "id": "2393726400",
+              "game": {
+                "id": "509658",
+                "displayName": "Just Chatting",
+                "__typename": "Game"
+              },
+              "status": "RECORDED",
+              "__typename": "Video"
+            },
+            "__typename": "VideoEdge"
+          },
+          {
+            "node": {
+              "id": "2392765735",
+              "game": {
+                "id": "509658",
+                "displayName": "Just Chatting",
+                "__typename": "Game"
+              },
+              "status": "RECORDED",
+              "__typename": "Video"
+            },
+            "__typename": "VideoEdge"
+          },
+          {
+            "node": {
+              "id": "2392248160",
+              "game": {
+                "id": "509658",
+                "displayName": "Just Chatting",
+                "__typename": "Game"
+              },
+              "status": "RECORDED",
+              "__typename": "Video"
+            },
+            "__typename": "VideoEdge"
+          },
+          {
+            "node": {
+              "id": "2391099343",
+              "game": {
+                "id": "509658",
+                "displayName": "Just Chatting",
+                "__typename": "Game"
+              },
+              "status": "RECORDED",
+              "__typename": "Video"
+            },
+            "__typename": "VideoEdge"
+          },
+          {
+            "node": {
+              "id": "2390498107",
+              "game": {
+                "id": "509658",
+                "displayName": "Just Chatting",
+                "__typename": "Game"
+              },
+              "status": "RECORDED",
+              "__typename": "Video"
+            },
+            "__typename": "VideoEdge"
+          },
+          {
+            "node": {
+              "id": "2389581493",
+              "game": {
+                "id": "509658",
+                "displayName": "Just Chatting",
+                "__typename": "Game"
+              },
+              "status": "RECORDED",
+              "__typename": "Video"
+            },
+            "__typename": "VideoEdge"
+          },
+          {
+            "node": {
+              "id": "2388475756",
+              "game": {
+                "id": "509658",
+                "displayName": "Just Chatting",
+                "__typename": "Game"
+              },
+              "status": "RECORDED",
+              "__typename": "Video"
+            },
+            "__typename": "VideoEdge"
+          },
+          {
+            "node": {
+              "id": "2387478267",
+              "game": {
+                "id": "509658",
+                "displayName": "Just Chatting",
+                "__typename": "Game"
+              },
+              "status": "RECORDED",
+              "__typename": "Video"
+            },
+            "__typename": "VideoEdge"
+          },
+          {
+            "node": {
+              "id": "2386699395",
+              "game": {
+                "id": "509658",
+                "displayName": "Just Chatting",
+                "__typename": "Game"
+              },
+              "status": "RECORDED",
+              "__typename": "Video"
+            },
+            "__typename": "VideoEdge"
+          },
+          {
+            "node": {
+              "id": "2385715911",
+              "game": {
+                "id": "509658",
+                "displayName": "Just Chatting",
+                "__typename": "Game"
+              },
+              "status": "RECORDED",
+              "__typename": "Video"
+            },
+            "__typename": "VideoEdge"
+          },
+          {
+            "node": {
+              "id": "2384945186",
+              "game": {
+                "id": "509658",
+                "displayName": "Just Chatting",
+                "__typename": "Game"
+              },
+              "status": "RECORDED",
+              "__typename": "Video"
+            },
+            "__typename": "VideoEdge"
+          },
+          {
+            "node": {
+              "id": "2384179381",
+              "game": {
+                "id": "509658",
+                "displayName": "Just Chatting",
+                "__typename": "Game"
+              },
+              "status": "RECORDED",
+              "__typename": "Video"
+            },
+            "__typename": "VideoEdge"
+          },
+          {
+            "node": {
+              "id": "2383183816",
+              "game": {
+                "id": "509658",
+                "displayName": "Just Chatting",
+                "__typename": "Game"
+              },
+              "status": "RECORDED",
+              "__typename": "Video"
+            },
+            "__typename": "VideoEdge"
+          },
+          {
+            "node": {
+              "id": "2382218065",
+              "game": {
+                "id": "509658",
+                "displayName": "Just Chatting",
+                "__typename": "Game"
+              },
+              "status": "RECORDED",
+              "__typename": "Video"
+            },
+            "__typename": "VideoEdge"
+          },
+          {
+            "node": {
+              "id": "2381257040",
+              "game": {
+                "id": "509658",
+                "displayName": "Just Chatting",
+                "__typename": "Game"
+              },
+              "status": "RECORDED",
+              "__typename": "Video"
+            },
+            "__typename": "VideoEdge"
+          },
+          {
+            "node": {
+              "id": "2380379099",
+              "game": {
+                "id": "509658",
+                "displayName": "Just Chatting",
+                "__typename": "Game"
+              },
+              "status": "RECORDED",
+              "__typename": "Video"
+            },
+            "__typename": "VideoEdge"
+          },
+          {
+            "node": {
+              "id": "2379485590",
+              "game": {
+                "id": "509658",
+                "displayName": "Just Chatting",
+                "__typename": "Game"
+              },
+              "status": "RECORDED",
+              "__typename": "Video"
+            },
+            "__typename": "VideoEdge"
+          },
+          {
+            "node": {
+              "id": "2378674302",
+              "game": {
+                "id": "509658",
+                "displayName": "Just Chatting",
+                "__typename": "Game"
+              },
+              "status": "RECORDED",
+              "__typename": "Video"
+            },
+            "__typename": "VideoEdge"
+          },
+          {
+            "node": {
+              "id": "2377811654",
+              "game": {
+                "id": "509658",
+                "displayName": "Just Chatting",
+                "__typename": "Game"
+              },
+              "status": "RECORDED",
+              "__typename": "Video"
+            },
+            "__typename": "VideoEdge"
+          },
+          {
+            "node": {
+              "id": "2376985419",
+              "game": {
+                "id": "509658",
+                "displayName": "Just Chatting",
+                "__typename": "Game"
+              },
+              "status": "RECORDED",
+              "__typename": "Video"
+            },
+            "__typename": "VideoEdge"
+          }
+        ],
+        "__typename": "VideoConnection"
+      },
+      "__typename": "User"
+    }
+  },
+  "extensions": {
+    "durationMilliseconds": 75,
+    "operationName": "ChannelRoot_AboutPanel",
+    "requestID": "01JPFMJNN72QWC8PJYCEEPR22N"
+  }
+}

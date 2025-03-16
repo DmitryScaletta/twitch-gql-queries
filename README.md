@@ -61,6 +61,7 @@ console.log(channels);
 ## Available queries
 
 * BrowsePage_AllDirectories
+* ChannelRoot_AboutPanel
 * ChannelShell
 * ClipsActionButtons
 * ClipsCards__Game
