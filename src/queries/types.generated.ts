@@ -1,3 +1,5 @@
+import type { QueryResponse } from '../types.ts';
+
 export interface BrowsePageGame {
   id: string;
   slug: string;
@@ -712,3 +714,33 @@ export interface VideoAccessTokenClipData {
     __typename: 'Clip';
   };
 }
+
+export type BrowsePageAllDirectoriesResponse = QueryResponse<'BrowsePage_AllDirectories', BrowsePageAllDirectoriesData>;
+export type ChannelShellResponse = QueryResponse<'ChannelShell', ChannelShellData>;
+export type ClipsActionButtonsResponse = QueryResponse<'ClipsActionButtons', ClipsActionButtonsData>;
+export type ClipsCardsGameResponse = QueryResponse<'ClipsCards__Game', ClipsCardsGameData>;
+export type ClipsCardsUserResponse = QueryResponse<'ClipsCards__User', ClipsCardsUserData>;
+export type ClipsDownloadButtonResponse = QueryResponse<'ClipsDownloadButton', ClipsDownloadButtonData>;
+export type FfzBroadcastIdResponse = QueryResponse<'FFZ_BroadcastID', FfzBroadcastIdData>;
+export type SearchResultsPageSearchResultsResponse = QueryResponse<'SearchResultsPage_SearchResults', SearchResultsPageSearchResultsData>;
+export type SearchTraySearchSuggestionsResponse = QueryResponse<'SearchTray_SearchSuggestions', SearchTraySearchSuggestionsData>;
+export type StreamMetadataResponse = QueryResponse<'StreamMetadata', StreamMetadataData>;
+export type UseLiveResponse = QueryResponse<'UseLive', UseLiveData>;
+export type UseViewCountResponse = QueryResponse<'UseViewCount', UseViewCountData>;
+export type VideoAccessTokenClipResponse = QueryResponse<'VideoAccessToken_Clip', VideoAccessTokenClipData>;
+
+export type QueryResponseMap = {
+  BrowsePage_AllDirectories: BrowsePageAllDirectoriesResponse;
+  ChannelShell: ChannelShellResponse;
+  ClipsActionButtons: ClipsActionButtonsResponse;
+  ClipsCards__Game: ClipsCardsGameResponse;
+  ClipsCards__User: ClipsCardsUserResponse;
+  ClipsDownloadButton: ClipsDownloadButtonResponse;
+  FFZ_BroadcastID: FfzBroadcastIdResponse;
+  SearchResultsPage_SearchResults: SearchResultsPageSearchResultsResponse;
+  SearchTray_SearchSuggestions: SearchTraySearchSuggestionsResponse;
+  StreamMetadata: StreamMetadataResponse;
+  UseLive: UseLiveResponse;
+  UseViewCount: UseViewCountResponse;
+  VideoAccessToken_Clip: VideoAccessTokenClipResponse;
+};
