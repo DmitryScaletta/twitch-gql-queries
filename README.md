@@ -114,3 +114,5 @@ If it's impossible to test some cases with real requests, add responses to `src/
 * `mocks/response-online.json`
 * `mocks/response-offline.json`
 * `mocks/response-banned.json`
+
+Currently banned channels can be found here: [x.com/StreamerBans](https://x.com/StreamerBans).
