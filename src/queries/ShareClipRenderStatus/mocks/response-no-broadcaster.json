@@ -1,0 +1,108 @@
+{
+  "data": {
+    "clip": {
+      "id": "3666079080",
+      "slug": "ShakingBlitheOwlBrokeBack",
+      "url": "https://clips.twitch.tv/ShakingBlitheOwlBrokeBack",
+      "embedURL": "https://clips.twitch.tv/embed?clip=ShakingBlitheOwlBrokeBack",
+      "title": "затащат ли нам осирис?",
+      "viewCount": 140,
+      "language": "RU",
+      "isFeatured": false,
+      "assets": [
+        {
+          "id": "22594802816-index-0000006526",
+          "aspectRatio": 1.7777777777777777,
+          "type": "SOURCE",
+          "createdAt": "2016-07-31T21:49:42.63966464Z",
+          "creationState": "CREATED",
+          "curator": {
+            "id": "38259425",
+            "login": "dmitryscaletta",
+            "displayName": "DmitryScaletta",
+            "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/dmitryscaletta-profile_image-41b036d0ef640053-50x50.jpeg",
+            "__typename": "User"
+          },
+          "thumbnailURL": "https://static-cdn.jtvnw.net/twitch-clips/22594802816-index-0000006526-preview-480x272.jpg",
+          "videoQualities": [
+            {
+              "frameRate": 30,
+              "quality": "720",
+              "sourceURL": "https://production.assets.clips.twitchcdn.net/22594802816-index-0000006526.mp4",
+              "__typename": "ClipVideoQuality"
+            },
+            {
+              "frameRate": 30,
+              "quality": "480",
+              "sourceURL": "https://production.assets.clips.twitchcdn.net/22594802816-index-0000006526-852x480.mp4",
+              "__typename": "ClipVideoQuality"
+            },
+            {
+              "frameRate": 30,
+              "quality": "360",
+              "sourceURL": "https://production.assets.clips.twitchcdn.net/22594802816-index-0000006526-640x360.mp4",
+              "__typename": "ClipVideoQuality"
+            }
+          ],
+          "portraitMetadata": null,
+          "__typename": "ClipAsset"
+        }
+      ],
+      "curator": {
+        "id": "38259425",
+        "login": "dmitryscaletta",
+        "displayName": "DmitryScaletta",
+        "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/dmitryscaletta-profile_image-41b036d0ef640053-70x70.jpeg",
+        "__typename": "User"
+      },
+      "game": {
+        "id": "280721",
+        "name": "Destiny",
+        "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/280721_IGDB-52x72.jpg",
+        "displayName": "Destiny",
+        "slug": "destiny",
+        "__typename": "Game"
+      },
+      "broadcast": {
+        "id": "22594802816",
+        "title": null,
+        "__typename": "Broadcast"
+      },
+      "broadcaster": null,
+      "thumbnailURL": "https://static-cdn.jtvnw.net/twitch-clips/22594802816-index-0000006526-preview-260x147.jpg",
+      "createdAt": "2016-07-31T21:49:42Z",
+      "isPublished": true,
+      "durationSeconds": 30,
+      "champBadge": null,
+      "playbackAccessToken": {
+        "signature": "950b082c651e9806ce602b5f5961bb5cc537ca14",
+        "value": "{\"authorization\":{\"forbidden\":false,\"reason\":\"\"},\"clip_uri\":\"https://production.assets.clips.twitchcdn.net/22594802816-index-0000006526.mp4\",\"clip_slug\":\"ShakingBlitheOwlBrokeBack\",\"device_id\":null,\"expires\":1742299359,\"user_id\":\"\",\"version\":2}",
+        "__typename": "PlaybackAccessToken"
+      },
+      "video": null,
+      "videoOffsetSeconds": null,
+      "videoQualities": [
+        {
+          "sourceURL": "https://production.assets.clips.twitchcdn.net/22594802816-index-0000006526.mp4",
+          "__typename": "ClipVideoQuality"
+        },
+        {
+          "sourceURL": "https://production.assets.clips.twitchcdn.net/22594802816-index-0000006526-852x480.mp4",
+          "__typename": "ClipVideoQuality"
+        },
+        {
+          "sourceURL": "https://production.assets.clips.twitchcdn.net/22594802816-index-0000006526-640x360.mp4",
+          "__typename": "ClipVideoQuality"
+        }
+      ],
+      "isViewerEditRestricted": false,
+      "suggestedCropping": null,
+      "__typename": "Clip"
+    }
+  },
+  "extensions": {
+    "durationMilliseconds": 88,
+    "operationName": "ShareClipRenderStatus",
+    "requestID": "01JPJDFH7NM8KZ2Z1RJT2Z3KF5"
+  }
+}

@@ -1,0 +1,203 @@
+{
+  "data": {
+    "clip": {
+      "id": "3846773990",
+      "slug": "ManlyLittleHabaneroTwitchRaid-FIvuPaqPC4CHIif4",
+      "url": "https://clips.twitch.tv/ManlyLittleHabaneroTwitchRaid-FIvuPaqPC4CHIif4",
+      "embedURL": "https://clips.twitch.tv/embed?clip=ManlyLittleHabaneroTwitchRaid-FIvuPaqPC4CHIif4",
+      "title": "picked up in under 5 mins",
+      "viewCount": 289,
+      "language": "EN",
+      "isFeatured": false,
+      "assets": [
+        {
+          "id": "c54db84b-e719-4644-890d-6f360c3c08db",
+          "aspectRatio": 1.7777777910232544,
+          "type": "SOURCE",
+          "createdAt": "2025-02-20T18:34:46.257542983Z",
+          "creationState": "CREATED",
+          "curator": {
+            "id": "42736667",
+            "login": "jmm548",
+            "displayName": "jmm548",
+            "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/425fa339-e67f-4e79-8523-698b4b2db974-profile_image-50x50.png",
+            "__typename": "User"
+          },
+          "thumbnailURL": "https://static-cdn.jtvnw.net/twitch-clips-thumbnails-prod/ManlyLittleHabaneroTwitchRaid-FIvuPaqPC4CHIif4/c54db84b-e719-4644-890d-6f360c3c08db/preview.jpg",
+          "videoQualities": [
+            {
+              "frameRate": 59.99863815307617,
+              "quality": "1080",
+              "sourceURL": "https://production.assets.clips.twitchcdn.net/v2/media/ManlyLittleHabaneroTwitchRaid-FIvuPaqPC4CHIif4/c54db84b-e719-4644-890d-6f360c3c08db/video.mp4",
+              "__typename": "ClipVideoQuality"
+            },
+            {
+              "frameRate": 59.996578216552734,
+              "quality": "720",
+              "sourceURL": "https://production.assets.clips.twitchcdn.net/v2/media/ManlyLittleHabaneroTwitchRaid-FIvuPaqPC4CHIif4/c54db84b-e719-4644-890d-6f360c3c08db/video-720.mp4",
+              "__typename": "ClipVideoQuality"
+            },
+            {
+              "frameRate": 30.032495498657227,
+              "quality": "480",
+              "sourceURL": "https://production.assets.clips.twitchcdn.net/v2/media/ManlyLittleHabaneroTwitchRaid-FIvuPaqPC4CHIif4/c54db84b-e719-4644-890d-6f360c3c08db/video-480.mp4",
+              "__typename": "ClipVideoQuality"
+            },
+            {
+              "frameRate": 30.032495498657227,
+              "quality": "360",
+              "sourceURL": "https://production.assets.clips.twitchcdn.net/v2/media/ManlyLittleHabaneroTwitchRaid-FIvuPaqPC4CHIif4/c54db84b-e719-4644-890d-6f360c3c08db/video-360.mp4",
+              "__typename": "ClipVideoQuality"
+            }
+          ],
+          "portraitMetadata": null,
+          "__typename": "ClipAsset"
+        },
+        {
+          "id": "6089ff9c-3264-4804-a0d8-6bb219868c52",
+          "aspectRatio": 0.562,
+          "type": "RECOMPOSED",
+          "createdAt": "2025-02-20T18:34:46.257542983Z",
+          "creationState": "CREATED",
+          "curator": {
+            "id": "42736667",
+            "login": "jmm548",
+            "displayName": "jmm548",
+            "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/425fa339-e67f-4e79-8523-698b4b2db974-profile_image-50x50.png",
+            "__typename": "User"
+          },
+          "thumbnailURL": "https://static-cdn.jtvnw.net/twitch-clips-thumbnails-prod/ManlyLittleHabaneroTwitchRaid-FIvuPaqPC4CHIif4/6089ff9c-3264-4804-a0d8-6bb219868c52/preview-153x272.jpg",
+          "videoQualities": [
+            {
+              "frameRate": 60,
+              "quality": "607",
+              "sourceURL": "https://production.assets.clips.twitchcdn.net/v2/media/ManlyLittleHabaneroTwitchRaid-FIvuPaqPC4CHIif4/6089ff9c-3264-4804-a0d8-6bb219868c52/video.mp4",
+              "__typename": "ClipVideoQuality"
+            },
+            {
+              "frameRate": 0,
+              "quality": "480",
+              "sourceURL": "",
+              "__typename": "ClipVideoQuality"
+            },
+            {
+              "frameRate": 0,
+              "quality": "360",
+              "sourceURL": "",
+              "__typename": "ClipVideoQuality"
+            }
+          ],
+          "portraitMetadata": {
+            "portraitClipLayout": "FULL",
+            "fullTemplateMetadata": {
+              "mainFrame": {
+                "topLeft": {
+                  "xPercentage": 34.1796875,
+                  "yPercentage": 0,
+                  "__typename": "PortraitCropCoordinates"
+                },
+                "bottomRight": {
+                  "xPercentage": 65.8203125,
+                  "yPercentage": 100,
+                  "__typename": "PortraitCropCoordinates"
+                },
+                "__typename": "PortraitCropMetadata"
+              },
+              "__typename": "FullTemplateMetadata"
+            },
+            "stackedTemplateMetadata": null,
+            "__typename": "PortraitClipCropping"
+          },
+          "__typename": "ClipAsset"
+        }
+      ],
+      "curator": {
+        "id": "42736667",
+        "login": "jmm548",
+        "displayName": "jmm548",
+        "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/425fa339-e67f-4e79-8523-698b4b2db974-profile_image-70x70.png",
+        "__typename": "User"
+      },
+      "game": {
+        "id": "543818421",
+        "name": "Breathedge 2",
+        "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/543818421_IGDB-52x72.jpg",
+        "displayName": "Breathedge 2",
+        "slug": "breathedge-2",
+        "__typename": "Game"
+      },
+      "broadcast": {
+        "id": "317200615933",
+        "title": null,
+        "__typename": "Broadcast"
+      },
+      "broadcaster": {
+        "id": "22552479",
+        "login": "giantwaffle",
+        "displayName": "Giantwaffle",
+        "primaryColorHex": "BABABA",
+        "isPartner": true,
+        "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/f03ca1a6-9b96-4296-a50a-c33778238c72-profile_image-70x70.png",
+        "followers": {
+          "totalCount": 854855,
+          "__typename": "FollowerConnection"
+        },
+        "stream": {
+          "id": "319125443197",
+          "viewersCount": 1964,
+          "__typename": "Stream"
+        },
+        "lastBroadcast": {
+          "id": "319125443197",
+          "startedAt": "2025-03-17T12:01:04.343135Z",
+          "__typename": "Broadcast"
+        },
+        "self": null,
+        "__typename": "User"
+      },
+      "thumbnailURL": "https://static-cdn.jtvnw.net/twitch-clips-thumbnails-prod/ManlyLittleHabaneroTwitchRaid-FIvuPaqPC4CHIif4/c54db84b-e719-4644-890d-6f360c3c08db/preview.jpg",
+      "createdAt": "2025-02-20T18:34:46Z",
+      "isPublished": true,
+      "durationSeconds": 29,
+      "champBadge": null,
+      "playbackAccessToken": {
+        "signature": "9e501df39afc916b5925a0f8ca824e1f1d045772",
+        "value": "{\"authorization\":{\"forbidden\":false,\"reason\":\"\"},\"clip_uri\":\"\",\"clip_slug\":\"ManlyLittleHabaneroTwitchRaid-FIvuPaqPC4CHIif4\",\"device_id\":null,\"expires\":1742297838,\"user_id\":\"\",\"version\":2}",
+        "__typename": "PlaybackAccessToken"
+      },
+      "video": {
+        "id": "2386335777",
+        "broadcastType": "ARCHIVE",
+        "title": "BEST Day of the Week!",
+        "__typename": "Video"
+      },
+      "videoOffsetSeconds": 14579,
+      "videoQualities": [
+        {
+          "sourceURL": "https://production.assets.clips.twitchcdn.net/v2/media/ManlyLittleHabaneroTwitchRaid-FIvuPaqPC4CHIif4/c54db84b-e719-4644-890d-6f360c3c08db/video.mp4",
+          "__typename": "ClipVideoQuality"
+        },
+        {
+          "sourceURL": "https://production.assets.clips.twitchcdn.net/v2/media/ManlyLittleHabaneroTwitchRaid-FIvuPaqPC4CHIif4/c54db84b-e719-4644-890d-6f360c3c08db/video-720.mp4",
+          "__typename": "ClipVideoQuality"
+        },
+        {
+          "sourceURL": "https://production.assets.clips.twitchcdn.net/v2/media/ManlyLittleHabaneroTwitchRaid-FIvuPaqPC4CHIif4/c54db84b-e719-4644-890d-6f360c3c08db/video-480.mp4",
+          "__typename": "ClipVideoQuality"
+        },
+        {
+          "sourceURL": "https://production.assets.clips.twitchcdn.net/v2/media/ManlyLittleHabaneroTwitchRaid-FIvuPaqPC4CHIif4/c54db84b-e719-4644-890d-6f360c3c08db/video-360.mp4",
+          "__typename": "ClipVideoQuality"
+        }
+      ],
+      "isViewerEditRestricted": false,
+      "suggestedCropping": null,
+      "__typename": "Clip"
+    }
+  },
+  "extensions": {
+    "durationMilliseconds": 101,
+    "operationName": "ShareClipRenderStatus",
+    "requestID": "01JPJC145GZ00C7GVS5YN218B6"
+  }
+}

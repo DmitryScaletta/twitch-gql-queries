@@ -799,6 +799,168 @@ export interface SearchTraySearchSuggestionsData {
   searchSuggestions: SearchTraySuggestions;
 }
 
+export interface ShareClipRenderStatusBroadcaster {
+  id: string;
+  login: string;
+  displayName: string;
+  primaryColorHex: null | string;
+  isPartner: boolean;
+  profileImageURL: string;
+  followers: {
+    totalCount: number;
+    __typename: 'FollowerConnection';
+  };
+  stream: null | {
+    id: string;
+    viewersCount: number;
+    __typename: 'Stream';
+  };
+  lastBroadcast: {
+    id: string;
+    startedAt: string;
+    __typename: 'Broadcast';
+  };
+  self: unknown;
+  __typename: 'User';
+}
+
+export interface ShareClipRenderStatusClipAsset {
+  id: string;
+  aspectRatio: number;
+  type: 'SOURCE' | 'RECOMPOSED';
+  createdAt: string;
+  creationState: 'CREATED' | string;
+  curator: null | {
+    id: string;
+    login: string;
+    displayName: string;
+    profileImageURL: string;
+    __typename: 'User';
+  };
+  thumbnailURL: string;
+  videoQualities: {
+    frameRate: number;
+    quality: string;
+    sourceURL: string;
+    __typename: 'ClipVideoQuality';
+  }[];
+  portraitMetadata: null | {
+    portraitClipLayout: 'FULL' | 'STACKED';
+    fullTemplateMetadata: null | {
+      mainFrame: {
+        topLeft: {
+          xPercentage: number;
+          yPercentage: number;
+          __typename: 'PortraitCropCoordinates';
+        };
+        bottomRight: {
+          xPercentage: number;
+          yPercentage: number;
+          __typename: 'PortraitCropCoordinates';
+        };
+        __typename: 'PortraitCropMetadata';
+      };
+      __typename: 'FullTemplateMetadata';
+    };
+    stackedTemplateMetadata: null | {
+      topFrame: {
+        topLeft: {
+          xPercentage: number;
+          yPercentage: number;
+          __typename: 'PortraitCropCoordinates';
+        };
+        bottomRight: {
+          xPercentage: number;
+          yPercentage: number;
+          __typename: 'PortraitCropCoordinates';
+        };
+        __typename: 'PortraitCropMetadata';
+      };
+      bottomFrame: {
+        topLeft: {
+          xPercentage: number;
+          yPercentage: number;
+          __typename: 'PortraitCropCoordinates';
+        };
+        bottomRight: {
+          xPercentage: number;
+          yPercentage: number;
+          __typename: 'PortraitCropCoordinates';
+        };
+        __typename: 'PortraitCropMetadata';
+      };
+      __typename: 'StackedTemplateMetadata';
+    };
+    __typename: 'PortraitClipCropping';
+  };
+  __typename: 'ClipAsset';
+}
+
+export interface ShareClipRenderStatusClip {
+  id: string;
+  slug: string;
+  url: string;
+  embedURL: string;
+  title: string;
+  viewCount: number;
+  language: string;
+  isFeatured: boolean;
+  assets: ShareClipRenderStatusClipAsset[];
+  curator: null | {
+    id: string;
+    login: string;
+    displayName: string;
+    profileImageURL: string;
+    __typename: 'User';
+  };
+  game: null | {
+    id: string;
+    name: string;
+    boxArtURL: string;
+    displayName: string;
+    slug: string;
+    __typename: 'Game';
+  };
+  broadcast: {
+    id: string;
+    title: null | string;
+    __typename: 'Broadcast';
+  };
+  broadcaster: null | ShareClipRenderStatusBroadcaster;
+  thumbnailURL: string;
+  createdAt: string;
+  isPublished: boolean;
+  durationSeconds: number;
+  champBadge: unknown;
+  playbackAccessToken: {
+    signature: string;
+    value: string;
+    __typename: 'PlaybackAccessToken';
+  };
+  video: null | {
+    id: string;
+    broadcastType: 'ARCHIVE' | 'HIGHLIGHT';
+    title: string;
+    __typename: 'Video';
+  };
+  videoOffsetSeconds: null | number;
+  videoQualities: {
+    sourceURL: string;
+    __typename: 'ClipVideoQuality';
+  }[];
+  isViewerEditRestricted: boolean;
+  suggestedCropping: unknown;
+  __typename: 'Clip';
+}
+
+export interface ShareClipRenderStatusVariables {
+  slug: string;
+}
+
+export interface ShareClipRenderStatusData {
+  clip: null | ShareClipRenderStatusClip;
+}
+
 export interface StreamMetadataUser {
   id: string;
   primaryColorHex: null | string;
@@ -957,6 +1119,7 @@ export type GetUserIdResponse = QueryResponse<'GetUserID', GetUserIdData>;
 export type GlobalBadgesResponse = QueryResponse<'GlobalBadges', GlobalBadgesData>;
 export type SearchResultsPageSearchResultsResponse = QueryResponse<'SearchResultsPage_SearchResults', SearchResultsPageSearchResultsData>;
 export type SearchTraySearchSuggestionsResponse = QueryResponse<'SearchTray_SearchSuggestions', SearchTraySearchSuggestionsData>;
+export type ShareClipRenderStatusResponse = QueryResponse<'ShareClipRenderStatus', ShareClipRenderStatusData>;
 export type StreamMetadataResponse = QueryResponse<'StreamMetadata', StreamMetadataData>;
 export type UseLiveResponse = QueryResponse<'UseLive', UseLiveData>;
 export type UseViewCountResponse = QueryResponse<'UseViewCount', UseViewCountData>;
@@ -978,6 +1141,7 @@ export type QueryResponseMap = {
   GlobalBadges: GlobalBadgesResponse;
   SearchResultsPage_SearchResults: SearchResultsPageSearchResultsResponse;
   SearchTray_SearchSuggestions: SearchTraySearchSuggestionsResponse;
+  ShareClipRenderStatus: ShareClipRenderStatusResponse;
   StreamMetadata: StreamMetadataResponse;
   UseLive: UseLiveResponse;
   UseViewCount: UseViewCountResponse;

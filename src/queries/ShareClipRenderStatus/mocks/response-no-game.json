@@ -1,0 +1,130 @@
+{
+  "data": {
+    "clip": {
+      "id": "468568798",
+      "slug": "AstuteEncouragingCroquetteJebaited",
+      "url": "https://clips.twitch.tv/AstuteEncouragingCroquetteJebaited",
+      "embedURL": "https://clips.twitch.tv/embed?clip=AstuteEncouragingCroquetteJebaited",
+      "title": "TTFAF Pog",
+      "viewCount": 413,
+      "language": "EN",
+      "isFeatured": false,
+      "assets": [
+        {
+          "id": "AT-cm|541849220",
+          "aspectRatio": 1.7777777777777777,
+          "type": "SOURCE",
+          "createdAt": "2019-09-28T02:45:12.649350656Z",
+          "creationState": "CREATED",
+          "curator": {
+            "id": "38259425",
+            "login": "dmitryscaletta",
+            "displayName": "DmitryScaletta",
+            "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/dmitryscaletta-profile_image-41b036d0ef640053-50x50.jpeg",
+            "__typename": "User"
+          },
+          "thumbnailURL": "https://static-cdn.jtvnw.net/twitch-clips/AT-cm%7C541849220-preview-480x272.jpg",
+          "videoQualities": [
+            {
+              "frameRate": 59.9499845842897,
+              "quality": "1080",
+              "sourceURL": "https://production.assets.clips.twitchcdn.net/AT-cm%7C541849220.mp4",
+              "__typename": "ClipVideoQuality"
+            },
+            {
+              "frameRate": 59.9499845842897,
+              "quality": "720",
+              "sourceURL": "https://production.assets.clips.twitchcdn.net/AT-cm%7C541849220-720.mp4",
+              "__typename": "ClipVideoQuality"
+            },
+            {
+              "frameRate": 29.9821820175439,
+              "quality": "480",
+              "sourceURL": "https://production.assets.clips.twitchcdn.net/AT-cm%7C541849220-480.mp4",
+              "__typename": "ClipVideoQuality"
+            },
+            {
+              "frameRate": 29.9821820175439,
+              "quality": "360",
+              "sourceURL": "https://production.assets.clips.twitchcdn.net/AT-cm%7C541849220-360.mp4",
+              "__typename": "ClipVideoQuality"
+            }
+          ],
+          "portraitMetadata": null,
+          "__typename": "ClipAsset"
+        }
+      ],
+      "curator": {
+        "id": "38259425",
+        "login": "dmitryscaletta",
+        "displayName": "DmitryScaletta",
+        "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/dmitryscaletta-profile_image-41b036d0ef640053-70x70.jpeg",
+        "__typename": "User"
+      },
+      "game": null,
+      "broadcast": {
+        "id": "35800029248",
+        "title": null,
+        "__typename": "Broadcast"
+      },
+      "broadcaster": {
+        "id": "12826",
+        "login": "twitch",
+        "displayName": "Twitch",
+        "primaryColorHex": "5C16C5",
+        "isPartner": true,
+        "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/d5e6ebb4-a245-4ebf-bea6-2183e2f39600-profile_image-70x70.png",
+        "followers": {
+          "totalCount": 2379973,
+          "__typename": "FollowerConnection"
+        },
+        "stream": null,
+        "lastBroadcast": {
+          "id": "317752962300",
+          "startedAt": "2025-03-13T20:05:21.080933Z",
+          "__typename": "Broadcast"
+        },
+        "self": null,
+        "__typename": "User"
+      },
+      "thumbnailURL": "https://static-cdn.jtvnw.net/twitch-clips/AT-cm%7C541849220-preview-260x147.jpg",
+      "createdAt": "2019-09-28T02:45:12Z",
+      "isPublished": true,
+      "durationSeconds": 58,
+      "champBadge": null,
+      "playbackAccessToken": {
+        "signature": "e48adf76187f3359afcb2924b1a378069e5bff15",
+        "value": "{\"authorization\":{\"forbidden\":false,\"reason\":\"\"},\"clip_uri\":\"https://production.assets.clips.twitchcdn.net/AT-cm%7C541849220.mp4\",\"clip_slug\":\"AstuteEncouragingCroquetteJebaited\",\"device_id\":null,\"expires\":1742299379,\"user_id\":\"\",\"version\":2}",
+        "__typename": "PlaybackAccessToken"
+      },
+      "video": null,
+      "videoOffsetSeconds": null,
+      "videoQualities": [
+        {
+          "sourceURL": "https://production.assets.clips.twitchcdn.net/AT-cm%7C541849220.mp4",
+          "__typename": "ClipVideoQuality"
+        },
+        {
+          "sourceURL": "https://production.assets.clips.twitchcdn.net/AT-cm%7C541849220-720.mp4",
+          "__typename": "ClipVideoQuality"
+        },
+        {
+          "sourceURL": "https://production.assets.clips.twitchcdn.net/AT-cm%7C541849220-480.mp4",
+          "__typename": "ClipVideoQuality"
+        },
+        {
+          "sourceURL": "https://production.assets.clips.twitchcdn.net/AT-cm%7C541849220-360.mp4",
+          "__typename": "ClipVideoQuality"
+        }
+      ],
+      "isViewerEditRestricted": false,
+      "suggestedCropping": null,
+      "__typename": "Clip"
+    }
+  },
+  "extensions": {
+    "durationMilliseconds": 100,
+    "operationName": "ShareClipRenderStatus",
+    "requestID": "01JPJDG4YB7SXQJC5RJVF9DJNT"
+  }
+}

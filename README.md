@@ -73,6 +73,7 @@ console.log(channels);
 * GlobalBadges
 * SearchResultsPage_SearchResults
 * SearchTray_SearchSuggestions
+* ShareClipRenderStatus
 * StreamMetadata
 * UseLive
 * UseViewCount

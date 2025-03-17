@@ -14,6 +14,7 @@ export * from './src/queries/GetUserID/query.ts';
 export * from './src/queries/GlobalBadges/query.ts';
 export * from './src/queries/SearchResultsPage_SearchResults/query.ts';
 export * from './src/queries/SearchTray_SearchSuggestions/query.ts';
+export * from './src/queries/ShareClipRenderStatus/query.ts';
 export * from './src/queries/StreamMetadata/query.ts';
 export * from './src/queries/UseLive/query.ts';
 export * from './src/queries/UseViewCount/query.ts';
