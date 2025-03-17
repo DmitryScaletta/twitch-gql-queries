@@ -916,6 +916,34 @@ export interface VideoPreviewOverlayData {
   };
 }
 
+export interface WatchLivePromptVariables {
+  slug: string;
+}
+
+export interface WatchLivePromptData {
+  clip: null | {
+    id: string;
+    durationSeconds: number;
+    broadcaster: null | {
+      id: string;
+      login: string;
+      displayName: string;
+      stream: null | {
+        id: string;
+        game: null | {
+          id: string;
+          displayName: string;
+          __typename: 'Game';
+        };
+        __typename: 'Stream';
+      };
+      __typename: 'User';
+    };
+    thumbnailURL: string;
+    __typename: 'Clip';
+  };
+}
+
 export type BrowsePageAllDirectoriesResponse = QueryResponse<'BrowsePage_AllDirectories', BrowsePageAllDirectoriesData>;
 export type ChannelRootAboutPanelResponse = QueryResponse<'ChannelRoot_AboutPanel', ChannelRootAboutPanelData>;
 export type ChannelShellResponse = QueryResponse<'ChannelShell', ChannelShellData>;
@@ -934,6 +962,7 @@ export type UseLiveResponse = QueryResponse<'UseLive', UseLiveData>;
 export type UseViewCountResponse = QueryResponse<'UseViewCount', UseViewCountData>;
 export type VideoAccessTokenClipResponse = QueryResponse<'VideoAccessToken_Clip', VideoAccessTokenClipData>;
 export type VideoPreviewOverlayResponse = QueryResponse<'VideoPreviewOverlay', VideoPreviewOverlayData>;
+export type WatchLivePromptResponse = QueryResponse<'WatchLivePrompt', WatchLivePromptData>;
 
 export type QueryResponseMap = {
   BrowsePage_AllDirectories: BrowsePageAllDirectoriesResponse;
@@ -954,4 +983,5 @@ export type QueryResponseMap = {
   UseViewCount: UseViewCountResponse;
   VideoAccessToken_Clip: VideoAccessTokenClipResponse;
   VideoPreviewOverlay: VideoPreviewOverlayResponse;
+  WatchLivePrompt: WatchLivePromptResponse;
 };

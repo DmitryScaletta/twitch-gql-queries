@@ -1,0 +1,22 @@
+{
+  "data": {
+    "clip": {
+      "id": "3942697259",
+      "durationSeconds": 44,
+      "broadcaster": {
+        "id": "71092938",
+        "login": "xqc",
+        "displayName": "xQc",
+        "stream": null,
+        "__typename": "User"
+      },
+      "thumbnailURL": "https://static-cdn.jtvnw.net/twitch-clips/AT-cm%7C961443378-preview-86x45.jpg",
+      "__typename": "Clip"
+    }
+  },
+  "extensions": {
+    "durationMilliseconds": 62,
+    "operationName": "WatchLivePrompt",
+    "requestID": "01JPJ8RSC4GR35DD52JA3TMVXK"
+  }
+}

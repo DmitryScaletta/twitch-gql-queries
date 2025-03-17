@@ -1,0 +1,56 @@
+### WatchLivePrompt
+
+POST https://gql.twitch.tv/gql
+Content-Type: application/json
+Client-Id: {{$dotenv CLIENT_ID}}
+
+{
+  "operationName": "WatchLivePrompt",
+  "variables": {
+    "slug": "ManlyLittleHabaneroTwitchRaid-FIvuPaqPC4CHIif4"
+  },
+  "extensions": {
+    "persistedQuery": {
+      "version": 1,
+      "sha256Hash": "dcf741d88e5066ac8c140f1247309c36ce459b9c15a1ef726634081733d7147d"
+    }
+  }
+}
+
+### no broadcaster
+
+POST https://gql.twitch.tv/gql
+Content-Type: application/json
+Client-Id: {{$dotenv CLIENT_ID}}
+
+{
+  "operationName": "WatchLivePrompt",
+  "variables": {
+    "slug": "ShakingBlitheOwlBrokeBack"
+  },
+  "extensions": {
+    "persistedQuery": {
+      "version": 1,
+      "sha256Hash": "dcf741d88e5066ac8c140f1247309c36ce459b9c15a1ef726634081733d7147d"
+    }
+  }
+}
+
+### not exists
+
+POST https://gql.twitch.tv/gql
+Content-Type: application/json
+Client-Id: {{$dotenv CLIENT_ID}}
+
+{
+  "operationName": "WatchLivePrompt",
+  "variables": {
+    "slug": "not-exists"
+  },
+  "extensions": {
+    "persistedQuery": {
+      "version": 1,
+      "sha256Hash": "dcf741d88e5066ac8c140f1247309c36ce459b9c15a1ef726634081733d7147d"
+    }
+  }
+}

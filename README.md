@@ -40,7 +40,7 @@ const [
     login: 'xqc',
     limit: 30,
     criteria: { filter: 'LAST_MONTH' },
-  })
+  }),
 ]);
 
 console.log({
@@ -78,6 +78,7 @@ console.log(channels);
 * UseViewCount
 * VideoAccessToken_Clip
 * VideoPreviewOverlay
+* WatchLivePrompt
 
 ## Adding new query
 

@@ -1,0 +1,30 @@
+{
+  "data": {
+    "clip": {
+      "id": "3846773990",
+      "durationSeconds": 29,
+      "broadcaster": {
+        "id": "22552479",
+        "login": "giantwaffle",
+        "displayName": "Giantwaffle",
+        "stream": {
+          "id": "319125443197",
+          "game": {
+            "displayName": "Minecraft",
+            "id": "27471",
+            "__typename": "Game"
+          },
+          "__typename": "Stream"
+        },
+        "__typename": "User"
+      },
+      "thumbnailURL": "https://static-cdn.jtvnw.net/twitch-clips-thumbnails-prod/ManlyLittleHabaneroTwitchRaid-FIvuPaqPC4CHIif4/c54db84b-e719-4644-890d-6f360c3c08db/preview.jpg",
+      "__typename": "Clip"
+    }
+  },
+  "extensions": {
+    "durationMilliseconds": 85,
+    "operationName": "WatchLivePrompt",
+    "requestID": "01JPJ8XFBG77SKDB9MGGGB0K7F"
+  }
+}

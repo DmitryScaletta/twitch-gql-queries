@@ -1,0 +1,16 @@
+{
+  "data": {
+    "clip": {
+      "id": "3666079080",
+      "durationSeconds": 30,
+      "broadcaster": null,
+      "thumbnailURL": "https://static-cdn.jtvnw.net/twitch-clips/22594802816-index-0000006526-preview-86x45.jpg",
+      "__typename": "Clip"
+    }
+  },
+  "extensions": {
+    "durationMilliseconds": 50,
+    "operationName": "WatchLivePrompt",
+    "requestID": "01JPJ91B4N3W3A38YAQMNB0CM9"
+  }
+}
