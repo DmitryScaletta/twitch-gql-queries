@@ -1,0 +1,123 @@
+import { Type as T, type TProperties } from '@sinclair/typebox';
+
+export const User = {
+  id: T.String(),
+  login: T.String(),
+  displayName: T.String(),
+  description: T.Union([T.Null(), T.String()]),
+  primaryColorHex: T.Union([T.Null(), T.String()]),
+  profileImageURL: T.String(),
+  bannerImageURL: T.String(),
+  __typename: T.Literal('User'),
+} satisfies TProperties;
+
+export const UserRoles = {
+  isPartner: T.Boolean(),
+  isAffiliate: T.Boolean(),
+  isStaff: T.Union([T.Null(), T.Boolean()]),
+  isParticipatingDJ: T.Boolean(),
+  __typename: T.Literal('UserRoles'),
+} satisfies TProperties;
+
+export const Channel = {
+  id: T.String(),
+  __typename: T.Literal('Channel'),
+};
+
+export const SocialMedia = {
+  id: T.String(),
+  name: T.String(),
+  title: T.String(),
+  url: T.String({
+    // format: 'uri'
+  }),
+  __typename: T.Literal('SocialMedia'),
+} satisfies TProperties;
+
+export const Broadcast = {
+  id: T.String(),
+  title: T.String(),
+  startedAt: T.String({
+    /* format: 'date-time' */
+  }),
+  __typename: T.Literal('Broadcast'),
+} satisfies TProperties;
+
+export const Stream = {
+  id: T.String(),
+  viewersCount: T.Number(),
+  __typename: T.Literal('Stream'),
+} satisfies TProperties;
+
+export const Team = {
+  id: T.String(),
+  name: T.String(),
+  displayName: T.String(),
+  __typename: T.Literal('Team'),
+} satisfies TProperties;
+
+export const Video = {
+  id: T.String(),
+  // TODO: find all possible statuses
+  status: T.Union([T.Literal('RECORDED'), T.String()]),
+  __typename: T.Literal('Video'),
+} satisfies TProperties;
+
+export const Clip = {
+  id: T.String(),
+  slug: T.String(),
+  title: T.String(),
+  viewCount: T.Number(),
+  durationSeconds: T.Number(),
+  isFeatured: T.Boolean(),
+  __typename: T.Literal('Clip'),
+} satisfies TProperties;
+
+export const Game = {
+  id: T.String(),
+  slug: T.String(),
+  displayName: T.String(),
+  name: T.String(),
+  avatarURL: T.String({
+    // format: 'uri'
+  }),
+  viewersCount: T.Number(),
+  originalReleaseDate: T.Union([
+    T.Null(),
+    T.String({
+      // format: 'date-time'
+    }),
+  ]),
+  __typename: T.Literal('Game'),
+} satisfies TProperties;
+
+export const GameEdge = {
+  cursor: T.String(),
+  trackingID: T.Union([T.Null(), T.String()]),
+  __typename: T.Literal('GameEdge'),
+} satisfies TProperties;
+
+export const Tag = {
+  id: T.String(),
+  isLanguageTag: T.Boolean(),
+  localizedName: T.String(),
+  tagName: T.String(),
+  __typename: T.Literal('Tag'),
+} satisfies TProperties;
+
+export const PageInfo = {
+  hasNextPage: T.Boolean(),
+  __typename: T.Literal('PageInfo'),
+} satisfies TProperties;
+
+export const Schedule = {
+  id: T.String(),
+  __typename: T.Literal('Schedule'),
+} satisfies TProperties;
+
+export const ScheduleSegment = {
+  id: T.String(),
+  startAt: T.String(),
+  hasReminder: T.Boolean(),
+  __typename: T.Literal('ScheduleSegment'),
+} satisfies TProperties;
