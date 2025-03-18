@@ -1,5 +1,11 @@
 import { Type as T } from '@sinclair/typebox';
-import { getResponseSchema, LegacyRef } from '../../schema.ts';
+import {
+  buildObject,
+  getResponseSchema,
+  LegacyRef,
+  pick,
+} from '../../schema.ts';
+import * as schemas from '../../schemas.ts';
 
 const name = 'BrowsePage_AllDirectories';
 const category = 'BrowsePage';
@@ -10,7 +16,7 @@ export const SortSchema = T.Union(
   { $id: `${category}Sort` },
 );
 
-export const VariablesSchema = T.Object(
+export const VariablesSchema = buildObject(
   {
     limit: T.Number(),
     options: T.Object(
@@ -35,82 +41,46 @@ export const VariablesSchema = T.Object(
     ),
     cursor: T.Optional(T.Union([T.String(), T.Null()])),
   },
-  {
-    $id: `${displayName}Variables`,
-    additionalProperties: false,
-  },
+  { $id: `${displayName}Variables` },
 );
 
-export const GameSchema = T.Object(
+export const GameSchema = buildObject(
   {
-    id: T.String(),
-    slug: T.String(),
-    displayName: T.String(),
-    name: T.String(),
-    avatarURL: T.String({
-      /* format: 'uri' */
-    }),
-    viewersCount: T.Number(),
+    ...pick(schemas.Game, [
+      'id',
+      'slug',
+      'displayName',
+      'name',
+      'avatarURL',
+      'viewersCount',
+      'originalReleaseDate',
+    ]),
     tags: T.Array(
-      T.Object(
-        {
-          id: T.String(),
-          isLanguageTag: T.Boolean(),
-          localizedName: T.String(),
-          tagName: T.String(),
-          __typename: T.Literal('Tag'),
-        },
-        { additionalProperties: false },
+      buildObject(
+        pick(schemas.Tag, ['id', 'isLanguageTag', 'localizedName', 'tagName']),
       ),
     ),
-    originalReleaseDate: T.Union([
-      T.String({
-        /* format: 'date-time' */
-      }),
-      T.Null(),
-    ]),
-    __typename: T.Literal('Game'),
   },
-  {
-    $id: `${category}Game`,
-    additionalProperties: false,
-  },
+  { $id: `${category}Game` },
 );
 
-export const DataSchema = T.Object(
+export const DataSchema = buildObject(
   {
     directoriesWithTags: T.Union([
       T.Null(),
-      T.Object(
-        {
-          edges: T.Array(
-            T.Object(
-              {
-                cursor: T.String(),
-                trackingID: T.Union([T.Null(), T.String()]),
-                node: LegacyRef(GameSchema),
-                __typename: T.Literal('GameEdge'),
-              },
-              { additionalProperties: false },
-            ),
-          ),
-          pageInfo: T.Object(
-            {
-              hasNextPage: T.Boolean(),
-              __typename: T.Literal('PageInfo'),
-            },
-            { additionalProperties: false },
-          ),
-          __typename: T.Literal('GameConnection'),
-        },
-        { additionalProperties: false },
-      ),
+      buildObject({
+        edges: T.Array(
+          buildObject({
+            ...pick(schemas.GameEdge, ['cursor', 'trackingID']),
+            node: LegacyRef(GameSchema),
+          }),
+        ),
+        pageInfo: buildObject(pick(schemas.PageInfo, ['hasNextPage'])),
+        __typename: T.Literal('GameConnection'),
+      }),
     ]),
   },
-  {
-    $id: `${displayName}Data`,
-    additionalProperties: false,
-  },
+  { $id: `${displayName}Data` },
 );
 
 export const ResponseSchema = getResponseSchema(name, DataSchema, true);

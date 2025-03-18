@@ -1,96 +1,67 @@
 import { Type as T } from '@sinclair/typebox';
-import { getResponseSchema, LegacyRef } from '../../schema.ts';
+import {
+  buildObject,
+  getResponseSchema,
+  LegacyRef,
+  pick,
+} from '../../schema.ts';
+import * as schemas from '../../schemas.ts';
 
 const name = 'ChannelShell';
 const displayName = name;
 
-export const VariablesSchema = T.Object(
+export const VariablesSchema = buildObject(
   { login: T.String() },
-  {
-    $id: `${displayName}Variables`,
-    additionalProperties: false,
-  },
+  { $id: `${displayName}Variables` },
 );
 
-export const UserSchema = T.Object(
+export const UserSchema = buildObject(
   {
-    id: T.String(),
-    login: T.String(),
-    displayName: T.String(),
-    primaryColorHex: T.Union([T.Null(), T.String()]),
-    profileImageURL: T.String(),
-    bannerImageURL: T.String(),
-    stream: T.Union([
-      T.Object(
-        {
-          id: T.String(),
-          viewersCount: T.Number(),
-          __typename: T.Literal('Stream'),
-        },
-        { additionalProperties: false },
-      ),
-      T.Null(),
+    ...pick(schemas.User, [
+      'id',
+      'login',
+      'displayName',
+      'primaryColorHex',
+      'profileImageURL',
+      'bannerImageURL',
     ]),
-    channel: T.Object(
-      {
-        id: T.String(),
-        self: T.Object(
-          {
-            isAuthorized: T.Boolean(),
-            restrictionType: T.Null(),
-            __typename: T.Literal('ChannelSelfEdge'),
-          },
-          { additionalProperties: false },
-        ),
-        trailer: T.Object(
-          {
-            video: T.Union([
-              T.Object(
-                {
-                  id: T.String(),
-                  self: T.Object(
-                    {
-                      viewingHistory: T.Null(),
-                      __typename: T.Literal('VideoSelfEdge'),
-                    },
-                    { additionalProperties: false },
-                  ),
-                  __typename: T.Literal('Video'),
-                },
-                { additionalProperties: false },
-              ),
-              T.Null(),
-            ]),
-            __typename: T.Literal('Trailer'),
-          },
-          { additionalProperties: false },
-        ),
-        home: T.Object(
-          {
-            preferences: T.Object(
-              {
-                heroPreset: T.String(),
-                __typename: T.Literal('ChannelHomePreferences'),
-              },
-              { additionalProperties: false },
-            ),
-            __typename: T.Literal('ChannelHome'),
-          },
-          { additionalProperties: false },
-        ),
-        __typename: T.Literal('Channel'),
-      },
-      { additionalProperties: false },
-    ),
-    __typename: T.Literal('User'),
+    stream: T.Union([
+      T.Null(),
+      buildObject(pick(schemas.Stream, ['id', 'viewersCount'])),
+    ]),
+    channel: buildObject({
+      ...pick(schemas.Channel, ['id']),
+      self: buildObject({
+        isAuthorized: T.Boolean(),
+        restrictionType: T.Null(),
+        __typename: T.Literal('ChannelSelfEdge'),
+      }),
+      trailer: buildObject({
+        video: T.Union([
+          T.Null(),
+          buildObject({
+            ...pick(schemas.Video, ['id']),
+            self: buildObject({
+              viewingHistory: T.Null(),
+              __typename: T.Literal('VideoSelfEdge'),
+            }),
+          }),
+        ]),
+        __typename: T.Literal('Trailer'),
+      }),
+      home: buildObject({
+        preferences: buildObject({
+          heroPreset: T.String(),
+          __typename: T.Literal('ChannelHomePreferences'),
+        }),
+        __typename: T.Literal('ChannelHome'),
+      }),
+    }),
   },
-  {
-    $id: `${displayName}User`,
-    additionalProperties: false,
-  },
+  { $id: `${displayName}User` },
 );
 
-export const UserDoesNotExistSchema = T.Object(
+export const UserDoesNotExistSchema = buildObject(
   {
     userDoesNotExist: T.String(),
     reason: T.Union([
@@ -101,10 +72,7 @@ export const UserDoesNotExistSchema = T.Object(
     ]),
     __typename: T.Literal('UserDoesNotExist'),
   },
-  {
-    $id: `${displayName}UserDoesNotExist`,
-    additionalProperties: false,
-  },
+  { $id: `${displayName}UserDoesNotExist` },
 );
 
 export const DataSchema = T.Object(

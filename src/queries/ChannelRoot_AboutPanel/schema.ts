@@ -1,169 +1,100 @@
 import { Type as T } from '@sinclair/typebox';
-import { getResponseSchema, LegacyRef } from '../../schema.ts';
+import {
+  buildObject,
+  getResponseSchema,
+  LegacyRef,
+  pick,
+} from '../../schema.ts';
+import * as schemas from '../../schemas.ts';
 
 const name = 'ChannelRoot_AboutPanel';
 const category = 'ChannelRoot';
 const displayName = 'ChannelRootAboutPanel';
 
-export const VariablesSchema = T.Object(
+export const VariablesSchema = buildObject(
   {
     channelLogin: T.String(),
     skipSchedule: T.Boolean(),
     includeIsDJ: T.Boolean(),
   },
-  {
-    $id: `${displayName}Variables`,
-    additionalProperties: false,
-  },
+  { $id: `${displayName}Variables` },
 );
 
-export const UserSchema = T.Object(
+export const UserSchema = buildObject(
   {
-    id: T.String(),
-    description: T.Union([T.Null(), T.String()]),
-    displayName: T.String(),
-    primaryColorHex: T.Union([T.Null(), T.String()]),
-    profileImageURL: T.String(),
-    followers: T.Object(
-      {
-        totalCount: T.Number(),
-        __typename: T.Literal('FollowerConnection'),
-      },
-      { additionalProperties: false },
-    ),
-    roles: T.Object(
-      {
-        isPartner: T.Boolean(),
-        isAffiliate: T.Boolean(),
-        isStaff: T.Union([T.Null(), T.Boolean()]),
-        isParticipatingDJ: T.Optional(T.Boolean()),
-        __typename: T.Literal('UserRoles'),
-      },
-      { additionalProperties: false },
-    ),
-    channel: T.Object(
-      {
-        id: T.String(),
-        socialMedias: T.Array(
-          T.Object(
-            {
-              id: T.String(),
-              name: T.String(),
-              title: T.String(),
-              url: T.String({
-                /* format: 'uri' */
-              }),
-              __typename: T.Literal('SocialMedia'),
-            },
-            { additionalProperties: false },
-          ),
-        ),
-        schedule: T.Optional(
-          T.Union([
-            T.Null(),
-            T.Object({
-              id: T.String(),
-              nextSegment: T.Union([
-                T.Null(),
-                T.Object(
-                  {
-                    id: T.String(),
-                    startAt: T.String(),
-                    hasReminder: T.Boolean(),
-                    __typename: T.Literal('ScheduleSegment'),
-                  },
-                  { additionalProperties: false },
-                ),
-              ]),
-              __typename: T.Literal('Schedule'),
-            }),
-          ]),
-        ),
-        __typename: T.Literal('Channel'),
-      },
-      { additionalProperties: false },
-    ),
-    lastBroadcast: T.Object(
-      {
-        id: T.Union([T.Null(), T.String()]),
-        game: T.Union([
+    ...pick(schemas.User, [
+      'id',
+      'description',
+      'displayName',
+      'primaryColorHex',
+      'profileImageURL',
+    ]),
+    followers: buildObject({
+      totalCount: T.Number(),
+      __typename: T.Literal('FollowerConnection'),
+    }),
+    roles: buildObject({
+      ...pick(schemas.UserRoles, ['isPartner', 'isAffiliate', 'isStaff']),
+      isParticipatingDJ: T.Optional(T.Boolean()),
+    }),
+    channel: buildObject({
+      ...pick(schemas.Channel, ['id']),
+      socialMedias: T.Array(
+        buildObject(pick(schemas.SocialMedia, ['id', 'name', 'title', 'url'])),
+      ),
+      schedule: T.Optional(
+        T.Union([
           T.Null(),
-          T.Object(
-            {
-              id: T.String(),
-              displayName: T.String(),
-              __typename: T.Literal('Game'),
-            },
-            { additionalProperties: false },
-          ),
+          buildObject({
+            ...pick(schemas.Schedule, ['id']),
+            nextSegment: T.Union([
+              T.Null(),
+              buildObject(
+                pick(schemas.ScheduleSegment, ['id', 'startAt', 'hasReminder']),
+              ),
+            ]),
+          }),
         ]),
-        __typename: T.Literal('Broadcast'),
-      },
-      { additionalProperties: false },
-    ),
+      ),
+    }),
+    // don't use Broadcast object here
+    lastBroadcast: buildObject({
+      id: T.Union([T.Null(), T.String()]),
+      game: T.Union([
+        T.Null(),
+        buildObject(pick(schemas.Game, ['id', 'displayName'])),
+      ]),
+      __typename: T.Literal('Broadcast'),
+    }),
     primaryTeam: T.Union([
       T.Null(),
-      T.Object(
-        {
-          id: T.String(),
-          name: T.String(),
-          displayName: T.String(),
-          __typename: T.Literal('Team'),
-        },
-        { additionalProperties: false },
-      ),
+      buildObject(pick(schemas.Team, ['id', 'name', 'displayName'])),
     ]),
-    videos: T.Object(
-      {
-        edges: T.Array(
-          T.Object(
-            {
-              node: T.Object(
-                {
-                  id: T.String(),
-                  game: T.Union([
-                    T.Null(),
-                    T.Object(
-                      {
-                        id: T.String(),
-                        displayName: T.String(),
-                        __typename: T.Literal('Game'),
-                      },
-                      { additionalProperties: false },
-                    ),
-                  ]),
-                  // TODO: find all possible statuses
-                  status: T.Union([T.Literal('RECORDED'), T.String()]),
-                  __typename: T.Literal('Video'),
-                },
-                { additionalProperties: false },
-              ),
-              __typename: T.Literal('VideoEdge'),
-            },
-            { additionalProperties: false },
-          ),
-        ),
-        __typename: T.Literal('VideoConnection'),
-      },
-      { additionalProperties: false },
-    ),
-    __typename: T.Literal('User'),
+    videos: buildObject({
+      edges: T.Array(
+        buildObject({
+          node: buildObject({
+            ...pick(schemas.Video, ['id', 'status']),
+            game: T.Union([
+              T.Null(),
+              buildObject(pick(schemas.Game, ['id', 'displayName'])),
+            ]),
+          }),
+          __typename: T.Literal('VideoEdge'),
+        }),
+      ),
+      __typename: T.Literal('VideoConnection'),
+    }),
   },
-  {
-    $id: `${category}User`,
-    additionalProperties: false,
-  },
+  { $id: `${category}User` },
 );
 
-export const DataSchema = T.Object(
+export const DataSchema = buildObject(
   {
     currentUser: T.Union([T.Null(), T.Unknown()]),
     user: T.Union([T.Null(), LegacyRef(UserSchema)]),
   },
-  {
-    $id: `${displayName}Data`,
-    additionalProperties: false,
-  },
+  { $id: `${displayName}Data` },
 );
 
 export const ResponseSchema = getResponseSchema(name, DataSchema);

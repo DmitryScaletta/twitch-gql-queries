@@ -7,6 +7,7 @@ export interface BrowsePageGame {
   name: string;
   avatarURL: string;
   viewersCount: number;
+  originalReleaseDate: null | string;
   tags: {
     id: string;
     isLanguageTag: boolean;
@@ -14,7 +15,6 @@ export interface BrowsePageGame {
     tagName: string;
     __typename: 'Tag';
   }[];
-  originalReleaseDate: string | null;
   __typename: 'Game';
 }
 
@@ -105,12 +105,12 @@ export interface ChannelRootUser {
     edges: {
       node: {
         id: string;
+        status: 'RECORDED' | string;
         game: null | {
           id: string;
           displayName: string;
           __typename: 'Game';
         };
-        status: 'RECORDED' | string;
         __typename: 'Video';
       };
       __typename: 'VideoEdge';
@@ -144,11 +144,11 @@ export interface ChannelShellUser {
   primaryColorHex: null | string;
   profileImageURL: string;
   bannerImageURL: string;
-  stream: {
+  stream: null | {
     id: string;
     viewersCount: number;
     __typename: 'Stream';
-  } | null;
+  };
   channel: {
     id: string;
     self: {
@@ -157,14 +157,14 @@ export interface ChannelShellUser {
       __typename: 'ChannelSelfEdge';
     };
     trailer: {
-      video: {
+      video: null | {
         id: string;
         self: {
           viewingHistory: null;
           __typename: 'VideoSelfEdge';
         };
         __typename: 'Video';
-      } | null;
+      };
       __typename: 'Trailer';
     };
     home: {
