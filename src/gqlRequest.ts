@@ -23,6 +23,6 @@ export const gqlRequest = async <
     },
     ...requestInit,
   });
-  if (!res.ok) throw new Error();
+  if (!res.ok) throw new Error(`${res.status} ${res.statusText}`);
   return res.json();
 };
