@@ -1,0 +1,2367 @@
+{
+  "data": {
+    "game": {
+      "id": "32982",
+      "name": "Grand Theft Auto V",
+      "displayName": "Grand Theft Auto V",
+      "streams": {
+        "banners": null,
+        "edges": [
+          {
+            "cursor": "eyJzIjo1ODIuNDQxODMxOTMzNDM3NCwiZCI6ZmFsc2UsInQiOnRydWV9",
+            "node": {
+              "id": "319191324669",
+              "title": "YOUR GF’s FAV LIVESTREAM [GTA RP]",
+              "viewersCount": 582,
+              "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_torihubbard-440x248.jpg",
+              "broadcaster": {
+                "id": "855275904",
+                "login": "torihubbard",
+                "displayName": "TORIHUBBARD",
+                "roles": {
+                  "isPartner": false,
+                  "isParticipatingDJ": false,
+                  "__typename": "UserRoles"
+                },
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/a822e53d-044f-41b9-873d-0a46c0484fed-profile_image-50x50.png",
+                "primaryColorHex": "000000",
+                "__typename": "User"
+              },
+              "freeformTags": [
+                {
+                  "id": "fft:CHANNEL:855275904:0",
+                  "name": "GTARP",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:855275904:1",
+                  "name": "GTA",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:855275904:2",
+                  "name": "English",
+                  "__typename": "FreeformTag"
+                }
+              ],
+              "type": "live",
+              "game": {
+                "id": "32982",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/32982_IGDB-40x56.jpg",
+                "name": "Grand Theft Auto V",
+                "displayName": "Grand Theft Auto V",
+                "slug": "grand-theft-auto-v",
+                "__typename": "Game"
+              },
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Stream"
+            },
+            "trackingID": null,
+            "__typename": "StreamEdge"
+          },
+          {
+            "cursor": "eyJzIjozMjkuODMxNTEzNjU2OTYyNTYsImQiOmZhbHNlLCJ0Ijp0cnVlfQ==",
+            "node": {
+              "id": "319186812925",
+              "title": "Grizzley World WL RP | LLKRILLZ THEY STILL TALKING??  R.I.P GUCC/PHAT GEEZ",
+              "viewersCount": 329,
+              "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_dionwaiters-440x248.jpg",
+              "broadcaster": {
+                "id": "138278990",
+                "login": "dionwaiters",
+                "displayName": "Dionwaiters",
+                "roles": {
+                  "isPartner": true,
+                  "isParticipatingDJ": false,
+                  "__typename": "UserRoles"
+                },
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/6b915b15-6fdc-442a-a91d-6d7f5948ce11-profile_image-50x50.png",
+                "primaryColorHex": "00F593",
+                "__typename": "User"
+              },
+              "freeformTags": [
+                {
+                  "id": "fft:CHANNEL:138278990:0",
+                  "name": "English",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:138278990:1",
+                  "name": "gaming",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:138278990:2",
+                  "name": "gta",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:138278990:3",
+                  "name": "GTARP",
+                  "__typename": "FreeformTag"
+                }
+              ],
+              "type": "live",
+              "game": {
+                "id": "32982",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/32982_IGDB-40x56.jpg",
+                "name": "Grand Theft Auto V",
+                "displayName": "Grand Theft Auto V",
+                "slug": "grand-theft-auto-v",
+                "__typename": "Game"
+              },
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Stream"
+            },
+            "trackingID": null,
+            "__typename": "StreamEdge"
+          },
+          {
+            "cursor": "eyJzIjoyNDAuNTUzOTYwNTAwNDE0LCJkIjpmYWxzZSwidCI6dHJ1ZX0=",
+            "node": {
+              "id": "317360188153",
+              "title": "ДОБРОЕ УТРО | MAJESTIC DALLAS | ПРОМОКОД: BIF | !tg",
+              "viewersCount": 240,
+              "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_alleythugg-440x248.jpg",
+              "broadcaster": {
+                "id": "726951564",
+                "login": "alleythugg",
+                "displayName": "ALLEYthugg",
+                "roles": {
+                  "isPartner": false,
+                  "isParticipatingDJ": false,
+                  "__typename": "UserRoles"
+                },
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/c58ebfef-6728-4919-bfa3-92bc1c7bbb38-profile_image-50x50.png",
+                "primaryColorHex": "FFFFFF",
+                "__typename": "User"
+              },
+              "freeformTags": [
+                {
+                  "id": "fft:CHANNEL:726951564:0",
+                  "name": "Русский",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:726951564:1",
+                  "name": "лысый",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:726951564:2",
+                  "name": "gta",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:726951564:3",
+                  "name": "GTARP",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:726951564:4",
+                  "name": "blackrussia",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:726951564:5",
+                  "name": "majestic",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:726951564:6",
+                  "name": "MajesticRP",
+                  "__typename": "FreeformTag"
+                }
+              ],
+              "type": "live",
+              "game": {
+                "id": "32982",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/32982_IGDB-40x56.jpg",
+                "name": "Grand Theft Auto V",
+                "displayName": "Grand Theft Auto V",
+                "slug": "grand-theft-auto-v",
+                "__typename": "Game"
+              },
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Stream"
+            },
+            "trackingID": null,
+            "__typename": "StreamEdge"
+          },
+          {
+            "cursor": "eyJzIjoxODMuNTE4MTk3Mjg1MTMyMDYsImQiOmZhbHNlLCJ0Ijp0cnVlfQ==",
+            "node": {
+              "id": "317361966457",
+              "title": "GAMMA - UNO STAFF PER AMICO - @3ldiablo89 on social - !gamma !giveaway !vip !plus",
+              "viewersCount": 183,
+              "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_3ldiablo89-440x248.jpg",
+              "broadcaster": {
+                "id": "280204203",
+                "login": "3ldiablo89",
+                "displayName": "3ldiablo89",
+                "roles": {
+                  "isPartner": true,
+                  "isParticipatingDJ": false,
+                  "__typename": "UserRoles"
+                },
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/7e95c500-e8a5-45d2-9183-73ef4e0e4ae9-profile_image-50x50.png",
+                "primaryColorHex": "000000",
+                "__typename": "User"
+              },
+              "freeformTags": [
+                {
+                  "id": "fft:CHANNEL:280204203:0",
+                  "name": "Italiano",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:280204203:1",
+                  "name": "Gtarp",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:280204203:2",
+                  "name": "3ldiablo89",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:280204203:3",
+                  "name": "Diablo",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:280204203:4",
+                  "name": "fivem",
+                  "__typename": "FreeformTag"
+                }
+              ],
+              "type": "live",
+              "game": {
+                "id": "32982",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/32982_IGDB-40x56.jpg",
+                "name": "Grand Theft Auto V",
+                "displayName": "Grand Theft Auto V",
+                "slug": "grand-theft-auto-v",
+                "__typename": "Game"
+              },
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Stream"
+            },
+            "trackingID": null,
+            "__typename": "StreamEdge"
+          },
+          {
+            "cursor": "eyJzIjoxNzYuNTAzMzY2OTgyNDQ4NywiZCI6ZmFsc2UsInQiOnRydWV9",
+            "node": {
+              "id": "319182612989",
+              "title": "SILVER SPOON GOON 🕵️‍♂️🕵️‍♂️🕵️‍♂️ | #ATR 🏀@Tourskii",
+              "viewersCount": 176,
+              "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_rarri-440x248.jpg",
+              "broadcaster": {
+                "id": "882545378",
+                "login": "rarri",
+                "displayName": "Rarri",
+                "roles": {
+                  "isPartner": true,
+                  "isParticipatingDJ": false,
+                  "__typename": "UserRoles"
+                },
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/ecc027da-fc71-4386-a40e-03e194dd8039-profile_image-50x50.png",
+                "primaryColorHex": "000000",
+                "__typename": "User"
+              },
+              "freeformTags": [
+                {
+                  "id": "fft:CHANNEL:882545378:0",
+                  "name": "GTARP",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:882545378:1",
+                  "name": "English",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:882545378:2",
+                  "name": "WindyCity",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:882545378:3",
+                  "name": "YBNLS",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:882545378:4",
+                  "name": "D10",
+                  "__typename": "FreeformTag"
+                }
+              ],
+              "type": "live",
+              "game": {
+                "id": "32982",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/32982_IGDB-40x56.jpg",
+                "name": "Grand Theft Auto V",
+                "displayName": "Grand Theft Auto V",
+                "slug": "grand-theft-auto-v",
+                "__typename": "Game"
+              },
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Stream"
+            },
+            "trackingID": null,
+            "__typename": "StreamEdge"
+          },
+          {
+            "cursor": "eyJzIjoxNjUuMzI0NzM4NDY1NzkwOCwiZCI6ZmFsc2UsInQiOnRydWV9",
+            "node": {
+              "id": "317356712569",
+              "title": "UnityLegacy FA 🦉 : Maddie aide les citoyen de la ville🧪 | @skyeee EN LIVE",
+              "viewersCount": 165,
+              "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_unitylegacytv-440x248.jpg",
+              "broadcaster": {
+                "id": "1269464337",
+                "login": "unitylegacytv",
+                "displayName": "UnityLegacyTV",
+                "roles": {
+                  "isPartner": false,
+                  "isParticipatingDJ": false,
+                  "__typename": "UserRoles"
+                },
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/6439b445-4c37-43c4-8b1e-2477b50b6c6f-profile_image-50x50.png",
+                "primaryColorHex": null,
+                "__typename": "User"
+              },
+              "freeformTags": [
+                {
+                  "id": "fft:CHANNEL:1269464337:0",
+                  "name": "Français",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:1269464337:1",
+                  "name": "gta",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:1269464337:2",
+                  "name": "gtarp",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:1269464337:3",
+                  "name": "kmsenkangoo",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:1269464337:4",
+                  "name": "goldenn",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:1269464337:5",
+                  "name": "freeaccess",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:1269464337:6",
+                  "name": "serveurfa",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:1269464337:7",
+                  "name": "meilleurserveur",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:1269464337:8",
+                  "name": "unitylegacy",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:1269464337:9",
+                  "name": "unityrp",
+                  "__typename": "FreeformTag"
+                }
+              ],
+              "type": "live",
+              "game": {
+                "id": "32982",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/32982_IGDB-40x56.jpg",
+                "name": "Grand Theft Auto V",
+                "displayName": "Grand Theft Auto V",
+                "slug": "grand-theft-auto-v",
+                "__typename": "Game"
+              },
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Stream"
+            },
+            "trackingID": null,
+            "__typename": "StreamEdge"
+          },
+          {
+            "cursor": "eyJzIjoxNTkuNTQ2MDk2ODYzMTE5NDMsImQiOmZhbHNlLCJ0Ijp0cnVlfQ==",
+            "node": {
+              "id": "317362260089",
+              "title": "🎮 ЛИДЕР АМ GRAPESEED",
+              "viewersCount": 159,
+              "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_kkodya-440x248.jpg",
+              "broadcaster": {
+                "id": "239346193",
+                "login": "kkodya",
+                "displayName": "kkodyA",
+                "roles": {
+                  "isPartner": true,
+                  "isParticipatingDJ": false,
+                  "__typename": "UserRoles"
+                },
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/f65ed5c6-8790-47fb-a4b4-f34766d5193c-profile_image-50x50.png",
+                "primaryColorHex": "EC84FF",
+                "__typename": "User"
+              },
+              "freeformTags": [
+                {
+                  "id": "fft:CHANNEL:239346193:0",
+                  "name": "гта",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:239346193:1",
+                  "name": "гта5",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:239346193:2",
+                  "name": "gta5",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:239346193:3",
+                  "name": "gta5rp",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:239346193:4",
+                  "name": "kkodya",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:239346193:5",
+                  "name": "гта5рп",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:239346193:6",
+                  "name": "Русский",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:239346193:7",
+                  "name": "GTARP",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:239346193:8",
+                  "name": "кодя",
+                  "__typename": "FreeformTag"
+                }
+              ],
+              "type": "live",
+              "game": {
+                "id": "32982",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/32982_IGDB-40x56.jpg",
+                "name": "Grand Theft Auto V",
+                "displayName": "Grand Theft Auto V",
+                "slug": "grand-theft-auto-v",
+                "__typename": "Game"
+              },
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Stream"
+            },
+            "trackingID": null,
+            "__typename": "StreamEdge"
+          },
+          {
+            "cursor": "eyJzIjoxMjUuOTM3Nzc3NjUwOTkzNzQsImQiOmZhbHNlLCJ0Ijp0cnVlfQ==",
+            "node": {
+              "id": "314176303739",
+              "title": "HydrateRP | TONY CARUSO | PULLIN BPS 🥶",
+              "viewersCount": 125,
+              "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_sampie-440x248.jpg",
+              "broadcaster": {
+                "id": "246618759",
+                "login": "sampie",
+                "displayName": "SampIe",
+                "roles": {
+                  "isPartner": true,
+                  "isParticipatingDJ": false,
+                  "__typename": "UserRoles"
+                },
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/7066a113-9d71-41f5-921a-96e8f5d8545e-profile_image-50x50.png",
+                "primaryColorHex": "000000",
+                "__typename": "User"
+              },
+              "freeformTags": [
+                {
+                  "id": "fft:CHANNEL:246618759:0",
+                  "name": "English",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:246618759:1",
+                  "name": "ADHD",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:246618759:2",
+                  "name": "funny",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:246618759:3",
+                  "name": "LOUD",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:246618759:4",
+                  "name": "Anime",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:246618759:5",
+                  "name": "fivem",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:246618759:6",
+                  "name": "gta",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:246618759:7",
+                  "name": "GTARP",
+                  "__typename": "FreeformTag"
+                }
+              ],
+              "type": "live",
+              "game": {
+                "id": "32982",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/32982_IGDB-40x56.jpg",
+                "name": "Grand Theft Auto V",
+                "displayName": "Grand Theft Auto V",
+                "slug": "grand-theft-auto-v",
+                "__typename": "Game"
+              },
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Stream"
+            },
+            "trackingID": null,
+            "__typename": "StreamEdge"
+          },
+          {
+            "cursor": "eyJzIjoxMjUuNDYzMDIzNzc2NzYxOTYsImQiOmZhbHNlLCJ0Ijp0cnVlfQ==",
+            "node": {
+              "id": "315107603320",
+              "title": "✞ КАНЕКИ КЕН В ГЕТТО ✞   👾 !redux !тик-ток !tg !res !микро !ds !внешка !плейлист",
+              "viewersCount": 125,
+              "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_kill_wise-440x248.jpg",
+              "broadcaster": {
+                "id": "711131333",
+                "login": "kill_wise",
+                "displayName": "kill_wise",
+                "roles": {
+                  "isPartner": false,
+                  "isParticipatingDJ": false,
+                  "__typename": "UserRoles"
+                },
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/0a7951b1-c966-4f50-99a6-7034dba89ae2-profile_image-50x50.jpeg",
+                "primaryColorHex": null,
+                "__typename": "User"
+              },
+              "freeformTags": [
+                {
+                  "id": "fft:CHANNEL:711131333:0",
+                  "name": "Русский",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:711131333:1",
+                  "name": "GTARP",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:711131333:2",
+                  "name": "гта5",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:711131333:3",
+                  "name": "гта5рп",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:711131333:4",
+                  "name": "гта",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:711131333:5",
+                  "name": "MURRIETA",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:711131333:6",
+                  "name": "grapeseed",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:711131333:7",
+                  "name": "кс2",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:711131333:8",
+                  "name": "ксгострим",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:711131333:9",
+                  "name": "Повтор",
+                  "__typename": "FreeformTag"
+                }
+              ],
+              "type": "live",
+              "game": {
+                "id": "32982",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/32982_IGDB-40x56.jpg",
+                "name": "Grand Theft Auto V",
+                "displayName": "Grand Theft Auto V",
+                "slug": "grand-theft-auto-v",
+                "__typename": "Game"
+              },
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Stream"
+            },
+            "trackingID": null,
+            "__typename": "StreamEdge"
+          },
+          {
+            "cursor": "eyJzIjoxMTguMTA2NDkxODgxOTEzMTYsImQiOmZhbHNlLCJ0Ijp0cnVlfQ==",
+            "node": {
+              "id": "318025949436",
+              "title": "【猪狩 翔太】IRiSの残滓視点～鳩・指示コメ禁止～（#ストグラ 297日目）",
+              "viewersCount": 118,
+              "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_ki_n_chi-440x248.jpg",
+              "broadcaster": {
+                "id": "116409620",
+                "login": "ki_n_chi",
+                "displayName": "きんち",
+                "roles": {
+                  "isPartner": false,
+                  "isParticipatingDJ": false,
+                  "__typename": "UserRoles"
+                },
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/1b370ed5-f38e-4522-b696-5c7bf2a4f6d3-profile_image-50x50.png",
+                "primaryColorHex": null,
+                "__typename": "User"
+              },
+              "freeformTags": [
+                {
+                  "id": "fft:CHANNEL:116409620:0",
+                  "name": "父背",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:116409620:1",
+                  "name": "プロゲーマー",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:116409620:2",
+                  "name": "日本語",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:116409620:3",
+                  "name": "ストグラ",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:116409620:4",
+                  "name": "japanese",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:116409620:5",
+                  "name": "定点カメラ",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:116409620:6",
+                  "name": "GTARP",
+                  "__typename": "FreeformTag"
+                }
+              ],
+              "type": "live",
+              "game": {
+                "id": "32982",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/32982_IGDB-40x56.jpg",
+                "name": "Grand Theft Auto V",
+                "displayName": "Grand Theft Auto V",
+                "slug": "grand-theft-auto-v",
+                "__typename": "Game"
+              },
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Stream"
+            },
+            "trackingID": null,
+            "__typename": "StreamEdge"
+          },
+          {
+            "cursor": "eyJzIjoxMDcuMTU0NjIxNTM3NTc3OTcsImQiOmZhbHNlLCJ0Ijp0cnVlfQ==",
+            "node": {
+              "id": "317360647801",
+              "title": "Different Personality Different day | Character Creation | Voice Over | Unique RP | Role Play",
+              "viewersCount": 107,
+              "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_rickysonone-440x248.jpg",
+              "broadcaster": {
+                "id": "75346359",
+                "login": "rickysonone",
+                "displayName": "RickysOnOne",
+                "roles": {
+                  "isPartner": true,
+                  "isParticipatingDJ": false,
+                  "__typename": "UserRoles"
+                },
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/61c6cad7-4fe7-4a33-bc24-5ca73e57a23f-profile_image-50x50.png",
+                "primaryColorHex": "0013A3",
+                "__typename": "User"
+              },
+              "freeformTags": [
+                {
+                  "id": "fft:CHANNEL:75346359:0",
+                  "name": "English",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:75346359:1",
+                  "name": "Roleplay",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:75346359:2",
+                  "name": "GTARP",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:75346359:3",
+                  "name": "GTAV",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:75346359:4",
+                  "name": "funnystream",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:75346359:5",
+                  "name": "content",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:75346359:6",
+                  "name": "ADHD",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:75346359:7",
+                  "name": "VoiceActor",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:75346359:8",
+                  "name": "unique",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:75346359:9",
+                  "name": "uniquerp",
+                  "__typename": "FreeformTag"
+                }
+              ],
+              "type": "live",
+              "game": {
+                "id": "32982",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/32982_IGDB-40x56.jpg",
+                "name": "Grand Theft Auto V",
+                "displayName": "Grand Theft Auto V",
+                "slug": "grand-theft-auto-v",
+                "__typename": "Game"
+              },
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Stream"
+            },
+            "trackingID": null,
+            "__typename": "StreamEdge"
+          },
+          {
+            "cursor": "eyJzIjoxMDQuNTk4OTI5Nzk3MjA1ODMsImQiOmZhbHNlLCJ0Ijp0cnVlfQ==",
+            "node": {
+              "id": "317355214969",
+              "title": "Crimler / Gangster gesucht | Streamen darf jede[r] | !mitspielen | !Spieler [in d. Prime] | Deine Einreise-Anleitung steht unten | Vod",
+              "viewersCount": 104,
+              "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_flensburgrp-440x248.jpg",
+              "broadcaster": {
+                "id": "118254971",
+                "login": "flensburgrp",
+                "displayName": "FlensburgRP",
+                "roles": {
+                  "isPartner": false,
+                  "isParticipatingDJ": false,
+                  "__typename": "UserRoles"
+                },
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/943b54e9-8c03-4292-9b4a-4929779a15d5-profile_image-50x50.png",
+                "primaryColorHex": null,
+                "__typename": "User"
+              },
+              "freeformTags": [
+                {
+                  "id": "fft:CHANNEL:118254971:0",
+                  "name": "Deutsch",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:118254971:1",
+                  "name": "j4fgde",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:118254971:2",
+                  "name": "rp",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:118254971:3",
+                  "name": "rpg",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:118254971:4",
+                  "name": "flensburg",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:118254971:5",
+                  "name": "flensburgrp",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:118254971:6",
+                  "name": "GTARP",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:118254971:7",
+                  "name": "Rollenspiel",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:118254971:8",
+                  "name": "fivem",
+                  "__typename": "FreeformTag"
+                }
+              ],
+              "type": "live",
+              "game": {
+                "id": "32982",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/32982_IGDB-40x56.jpg",
+                "name": "Grand Theft Auto V",
+                "displayName": "Grand Theft Auto V",
+                "slug": "grand-theft-auto-v",
+                "__typename": "Game"
+              },
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Stream"
+            },
+            "trackingID": null,
+            "__typename": "StreamEdge"
+          },
+          {
+            "cursor": "eyJzIjoxMDEuMzA1MTYzMDAzMzQyNSwiZCI6ZmFsc2UsInQiOnRydWV9",
+            "node": {
+              "id": "317357430137",
+              "title": "[Unity-Life.de] Tu´s Day - Operation GTO, die zweite / !holy !unity-life !WeAreUnity / 18+ / GER / GTA Roleplay",
+              "viewersCount": 101,
+              "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_atomixonair-440x248.jpg",
+              "broadcaster": {
+                "id": "103946249",
+                "login": "atomixonair",
+                "displayName": "AtomixOnAir",
+                "roles": {
+                  "isPartner": true,
+                  "isParticipatingDJ": false,
+                  "__typename": "UserRoles"
+                },
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/ea04418e-3d44-4206-a679-82a724c5602e-profile_image-50x50.png",
+                "primaryColorHex": "000000",
+                "__typename": "User"
+              },
+              "freeformTags": [
+                {
+                  "id": "fft:CHANNEL:103946249:0",
+                  "name": "Deutsch",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:103946249:1",
+                  "name": "UnityLife",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:103946249:2",
+                  "name": "GTA",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:103946249:3",
+                  "name": "DJ",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:103946249:4",
+                  "name": "GTARP",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:103946249:5",
+                  "name": "Multiplayer",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:103946249:6",
+                  "name": "Roleplay",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:103946249:7",
+                  "name": "Music",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:103946249:8",
+                  "name": "GTAMods",
+                  "__typename": "FreeformTag"
+                }
+              ],
+              "type": "live",
+              "game": {
+                "id": "32982",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/32982_IGDB-40x56.jpg",
+                "name": "Grand Theft Auto V",
+                "displayName": "Grand Theft Auto V",
+                "slug": "grand-theft-auto-v",
+                "__typename": "Game"
+              },
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Stream"
+            },
+            "trackingID": null,
+            "__typename": "StreamEdge"
+          },
+          {
+            "cursor": "eyJzIjo5Ny41NDYxMDA3OTc3MjQ0NiwiZCI6ZmFsc2UsInQiOnRydWV9",
+            "node": {
+              "id": "319165534589",
+              "title": "off clock | !sub !prime",
+              "viewersCount": 97,
+              "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_natee-440x248.jpg",
+              "broadcaster": {
+                "id": "267484707",
+                "login": "natee",
+                "displayName": "Natee",
+                "roles": {
+                  "isPartner": true,
+                  "isParticipatingDJ": false,
+                  "__typename": "UserRoles"
+                },
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/ed84165e-1b7e-4f65-8d06-0164038e3a4b-profile_image-50x50.png",
+                "primaryColorHex": "F10000",
+                "__typename": "User"
+              },
+              "freeformTags": [
+                {
+                  "id": "fft:CHANNEL:267484707:0",
+                  "name": "English",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:267484707:1",
+                  "name": "GTARP",
+                  "__typename": "FreeformTag"
+                }
+              ],
+              "type": "live",
+              "game": {
+                "id": "32982",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/32982_IGDB-40x56.jpg",
+                "name": "Grand Theft Auto V",
+                "displayName": "Grand Theft Auto V",
+                "slug": "grand-theft-auto-v",
+                "__typename": "Game"
+              },
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Stream"
+            },
+            "trackingID": null,
+            "__typename": "StreamEdge"
+          },
+          {
+            "cursor": "eyJzIjo5My4yNDk4Nzg0NTMxNDg5NywiZCI6ZmFsc2UsInQiOnRydWV9",
+            "node": {
+              "id": "318014482428",
+              "title": "Brandon in Prairie Roleplay @teeomertaa !Discord !commands Omerta",
+              "viewersCount": 93,
+              "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_teeomertaa-440x248.jpg",
+              "broadcaster": {
+                "id": "621113490",
+                "login": "teeomertaa",
+                "displayName": "teeomertaa",
+                "roles": {
+                  "isPartner": false,
+                  "isParticipatingDJ": false,
+                  "__typename": "UserRoles"
+                },
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/ff6c9f81-0324-463a-bb64-a92b7a8bd750-profile_image-50x50.png",
+                "primaryColorHex": "285CC6",
+                "__typename": "User"
+              },
+              "freeformTags": [
+                {
+                  "id": "fft:CHANNEL:621113490:0",
+                  "name": "Funny",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:621113490:1",
+                  "name": "Reactions",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:621113490:2",
+                  "name": "GTARP",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:621113490:3",
+                  "name": "English",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:621113490:4",
+                  "name": "roleplayer",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:621113490:5",
+                  "name": "Omerta",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:621113490:6",
+                  "name": "prairierp",
+                  "__typename": "FreeformTag"
+                }
+              ],
+              "type": "live",
+              "game": {
+                "id": "32982",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/32982_IGDB-40x56.jpg",
+                "name": "Grand Theft Auto V",
+                "displayName": "Grand Theft Auto V",
+                "slug": "grand-theft-auto-v",
+                "__typename": "Game"
+              },
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Stream"
+            },
+            "trackingID": null,
+            "__typename": "StreamEdge"
+          },
+          {
+            "cursor": "eyJzIjo5My43NTE3OTUxMzE2NTUzNiwiZCI6ZmFsc2UsInQiOnRydWV9",
+            "node": {
+              "id": "317362589305",
+              "title": "На месте GTA 5 RP promo STN",
+              "viewersCount": 93,
+              "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_r0x1c-440x248.jpg",
+              "broadcaster": {
+                "id": "272678466",
+                "login": "r0x1c",
+                "displayName": "r0x1c",
+                "roles": {
+                  "isPartner": false,
+                  "isParticipatingDJ": false,
+                  "__typename": "UserRoles"
+                },
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/1217a6ce-b811-4fb8-aa5b-f2210d06c8ad-profile_image-50x50.png",
+                "primaryColorHex": null,
+                "__typename": "User"
+              },
+              "freeformTags": [
+                {
+                  "id": "fft:CHANNEL:272678466:0",
+                  "name": "gtarp",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:272678466:1",
+                  "name": "гта",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:272678466:2",
+                  "name": "GTA5RP",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:272678466:3",
+                  "name": "radmir",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:272678466:4",
+                  "name": "crmp",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:272678466:5",
+                  "name": "crmpradmir",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:272678466:6",
+                  "name": "гта5рп",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:272678466:7",
+                  "name": "стримgta5rp",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:272678466:8",
+                  "name": "стримгта5рп",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:272678466:9",
+                  "name": "ирл",
+                  "__typename": "FreeformTag"
+                }
+              ],
+              "type": "live",
+              "game": {
+                "id": "32982",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/32982_IGDB-40x56.jpg",
+                "name": "Grand Theft Auto V",
+                "displayName": "Grand Theft Auto V",
+                "slug": "grand-theft-auto-v",
+                "__typename": "Game"
+              },
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Stream"
+            },
+            "trackingID": null,
+            "__typename": "StreamEdge"
+          },
+          {
+            "cursor": "eyJzIjo5MC43MzAwNjY5NDYxNzkxNSwiZCI6ZmFsc2UsInQiOnRydWV9",
+            "node": {
+              "id": "317359852025",
+              "title": "ДНЕВНОЙ РАССЧИЛ НА ЛИДЕРКЕ LCN|  !redux !res |  ЗАЯВКИ - !fam  | CONSUME  |  Promo: BLATOSPH РОЛЛ В ЧАТ 52",
+              "viewersCount": 90,
+              "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_blatospherax-440x248.jpg",
+              "broadcaster": {
+                "id": "943010247",
+                "login": "blatospherax",
+                "displayName": "blatospherax",
+                "roles": {
+                  "isPartner": false,
+                  "isParticipatingDJ": false,
+                  "__typename": "UserRoles"
+                },
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/27f3191e-032d-4a29-8ed8-be8a61df3051-profile_image-50x50.png",
+                "primaryColorHex": null,
+                "__typename": "User"
+              },
+              "freeformTags": [
+                {
+                  "id": "fft:CHANNEL:943010247:0",
+                  "name": "gta",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:943010247:1",
+                  "name": "gta5rp",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:943010247:2",
+                  "name": "GrandTheftAutoV",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:943010247:3",
+                  "name": "GTARP",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:943010247:4",
+                  "name": "тулевоgta5rp",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:943010247:5",
+                  "name": "vzp",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:943010247:6",
+                  "name": "vespuccigta5rp",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:943010247:7",
+                  "name": "Русский",
+                  "__typename": "FreeformTag"
+                }
+              ],
+              "type": "live",
+              "game": {
+                "id": "32982",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/32982_IGDB-40x56.jpg",
+                "name": "Grand Theft Auto V",
+                "displayName": "Grand Theft Auto V",
+                "slug": "grand-theft-auto-v",
+                "__typename": "Game"
+              },
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Stream"
+            },
+            "trackingID": null,
+            "__typename": "StreamEdge"
+          },
+          {
+            "cursor": "eyJzIjo4OC40MzQwODYzNzAxNTAxMSwiZCI6ZmFsc2UsInQiOnRydWV9",
+            "node": {
+              "id": "314176083963",
+              "title": "DayBreakRP | NEW DAYTIME SCHEDULE?!?! WHATS DAYTIME RP LIKE?!?!",
+              "viewersCount": 88,
+              "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_popenzl-440x248.jpg",
+              "broadcaster": {
+                "id": "178874779",
+                "login": "popenzl",
+                "displayName": "POPENZL",
+                "roles": {
+                  "isPartner": false,
+                  "isParticipatingDJ": false,
+                  "__typename": "UserRoles"
+                },
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/a7dba165-e10a-42c8-a990-c6f9f6fd96f5-profile_image-50x50.png",
+                "primaryColorHex": "000000",
+                "__typename": "User"
+              },
+              "freeformTags": [
+                {
+                  "id": "fft:CHANNEL:178874779:0",
+                  "name": "Maori",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:178874779:1",
+                  "name": "NewZealand",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:178874779:2",
+                  "name": "skuxx",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:178874779:3",
+                  "name": "RP",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:178874779:4",
+                  "name": "gtarp",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:178874779:5",
+                  "name": "daybreak",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:178874779:6",
+                  "name": "tomatosauce",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:178874779:7",
+                  "name": "English",
+                  "__typename": "FreeformTag"
+                }
+              ],
+              "type": "live",
+              "game": {
+                "id": "32982",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/32982_IGDB-40x56.jpg",
+                "name": "Grand Theft Auto V",
+                "displayName": "Grand Theft Auto V",
+                "slug": "grand-theft-auto-v",
+                "__typename": "Game"
+              },
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Stream"
+            },
+            "trackingID": null,
+            "__typename": "StreamEdge"
+          },
+          {
+            "cursor": "eyJzIjo4MS4yOTI3NDg4OTI1MTUxNCwiZCI6ZmFsc2UsInQiOnRydWV9",
+            "node": {
+              "id": "317361285241",
+              "title": "💫 свой ебы*рь? 💫 PROMO: RAULLKA 💫!TG💫 стрим до дня X 48/60",
+              "viewersCount": 81,
+              "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_fr1eze4-440x248.jpg",
+              "broadcaster": {
+                "id": "888821074",
+                "login": "fr1eze4",
+                "displayName": "fr1eze4",
+                "roles": {
+                  "isPartner": false,
+                  "isParticipatingDJ": false,
+                  "__typename": "UserRoles"
+                },
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/68869c68-623d-46b2-af19-28c42789341c-profile_image-50x50.png",
+                "primaryColorHex": null,
+                "__typename": "User"
+              },
+              "freeformTags": [
+                {
+                  "id": "fft:CHANNEL:888821074:0",
+                  "name": "ＧTA5",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:888821074:1",
+                  "name": "GTARP",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:888821074:2",
+                  "name": "davis",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:888821074:3",
+                  "name": "Русский",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:888821074:4",
+                  "name": "HawickGta5rp",
+                  "__typename": "FreeformTag"
+                }
+              ],
+              "type": "live",
+              "game": {
+                "id": "32982",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/32982_IGDB-40x56.jpg",
+                "name": "Grand Theft Auto V",
+                "displayName": "Grand Theft Auto V",
+                "slug": "grand-theft-auto-v",
+                "__typename": "Game"
+              },
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Stream"
+            },
+            "trackingID": null,
+            "__typename": "StreamEdge"
+          },
+          {
+            "cursor": "eyJzIjo3OC44NDg0MjYyNTA0NzI3NywiZCI6ZmFsc2UsInQiOnRydWV9",
+            "node": {
+              "id": "317361989753",
+              "title": "ПОЖИЛАЯ ГВАРДИЯ  | Промо: tayfungg | GTA 5 RP Rainbow",
+              "viewersCount": 78,
+              "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_tayfun_gg-440x248.jpg",
+              "broadcaster": {
+                "id": "1115633225",
+                "login": "tayfun_gg",
+                "displayName": "tayfun_gg",
+                "roles": {
+                  "isPartner": false,
+                  "isParticipatingDJ": false,
+                  "__typename": "UserRoles"
+                },
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/d3de1644-d7e5-41b9-976b-7048a8dd66b0-profile_image-50x50.png",
+                "primaryColorHex": "FF00D0",
+                "__typename": "User"
+              },
+              "freeformTags": [
+                {
+                  "id": "fft:CHANNEL:1115633225:0",
+                  "name": "Русский",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:1115633225:1",
+                  "name": "RP",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:1115633225:2",
+                  "name": "GTARP",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:1115633225:3",
+                  "name": "RAINBOW",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:1115633225:4",
+                  "name": "rainbow",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:1115633225:5",
+                  "name": "GTA5RP",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:1115633225:6",
+                  "name": "GTA5RPRAINBOW",
+                  "__typename": "FreeformTag"
+                }
+              ],
+              "type": "live",
+              "game": {
+                "id": "32982",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/32982_IGDB-40x56.jpg",
+                "name": "Grand Theft Auto V",
+                "displayName": "Grand Theft Auto V",
+                "slug": "grand-theft-auto-v",
+                "__typename": "Game"
+              },
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Stream"
+            },
+            "trackingID": null,
+            "__typename": "StreamEdge"
+          },
+          {
+            "cursor": "eyJzIjo3Ny44NDYxOTM2MzAyMTI1LCJkIjpmYWxzZSwidCI6dHJ1ZX0=",
+            "node": {
+              "id": "317361333241",
+              "title": "[Unity-Life.de] ◻️  Hallo ihr Geilen! ❤ ◻️ Erst ne Runde Cop, dann ECHO! ◻️ !holy ◻️ !server ◻️ !clip ◻️ !YT ◻️ !dc  ◻️ #Werbung",
+              "viewersCount": 77,
+              "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_justndrew-440x248.jpg",
+              "broadcaster": {
+                "id": "42855132",
+                "login": "justndrew",
+                "displayName": "JustNdrew",
+                "roles": {
+                  "isPartner": true,
+                  "isParticipatingDJ": false,
+                  "__typename": "UserRoles"
+                },
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/47fd3c17-3c1a-44a8-a97c-ddcaed5717f3-profile_image-50x50.png",
+                "primaryColorHex": "FF4747",
+                "__typename": "User"
+              },
+              "freeformTags": [
+                {
+                  "id": "fft:CHANNEL:42855132:0",
+                  "name": "Deutsch",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:42855132:1",
+                  "name": "GTAⅤ",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:42855132:2",
+                  "name": "Roleplay",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:42855132:3",
+                  "name": "UnityLifeDE",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:42855132:4",
+                  "name": "Unity",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:42855132:5",
+                  "name": "GTARP",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:42855132:6",
+                  "name": "AltV",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:42855132:7",
+                  "name": "LostMC",
+                  "__typename": "FreeformTag"
+                }
+              ],
+              "type": "live",
+              "game": {
+                "id": "32982",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/32982_IGDB-40x56.jpg",
+                "name": "Grand Theft Auto V",
+                "displayName": "Grand Theft Auto V",
+                "slug": "grand-theft-auto-v",
+                "__typename": "Game"
+              },
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Stream"
+            },
+            "trackingID": null,
+            "__typename": "StreamEdge"
+          },
+          {
+            "cursor": "eyJzIjo3MC4xODUwMDM1MDc2OTI2LCJkIjpmYWxzZSwidCI6dHJ1ZX0=",
+            "node": {
+              "id": "317360103801",
+              "title": "🌟🔴Morning Birdy - Glaub ich werd krank [Homestate]",
+              "viewersCount": 70,
+              "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_just_birdy-440x248.jpg",
+              "broadcaster": {
+                "id": "455280776",
+                "login": "just_birdy",
+                "displayName": "Just_Birdy",
+                "roles": {
+                  "isPartner": true,
+                  "isParticipatingDJ": false,
+                  "__typename": "UserRoles"
+                },
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/fcfc8d78-2d92-46df-bf6b-a6ac6048347d-profile_image-50x50.png",
+                "primaryColorHex": "D699A5",
+                "__typename": "User"
+              },
+              "freeformTags": [
+                {
+                  "id": "fft:CHANNEL:455280776:0",
+                  "name": "Deutsch",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:455280776:1",
+                  "name": "SafeSpace",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:455280776:2",
+                  "name": "ADHS",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:455280776:3",
+                  "name": "HomeState",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:455280776:4",
+                  "name": "vtube",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:455280776:5",
+                  "name": "GTARP",
+                  "__typename": "FreeformTag"
+                }
+              ],
+              "type": "live",
+              "game": {
+                "id": "32982",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/32982_IGDB-40x56.jpg",
+                "name": "Grand Theft Auto V",
+                "displayName": "Grand Theft Auto V",
+                "slug": "grand-theft-auto-v",
+                "__typename": "Game"
+              },
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Stream"
+            },
+            "trackingID": null,
+            "__typename": "StreamEdge"
+          },
+          {
+            "cursor": "eyJzIjo3MC44NTUzNTc4NDU3NDU4MywiZCI6ZmFsc2UsInQiOnRydWV9",
+            "node": {
+              "id": "317362018297",
+              "title": "переходим на Vinewood? / / glow !tg !ds",
+              "viewersCount": 70,
+              "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_sky7ide-440x248.jpg",
+              "broadcaster": {
+                "id": "770060514",
+                "login": "sky7ide",
+                "displayName": "sky7ide",
+                "roles": {
+                  "isPartner": false,
+                  "isParticipatingDJ": false,
+                  "__typename": "UserRoles"
+                },
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/d35c5975-57ec-4f92-9812-e0cef5c9a10d-profile_image-50x50.png",
+                "primaryColorHex": "1F69FF",
+                "__typename": "User"
+              },
+              "freeformTags": [
+                {
+                  "id": "fft:CHANNEL:770060514:0",
+                  "name": "Русский",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:770060514:1",
+                  "name": "sky",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:770060514:2",
+                  "name": "deadinside",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:770060514:3",
+                  "name": "GTAⅤ",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:770060514:4",
+                  "name": "GTARP",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:770060514:5",
+                  "name": "Blackberrygta5rp",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:770060514:6",
+                  "name": "vzp",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:770060514:7",
+                  "name": "войнасемей",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:770060514:8",
+                  "name": "Murrieta",
+                  "__typename": "FreeformTag"
+                }
+              ],
+              "type": "live",
+              "game": {
+                "id": "32982",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/32982_IGDB-40x56.jpg",
+                "name": "Grand Theft Auto V",
+                "displayName": "Grand Theft Auto V",
+                "slug": "grand-theft-auto-v",
+                "__typename": "Game"
+              },
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Stream"
+            },
+            "trackingID": null,
+            "__typename": "StreamEdge"
+          },
+          {
+            "cursor": "eyJzIjo2Ni42OTA0MzU4MDQ1ODc0MiwiZCI6ZmFsc2UsInQiOnRydWV9",
+            "node": {
+              "id": "317361845369",
+              "title": "🟣STAFF IMPERO🟣Cosa ci riserveranno oggi le assistenze?🟣SEGUIMI SUI SOCIAL CON !social 💎",
+              "viewersCount": 66,
+              "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_ceciliaattv-440x248.jpg",
+              "broadcaster": {
+                "id": "647555360",
+                "login": "ceciliaattv",
+                "displayName": "Ceciliaattv",
+                "roles": {
+                  "isPartner": false,
+                  "isParticipatingDJ": false,
+                  "__typename": "UserRoles"
+                },
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/e0f517bb-ff01-46e7-925d-0d51bd095c78-profile_image-50x50.jpeg",
+                "primaryColorHex": "000000",
+                "__typename": "User"
+              },
+              "freeformTags": [
+                {
+                  "id": "fft:CHANNEL:647555360:0",
+                  "name": "streamer",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:647555360:1",
+                  "name": "fivem",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:647555360:2",
+                  "name": "twitchtv",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:647555360:3",
+                  "name": "gtarp",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:647555360:4",
+                  "name": "fps",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:647555360:5",
+                  "name": "leagueoflegeneds",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:647555360:6",
+                  "name": "steam",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:647555360:7",
+                  "name": "palworld",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:647555360:8",
+                  "name": "impero",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:647555360:9",
+                  "name": "Blackout",
+                  "__typename": "FreeformTag"
+                }
+              ],
+              "type": "live",
+              "game": {
+                "id": "32982",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/32982_IGDB-40x56.jpg",
+                "name": "Grand Theft Auto V",
+                "displayName": "Grand Theft Auto V",
+                "slug": "grand-theft-auto-v",
+                "__typename": "Game"
+              },
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Stream"
+            },
+            "trackingID": null,
+            "__typename": "StreamEdge"
+          },
+          {
+            "cursor": "eyJzIjo2Mi4zMDE4NDA0MTA0MDUyNywiZCI6ZmFsc2UsInQiOnRydWV9",
+            "node": {
+              "id": "317945178236",
+              "title": "24/7 BTC \u0026 DUANGA RP 🤎",
+              "viewersCount": 62,
+              "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_mierda_tv-440x248.jpg",
+              "broadcaster": {
+                "id": "1104876023",
+                "login": "mierda_tv",
+                "displayName": "MIERDA_TV",
+                "roles": {
+                  "isPartner": false,
+                  "isParticipatingDJ": false,
+                  "__typename": "UserRoles"
+                },
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/e0b65ec0-697e-4340-9f99-6373a4e13936-profile_image-50x50.png",
+                "primaryColorHex": null,
+                "__typename": "User"
+              },
+              "freeformTags": [
+                {
+                  "id": "fft:CHANNEL:1104876023:0",
+                  "name": "GTAV",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:1104876023:1",
+                  "name": "Roleplay",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:1104876023:2",
+                  "name": "gta",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:1104876023:3",
+                  "name": "abugoku9999",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:1104876023:4",
+                  "name": "Deutsch",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:1104876023:5",
+                  "name": "gtaroleplay",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:1104876023:6",
+                  "name": "RP",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:1104876023:7",
+                  "name": "GTARP",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:1104876023:8",
+                  "name": "Cali",
+                  "__typename": "FreeformTag"
+                }
+              ],
+              "type": "live",
+              "game": {
+                "id": "32982",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/32982_IGDB-40x56.jpg",
+                "name": "Grand Theft Auto V",
+                "displayName": "Grand Theft Auto V",
+                "slug": "grand-theft-auto-v",
+                "__typename": "Game"
+              },
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Stream"
+            },
+            "trackingID": null,
+            "__typename": "StreamEdge"
+          },
+          {
+            "cursor": "eyJzIjo1MS4xODA3ODA0MjkyMDIzMTUsImQiOmZhbHNlLCJ0Ijp0cnVlfQ==",
+            "node": {
+              "id": "317361823609",
+              "title": "[TROLL GTA RP]🐔MATINAL STAFF avec SANCHO DE POULETO sur Diamond City !!!🐓🔥!don",
+              "viewersCount": 51,
+              "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_siorrac-440x248.jpg",
+              "broadcaster": {
+                "id": "582711822",
+                "login": "siorrac",
+                "displayName": "SioRRac",
+                "roles": {
+                  "isPartner": false,
+                  "isParticipatingDJ": false,
+                  "__typename": "UserRoles"
+                },
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/82cc152d-5f75-477f-b4bb-62d1de97ef3f-profile_image-50x50.png",
+                "primaryColorHex": "9900FF",
+                "__typename": "User"
+              },
+              "freeformTags": [
+                {
+                  "id": "fft:CHANNEL:582711822:0",
+                  "name": "Français",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:582711822:1",
+                  "name": "dyslexic",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:582711822:2",
+                  "name": "Multijoueur",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:582711822:3",
+                  "name": "helpme",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:582711822:4",
+                  "name": "RP",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:582711822:5",
+                  "name": "humour",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:582711822:6",
+                  "name": "diamondcity",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:582711822:7",
+                  "name": "GTARP",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:582711822:8",
+                  "name": "fivem",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:582711822:9",
+                  "name": "GTAⅤ",
+                  "__typename": "FreeformTag"
+                }
+              ],
+              "type": "live",
+              "game": {
+                "id": "32982",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/32982_IGDB-40x56.jpg",
+                "name": "Grand Theft Auto V",
+                "displayName": "Grand Theft Auto V",
+                "slug": "grand-theft-auto-v",
+                "__typename": "Game"
+              },
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Stream"
+            },
+            "trackingID": null,
+            "__typename": "StreamEdge"
+          },
+          {
+            "cursor": "eyJzIjo1MS44Njk4NTA3Mzk1NzM1NiwiZCI6ZmFsc2UsInQiOnRydWV9",
+            "node": {
+              "id": "317359350649",
+              "title": "[21 Jump Click] Moleen Gloods - Heu...oui ?",
+              "viewersCount": 51,
+              "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_kathalinia-440x248.jpg",
+              "broadcaster": {
+                "id": "414139784",
+                "login": "kathalinia",
+                "displayName": "Kathalinia",
+                "roles": {
+                  "isPartner": false,
+                  "isParticipatingDJ": false,
+                  "__typename": "UserRoles"
+                },
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/f905c1e9-96de-4ba9-adb7-f9b7671b6c18-profile_image-50x50.png",
+                "primaryColorHex": "A477E8",
+                "__typename": "User"
+              },
+              "freeformTags": [
+                {
+                  "id": "fft:CHANNEL:414139784:0",
+                  "name": "Français",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:414139784:1",
+                  "name": "BestCommunity",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:414139784:2",
+                  "name": "ＧTA5",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:414139784:3",
+                  "name": "GTARP",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:414139784:4",
+                  "name": "21jumpclick",
+                  "__typename": "FreeformTag"
+                }
+              ],
+              "type": "live",
+              "game": {
+                "id": "32982",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/32982_IGDB-40x56.jpg",
+                "name": "Grand Theft Auto V",
+                "displayName": "Grand Theft Auto V",
+                "slug": "grand-theft-auto-v",
+                "__typename": "Game"
+              },
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Stream"
+            },
+            "trackingID": null,
+            "__typename": "StreamEdge"
+          },
+          {
+            "cursor": "eyJzIjo0My4wNTU0OTYyMTk3OTEzNSwiZCI6ZmFsc2UsInQiOnRydWV9",
+            "node": {
+              "id": "317362376825",
+              "title": "МАДЖЕСТИК МЕНЯЙ БАЛЛЫ НА РУБЛИ |  MAJESTIC  Houston | Маджестик рп | GTA 5 RP | ГТА 5 РП  СТРИМ",
+              "viewersCount": 43,
+              "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_save1yon-440x248.jpg",
+              "broadcaster": {
+                "id": "1123323711",
+                "login": "save1yon",
+                "displayName": "save1yon",
+                "roles": {
+                  "isPartner": false,
+                  "isParticipatingDJ": false,
+                  "__typename": "UserRoles"
+                },
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/4edd9b57-d2d0-48f8-b634-ec878eb1c0e2-profile_image-50x50.png",
+                "primaryColorHex": "00F593",
+                "__typename": "User"
+              },
+              "freeformTags": [
+                {
+                  "id": "fft:CHANNEL:1123323711:0",
+                  "name": "Rust",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:1123323711:1",
+                  "name": "Русский",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:1123323711:2",
+                  "name": "маджестик",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:1123323711:3",
+                  "name": "маджестикрп",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:1123323711:4",
+                  "name": "маджестикрп",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:1123323711:5",
+                  "name": "MajesticRP",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:1123323711:6",
+                  "name": "GTARP",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:1123323711:7",
+                  "name": "gta5rp",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:1123323711:8",
+                  "name": "RP",
+                  "__typename": "FreeformTag"
+                }
+              ],
+              "type": "live",
+              "game": {
+                "id": "32982",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/32982_IGDB-40x56.jpg",
+                "name": "Grand Theft Auto V",
+                "displayName": "Grand Theft Auto V",
+                "slug": "grand-theft-auto-v",
+                "__typename": "Game"
+              },
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Stream"
+            },
+            "trackingID": null,
+            "__typename": "StreamEdge"
+          },
+          {
+            "cursor": "eyJzIjozNS40OTkzNTg0OTcyMTA2MywiZCI6ZmFsc2UsInQiOnRydWV9",
+            "node": {
+              "id": "319184878205",
+              "title": "LORENZO| 🔴GG BOSS🔴|GRIZZLEYWORLD WL | !discord !socials !sub",
+              "viewersCount": 35,
+              "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_wooster-440x248.jpg",
+              "broadcaster": {
+                "id": "141143922",
+                "login": "wooster",
+                "displayName": "Wooster",
+                "roles": {
+                  "isPartner": true,
+                  "isParticipatingDJ": false,
+                  "__typename": "UserRoles"
+                },
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/994a43ae-07b6-48a4-aa9a-86d88498c465-profile_image-50x50.png",
+                "primaryColorHex": null,
+                "__typename": "User"
+              },
+              "freeformTags": [
+                {
+                  "id": "fft:CHANNEL:141143922:0",
+                  "name": "GTARP",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:141143922:1",
+                  "name": "Roleplay",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:141143922:2",
+                  "name": "RP",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:141143922:3",
+                  "name": "Fivem",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:141143922:4",
+                  "name": "FiveM",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:141143922:5",
+                  "name": "GrizzleyWorld",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:141143922:6",
+                  "name": "grizzleyworldwl",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:141143922:7",
+                  "name": "GrizzleyWorldRP",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:141143922:8",
+                  "name": "Shooter",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:141143922:9",
+                  "name": "grizzleyworldwhitelist",
+                  "__typename": "FreeformTag"
+                }
+              ],
+              "type": "live",
+              "game": {
+                "id": "32982",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/32982_IGDB-40x56.jpg",
+                "name": "Grand Theft Auto V",
+                "displayName": "Grand Theft Auto V",
+                "slug": "grand-theft-auto-v",
+                "__typename": "Game"
+              },
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Stream"
+            },
+            "trackingID": null,
+            "__typename": "StreamEdge"
+          },
+          {
+            "cursor": "eyJzIjoyNi4yNTI2OTc0NDYyMDk1NCwiZCI6ZmFsc2UsInQiOnRydWV9",
+            "node": {
+              "id": "318000793724",
+              "title": "@bfrmda9 \\",
+              "viewersCount": 26,
+              "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_bfrmda9-440x248.jpg",
+              "broadcaster": {
+                "id": "403650589",
+                "login": "bfrmda9",
+                "displayName": "bfrmda9",
+                "roles": {
+                  "isPartner": false,
+                  "isParticipatingDJ": false,
+                  "__typename": "UserRoles"
+                },
+                "profileImageURL": "https://static-cdn.jtvnw.net/user-default-pictures-uv/13e5fa74-defa-11e9-809c-784f43822e80-profile_image-50x50.png",
+                "primaryColorHex": "EB0400",
+                "__typename": "User"
+              },
+              "freeformTags": [
+                {
+                  "id": "fft:CHANNEL:403650589:0",
+                  "name": "multiplayer",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:403650589:1",
+                  "name": "ybnlsv3",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:403650589:2",
+                  "name": "English",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:403650589:3",
+                  "name": "YBN",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:403650589:4",
+                  "name": "GTARP",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:403650589:5",
+                  "name": "WindyCityRp",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:403650589:6",
+                  "name": "California",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:403650589:7",
+                  "name": "zooyorkrp",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:403650589:8",
+                  "name": "ZooYorkNYC",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:403650589:9",
+                  "name": "Charity",
+                  "__typename": "FreeformTag"
+                }
+              ],
+              "type": "live",
+              "game": {
+                "id": "32982",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/32982_IGDB-40x56.jpg",
+                "name": "Grand Theft Auto V",
+                "displayName": "Grand Theft Auto V",
+                "slug": "grand-theft-auto-v",
+                "__typename": "Game"
+              },
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Stream"
+            },
+            "trackingID": null,
+            "__typename": "StreamEdge"
+          }
+        ],
+        "pageInfo": { "hasNextPage": true, "__typename": "PageInfo" },
+        "__typename": "StreamConnection"
+      },
+      "__typename": "Game"
+    }
+  },
+  "extensions": {
+    "durationMilliseconds": 81,
+    "operationName": "DirectoryPage_Game",
+    "requestID": "01JPMDGKGVADAX549TSC5YF9YE"
+  }
+}

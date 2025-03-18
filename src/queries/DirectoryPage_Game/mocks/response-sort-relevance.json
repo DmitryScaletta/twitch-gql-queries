@@ -1,0 +1,1907 @@
+{
+  "data": {
+    "game": {
+      "id": "509658",
+      "name": "Just Chatting",
+      "displayName": "Just Chatting",
+      "streams": {
+        "banners": ["MAY_CONTAIN_MATURE_CONTENT"],
+        "edges": [
+          {
+            "cursor": "eyJzIjoyMTQzMC40NDU3NDY0NjY4NTYsImQiOmZhbHNlLCJ0Ijp0cnVlfQ==",
+            "node": {
+              "id": "317334753401",
+              "title": "7 Días Siendo Jugador Profesional - Día 2 - Va a ser más duro de lo que pensaba.",
+              "viewersCount": 18072,
+              "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_ibai-440x248.jpg",
+              "broadcaster": {
+                "id": "83232866",
+                "login": "ibai",
+                "displayName": "ibai",
+                "roles": {
+                  "isPartner": true,
+                  "isParticipatingDJ": false,
+                  "__typename": "UserRoles"
+                },
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/574228be-01ef-4eab-bc0e-a4f6b68bedba-profile_image-50x50.png",
+                "primaryColorHex": "2A2B62",
+                "__typename": "User"
+              },
+              "freeformTags": [
+                {
+                  "id": "fft:CHANNEL:83232866:0",
+                  "name": "Español",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:83232866:1",
+                  "name": "IRL",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:83232866:2",
+                  "name": "Chatting",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:83232866:3",
+                  "name": "KOI",
+                  "__typename": "FreeformTag"
+                }
+              ],
+              "type": "live",
+              "game": {
+                "id": "509658",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509658-40x56.jpg",
+                "name": "Just Chatting",
+                "displayName": "Just Chatting",
+                "slug": "just-chatting",
+                "__typename": "Game"
+              },
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Stream"
+            },
+            "trackingID": null,
+            "__typename": "StreamEdge"
+          },
+          {
+            "cursor": "eyJzIjoxMTQyNS40ODcwNjE3MTI1MzgsImQiOmZhbHNlLCJ0Ijp0cnVlfQ==",
+            "node": {
+              "id": "317358284665",
+              "title": "Verfassungsgericht lässt Abstimmung zu + Ca. 10 Uhr - BUNDESTAG LIVE zur Schuldenbremse mit @staiy + Neue Akkus schaffen 0-100% in 10 Min",
+              "viewersCount": 5141,
+              "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_dracon-440x248.jpg",
+              "broadcaster": {
+                "id": "38770961",
+                "login": "dracon",
+                "displayName": "Dracon",
+                "roles": {
+                  "isPartner": true,
+                  "isParticipatingDJ": false,
+                  "__typename": "UserRoles"
+                },
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/36309a46-7d79-4111-8c51-b9358912a3ce-profile_image-50x50.png",
+                "primaryColorHex": "00F54E",
+                "__typename": "User"
+              },
+              "freeformTags": [
+                {
+                  "id": "fft:CHANNEL:38770961:0",
+                  "name": "Deutsch",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:38770961:1",
+                  "name": "Belastend",
+                  "__typename": "FreeformTag"
+                }
+              ],
+              "type": "live",
+              "game": {
+                "id": "509658",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509658-40x56.jpg",
+                "name": "Just Chatting",
+                "displayName": "Just Chatting",
+                "slug": "just-chatting",
+                "__typename": "Game"
+              },
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Stream"
+            },
+            "trackingID": null,
+            "__typename": "StreamEdge"
+          },
+          {
+            "cursor": "eyJzIjoxMTMzNC42MDQ4NTQ5NDQwNywiZCI6ZmFsc2UsInQiOnRydWV9",
+            "node": {
+              "id": "317359255033",
+              "title": "Die Reform der Schuldenbremse!",
+              "viewersCount": 6275,
+              "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_staiy-440x248.jpg",
+              "broadcaster": {
+                "id": "48865821",
+                "login": "staiy",
+                "displayName": "Staiy",
+                "roles": {
+                  "isPartner": true,
+                  "isParticipatingDJ": false,
+                  "__typename": "UserRoles"
+                },
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/c5fdecbb-5b04-40c5-a2c6-b84944cfc485-profile_image-50x50.png",
+                "primaryColorHex": "07A309",
+                "__typename": "User"
+              },
+              "freeformTags": [
+                {
+                  "id": "fft:CHANNEL:48865821:0",
+                  "name": "Deutsch",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:48865821:1",
+                  "name": "Politik",
+                  "__typename": "FreeformTag"
+                }
+              ],
+              "type": "live",
+              "game": {
+                "id": "509658",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509658-40x56.jpg",
+                "name": "Just Chatting",
+                "displayName": "Just Chatting",
+                "slug": "just-chatting",
+                "__typename": "Game"
+              },
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Stream"
+            },
+            "trackingID": null,
+            "__typename": "StreamEdge"
+          },
+          {
+            "cursor": "eyJzIjo5MTk1LjI3MjkxMjA4NzY4MSwiZCI6ZmFsc2UsInQiOnRydWV9",
+            "node": {
+              "id": "318026000636",
+              "title": "雑談したあと60parsecsやる予定",
+              "viewersCount": 9195,
+              "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_hanjoudesu-440x248.jpg",
+              "broadcaster": {
+                "id": "524474488",
+                "login": "hanjoudesu",
+                "displayName": "はんじょう",
+                "roles": {
+                  "isPartner": true,
+                  "isParticipatingDJ": false,
+                  "__typename": "UserRoles"
+                },
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/5c970817-82cf-4bc5-9949-248947ff1150-profile_image-50x50.png",
+                "primaryColorHex": "DA8A95",
+                "__typename": "User"
+              },
+              "freeformTags": [
+                {
+                  "id": "fft:CHANNEL:524474488:0",
+                  "name": "日本語",
+                  "__typename": "FreeformTag"
+                }
+              ],
+              "type": "live",
+              "game": {
+                "id": "509658",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509658-40x56.jpg",
+                "name": "Just Chatting",
+                "displayName": "Just Chatting",
+                "slug": "just-chatting",
+                "__typename": "Game"
+              },
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Stream"
+            },
+            "trackingID": null,
+            "__typename": "StreamEdge"
+          },
+          {
+            "cursor": "eyJzIjo1MDg2LjE3NjA0NDU3NjYwOTUsImQiOmZhbHNlLCJ0Ijp0cnVlfQ==",
+            "node": {
+              "id": "319173486333",
+              "title": "🌟 MIAMI DAY 0 🌟 WE GOING ALL NIGHT 🌟SPRING BREAK 🌟 !socials !comm !pobox",
+              "viewersCount": 5086,
+              "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_yugi2x-440x248.jpg",
+              "broadcaster": {
+                "id": "936171791",
+                "login": "yugi2x",
+                "displayName": "Yugi2x",
+                "roles": {
+                  "isPartner": true,
+                  "isParticipatingDJ": false,
+                  "__typename": "UserRoles"
+                },
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/48125443-bf71-4887-8b5a-72e96fddd73d-profile_image-50x50.png",
+                "primaryColorHex": "00F0F0",
+                "__typename": "User"
+              },
+              "freeformTags": [
+                {
+                  "id": "fft:CHANNEL:936171791:0",
+                  "name": "English",
+                  "__typename": "FreeformTag"
+                }
+              ],
+              "type": "live",
+              "game": {
+                "id": "509658",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509658-40x56.jpg",
+                "name": "Just Chatting",
+                "displayName": "Just Chatting",
+                "slug": "just-chatting",
+                "__typename": "Game"
+              },
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Stream"
+            },
+            "trackingID": null,
+            "__typename": "StreamEdge"
+          },
+          {
+            "cursor": "eyJzIjo0NzQyLjQ4ODQyNTU2NjY5NiwiZCI6ZmFsc2UsInQiOnRydWV9",
+            "node": {
+              "id": "319192827901",
+              "title": "🛑Мы В Пхукете азиатур, день 4 @ravshann, @steel, @renatko | !тг !win",
+              "viewersCount": 4742,
+              "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_dedadam-440x248.jpg",
+              "broadcaster": {
+                "id": "433605766",
+                "login": "dedadam",
+                "displayName": "DedAdam",
+                "roles": {
+                  "isPartner": true,
+                  "isParticipatingDJ": false,
+                  "__typename": "UserRoles"
+                },
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/d5711fc6-4408-4b87-ae83-e839f0803689-profile_image-50x50.png",
+                "primaryColorHex": null,
+                "__typename": "User"
+              },
+              "freeformTags": [
+                {
+                  "id": "fft:CHANNEL:433605766:0",
+                  "name": "Русский",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:433605766:1",
+                  "name": "staya",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:433605766:2",
+                  "name": "Lamadjo",
+                  "__typename": "FreeformTag"
+                }
+              ],
+              "type": "live",
+              "game": {
+                "id": "509658",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509658-40x56.jpg",
+                "name": "Just Chatting",
+                "displayName": "Just Chatting",
+                "slug": "just-chatting",
+                "__typename": "Game"
+              },
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Stream"
+            },
+            "trackingID": null,
+            "__typename": "StreamEdge"
+          },
+          {
+            "cursor": "eyJzIjozODU3LjQ4ODYyNzExMzk4MTIsImQiOmZhbHNlLCJ0Ijp0cnVlfQ==",
+            "node": {
+              "id": "317351399289",
+              "title": "CYCLEATHON 4 | Day 16: Today's goal is Wando! 🇰🇷 | 1 sub = 200m / 100 bits = 40m / $1 = 40m | !map !progress !vpn !yt",
+              "viewersCount": 3857,
+              "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_robcdee-440x248.jpg",
+              "broadcaster": {
+                "id": "169185650",
+                "login": "robcdee",
+                "displayName": "robcdee",
+                "roles": {
+                  "isPartner": true,
+                  "isParticipatingDJ": false,
+                  "__typename": "UserRoles"
+                },
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/01d06208-891f-4fca-a21a-16e9009a9a5e-profile_image-50x50.png",
+                "primaryColorHex": null,
+                "__typename": "User"
+              },
+              "freeformTags": [
+                {
+                  "id": "fft:CHANNEL:169185650:0",
+                  "name": "Busan",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:169185650:1",
+                  "name": "Korea",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:169185650:2",
+                  "name": "Outdoors",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:169185650:3",
+                  "name": "Cycling",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:169185650:4",
+                  "name": "Exploration",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:169185650:5",
+                  "name": "Travel",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:169185650:6",
+                  "name": "Anime",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:169185650:7",
+                  "name": "Speedeating",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:169185650:8",
+                  "name": "English",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:169185650:9",
+                  "name": "Japan",
+                  "__typename": "FreeformTag"
+                }
+              ],
+              "type": "live",
+              "game": {
+                "id": "509658",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509658-40x56.jpg",
+                "name": "Just Chatting",
+                "displayName": "Just Chatting",
+                "slug": "just-chatting",
+                "__typename": "Game"
+              },
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Stream"
+            },
+            "trackingID": null,
+            "__typename": "StreamEdge"
+          },
+          {
+            "cursor": "eyJzIjozNzMyLjU3OTgxMjAyODU4MDQsImQiOmZhbHNlLCJ0Ijp0cnVlfQ==",
+            "node": {
+              "id": "317359231225",
+              "title": "LA MATINEE EST TIENNE, on lit les journaux ensemble",
+              "viewersCount": 3732,
+              "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_samueletienne-440x248.jpg",
+              "broadcaster": {
+                "id": "505902512",
+                "login": "samueletienne",
+                "displayName": "samueletienne",
+                "roles": {
+                  "isPartner": true,
+                  "isParticipatingDJ": false,
+                  "__typename": "UserRoles"
+                },
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/6a421038-d455-41ed-9705-b32909ca182a-profile_image-50x50.png",
+                "primaryColorHex": "4791FF",
+                "__typename": "User"
+              },
+              "freeformTags": [
+                {
+                  "id": "fft:CHANNEL:505902512:0",
+                  "name": "Actu",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:505902512:1",
+                  "name": "Actualités",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:505902512:2",
+                  "name": "Info",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:505902512:3",
+                  "name": "Information",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:505902512:4",
+                  "name": "France",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:505902512:5",
+                  "name": "Talk",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:505902512:6",
+                  "name": "Talkshow",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:505902512:7",
+                  "name": "Français",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:505902512:8",
+                  "name": "Gaming",
+                  "__typename": "FreeformTag"
+                }
+              ],
+              "type": "live",
+              "game": {
+                "id": "509658",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509658-40x56.jpg",
+                "name": "Just Chatting",
+                "displayName": "Just Chatting",
+                "slug": "just-chatting",
+                "__typename": "Game"
+              },
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Stream"
+            },
+            "trackingID": null,
+            "__typename": "StreamEdge"
+          },
+          {
+            "cursor": "eyJzIjozNjExLjg3OTg0NzE5OTE2MiwiZCI6ZmFsc2UsInQiOnRydWV9",
+            "node": {
+              "id": "317361931385",
+              "title": "ANNONCE !ZLAN OMG HYPE - !patreon !boutique",
+              "viewersCount": 3611,
+              "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_ponce-440x248.jpg",
+              "broadcaster": {
+                "id": "50597026",
+                "login": "ponce",
+                "displayName": "Ponce",
+                "roles": {
+                  "isPartner": true,
+                  "isParticipatingDJ": false,
+                  "__typename": "UserRoles"
+                },
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/d4737061-8f00-49d9-a56f-fcb4a9230b3f-profile_image-50x50.png",
+                "primaryColorHex": "E74C1D",
+                "__typename": "User"
+              },
+              "freeformTags": [
+                {
+                  "id": "fft:CHANNEL:50597026:0",
+                  "name": "Français",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:50597026:1",
+                  "name": "fun",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:50597026:2",
+                  "name": "discussion",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:50597026:3",
+                  "name": "multigaming",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:50597026:4",
+                  "name": "justchatting",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:50597026:5",
+                  "name": "indé",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:50597026:6",
+                  "name": "chill",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:50597026:7",
+                  "name": "slowrun",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:50597026:8",
+                  "name": "cigales",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:50597026:9",
+                  "name": "sud",
+                  "__typename": "FreeformTag"
+                }
+              ],
+              "type": "live",
+              "game": {
+                "id": "509658",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509658-40x56.jpg",
+                "name": "Just Chatting",
+                "displayName": "Just Chatting",
+                "slug": "just-chatting",
+                "__typename": "Game"
+              },
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Stream"
+            },
+            "trackingID": null,
+            "__typename": "StreamEdge"
+          },
+          {
+            "cursor": "eyJzIjozMzI5LjAwMTcyNDA1MjQ3NiwiZCI6ZmFsc2UsInQiOnRydWV9",
+            "node": {
+              "id": "314230041719",
+              "title": "🩵 MIRASJUICE.COM 🧊 !JUICE 💎 FROM GENYSIS TO GENETIC ENGINEERING 🧊 JUICERS UNITED 💎 Rerun",
+              "viewersCount": 3329,
+              "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_mira-440x248.jpg",
+              "broadcaster": {
+                "id": "79294007",
+                "login": "mira",
+                "displayName": "mira",
+                "roles": {
+                  "isPartner": true,
+                  "isParticipatingDJ": false,
+                  "__typename": "UserRoles"
+                },
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/0c4b5b4d-d38f-49d6-995a-ceafbf9d2432-profile_image-50x50.png",
+                "primaryColorHex": "282A29",
+                "__typename": "User"
+              },
+              "freeformTags": [
+                {
+                  "id": "fft:CHANNEL:79294007:0",
+                  "name": "English",
+                  "__typename": "FreeformTag"
+                }
+              ],
+              "type": "live",
+              "game": {
+                "id": "509658",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509658-40x56.jpg",
+                "name": "Just Chatting",
+                "displayName": "Just Chatting",
+                "slug": "just-chatting",
+                "__typename": "Game"
+              },
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Stream"
+            },
+            "trackingID": null,
+            "__typename": "StreamEdge"
+          },
+          {
+            "cursor": "eyJzIjozMDY1LjU0NDc4NjU2MDcwOSwiZCI6ZmFsc2UsInQiOnRydWV9",
+            "node": {
+              "id": "318026094844",
+              "title": "🏴‍☠️МЫ ПИРАТЫ 🦜 @d1pro4 @VLADBOYZ",
+              "viewersCount": 3065,
+              "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_leva2k-440x248.jpg",
+              "broadcaster": {
+                "id": "162757011",
+                "login": "leva2k",
+                "displayName": "leva2k",
+                "roles": {
+                  "isPartner": true,
+                  "isParticipatingDJ": false,
+                  "__typename": "UserRoles"
+                },
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/114d9819-5e2c-47d4-a7ca-a8e8e0509d9e-profile_image-50x50.png",
+                "primaryColorHex": "5C16C5",
+                "__typename": "User"
+              },
+              "freeformTags": [
+                {
+                  "id": "fft:CHANNEL:162757011:0",
+                  "name": "Русский",
+                  "__typename": "FreeformTag"
+                }
+              ],
+              "type": "live",
+              "game": {
+                "id": "509658",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509658-40x56.jpg",
+                "name": "Just Chatting",
+                "displayName": "Just Chatting",
+                "slug": "just-chatting",
+                "__typename": "Game"
+              },
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Stream"
+            },
+            "trackingID": null,
+            "__typename": "StreamEdge"
+          },
+          {
+            "cursor": "eyJzIjoyNTYyLjAyNzIxMDEwMTAyNiwiZCI6ZmFsc2UsInQiOnRydWV9",
+            "node": {
+              "id": "317361751801",
+              "title": "5 стрим Проходим Split Fiction вместе с @soonVooshko",
+              "viewersCount": 1230,
+              "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_mixazver-440x248.jpg",
+              "broadcaster": {
+                "id": "179997759",
+                "login": "mixazver",
+                "displayName": "MixaZver",
+                "roles": {
+                  "isPartner": true,
+                  "isParticipatingDJ": false,
+                  "__typename": "UserRoles"
+                },
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/84a04282-94a9-4262-ad4c-f31f118ad2b7-profile_image-50x50.png",
+                "primaryColorHex": "00FA04",
+                "__typename": "User"
+              },
+              "freeformTags": [
+                {
+                  "id": "fft:CHANNEL:179997759:0",
+                  "name": "Русский",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:179997759:1",
+                  "name": "игры",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:179997759:2",
+                  "name": "justcchatting",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:179997759:3",
+                  "name": "msc2024restreaming",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:179997759:4",
+                  "name": "drops",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:179997759:5",
+                  "name": "mrbeast",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:179997759:6",
+                  "name": "jynxzi",
+                  "__typename": "FreeformTag"
+                }
+              ],
+              "type": "live",
+              "game": {
+                "id": "509658",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509658-40x56.jpg",
+                "name": "Just Chatting",
+                "displayName": "Just Chatting",
+                "slug": "just-chatting",
+                "__typename": "Game"
+              },
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Stream"
+            },
+            "trackingID": null,
+            "__typename": "StreamEdge"
+          },
+          {
+            "cursor": "eyJzIjoyMzM1LjIxMjg3NDU3OTI5MywiZCI6ZmFsc2UsInQiOnRydWV9",
+            "node": {
+              "id": "317356641785",
+              "title": "blabla PORANEK !redbull !pojedynek !kick !hyperx #reklama",
+              "viewersCount": 2335,
+              "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_delordione-440x248.jpg",
+              "broadcaster": {
+                "id": "30773126",
+                "login": "delordione",
+                "displayName": "delordione",
+                "roles": {
+                  "isPartner": true,
+                  "isParticipatingDJ": false,
+                  "__typename": "UserRoles"
+                },
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/delordione-profile_image-5fe2b843e7ca4937-50x50.jpeg",
+                "primaryColorHex": "335E17",
+                "__typename": "User"
+              },
+              "freeformTags": [
+                {
+                  "id": "fft:CHANNEL:30773126:0",
+                  "name": "Polski",
+                  "__typename": "FreeformTag"
+                }
+              ],
+              "type": "live",
+              "game": {
+                "id": "509658",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509658-40x56.jpg",
+                "name": "Just Chatting",
+                "displayName": "Just Chatting",
+                "slug": "just-chatting",
+                "__typename": "Game"
+              },
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Stream"
+            },
+            "trackingID": null,
+            "__typename": "StreamEdge"
+          },
+          {
+            "cursor": "eyJzIjoyMDc5LjE4OTg1ODA5NzYyNywiZCI6ZmFsc2UsInQiOnRydWV9",
+            "node": {
+              "id": "317360697849",
+              "title": "🌻 ЧУТЬ ТИКТОКОВ И ПРОДОЛЖАЮ ЧЕЛЕНДЖ @STROGO 👉 !тг !тундра !winline !челендж",
+              "viewersCount": 2079,
+              "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_gaechkatm-440x248.jpg",
+              "broadcaster": {
+                "id": "450012016",
+                "login": "gaechkatm",
+                "displayName": "GAECHKATM",
+                "roles": {
+                  "isPartner": true,
+                  "isParticipatingDJ": false,
+                  "__typename": "UserRoles"
+                },
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/3b98002d-fe0a-4254-9fef-7ef5ba3b87fb-profile_image-50x50.png",
+                "primaryColorHex": null,
+                "__typename": "User"
+              },
+              "freeformTags": [
+                {
+                  "id": "fft:CHANNEL:450012016:0",
+                  "name": "Общение",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:450012016:1",
+                  "name": "Русский",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:450012016:2",
+                  "name": "English",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:450012016:3",
+                  "name": "Tundra",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:450012016:4",
+                  "name": "Esports",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:450012016:5",
+                  "name": "Dota2",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:450012016:6",
+                  "name": "ЧатЧитаю",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:450012016:7",
+                  "name": "РазогревСчатом",
+                  "__typename": "FreeformTag"
+                }
+              ],
+              "type": "live",
+              "game": {
+                "id": "509658",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509658-40x56.jpg",
+                "name": "Just Chatting",
+                "displayName": "Just Chatting",
+                "slug": "just-chatting",
+                "__typename": "Game"
+              },
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Stream"
+            },
+            "trackingID": null,
+            "__typename": "StreamEdge"
+          },
+          {
+            "cursor": "eyJzIjoyMDQ2LjQ2NTUyODc3NDY0OTMsImQiOmZhbHNlLCJ0Ijp0cnVlfQ==",
+            "node": {
+              "id": "318023112188",
+              "title": "IT'S MA BIRTHDAY!!! 🎈🎁🥳 !Bday",
+              "viewersCount": 1677,
+              "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_develique-440x248.jpg",
+              "broadcaster": {
+                "id": "509560125",
+                "login": "develique",
+                "displayName": "Develique",
+                "roles": {
+                  "isPartner": true,
+                  "isParticipatingDJ": false,
+                  "__typename": "UserRoles"
+                },
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/eacd1f71-a4f7-4fb6-88a6-345261c0af2b-profile_image-50x50.png",
+                "primaryColorHex": "BD0046",
+                "__typename": "User"
+              },
+              "freeformTags": [
+                {
+                  "id": "fft:CHANNEL:509560125:0",
+                  "name": "English",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:509560125:1",
+                  "name": "FirstPlaythrough",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:509560125:2",
+                  "name": "Australian",
+                  "__typename": "FreeformTag"
+                }
+              ],
+              "type": "live",
+              "game": {
+                "id": "509658",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509658-40x56.jpg",
+                "name": "Just Chatting",
+                "displayName": "Just Chatting",
+                "slug": "just-chatting",
+                "__typename": "Game"
+              },
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Stream"
+            },
+            "trackingID": null,
+            "__typename": "StreamEdge"
+          },
+          {
+            "cursor": "eyJzIjoyMDQ2LjY0MzgzMDE2MTQ1ODcsImQiOmZhbHNlLCJ0Ijp0cnVlfQ==",
+            "node": {
+              "id": "314176220155",
+              "title": "\u003c!SUBATHON\u003e Day 14 ITS @develique'S BIRFDAYYY | @fasffy on all socials",
+              "viewersCount": 369,
+              "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_fasffy-440x248.jpg",
+              "broadcaster": {
+                "id": "50610385",
+                "login": "fasffy",
+                "displayName": "Fasffy",
+                "roles": {
+                  "isPartner": true,
+                  "isParticipatingDJ": false,
+                  "__typename": "UserRoles"
+                },
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/ce205ecd-9f43-4386-941c-e599bb0703cd-profile_image-50x50.png",
+                "primaryColorHex": null,
+                "__typename": "User"
+              },
+              "freeformTags": [
+                {
+                  "id": "fft:CHANNEL:50610385:0",
+                  "name": "Australian",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:50610385:1",
+                  "name": "Polls",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:50610385:2",
+                  "name": "English",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:50610385:3",
+                  "name": "Variety",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:50610385:4",
+                  "name": "FirstPlaythrough",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:50610385:5",
+                  "name": "Dutch",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:50610385:6",
+                  "name": "Gaming",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:50610385:7",
+                  "name": "PC",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:50610385:8",
+                  "name": "TeamLiquid",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:50610385:9",
+                  "name": "OnlyFangs",
+                  "__typename": "FreeformTag"
+                }
+              ],
+              "type": "live",
+              "game": {
+                "id": "509658",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509658-40x56.jpg",
+                "name": "Just Chatting",
+                "displayName": "Just Chatting",
+                "slug": "just-chatting",
+                "__typename": "Game"
+              },
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Stream"
+            },
+            "trackingID": null,
+            "__typename": "StreamEdge"
+          },
+          {
+            "cursor": "eyJzIjoyMDQxLjc1MjYzNzQ2OTYxNzksImQiOmZhbHNlLCJ0Ijp0cnVlfQ==",
+            "node": {
+              "id": "319157718397",
+              "title": "Doing my \"homework\" before Shai Organized Comes voer for Stream Room Revamp Part 1 tomorrow...",
+              "viewersCount": 2041,
+              "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_esfandtv-440x248.jpg",
+              "broadcaster": {
+                "id": "38746172",
+                "login": "esfandtv",
+                "displayName": "EsfandTV",
+                "roles": {
+                  "isPartner": true,
+                  "isParticipatingDJ": false,
+                  "__typename": "UserRoles"
+                },
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/476ee93d-66a6-4e57-b3a9-db1ceb168ad8-profile_image-50x50.png",
+                "primaryColorHex": "850000",
+                "__typename": "User"
+              },
+              "freeformTags": [
+                {
+                  "id": "fft:CHANNEL:38746172:0",
+                  "name": "irl",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:38746172:1",
+                  "name": "English",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:38746172:2",
+                  "name": "drops",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:38746172:3",
+                  "name": "esfandtv",
+                  "__typename": "FreeformTag"
+                }
+              ],
+              "type": "live",
+              "game": {
+                "id": "509658",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509658-40x56.jpg",
+                "name": "Just Chatting",
+                "displayName": "Just Chatting",
+                "slug": "just-chatting",
+                "__typename": "Game"
+              },
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Stream"
+            },
+            "trackingID": null,
+            "__typename": "StreamEdge"
+          },
+          {
+            "cursor": "eyJzIjoyMDE2Ljc0MjUwNjgzODU3NjQsImQiOmZhbHNlLCJ0Ijp0cnVlfQ==",
+            "node": {
+              "id": "318025070204",
+              "title": "LIVE ab 10:oo Uhr - Der Tag der Entscheidung",
+              "viewersCount": 2016,
+              "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_carstenjahn_teamheimat-440x248.jpg",
+              "broadcaster": {
+                "id": "1130530884",
+                "login": "carstenjahn_teamheimat",
+                "displayName": "carstenjahn_teamheimat",
+                "roles": {
+                  "isPartner": true,
+                  "isParticipatingDJ": false,
+                  "__typename": "UserRoles"
+                },
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/64485343-2f04-45e6-9058-0cedbeccbb95-profile_image-50x50.png",
+                "primaryColorHex": "1345AA",
+                "__typename": "User"
+              },
+              "freeformTags": [
+                {
+                  "id": "fft:CHANNEL:1130530884:0",
+                  "name": "Deutsch",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:1130530884:1",
+                  "name": "Politik",
+                  "__typename": "FreeformTag"
+                }
+              ],
+              "type": "live",
+              "game": {
+                "id": "509658",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509658-40x56.jpg",
+                "name": "Just Chatting",
+                "displayName": "Just Chatting",
+                "slug": "just-chatting",
+                "__typename": "Game"
+              },
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Stream"
+            },
+            "trackingID": null,
+            "__typename": "StreamEdge"
+          },
+          {
+            "cursor": "eyJzIjoxODk4Ljk1ODg2NTA2NjA0OTQsImQiOmZhbHNlLCJ0Ijp0cnVlfQ==",
+            "node": {
+              "id": "317924525052",
+              "title": "🔞🈲【新驅魔👻多P】❤️后宮穿越❤️人妻x侍衛全都要 🔴看台免費拿MyCard/Steam點數!MY🔴🎁看台送點數 !MY🎁 ✨免費拿Mycard點數  !送  【🍊蝦愛橘子】",
+              "viewersCount": 1898,
+              "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_shuteye_orange-440x248.jpg",
+              "broadcaster": {
+                "id": "25202416",
+                "login": "shuteye_orange",
+                "displayName": "蝦愛橘子",
+                "roles": {
+                  "isPartner": true,
+                  "isParticipatingDJ": false,
+                  "__typename": "UserRoles"
+                },
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/e496689c-5e8f-44a6-8733-b3c5b6e17e19-profile_image-50x50.png",
+                "primaryColorHex": "FF7733",
+                "__typename": "User"
+              },
+              "freeformTags": [
+                {
+                  "id": "fft:CHANNEL:25202416:0",
+                  "name": "中文",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:25202416:1",
+                  "name": "HolidayHoppla",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:25202416:2",
+                  "name": "holidayhoopla",
+                  "__typename": "FreeformTag"
+                }
+              ],
+              "type": "live",
+              "game": {
+                "id": "509658",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509658-40x56.jpg",
+                "name": "Just Chatting",
+                "displayName": "Just Chatting",
+                "slug": "just-chatting",
+                "__typename": "Game"
+              },
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Stream"
+            },
+            "trackingID": null,
+            "__typename": "StreamEdge"
+          },
+          {
+            "cursor": "eyJzIjoxODQwLjc3MTAzNzIwODU2MTcsImQiOmZhbHNlLCJ0Ijp0cnVlfQ==",
+            "node": {
+              "id": "319194042237",
+              "title": "WARDĘGA \u0026 GIMPER vs. PASUT 🎯 KOSTEK vs. ŁUKI 🎯 WERSOW KRYTYKOWANA 🎯 #reklama",
+              "viewersCount": 1840,
+              "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_revo_toja-440x248.jpg",
+              "broadcaster": {
+                "id": "83222710",
+                "login": "revo_toja",
+                "displayName": "revo_toja",
+                "roles": {
+                  "isPartner": true,
+                  "isParticipatingDJ": false,
+                  "__typename": "UserRoles"
+                },
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/1522f381-5c2b-4fec-ac3a-176366747921-profile_image-50x50.png",
+                "primaryColorHex": null,
+                "__typename": "User"
+              },
+              "freeformTags": [
+                {
+                  "id": "fft:CHANNEL:83222710:0",
+                  "name": "Polski",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:83222710:1",
+                  "name": "odtwarzacz",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:83222710:2",
+                  "name": "commentary",
+                  "__typename": "FreeformTag"
+                }
+              ],
+              "type": "live",
+              "game": {
+                "id": "509658",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509658-40x56.jpg",
+                "name": "Just Chatting",
+                "displayName": "Just Chatting",
+                "slug": "just-chatting",
+                "__typename": "Game"
+              },
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Stream"
+            },
+            "trackingID": null,
+            "__typename": "StreamEdge"
+          },
+          {
+            "cursor": "eyJzIjoxNzYwLjA3MjI0ODE3MjI2NDYsImQiOmZhbHNlLCJ0Ijp0cnVlfQ==",
+            "node": {
+              "id": "317358507129",
+              "title": "🎂 5 ANS SUR TWITCH ! Stream anniversaire et retour des US avec bilan ASMKC, blabla, let's play, défis, subgoals… !5ans !info !sub !topachat",
+              "viewersCount": 1760,
+              "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_antistar-440x248.jpg",
+              "broadcaster": {
+                "id": "51489719",
+                "login": "antistar",
+                "displayName": "Antistar",
+                "roles": {
+                  "isPartner": true,
+                  "isParticipatingDJ": false,
+                  "__typename": "UserRoles"
+                },
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/5d342fbd-e24b-402b-9c05-35fe04d4e445-profile_image-50x50.png",
+                "primaryColorHex": "FF7D00",
+                "__typename": "User"
+              },
+              "freeformTags": [
+                {
+                  "id": "fft:CHANNEL:51489719:0",
+                  "name": "GameplayandChatting",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:51489719:1",
+                  "name": "GameplayandChill",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:51489719:2",
+                  "name": "Français",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:51489719:3",
+                  "name": "Nintendo",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:51489719:4",
+                  "name": "PlayStation",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:51489719:5",
+                  "name": "NintendoSwitch",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:51489719:6",
+                  "name": "PS5",
+                  "__typename": "FreeformTag"
+                }
+              ],
+              "type": "live",
+              "game": {
+                "id": "509658",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509658-40x56.jpg",
+                "name": "Just Chatting",
+                "displayName": "Just Chatting",
+                "slug": "just-chatting",
+                "__typename": "Game"
+              },
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Stream"
+            },
+            "trackingID": null,
+            "__typename": "StreamEdge"
+          },
+          {
+            "cursor": "eyJzIjoxNjQ3LjIwNjE5NDA2MDIwNCwiZCI6ZmFsc2UsInQiOnRydWV9",
+            "node": {
+              "id": "317357508857",
+              "title": "Pereira vs Abby. Grefg destrozará a Westcol. Día 1 de la bootcamp de Ibai !giftsy !prozis",
+              "viewersCount": 1647,
+              "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_el_yuste-440x248.jpg",
+              "broadcaster": {
+                "id": "205218019",
+                "login": "el_yuste",
+                "displayName": "el_yuste",
+                "roles": {
+                  "isPartner": true,
+                  "isParticipatingDJ": false,
+                  "__typename": "UserRoles"
+                },
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/d75fead6-d3df-4b9a-8a8a-bca1ddcbabe2-profile_image-50x50.png",
+                "primaryColorHex": "FA2929",
+                "__typename": "User"
+              },
+              "freeformTags": [
+                {
+                  "id": "fft:CHANNEL:205218019:0",
+                  "name": "Yuste",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:205218019:1",
+                  "name": "Español",
+                  "__typename": "FreeformTag"
+                }
+              ],
+              "type": "live",
+              "game": {
+                "id": "509658",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509658-40x56.jpg",
+                "name": "Just Chatting",
+                "displayName": "Just Chatting",
+                "slug": "just-chatting",
+                "__typename": "Game"
+              },
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Stream"
+            },
+            "trackingID": null,
+            "__typename": "StreamEdge"
+          },
+          {
+            "cursor": "eyJzIjoxNTc4LjA2OTkyODIyMTY1MzgsImQiOmZhbHNlLCJ0Ijp0cnVlfQ==",
+            "node": {
+              "id": "317359410681",
+              "title": "SHAUNZ 🤍💛 CASH INVESTIGATION | ALCOOL : LES STRATÉGIES DES MARQUES",
+              "viewersCount": 1578,
+              "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_shaunz-440x248.jpg",
+              "broadcaster": {
+                "id": "43102846",
+                "login": "shaunz",
+                "displayName": "Shaunz",
+                "roles": {
+                  "isPartner": true,
+                  "isParticipatingDJ": false,
+                  "__typename": "UserRoles"
+                },
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/a027458a-f0f8-488b-862a-c31fac30126f-profile_image-50x50.png",
+                "primaryColorHex": "0D6BFF",
+                "__typename": "User"
+              },
+              "freeformTags": [
+                {
+                  "id": "fft:CHANNEL:43102846:0",
+                  "name": "Français",
+                  "__typename": "FreeformTag"
+                }
+              ],
+              "type": "live",
+              "game": {
+                "id": "509658",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509658-40x56.jpg",
+                "name": "Just Chatting",
+                "displayName": "Just Chatting",
+                "slug": "just-chatting",
+                "__typename": "Game"
+              },
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Stream"
+            },
+            "trackingID": null,
+            "__typename": "StreamEdge"
+          },
+          {
+            "cursor": "eyJzIjoxNTUxLjQ3NDMyMTQwMzE4NTUsImQiOmZhbHNlLCJ0Ijp0cnVlfQ==",
+            "node": {
+              "id": "317361963385",
+              "title": "прокнул 1%",
+              "viewersCount": 1551,
+              "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_kosstochka-440x248.jpg",
+              "broadcaster": {
+                "id": "548658760",
+                "login": "kosstochka",
+                "displayName": "kosstochka",
+                "roles": {
+                  "isPartner": true,
+                  "isParticipatingDJ": false,
+                  "__typename": "UserRoles"
+                },
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/33807e4f-9981-4799-ae20-60065accb275-profile_image-50x50.png",
+                "primaryColorHex": "F02A9B",
+                "__typename": "User"
+              },
+              "freeformTags": [
+                {
+                  "id": "fft:CHANNEL:548658760:0",
+                  "name": "материнство",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:548658760:1",
+                  "name": "Русский",
+                  "__typename": "FreeformTag"
+                }
+              ],
+              "type": "live",
+              "game": {
+                "id": "509658",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509658-40x56.jpg",
+                "name": "Just Chatting",
+                "displayName": "Just Chatting",
+                "slug": "just-chatting",
+                "__typename": "Game"
+              },
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Stream"
+            },
+            "trackingID": null,
+            "__typename": "StreamEdge"
+          },
+          {
+            "cursor": "eyJzIjoxNTQ5Ljk5NzI2Mjk3OTE1ODQsImQiOmZhbHNlLCJ0Ijp0cnVlfQ==",
+            "node": {
+              "id": "315105310072",
+              "title": "3/18 晓嫭ㄏㄨˋ 白的",
+              "viewersCount": 1549,
+              "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_siaohu_0124-440x248.jpg",
+              "broadcaster": {
+                "id": "224696866",
+                "login": "siaohu_0124",
+                "displayName": "晓嫭",
+                "roles": {
+                  "isPartner": true,
+                  "isParticipatingDJ": false,
+                  "__typename": "UserRoles"
+                },
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/c1efab68-016b-44f8-895c-9f78fb2a3831-profile_image-50x50.png",
+                "primaryColorHex": "FD98EB",
+                "__typename": "User"
+              },
+              "freeformTags": [
+                {
+                  "id": "fft:CHANNEL:224696866:0",
+                  "name": "中文",
+                  "__typename": "FreeformTag"
+                }
+              ],
+              "type": "live",
+              "game": {
+                "id": "509658",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509658-40x56.jpg",
+                "name": "Just Chatting",
+                "displayName": "Just Chatting",
+                "slug": "just-chatting",
+                "__typename": "Game"
+              },
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Stream"
+            },
+            "trackingID": null,
+            "__typename": "StreamEdge"
+          },
+          {
+            "cursor": "eyJzIjoxNTMzLjE3MTY3OTEwODY3NjUsImQiOmZhbHNlLCJ0Ijp0cnVlfQ==",
+            "node": {
+              "id": "315107775480",
+              "title": "【大丸】3/18 緣分到了 七點抽檔案門主 周二陳大膽環節 貓好貨壞。",
+              "viewersCount": 1533,
+              "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_wtf_winds123-440x248.jpg",
+              "broadcaster": {
+                "id": "29546745",
+                "login": "wtf_winds123",
+                "displayName": "大丸",
+                "roles": {
+                  "isPartner": true,
+                  "isParticipatingDJ": false,
+                  "__typename": "UserRoles"
+                },
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/eeeb63ac-eafb-4955-88e0-9af3548a2080-profile_image-50x50.png",
+                "primaryColorHex": null,
+                "__typename": "User"
+              },
+              "freeformTags": [
+                {
+                  "id": "fft:CHANNEL:29546745:0",
+                  "name": "中文",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:29546745:1",
+                  "name": "帥臉",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:29546745:2",
+                  "name": "勤奮主播",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:29546745:3",
+                  "name": "技術路線",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:29546745:4",
+                  "name": "手遊",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:29546745:5",
+                  "name": "超級幸運",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:29546745:6",
+                  "name": "掉寶",
+                  "__typename": "FreeformTag"
+                }
+              ],
+              "type": "live",
+              "game": {
+                "id": "509658",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509658-40x56.jpg",
+                "name": "Just Chatting",
+                "displayName": "Just Chatting",
+                "slug": "just-chatting",
+                "__typename": "Game"
+              },
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Stream"
+            },
+            "trackingID": null,
+            "__typename": "StreamEdge"
+          },
+          {
+            "cursor": "eyJzIjoxNTE4LjY0OTI3ODYwMzE3OTcsImQiOmZhbHNlLCJ0Ijp0cnVlfQ==",
+            "node": {
+              "id": "318016509820",
+              "title": "IRL 🇨🇳 LIJIANG 🐲 JADE DRAGON SNOW MTN (4,600m) 🏔️ WEARING ANCIENT ATTIRE 🦬 YAK HUNTING 🏭 FIRST TIME (Day 2) 🟥 !Plan !YouTube 🟥",
+              "viewersCount": 1518,
+              "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_jakenbakelive-440x248.jpg",
+              "broadcaster": {
+                "id": "11249217",
+                "login": "jakenbakelive",
+                "displayName": "jakenbakeLIVE",
+                "roles": {
+                  "isPartner": true,
+                  "isParticipatingDJ": false,
+                  "__typename": "UserRoles"
+                },
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/jakenbakelive-profile_image-cf0960d3d360b6c9-50x50.png",
+                "primaryColorHex": "FA2929",
+                "__typename": "User"
+              },
+              "freeformTags": [
+                {
+                  "id": "fft:CHANNEL:11249217:0",
+                  "name": "English",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:11249217:1",
+                  "name": "Travel",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:11249217:2",
+                  "name": "Japan",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:11249217:3",
+                  "name": "Anime",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:11249217:4",
+                  "name": "China",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:11249217:5",
+                  "name": "Cars",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:11249217:6",
+                  "name": "IRL",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:11249217:7",
+                  "name": "SocialEating",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:11249217:8",
+                  "name": "Motorsports",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:11249217:9",
+                  "name": "chill",
+                  "__typename": "FreeformTag"
+                }
+              ],
+              "type": "live",
+              "game": {
+                "id": "509658",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509658-40x56.jpg",
+                "name": "Just Chatting",
+                "displayName": "Just Chatting",
+                "slug": "just-chatting",
+                "__typename": "Game"
+              },
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Stream"
+            },
+            "trackingID": null,
+            "__typename": "StreamEdge"
+          },
+          {
+            "cursor": "eyJzIjoxNDkxLjEzMjEzMTM2MzI5NiwiZCI6ZmFsc2UsInQiOnRydWV9",
+            "node": {
+              "id": "317952969724",
+              "title": "Sumo Wrestling REPLAY w/ Commentary | Day 10 of the March Grand Sumo tourney in Osaka, Japan! | Day 11 LIVE at 9:25am Japan time!",
+              "viewersCount": 1491,
+              "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_midnightsumo-440x248.jpg",
+              "broadcaster": {
+                "id": "51115394",
+                "login": "midnightsumo",
+                "displayName": "MidnightSumo",
+                "roles": {
+                  "isPartner": false,
+                  "isParticipatingDJ": false,
+                  "__typename": "UserRoles"
+                },
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/66806ef2-24ca-4e48-9eff-58130356fe97-profile_image-50x50.png",
+                "primaryColorHex": "1F69FF",
+                "__typename": "User"
+              },
+              "freeformTags": [
+                {
+                  "id": "fft:CHANNEL:51115394:0",
+                  "name": "English",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:51115394:1",
+                  "name": "Japan",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:51115394:2",
+                  "name": "Sumo",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:51115394:3",
+                  "name": "Wrestling",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:51115394:4",
+                  "name": "Pokemon",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:51115394:5",
+                  "name": "ADHD",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:51115394:6",
+                  "name": "Chill",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:51115394:7",
+                  "name": "Japanese",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:51115394:8",
+                  "name": "Sports",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:51115394:9",
+                  "name": "NoSpoilers",
+                  "__typename": "FreeformTag"
+                }
+              ],
+              "type": "live",
+              "game": {
+                "id": "509658",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509658-40x56.jpg",
+                "name": "Just Chatting",
+                "displayName": "Just Chatting",
+                "slug": "just-chatting",
+                "__typename": "Game"
+              },
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Stream"
+            },
+            "trackingID": null,
+            "__typename": "StreamEdge"
+          },
+          {
+            "cursor": "eyJzIjoxMzc0LjcxNDYwNzEyNzQxLCJkIjpmYWxzZSwidCI6dHJ1ZX0=",
+            "node": {
+              "id": "318016509948",
+              "title": "IRL Lijiang 🇨🇳 ALL THE WAY UP TO THE TOP OF THE JADE DRAGON MOUNTAIN!! 🏔️ HIGH ALTITUDE 3800 METERS!!",
+              "viewersCount": 1374,
+              "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_waterlynn-440x248.jpg",
+              "broadcaster": {
+                "id": "234973404",
+                "login": "waterlynn",
+                "displayName": "waterlynn",
+                "roles": {
+                  "isPartner": true,
+                  "isParticipatingDJ": false,
+                  "__typename": "UserRoles"
+                },
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/11378655-1029-41b2-879e-116d0164b4ff-profile_image-50x50.png",
+                "primaryColorHex": "88CDD2",
+                "__typename": "User"
+              },
+              "freeformTags": [
+                {
+                  "id": "fft:CHANNEL:234973404:0",
+                  "name": "English",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:234973404:1",
+                  "name": "Travel",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:234973404:2",
+                  "name": "Exploration",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:234973404:3",
+                  "name": "IRL",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:234973404:4",
+                  "name": "SocialEating",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:234973404:5",
+                  "name": "China",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:234973404:6",
+                  "name": "chill",
+                  "__typename": "FreeformTag"
+                }
+              ],
+              "type": "live",
+              "game": {
+                "id": "509658",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509658-40x56.jpg",
+                "name": "Just Chatting",
+                "displayName": "Just Chatting",
+                "slug": "just-chatting",
+                "__typename": "Game"
+              },
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Stream"
+            },
+            "trackingID": null,
+            "__typename": "StreamEdge"
+          },
+          {
+            "cursor": "eyJzIjoxMzE2LjIxNjIwNDExNDc3NDIsImQiOmZhbHNlLCJ0Ijp0cnVlfQ==",
+            "node": {
+              "id": "317359777657",
+              "title": "🔴Kiwiito Bandidto🔴18UHR R.E.P.O YAAA !goodie !dominos !jbl !trolli",
+              "viewersCount": 1316,
+              "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_fibii-440x248.jpg",
+              "broadcaster": {
+                "id": "220716126",
+                "login": "fibii",
+                "displayName": "Fibii",
+                "roles": {
+                  "isPartner": true,
+                  "isParticipatingDJ": false,
+                  "__typename": "UserRoles"
+                },
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/506e44c3-da70-4ce1-a399-64913f58c2b4-profile_image-50x50.png",
+                "primaryColorHex": "FE000A",
+                "__typename": "User"
+              },
+              "freeformTags": [
+                {
+                  "id": "fft:CHANNEL:220716126:0",
+                  "name": "Deutsch",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:220716126:1",
+                  "name": "English",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:220716126:2",
+                  "name": "Englisch",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:220716126:3",
+                  "name": "Shooter",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:220716126:4",
+                  "name": "Esports",
+                  "__typename": "FreeformTag"
+                }
+              ],
+              "type": "live",
+              "game": {
+                "id": "509658",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509658-40x56.jpg",
+                "name": "Just Chatting",
+                "displayName": "Just Chatting",
+                "slug": "just-chatting",
+                "__typename": "Game"
+              },
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Stream"
+            },
+            "trackingID": null,
+            "__typename": "StreamEdge"
+          }
+        ],
+        "pageInfo": { "hasNextPage": true, "__typename": "PageInfo" },
+        "__typename": "StreamConnection"
+      },
+      "__typename": "Game"
+    }
+  },
+  "extensions": {
+    "durationMilliseconds": 83,
+    "operationName": "DirectoryPage_Game",
+    "requestID": "01JPMDCKQZQ2S6S7961TR9RANH"
+  }
+}

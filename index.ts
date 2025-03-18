@@ -8,6 +8,7 @@ export * from './src/queries/ClipsActionButtons/query.ts';
 export * from './src/queries/ClipsCards__Game/query.ts';
 export * from './src/queries/ClipsCards__User/query.ts';
 export * from './src/queries/ClipsDownloadButton/query.ts';
+export * from './src/queries/DirectoryPage_Game/query.ts';
 export * from './src/queries/FFZ_BroadcastID/query.ts';
 export * from './src/queries/GetPinnedChat/query.ts';
 export * from './src/queries/GetUserID/query.ts';

@@ -1,0 +1,2067 @@
+{
+  "data": {
+    "game": {
+      "id": "32399",
+      "name": "Counter-Strike",
+      "displayName": "Counter-Strike",
+      "streams": {
+        "banners": null,
+        "edges": [
+          {
+            "cursor": "eyJzIjozMjY0LjE0NTI0NTU3NTYxMjUsImQiOmZhbHNlLCJ0Ijp0cnVlfQ==",
+            "node": {
+              "id": "319178100349",
+              "title": "Many Men Monday | !FocusFuel | #GettingTheseItems100%ForRealsiesThisTimeNoDoubt #FartInMyFlaps #BreezeOfShartFloatingBy #BUNGULATE",
+              "viewersCount": 3264,
+              "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_theburntpeanut-440x248.jpg",
+              "broadcaster": {
+                "id": "472066926",
+                "login": "theburntpeanut",
+                "displayName": "TheBurntPeanut",
+                "roles": {
+                  "isPartner": true,
+                  "isParticipatingDJ": false,
+                  "__typename": "UserRoles"
+                },
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/058ee082-68f4-417b-8f8b-8c3ad42468ac-profile_image-50x50.png",
+                "primaryColorHex": "FFD700",
+                "__typename": "User"
+              },
+              "freeformTags": [
+                {
+                  "id": "fft:CHANNEL:472066926:0",
+                  "name": "English",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:472066926:1",
+                  "name": "Tarkov",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:472066926:2",
+                  "name": "STALKERAnomaly",
+                  "__typename": "FreeformTag"
+                }
+              ],
+              "type": "live",
+              "game": {
+                "id": "32399",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/32399-40x56.jpg",
+                "name": "Counter-Strike",
+                "displayName": "Counter-Strike",
+                "slug": "counter-strike",
+                "__typename": "Game"
+              },
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Stream"
+            },
+            "trackingID": null,
+            "__typename": "StreamEdge"
+          },
+          {
+            "cursor": "eyJzIjoyNTc2LjE1NzI3MjMyNzQ5NTMsImQiOmZhbHNlLCJ0Ijp0cnVlfQ==",
+            "node": {
+              "id": "317362180217",
+              "title": "контра+вебкa  | !тг !бб",
+              "viewersCount": 2576,
+              "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_baz1221-440x248.jpg",
+              "broadcaster": {
+                "id": "159220850",
+                "login": "baz1221",
+                "displayName": "baz1221",
+                "roles": {
+                  "isPartner": true,
+                  "isParticipatingDJ": false,
+                  "__typename": "UserRoles"
+                },
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/2eb19e66-718b-47de-bbba-02ffbc4541c3-profile_image-50x50.png",
+                "primaryColorHex": null,
+                "__typename": "User"
+              },
+              "freeformTags": [
+                {
+                  "id": "fft:CHANNEL:159220850:0",
+                  "name": "Русский",
+                  "__typename": "FreeformTag"
+                }
+              ],
+              "type": "live",
+              "game": {
+                "id": "32399",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/32399-40x56.jpg",
+                "name": "Counter-Strike",
+                "displayName": "Counter-Strike",
+                "slug": "counter-strike",
+                "__typename": "Game"
+              },
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Stream"
+            },
+            "trackingID": null,
+            "__typename": "StreamEdge"
+          },
+          {
+            "cursor": "eyJzIjoyMTMxLjc3MDYwMzA5NDg5NTMsImQiOmZhbHNlLCJ0Ijp0cnVlfQ==",
+            "node": {
+              "id": "317360166521",
+              "title": "🥢BEAST IS BACK BABY🥢GET READY FOR SOME SERIOUS GAMING🥢AFTER ENGINES HEAT UP FIRST...🥢!socials !discord !skinplace🥢",
+              "viewersCount": 2131,
+              "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_olofmeister-440x248.jpg",
+              "broadcaster": {
+                "id": "46717011",
+                "login": "olofmeister",
+                "displayName": "olofmeister",
+                "roles": {
+                  "isPartner": true,
+                  "isParticipatingDJ": false,
+                  "__typename": "UserRoles"
+                },
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/31b9e758-02e4-4be7-98a7-184e4941e02d-profile_image-50x50.png",
+                "primaryColorHex": null,
+                "__typename": "User"
+              },
+              "freeformTags": [
+                {
+                  "id": "fft:CHANNEL:46717011:0",
+                  "name": "PLAYING",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:46717011:1",
+                  "name": "pro",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:46717011:2",
+                  "name": "English",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:46717011:3",
+                  "name": "beast",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:46717011:4",
+                  "name": "twotimemajorwinner",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:46717011:5",
+                  "name": "CS2",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:46717011:6",
+                  "name": "legend",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:46717011:7",
+                  "name": "chill",
+                  "__typename": "FreeformTag"
+                }
+              ],
+              "type": "live",
+              "game": {
+                "id": "32399",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/32399-40x56.jpg",
+                "name": "Counter-Strike",
+                "displayName": "Counter-Strike",
+                "slug": "counter-strike",
+                "__typename": "Game"
+              },
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Stream"
+            },
+            "trackingID": null,
+            "__typename": "StreamEdge"
+          },
+          {
+            "cursor": "eyJzIjoxMzk1LjkxMjQ1MTk4NDU3MzIsImQiOmZhbHNlLCJ0Ijp0cnVlfQ==",
+            "node": {
+              "id": "317361522169",
+              "title": "Who will qualify for the Major? T side issues in CS? EPL highlights and Lisbon preview (!info !shop)",
+              "viewersCount": 1395,
+              "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_hltvorg-440x248.jpg",
+              "broadcaster": {
+                "id": "20780251",
+                "login": "hltvorg",
+                "displayName": "HLTVorg",
+                "roles": {
+                  "isPartner": true,
+                  "isParticipatingDJ": false,
+                  "__typename": "UserRoles"
+                },
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/4102e83a14a6b68a-profile_image-50x50.jpeg",
+                "primaryColorHex": "1F69FF",
+                "__typename": "User"
+              },
+              "freeformTags": [
+                {
+                  "id": "fft:CHANNEL:20780251:0",
+                  "name": "csgo",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:20780251:1",
+                  "name": "hltv",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:20780251:2",
+                  "name": "esports",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:20780251:3",
+                  "name": "BLAST",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:20780251:4",
+                  "name": "English",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:20780251:5",
+                  "name": "cs2",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:20780251:6",
+                  "name": "counterstrike2",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:20780251:7",
+                  "name": "ESL",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:20780251:8",
+                  "name": "awardshow",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:20780251:9",
+                  "name": "hltvawards",
+                  "__typename": "FreeformTag"
+                }
+              ],
+              "type": "live",
+              "game": {
+                "id": "32399",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/32399-40x56.jpg",
+                "name": "Counter-Strike",
+                "displayName": "Counter-Strike",
+                "slug": "counter-strike",
+                "__typename": "Game"
+              },
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Stream"
+            },
+            "trackingID": null,
+            "__typename": "StreamEdge"
+          },
+          {
+            "cursor": "eyJzIjoxMjE1LjM4ODQwMDU0NjgzMTIsImQiOmZhbHNlLCJ0Ijp0cnVlfQ==",
+            "node": {
+              "id": "317361837561",
+              "title": "Jak widzicie mój skład na turniej YFL Source? Faceit GRIND! | ZAPRASZAM NA DISCORD !dc | !g4 !etoto !sigma",
+              "viewersCount": 1215,
+              "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_szelioficjalnie-440x248.jpg",
+              "broadcaster": {
+                "id": "89824217",
+                "login": "szelioficjalnie",
+                "displayName": "szelioficjalnie",
+                "roles": {
+                  "isPartner": true,
+                  "isParticipatingDJ": false,
+                  "__typename": "UserRoles"
+                },
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/f5d2d31f-bff1-49a8-b2f4-da7877975b75-profile_image-50x50.png",
+                "primaryColorHex": null,
+                "__typename": "User"
+              },
+              "freeformTags": [
+                {
+                  "id": "fft:CHANNEL:89824217:0",
+                  "name": "Polski",
+                  "__typename": "FreeformTag"
+                }
+              ],
+              "type": "live",
+              "game": {
+                "id": "32399",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/32399-40x56.jpg",
+                "name": "Counter-Strike",
+                "displayName": "Counter-Strike",
+                "slug": "counter-strike",
+                "__typename": "Game"
+              },
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Stream"
+            },
+            "trackingID": null,
+            "__typename": "StreamEdge"
+          },
+          {
+            "cursor": "eyJzIjoxMjA3LjY1MDYyMDg2Njk1MTIsImQiOmZhbHNlLCJ0Ijp0cnVlfQ==",
+            "node": {
+              "id": "317292091385",
+              "title": "HIGHLIGHTS: paiN vs Lynn Vision - ESL Pro League Season 21",
+              "viewersCount": 1207,
+              "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_eslcs-440x248.jpg",
+              "broadcaster": {
+                "id": "31239503",
+                "login": "eslcs",
+                "displayName": "ESLCS",
+                "roles": {
+                  "isPartner": true,
+                  "isParticipatingDJ": false,
+                  "__typename": "UserRoles"
+                },
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/c1ecbcd5-b8b6-4e0c-9d5f-e01d610aa97d-profile_image-50x50.png",
+                "primaryColorHex": "FFFF09",
+                "__typename": "User"
+              },
+              "freeformTags": [
+                {
+                  "id": "fft:CHANNEL:31239503:0",
+                  "name": "English",
+                  "__typename": "FreeformTag"
+                }
+              ],
+              "type": "live",
+              "game": {
+                "id": "32399",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/32399-40x56.jpg",
+                "name": "Counter-Strike",
+                "displayName": "Counter-Strike",
+                "slug": "counter-strike",
+                "__typename": "Game"
+              },
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Stream"
+            },
+            "trackingID": null,
+            "__typename": "StreamEdge"
+          },
+          {
+            "cursor": "eyJzIjo4MzcuODMxNjUxNjc0NTQ0MywiZCI6ZmFsc2UsInQiOnRydWV9",
+            "node": {
+              "id": "317359482233",
+              "title": "🔴РОЗЫГРЫШ 3х НОЖЕЙ - 4623 ELO FACEIT ВЕРНУЛ ФОРМУ",
+              "viewersCount": 837,
+              "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_predator_cc-440x248.jpg",
+              "broadcaster": {
+                "id": "652680562",
+                "login": "predator_cc",
+                "displayName": "PreDaTOR_cc",
+                "roles": {
+                  "isPartner": false,
+                  "isParticipatingDJ": false,
+                  "__typename": "UserRoles"
+                },
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/c765fd94-fef4-428b-9e86-9f4d8723222c-profile_image-50x50.png",
+                "primaryColorHex": "FFBF00",
+                "__typename": "User"
+              },
+              "freeformTags": [
+                {
+                  "id": "fft:CHANNEL:652680562:0",
+                  "name": "Русский",
+                  "__typename": "FreeformTag"
+                }
+              ],
+              "type": "live",
+              "game": {
+                "id": "32399",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/32399-40x56.jpg",
+                "name": "Counter-Strike",
+                "displayName": "Counter-Strike",
+                "slug": "counter-strike",
+                "__typename": "Game"
+              },
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Stream"
+            },
+            "trackingID": null,
+            "__typename": "StreamEdge"
+          },
+          {
+            "cursor": "eyJzIjo4MTAuNzQ5Njc2OTEyNzMxOCwiZCI6ZmFsc2UsInQiOnRydWV9",
+            "node": {
+              "id": "317358730105",
+              "title": "[J18/31] OBJECTIF 70/30 - VITA ERA INC?! - !INUI !Extension",
+              "viewersCount": 810,
+              "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_shoxiejesuss-440x248.jpg",
+              "broadcaster": {
+                "id": "35332416",
+                "login": "shoxiejesuss",
+                "displayName": "shoxieJESUSS",
+                "roles": {
+                  "isPartner": true,
+                  "isParticipatingDJ": false,
+                  "__typename": "UserRoles"
+                },
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/b1e06197-7bc0-4272-bba2-8dd29da5aba4-profile_image-50x50.png",
+                "primaryColorHex": "FFBF00",
+                "__typename": "User"
+              },
+              "freeformTags": [
+                {
+                  "id": "fft:CHANNEL:35332416:0",
+                  "name": "Français",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:35332416:1",
+                  "name": "English",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:35332416:2",
+                  "name": "chill",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:35332416:3",
+                  "name": "games",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:35332416:4",
+                  "name": "fun",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:35332416:5",
+                  "name": "Friendly",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:35332416:6",
+                  "name": "GoodvibesOnly",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:35332416:7",
+                  "name": "Rediffusion",
+                  "__typename": "FreeformTag"
+                }
+              ],
+              "type": "live",
+              "game": {
+                "id": "32399",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/32399-40x56.jpg",
+                "name": "Counter-Strike",
+                "displayName": "Counter-Strike",
+                "slug": "counter-strike",
+                "__typename": "Game"
+              },
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Stream"
+            },
+            "trackingID": null,
+            "__typename": "StreamEdge"
+          },
+          {
+            "cursor": "eyJzIjo1NzMuNjUwNjkxNDIyMzE5NywiZCI6ZmFsc2UsInQiOnRydWV9",
+            "node": {
+              "id": "314509460981",
+              "title": "+18 🔴 RR TORRANDO RAPAZIADA 🔴---\u003e FARM 24H SUB 5X\u003c--- Bora de Farm s2!!!",
+              "viewersCount": 573,
+              "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_maverick88sp-440x248.jpg",
+              "broadcaster": {
+                "id": "50849180",
+                "login": "maverick88sp",
+                "displayName": "Maverick88Sp",
+                "roles": {
+                  "isPartner": false,
+                  "isParticipatingDJ": false,
+                  "__typename": "UserRoles"
+                },
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/4984e4d4-bcd6-4b8e-b5d8-c4f2513d8e45-profile_image-50x50.png",
+                "primaryColorHex": "000000",
+                "__typename": "User"
+              },
+              "freeformTags": [
+                {
+                  "id": "fft:CHANNEL:50849180:0",
+                  "name": "Português",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:50849180:1",
+                  "name": "lojadocanal",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:50849180:2",
+                  "name": "lojinha",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:50849180:3",
+                  "name": "pix",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:50849180:4",
+                  "name": "pineierreifuimlk",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:50849180:5",
+                  "name": "sorteio",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:50849180:6",
+                  "name": "counterstrike",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:50849180:7",
+                  "name": "CS2",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:50849180:8",
+                  "name": "CS2Live",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:50849180:9",
+                  "name": "cs2brasil",
+                  "__typename": "FreeformTag"
+                }
+              ],
+              "type": "live",
+              "game": {
+                "id": "32399",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/32399-40x56.jpg",
+                "name": "Counter-Strike",
+                "displayName": "Counter-Strike",
+                "slug": "counter-strike",
+                "__typename": "Game"
+              },
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Stream"
+            },
+            "trackingID": null,
+            "__typename": "StreamEdge"
+          },
+          {
+            "cursor": "eyJzIjo0ODMuNjI2Mjk4NDAxNjUwNTYsImQiOmZhbHNlLCJ0Ijp0cnVlfQ==",
+            "node": {
+              "id": "317358696313",
+              "title": "🏆4K GRIND mit @tizian_cs + Nyko Bday | !Playox !Skinclub !holy !rambo",
+              "viewersCount": 483,
+              "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_zonixxcs-440x248.jpg",
+              "broadcaster": {
+                "id": "52351531",
+                "login": "zonixxcs",
+                "displayName": "zonixxcs",
+                "roles": {
+                  "isPartner": true,
+                  "isParticipatingDJ": false,
+                  "__typename": "UserRoles"
+                },
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/9e59683b-f151-4d10-ba2f-692acf54cda4-profile_image-50x50.png",
+                "primaryColorHex": "1F69FF",
+                "__typename": "User"
+              },
+              "freeformTags": [
+                {
+                  "id": "fft:CHANNEL:52351531:0",
+                  "name": "pro",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:52351531:1",
+                  "name": "competitive",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:52351531:2",
+                  "name": "english",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:52351531:3",
+                  "name": "esport",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:52351531:4",
+                  "name": "Deutsch",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:52351531:5",
+                  "name": "globalelite",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:52351531:6",
+                  "name": "CS2",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:52351531:7",
+                  "name": "German",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:52351531:8",
+                  "name": "watchparty",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:52351531:9",
+                  "name": "Dauerwerbesendung",
+                  "__typename": "FreeformTag"
+                }
+              ],
+              "type": "live",
+              "game": {
+                "id": "32399",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/32399-40x56.jpg",
+                "name": "Counter-Strike",
+                "displayName": "Counter-Strike",
+                "slug": "counter-strike",
+                "__typename": "Game"
+              },
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Stream"
+            },
+            "trackingID": null,
+            "__typename": "StreamEdge"
+          },
+          {
+            "cursor": "eyJzIjo0MjAuODQwNjIzMTc0NzU2OSwiZCI6ZmFsc2UsInQiOnRydWV9",
+            "node": {
+              "id": "318026489084",
+              "title": "called in for OT | !giveaway !store !socials !discord !tradeit",
+              "viewersCount": 420,
+              "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_stewie2k-440x248.jpg",
+              "broadcaster": {
+                "id": "66076836",
+                "login": "stewie2k",
+                "displayName": "Stewie2K",
+                "roles": {
+                  "isPartner": true,
+                  "isParticipatingDJ": false,
+                  "__typename": "UserRoles"
+                },
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/35f71663-4391-468d-9e96-ac21fc2aa4f4-profile_image-50x50.png",
+                "primaryColorHex": "16284C",
+                "__typename": "User"
+              },
+              "freeformTags": [
+                {
+                  "id": "fft:CHANNEL:66076836:0",
+                  "name": "English",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:66076836:1",
+                  "name": "FPS",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:66076836:2",
+                  "name": "CSGO",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:66076836:3",
+                  "name": "CS2",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:66076836:4",
+                  "name": "PRO",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:66076836:5",
+                  "name": "CS",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:66076836:6",
+                  "name": "Multiplayer",
+                  "__typename": "FreeformTag"
+                }
+              ],
+              "type": "live",
+              "game": {
+                "id": "32399",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/32399-40x56.jpg",
+                "name": "Counter-Strike",
+                "displayName": "Counter-Strike",
+                "slug": "counter-strike",
+                "__typename": "Game"
+              },
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Stream"
+            },
+            "trackingID": null,
+            "__typename": "StreamEdge"
+          },
+          {
+            "cursor": "eyJzIjo0MTMuMTg1ODQ5NTA5NzEwODYsImQiOmZhbHNlLCJ0Ijp0cnVlfQ==",
+            "node": {
+              "id": "314505152628",
+              "title": "o Kenny mοrreu de novo 💀",
+              "viewersCount": 413,
+              "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_southparkbra4-440x248.jpg",
+              "broadcaster": {
+                "id": "954453737",
+                "login": "southparkbra4",
+                "displayName": "SouthParkBRA4",
+                "roles": {
+                  "isPartner": false,
+                  "isParticipatingDJ": false,
+                  "__typename": "UserRoles"
+                },
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/896eb4a3-53dd-4b7b-982f-334c1a5ec967-profile_image-50x50.png",
+                "primaryColorHex": "EB0400",
+                "__typename": "User"
+              },
+              "freeformTags": [
+                {
+                  "id": "fft:CHANNEL:954453737:0",
+                  "name": "Português",
+                  "__typename": "FreeformTag"
+                }
+              ],
+              "type": "live",
+              "game": {
+                "id": "32399",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/32399-40x56.jpg",
+                "name": "Counter-Strike",
+                "displayName": "Counter-Strike",
+                "slug": "counter-strike",
+                "__typename": "Game"
+              },
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Stream"
+            },
+            "trackingID": null,
+            "__typename": "StreamEdge"
+          },
+          {
+            "cursor": "eyJzIjozOTEuNjQ3NjkwNzUyNDM5MTMsImQiOmZhbHNlLCJ0Ijp0cnVlfQ==",
+            "node": {
+              "id": "319195110013",
+              "title": "bientôt -\u003e lvl10 !elo 🔴  !sports !eldorado",
+              "viewersCount": 391,
+              "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_inerbo-440x248.jpg",
+              "broadcaster": {
+                "id": "841125832",
+                "login": "inerbo",
+                "displayName": "inerbo",
+                "roles": {
+                  "isPartner": true,
+                  "isParticipatingDJ": false,
+                  "__typename": "UserRoles"
+                },
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/3c4bccf2-7af5-460b-b5a1-4866a112c27e-profile_image-50x50.png",
+                "primaryColorHex": null,
+                "__typename": "User"
+              },
+              "freeformTags": [
+                {
+                  "id": "fft:CHANNEL:841125832:0",
+                  "name": "English",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:841125832:1",
+                  "name": "cs",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:841125832:2",
+                  "name": "bestplayer",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:841125832:3",
+                  "name": "faceit",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:841125832:4",
+                  "name": "FrenchCanadian",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:841125832:5",
+                  "name": "Français",
+                  "__typename": "FreeformTag"
+                }
+              ],
+              "type": "live",
+              "game": {
+                "id": "32399",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/32399-40x56.jpg",
+                "name": "Counter-Strike",
+                "displayName": "Counter-Strike",
+                "slug": "counter-strike",
+                "__typename": "Game"
+              },
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Stream"
+            },
+            "trackingID": null,
+            "__typename": "StreamEdge"
+          },
+          {
+            "cursor": "eyJzIjozODcuOTMxOTU0ODQ2MDAzMDcsImQiOmZhbHNlLCJ0Ijp0cnVlfQ==",
+            "node": {
+              "id": "317361992313",
+              "title": "CS DAILY STREAMER | !skinport !eldorado | [ENG]",
+              "viewersCount": 387,
+              "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_bandoviclexi-440x248.jpg",
+              "broadcaster": {
+                "id": "923380699",
+                "login": "bandoviclexi",
+                "displayName": "BandovicLexi",
+                "roles": {
+                  "isPartner": false,
+                  "isParticipatingDJ": false,
+                  "__typename": "UserRoles"
+                },
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/06533be6-ed04-40f6-ab64-22d955c688bc-profile_image-50x50.png",
+                "primaryColorHex": null,
+                "__typename": "User"
+              },
+              "freeformTags": [
+                {
+                  "id": "fft:CHANNEL:923380699:0",
+                  "name": "English",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:923380699:1",
+                  "name": "best",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:923380699:2",
+                  "name": "csgo",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:923380699:3",
+                  "name": "bestcsplayer",
+                  "__typename": "FreeformTag"
+                }
+              ],
+              "type": "live",
+              "game": {
+                "id": "32399",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/32399-40x56.jpg",
+                "name": "Counter-Strike",
+                "displayName": "Counter-Strike",
+                "slug": "counter-strike",
+                "__typename": "Game"
+              },
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Stream"
+            },
+            "trackingID": null,
+            "__typename": "StreamEdge"
+          },
+          {
+            "cursor": "eyJzIjozODUuNDMwNDcyMTQzMzI3NDUsImQiOmZhbHNlLCJ0Ijp0cnVlfQ==",
+            "node": {
+              "id": "317361847161",
+              "title": "Mission 8 - WIN 29/50 | !yt !tcl !bıçak !playsultan !zio",
+              "viewersCount": 385,
+              "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_ekgcs-440x248.jpg",
+              "broadcaster": {
+                "id": "35946548",
+                "login": "ekgcs",
+                "displayName": "ekgCS",
+                "roles": {
+                  "isPartner": true,
+                  "isParticipatingDJ": false,
+                  "__typename": "UserRoles"
+                },
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/0c856619-747f-4d2b-a48c-fdc49068c8a1-profile_image-50x50.png",
+                "primaryColorHex": "1F69FF",
+                "__typename": "User"
+              },
+              "freeformTags": [
+                {
+                  "id": "fft:CHANNEL:35946548:0",
+                  "name": "ekg",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:35946548:1",
+                  "name": "Türkçe",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:35946548:2",
+                  "name": "cs2",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:35946548:3",
+                  "name": "Comptetitive",
+                  "__typename": "FreeformTag"
+                }
+              ],
+              "type": "live",
+              "game": {
+                "id": "32399",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/32399-40x56.jpg",
+                "name": "Counter-Strike",
+                "displayName": "Counter-Strike",
+                "slug": "counter-strike",
+                "__typename": "Game"
+              },
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Stream"
+            },
+            "trackingID": null,
+            "__typename": "StreamEdge"
+          },
+          {
+            "cursor": "eyJzIjozNzUuOTI3NTc2ODMyMjIzNTYsImQiOmZhbHNlLCJ0Ijp0cnVlfQ==",
+            "node": {
+              "id": "315107500408",
+              "title": "🔥冠賢🔥 03/18  晚上7點 《絕地求生M》這次我會在繁華都市贏下勝利!",
+              "viewersCount": 375,
+              "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_gunguno-440x248.jpg",
+              "broadcaster": {
+                "id": "31673401",
+                "login": "gunguno",
+                "displayName": "冠賢",
+                "roles": {
+                  "isPartner": true,
+                  "isParticipatingDJ": false,
+                  "__typename": "UserRoles"
+                },
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/42bd46dc-5840-4438-8013-7e7e4bcaeb59-profile_image-50x50.png",
+                "primaryColorHex": "FA2929",
+                "__typename": "User"
+              },
+              "freeformTags": [
+                {
+                  "id": "fft:CHANNEL:31673401:0",
+                  "name": "顏值",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:31673401:1",
+                  "name": "射擊",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:31673401:2",
+                  "name": "幽默",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:31673401:3",
+                  "name": "大談",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:31673401:4",
+                  "name": "中文",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:31673401:5",
+                  "name": "勞工",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:31673401:6",
+                  "name": "錢來就幹",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:31673401:7",
+                  "name": "夾娃娃",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:31673401:8",
+                  "name": "掉宝開启",
+                  "__typename": "FreeformTag"
+                }
+              ],
+              "type": "live",
+              "game": {
+                "id": "32399",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/32399-40x56.jpg",
+                "name": "Counter-Strike",
+                "displayName": "Counter-Strike",
+                "slug": "counter-strike",
+                "__typename": "Game"
+              },
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Stream"
+            },
+            "trackingID": null,
+            "__typename": "StreamEdge"
+          },
+          {
+            "cursor": "eyJzIjozNjIuNDgzMDc5MjM1NDE0OCwiZCI6ZmFsc2UsInQiOnRydWV9",
+            "node": {
+              "id": "317361870585",
+              "title": "ПУТЬ К ТОП 99000 МИРА !tg !нож !колесо",
+              "viewersCount": 362,
+              "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_landstop-440x248.jpg",
+              "broadcaster": {
+                "id": "67828458",
+                "login": "landstop",
+                "displayName": "Landstop",
+                "roles": {
+                  "isPartner": true,
+                  "isParticipatingDJ": false,
+                  "__typename": "UserRoles"
+                },
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/54e6fd13-26e5-4680-8dcd-ad9d3f17896a-profile_image-50x50.png",
+                "primaryColorHex": null,
+                "__typename": "User"
+              },
+              "freeformTags": [
+                {
+                  "id": "fft:CHANNEL:67828458:0",
+                  "name": "высокийскилл",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:67828458:1",
+                  "name": "киберспорт",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:67828458:2",
+                  "name": "фейсит",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:67828458:3",
+                  "name": "Русский",
+                  "__typename": "FreeformTag"
+                }
+              ],
+              "type": "live",
+              "game": {
+                "id": "32399",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/32399-40x56.jpg",
+                "name": "Counter-Strike",
+                "displayName": "Counter-Strike",
+                "slug": "counter-strike",
+                "__typename": "Game"
+              },
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Stream"
+            },
+            "trackingID": null,
+            "__typename": "StreamEdge"
+          },
+          {
+            "cursor": "eyJzIjozNDEuNDk5MDE0NTU4NjE5NiwiZCI6ZmFsc2UsInQiOnRydWV9",
+            "node": {
+              "id": "317360016505",
+              "title": "🔴!розыгрыш НОЖА в ТГ! Калибруем Premier. Добавляй меня в друзья на !inui | !tradeit !inui",
+              "viewersCount": 341,
+              "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_1mpala-440x248.jpg",
+              "broadcaster": {
+                "id": "122854486",
+                "login": "1mpala",
+                "displayName": "1mpala",
+                "roles": {
+                  "isPartner": true,
+                  "isParticipatingDJ": false,
+                  "__typename": "UserRoles"
+                },
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/f7abcdc4-f1db-4946-a946-9cb7696c48b7-profile_image-50x50.png",
+                "primaryColorHex": null,
+                "__typename": "User"
+              },
+              "freeformTags": [
+                {
+                  "id": "fft:CHANNEL:122854486:0",
+                  "name": "Русский",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:122854486:1",
+                  "name": "Украина",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:122854486:2",
+                  "name": "Харьков",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:122854486:3",
+                  "name": "КС",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:122854486:4",
+                  "name": "CS2",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:122854486:5",
+                  "name": "кс2",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:122854486:6",
+                  "name": "Українська",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:122854486:7",
+                  "name": "English",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:122854486:8",
+                  "name": "Ukraine",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:122854486:9",
+                  "name": "English",
+                  "__typename": "FreeformTag"
+                }
+              ],
+              "type": "live",
+              "game": {
+                "id": "32399",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/32399-40x56.jpg",
+                "name": "Counter-Strike",
+                "displayName": "Counter-Strike",
+                "slug": "counter-strike",
+                "__typename": "Game"
+              },
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Stream"
+            },
+            "trackingID": null,
+            "__typename": "StreamEdge"
+          },
+          {
+            "cursor": "eyJzIjozMzQuMzk0MjY2NDk5OTk2NywiZCI6ZmFsc2UsInQiOnRydWV9",
+            "node": {
+              "id": "314199581036",
+              "title": "💼 Gamba ad alto rischio 💎 Apertura di casse, crafting di skin e trade-up contract! 🔥 C'è una piccola possibilità che giochiamo :D",
+              "viewersCount": 334,
+              "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_elodroz-440x248.jpg",
+              "broadcaster": {
+                "id": "920383281",
+                "login": "elodroz",
+                "displayName": "elodroz",
+                "roles": {
+                  "isPartner": false,
+                  "isParticipatingDJ": false,
+                  "__typename": "UserRoles"
+                },
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/eaaed74d-db9c-413c-8389-2c82a324d469-profile_image-50x50.png",
+                "primaryColorHex": "1F69FF",
+                "__typename": "User"
+              },
+              "freeformTags": [
+                {
+                  "id": "fft:CHANNEL:920383281:0",
+                  "name": "elodog",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:920383281:1",
+                  "name": "glazing",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:920383281:2",
+                  "name": "Glazer",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:920383281:3",
+                  "name": "SIGMA",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:920383281:4",
+                  "name": "skibidi",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:920383281:5",
+                  "name": "Football",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:920383281:6",
+                  "name": "cs2counterstrike2",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:920383281:7",
+                  "name": "cs",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:920383281:8",
+                  "name": "Italiano",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:920383281:9",
+                  "name": "Italian",
+                  "__typename": "FreeformTag"
+                }
+              ],
+              "type": "live",
+              "game": {
+                "id": "32399",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/32399-40x56.jpg",
+                "name": "Counter-Strike",
+                "displayName": "Counter-Strike",
+                "slug": "counter-strike",
+                "__typename": "Game"
+              },
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Stream"
+            },
+            "trackingID": null,
+            "__typename": "StreamEdge"
+          },
+          {
+            "cursor": "eyJzIjozMjguNDIyMTE2MTcxMjAxMjUsImQiOmZhbHNlLCJ0Ijp0cnVlfQ==",
+            "node": {
+              "id": "314499052277",
+              "title": "+18🟥RERUN🟥 CSZADA - LOJA ATUALIZADÍSSIMA ➡  AO VIVO FARMA MAIS!!!!⬅ ❗skinsvip ❗gpt ❗loja ❗livepix ❗discord ❗donate",
+              "viewersCount": 328,
+              "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_venavas-440x248.jpg",
+              "broadcaster": {
+                "id": "41778547",
+                "login": "venavas",
+                "displayName": "VeNavas",
+                "roles": {
+                  "isPartner": false,
+                  "isParticipatingDJ": false,
+                  "__typename": "UserRoles"
+                },
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/63f467fe-3826-4e6a-abc0-9fbf7601d45b-profile_image-50x50.png",
+                "primaryColorHex": "EB0400",
+                "__typename": "User"
+              },
+              "freeformTags": [
+                {
+                  "id": "fft:CHANNEL:41778547:0",
+                  "name": "Português",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:41778547:1",
+                  "name": "loja",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:41778547:2",
+                  "name": "lojinha",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:41778547:3",
+                  "name": "PIX",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:41778547:4",
+                  "name": "sub",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:41778547:5",
+                  "name": "farm",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:41778547:6",
+                  "name": "Farming",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:41778547:7",
+                  "name": "farmer",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:41778547:8",
+                  "name": "Farmar",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:41778547:9",
+                  "name": "holidayhoopla",
+                  "__typename": "FreeformTag"
+                }
+              ],
+              "type": "live",
+              "game": {
+                "id": "32399",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/32399-40x56.jpg",
+                "name": "Counter-Strike",
+                "displayName": "Counter-Strike",
+                "slug": "counter-strike",
+                "__typename": "Game"
+              },
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Stream"
+            },
+            "trackingID": null,
+            "__typename": "StreamEdge"
+          },
+          {
+            "cursor": "eyJzIjozMjQuNzEyNzQzNDY1MjU2MSwiZCI6ZmFsc2UsInQiOnRydWV9",
+            "node": {
+              "id": "317362189561",
+              "title": "CS GRINDER",
+              "viewersCount": 324,
+              "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_7tyyan-440x248.jpg",
+              "broadcaster": {
+                "id": "789438546",
+                "login": "7tyyan",
+                "displayName": "7tyyan",
+                "roles": {
+                  "isPartner": true,
+                  "isParticipatingDJ": false,
+                  "__typename": "UserRoles"
+                },
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/3df8d1a9-1f27-45f0-89c6-b64f4445a12c-profile_image-50x50.png",
+                "primaryColorHex": "EB0400",
+                "__typename": "User"
+              },
+              "freeformTags": [
+                {
+                  "id": "fft:CHANNEL:789438546:0",
+                  "name": "English",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:789438546:1",
+                  "name": "German",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:789438546:2",
+                  "name": "Deusch",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:789438546:3",
+                  "name": "counterstrike",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:789438546:4",
+                  "name": "Deutsch",
+                  "__typename": "FreeformTag"
+                }
+              ],
+              "type": "live",
+              "game": {
+                "id": "32399",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/32399-40x56.jpg",
+                "name": "Counter-Strike",
+                "displayName": "Counter-Strike",
+                "slug": "counter-strike",
+                "__typename": "Game"
+              },
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Stream"
+            },
+            "trackingID": null,
+            "__typename": "StreamEdge"
+          },
+          {
+            "cursor": "eyJzIjozMjMuNDUzMTE4NDEwOTk4MywiZCI6ZmFsc2UsInQiOnRydWV9",
+            "node": {
+              "id": "314476903414",
+              "title": "🔴RERUN🔴!CLAN R$ 3100 em Skins na loja Acumule pontos e Troque por Skins Grátis 24hrs de Farm ▶️ BY !BET365 !CSGONET !INSANE",
+              "viewersCount": 323,
+              "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_paulinhoo46-440x248.jpg",
+              "broadcaster": {
+                "id": "95911329",
+                "login": "paulinhoo46",
+                "displayName": "Paulinhoo46",
+                "roles": {
+                  "isPartner": false,
+                  "isParticipatingDJ": false,
+                  "__typename": "UserRoles"
+                },
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/4f03b9a6-a652-4415-b425-76453f800b09-profile_image-50x50.png",
+                "primaryColorHex": "8205B3",
+                "__typename": "User"
+              },
+              "freeformTags": [
+                {
+                  "id": "fft:CHANNEL:95911329:0",
+                  "name": "Português",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:95911329:1",
+                  "name": "CS2",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:95911329:2",
+                  "name": "csgonet",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:95911329:3",
+                  "name": "keydrop",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:95911329:4",
+                  "name": "skingratis",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:95911329:5",
+                  "name": "farm",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:95911329:6",
+                  "name": "skins",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:95911329:7",
+                  "name": "loja",
+                  "__typename": "FreeformTag"
+                }
+              ],
+              "type": "live",
+              "game": {
+                "id": "32399",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/32399-40x56.jpg",
+                "name": "Counter-Strike",
+                "displayName": "Counter-Strike",
+                "slug": "counter-strike",
+                "__typename": "Game"
+              },
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Stream"
+            },
+            "trackingID": null,
+            "__typename": "StreamEdge"
+          },
+          {
+            "cursor": "eyJzIjozMjMuNjU0MDM1NDQzNTkyMzYsImQiOmZhbHNlLCJ0Ijp0cnVlfQ==",
+            "node": {
+              "id": "317357476473",
+              "title": "Утренние приключения на фейсите @es4xtank",
+              "viewersCount": 323,
+              "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_h0rlya-440x248.jpg",
+              "broadcaster": {
+                "id": "204239258",
+                "login": "h0rlya",
+                "displayName": "H0RLYA",
+                "roles": {
+                  "isPartner": false,
+                  "isParticipatingDJ": false,
+                  "__typename": "UserRoles"
+                },
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/2b89a83b-3141-4561-9bb3-67486d64e8fc-profile_image-50x50.png",
+                "primaryColorHex": "FFFFFF",
+                "__typename": "User"
+              },
+              "freeformTags": [
+                {
+                  "id": "fft:CHANNEL:204239258:0",
+                  "name": "Русский",
+                  "__typename": "FreeformTag"
+                }
+              ],
+              "type": "live",
+              "game": {
+                "id": "32399",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/32399-40x56.jpg",
+                "name": "Counter-Strike",
+                "displayName": "Counter-Strike",
+                "slug": "counter-strike",
+                "__typename": "Game"
+              },
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Stream"
+            },
+            "trackingID": null,
+            "__typename": "StreamEdge"
+          },
+          {
+            "cursor": "eyJzIjozMTYuOTAzNTQ4MjEyNDY2NjYsImQiOmZhbHNlLCJ0Ijp0cnVlfQ==",
+            "node": {
+              "id": "317357698553",
+              "title": "4OOO ELO // нет цели, нет мечты, ничего нет (｡•́︿•̀｡) !розыгрыш",
+              "viewersCount": 316,
+              "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_trevl-440x248.jpg",
+              "broadcaster": {
+                "id": "42363690",
+                "login": "trevl",
+                "displayName": "trevl",
+                "roles": {
+                  "isPartner": true,
+                  "isParticipatingDJ": false,
+                  "__typename": "UserRoles"
+                },
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/1168b614-e5c2-462a-8d2c-4c9b318f4728-profile_image-50x50.png",
+                "primaryColorHex": "BD0078",
+                "__typename": "User"
+              },
+              "freeformTags": [
+                {
+                  "id": "fft:CHANNEL:42363690:0",
+                  "name": "tilt",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:42363690:1",
+                  "name": "Русский",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:42363690:2",
+                  "name": "English",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:42363690:3",
+                  "name": "faceit",
+                  "__typename": "FreeformTag"
+                }
+              ],
+              "type": "live",
+              "game": {
+                "id": "32399",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/32399-40x56.jpg",
+                "name": "Counter-Strike",
+                "displayName": "Counter-Strike",
+                "slug": "counter-strike",
+                "__typename": "Game"
+              },
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Stream"
+            },
+            "trackingID": null,
+            "__typename": "StreamEdge"
+          },
+          {
+            "cursor": "eyJzIjozMTAuMjI3MjI5MzUyNjI3NywiZCI6ZmFsc2UsInQiOnRydWV9",
+            "node": {
+              "id": "317362057977",
+              "title": "ПРОКАЧКИ СКИНОВ ПОДПИСЧИКАМ! TOP 1 CS2 in BELARUS! НОЖ И ПРАЙМ за 5К БАЛЛОВ 🔥ДЕШЕВЫЕ СКИНЫ ЗА БАЛЫ ЕСТЬ? 🎁ИГРАЕМ В CS:GO",
+              "viewersCount": 310,
+              "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_zhenyalarkin-440x248.jpg",
+              "broadcaster": {
+                "id": "574322532",
+                "login": "zhenyalarkin",
+                "displayName": "ZhenyaLarkin",
+                "roles": {
+                  "isPartner": false,
+                  "isParticipatingDJ": false,
+                  "__typename": "UserRoles"
+                },
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/d3f6dc07-0be3-4771-a0e3-98a667e147ab-profile_image-50x50.png",
+                "primaryColorHex": "FFBF00",
+                "__typename": "User"
+              },
+              "freeformTags": [
+                {
+                  "id": "fft:CHANNEL:574322532:0",
+                  "name": "Русский",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:574322532:1",
+                  "name": "CS2",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:574322532:2",
+                  "name": "CS",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:574322532:3",
+                  "name": "counterstrike",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:574322532:4",
+                  "name": "csgo",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:574322532:5",
+                  "name": "English",
+                  "__typename": "FreeformTag"
+                }
+              ],
+              "type": "live",
+              "game": {
+                "id": "32399",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/32399-40x56.jpg",
+                "name": "Counter-Strike",
+                "displayName": "Counter-Strike",
+                "slug": "counter-strike",
+                "__typename": "Game"
+              },
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Stream"
+            },
+            "trackingID": null,
+            "__typename": "StreamEdge"
+          },
+          {
+            "cursor": "eyJzIjoyODIuNTYzNDAyNDc4NzE0MzUsImQiOmZhbHNlLCJ0Ijp0cnVlfQ==",
+            "node": {
+              "id": "317309265145",
+              "title": "НЕ ЗАКОНЧУ СТРИМ ПОКА НЕ ЗАКРОЮ КРЕДИТ🔥 СКИНЫ ЗА БАЛЛЫ 🔥 Дроп за фоллоу пиши в чате !халява",
+              "viewersCount": 282,
+              "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_emel9l-440x248.jpg",
+              "broadcaster": {
+                "id": "916795015",
+                "login": "emel9l",
+                "displayName": "emel9l",
+                "roles": {
+                  "isPartner": false,
+                  "isParticipatingDJ": false,
+                  "__typename": "UserRoles"
+                },
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/8aa8c49c-6945-47db-9ce9-9263d73231c4-profile_image-50x50.png",
+                "primaryColorHex": "EB0400",
+                "__typename": "User"
+              },
+              "freeformTags": [
+                {
+                  "id": "fft:CHANNEL:916795015:0",
+                  "name": "Русский",
+                  "__typename": "FreeformTag"
+                }
+              ],
+              "type": "live",
+              "game": {
+                "id": "32399",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/32399-40x56.jpg",
+                "name": "Counter-Strike",
+                "displayName": "Counter-Strike",
+                "slug": "counter-strike",
+                "__typename": "Game"
+              },
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Stream"
+            },
+            "trackingID": null,
+            "__typename": "StreamEdge"
+          },
+          {
+            "cursor": "eyJzIjoyODEuODg4MTA5NTI3NzM1MSwiZCI6ZmFsc2UsInQiOnRydWV9",
+            "node": {
+              "id": "317361971065",
+              "title": "CS / СКИНЫ ЗА ФОЛЛОУ 🔥 СКИНЫ ЗА БАЛЫ ЕСТЬ? 🎁ИГРАЕМ В CS2 !hell",
+              "viewersCount": 281,
+              "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_natr1x_____-440x248.jpg",
+              "broadcaster": {
+                "id": "674646910",
+                "login": "natr1x_____",
+                "displayName": "natr1x_____",
+                "roles": {
+                  "isPartner": false,
+                  "isParticipatingDJ": false,
+                  "__typename": "UserRoles"
+                },
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/ef51c9c5-98fe-4dda-a914-2ff5413af7e6-profile_image-50x50.png",
+                "primaryColorHex": "DA8BFF",
+                "__typename": "User"
+              },
+              "freeformTags": [
+                {
+                  "id": "fft:CHANNEL:674646910:0",
+                  "name": "Русский",
+                  "__typename": "FreeformTag"
+                }
+              ],
+              "type": "live",
+              "game": {
+                "id": "32399",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/32399-40x56.jpg",
+                "name": "Counter-Strike",
+                "displayName": "Counter-Strike",
+                "slug": "counter-strike",
+                "__typename": "Game"
+              },
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Stream"
+            },
+            "trackingID": null,
+            "__typename": "StreamEdge"
+          },
+          {
+            "cursor": "eyJzIjoyNjEuMTY5OTYxODM4NTU2OSwiZCI6ZmFsc2UsInQiOnRydWV9",
+            "node": {
+              "id": "314199580652",
+              "title": "🔥 -200ELO/H 🔥 2.7K ELO Prodigy 🔥 UWU? BAKA! 🔥 M0NESY V2 🔥 ANIME GURU 🔥 FUTURO PRO 🔥 FOLLE 🔥 LOTTATORE 🔥 ONE PIECE 🔥",
+              "viewersCount": 261,
+              "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_arkhramcs-440x248.jpg",
+              "broadcaster": {
+                "id": "920384508",
+                "login": "arkhramcs",
+                "displayName": "arkhramcs",
+                "roles": {
+                  "isPartner": false,
+                  "isParticipatingDJ": false,
+                  "__typename": "UserRoles"
+                },
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/9d2b7d64-9f91-4b9c-9ac0-9b556d42d5c4-profile_image-50x50.png",
+                "primaryColorHex": "FFFFFF",
+                "__typename": "User"
+              },
+              "freeformTags": [
+                {
+                  "id": "fft:CHANNEL:920384508:0",
+                  "name": "csgo",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:920384508:1",
+                  "name": "DailyStreaming",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:920384508:2",
+                  "name": "PlayingwithViewers",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:920384508:3",
+                  "name": "UnitedArabEmirates",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:920384508:4",
+                  "name": "UnitedKingdom",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:920384508:5",
+                  "name": "English",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:920384508:6",
+                  "name": "g2",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:920384508:7",
+                  "name": "IT",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:920384508:8",
+                  "name": "Italiano",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:920384508:9",
+                  "name": "Italian",
+                  "__typename": "FreeformTag"
+                }
+              ],
+              "type": "live",
+              "game": {
+                "id": "32399",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/32399-40x56.jpg",
+                "name": "Counter-Strike",
+                "displayName": "Counter-Strike",
+                "slug": "counter-strike",
+                "__typename": "Game"
+              },
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Stream"
+            },
+            "trackingID": null,
+            "__typename": "StreamEdge"
+          },
+          {
+            "cursor": "eyJzIjoyNTguMjM0MjI2MzAxMzY2OTYsImQiOmZhbHNlLCJ0Ijp0cnVlfQ==",
+            "node": {
+              "id": "317356129273",
+              "title": "🎯 5 partite classificate, rilassato, provando al massimo - una combinazione di entrambi =)) | !from !age 🎯",
+              "viewersCount": 258,
+              "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_avram_tv-440x248.jpg",
+              "broadcaster": {
+                "id": "920381817",
+                "login": "avram_tv",
+                "displayName": "avram_tv",
+                "roles": {
+                  "isPartner": false,
+                  "isParticipatingDJ": false,
+                  "__typename": "UserRoles"
+                },
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/05fb32db-5b65-4b7a-af7d-2b6d9a1c249a-profile_image-50x50.png",
+                "primaryColorHex": "4A4A4A",
+                "__typename": "User"
+              },
+              "freeformTags": [
+                {
+                  "id": "fft:CHANNEL:920381817:0",
+                  "name": "csgo",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:920381817:1",
+                  "name": "faceit",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:920381817:2",
+                  "name": "grind",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:920381817:3",
+                  "name": "playingwithhviewers",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:920381817:4",
+                  "name": "English",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:920381817:5",
+                  "name": "Avram",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:920381817:6",
+                  "name": "TV",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:920381817:7",
+                  "name": "TTV",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:920381817:8",
+                  "name": "TryhardGameplay",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:920381817:9",
+                  "name": "Italiano",
+                  "__typename": "FreeformTag"
+                }
+              ],
+              "type": "live",
+              "game": {
+                "id": "32399",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/32399-40x56.jpg",
+                "name": "Counter-Strike",
+                "displayName": "Counter-Strike",
+                "slug": "counter-strike",
+                "__typename": "Game"
+              },
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Stream"
+            },
+            "trackingID": null,
+            "__typename": "StreamEdge"
+          },
+          {
+            "cursor": "eyJzIjoyNTUuMDcyOTg2NzA2NDA5ODQsImQiOmZhbHNlLCJ0Ijp0cnVlfQ==",
+            "node": {
+              "id": "317361443065",
+              "title": "😉ДОБРЫЙ ДЕНЬ😉 WR kz_variety_fix TODAY! 😈",
+              "viewersCount": 255,
+              "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_noty52-440x248.jpg",
+              "broadcaster": {
+                "id": "712257675",
+                "login": "noty52",
+                "displayName": "noty52",
+                "roles": {
+                  "isPartner": false,
+                  "isParticipatingDJ": false,
+                  "__typename": "UserRoles"
+                },
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/848d76b1-f2e8-46e0-92c7-a7be3ff10cc3-profile_image-50x50.png",
+                "primaryColorHex": null,
+                "__typename": "User"
+              },
+              "freeformTags": [
+                {
+                  "id": "fft:CHANNEL:712257675:0",
+                  "name": "Русский",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:712257675:1",
+                  "name": "CS2",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:712257675:2",
+                  "name": "kz",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:712257675:3",
+                  "name": "kreedz",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:712257675:4",
+                  "name": "cs",
+                  "__typename": "FreeformTag"
+                }
+              ],
+              "type": "live",
+              "game": {
+                "id": "32399",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/32399-40x56.jpg",
+                "name": "Counter-Strike",
+                "displayName": "Counter-Strike",
+                "slug": "counter-strike",
+                "__typename": "Game"
+              },
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Stream"
+            },
+            "trackingID": null,
+            "__typename": "StreamEdge"
+          }
+        ],
+        "pageInfo": { "hasNextPage": true, "__typename": "PageInfo" },
+        "__typename": "StreamConnection"
+      },
+      "__typename": "Game"
+    }
+  },
+  "extensions": {
+    "durationMilliseconds": 74,
+    "operationName": "DirectoryPage_Game",
+    "requestID": "01JPMDECPZCNH2WHJTZ9PZM8MB"
+  }
+}

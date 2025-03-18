@@ -368,6 +368,88 @@ export interface ClipsDownloadButtonData {
   clip: null | ClipsDownloadButtonClip;
 }
 
+export interface DirectoryPageGameGame {
+  id: string;
+  name: string;
+  displayName: string;
+  streams: {
+    banners: null | ('MAY_CONTAIN_MATURE_CONTENT' | string)[];
+    edges: {
+      cursor: null | string;
+      node: DirectoryPageGameStream;
+      trackingID: null | string;
+      __typename: 'StreamEdge';
+    }[];
+    pageInfo: {
+      hasNextPage: boolean;
+      __typename: 'PageInfo';
+    };
+    __typename: 'StreamConnection';
+  };
+  __typename: 'Game';
+}
+
+export interface DirectoryPageGameStream {
+  id: string;
+  title: string;
+  viewersCount: number;
+  previewImageURL: string;
+  broadcaster: {
+    id: string;
+    login: string;
+    displayName: string;
+    roles: {
+      isPartner: boolean;
+      isParticipatingDJ: boolean;
+      __typename: 'UserRoles';
+    };
+    profileImageURL: string;
+    primaryColorHex: null | string;
+    __typename: 'User';
+  };
+  freeformTags: {
+    id: string;
+    name: string;
+    __typename: 'FreeformTag';
+  }[];
+  type: 'live';
+  game: {
+    id: string;
+    boxArtURL: string;
+    name: string;
+    displayName: string;
+    slug: string;
+    __typename: 'Game';
+  };
+  previewThumbnailProperties: {
+    blurReason: 'BLUR_NOT_REQUIRED' | string;
+    __typename: 'PreviewThumbnailProperties';
+  };
+  __typename: 'Stream';
+}
+
+export interface DirectoryPageGameVariables {
+  imageWidth?: number;
+  slug: string;
+  options: {
+    sort: 'RELEVANCE' | 'VIEWER_COUNT' | 'VIEWER_COUNT_ASC' | 'RECENT';
+    recommendationsContext?: null | {
+      platform?: null | 'web' | string;
+    };
+    freeformTags?: null | string[];
+    tags?: null | string[];
+    broadcasterLanguages?: null | string[];
+    systemFilters?: null | string[];
+  };
+  sortTypeIsRecency: boolean;
+  limit: number;
+  includeIsDJ: boolean;
+}
+
+export interface DirectoryPageGameData {
+  game: null | DirectoryPageGameGame;
+}
+
 export interface FfzBroadcastIdUser {
   id: string;
   stream: null | {

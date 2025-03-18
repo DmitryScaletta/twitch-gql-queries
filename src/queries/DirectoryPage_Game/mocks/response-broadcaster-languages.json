@@ -1,0 +1,407 @@
+{
+  "data": {
+    "game": {
+      "id": "29595",
+      "name": "Dota 2",
+      "displayName": "Dota 2",
+      "streams": {
+        "banners": null,
+        "edges": [
+          {
+            "cursor": "eyJzIjo0Mi4yNzcyMTE4MzAwODQ1LCJkIjpmYWxzZSwidCI6dHJ1ZX0=",
+            "node": {
+              "id": "317362157689",
+              "title": "Grind geht weiter",
+              "viewersCount": 42,
+              "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_hovitey-440x248.jpg",
+              "broadcaster": {
+                "id": "53455089",
+                "login": "hovitey",
+                "displayName": "HoviteY",
+                "roles": {
+                  "isPartner": true,
+                  "isParticipatingDJ": false,
+                  "__typename": "UserRoles"
+                },
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/hovitey-profile_image-58c082afe0460ffc-50x50.jpeg",
+                "primaryColorHex": null,
+                "__typename": "User"
+              },
+              "freeformTags": [
+                {
+                  "id": "fft:CHANNEL:53455089:0",
+                  "name": "Deutsch",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:53455089:1",
+                  "name": "highmmrplayer",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:53455089:2",
+                  "name": "highonllife",
+                  "__typename": "FreeformTag"
+                }
+              ],
+              "type": "live",
+              "game": {
+                "id": "29595",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/29595-40x56.jpg",
+                "name": "Dota 2",
+                "displayName": "Dota 2",
+                "slug": "dota-2",
+                "__typename": "Game"
+              },
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Stream"
+            },
+            "trackingID": null,
+            "__typename": "StreamEdge"
+          },
+          {
+            "cursor": "eyJzIjoxMy4zMjU5OTA2NzE4MzM1MDksImQiOmZhbHNlLCJ0Ijp0cnVlfQ==",
+            "node": {
+              "id": "317360754041",
+              "title": "13k soloq // FULL FOCUS // NO MUSIC // WIN ONLY",
+              "viewersCount": 13,
+              "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_azazel_dotes-440x248.jpg",
+              "broadcaster": {
+                "id": "95840713",
+                "login": "azazel_dotes",
+                "displayName": "azazel_dotes",
+                "roles": {
+                  "isPartner": false,
+                  "isParticipatingDJ": false,
+                  "__typename": "UserRoles"
+                },
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/03eaa5ee-e751-4b5e-9c9d-d0e787be1973-profile_image-50x50.png",
+                "primaryColorHex": null,
+                "__typename": "User"
+              },
+              "freeformTags": [
+                {
+                  "id": "fft:CHANNEL:95840713:0",
+                  "name": "Deutsch",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:95840713:1",
+                  "name": "English",
+                  "__typename": "FreeformTag"
+                }
+              ],
+              "type": "live",
+              "game": {
+                "id": "29595",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/29595-40x56.jpg",
+                "name": "Dota 2",
+                "displayName": "Dota 2",
+                "slug": "dota-2",
+                "__typename": "Game"
+              },
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Stream"
+            },
+            "trackingID": null,
+            "__typename": "StreamEdge"
+          },
+          {
+            "cursor": "eyJzIjoyLjk5Mzc4ODI1OTEwMjQ0OCwiZCI6ZmFsc2UsInQiOnRydWV9",
+            "node": {
+              "id": "317357361145",
+              "title": "rein in dota2",
+              "viewersCount": 2,
+              "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_cojackg-440x248.jpg",
+              "broadcaster": {
+                "id": "1271240063",
+                "login": "cojackg",
+                "displayName": "cojackg",
+                "roles": {
+                  "isPartner": false,
+                  "isParticipatingDJ": false,
+                  "__typename": "UserRoles"
+                },
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/51c982b3-5e96-4472-b886-c8a934d274e5-profile_image-50x50.jpeg",
+                "primaryColorHex": null,
+                "__typename": "User"
+              },
+              "freeformTags": [
+                {
+                  "id": "fft:CHANNEL:1271240063:0",
+                  "name": "Deutsch",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:1271240063:1",
+                  "name": "RankedSoloQ",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:1271240063:2",
+                  "name": "RankedSolos",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:1271240063:3",
+                  "name": "dota2",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:1271240063:4",
+                  "name": "dota2fun",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:1271240063:5",
+                  "name": "dota2gameplay",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:1271240063:6",
+                  "name": "dota2gaming",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:1271240063:7",
+                  "name": "dota2carry",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:1271240063:8",
+                  "name": "mmrdota2",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:1271240063:9",
+                  "name": "2kmmrdota2",
+                  "__typename": "FreeformTag"
+                }
+              ],
+              "type": "live",
+              "game": {
+                "id": "29595",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/29595-40x56.jpg",
+                "name": "Dota 2",
+                "displayName": "Dota 2",
+                "slug": "dota-2",
+                "__typename": "Game"
+              },
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Stream"
+            },
+            "trackingID": null,
+            "__typename": "StreamEdge"
+          },
+          {
+            "cursor": "eyJzIjoyLjM4NTE1ODgwNzgyNzQyOTUsImQiOmZhbHNlLCJ0Ijp0cnVlfQ==",
+            "node": {
+              "id": "317362577913",
+              "title": "Stumm High MMR Games schauen, später vielleicht selber spielen",
+              "viewersCount": 2,
+              "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_darkkdota-440x248.jpg",
+              "broadcaster": {
+                "id": "812956782",
+                "login": "darkkdota",
+                "displayName": "darkkdota",
+                "roles": {
+                  "isPartner": false,
+                  "isParticipatingDJ": false,
+                  "__typename": "UserRoles"
+                },
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/f2c9ee74-f9af-4b4a-8226-a4e7357abc73-profile_image-50x50.png",
+                "primaryColorHex": "000000",
+                "__typename": "User"
+              },
+              "freeformTags": [
+                {
+                  "id": "fft:CHANNEL:812956782:0",
+                  "name": "Deutsch",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:812956782:1",
+                  "name": "AnimeLover",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:812956782:2",
+                  "name": "animecommunity",
+                  "__typename": "FreeformTag"
+                }
+              ],
+              "type": "live",
+              "game": {
+                "id": "29595",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/29595-40x56.jpg",
+                "name": "Dota 2",
+                "displayName": "Dota 2",
+                "slug": "dota-2",
+                "__typename": "Game"
+              },
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Stream"
+            },
+            "trackingID": null,
+            "__typename": "StreamEdge"
+          },
+          {
+            "cursor": "eyJzIjoyLjExMDU2Mjk3OTI2OTQzODMsImQiOmZhbHNlLCJ0Ijp0cnVlfQ==",
+            "node": {
+              "id": "317359381241",
+              "title": "enigma big blackhole road to TI",
+              "viewersCount": 2,
+              "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_karabasan1903-440x248.jpg",
+              "broadcaster": {
+                "id": "633711785",
+                "login": "karabasan1903",
+                "displayName": "karabasan1903",
+                "roles": {
+                  "isPartner": false,
+                  "isParticipatingDJ": false,
+                  "__typename": "UserRoles"
+                },
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/5db5865d-0d65-486d-884c-a807afe91cd9-profile_image-50x50.png",
+                "primaryColorHex": null,
+                "__typename": "User"
+              },
+              "freeformTags": [
+                {
+                  "id": "fft:CHANNEL:633711785:0",
+                  "name": "Deutsch",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:633711785:1",
+                  "name": "dota2",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:633711785:2",
+                  "name": "dota2ranked",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:633711785:3",
+                  "name": "Enigma",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:633711785:4",
+                  "name": "BlackHole",
+                  "__typename": "FreeformTag"
+                }
+              ],
+              "type": "live",
+              "game": {
+                "id": "29595",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/29595-40x56.jpg",
+                "name": "Dota 2",
+                "displayName": "Dota 2",
+                "slug": "dota-2",
+                "__typename": "Game"
+              },
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Stream"
+            },
+            "trackingID": null,
+            "__typename": "StreamEdge"
+          },
+          {
+            "cursor": "eyJzIjoxLjA2MTk1MjEwNTUwNDkxNTMsImQiOmZhbHNlLCJ0Ijp0cnVlfQ==",
+            "node": {
+              "id": "317362279545",
+              "title": "IMMORTAL SUPER FUN GAMES ROAD TO 7KGER/ENG",
+              "viewersCount": 1,
+              "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_fizzibubblee-440x248.jpg",
+              "broadcaster": {
+                "id": "991332630",
+                "login": "fizzibubblee",
+                "displayName": "fizzibubblee",
+                "roles": {
+                  "isPartner": false,
+                  "isParticipatingDJ": false,
+                  "__typename": "UserRoles"
+                },
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/1108bbb9-9893-4cf7-baec-522d158079ec-profile_image-50x50.png",
+                "primaryColorHex": null,
+                "__typename": "User"
+              },
+              "freeformTags": [
+                {
+                  "id": "fft:CHANNEL:991332630:0",
+                  "name": "dota2stream",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:991332630:1",
+                  "name": "fun",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:991332630:2",
+                  "name": "English",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:991332630:3",
+                  "name": "Deutsch",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:991332630:4",
+                  "name": "Educational",
+                  "__typename": "FreeformTag"
+                },
+                {
+                  "id": "fft:CHANNEL:991332630:5",
+                  "name": "Polski",
+                  "__typename": "FreeformTag"
+                }
+              ],
+              "type": "live",
+              "game": {
+                "id": "29595",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/29595-40x56.jpg",
+                "name": "Dota 2",
+                "displayName": "Dota 2",
+                "slug": "dota-2",
+                "__typename": "Game"
+              },
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Stream"
+            },
+            "trackingID": null,
+            "__typename": "StreamEdge"
+          }
+        ],
+        "pageInfo": { "hasNextPage": false, "__typename": "PageInfo" },
+        "__typename": "StreamConnection"
+      },
+      "__typename": "Game"
+    }
+  },
+  "extensions": {
+    "durationMilliseconds": 71,
+    "operationName": "DirectoryPage_Game",
+    "requestID": "01JPMDFSNW412D82EJ1RR3VVFK"
+  }
+}

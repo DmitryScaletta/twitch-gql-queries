@@ -1,0 +1,9 @@
+{
+  "errors": [{ "message": "service error", "path": ["game"] }],
+  "data": { "game": null },
+  "extensions": {
+    "durationMilliseconds": 3,
+    "operationName": "DirectoryPage_Game",
+    "requestID": "01JPMDJ6PWAYE971W3J8690R0F"
+  }
+}

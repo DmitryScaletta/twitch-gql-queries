@@ -67,6 +67,7 @@ console.log(channels);
 * ClipsCards__Game
 * ClipsCards__User
 * ClipsDownloadButton
+* DirectoryPage_Game
 * FFZ_BroadcastID
 * GetPinnedChat
 * GetUserID

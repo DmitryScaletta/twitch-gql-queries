@@ -1,0 +1,88 @@
+import { describe, test } from 'node:test';
+import { gqlRequest } from '../../gqlRequest.ts';
+import { createValidate } from '../testHelpers.ts';
+import { getQueryDirectoryPageGame } from './query.ts';
+import { GameSchema, ResponseSchema, StreamSchema } from './schema.ts';
+
+import resNoStreams from './mocks/response-no-streams.json' with { type: 'json' };
+
+describe('DirectoryPage_Game', () => {
+  const validate = createValidate(ResponseSchema, [GameSchema, StreamSchema]);
+
+  test('real request: all variables', async () => {
+    const [queryResponse] = await gqlRequest([
+      getQueryDirectoryPageGame({
+        imageWidth: 50,
+        slug: 'just-chatting',
+        options: {
+          sort: 'RELEVANCE',
+          recommendationsContext: {
+            platform: 'web',
+          },
+          freeformTags: null,
+          tags: [],
+          broadcasterLanguages: [],
+          systemFilters: [],
+        },
+        sortTypeIsRecency: false,
+        limit: 30,
+        includeIsDJ: true,
+      }),
+    ]);
+    validate(queryResponse);
+  });
+
+  test('real request: only required variables', async () => {
+    const [queryResponse] = await gqlRequest([
+      getQueryDirectoryPageGame({
+        slug: 'counter-strike',
+        options: { sort: 'VIEWER_COUNT' },
+        sortTypeIsRecency: false,
+        limit: 30,
+        includeIsDJ: true,
+      }),
+    ]);
+    validate(queryResponse);
+  });
+
+  test('real request: broadcasterLanguages', async () => {
+    const [queryResponse] = await gqlRequest([
+      getQueryDirectoryPageGame({
+        slug: 'dota-2',
+        options: { sort: 'VIEWER_COUNT', broadcasterLanguages: ['DE'] },
+        sortTypeIsRecency: false,
+        limit: 30,
+        includeIsDJ: true,
+      }),
+    ]);
+    validate(queryResponse);
+  });
+
+  test('real request: freeformTags', async () => {
+    const [queryResponse] = await gqlRequest([
+      getQueryDirectoryPageGame({
+        slug: 'grand-theft-auto-v',
+        options: { sort: 'VIEWER_COUNT', freeformTags: ['GTARP'] },
+        sortTypeIsRecency: false,
+        limit: 30,
+        includeIsDJ: true,
+      }),
+    ]);
+    validate(queryResponse);
+  });
+
+  test('real request: not exists', async () => {
+    const [queryResponse] = await gqlRequest([
+      getQueryDirectoryPageGame({
+        slug: '-category-not-exists-',
+        options: { sort: 'VIEWER_COUNT' },
+        sortTypeIsRecency: false,
+        limit: 30,
+        includeIsDJ: true,
+      }),
+    ]);
+    validate(queryResponse);
+  });
+
+  test('mocks: no streams', () => validate(resNoStreams));
+});

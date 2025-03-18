@@ -1,0 +1,21 @@
+{
+  "data": {
+    "game": {
+      "id": "1382093305",
+      "name": "Snap Flex",
+      "displayName": "Snap Flex",
+      "streams": {
+        "banners": null,
+        "edges": [],
+        "pageInfo": { "hasNextPage": false, "__typename": "PageInfo" },
+        "__typename": "StreamConnection"
+      },
+      "__typename": "Game"
+    }
+  },
+  "extensions": {
+    "durationMilliseconds": 11,
+    "operationName": "DirectoryPage_Game",
+    "requestID": "01JPMEJVRES0W8YG2B4C63P2TY"
+  }
+}

@@ -1,0 +1,134 @@
+### DirectoryPage_Game
+
+POST https://gql.twitch.tv/gql
+Content-Type: application/json
+Client-Id: {{$dotenv CLIENT_ID}}
+
+{
+  "operationName": "DirectoryPage_Game",
+  "variables": {
+    "imageWidth": 50,
+    "slug": "just-chatting",
+    "options": {
+      "sort": "RELEVANCE",
+      "recommendationsContext": {
+        "platform": "web"
+      },
+      "freeformTags": null,
+      "tags": [],
+      "broadcasterLanguages": [],
+      "systemFilters": []
+    },
+    "sortTypeIsRecency": false,
+    "limit": 30,
+    "includeIsDJ": true
+  },
+  "extensions": {
+    "persistedQuery": {
+      "version": 1,
+      "sha256Hash": "c7c9d5aad09155c4161d2382092dc44610367f3536aac39019ec2582ae5065f9"
+    }
+  }
+}
+
+### only required variables
+
+POST https://gql.twitch.tv/gql
+Content-Type: application/json
+Client-Id: {{$dotenv CLIENT_ID}}
+
+{
+  "operationName": "DirectoryPage_Game",
+  "variables": {
+    "slug": "counter-strike",
+    "options": {
+      "sort": "VIEWER_COUNT"
+    },
+    "sortTypeIsRecency": false,
+    "limit": 30,
+    "includeIsDJ": true
+  },
+  "extensions": {
+    "persistedQuery": {
+      "version": 1,
+      "sha256Hash": "c7c9d5aad09155c4161d2382092dc44610367f3536aac39019ec2582ae5065f9"
+    }
+  }
+}
+
+### broadcasterLanguages
+
+POST https://gql.twitch.tv/gql
+Content-Type: application/json
+Client-Id: {{$dotenv CLIENT_ID}}
+
+{
+  "operationName": "DirectoryPage_Game",
+  "variables": {
+    "slug": "dota-2",
+    "options": {
+      "sort": "VIEWER_COUNT",
+      "broadcasterLanguages": ["DE"]
+    },
+    "sortTypeIsRecency": false,
+    "limit": 30,
+    "includeIsDJ": true
+  },
+  "extensions": {
+    "persistedQuery": {
+      "version": 1,
+      "sha256Hash": "c7c9d5aad09155c4161d2382092dc44610367f3536aac39019ec2582ae5065f9"
+    }
+  }
+}
+
+### freeformTags
+
+POST https://gql.twitch.tv/gql
+Content-Type: application/json
+Client-Id: {{$dotenv CLIENT_ID}}
+
+{
+  "operationName": "DirectoryPage_Game",
+  "variables": {
+    "slug": "grand-theft-auto-v",
+    "options": {
+      "sort": "VIEWER_COUNT",
+      "freeformTags": ["GTARP"]
+    },
+    "sortTypeIsRecency": false,
+    "limit": 30,
+    "includeIsDJ": true
+  },
+  "extensions": {
+    "persistedQuery": {
+      "version": 1,
+      "sha256Hash": "c7c9d5aad09155c4161d2382092dc44610367f3536aac39019ec2582ae5065f9"
+    }
+  }
+}
+
+### not exists
+
+POST https://gql.twitch.tv/gql
+Content-Type: application/json
+Client-Id: {{$dotenv CLIENT_ID}}
+
+{
+  "operationName": "DirectoryPage_Game",
+  "variables": {
+    "slug": "-game-not-exists-",
+    "options": {
+      "sort": "VIEWER_COUNT"
+    },
+    "sortTypeIsRecency": false,
+    "limit": 30,
+    "includeIsDJ": true
+  },
+  "extensions": {
+    "persistedQuery": {
+      "version": 1,
+      "sha256Hash": "c7c9d5aad09155c4161d2382092dc44610367f3536aac39019ec2582ae5065f9"
+    }
+  }
+}
