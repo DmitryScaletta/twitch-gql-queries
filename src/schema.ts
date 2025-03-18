@@ -14,20 +14,6 @@ const integrityChallenge = {
   ),
 } as const;
 
-const integrityErrors = {
-  errors: T.Optional(
-    T.Array(
-      T.Object(
-        {
-          message: T.Literal('failed integrity check'),
-          path: T.Array(T.String()),
-        },
-        { additionalProperties: false },
-      ),
-    ),
-  ),
-} as const;
-
 export const getResponseSchema = <TDataSchema extends TObject>(
   operationName: string,
   DataSchema: TDataSchema,
@@ -35,7 +21,17 @@ export const getResponseSchema = <TDataSchema extends TObject>(
 ) =>
   T.Object(
     {
-      ...(integrityError ? integrityErrors : {}),
+      errors: T.Optional(
+        T.Array(
+          T.Object(
+            {
+              message: T.String(),
+              path: T.Array(T.String()),
+            },
+            { additionalProperties: false },
+          ),
+        ),
+      ),
       data: DataSchema,
       extensions: T.Object(
         {
