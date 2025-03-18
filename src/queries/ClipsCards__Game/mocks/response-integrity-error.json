@@ -5,6 +5,7 @@
   "data": {
     "game": {
       "id": "509658",
+      "name": "Just Chatting",
       "displayName": "Just Chatting",
       "clips": null,
       "__typename": "Game"
@@ -12,8 +13,8 @@
   },
   "extensions": {
     "challenge": { "type": "integrity" },
-    "durationMilliseconds": 5,
+    "durationMilliseconds": 3,
     "operationName": "ClipsCards__Game",
-    "requestID": "01JP4JKMPK902G33XJB4YDD9FP"
+    "requestID": "01JPMZD8APZPHHGMW9QP2Y3NDG"
   }
 }

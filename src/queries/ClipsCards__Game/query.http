@@ -1,7 +1,5 @@
 ### ClipsCards__Game
 
-// LAST_DAY | LAST_WEEK | LAST_MONTH | ALL_TIME
-
 POST https://gql.twitch.tv/gql
 Content-Type: application/json
 Client-Id: {{$dotenv CLIENT_ID}}
@@ -14,14 +12,54 @@ Client-Id: {{$dotenv CLIENT_ID}}
     "criteria": {
       "languages": [],
       "filter": "LAST_WEEK",
-      "isFeatured": true
+      "shouldFilterByDiscoverySetting": true
     },
     "cursor": null
   },
   "extensions": {
     "persistedQuery": {
       "version": 1,
-      "sha256Hash": "ed57101f7f38b69456f50413b05e044e505a0bdcad819ad5ee734b9c3b74cf8c"
+      "sha256Hash": "ebcf54afb9aa5d6cec8aad2c35b84e2737a109dac5b184308aae73a27d176707"
+    }
+  }
+}
+
+### only required variables
+
+POST https://gql.twitch.tv/gql
+Content-Type: application/json
+Client-Id: {{$dotenv CLIENT_ID}}
+
+{
+  "operationName": "ClipsCards__Game",
+  "variables": {
+    "categorySlug": "just-chatting",
+    "limit": 20
+  },
+  "extensions": {
+    "persistedQuery": {
+      "version": 1,
+      "sha256Hash": "ebcf54afb9aa5d6cec8aad2c35b84e2737a109dac5b184308aae73a27d176707"
+    }
+  }
+}
+
+### not exists
+
+POST https://gql.twitch.tv/gql
+Content-Type: application/json
+Client-Id: {{$dotenv CLIENT_ID}}
+
+{
+  "operationName": "ClipsCards__Game",
+  "variables": {
+    "categorySlug": "-category-not-exists-",
+    "limit": 20
+  },
+  "extensions": {
+    "persistedQuery": {
+      "version": 1,
+      "sha256Hash": "ebcf54afb9aa5d6cec8aad2c35b84e2737a109dac5b184308aae73a27d176707"
     }
   }
 }
@@ -37,17 +75,12 @@ Client-Id: {{$dotenv CLIENT_ID}}
   "variables": {
     "categorySlug": "just-chatting",
     "limit": 20,
-    "criteria": {
-      "languages": [],
-      "filter": "LAST_WEEK",
-      "isFeatured": true
-    },
     "cursor": "MjA="
   },
   "extensions": {
     "persistedQuery": {
       "version": 1,
-      "sha256Hash": "ed57101f7f38b69456f50413b05e044e505a0bdcad819ad5ee734b9c3b74cf8c"
+      "sha256Hash": "ebcf54afb9aa5d6cec8aad2c35b84e2737a109dac5b184308aae73a27d176707"
     }
   }
 }

@@ -7,7 +7,7 @@ export const getQueryClipsCardsUser = (variables: ClipsCardsUserVariables) => ({
     persistedQuery: {
       version: 1,
       sha256Hash:
-        'af4bd82dcacdda3d693ed274e29b2c97b4990de2b1e683994b16ea26f3abd1af',
+        '4eb8f85fc41a36c481d809e8e99b2a32127fdb7647c336d27743ec4a88c4ea44',
     },
   },
 });

@@ -5,8 +5,8 @@
   "data": { "user": { "id": "71092938", "clips": null, "__typename": "User" } },
   "extensions": {
     "challenge": { "type": "integrity" },
-    "durationMilliseconds": 22,
+    "durationMilliseconds": 19,
     "operationName": "ClipsCards__User",
-    "requestID": "01JP4JGWGRAWD1PB7JAWCQR518"
+    "requestID": "01JPMZFDVB29870PMTE18N0JSF"
   }
 }

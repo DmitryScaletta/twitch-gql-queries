@@ -232,7 +232,96 @@ export interface ClipsActionButtonsData {
   clip: null | ClipsActionButtonsClip;
 }
 
-export interface ClipsCardsClip {
+export type ClipsCardsFilter = 'LAST_DAY' | 'LAST_WEEK' | 'LAST_MONTH' | 'ALL_TIME';
+
+export interface ClipsCardsGameClip {
+  id: string;
+  slug: string;
+  title: string;
+  viewCount: number;
+  curator: null | {
+    id: string;
+    login: string;
+    displayName: string;
+    __typename: 'User';
+  };
+  game: null | {
+    id: string;
+    slug: string;
+    name: string;
+    boxArtURL: string;
+    __typename: 'Game';
+  };
+  broadcaster: null | {
+    id: string;
+    login: string;
+    displayName: string;
+    profileImageURL: string;
+    primaryColorHex?: null | string;
+    roles: {
+      isPartner: boolean;
+      __typename: 'UserRoles';
+    };
+    __typename: 'User';
+  };
+  thumbnailURL: string;
+  createdAt: string;
+  durationSeconds: number;
+  isFeatured: boolean;
+  guestStarParticipants: null | {
+    guests: {
+      id: string;
+      login: string;
+      displayName: string;
+      profileImageURL: string;
+      primaryColorHex: null | string;
+      description: null | string;
+      __typename: 'User';
+    }[];
+    sessionIdentifier: string;
+    __typename: 'GuestStarParticipants';
+  };
+  previewThumbnailProperties: {
+    blurReason: 'BLUR_NOT_REQUIRED' | string;
+    __typename: 'PreviewThumbnailProperties';
+  };
+  __typename: 'Clip';
+}
+
+export interface ClipsCardsGameVariables {
+  categorySlug: string;
+  limit: number;
+  criteria?: {
+    languages?: string[] | null;
+    filter?: ClipsCardsFilter | null;
+    shouldFilterByDiscoverySetting?: boolean | null;
+  };
+  cursor?: string | null;
+}
+
+export interface ClipsCardsGameData {
+  game: null | {
+    id: string;
+    name: string;
+    displayName: string;
+    clips: null | {
+      banners: null | ('MAY_CONTAIN_MATURE_CONTENT' | string)[];
+      pageInfo: {
+        hasNextPage: boolean;
+        __typename: 'PageInfo';
+      };
+      edges: {
+        cursor: null | string;
+        node: ClipsCardsGameClip;
+        __typename: 'ClipEdge';
+      }[];
+      __typename: 'ClipConnection';
+    };
+    __typename: 'Game';
+  };
+}
+
+export interface ClipsCardsUserClip {
   id: string;
   slug: string;
   url: string;
@@ -248,6 +337,7 @@ export interface ClipsCardsClip {
   };
   game: null | {
     id: string;
+    slug: string;
     name: string;
     boxArtURL: string;
     __typename: 'Game';
@@ -258,47 +348,31 @@ export interface ClipsCardsClip {
     displayName: string;
     profileImageURL: string;
     primaryColorHex?: null | string;
+    roles: {
+      isPartner: boolean;
+      __typename: 'UserRoles';
+    };
     __typename: 'User';
   };
   thumbnailURL: string;
   createdAt: string;
-  isFeatured: boolean;
   durationSeconds: number;
-  champBadge: null;
+  champBadge: unknown;
+  isFeatured: boolean;
+  guestStarParticipants: null | {
+    guests: {
+      id: string;
+      login: string;
+      displayName: string;
+      profileImageURL: string;
+      primaryColorHex: null | string;
+      description: null | string;
+      __typename: 'User';
+    }[];
+    sessionIdentifier: string;
+    __typename: 'GuestStarParticipants';
+  };
   __typename: 'Clip';
-}
-
-export type ClipsCardsFilter = 'LAST_DAY' | 'LAST_WEEK' | 'LAST_MONTH' | 'ALL_TIME';
-
-export interface ClipsCardsGameVariables {
-  categorySlug: string;
-  limit: number;
-  criteria?: {
-    languages?: string[] | null;
-    filter?: ClipsCardsFilter | null;
-    isFeatured?: boolean | null;
-  };
-  cursor?: string | null;
-}
-
-export interface ClipsCardsGameData {
-  game: {
-    id: string;
-    displayName: string;
-    clips: null | {
-      pageInfo: {
-        hasNextPage: boolean;
-        __typename: 'PageInfo';
-      };
-      edges: {
-        cursor: null | string;
-        node: ClipsCardsClip;
-        __typename: 'ClipEdge';
-      }[];
-      __typename: 'ClipConnection';
-    };
-    __typename: 'Game';
-  };
 }
 
 export interface ClipsCardsUserVariables {
@@ -306,13 +380,13 @@ export interface ClipsCardsUserVariables {
   limit: number;
   criteria?: {
     filter?: ClipsCardsFilter | null;
-    isFeatured?: boolean | null;
+    shouldFilterByDiscoverySetting?: boolean | null;
   };
   cursor?: string | null;
 }
 
 export interface ClipsCardsUserData {
-  user: {
+  user: null | {
     id: string;
     clips: null | {
       pageInfo: {
@@ -321,7 +395,7 @@ export interface ClipsCardsUserData {
       };
       edges: {
         cursor: null | string;
-        node: ClipsCardsClip;
+        node: ClipsCardsUserClip;
         __typename: 'ClipEdge';
       }[];
       __typename: 'ClipConnection';
@@ -1195,6 +1269,7 @@ export type ClipsActionButtonsResponse = QueryResponse<'ClipsActionButtons', Cli
 export type ClipsCardsGameResponse = QueryResponse<'ClipsCards__Game', ClipsCardsGameData>;
 export type ClipsCardsUserResponse = QueryResponse<'ClipsCards__User', ClipsCardsUserData>;
 export type ClipsDownloadButtonResponse = QueryResponse<'ClipsDownloadButton', ClipsDownloadButtonData>;
+export type DirectoryPageGameResponse = QueryResponse<'DirectoryPage_Game', DirectoryPageGameData>;
 export type FfzBroadcastIdResponse = QueryResponse<'FFZ_BroadcastID', FfzBroadcastIdData>;
 export type GetPinnedChatResponse = QueryResponse<'GetPinnedChat', GetPinnedChatData>;
 export type GetUserIdResponse = QueryResponse<'GetUserID', GetUserIdData>;
@@ -1217,6 +1292,7 @@ export type QueryResponseMap = {
   ClipsCards__Game: ClipsCardsGameResponse;
   ClipsCards__User: ClipsCardsUserResponse;
   ClipsDownloadButton: ClipsDownloadButtonResponse;
+  DirectoryPage_Game: DirectoryPageGameResponse;
   FFZ_BroadcastID: FfzBroadcastIdResponse;
   GetPinnedChat: GetPinnedChatResponse;
   GetUserID: GetUserIdResponse;

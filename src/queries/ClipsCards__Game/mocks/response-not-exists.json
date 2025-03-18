@@ -1,0 +1,9 @@
+{
+  "errors": [{ "message": "service error", "path": ["game"] }],
+  "data": { "game": null },
+  "extensions": {
+    "durationMilliseconds": 4,
+    "operationName": "ClipsCards__Game",
+    "requestID": "01JPMZCN8NE37ATT0ZY73CYCX0"
+  }
+}
