@@ -5,6 +5,7 @@ import { getQueryChannelRootAboutPanel } from './query.ts';
 import { ResponseSchema, UserSchema } from './schema.ts';
 
 import resWithSchedule from './mocks/response-with-schedule.json' with { type: 'json' };
+import resIntegrityChallenge from './mocks/response-integrity-challenge.json' with { type: 'json' };
 
 describe('ChannelRoot_AboutPanel', () => {
   const validate = createValidate(ResponseSchema, [UserSchema]);
@@ -65,4 +66,5 @@ describe('ChannelRoot_AboutPanel', () => {
   });
 
   test('mock: with schedule', () => validate(resWithSchedule));
+  test('mock: integrity challenge', () => validate(resIntegrityChallenge));
 });

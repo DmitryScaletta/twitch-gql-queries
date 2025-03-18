@@ -39,9 +39,14 @@ export const UserSchema = buildObject(
     }),
     channel: buildObject({
       ...pick(schemas.Channel, ['id']),
-      socialMedias: T.Array(
-        buildObject(pick(schemas.SocialMedia, ['id', 'name', 'title', 'url'])),
-      ),
+      socialMedias: T.Union([
+        T.Null(),
+        T.Array(
+          buildObject(
+            pick(schemas.SocialMedia, ['id', 'name', 'title', 'url']),
+          ),
+        ),
+      ]),
       schedule: T.Optional(
         T.Union([
           T.Null(),
@@ -97,4 +102,4 @@ export const DataSchema = buildObject(
   { $id: `${displayName}Data` },
 );
 
-export const ResponseSchema = getResponseSchema(name, DataSchema);
+export const ResponseSchema = getResponseSchema(name, DataSchema, true);

@@ -67,13 +67,15 @@ export interface ChannelRootUser {
   };
   channel: {
     id: string;
-    socialMedias: {
-      id: string;
-      name: string;
-      title: string;
-      url: string;
-      __typename: 'SocialMedia';
-    }[];
+    socialMedias:
+      | null
+      | {
+          id: string;
+          name: string;
+          title: string;
+          url: string;
+          __typename: 'SocialMedia';
+        }[];
     schedule?: null | {
       id: string;
       nextSegment: null | {

@@ -1,0 +1,36 @@
+{
+  "data": {
+    "currentUser": null,
+    "user": {
+      "id": "237962113",
+      "description": null,
+      "displayName": "tio777",
+      "primaryColorHex": null,
+      "profileImageURL": "https://static-cdn.jtvnw.net/user-default-pictures-uv/ebe4cd89-b4f4-4cd9-adac-2f30151b4209-profile_image-300x300.png",
+      "followers": { "totalCount": 9, "__typename": "FollowerConnection" },
+      "roles": {
+        "isPartner": false,
+        "isAffiliate": false,
+        "isStaff": null,
+        "isParticipatingDJ": false,
+        "__typename": "UserRoles"
+      },
+      "channel": {
+        "id": "237962113",
+        "socialMedias": null,
+        "schedule": null,
+        "__typename": "Channel"
+      },
+      "lastBroadcast": { "id": null, "game": null, "__typename": "Broadcast" },
+      "primaryTeam": null,
+      "videos": { "edges": [], "__typename": "VideoConnection" },
+      "__typename": "User"
+    }
+  },
+  "extensions": {
+    "challenge": { "type": "integrity" },
+    "durationMilliseconds": 79,
+    "operationName": "ChannelRoot_AboutPanel",
+    "requestID": "01JPFN83P9J2872Q8GHE81W1JP"
+  }
+}
