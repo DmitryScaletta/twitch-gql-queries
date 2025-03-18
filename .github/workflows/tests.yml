@@ -21,6 +21,8 @@ jobs:
         with:
           node-version: 23
           cache: 'pnpm'
+      - name: Install dependencies
+        run: pnpm i --frozen-lockfile
       - name: Run tests
         run: pnpm test ./src/**/*.test.ts
       - name: Run type tests
