@@ -43,7 +43,7 @@ describe('getRawQuery', () => {
   test('real request: videoPlaybackAccessToken', async () => {
     const query = `{
       videoPlaybackAccessToken(
-        id: "2409654267"
+        id: "1816688726"
         params: {
           platform: "web"
           playerBackend: "mediaplayer"
@@ -60,12 +60,7 @@ describe('getRawQuery', () => {
         signature: T.String(),
       }),
     });
-    const responses = await gqlRequest([
-      getRawQuery({
-        query,
-        variables: { videoId: '1816688726' },
-      }),
-    ]);
+    const responses = await gqlRequest([getRawQuery({ query })]);
     responses.map(createValidate(getResponseSchema(DataSchema)));
   });
 });
