@@ -58,6 +58,8 @@ export const Team = {
 
 export const Video = {
   id: T.String(),
+  title: T.String(),
+  broadcastType: T.Union([T.Literal('ARCHIVE'), T.Literal('HIGHLIGHT')]),
   // TODO: find all possible statuses
   status: T.Union([T.Literal('RECORDED'), T.String()]),
   __typename: T.Literal('Video'),
@@ -66,10 +68,24 @@ export const Video = {
 export const Clip = {
   id: T.String(),
   slug: T.String(),
+  url: T.String({
+    /* format: 'uri' */
+  }),
+  embedURL: T.String({
+    /* format: 'uri' */
+  }),
   title: T.String(),
   viewCount: T.Number(),
+  videoOffsetSeconds: T.Union([T.Null(), T.Number()]),
   durationSeconds: T.Number(),
+  thumbnailURL: T.String({
+    /* format: 'uri' */
+  }),
+  language: T.String(),
+  champBadge: T.Union([T.Null(), T.Unknown()]),
   isFeatured: T.Boolean(),
+  isPublished: T.Boolean(),
+  createdAt: T.String(),
   __typename: T.Literal('Clip'),
 } satisfies TProperties;
 
@@ -80,6 +96,9 @@ export const Game = {
   name: T.String(),
   avatarURL: T.String({
     // format: 'uri'
+  }),
+  boxArtURL: T.String({
+    /* format: 'uri' */
   }),
   viewersCount: T.Number(),
   originalReleaseDate: T.Union([

@@ -192,6 +192,13 @@ export interface ChannelShellData {
 export interface ClipsActionButtonsClip {
   id: string;
   title: string;
+  videoOffsetSeconds: null | number;
+  durationSeconds: number;
+  viewCount: number;
+  language: string;
+  isFeatured: boolean;
+  isPublished: boolean;
+  createdAt: string;
   broadcast: {
     id: string;
     __typename: 'Broadcast';
@@ -216,13 +223,6 @@ export interface ClipsActionButtonsClip {
     title: string;
     __typename: 'Video';
   };
-  videoOffsetSeconds: null | number;
-  durationSeconds: number;
-  viewCount: number;
-  language: string;
-  isFeatured: boolean;
-  isPublished: boolean;
-  createdAt: string;
   __typename: 'Clip';
 }
 
@@ -234,13 +234,15 @@ export interface ClipsActionButtonsData {
   clip: null | ClipsActionButtonsClip;
 }
 
-export type ClipsCardsFilter = 'LAST_DAY' | 'LAST_WEEK' | 'LAST_MONTH' | 'ALL_TIME';
-
 export interface ClipsCardsGameClip {
   id: string;
   slug: string;
   title: string;
   viewCount: number;
+  thumbnailURL: string;
+  createdAt: string;
+  durationSeconds: number;
+  isFeatured: boolean;
   curator: null | {
     id: string;
     login: string;
@@ -259,17 +261,13 @@ export interface ClipsCardsGameClip {
     login: string;
     displayName: string;
     profileImageURL: string;
-    primaryColorHex?: null | string;
+    primaryColorHex: null | string;
     roles: {
       isPartner: boolean;
       __typename: 'UserRoles';
     };
     __typename: 'User';
   };
-  thumbnailURL: string;
-  createdAt: string;
-  durationSeconds: number;
-  isFeatured: boolean;
   guestStarParticipants: null | {
     guests: {
       id: string;
@@ -289,6 +287,8 @@ export interface ClipsCardsGameClip {
   };
   __typename: 'Clip';
 }
+
+export type ClipsCardsFilter = 'LAST_DAY' | 'LAST_WEEK' | 'LAST_MONTH' | 'ALL_TIME';
 
 export interface ClipsCardsGameVariables {
   categorySlug: string;
@@ -331,6 +331,11 @@ export interface ClipsCardsUserClip {
   title: string;
   viewCount: number;
   language: string;
+  thumbnailURL: string;
+  createdAt: string;
+  durationSeconds: number;
+  champBadge: unknown;
+  isFeatured: boolean;
   curator: null | {
     id: string;
     login: string;
@@ -349,18 +354,13 @@ export interface ClipsCardsUserClip {
     login: string;
     displayName: string;
     profileImageURL: string;
-    primaryColorHex?: null | string;
+    primaryColorHex: null | string;
     roles: {
       isPartner: boolean;
       __typename: 'UserRoles';
     };
     __typename: 'User';
   };
-  thumbnailURL: string;
-  createdAt: string;
-  durationSeconds: number;
-  champBadge: unknown;
-  isFeatured: boolean;
   guestStarParticipants: null | {
     guests: {
       id: string;

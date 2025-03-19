@@ -1,96 +1,54 @@
 import { Type as T } from '@sinclair/typebox';
-import { getResponseSchema, LegacyRef } from '../../schema.ts';
+import {
+  buildObject,
+  getResponseSchema,
+  LegacyRef,
+  pick,
+} from '../../schema.ts';
+import * as schemas from '../../schemas.ts';
 
 const name = 'ClipsActionButtons';
 const displayName = name;
 
-export const VariablesSchema = T.Object(
+export const VariablesSchema = buildObject(
   { slug: T.String() },
-  {
-    $id: `${displayName}Variables`,
-    additionalProperties: false,
-  },
+  { $id: `${displayName}Variables` },
 );
 
-export const ClipSchema = T.Object(
+export const ClipSchema = buildObject(
   {
-    id: T.String(),
-    title: T.String(),
-    broadcast: T.Object(
-      {
-        id: T.String(),
-        __typename: T.Literal('Broadcast'),
-      },
-      { additionalProperties: false },
-    ),
+    ...pick(schemas.Clip, [
+      'id',
+      'title',
+      'videoOffsetSeconds',
+      'durationSeconds',
+      'viewCount',
+      'language',
+      'isFeatured',
+      'isPublished',
+      'createdAt',
+    ]),
+    broadcast: T.Object(pick(schemas.Broadcast, ['id'])),
     broadcaster: T.Union([
       T.Null(),
-      T.Object(
-        {
-          id: T.String(),
-          login: T.String(),
-          __typename: T.Literal('User'),
-        },
-        { additionalProperties: false },
-      ),
+      buildObject(pick(schemas.User, ['id', 'login'])),
     ]),
-    curator: T.Union([
-      T.Null(),
-      T.Object(
-        {
-          id: T.String(),
-          __typename: T.Literal('User'),
-        },
-        { additionalProperties: false },
-      ),
-    ]),
+    curator: T.Union([T.Null(), buildObject(pick(schemas.User, ['id']))]),
     game: T.Union([
       T.Null(),
-      T.Object(
-        {
-          id: T.String(),
-          displayName: T.String(),
-          __typename: T.Literal('Game'),
-        },
-        { additionalProperties: false },
-      ),
+      buildObject(pick(schemas.Game, ['id', 'displayName'])),
     ]),
     video: T.Union([
       T.Null(),
-      T.Object(
-        {
-          id: T.String(),
-          broadcastType: T.Union([
-            T.Literal('ARCHIVE'),
-            T.Literal('HIGHLIGHT'),
-          ]),
-          title: T.String(),
-          __typename: T.Literal('Video'),
-        },
-        { additionalProperties: false },
-      ),
+      buildObject(pick(schemas.Video, ['id', 'broadcastType', 'title'])),
     ]),
-    videoOffsetSeconds: T.Union([T.Null(), T.Number()]),
-    durationSeconds: T.Number(),
-    viewCount: T.Number(),
-    language: T.String(),
-    isFeatured: T.Boolean(),
-    isPublished: T.Boolean(),
-    createdAt: T.String(),
-    __typename: T.Literal('Clip'),
   },
-  {
-    $id: `${displayName}Clip`,
-    additionalProperties: false,
-  },
+  { $id: `${displayName}Clip` },
 );
 
-export const DataSchema = T.Object(
+export const DataSchema = buildObject(
   { clip: T.Union([T.Null(), LegacyRef(ClipSchema)]) },
-  {
-    $id: `${displayName}Data`,
-    additionalProperties: false,
-  },
+  { $id: `${displayName}Data` },
 );
 
 export const ResponseSchema = getResponseSchema(name, DataSchema);

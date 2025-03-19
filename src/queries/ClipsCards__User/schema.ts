@@ -1,179 +1,98 @@
 import { Type as T } from '@sinclair/typebox';
-import { getResponseSchema, LegacyRef } from '../../schema.ts';
-import { ClipsCardsFilterSchema } from '../ClipsCards.schema.ts';
+import {
+  buildObject,
+  getResponseSchema,
+  LegacyRef,
+  pick,
+} from '../../schema.ts';
+import * as schemas from '../../schemas.ts';
+import {
+  FilterSchema,
+  GuestStarParticipantsSchema,
+} from '../ClipsCards__Game/schema.ts';
 
 const name = 'ClipsCards__User';
 const displayName = 'ClipsCardsUser';
 
-export const VariablesSchema = T.Object(
+export const VariablesSchema = buildObject(
   {
     login: T.String(),
     limit: T.Number(),
     criteria: T.Optional(
-      T.Object(
-        {
-          filter: T.Optional(
-            T.Union([LegacyRef(ClipsCardsFilterSchema), T.Null()]),
-          ),
-          shouldFilterByDiscoverySetting: T.Optional(
-            T.Union([T.Boolean(), T.Null()]),
-          ),
-        },
-        { additionalProperties: false },
-      ),
+      buildObject({
+        filter: T.Optional(T.Union([LegacyRef(FilterSchema), T.Null()])),
+        shouldFilterByDiscoverySetting: T.Optional(
+          T.Union([T.Boolean(), T.Null()]),
+        ),
+      }),
     ),
     cursor: T.Optional(T.Union([T.String(), T.Null()])),
   },
-  {
-    $id: `${displayName}Variables`,
-    additionalProperties: false,
-  },
+  { $id: `${displayName}Variables` },
 );
 
-const GuestStarParticipantsSchema = T.Object(
+export const ClipSchema = buildObject(
   {
-    guests: T.Array(
-      T.Object(
-        {
-          id: T.String(),
-          login: T.String(),
-          displayName: T.String(),
-          profileImageURL: T.String({
-            /* format: 'uri' */
-          }),
-          primaryColorHex: T.Union([T.Null(), T.String()]),
-          description: T.Union([T.Null(), T.String()]),
-          __typename: T.Literal('User'),
-        },
-        { additionalProperties: false },
-      ),
-    ),
-    sessionIdentifier: T.String(),
-    __typename: T.Literal('GuestStarParticipants'),
-  },
-  { additionalProperties: false },
-);
-
-export const ClipSchema = T.Object(
-  {
-    id: T.String(),
-    slug: T.String(),
-    url: T.String({
-      /* format: 'uri' */
-    }),
-    embedURL: T.String({
-      /* format: 'uri' */
-    }),
-    title: T.String(),
-    viewCount: T.Number(),
-    language: T.String(),
+    ...pick(schemas.Clip, [
+      'id',
+      'slug',
+      'url',
+      'embedURL',
+      'title',
+      'viewCount',
+      'language',
+      'thumbnailURL',
+      'createdAt',
+      'durationSeconds',
+      'champBadge',
+      'isFeatured',
+    ]),
     curator: T.Union([
       T.Null(),
-      T.Object(
-        {
-          id: T.String(),
-          login: T.String(),
-          displayName: T.String(),
-          __typename: T.Literal('User'),
-        },
-        { additionalProperties: false },
-      ),
+      buildObject(pick(schemas.User, ['id', 'login', 'displayName'])),
     ]),
     game: T.Union([
       T.Null(),
-      T.Object(
-        {
-          id: T.String(),
-          slug: T.String(),
-          name: T.String(),
-          boxArtURL: T.String({
-            /* format: 'uri' */
-          }),
-          __typename: T.Literal('Game'),
-        },
-        { additionalProperties: false },
-      ),
+      buildObject(pick(schemas.Game, ['id', 'slug', 'name', 'boxArtURL'])),
     ]),
     broadcaster: T.Union([
       T.Null(),
-      T.Object(
-        {
-          id: T.String(),
-          login: T.String(),
-          displayName: T.String(),
-          profileImageURL: T.String({
-            /* format: 'uri' */
-          }),
-          primaryColorHex: T.Optional(T.Union([T.Null(), T.String()])),
-          roles: T.Object(
-            {
-              isPartner: T.Boolean(),
-              __typename: T.Literal('UserRoles'),
-            },
-            { additionalProperties: false },
-          ),
-          __typename: T.Literal('User'),
-        },
-        { additionalProperties: false },
-      ),
+      buildObject({
+        ...pick(schemas.User, [
+          'id',
+          'login',
+          'displayName',
+          'profileImageURL',
+          'primaryColorHex',
+        ]),
+        roles: buildObject(pick(schemas.UserRoles, ['isPartner'])),
+      }),
     ]),
-    thumbnailURL: T.String({
-      /* format: 'uri' */
-    }),
-    createdAt: T.String({
-      /* format: 'date-time' */
-    }),
-    durationSeconds: T.Number(),
-    champBadge: T.Union([T.Null(), T.Unknown()]),
-    isFeatured: T.Boolean(),
     guestStarParticipants: T.Union([T.Null(), GuestStarParticipantsSchema]),
-    __typename: T.Literal('Clip'),
   },
-  {
-    $id: `${displayName}Clip`,
-    additionalProperties: false,
-  },
+  { $id: `${displayName}Clip` },
 );
 
-const ClipsSchema = T.Object(
-  {
-    pageInfo: T.Object(
-      {
-        hasNextPage: T.Boolean(),
-        __typename: T.Literal('PageInfo'),
-      },
-      { additionalProperties: false },
-    ),
-    edges: T.Array(
-      T.Object(
-        {
-          cursor: T.Union([T.Null(), T.String()]),
-          node: LegacyRef(ClipSchema),
-          __typename: T.Literal('ClipEdge'),
-        },
-        { additionalProperties: false },
-      ),
-    ),
-    __typename: T.Literal('ClipConnection'),
-  },
-  { additionalProperties: false },
-);
+const ClipsSchema = buildObject({
+  pageInfo: buildObject(pick(schemas.PageInfo, ['hasNextPage'])),
+  edges: T.Array(
+    buildObject({
+      cursor: T.Union([T.Null(), T.String()]),
+      node: LegacyRef(ClipSchema),
+      __typename: T.Literal('ClipEdge'),
+    }),
+  ),
+  __typename: T.Literal('ClipConnection'),
+});
 
-const UserSchema = T.Object(
-  {
-    id: T.String(),
-    clips: T.Union([T.Null(), ClipsSchema]),
-    __typename: T.Literal('User'),
-  },
-  { additionalProperties: false },
-);
+const UserSchema = buildObject({
+  ...pick(schemas.User, ['id']),
+  clips: T.Union([T.Null(), ClipsSchema]),
+});
 
-export const DataSchema = T.Object(
+export const DataSchema = buildObject(
   { user: T.Union([T.Null(), UserSchema]) },
-  {
-    $id: `${displayName}Data`,
-    additionalProperties: false,
-  },
+  { $id: `${displayName}Data` },
 );
 
 export const ResponseSchema = getResponseSchema(name, DataSchema, true);

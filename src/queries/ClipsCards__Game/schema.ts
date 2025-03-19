@@ -1,185 +1,128 @@
 import { Type as T } from '@sinclair/typebox';
-import { getResponseSchema, LegacyRef } from '../../schema.ts';
-import { ClipsCardsFilterSchema } from '../ClipsCards.schema.ts';
+import {
+  buildObject,
+  getResponseSchema,
+  LegacyRef,
+  pick,
+} from '../../schema.ts';
+import * as schemas from '../../schemas.ts';
 
 const name = 'ClipsCards__Game';
+const category = 'ClipsCards';
 const displayName = 'ClipsCardsGame';
 
-export const VariablesSchema = T.Object(
+export const FilterSchema = T.Union(
+  [
+    T.Literal('LAST_DAY'),
+    T.Literal('LAST_WEEK'),
+    T.Literal('LAST_MONTH'),
+    T.Literal('ALL_TIME'),
+  ],
+  { $id: `${category}Filter` },
+);
+
+export const VariablesSchema = buildObject(
   {
     categorySlug: T.String(),
     limit: T.Number(),
     criteria: T.Optional(
-      T.Object(
-        {
-          languages: T.Optional(T.Union([T.Array(T.String()), T.Null()])),
-          filter: T.Optional(
-            T.Union([LegacyRef(ClipsCardsFilterSchema), T.Null()]),
-          ),
-          shouldFilterByDiscoverySetting: T.Optional(
-            T.Union([T.Boolean(), T.Null()]),
-          ),
-        },
-        { additionalProperties: false },
-      ),
+      buildObject({
+        languages: T.Optional(T.Union([T.Array(T.String()), T.Null()])),
+        filter: T.Optional(T.Union([LegacyRef(FilterSchema), T.Null()])),
+        shouldFilterByDiscoverySetting: T.Optional(
+          T.Union([T.Boolean(), T.Null()]),
+        ),
+      }),
     ),
     cursor: T.Optional(T.Union([T.String(), T.Null()])),
   },
-  {
-    $id: `${displayName}Variables`,
-    additionalProperties: false,
-  },
+  { $id: `${displayName}Variables` },
 );
 
-const GuestStarParticipantsSchema = T.Object(
-  {
-    guests: T.Array(
-      T.Object(
-        {
-          id: T.String(),
-          login: T.String(),
-          displayName: T.String(),
-          profileImageURL: T.String({
-            /* format: 'uri' */
-          }),
-          primaryColorHex: T.Union([T.Null(), T.String()]),
-          description: T.Union([T.Null(), T.String()]),
-          __typename: T.Literal('User'),
-        },
-        { additionalProperties: false },
-      ),
+export const GuestStarParticipantsSchema = buildObject({
+  guests: T.Array(
+    buildObject(
+      pick(schemas.User, [
+        'id',
+        'login',
+        'displayName',
+        'profileImageURL',
+        'primaryColorHex',
+        'description',
+      ]),
     ),
-    sessionIdentifier: T.String(),
-    __typename: T.Literal('GuestStarParticipants'),
-  },
-  { additionalProperties: false },
-);
+  ),
+  sessionIdentifier: T.String(),
+  __typename: T.Literal('GuestStarParticipants'),
+});
 
-export const ClipSchema = T.Object(
+export const ClipSchema = buildObject(
   {
-    id: T.String(),
-    slug: T.String(),
-    title: T.String(),
-    viewCount: T.Number(),
+    ...pick(schemas.Clip, [
+      'id',
+      'slug',
+      'title',
+      'viewCount',
+      'thumbnailURL',
+      'createdAt',
+      'durationSeconds',
+      'isFeatured',
+    ]),
     curator: T.Union([
       T.Null(),
-      T.Object(
-        {
-          id: T.String(),
-          login: T.String(),
-          displayName: T.String(),
-          __typename: T.Literal('User'),
-        },
-        { additionalProperties: false },
-      ),
+      buildObject(pick(schemas.User, ['id', 'login', 'displayName'])),
     ]),
     game: T.Union([
       T.Null(),
-      T.Object(
-        {
-          id: T.String(),
-          slug: T.String(),
-          name: T.String(),
-          boxArtURL: T.String({
-            /* format: 'uri' */
-          }),
-          __typename: T.Literal('Game'),
-        },
-        { additionalProperties: false },
-      ),
+      buildObject(pick(schemas.Game, ['id', 'slug', 'name', 'boxArtURL'])),
     ]),
     broadcaster: T.Union([
       T.Null(),
-      T.Object(
-        {
-          id: T.String(),
-          login: T.String(),
-          displayName: T.String(),
-          profileImageURL: T.String({
-            /* format: 'uri' */
-          }),
-          primaryColorHex: T.Optional(T.Union([T.Null(), T.String()])),
-          roles: T.Object(
-            {
-              isPartner: T.Boolean(),
-              __typename: T.Literal('UserRoles'),
-            },
-            { additionalProperties: false },
-          ),
-          __typename: T.Literal('User'),
-        },
-        { additionalProperties: false },
-      ),
+      buildObject({
+        ...pick(schemas.User, [
+          'id',
+          'login',
+          'displayName',
+          'profileImageURL',
+          'primaryColorHex',
+        ]),
+        roles: buildObject(pick(schemas.UserRoles, ['isPartner'])),
+      }),
     ]),
-    thumbnailURL: T.String({
-      /* format: 'uri' */
-    }),
-    createdAt: T.String({
-      /* format: 'date-time' */
-    }),
-    durationSeconds: T.Number(),
-    isFeatured: T.Boolean(),
     guestStarParticipants: T.Union([T.Null(), GuestStarParticipantsSchema]),
-    previewThumbnailProperties: T.Object(
-      {
-        blurReason: T.Union([T.Literal('BLUR_NOT_REQUIRED'), T.String()]),
-        __typename: T.Literal('PreviewThumbnailProperties'),
-      },
-      { additionalProperties: false },
-    ),
+    previewThumbnailProperties: buildObject({
+      blurReason: T.Union([T.Literal('BLUR_NOT_REQUIRED'), T.String()]),
+      __typename: T.Literal('PreviewThumbnailProperties'),
+    }),
     __typename: T.Literal('Clip'),
   },
-  {
-    $id: `${displayName}Clip`,
-    additionalProperties: false,
-  },
+  { $id: `${displayName}Clip` },
 );
 
-const ClipsSchema = T.Object(
-  {
-    banners: T.Union([
-      T.Null(),
-      T.Array(T.Union([T.Literal('MAY_CONTAIN_MATURE_CONTENT'), T.String()])),
-    ]),
-    pageInfo: T.Object(
-      {
-        hasNextPage: T.Boolean(),
-        __typename: T.Literal('PageInfo'),
-      },
-      { additionalProperties: false },
-    ),
-    edges: T.Array(
-      T.Object(
-        {
-          cursor: T.Union([T.Null(), T.String()]),
-          node: LegacyRef(ClipSchema),
-          __typename: T.Literal('ClipEdge'),
-        },
-        { additionalProperties: false },
-      ),
-    ),
-    __typename: T.Literal('ClipConnection'),
-  },
-  { additionalProperties: false },
-);
+const ClipsSchema = buildObject({
+  banners: T.Union([
+    T.Null(),
+    T.Array(T.Union([T.Literal('MAY_CONTAIN_MATURE_CONTENT'), T.String()])),
+  ]),
+  pageInfo: buildObject(pick(schemas.PageInfo, ['hasNextPage'])),
+  edges: T.Array(
+    buildObject({
+      cursor: T.Union([T.Null(), T.String()]),
+      node: LegacyRef(ClipSchema),
+      __typename: T.Literal('ClipEdge'),
+    }),
+  ),
+  __typename: T.Literal('ClipConnection'),
+});
 
-const GameSchema = T.Object(
-  {
-    id: T.String(),
-    name: T.String(),
-    displayName: T.String(),
-    clips: T.Union([T.Null(), ClipsSchema]),
-    __typename: T.Literal('Game'),
-  },
-  { additionalProperties: false },
-);
+const GameSchema = buildObject({
+  ...pick(schemas.Game, ['id', 'name', 'displayName']),
+  clips: T.Union([T.Null(), ClipsSchema]),
+});
 
-export const DataSchema = T.Object(
+export const DataSchema = buildObject(
   { game: T.Union([T.Null(), GameSchema]) },
-  {
-    $id: `${displayName}Data`,
-    additionalProperties: false,
-  },
+  { $id: `${displayName}Data` },
 );
 
 export const ResponseSchema = getResponseSchema(name, DataSchema, true);

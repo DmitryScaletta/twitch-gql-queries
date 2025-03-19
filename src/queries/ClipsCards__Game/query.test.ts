@@ -1,15 +1,11 @@
 import { describe, test } from 'node:test';
 import { gqlRequest } from '../../gqlRequest.ts';
 import { createValidate } from '../../testHelpers.ts';
-import { ClipsCardsFilterSchema } from '../ClipsCards.schema.ts';
 import { getQueryClipsCardsGame } from './query.ts';
 import { ClipSchema, ResponseSchema } from './schema.ts';
 
 describe('ClipsCards__Game', () => {
-  const validate = createValidate(ResponseSchema, [
-    ClipSchema,
-    ClipsCardsFilterSchema,
-  ]);
+  const validate = createValidate(ResponseSchema, [ClipSchema]);
 
   test('real request: all variables', async () => {
     const [queryResponse] = await gqlRequest([
