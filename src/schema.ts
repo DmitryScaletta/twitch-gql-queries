@@ -34,9 +34,7 @@ export const buildObject = <TProps extends TProperties>(
 };
 
 const integrity = {
-  challenge: T.Optional(
-    T.Object({ type: T.Literal('integrity') }, { additionalProperties: false }),
-  ),
+  challenge: T.Optional(buildObject({ type: T.Literal('integrity') })),
 } as const;
 
 export const getResponseSchema = <TDataSchema extends TObject>(
@@ -44,29 +42,20 @@ export const getResponseSchema = <TDataSchema extends TObject>(
   DataSchema: TDataSchema,
   integrityChallenge = false,
 ) =>
-  T.Object(
-    {
-      errors: T.Optional(
-        T.Array(
-          T.Object(
-            {
-              message: T.String(),
-              path: T.Array(T.String()),
-            },
-            { additionalProperties: false },
-          ),
-        ),
+  buildObject({
+    errors: T.Optional(
+      T.Array(
+        buildObject({
+          message: T.String(),
+          path: T.Array(T.String()),
+        }),
       ),
-      data: DataSchema,
-      extensions: T.Object(
-        {
-          ...(integrityChallenge ? integrity : {}),
-          durationMilliseconds: T.Number(),
-          operationName: T.Literal(operationName),
-          requestID: T.String(),
-        },
-        { additionalProperties: false },
-      ),
-    },
-    { additionalProperties: false },
-  );
+    ),
+    data: DataSchema,
+    extensions: buildObject({
+      ...(integrityChallenge ? integrity : {}),
+      durationMilliseconds: T.Number(),
+      operationName: T.Literal(operationName),
+      requestID: T.String(),
+    }),
+  });
