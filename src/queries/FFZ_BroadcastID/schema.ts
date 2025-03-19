@@ -40,4 +40,4 @@ export const DataSchema = T.Object(
   },
 );
 
-export const ResponseSchema = getResponseSchema(name, DataSchema);
+export const ResponseSchema = getResponseSchema(DataSchema, name);

@@ -34,8 +34,8 @@ export const buildObject = <TProps extends TProperties>(
 };
 
 export const getResponseSchema = <TDataSchema extends TObject>(
-  operationName: string,
   DataSchema: TDataSchema,
+  operationName?: string,
 ) =>
   buildObject({
     errors: T.Optional(
@@ -53,7 +53,7 @@ export const getResponseSchema = <TDataSchema extends TObject>(
     extensions: buildObject({
       challenge: T.Optional(buildObject({ type: T.Literal('integrity') })),
       durationMilliseconds: T.Number(),
-      operationName: T.Literal(operationName),
+      ...(operationName ? { operationName: T.Literal(operationName) } : null),
       requestID: T.String(),
     }),
   });

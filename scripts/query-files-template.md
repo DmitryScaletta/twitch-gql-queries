@@ -61,7 +61,7 @@ export const DataSchema = buildObject(
   { $id: `${displayName}Data` },
 );
 
-export const ResponseSchema = getResponseSchema(name, DataSchema);
+export const ResponseSchema = getResponseSchema(DataSchema, name);
 ```
 
 ## query.http
