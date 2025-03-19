@@ -1,149 +1,83 @@
 import { Type as T } from '@sinclair/typebox';
-import { getResponseSchema, LegacyRef } from '../../schema.ts';
+import {
+  buildObject,
+  getResponseSchema,
+  LegacyRef,
+  pick,
+} from '../../schema.ts';
+import * as schemas from '../../schemas.ts';
 
 const name = 'GetPinnedChat';
 const displayName = name;
 
-export const VariablesSchema = T.Object(
+export const VariablesSchema = buildObject(
   {
     channelID: T.String(),
     count: T.Number(),
   },
-  {
-    $id: `${displayName}Variables`,
-    additionalProperties: false,
-  },
+  { $id: `${displayName}Variables` },
 );
 
-export const MessageSchema = T.Object(
+export const MessageSchema = buildObject(
   {
-    id: T.String(),
-    content: T.Object(
-      {
-        text: T.String(),
-        fragments: T.Array(
-          T.Object(
-            {
-              content: T.Union([T.Null(), T.Unknown()]),
-              text: T.String(),
-              __typename: T.Literal('MessageFragment'),
-            },
-            { additionalProperties: false },
-          ),
-        ),
-        __typename: T.Literal('MessageContent'),
-      },
-      { additionalProperties: false },
-    ),
+    ...pick(schemas.Message, ['id', 'sentAt']),
+    content: buildObject({
+      ...pick(schemas.MessageContent, ['text']),
+      fragments: T.Array(
+        buildObject(pick(schemas.MessageFragment, ['content', 'text'])),
+      ),
+    }),
     parentMessage: T.Union([T.Null(), T.Unknown()]),
     threadParentMessage: T.Union([T.Null(), T.Unknown()]),
-    sentAt: T.String({
-      /* format: 'date-time' */
+    sender: buildObject({
+      ...pick(schemas.User, ['id', 'chatColor', 'displayName']),
+      displayBadges: T.Array(
+        buildObject(pick(schemas.Badge, ['id', 'setID', 'version'])),
+      ),
     }),
-    sender: T.Object(
-      {
-        id: T.String(),
-        chatColor: T.Union([T.Null(), T.String()]),
-        displayName: T.String(),
-        displayBadges: T.Array(
-          T.Object(
-            {
-              id: T.String(),
-              setID: T.String(),
-              version: T.String(),
-              __typename: T.Literal('Badge'),
-            },
-            { additionalProperties: false },
-          ),
-        ),
-        __typename: T.Literal('User'),
-      },
-      { additionalProperties: false },
-    ),
-    __typename: T.Literal('Message'),
   },
-  {
-    $id: `${displayName}Message`,
-    additionalProperties: false,
-  },
+  { $id: `${displayName}Message` },
 );
 
-export const PinnedChatMessageSchema = T.Object(
+export const PinnedChatMessageSchema = buildObject(
   {
-    id: T.String(),
-    type: T.Union([T.Literal('MOD'), T.String()]),
-    pinnedMessage: LegacyRef(MessageSchema),
-    startsAt: T.String({
-      /* format: 'date-time' */
-    }),
-    updatedAt: T.String({
-      /* format: 'date-time' */
-    }),
-    endsAt: T.Union([
-      T.Null(),
-      T.String({
-        /* format: 'date-time' */
-      }),
+    ...pick(schemas.PinnedChatMessage, [
+      'id',
+      'type',
+      'startsAt',
+      'updatedAt',
+      'endsAt',
     ]),
-    pinnedBy: T.Object(
-      {
-        id: T.String(),
-        displayName: T.String(),
-        __typename: T.Literal('User'),
-      },
-      { additionalProperties: false },
-    ),
-    __typename: T.Literal('PinnedChatMessage'),
+    pinnedMessage: LegacyRef(MessageSchema),
+    pinnedBy: buildObject(pick(schemas.User, ['id', 'displayName'])),
   },
-  {
-    $id: `${displayName}PinnedChatMessage`,
-    additionalProperties: false,
-  },
+  { $id: `${displayName}PinnedChatMessage` },
 );
 
-export const DataSchema = T.Object(
+export const DataSchema = buildObject(
   {
     channel: T.Union([
       T.Null(),
-      T.Object(
-        {
-          id: T.String(),
-          pinnedChatMessages: T.Union([
-            T.Null(),
-            T.Object(
-              {
-                edges: T.Array(
-                  T.Object(
-                    {
-                      node: LegacyRef(PinnedChatMessageSchema),
-                      cursor: T.Union([T.Null(), T.String()]),
-                      __typename: T.Literal('PinnedChatMessageEdge'),
-                    },
-                    { additionalProperties: false },
-                  ),
-                ),
-                pageInfo: T.Object(
-                  {
-                    hasNextPage: T.Boolean(),
-                    __typename: T.Literal('PageInfo'),
-                  },
-                  { additionalProperties: false },
-                ),
-                __typename: T.Literal('PinnedChatMessageConnection'),
-              },
-              { additionalProperties: false },
+      buildObject({
+        ...pick(schemas.Channel, ['id']),
+        pinnedChatMessages: T.Union([
+          T.Null(),
+          buildObject({
+            edges: T.Array(
+              buildObject({
+                node: LegacyRef(PinnedChatMessageSchema),
+                cursor: T.Union([T.Null(), T.String()]),
+                __typename: T.Literal('PinnedChatMessageEdge'),
+              }),
             ),
-          ]),
-          __typename: T.Literal('Channel'),
-        },
-        { additionalProperties: false },
-      ),
+            pageInfo: buildObject(pick(schemas.PageInfo, ['hasNextPage'])),
+            __typename: T.Literal('PinnedChatMessageConnection'),
+          }),
+        ]),
+      }),
     ]),
   },
-  {
-    $id: `${displayName}Data`,
-    additionalProperties: false,
-  },
+  { $id: `${displayName}Data` },
 );
 
 export const ResponseSchema = getResponseSchema(name, DataSchema);

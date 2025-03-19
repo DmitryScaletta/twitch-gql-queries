@@ -551,6 +551,7 @@ export interface FfzBroadcastIdData {
 
 export interface GetPinnedChatMessage {
   id: string;
+  sentAt: string;
   content: {
     text: string;
     fragments: {
@@ -562,7 +563,6 @@ export interface GetPinnedChatMessage {
   };
   parentMessage: unknown;
   threadParentMessage: unknown;
-  sentAt: string;
   sender: {
     id: string;
     chatColor: null | string;
@@ -581,10 +581,10 @@ export interface GetPinnedChatMessage {
 export interface GetPinnedChatPinnedChatMessage {
   id: string;
   type: 'MOD' | string;
-  pinnedMessage: GetPinnedChatMessage;
   startsAt: string;
   updatedAt: string;
   endsAt: null | string;
+  pinnedMessage: GetPinnedChatMessage;
   pinnedBy: {
     id: string;
     displayName: string;

@@ -8,6 +8,7 @@ export const User = {
   primaryColorHex: T.Union([T.Null(), T.String()]),
   profileImageURL: T.String(),
   bannerImageURL: T.String(),
+  chatColor: T.Union([T.Null(), T.String()]),
   isPartner: T.Boolean(),
   __typename: T.Literal('User'),
 } satisfies TProperties;
@@ -194,4 +195,71 @@ export const ScheduleSegment = {
   startAt: T.String(),
   hasReminder: T.Boolean(),
   __typename: T.Literal('ScheduleSegment'),
+} satisfies TProperties;
+
+export const Message = {
+  id: T.String(),
+  sentAt: T.String({
+    // format: 'date-time',
+  }),
+  __typename: T.Literal('Message'),
+} satisfies TProperties;
+
+export const MessageContent = {
+  text: T.String(),
+  __typename: T.Literal('MessageContent'),
+} satisfies TProperties;
+
+export const MessageFragment = {
+  content: T.Union([T.Null(), T.Unknown()]),
+  text: T.String(),
+  __typename: T.Literal('MessageFragment'),
+} satisfies TProperties;
+
+export const PinnedChatMessage = {
+  id: T.String(),
+  // TODO: BROADCASTER?
+  type: T.Union([T.Literal('MOD'), T.String()]),
+  startsAt: T.String({
+    // format: 'date-time',
+  }),
+  updatedAt: T.String({
+    // format: 'date-time',
+  }),
+  endsAt: T.Union([
+    T.Null(),
+    T.String({
+      // format: 'date-time',
+    }),
+  ]),
+  __typename: T.Literal('PinnedChatMessage'),
+} satisfies TProperties;
+
+export const Badge = {
+  id: T.String(),
+  setID: T.String(),
+  version: T.String(),
+  title: T.String(),
+  image1x: T.String({
+    // format: 'uri',
+  }),
+  image2x: T.String({
+    // format: 'uri',
+  }),
+  image4x: T.String({
+    // format: 'uri',
+  }),
+  clickAction: T.Union([
+    T.Null(),
+    T.Literal('VISIT_URL'),
+    T.Literal('SUBSCRIBE'),
+    T.Literal('GET_TURBO'),
+  ]),
+  clickURL: T.Union([
+    T.Null(),
+    T.String({
+      // format: 'uri',
+    }),
+  ]),
+  __typename: T.Literal('Badge'),
 } satisfies TProperties;
