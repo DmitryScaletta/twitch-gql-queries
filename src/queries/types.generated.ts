@@ -6,7 +6,7 @@ export interface BrowsePageGame {
   displayName: string;
   name: string;
   avatarURL: string;
-  viewersCount: number;
+  viewersCount: null | number;
   originalReleaseDate: null | string;
   tags: {
     id: string;
@@ -651,25 +651,25 @@ export interface GlobalBadgesData {
 }
 
 export interface SearchResultsPageChannel {
+  displayName: string;
+  id: string;
+  login: string;
+  profileImageURL: string;
+  description: null | string;
   broadcastSettings: {
     id: string;
     title: string;
     __typename: 'BroadcastSettings';
   };
-  displayName: string;
   followers: {
     totalCount: number;
     __typename: 'FollowerConnection';
   };
-  id: string;
   lastBroadcast: {
-    id: string;
-    startedAt: string;
+    id: null | string;
+    startedAt: null | string;
     __typename: 'Broadcast';
   };
-  login: string;
-  profileImageURL: string;
-  description: null | string;
   channel: {
     id: string;
     schedule: null | {
@@ -687,7 +687,7 @@ export interface SearchResultsPageChannel {
     };
     __typename: 'Channel';
   };
-  self: null;
+  self: unknown;
   latestVideo: {
     edges: {
       node: {
@@ -720,6 +720,10 @@ export interface SearchResultsPageChannel {
     __typename: 'UserRoles';
   };
   stream: null | {
+    id: string;
+    previewImageURL: string;
+    type: 'live';
+    viewersCount: number;
     game: null | {
       id: string;
       slug: string;
@@ -727,18 +731,14 @@ export interface SearchResultsPageChannel {
       displayName: string;
       __typename: 'Game';
     };
-    id: string;
-    previewImageURL: string;
     freeformTags: {
       id: string;
       name: string;
       __typename: 'FreeformTag';
     }[];
-    type: 'live';
-    viewersCount: number;
     __typename: 'Stream';
   };
-  watchParty: null;
+  watchParty: unknown;
   __typename: 'User';
 }
 
@@ -748,6 +748,7 @@ export interface SearchResultsPageGame {
   name: string;
   displayName: string;
   boxArtURL: string;
+  viewersCount: null | number;
   tags: {
     id: string;
     isLanguageTag: boolean;
@@ -755,7 +756,6 @@ export interface SearchResultsPageGame {
     tagName: string;
     __typename: 'Tag';
   }[];
-  viewersCount: null | number;
   __typename: 'Game';
 }
 
@@ -795,6 +795,11 @@ export interface SearchResultsPageRelatedLiveChannel {
 
 export interface SearchResultsPageVideo {
   createdAt: string;
+  id: string;
+  lengthSeconds: number;
+  previewThumbnailURL: string;
+  title: string;
+  viewCount: number;
   owner: {
     id: string;
     displayName: string;
@@ -805,7 +810,6 @@ export interface SearchResultsPageVideo {
     };
     __typename: 'User';
   };
-  id: string;
   game: null | {
     id: string;
     slug: string;
@@ -813,10 +817,6 @@ export interface SearchResultsPageVideo {
     displayName: string;
     __typename: 'Game';
   };
-  lengthSeconds: number;
-  previewThumbnailURL: string;
-  title: string;
-  viewCount: number;
   __typename: 'Video';
 }
 

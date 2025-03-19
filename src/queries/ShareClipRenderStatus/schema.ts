@@ -25,10 +25,7 @@ export const BroadcasterSchema = buildObject(
       'isPartner',
       'profileImageURL',
     ]),
-    followers: buildObject({
-      totalCount: T.Number(),
-      __typename: T.Literal('FollowerConnection'),
-    }),
+    followers: buildObject(pick(schemas.FollowerConnection, ['totalCount'])),
     stream: T.Union([
       T.Null(),
       buildObject(pick(schemas.Stream, ['id', 'viewersCount'])),

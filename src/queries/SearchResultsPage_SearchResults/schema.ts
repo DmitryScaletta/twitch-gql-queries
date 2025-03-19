@@ -1,477 +1,298 @@
 import { Type as T } from '@sinclair/typebox';
-import { getResponseSchema, LegacyRef } from '../../schema.ts';
+import {
+  buildObject,
+  getResponseSchema,
+  LegacyRef,
+  pick,
+} from '../../schema.ts';
+import * as schemas from '../../schemas.ts';
 
 const name = 'SearchResultsPage_SearchResults';
 const category = 'SearchResultsPage';
 const displayName = 'SearchResultsPageSearchResults';
 
-export const VariablesSchema = T.Object(
+export const VariablesSchema = buildObject(
   {
     platform: T.Optional(T.Union([T.Null(), T.Literal('web'), T.String()])),
     query: T.String(),
     options: T.Optional(
       T.Union([
         T.Null(),
-        T.Object(
-          {
-            targets: T.Optional(
-              T.Union([
-                T.Null(),
-                T.Array(
-                  T.Object(
-                    {
-                      index: T.Union([
-                        T.Literal('CHANNEL'),
-                        T.Literal('CHANNEL_WITH_TAG'),
-                        T.Literal('GAME'),
-                        T.Literal('VOD'),
-                      ]),
-                    },
-                    { additionalProperties: false },
-                  ),
-                ),
-              ]),
-            ),
-            shouldSkipDiscoveryControl: T.Optional(
-              T.Union([T.Null(), T.Boolean()]),
-            ),
-          },
-          { additionalProperties: false },
-        ),
+        buildObject({
+          targets: T.Optional(
+            T.Union([
+              T.Null(),
+              T.Array(
+                buildObject({
+                  index: T.Union([
+                    T.Literal('CHANNEL'),
+                    T.Literal('CHANNEL_WITH_TAG'),
+                    T.Literal('GAME'),
+                    T.Literal('VOD'),
+                  ]),
+                }),
+              ),
+            ]),
+          ),
+          shouldSkipDiscoveryControl: T.Optional(
+            T.Union([T.Null(), T.Boolean()]),
+          ),
+        }),
       ]),
     ),
     includeIsDJ: T.Optional(T.Union([T.Null(), T.Boolean()])),
   },
-  {
-    $id: `${displayName}Variables`,
-    additionalProperties: false,
-  },
+  { $id: `${displayName}Variables` },
 );
 
-export const ChannelSchema = T.Object(
+// TODO: find example with watch party
+const WatchPartySchema = T.Union([T.Null(), T.Unknown()]);
+
+export const ChannelSchema = buildObject(
   {
-    broadcastSettings: T.Object(
-      {
-        id: T.String(),
-        title: T.String(),
-        __typename: T.Literal('BroadcastSettings'),
-      },
-      { additionalProperties: false },
+    ...pick(schemas.User, [
+      'displayName',
+      'id',
+      'login',
+      'profileImageURL',
+      'description',
+    ]),
+    broadcastSettings: buildObject(
+      pick(schemas.BroadcastSettings, ['id', 'title']),
     ),
-    displayName: T.String(),
-    followers: T.Object(
-      {
-        totalCount: T.Number(),
-        __typename: T.Literal('FollowerConnection'),
-      },
-      { additionalProperties: false },
-    ),
-    id: T.String(),
-    lastBroadcast: T.Object(
-      {
-        id: T.String(),
-        startedAt: T.String({
+    followers: buildObject(pick(schemas.FollowerConnection, ['totalCount'])),
+    // don't use Broadcast schema
+    // if no last broadcast the response is: { id: null, startedAt: null }
+    lastBroadcast: buildObject({
+      id: T.Union([T.Null(), T.String()]),
+      startedAt: T.Union([
+        T.Null(),
+        T.String({
           // format: 'date-time',
         }),
-        __typename: T.Literal('Broadcast'),
-      },
-      { additionalProperties: false },
-    ),
-    login: T.String(),
-    profileImageURL: T.String(),
-    description: T.Union([T.Null(), T.String()]),
-    channel: T.Object(
-      {
-        id: T.String(),
-        schedule: T.Union([
-          T.Null(),
-          T.Object(
-            {
-              id: T.String(),
-              nextSegment: T.Union([
-                T.Null(),
-                T.Object(
-                  {
-                    id: T.String(),
-                    startAt: T.String({
-                      // format: 'date-time',
-                    }),
-                    endAt: T.Union([
-                      T.Null(),
-                      T.String({
-                        // format: 'date-time',
-                      }),
-                    ]),
-                    title: T.String(),
-                    hasReminder: T.Boolean(),
-                    // TODO: add schedule categories
-                    categories: T.Array(T.Unknown()),
-                    __typename: T.Literal('ScheduleSegment'),
-                  },
-                  { additionalProperties: false },
-                ),
+      ]),
+      __typename: T.Literal('Broadcast'),
+    }),
+    channel: buildObject({
+      ...pick(schemas.Channel, ['id']),
+      schedule: T.Union([
+        T.Null(),
+        buildObject({
+          ...pick(schemas.Schedule, ['id']),
+          nextSegment: T.Union([
+            T.Null(),
+            buildObject(
+              pick(schemas.ScheduleSegment, [
+                'id',
+                'startAt',
+                'endAt',
+                'title',
+                'hasReminder',
+                'categories',
               ]),
-              __typename: T.Literal('Schedule'),
-            },
-            { additionalProperties: false },
+            ),
+          ]),
+        }),
+      ]),
+    }),
+    self: T.Union([T.Null(), T.Unknown()]),
+    latestVideo: buildObject({
+      edges: T.Array(
+        buildObject({
+          node: buildObject(
+            pick(schemas.Video, [
+              'id',
+              'lengthSeconds',
+              'title',
+              'previewThumbnailURL',
+            ]),
           ),
-        ]),
-        __typename: T.Literal('Channel'),
-      },
-      { additionalProperties: false },
-    ),
-    self: T.Null(),
-    latestVideo: T.Object(
-      {
-        edges: T.Array(
-          T.Object(
-            {
-              node: T.Object(
-                {
-                  id: T.String(),
-                  lengthSeconds: T.Number(),
-                  title: T.String(),
-                  previewThumbnailURL: T.String({
-                    /* format: 'uri' */
-                  }),
-                  __typename: T.Literal('Video'),
-                },
-                { additionalProperties: false },
-              ),
-              __typename: T.Literal('VideoEdge'),
-            },
-            { additionalProperties: false },
+          __typename: T.Literal('VideoEdge'),
+        }),
+      ),
+      __typename: T.Literal('VideoConnection'),
+    }),
+    topClip: buildObject({
+      edges: T.Array(
+        buildObject({
+          node: buildObject(
+            pick(schemas.Clip, [
+              'id',
+              'title',
+              'durationSeconds',
+              'thumbnailURL',
+              'slug',
+            ]),
           ),
-        ),
-        __typename: T.Literal('VideoConnection'),
-      },
-      { additionalProperties: false },
-    ),
-    topClip: T.Object(
-      {
-        edges: T.Array(
-          T.Object(
-            {
-              node: T.Object(
-                {
-                  id: T.String(),
-                  title: T.String(),
-                  durationSeconds: T.Number(),
-                  thumbnailURL: T.String({
-                    /* format: 'uri' */
-                  }),
-                  slug: T.String(),
-                  __typename: T.Literal('Clip'),
-                },
-                { additionalProperties: false },
-              ),
-              __typename: T.Literal('ClipEdge'),
-            },
-            { additionalProperties: false },
-          ),
-        ),
-        __typename: T.Literal('ClipConnection'),
-      },
-      { additionalProperties: false },
-    ),
-    roles: T.Object(
-      {
-        isPartner: T.Boolean(),
-        __typename: T.Literal('UserRoles'),
-      },
-      { additionalProperties: false },
-    ),
+          __typename: T.Literal('ClipEdge'),
+        }),
+      ),
+      __typename: T.Literal('ClipConnection'),
+    }),
+    roles: buildObject(pick(schemas.UserRoles, ['isPartner'])),
     stream: T.Union([
       T.Null(),
-      T.Object(
-        {
-          game: T.Union([
-            T.Null(),
-            T.Object({
-              id: T.String(),
-              slug: T.String(),
-              name: T.String(),
-              displayName: T.String(),
-              __typename: T.Literal('Game'),
-            }),
-          ]),
-          id: T.String(),
-          previewImageURL: T.String({
-            /* format: 'uri' */
-          }),
-          freeformTags: T.Array(
-            T.Object(
-              {
-                id: T.String(),
-                name: T.String(),
-                __typename: T.Literal('FreeformTag'),
-              },
-              { additionalProperties: false },
-            ),
-          ),
-          type: T.Literal('live'),
-          viewersCount: T.Number(),
-          __typename: T.Literal('Stream'),
-        },
-        { additionalProperties: false },
-      ),
-    ]),
-    // TODO: find example with watch party
-    watchParty: T.Null(),
-    __typename: T.Literal('User'),
-  },
-  {
-    $id: `${category}Channel`,
-    additionalProperties: false,
-  },
-);
-
-export const RelatedLiveChannelSchema = T.Object(
-  {
-    id: T.String(),
-    stream: T.Object(
-      {
-        id: T.String(),
-        viewersCount: T.Number(),
-        previewImageURL: T.String({
-          /* format: 'uri' */
-        }),
+      buildObject({
+        ...pick(schemas.Stream, [
+          'id',
+          'previewImageURL',
+          'type',
+          'viewersCount',
+        ]),
         game: T.Union([
           T.Null(),
-          T.Object(
-            {
-              name: T.String(),
-              id: T.String(),
-              slug: T.String(),
-              __typename: T.Literal('Game'),
-            },
-            { additionalProperties: false },
+          buildObject(
+            pick(schemas.Game, ['id', 'slug', 'name', 'displayName']),
           ),
         ]),
-        broadcaster: T.Object(
-          {
-            id: T.String(),
-            primaryColorHex: T.Union([T.Null(), T.String()]),
-            login: T.String(),
-            displayName: T.String(),
-            broadcastSettings: T.Object(
-              {
-                id: T.String(),
-                title: T.String(),
-                __typename: T.Literal('BroadcastSettings'),
-              },
-              { additionalProperties: false },
-            ),
-            roles: T.Object(
-              {
-                isPartner: T.Boolean(),
-                __typename: T.Literal('UserRoles'),
-              },
-              { additionalProperties: false },
-            ),
-            __typename: T.Literal('User'),
-          },
-          { additionalProperties: false },
+        freeformTags: T.Array(
+          buildObject(pick(schemas.FreeformTag, ['id', 'name'])),
         ),
-        __typename: T.Literal('Stream'),
-      },
-      { additionalProperties: false },
-    ),
-    // TODO: find example with watch party
-    watchParty: T.Unknown(),
-    __typename: T.Literal('User'),
+      }),
+    ]),
+    watchParty: WatchPartySchema,
   },
-  {
-    $id: `${category}RelatedLiveChannel`,
-    additionalProperties: false,
-  },
+  { $id: `${category}Channel` },
 );
 
-export const GameSchema = T.Object(
+export const RelatedLiveChannelSchema = buildObject(
   {
-    id: T.String(),
-    slug: T.String(),
-    name: T.String(),
-    displayName: T.String(),
-    boxArtURL: T.String({
-      /* format: 'uri' */
+    ...pick(schemas.User, ['id']),
+    stream: buildObject({
+      ...pick(schemas.Stream, ['id', 'viewersCount', 'previewImageURL']),
+      game: T.Union([
+        T.Null(),
+        buildObject(pick(schemas.Game, ['name', 'id', 'slug'])),
+      ]),
+      broadcaster: buildObject({
+        ...pick(schemas.User, [
+          'id',
+          'primaryColorHex',
+          'login',
+          'displayName',
+        ]),
+        broadcastSettings: buildObject(
+          pick(schemas.BroadcastSettings, ['id', 'title']),
+        ),
+        roles: buildObject(pick(schemas.UserRoles, ['isPartner'])),
+      }),
     }),
+    watchParty: WatchPartySchema,
+  },
+  { $id: `${category}RelatedLiveChannel` },
+);
+
+export const GameSchema = buildObject(
+  {
+    ...pick(schemas.Game, [
+      'id',
+      'slug',
+      'name',
+      'displayName',
+      'boxArtURL',
+      'viewersCount',
+    ]),
     tags: T.Array(
-      T.Object(
-        {
-          id: T.String(),
-          isLanguageTag: T.Boolean(),
-          localizedName: T.String(),
-          tagName: T.String(),
-          __typename: T.Literal('Tag'),
-        },
-        { additionalProperties: false },
+      buildObject(
+        pick(schemas.Tag, ['id', 'isLanguageTag', 'localizedName', 'tagName']),
       ),
     ),
-    viewersCount: T.Union([T.Null(), T.Number()]),
-    __typename: T.Literal('Game'),
   },
-  {
-    $id: `${category}Game`,
-    additionalProperties: false,
-  },
+  { $id: `${category}Game` },
 );
 
-export const VideoSchema = T.Object(
+export const VideoSchema = buildObject(
   {
-    createdAt: T.String({
-      // format: 'date-time',
+    ...pick(schemas.Video, [
+      'createdAt',
+      'id',
+      'lengthSeconds',
+      'previewThumbnailURL',
+      'title',
+      'viewCount',
+    ]),
+    owner: buildObject({
+      ...pick(schemas.User, ['id', 'displayName', 'login']),
+      roles: buildObject(pick(schemas.UserRoles, ['isPartner'])),
     }),
-    owner: T.Object(
-      {
-        id: T.String(),
-        displayName: T.String(),
-        login: T.String(),
-        roles: T.Object(
-          {
-            isPartner: T.Boolean(),
-            __typename: T.Literal('UserRoles'),
-          },
-          { additionalProperties: false },
-        ),
-        __typename: T.Literal('User'),
-      },
-      { additionalProperties: false },
-    ),
-    id: T.String(),
     game: T.Union([
       T.Null(),
-      T.Object(
-        {
-          id: T.String(),
-          slug: T.String(),
-          name: T.String(),
-          displayName: T.String(),
-          __typename: T.Literal('Game'),
-        },
-        { additionalProperties: false },
-      ),
+      buildObject(pick(schemas.Game, ['id', 'slug', 'name', 'displayName'])),
     ]),
-    lengthSeconds: T.Number(),
-    previewThumbnailURL: T.String({
-      /* format: 'uri' */
-    }),
-    title: T.String(),
-    viewCount: T.Number(),
-    __typename: T.Literal('Video'),
   },
-  {
-    $id: `${category}Video`,
-    additionalProperties: false,
-  },
+  { $id: `${category}Video` },
 );
 
-export const DataSchema = T.Object(
-  {
-    searchFor: T.Object(
-      {
-        channels: T.Object(
-          {
-            cursor: T.String(),
-            edges: T.Array(
-              T.Object(
-                {
-                  trackingID: T.String(),
-                  item: LegacyRef(ChannelSchema),
-                  __typename: T.Literal('SearchForEdge'),
-                },
-                { additionalProperties: false },
-              ),
-            ),
-            score: T.Union([T.Null(), T.Number()]),
-            totalMatches: T.Number(),
-            __typename: T.Literal('SearchForResultUsers'),
-          },
-          { additionalProperties: false },
-        ),
-        channelsWithTag: T.Object(
-          {
-            cursor: T.String(),
-            edges: T.Array(
-              T.Object(
-                {
-                  trackingID: T.String(),
-                  item: LegacyRef(ChannelSchema),
-                  __typename: T.Literal('SearchForEdge'),
-                },
-                { additionalProperties: false },
-              ),
-            ),
-            score: T.Union([T.Null(), T.Number()]),
-            totalMatches: T.Number(),
-            __typename: T.Literal('SearchForResultUsers'),
-          },
-          { additionalProperties: false },
-        ),
-        games: T.Object(
-          {
-            cursor: T.String(),
-            edges: T.Array(
-              T.Object(
-                {
-                  trackingID: T.String(),
-                  item: LegacyRef(GameSchema),
-                  __typename: T.Literal('SearchForEdge'),
-                },
-                { additionalProperties: false },
-              ),
-            ),
-            score: T.Union([T.Null(), T.Number()]),
-            totalMatches: T.Number(),
-            __typename: T.Literal('SearchForResultGames'),
-          },
-          { additionalProperties: false },
-        ),
-        videos: T.Object(
-          {
-            cursor: T.String(),
-            edges: T.Array(
-              T.Object(
-                {
-                  trackingID: T.String(),
-                  item: LegacyRef(VideoSchema),
-                  __typename: T.Literal('SearchForEdge'),
-                },
-                { additionalProperties: false },
-              ),
-            ),
-            score: T.Union([T.Null(), T.Number()]),
-            totalMatches: T.Number(),
-            __typename: T.Literal('SearchForResultVideos'),
-          },
-          { additionalProperties: false },
-        ),
-        relatedLiveChannels: T.Object(
-          {
-            edges: T.Array(
-              T.Object(
-                {
-                  trackingID: T.String(),
-                  item: LegacyRef(RelatedLiveChannelSchema),
-                  __typename: T.Literal('SearchForEdgeRelatedLiveChannels'),
-                },
-                { additionalProperties: false },
-              ),
-            ),
-            score: T.Union([T.Null(), T.Number()]),
-            __typename: T.Literal('SearchForResultRelatedLiveChannels'),
-          },
-          { additionalProperties: false },
-        ),
-        __typename: T.Literal('SearchFor'),
-      },
-      { additionalProperties: false },
+const SearchForSchema = buildObject({
+  channels: buildObject({
+    cursor: T.String(),
+    edges: T.Array(
+      buildObject({
+        trackingID: T.String(),
+        item: LegacyRef(ChannelSchema),
+        __typename: T.Literal('SearchForEdge'),
+      }),
     ),
-  },
-  {
-    $id: `${displayName}Data`,
-    additionalProperties: false,
-  },
+    score: T.Union([T.Null(), T.Number()]),
+    totalMatches: T.Number(),
+    __typename: T.Literal('SearchForResultUsers'),
+  }),
+  channelsWithTag: buildObject({
+    cursor: T.String(),
+    edges: T.Array(
+      buildObject({
+        trackingID: T.String(),
+        item: LegacyRef(ChannelSchema),
+        __typename: T.Literal('SearchForEdge'),
+      }),
+    ),
+    score: T.Union([T.Null(), T.Number()]),
+    totalMatches: T.Number(),
+    __typename: T.Literal('SearchForResultUsers'),
+  }),
+  games: buildObject({
+    cursor: T.String(),
+    edges: T.Array(
+      buildObject({
+        trackingID: T.String(),
+        item: LegacyRef(GameSchema),
+        __typename: T.Literal('SearchForEdge'),
+      }),
+    ),
+    score: T.Union([T.Null(), T.Number()]),
+    totalMatches: T.Number(),
+    __typename: T.Literal('SearchForResultGames'),
+  }),
+  videos: buildObject({
+    cursor: T.String(),
+    edges: T.Array(
+      buildObject({
+        trackingID: T.String(),
+        item: LegacyRef(VideoSchema),
+        __typename: T.Literal('SearchForEdge'),
+      }),
+    ),
+    score: T.Union([T.Null(), T.Number()]),
+    totalMatches: T.Number(),
+    __typename: T.Literal('SearchForResultVideos'),
+  }),
+  relatedLiveChannels: buildObject({
+    edges: T.Array(
+      buildObject({
+        trackingID: T.String(),
+        item: LegacyRef(RelatedLiveChannelSchema),
+        __typename: T.Literal('SearchForEdgeRelatedLiveChannels'),
+      }),
+    ),
+    score: T.Union([T.Null(), T.Number()]),
+    __typename: T.Literal('SearchForResultRelatedLiveChannels'),
+  }),
+  __typename: T.Literal('SearchFor'),
+});
+
+export const DataSchema = buildObject(
+  { searchFor: SearchForSchema },
+  { $id: `${displayName}Data` },
 );
 
 export const ResponseSchema = getResponseSchema(name, DataSchema);

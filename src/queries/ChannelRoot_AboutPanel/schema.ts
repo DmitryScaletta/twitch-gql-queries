@@ -29,10 +29,7 @@ export const UserSchema = buildObject(
       'primaryColorHex',
       'profileImageURL',
     ]),
-    followers: buildObject({
-      totalCount: T.Number(),
-      __typename: T.Literal('FollowerConnection'),
-    }),
+    followers: buildObject(pick(schemas.FollowerConnection, ['totalCount'])),
     roles: buildObject({
       ...pick(schemas.UserRoles, ['isPartner', 'isAffiliate', 'isStaff']),
       isParticipatingDJ: T.Optional(T.Boolean()),

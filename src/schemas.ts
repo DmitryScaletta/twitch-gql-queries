@@ -21,6 +21,11 @@ export const UserRoles = {
   __typename: T.Literal('UserRoles'),
 } satisfies TProperties;
 
+export const FollowerConnection = {
+  totalCount: T.Number(),
+  __typename: T.Literal('FollowerConnection'),
+} satisfies TProperties;
+
 export const Channel = {
   id: T.String(),
   __typename: T.Literal('Channel'),
@@ -40,9 +45,15 @@ export const Broadcast = {
   id: T.String(),
   title: T.String(),
   startedAt: T.String({
-    /* format: 'date-time' */
+    // format: 'date-time',
   }),
   __typename: T.Literal('Broadcast'),
+} satisfies TProperties;
+
+export const BroadcastSettings = {
+  id: T.String(),
+  title: T.String(),
+  __typename: T.Literal('BroadcastSettings'),
 } satisfies TProperties;
 
 export const Stream = {
@@ -74,8 +85,16 @@ export const Video = {
   id: T.String(),
   title: T.String(),
   broadcastType: T.Union([T.Literal('ARCHIVE'), T.Literal('HIGHLIGHT')]),
+  lengthSeconds: T.Number(),
+  viewCount: T.Number(),
+  previewThumbnailURL: T.String({
+    // format: 'uri',
+  }),
   // TODO: find all possible statuses
   status: T.Union([T.Literal('RECORDED'), T.String()]),
+  createdAt: T.String({
+    // format: 'date-time',
+  }),
   __typename: T.Literal('Video'),
 } satisfies TProperties;
 
@@ -145,7 +164,7 @@ export const Game = {
   boxArtURL: T.String({
     // format: 'uri',
   }),
-  viewersCount: T.Number(),
+  viewersCount: T.Union([T.Null(), T.Number()]),
   originalReleaseDate: T.Union([
     T.Null(),
     T.String({
@@ -193,7 +212,16 @@ export const Schedule = {
 export const ScheduleSegment = {
   id: T.String(),
   startAt: T.String(),
+  endAt: T.Union([
+    T.Null(),
+    T.String({
+      // format: 'date-time',
+    }),
+  ]),
+  title: T.String(),
   hasReminder: T.Boolean(),
+  // TODO: add schedule categories
+  categories: T.Array(T.Unknown()),
   __typename: T.Literal('ScheduleSegment'),
 } satisfies TProperties;
 

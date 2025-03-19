@@ -1,84 +1,57 @@
 import { Type as T } from '@sinclair/typebox';
-import { getResponseSchema, LegacyRef } from '../../schema.ts';
+import {
+  buildObject,
+  getResponseSchema,
+  LegacyRef,
+  pick,
+} from '../../schema.ts';
+import * as schemas from '../../schemas.ts';
 
 const name = 'SearchTray_SearchSuggestions';
 const category = 'SearchTray';
 const displayName = `SearchTraySearchSuggestions`;
 
-export const VariablesSchema = T.Object(
+export const VariablesSchema = buildObject(
   {
     queryFragment: T.String(),
     withOfflineChannelContent: T.Optional(T.Union([T.Null(), T.Boolean()])),
   },
-  {
-    $id: `${displayName}Variables`,
-    additionalProperties: false,
-  },
+  { $id: `${displayName}Variables` },
 );
 
-export const SuggestionChannelSchema = T.Object(
+export const SuggestionChannelSchema = buildObject(
   {
     id: T.String(),
     login: T.String(),
     profileImageURL: T.String(),
     isLive: T.Boolean(),
     isVerified: T.Boolean(),
-    user: T.Object(
-      {
-        id: T.String(),
-        stream: T.Union([
-          T.Null(),
-          T.Object(
-            {
-              id: T.String(),
-              game: T.Union([
-                T.Null(),
-                T.Object(
-                  {
-                    id: T.String(),
-                    __typename: T.Literal('Game'),
-                  },
-                  { additionalProperties: false },
-                ),
-              ]),
-              __typename: T.Literal('Stream'),
-            },
-            { additionalProperties: false },
-          ),
-        ]),
-        __typename: T.Literal('User'),
-      },
-      { additionalProperties: false },
-    ),
+    user: buildObject({
+      ...pick(schemas.User, ['id']),
+      stream: T.Union([
+        T.Null(),
+        buildObject({
+          ...pick(schemas.Stream, ['id']),
+          game: T.Union([T.Null(), buildObject(pick(schemas.Game, ['id']))]),
+        }),
+      ]),
+    }),
     __typename: T.Literal('SearchSuggestionChannel'),
   },
-  {
-    $id: `${category}SuggestionChannel`,
-    additionalProperties: false,
-  },
+  { $id: `${category}SuggestionChannel` },
 );
 
-export const SuggestionCategorySchema = T.Object(
+export const SuggestionCategorySchema = buildObject(
   {
     id: T.String(),
     boxArtURL: T.String(),
-    game: T.Object(
-      {
-        id: T.String(),
-        slug: T.String(),
-        __typename: T.Literal('Game'),
-      },
-      { additionalProperties: false },
-    ),
+    game: buildObject(pick(schemas.Game, ['id', 'slug'])),
     __typename: T.Literal('SearchSuggestionCategory'),
   },
-  {
-    $id: `${category}SuggestionCategory`,
-    additionalProperties: false,
-  },
+  { $id: `${category}SuggestionCategory` },
 );
 
-export const SuggestionSchema = T.Object(
+export const SuggestionSchema = buildObject(
   {
     id: T.String(),
     text: T.String(),
@@ -87,55 +60,37 @@ export const SuggestionSchema = T.Object(
       LegacyRef(SuggestionChannelSchema),
       LegacyRef(SuggestionCategorySchema),
     ]),
-    matchingCharacters: T.Object(
-      {
-        start: T.Number(),
-        end: T.Number(),
-        __typename: T.Literal('SearchSuggestionHighlight'),
-      },
-      { additionalProperties: false },
-    ),
+    matchingCharacters: buildObject({
+      start: T.Number(),
+      end: T.Number(),
+      __typename: T.Literal('SearchSuggestionHighlight'),
+    }),
     __typename: T.Literal('SearchSuggestion'),
   },
-  {
-    $id: `${category}Suggestion`,
-    additionalProperties: false,
-  },
+  { $id: `${category}Suggestion` },
 );
 
-export const SuggestionsSchema = T.Object(
+export const SuggestionsSchema = buildObject(
   {
     edges: T.Array(
-      T.Object(
-        {
-          node: LegacyRef(SuggestionSchema),
-          __typename: T.Literal('SearchSuggestionEdge'),
-        },
-        { additionalProperties: false },
-      ),
+      buildObject({
+        node: LegacyRef(SuggestionSchema),
+        __typename: T.Literal('SearchSuggestionEdge'),
+      }),
     ),
-    tracking: T.Object(
-      {
-        modelTrackingID: T.String(),
-        responseID: T.String(),
-        __typename: T.Literal('SearchSuggestionTracking'),
-      },
-      { additionalProperties: false },
-    ),
+    tracking: buildObject({
+      modelTrackingID: T.String(),
+      responseID: T.String(),
+      __typename: T.Literal('SearchSuggestionTracking'),
+    }),
     __typename: T.Literal('SearchSuggestionConnection'),
   },
-  {
-    $id: `${category}Suggestions`,
-    additionalProperties: false,
-  },
+  { $id: `${category}Suggestions` },
 );
 
-export const DataSchema = T.Object(
+export const DataSchema = buildObject(
   { searchSuggestions: LegacyRef(SuggestionsSchema) },
-  {
-    $id: `${displayName}Data`,
-    additionalProperties: false,
-  },
+  { $id: `${displayName}Data` },
 );
 
 export const ResponseSchema = getResponseSchema(name, DataSchema);
