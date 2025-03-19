@@ -78,7 +78,7 @@ const main = async () => {
   const queryResponseMap: string[] = [];
   for (const [name, displayName] of queries) {
     responseTypes.push(
-      `export type ${displayName}Response = QueryResponse<'${name}', ${displayName}Data>;`,
+      `export type ${displayName}Response = QueryResponse<${displayName}Data, '${name}'>;`,
     );
     queryResponseMap.push(`  ${name}: ${displayName}Response;`);
   }
@@ -87,7 +87,7 @@ const main = async () => {
     "import type { QueryResponse } from '../types.ts';\n",
     ...tsDefs,
     ...responseTypes,
-    '\nexport type QueryResponseMap = {',
+    '\nexport interface QueryResponseMap {',
     ...queryResponseMap,
     '};\n',
   ].join('\n');

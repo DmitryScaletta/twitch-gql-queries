@@ -1266,29 +1266,29 @@ export interface WatchLivePromptData {
   };
 }
 
-export type BrowsePageAllDirectoriesResponse = QueryResponse<'BrowsePage_AllDirectories', BrowsePageAllDirectoriesData>;
-export type ChannelRootAboutPanelResponse = QueryResponse<'ChannelRoot_AboutPanel', ChannelRootAboutPanelData>;
-export type ChannelShellResponse = QueryResponse<'ChannelShell', ChannelShellData>;
-export type ClipsActionButtonsResponse = QueryResponse<'ClipsActionButtons', ClipsActionButtonsData>;
-export type ClipsCardsGameResponse = QueryResponse<'ClipsCards__Game', ClipsCardsGameData>;
-export type ClipsCardsUserResponse = QueryResponse<'ClipsCards__User', ClipsCardsUserData>;
-export type ClipsDownloadButtonResponse = QueryResponse<'ClipsDownloadButton', ClipsDownloadButtonData>;
-export type DirectoryPageGameResponse = QueryResponse<'DirectoryPage_Game', DirectoryPageGameData>;
-export type FfzBroadcastIdResponse = QueryResponse<'FFZ_BroadcastID', FfzBroadcastIdData>;
-export type GetPinnedChatResponse = QueryResponse<'GetPinnedChat', GetPinnedChatData>;
-export type GetUserIdResponse = QueryResponse<'GetUserID', GetUserIdData>;
-export type GlobalBadgesResponse = QueryResponse<'GlobalBadges', GlobalBadgesData>;
-export type SearchResultsPageSearchResultsResponse = QueryResponse<'SearchResultsPage_SearchResults', SearchResultsPageSearchResultsData>;
-export type SearchTraySearchSuggestionsResponse = QueryResponse<'SearchTray_SearchSuggestions', SearchTraySearchSuggestionsData>;
-export type ShareClipRenderStatusResponse = QueryResponse<'ShareClipRenderStatus', ShareClipRenderStatusData>;
-export type StreamMetadataResponse = QueryResponse<'StreamMetadata', StreamMetadataData>;
-export type UseLiveResponse = QueryResponse<'UseLive', UseLiveData>;
-export type UseViewCountResponse = QueryResponse<'UseViewCount', UseViewCountData>;
-export type VideoAccessTokenClipResponse = QueryResponse<'VideoAccessToken_Clip', VideoAccessTokenClipData>;
-export type VideoPreviewOverlayResponse = QueryResponse<'VideoPreviewOverlay', VideoPreviewOverlayData>;
-export type WatchLivePromptResponse = QueryResponse<'WatchLivePrompt', WatchLivePromptData>;
+export type BrowsePageAllDirectoriesResponse = QueryResponse<BrowsePageAllDirectoriesData, 'BrowsePage_AllDirectories'>;
+export type ChannelRootAboutPanelResponse = QueryResponse<ChannelRootAboutPanelData, 'ChannelRoot_AboutPanel'>;
+export type ChannelShellResponse = QueryResponse<ChannelShellData, 'ChannelShell'>;
+export type ClipsActionButtonsResponse = QueryResponse<ClipsActionButtonsData, 'ClipsActionButtons'>;
+export type ClipsCardsGameResponse = QueryResponse<ClipsCardsGameData, 'ClipsCards__Game'>;
+export type ClipsCardsUserResponse = QueryResponse<ClipsCardsUserData, 'ClipsCards__User'>;
+export type ClipsDownloadButtonResponse = QueryResponse<ClipsDownloadButtonData, 'ClipsDownloadButton'>;
+export type DirectoryPageGameResponse = QueryResponse<DirectoryPageGameData, 'DirectoryPage_Game'>;
+export type FfzBroadcastIdResponse = QueryResponse<FfzBroadcastIdData, 'FFZ_BroadcastID'>;
+export type GetPinnedChatResponse = QueryResponse<GetPinnedChatData, 'GetPinnedChat'>;
+export type GetUserIdResponse = QueryResponse<GetUserIdData, 'GetUserID'>;
+export type GlobalBadgesResponse = QueryResponse<GlobalBadgesData, 'GlobalBadges'>;
+export type SearchResultsPageSearchResultsResponse = QueryResponse<SearchResultsPageSearchResultsData, 'SearchResultsPage_SearchResults'>;
+export type SearchTraySearchSuggestionsResponse = QueryResponse<SearchTraySearchSuggestionsData, 'SearchTray_SearchSuggestions'>;
+export type ShareClipRenderStatusResponse = QueryResponse<ShareClipRenderStatusData, 'ShareClipRenderStatus'>;
+export type StreamMetadataResponse = QueryResponse<StreamMetadataData, 'StreamMetadata'>;
+export type UseLiveResponse = QueryResponse<UseLiveData, 'UseLive'>;
+export type UseViewCountResponse = QueryResponse<UseViewCountData, 'UseViewCount'>;
+export type VideoAccessTokenClipResponse = QueryResponse<VideoAccessTokenClipData, 'VideoAccessToken_Clip'>;
+export type VideoPreviewOverlayResponse = QueryResponse<VideoPreviewOverlayData, 'VideoPreviewOverlay'>;
+export type WatchLivePromptResponse = QueryResponse<WatchLivePromptData, 'WatchLivePrompt'>;
 
-export type QueryResponseMap = {
+export interface QueryResponseMap {
   BrowsePage_AllDirectories: BrowsePageAllDirectoriesResponse;
   ChannelRoot_AboutPanel: ChannelRootAboutPanelResponse;
   ChannelShell: ChannelShellResponse;
