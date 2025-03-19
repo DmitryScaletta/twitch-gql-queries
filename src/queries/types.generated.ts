@@ -452,8 +452,8 @@ export interface DirectoryPageGameGame {
     banners: null | ('MAY_CONTAIN_MATURE_CONTENT' | string)[];
     edges: {
       cursor: null | string;
-      node: DirectoryPageGameStream;
       trackingID: null | string;
+      node: DirectoryPageGameStream;
       __typename: 'StreamEdge';
     }[];
     pageInfo: {
@@ -465,22 +465,25 @@ export interface DirectoryPageGameGame {
   __typename: 'Game';
 }
 
+export type DirectoryPageGameSort = 'RELEVANCE' | 'VIEWER_COUNT' | 'VIEWER_COUNT_ASC' | 'RECENT';
+
 export interface DirectoryPageGameStream {
   id: string;
   title: string;
   viewersCount: number;
   previewImageURL: string;
+  type: 'live';
   broadcaster: {
     id: string;
     login: string;
     displayName: string;
+    profileImageURL: string;
+    primaryColorHex: null | string;
     roles: {
       isPartner: boolean;
       isParticipatingDJ: boolean;
       __typename: 'UserRoles';
     };
-    profileImageURL: string;
-    primaryColorHex: null | string;
     __typename: 'User';
   };
   freeformTags: {
@@ -488,7 +491,6 @@ export interface DirectoryPageGameStream {
     name: string;
     __typename: 'FreeformTag';
   }[];
-  type: 'live';
   game: {
     id: string;
     boxArtURL: string;
@@ -508,7 +510,7 @@ export interface DirectoryPageGameVariables {
   imageWidth?: number;
   slug: string;
   options: {
-    sort: 'RELEVANCE' | 'VIEWER_COUNT' | 'VIEWER_COUNT_ASC' | 'RECENT';
+    sort: DirectoryPageGameSort;
     recommendationsContext?: null | {
       platform?: null | 'web' | string;
     };

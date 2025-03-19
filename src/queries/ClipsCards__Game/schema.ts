@@ -90,10 +90,9 @@ export const ClipSchema = buildObject(
       }),
     ]),
     guestStarParticipants: T.Union([T.Null(), GuestStarParticipantsSchema]),
-    previewThumbnailProperties: buildObject({
-      blurReason: T.Union([T.Literal('BLUR_NOT_REQUIRED'), T.String()]),
-      __typename: T.Literal('PreviewThumbnailProperties'),
-    }),
+    previewThumbnailProperties: buildObject(
+      pick(schemas.PreviewThumbnailProperties, ['blurReason']),
+    ),
     __typename: T.Literal('Clip'),
   },
   { $id: `${displayName}Clip` },

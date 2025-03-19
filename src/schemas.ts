@@ -46,8 +46,20 @@ export const Broadcast = {
 
 export const Stream = {
   id: T.String(),
+  title: T.String(),
   viewersCount: T.Number(),
+  previewImageURL: T.String({
+    // format: 'uri',
+  }),
+  // TODO: are there any other types?
+  type: T.Literal('live'),
   __typename: T.Literal('Stream'),
+} satisfies TProperties;
+
+export const StreamEdge = {
+  cursor: T.Union([T.Null(), T.String()]),
+  trackingID: T.Union([T.Null(), T.String()]),
+  __typename: T.Literal('StreamEdge'),
 } satisfies TProperties;
 
 export const Team = {
@@ -154,6 +166,17 @@ export const Tag = {
   localizedName: T.String(),
   tagName: T.String(),
   __typename: T.Literal('Tag'),
+} satisfies TProperties;
+
+export const FreeformTag = {
+  id: T.String(),
+  name: T.String(),
+  __typename: T.Literal('FreeformTag'),
+} satisfies TProperties;
+
+export const PreviewThumbnailProperties = {
+  blurReason: T.Union([T.Literal('BLUR_NOT_REQUIRED'), T.String()]),
+  __typename: T.Literal('PreviewThumbnailProperties'),
 } satisfies TProperties;
 
 export const PageInfo = {

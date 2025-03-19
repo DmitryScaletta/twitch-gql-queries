@@ -1,50 +1,39 @@
 import { Type as T } from '@sinclair/typebox';
-import { getResponseSchema } from '../../schema.ts';
+import {
+  buildObject,
+  getResponseSchema,
+  LegacyRef,
+  pick,
+} from '../../schema.ts';
+import * as schemas from '../../schemas.ts';
 
 const name = 'FFZ_BroadcastID';
 const displayName = 'FfzBroadcastId';
 
-export const VariablesSchema = T.Object(
+export const VariablesSchema = buildObject(
   { id: T.String() },
-  {
-    $id: `${displayName}Variables`,
-    additionalProperties: false,
-  },
+  { $id: `${displayName}Variables` },
 );
 
-export const UserSchema = T.Object(
+export const UserSchema = buildObject(
   {
-    id: T.String(),
+    ...pick(schemas.User, ['id']),
     stream: T.Union([
       T.Null(),
-      T.Object(
-        {
-          id: T.String(),
-          archiveVideo: T.Union([
-            T.Null(),
-            T.Object(
-              {
-                id: T.String(),
-                __typename: T.Literal('Video'),
-              },
-              { additionalProperties: false },
-            ),
-          ]),
-          __typename: T.Literal('Stream'),
-        },
-        { additionalProperties: false },
-      ),
+      buildObject({
+        ...pick(schemas.Stream, ['id']),
+        archiveVideo: T.Union([
+          T.Null(),
+          buildObject(pick(schemas.Video, ['id'])),
+        ]),
+      }),
     ]),
-    __typename: T.Literal('User'),
   },
-  {
-    $id: `${displayName}User`,
-    additionalProperties: false,
-  },
+  { $id: `${displayName}User` },
 );
 
 export const DataSchema = T.Object(
-  { user: T.Union([T.Null(), UserSchema]) },
+  { user: T.Union([T.Null(), LegacyRef(UserSchema)]) },
   {
     $id: `${displayName}Data`,
     additionalProperties: false,
