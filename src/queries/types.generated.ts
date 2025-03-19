@@ -145,7 +145,7 @@ export interface ChannelShellUser {
   displayName: string;
   primaryColorHex: null | string;
   profileImageURL: string;
-  bannerImageURL: string;
+  bannerImageURL: null | string;
   stream: null | {
     id: string;
     viewersCount: number;

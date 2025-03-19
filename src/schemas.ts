@@ -7,7 +7,7 @@ export const User = {
   description: T.Union([T.Null(), T.String()]),
   primaryColorHex: T.Union([T.Null(), T.String()]),
   profileImageURL: T.String(),
-  bannerImageURL: T.String(),
+  bannerImageURL: T.Union([T.Null(), T.String()]),
   chatColor: T.Union([T.Null(), T.String()]),
   isPartner: T.Boolean(),
   __typename: T.Literal('User'),

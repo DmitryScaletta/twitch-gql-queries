@@ -75,17 +75,14 @@ export const UserDoesNotExistSchema = buildObject(
   { $id: `${displayName}UserDoesNotExist` },
 );
 
-export const DataSchema = T.Object(
+export const DataSchema = buildObject(
   {
     userOrError: T.Union([
       LegacyRef(UserSchema),
       LegacyRef(UserDoesNotExistSchema),
     ]),
   },
-  {
-    $id: `${displayName}Data`,
-    additionalProperties: false,
-  },
+  { $id: `${displayName}Data` },
 );
 
 export const ResponseSchema = getResponseSchema(name, DataSchema);
