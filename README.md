@@ -58,6 +58,46 @@ const channels = await gqlRequest(
 console.log(channels);
 ```
 
+Using raw queries:
+
+```ts
+import { getRawQuery, gqlRequest, type GetRawQueryReturnType } from 'twitch-gql-queries';
+
+const query = `
+query GetVideo($videoId: ID!) {
+  video(id: $videoId) {
+    id
+    title
+    game {
+      id
+      name
+    }
+  }
+}`;
+type GetVideoData = {
+  video: {
+    id: string;
+    title: string;
+    game: null | {
+      id: string;
+      name: string;
+    }
+  }
+}
+const getQueryGetVideo = (variables: { videoId: string }) =>
+  ({ query, variables }) as GetRawQueryReturnType<GetVideoData>;
+
+const responses = await gqlRequest([
+  getRawQuery<GetVideoData>({
+    query,
+    variables: { videoId: '1622426365' },
+  }),
+  getQueryGetVideo({ videoId: '1816688726' }),
+]);
+
+console.log(responses)
+```
+
 ## Available queries
 
 * BrowsePage_AllDirectories
