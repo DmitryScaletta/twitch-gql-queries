@@ -33,27 +33,25 @@ export const buildObject = <TProps extends TProperties>(
   return T.Object(props, { ...options, additionalProperties: false });
 };
 
-const integrity = {
-  challenge: T.Optional(buildObject({ type: T.Literal('integrity') })),
-} as const;
-
 export const getResponseSchema = <TDataSchema extends TObject>(
   operationName: string,
   DataSchema: TDataSchema,
-  integrityChallenge = false,
 ) =>
   buildObject({
     errors: T.Optional(
       T.Array(
         buildObject({
           message: T.String(),
-          path: T.Array(T.String()),
+          path: T.Optional(T.Array(T.String())),
+          locations: T.Optional(
+            buildObject({ line: T.Number(), column: T.Number() }),
+          ),
         }),
       ),
     ),
     data: DataSchema,
     extensions: buildObject({
-      ...(integrityChallenge ? integrity : {}),
+      challenge: T.Optional(buildObject({ type: T.Literal('integrity') })),
       durationMilliseconds: T.Number(),
       operationName: T.Literal(operationName),
       requestID: T.String(),

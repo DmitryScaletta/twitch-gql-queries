@@ -99,4 +99,4 @@ export const DataSchema = buildObject(
   { $id: `${displayName}Data` },
 );
 
-export const ResponseSchema = getResponseSchema(name, DataSchema, true);
+export const ResponseSchema = getResponseSchema(name, DataSchema);
