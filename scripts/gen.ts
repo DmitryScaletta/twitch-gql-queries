@@ -55,6 +55,7 @@ const main = async () => {
     for (const [schemaName, schema] of Object.entries(schemas)) {
       if (
         !schemaName.endsWith('Schema') ||
+        !schema.$id ||
         ['VariablesSchema', 'DataSchema', 'ResponseSchema'].includes(schemaName)
       ) {
         continue;
