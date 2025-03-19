@@ -1,48 +1,29 @@
 import { Type as T } from '@sinclair/typebox';
-import { getResponseSchema, LegacyRef } from '../../schema.ts';
+import { buildObject, getResponseSchema, pick } from '../../schema.ts';
+import * as schemas from '../../schemas.ts';
 
 const name = 'UseLive';
 const displayName = name;
 
-export const VariablesSchema = T.Object(
+export const VariablesSchema = buildObject(
   { channelLogin: T.String() },
-  {
-    $id: `${displayName}Variables`,
-    additionalProperties: false,
-  },
+  { $id: `${displayName}Variables` },
 );
 
-export const DataSchema = T.Object(
+export const DataSchema = buildObject(
   {
     user: T.Union([
       T.Null(),
-      T.Object(
-        {
-          id: T.String(),
-          login: T.String(),
-          stream: T.Union([
-            T.Null(),
-            T.Object(
-              {
-                id: T.String(),
-                createdAt: T.String({
-                  // format: 'date-time',
-                }),
-                __typename: T.Literal('Stream'),
-              },
-              { additionalProperties: false },
-            ),
-          ]),
-          __typename: T.Literal('User'),
-        },
-        { additionalProperties: false },
-      ),
+      buildObject({
+        ...pick(schemas.User, ['id', 'login']),
+        stream: T.Union([
+          T.Null(),
+          buildObject(pick(schemas.Stream, ['id', 'createdAt'])),
+        ]),
+      }),
     ]),
   },
-  {
-    $id: `${displayName}Data`,
-    additionalProperties: false,
-  },
+  { $id: `${displayName}Data` },
 );
 
 export const ResponseSchema = getResponseSchema(name, DataSchema);

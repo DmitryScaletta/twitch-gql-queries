@@ -1,65 +1,36 @@
 import { Type as T } from '@sinclair/typebox';
-import { getResponseSchema } from '../../schema.ts';
+import { buildObject, getResponseSchema, pick } from '../../schema.ts';
+import * as schemas from '../../schemas.ts';
 
 const name = 'WatchLivePrompt';
 const displayName = name;
 
-export const VariablesSchema = T.Object(
+export const VariablesSchema = buildObject(
   { slug: T.String() },
-  {
-    $id: `${displayName}Variables`,
-    additionalProperties: false,
-  },
+  { $id: `${displayName}Variables` },
 );
 
-const GameSchema = T.Object(
-  {
-    id: T.String(),
-    displayName: T.String(),
-    __typename: T.Literal('Game'),
-  },
-  { additionalProperties: false },
-);
+const StreamSchema = buildObject({
+  ...pick(schemas.Stream, ['id']),
+  game: T.Union([
+    T.Null(),
+    buildObject(pick(schemas.Game, ['id', 'displayName'])),
+  ]),
+});
 
-const StreamSchema = T.Object(
-  {
-    id: T.String(),
-    game: T.Union([T.Null(), GameSchema]),
-    __typename: T.Literal('Stream'),
-  },
-  { additionalProperties: false },
-);
+const BroadcasterSchema = buildObject({
+  ...pick(schemas.User, ['id', 'login', 'displayName']),
+  stream: T.Union([T.Null(), StreamSchema]),
+});
 
-const BroadcasterSchema = T.Object(
-  {
-    id: T.String(),
-    login: T.String(),
-    displayName: T.String(),
-    stream: T.Union([T.Null(), StreamSchema]),
-    __typename: T.Literal('User'),
-  },
-  { additionalProperties: false },
-);
+const ClipSchema = buildObject({
+  ...pick(schemas.Clip, ['id', 'durationSeconds', 'thumbnailURL']),
+  broadcaster: T.Union([T.Null(), BroadcasterSchema]),
+});
 
-const ClipSchema = T.Object(
-  {
-    id: T.String(),
-    durationSeconds: T.Number(),
-    broadcaster: T.Union([T.Null(), BroadcasterSchema]),
-    thumbnailURL: T.String({
-      /* format: 'uri' */
-    }),
-    __typename: T.Literal('Clip'),
-  },
-  { additionalProperties: false },
-);
-
-export const DataSchema = T.Object(
+export const DataSchema = buildObject(
   { clip: T.Union([T.Null(), ClipSchema]) },
-  {
-    $id: `${displayName}Data`,
-    additionalProperties: false,
-  },
+  { $id: `${displayName}Data` },
 );
 
 export const ResponseSchema = getResponseSchema(name, DataSchema);

@@ -1,92 +1,61 @@
 import { Type as T } from '@sinclair/typebox';
-import { getResponseSchema, LegacyRef } from '../../schema.ts';
+import {
+  buildObject,
+  getResponseSchema,
+  LegacyRef,
+  pick,
+} from '../../schema.ts';
+import * as schemas from '../../schemas.ts';
 
 const name = 'StreamMetadata';
 const displayName = name;
 
-export const VariablesSchema = T.Object(
+export const VariablesSchema = buildObject(
   { channelLogin: T.String() },
-  {
-    $id: `${displayName}Variables`,
-    additionalProperties: false,
-  },
+  { $id: `${displayName}Variables` },
 );
 
-export const UserSchema = T.Object(
+export const UserSchema = buildObject(
   {
-    id: T.String(),
-    primaryColorHex: T.Union([T.Null(), T.String()]),
-    isPartner: T.Boolean(),
-    profileImageURL: T.String({
-      /* format: 'uri' */
-    }),
+    ...pick(schemas.User, [
+      'id',
+      'primaryColorHex',
+      'isPartner',
+      'profileImageURL',
+    ]),
     primaryTeam: T.Union([
       T.Null(),
-      T.Object(
-        {
-          id: T.String(),
-          name: T.String(),
-          displayName: T.String(),
-          __typename: T.Literal('Team'),
-        },
-        { additionalProperties: false },
-      ),
+      buildObject(pick(schemas.Team, ['id', 'name', 'displayName'])),
     ]),
     squadStream: T.Union([T.Null(), T.Unknown()]),
-    channel: T.Object(
-      {
-        id: T.String(),
-        chanlets: T.Null(),
-        __typename: T.Literal('Channel'),
-      },
-      { additionalProperties: false },
-    ),
-    lastBroadcast: T.Object(
-      {
-        id: T.Union([T.Null(), T.String()]),
-        title: T.Union([T.Null(), T.String()]),
-        __typename: T.Literal('Broadcast'),
-      },
-      { additionalProperties: false },
-    ),
+    channel: buildObject({
+      ...pick(schemas.Channel, ['id']),
+      chanlets: T.Union([T.Null(), T.Unknown()]),
+    }),
+    // don't use Broadcast schema
+    lastBroadcast: buildObject({
+      id: T.Union([T.Null(), T.String()]),
+      title: T.Union([T.Null(), T.String()]),
+      __typename: T.Literal('Broadcast'),
+    }),
     stream: T.Union([
       T.Null(),
-      T.Object(
-        {
-          id: T.String(),
-          type: T.Literal('live'),
-          createdAt: T.String(),
-          game: T.Union([
-            T.Null(),
-            T.Object(
-              {
-                id: T.String(),
-                slug: T.String(),
-                name: T.String(),
-                __typename: T.Literal('Game'),
-              },
-              { additionalProperties: false },
-            ),
-          ]),
-          __typename: T.Literal('Stream'),
-        },
-        { additionalProperties: false },
-      ),
+      buildObject({
+        ...pick(schemas.Stream, ['id', 'type', 'createdAt']),
+        game: T.Union([
+          T.Null(),
+          buildObject(pick(schemas.Game, ['id', 'slug', 'name'])),
+        ]),
+      }),
     ]),
     __typename: T.Literal('User'),
   },
-  {
-    $id: `${displayName}User`,
-    additionalProperties: false,
-  },
+  { $id: `${displayName}User` },
 );
 
-export const DataSchema = T.Object(
+export const DataSchema = buildObject(
   { user: LegacyRef(UserSchema) },
-  {
-    $id: `${displayName}Data`,
-    additionalProperties: false,
-  },
+  { $id: `${displayName}Data` },
 );
 
 export const ResponseSchema = getResponseSchema(name, DataSchema);

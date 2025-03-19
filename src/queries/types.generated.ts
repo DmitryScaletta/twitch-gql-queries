@@ -1135,7 +1135,7 @@ export interface StreamMetadataUser {
   squadStream: unknown;
   channel: {
     id: string;
-    chanlets: null;
+    chanlets: unknown;
     __typename: 'Channel';
   };
   lastBroadcast: {
@@ -1246,6 +1246,7 @@ export interface WatchLivePromptData {
   clip: null | {
     id: string;
     durationSeconds: number;
+    thumbnailURL: string;
     broadcaster: null | {
       id: string;
       login: string;
@@ -1261,7 +1262,6 @@ export interface WatchLivePromptData {
       };
       __typename: 'User';
     };
-    thumbnailURL: string;
     __typename: 'Clip';
   };
 }

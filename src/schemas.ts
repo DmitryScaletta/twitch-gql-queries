@@ -65,6 +65,11 @@ export const Stream = {
   }),
   // TODO: are there any other types?
   type: T.Literal('live'),
+  // TODO: find type
+  restrictionType: T.Union([T.Null(), T.Unknown()]),
+  createdAt: T.String({
+    // format: 'date-time',
+  }),
   __typename: T.Literal('Stream'),
 } satisfies TProperties;
 
