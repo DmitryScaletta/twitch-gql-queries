@@ -1,6 +1,6 @@
 import { describe, test } from 'node:test';
 import { gqlRequest } from '../../gqlRequest.ts';
-import { createValidate } from '../testHelpers.ts';
+import { createValidate } from '../../testHelpers.ts';
 import { getQueryDirectoryPageGame } from './query.ts';
 import { GameSchema, ResponseSchema, StreamSchema } from './schema.ts';
 

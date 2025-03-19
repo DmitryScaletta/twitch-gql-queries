@@ -25,7 +25,7 @@ export const getQuery%QUERY_DISPLAY_NAME% = (
 ```ts
 import { describe, test } from 'node:test';
 import { gqlRequest } from '../../gqlRequest.ts';
-import { createValidate } from '../testHelpers.ts';
+import { createValidate } from '../../testHelpers.ts';
 import { getQuery%QUERY_DISPLAY_NAME% } from './query.ts';
 import { ResponseSchema } from './schema.ts';
 
@@ -45,25 +45,20 @@ describe('%QUERY_NAME%', () => {
 
 ```ts
 import { Type as T } from '@sinclair/typebox';
-import { getResponseSchema, LegacyRef } from '../../schema.ts';
+import { buildObject, getResponseSchema, pick } from '../../schema.ts';
+import * as schemas from '../../schemas.ts';
 
 const name = '%QUERY_NAME%';
 const displayName = name;
 
-export const VariablesSchema = T.Object(
+export const VariablesSchema = buildObject(
   {},
-  {
-    $id: `${displayName}Variables`,
-    additionalProperties: false,
-  },
+  { $id: `${displayName}Variables` },
 );
 
-export const DataSchema = T.Object(
+export const DataSchema = buildObject(
   {},
-  {
-    $id: `${displayName}Data`,
-    additionalProperties: false,
-  },
+  { $id: `${displayName}Data` },
 );
 
 export const ResponseSchema = getResponseSchema(name, DataSchema);

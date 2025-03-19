@@ -1,6 +1,6 @@
 import { describe, test } from 'node:test';
-import { gqlRequest } from '../../../index.ts';
-import { createValidate } from '../testHelpers.ts';
+import { gqlRequest } from '../../gqlRequest.ts';
+import { createValidate } from '../../testHelpers.ts';
 import { getQueryClipsActionButtons } from './query.ts';
 import { ClipSchema, ResponseSchema } from './schema.ts';
 

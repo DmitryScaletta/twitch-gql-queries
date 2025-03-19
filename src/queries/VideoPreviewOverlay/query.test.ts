@@ -1,6 +1,6 @@
 import { describe, test } from 'node:test';
 import { gqlRequest } from '../../gqlRequest.ts';
-import { createValidate } from '../testHelpers.ts';
+import { createValidate } from '../../testHelpers.ts';
 import { getQueryVideoPreviewOverlay } from './query.ts';
 import { ResponseSchema } from './schema.ts';
 

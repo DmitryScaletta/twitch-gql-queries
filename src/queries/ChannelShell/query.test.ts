@@ -1,7 +1,7 @@
 import { describe, test } from 'node:test';
-import { gqlRequest } from '../../../index.ts';
+import { gqlRequest } from '../../gqlRequest.ts';
 import { getQueryChannelShell } from './query.ts';
-import { createValidate } from '../testHelpers.ts';
+import { createValidate } from '../../testHelpers.ts';
 import {
   ResponseSchema,
   UserDoesNotExistSchema,
