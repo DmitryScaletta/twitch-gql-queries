@@ -1,6 +1,6 @@
 import { describe, test } from 'node:test';
 import { gqlRequest } from '../../gqlRequest.ts';
-import { createValidate } from '../../testHelpers.ts';
+import { createValidate, getClips } from '../../testHelpers.ts';
 import { getQueryWatchLivePrompt } from './query.ts';
 import { ResponseSchema } from './schema.ts';
 
@@ -11,10 +11,11 @@ describe('WatchLivePrompt', () => {
   const validate = createValidate(ResponseSchema);
 
   test('real request', async () => {
-    const [queryResponse] = await gqlRequest([
-      getQueryWatchLivePrompt({ slug: 'DeliciousDelightfulPicklesWOOP' }),
-    ]);
-    validate(queryResponse);
+    const clips = await getClips();
+    const responses = await gqlRequest(
+      clips.map(({ slug }) => getQueryWatchLivePrompt({ slug })),
+    );
+    responses.map(validate);
   });
 
   test('real request: no broadcaster', async () => {

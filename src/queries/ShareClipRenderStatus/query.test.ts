@@ -1,6 +1,6 @@
 import { describe, test } from 'node:test';
 import { gqlRequest } from '../../gqlRequest.ts';
-import { createValidate } from '../../testHelpers.ts';
+import { createValidate, getClips } from '../../testHelpers.ts';
 import { getQueryShareClipRenderStatus } from './query.ts';
 import {
   BroadcasterSchema,
@@ -19,12 +19,11 @@ describe('ShareClipRenderStatus', () => {
   ]);
 
   test('real request', async () => {
-    const [queryResponse] = await gqlRequest([
-      getQueryShareClipRenderStatus({
-        slug: 'ManlyLittleHabaneroTwitchRaid-FIvuPaqPC4CHIif4',
-      }),
-    ]);
-    validate(queryResponse);
+    const clips = await getClips();
+    const responses = await gqlRequest(
+      clips.map(({ slug }) => getQueryShareClipRenderStatus({ slug })),
+    );
+    responses.map(validate);
   });
 
   test('real request: no broadcaster', async () => {

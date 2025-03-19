@@ -1,6 +1,6 @@
 import { describe, test } from 'node:test';
 import { gqlRequest } from '../../gqlRequest.ts';
-import { createValidate } from '../../testHelpers.ts';
+import { createValidate, getChannels } from '../../testHelpers.ts';
 import { getQueryGetPinnedChat } from './query.ts';
 import {
   MessageSchema,
@@ -18,10 +18,13 @@ describe('GetPinnedChat', () => {
   ]);
 
   test('real request', async () => {
-    const [queryResponse] = await gqlRequest([
-      getQueryGetPinnedChat({ channelID: '71092938', count: 1 }),
-    ]);
-    validate(queryResponse);
+    const channels = await getChannels();
+    const responses = await gqlRequest(
+      channels.map(({ id }) =>
+        getQueryGetPinnedChat({ channelID: id, count: 1 }),
+      ),
+    );
+    responses.map(validate);
   });
 
   test('real request: not-exists', async () => {

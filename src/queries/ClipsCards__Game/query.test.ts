@@ -1,6 +1,6 @@
 import { describe, test } from 'node:test';
 import { gqlRequest } from '../../gqlRequest.ts';
-import { createValidate } from '../../testHelpers.ts';
+import { createValidate, getCategories } from '../../testHelpers.ts';
 import { getQueryClipsCardsGame } from './query.ts';
 import { ClipSchema, ResponseSchema } from './schema.ts';
 
@@ -8,29 +8,35 @@ describe('ClipsCards__Game', () => {
   const validate = createValidate(ResponseSchema, [ClipSchema]);
 
   test('real request: all variables', async () => {
-    const [queryResponse] = await gqlRequest([
-      getQueryClipsCardsGame({
-        categorySlug: 'just-chatting',
-        limit: 20,
-        criteria: {
-          languages: ['EN'],
-          filter: 'LAST_WEEK',
-          shouldFilterByDiscoverySetting: true,
-        },
-        cursor: null,
-      }),
-    ]);
-    validate(queryResponse);
+    const categories = await getCategories();
+    const responses = await gqlRequest(
+      categories.map(({ slug }) =>
+        getQueryClipsCardsGame({
+          categorySlug: slug,
+          limit: 20,
+          criteria: {
+            languages: ['EN'],
+            filter: 'LAST_WEEK',
+            shouldFilterByDiscoverySetting: true,
+          },
+          cursor: null,
+        }),
+      ),
+    );
+    responses.map(validate);
   });
 
   test('real request: only required variables', async () => {
-    const [queryResponse] = await gqlRequest([
-      getQueryClipsCardsGame({
-        categorySlug: 'just-chatting',
-        limit: 20,
-      }),
-    ]);
-    validate(queryResponse);
+    const categories = await getCategories();
+    const responses = await gqlRequest(
+      categories.map(({ slug }) =>
+        getQueryClipsCardsGame({
+          categorySlug: slug,
+          limit: 20,
+        }),
+      ),
+    );
+    responses.map(validate);
   });
 
   test('real request: not exists', async () => {

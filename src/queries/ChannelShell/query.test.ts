@@ -1,7 +1,7 @@
 import { describe, test } from 'node:test';
 import { gqlRequest } from '../../gqlRequest.ts';
 import { getQueryChannelShell } from './query.ts';
-import { createValidate } from '../../testHelpers.ts';
+import { createValidate, getChannels } from '../../testHelpers.ts';
 import {
   ResponseSchema,
   UserDoesNotExistSchema,
@@ -23,10 +23,11 @@ describe('ChannelShell', () => {
   ]);
 
   test('real request', async () => {
-    const [queryResponse] = await gqlRequest([
-      getQueryChannelShell({ login: 'xqc' }),
-    ]);
-    validate(queryResponse);
+    const channels = await getChannels();
+    const responses = await gqlRequest(
+      channels.map(({ login }) => getQueryChannelShell({ login })),
+    );
+    responses.map(validate);
   });
   test('mock: online', () => validate(resOnline));
   test('mock: offline', () => validate(resOffline));

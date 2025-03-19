@@ -1,6 +1,6 @@
 import { describe, test } from 'node:test';
 import { gqlRequest } from '../../gqlRequest.ts';
-import { createValidate } from '../../testHelpers.ts';
+import { createValidate, getChannels } from '../../testHelpers.ts';
 import { getQueryStreamMetadata } from './query.ts';
 import { ResponseSchema, UserSchema } from './schema.ts';
 
@@ -11,10 +11,13 @@ describe('StreamMetadata', () => {
   const validate = createValidate(ResponseSchema, [UserSchema]);
 
   test('real request', async () => {
-    const [queryResponse] = await gqlRequest([
-      getQueryStreamMetadata({ channelLogin: 'xqc' }),
-    ]);
-    validate(queryResponse);
+    const channels = await getChannels();
+    const responses = await gqlRequest(
+      channels.map(({ login }) =>
+        getQueryStreamMetadata({ channelLogin: login }),
+      ),
+    );
+    responses.map(validate);
   });
 
   test('real request: never streamed', async () => {

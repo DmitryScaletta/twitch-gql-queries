@@ -1,6 +1,6 @@
 import { describe, test } from 'node:test';
 import { gqlRequest } from '../../gqlRequest.ts';
-import { createValidate } from '../../testHelpers.ts';
+import { createValidate, getChannels } from '../../testHelpers.ts';
 import { getQueryUseLive } from './query.ts';
 import { ResponseSchema } from './schema.ts';
 
@@ -11,10 +11,11 @@ describe('UseLive', () => {
   const validate = createValidate(ResponseSchema);
 
   test('real request', async () => {
-    const [queryResponse] = await gqlRequest([
-      getQueryUseLive({ channelLogin: 'xqc' }),
-    ]);
-    validate(queryResponse);
+    const channels = await getChannels();
+    const responses = await gqlRequest(
+      channels.map(({ login }) => getQueryUseLive({ channelLogin: login })),
+    );
+    responses.map(validate);
   });
 
   test('real request: not exists', async () => {

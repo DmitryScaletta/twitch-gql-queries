@@ -1,6 +1,6 @@
 import { describe, test } from 'node:test';
 import { gqlRequest } from '../../gqlRequest.ts';
-import { createValidate } from '../../testHelpers.ts';
+import { createValidate, getCategories } from '../../testHelpers.ts';
 import { getQueryDirectoryPageGame } from './query.ts';
 import { GameSchema, ResponseSchema, StreamSchema } from './schema.ts';
 
@@ -10,39 +10,45 @@ describe('DirectoryPage_Game', () => {
   const validate = createValidate(ResponseSchema, [GameSchema, StreamSchema]);
 
   test('real request: all variables', async () => {
-    const [queryResponse] = await gqlRequest([
-      getQueryDirectoryPageGame({
-        imageWidth: 50,
-        slug: 'just-chatting',
-        options: {
-          sort: 'RELEVANCE',
-          recommendationsContext: {
-            platform: 'web',
+    const categories = await getCategories();
+    const responses = await gqlRequest(
+      categories.map(({ slug }) =>
+        getQueryDirectoryPageGame({
+          imageWidth: 50,
+          slug,
+          options: {
+            sort: 'RELEVANCE',
+            recommendationsContext: {
+              platform: 'web',
+            },
+            freeformTags: null,
+            tags: [],
+            broadcasterLanguages: [],
+            systemFilters: [],
           },
-          freeformTags: null,
-          tags: [],
-          broadcasterLanguages: [],
-          systemFilters: [],
-        },
-        sortTypeIsRecency: false,
-        limit: 30,
-        includeIsDJ: true,
-      }),
-    ]);
-    validate(queryResponse);
+          sortTypeIsRecency: false,
+          limit: 30,
+          includeIsDJ: true,
+        }),
+      ),
+    );
+    responses.map(validate);
   });
 
   test('real request: only required variables', async () => {
-    const [queryResponse] = await gqlRequest([
-      getQueryDirectoryPageGame({
-        slug: 'counter-strike',
-        options: { sort: 'VIEWER_COUNT' },
-        sortTypeIsRecency: false,
-        limit: 30,
-        includeIsDJ: true,
-      }),
-    ]);
-    validate(queryResponse);
+    const categories = await getCategories();
+    const responses = await gqlRequest(
+      categories.map(({ slug }) =>
+        getQueryDirectoryPageGame({
+          slug,
+          options: { sort: 'VIEWER_COUNT' },
+          sortTypeIsRecency: false,
+          limit: 30,
+          includeIsDJ: true,
+        }),
+      ),
+    );
+    responses.map(validate);
   });
 
   test('real request: broadcasterLanguages', async () => {

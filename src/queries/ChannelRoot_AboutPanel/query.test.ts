@@ -1,6 +1,6 @@
 import { describe, test } from 'node:test';
 import { gqlRequest } from '../../gqlRequest.ts';
-import { createValidate } from '../../testHelpers.ts';
+import { createValidate, getChannels } from '../../testHelpers.ts';
 import { getQueryChannelRootAboutPanel } from './query.ts';
 import { ResponseSchema, UserSchema } from './schema.ts';
 
@@ -11,14 +11,17 @@ describe('ChannelRoot_AboutPanel', () => {
   const validate = createValidate(ResponseSchema, [UserSchema]);
 
   test('real request', async () => {
-    const [queryResponse] = await gqlRequest([
-      getQueryChannelRootAboutPanel({
-        channelLogin: 'xqc',
-        skipSchedule: false,
-        includeIsDJ: true,
-      }),
-    ]);
-    validate(queryResponse);
+    const channels = await getChannels();
+    const responses = await gqlRequest(
+      channels.map((channel) =>
+        getQueryChannelRootAboutPanel({
+          channelLogin: channel.login,
+          skipSchedule: false,
+          includeIsDJ: true,
+        }),
+      ),
+    );
+    responses.map(validate);
   });
 
   test('real request: skipSchedule true', async () => {

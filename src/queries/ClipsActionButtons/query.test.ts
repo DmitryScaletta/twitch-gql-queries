@@ -1,6 +1,6 @@
 import { describe, test } from 'node:test';
 import { gqlRequest } from '../../gqlRequest.ts';
-import { createValidate } from '../../testHelpers.ts';
+import { createValidate, getClips } from '../../testHelpers.ts';
 import { getQueryClipsActionButtons } from './query.ts';
 import { ClipSchema, ResponseSchema } from './schema.ts';
 
@@ -8,12 +8,11 @@ describe('ClipsActionButtons', () => {
   const validate = createValidate(ResponseSchema, [ClipSchema]);
 
   test('real request', async () => {
-    const [queryResponse] = await gqlRequest([
-      getQueryClipsActionButtons({
-        slug: 'WrongSplendidWrenYouDontSay-0Pkulh5IfiMkLH_P',
-      }),
-    ]);
-    validate(queryResponse);
+    const clips = await getClips();
+    const responses = await gqlRequest(
+      clips.map(({ slug }) => getQueryClipsActionButtons({ slug })),
+    );
+    responses.map(validate);
   });
 
   test('real request: no broadcaster', async () => {

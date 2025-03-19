@@ -1,6 +1,6 @@
 import { describe, test } from 'node:test';
 import { gqlRequest } from '../../gqlRequest.ts';
-import { createValidate } from '../../testHelpers.ts';
+import { createValidate, getChannels } from '../../testHelpers.ts';
 import { getQueryFfzBroadcastId } from './query.ts';
 import { ResponseSchema, UserSchema } from './schema.ts';
 
@@ -12,10 +12,11 @@ describe('FFZ_BroadcastID', () => {
   const validate = createValidate(ResponseSchema, [UserSchema]);
 
   test('real request', async () => {
-    const [queryResponse] = await gqlRequest([
-      getQueryFfzBroadcastId({ id: '26490481' }),
-    ]);
-    validate(queryResponse);
+    const channels = await getChannels();
+    const responses = await gqlRequest(
+      channels.map(({ id }) => getQueryFfzBroadcastId({ id })),
+    );
+    responses.map(validate);
   });
 
   test('real request: not exists', async () => {
