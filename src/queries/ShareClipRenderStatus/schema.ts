@@ -1,281 +1,162 @@
 import { Type as T } from '@sinclair/typebox';
-import { getResponseSchema, LegacyRef } from '../../schema.ts';
+import {
+  buildObject,
+  getResponseSchema,
+  LegacyRef,
+  pick,
+} from '../../schema.ts';
+import * as schemas from '../../schemas.ts';
 
 const name = 'ShareClipRenderStatus';
 const displayName = name;
 
-export const VariablesSchema = T.Object(
+export const VariablesSchema = buildObject(
   { slug: T.String() },
-  {
-    $id: `${displayName}Variables`,
-    additionalProperties: false,
-  },
+  { $id: `${displayName}Variables` },
 );
 
-export const BroadcasterSchema = T.Object(
+export const BroadcasterSchema = buildObject(
   {
-    id: T.String(),
-    login: T.String(),
-    displayName: T.String(),
-    primaryColorHex: T.Union([T.Null(), T.String()]),
-    isPartner: T.Boolean(),
-    profileImageURL: T.String({
-      /* format: 'uri' */
+    ...pick(schemas.User, [
+      'id',
+      'login',
+      'displayName',
+      'primaryColorHex',
+      'isPartner',
+      'profileImageURL',
+    ]),
+    followers: buildObject({
+      totalCount: T.Number(),
+      __typename: T.Literal('FollowerConnection'),
     }),
-    followers: T.Object(
-      {
-        totalCount: T.Number(),
-        __typename: T.Literal('FollowerConnection'),
-      },
-      { additionalProperties: false },
-    ),
     stream: T.Union([
       T.Null(),
-      T.Object(
-        {
-          id: T.String(),
-          viewersCount: T.Number(),
-          __typename: T.Literal('Stream'),
-        },
-        { additionalProperties: false },
-      ),
+      buildObject(pick(schemas.Stream, ['id', 'viewersCount'])),
     ]),
-    lastBroadcast: T.Object(
-      {
-        id: T.String(),
-        startedAt: T.String({
-          /* format: 'date-time' */
-        }),
-        __typename: T.Literal('Broadcast'),
-      },
-      { additionalProperties: false },
-    ),
+    lastBroadcast: buildObject(pick(schemas.Broadcast, ['id', 'startedAt'])),
     self: T.Union([T.Null(), T.Unknown()]),
-    __typename: T.Literal('User'),
   },
-  {
-    $id: `${displayName}Broadcaster`,
-    additionalProperties: false,
-  },
+  { $id: `${displayName}Broadcaster` },
 );
 
-const PortraitCropCoordinatesSchema = T.Object(
-  {
-    xPercentage: T.Number(),
-    yPercentage: T.Number(),
-    __typename: T.Literal('PortraitCropCoordinates'),
-  },
-  { additionalProperties: false },
-);
+const PortraitCropCoordinatesSchema = buildObject({
+  xPercentage: T.Number(),
+  yPercentage: T.Number(),
+  __typename: T.Literal('PortraitCropCoordinates'),
+});
 
-const PortraitCropMetadataSchema = T.Object(
-  {
-    topLeft: PortraitCropCoordinatesSchema,
-    bottomRight: PortraitCropCoordinatesSchema,
-    __typename: T.Literal('PortraitCropMetadata'),
-  },
-  { additionalProperties: false },
-);
+const PortraitCropMetadataSchema = buildObject({
+  topLeft: PortraitCropCoordinatesSchema,
+  bottomRight: PortraitCropCoordinatesSchema,
+  __typename: T.Literal('PortraitCropMetadata'),
+});
 
-const FullTemplateMetadataSchema = T.Object(
-  {
-    mainFrame: PortraitCropMetadataSchema,
-    __typename: T.Literal('FullTemplateMetadata'),
-  },
-  { additionalProperties: false },
-);
+const FullTemplateMetadataSchema = buildObject({
+  mainFrame: PortraitCropMetadataSchema,
+  __typename: T.Literal('FullTemplateMetadata'),
+});
 
-const StackedTemplateMetadataSchema = T.Object(
-  {
-    topFrame: PortraitCropMetadataSchema,
-    bottomFrame: PortraitCropMetadataSchema,
-    __typename: T.Literal('StackedTemplateMetadata'),
-  },
-  { additionalProperties: false },
-);
+const StackedTemplateMetadataSchema = buildObject({
+  topFrame: PortraitCropMetadataSchema,
+  bottomFrame: PortraitCropMetadataSchema,
+  __typename: T.Literal('StackedTemplateMetadata'),
+});
 
-export const ClipAssetSchema = T.Object(
+export const ClipAssetSchema = buildObject(
   {
-    id: T.String(),
-    aspectRatio: T.Number(),
-    type: T.Union([T.Literal('SOURCE'), T.Literal('RECOMPOSED')]),
-    createdAt: T.String({
-      /* format: 'date-time' */
-    }),
-    // TODO: find all possible statuses
-    creationState: T.Union([T.Literal('CREATED'), T.String()]),
+    ...pick(schemas.ClipAsset, [
+      'id',
+      'aspectRatio',
+      'type',
+      'createdAt',
+      'creationState',
+      'thumbnailURL',
+    ]),
     curator: T.Union([
       T.Null(),
-      T.Object(
-        {
-          id: T.String(),
-          login: T.String(),
-          displayName: T.String(),
-          profileImageURL: T.String({
-            /* format: 'uri' */
-          }),
-          __typename: T.Literal('User'),
-        },
-        { additionalProperties: false },
+      buildObject(
+        pick(schemas.User, ['id', 'login', 'displayName', 'profileImageURL']),
       ),
     ]),
-    thumbnailURL: T.String({
-      /* format: 'uri' */
-    }),
     videoQualities: T.Array(
-      T.Object(
-        {
-          frameRate: T.Number(),
-          quality: T.String(),
-          sourceURL: T.String({
-            /* format: 'uri', */
-          }),
-          __typename: T.Literal('ClipVideoQuality'),
-        },
-        { additionalProperties: false },
+      buildObject(
+        pick(schemas.ClipVideoQuality, ['frameRate', 'quality', 'sourceURL']),
       ),
     ),
     portraitMetadata: T.Union([
       T.Null(),
-      T.Object(
-        {
-          portraitClipLayout: T.Union([
-            T.Literal('FULL'),
-            T.Literal('STACKED'),
-          ]),
-          fullTemplateMetadata: T.Union([T.Null(), FullTemplateMetadataSchema]),
-          stackedTemplateMetadata: T.Union([
-            T.Null(),
-            StackedTemplateMetadataSchema,
-          ]),
-          __typename: T.Literal('PortraitClipCropping'),
-        },
-        { additionalProperties: false },
-      ),
+      buildObject({
+        portraitClipLayout: T.Union([T.Literal('FULL'), T.Literal('STACKED')]),
+        fullTemplateMetadata: T.Union([T.Null(), FullTemplateMetadataSchema]),
+        stackedTemplateMetadata: T.Union([
+          T.Null(),
+          StackedTemplateMetadataSchema,
+        ]),
+        __typename: T.Literal('PortraitClipCropping'),
+      }),
     ]),
-    __typename: T.Literal('ClipAsset'),
   },
-  {
-    $id: `${displayName}ClipAsset`,
-    additionalProperties: false,
-  },
+  { $id: `${displayName}ClipAsset` },
 );
 
-export const ClipSchema = T.Object(
+export const ClipSchema = buildObject(
   {
-    id: T.String(),
-    slug: T.String(),
-    url: T.String({
-      /* format: 'uri' */
-    }),
-    embedURL: T.String({
-      /* format: 'uri' */
-    }),
-    title: T.String(),
-    viewCount: T.Number(),
-    language: T.String(),
-    isFeatured: T.Boolean(),
+    ...pick(schemas.Clip, [
+      'id',
+      'slug',
+      'url',
+      'embedURL',
+      'title',
+      'viewCount',
+      'language',
+      'isFeatured',
+      'thumbnailURL',
+      'createdAt',
+      'isPublished',
+      'durationSeconds',
+      'champBadge',
+      'videoOffsetSeconds',
+      'isViewerEditRestricted',
+    ]),
     assets: T.Array(LegacyRef(ClipAssetSchema)),
     curator: T.Union([
       T.Null(),
-      T.Object(
-        {
-          id: T.String(),
-          login: T.String(),
-          displayName: T.String(),
-          profileImageURL: T.String({
-            /* format: 'uri' */
-          }),
-          __typename: T.Literal('User'),
-        },
-        { additionalProperties: false },
+      buildObject(
+        pick(schemas.User, ['id', 'login', 'displayName', 'profileImageURL']),
       ),
     ]),
     game: T.Union([
       T.Null(),
-      T.Object(
-        {
-          id: T.String(),
-          name: T.String(),
-          boxArtURL: T.String({
-            /* format: 'uri' */
-          }),
-          displayName: T.String(),
-          slug: T.String(),
-          __typename: T.Literal('Game'),
-        },
-        { additionalProperties: false },
+      buildObject(
+        pick(schemas.Game, ['id', 'name', 'boxArtURL', 'displayName', 'slug']),
       ),
     ]),
-    broadcast: T.Object(
-      {
-        id: T.String(),
-        title: T.Union([T.Null(), T.String()]),
-        __typename: T.Literal('Broadcast'),
-      },
-      { additionalProperties: false },
-    ),
+    // don't use Broadcast schema here
+    // for highlights the response is: { "id": "1", "title": null }
+    broadcast: buildObject({
+      id: T.String(),
+      title: T.Union([T.Null(), T.String()]),
+      __typename: T.Literal('Broadcast'),
+    }),
     broadcaster: T.Union([T.Null(), LegacyRef(BroadcasterSchema)]),
-    thumbnailURL: T.String({
-      /* format: 'uri' */
-    }),
-    createdAt: T.String({
-      /* format: 'date-time' */
-    }),
-    isPublished: T.Boolean(),
-    durationSeconds: T.Number(),
-    champBadge: T.Union([T.Null(), T.Unknown()]),
-    playbackAccessToken: T.Object(
-      {
-        signature: T.String(),
-        value: T.String(),
-        __typename: T.Literal('PlaybackAccessToken'),
-      },
-      { additionalProperties: false },
+    playbackAccessToken: buildObject(
+      pick(schemas.PlaybackAccessToken, ['signature', 'value']),
     ),
     video: T.Union([
       T.Null(),
-      T.Object(
-        {
-          id: T.String(),
-          broadcastType: T.Union([
-            T.Literal('ARCHIVE'),
-            T.Literal('HIGHLIGHT'),
-          ]),
-          title: T.String(),
-          __typename: T.Literal('Video'),
-        },
-        { additionalProperties: false },
-      ),
+      buildObject(pick(schemas.Video, ['id', 'broadcastType', 'title'])),
     ]),
-    videoOffsetSeconds: T.Union([T.Null(), T.Number()]),
     videoQualities: T.Array(
-      T.Object(
-        {
-          sourceURL: T.String({
-            /* format: 'uri' */
-          }),
-          __typename: T.Literal('ClipVideoQuality'),
-        },
-        { additionalProperties: false },
-      ),
+      buildObject(pick(schemas.ClipVideoQuality, ['sourceURL'])),
     ),
-    isViewerEditRestricted: T.Boolean(),
     suggestedCropping: T.Union([T.Null(), T.Unknown()]),
-    __typename: T.Literal('Clip'),
   },
-  {
-    $id: `${displayName}Clip`,
-    additionalProperties: false,
-  },
+  { $id: `${displayName}Clip` },
 );
 
-export const DataSchema = T.Object(
+export const DataSchema = buildObject(
   { clip: T.Union([T.Null(), LegacyRef(ClipSchema)]) },
-  {
-    $id: `${displayName}Data`,
-    additionalProperties: false,
-  },
+  { $id: `${displayName}Data` },
 );
 
 export const ResponseSchema = getResponseSchema(name, DataSchema);

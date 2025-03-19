@@ -8,6 +8,7 @@ export const User = {
   primaryColorHex: T.Union([T.Null(), T.String()]),
   profileImageURL: T.String(),
   bannerImageURL: T.String(),
+  isPartner: T.Boolean(),
   __typename: T.Literal('User'),
 } satisfies TProperties;
 
@@ -69,24 +70,55 @@ export const Clip = {
   id: T.String(),
   slug: T.String(),
   url: T.String({
-    /* format: 'uri' */
+    // format: 'uri',
   }),
   embedURL: T.String({
-    /* format: 'uri' */
+    // format: 'uri',
   }),
   title: T.String(),
   viewCount: T.Number(),
   videoOffsetSeconds: T.Union([T.Null(), T.Number()]),
   durationSeconds: T.Number(),
   thumbnailURL: T.String({
-    /* format: 'uri' */
+    // format: 'uri',
   }),
   language: T.String(),
   champBadge: T.Union([T.Null(), T.Unknown()]),
   isFeatured: T.Boolean(),
   isPublished: T.Boolean(),
+  isViewerEditRestricted: T.Boolean(),
   createdAt: T.String(),
   __typename: T.Literal('Clip'),
+} satisfies TProperties;
+
+export const ClipAsset = {
+  id: T.String(),
+  aspectRatio: T.Number(),
+  type: T.Union([T.Literal('SOURCE'), T.Literal('RECOMPOSED')]),
+  createdAt: T.String({
+    // format: 'date-time',
+  }),
+  // TODO: find all possible statuses
+  creationState: T.Union([T.Literal('CREATED'), T.String()]),
+  thumbnailURL: T.String({
+    // format: 'uri',
+  }),
+  __typename: T.Literal('ClipAsset'),
+} satisfies TProperties;
+
+export const ClipVideoQuality = {
+  frameRate: T.Number(),
+  quality: T.String(),
+  sourceURL: T.String({
+    // format: 'uri',
+  }),
+  __typename: T.Literal('ClipVideoQuality'),
+} satisfies TProperties;
+
+export const PlaybackAccessToken = {
+  signature: T.String(),
+  value: T.String(),
+  __typename: T.Literal('PlaybackAccessToken'),
 } satisfies TProperties;
 
 export const Game = {
@@ -98,7 +130,7 @@ export const Game = {
     // format: 'uri'
   }),
   boxArtURL: T.String({
-    /* format: 'uri' */
+    // format: 'uri',
   }),
   viewersCount: T.Number(),
   originalReleaseDate: T.Union([

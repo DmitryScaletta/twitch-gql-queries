@@ -988,6 +988,7 @@ export interface ShareClipRenderStatusClipAsset {
   type: 'SOURCE' | 'RECOMPOSED';
   createdAt: string;
   creationState: 'CREATED' | string;
+  thumbnailURL: string;
   curator: null | {
     id: string;
     login: string;
@@ -995,7 +996,6 @@ export interface ShareClipRenderStatusClipAsset {
     profileImageURL: string;
     __typename: 'User';
   };
-  thumbnailURL: string;
   videoQualities: {
     frameRate: number;
     quality: string;
@@ -1063,6 +1063,13 @@ export interface ShareClipRenderStatusClip {
   viewCount: number;
   language: string;
   isFeatured: boolean;
+  thumbnailURL: string;
+  createdAt: string;
+  isPublished: boolean;
+  durationSeconds: number;
+  champBadge: unknown;
+  videoOffsetSeconds: null | number;
+  isViewerEditRestricted: boolean;
   assets: ShareClipRenderStatusClipAsset[];
   curator: null | {
     id: string;
@@ -1085,11 +1092,6 @@ export interface ShareClipRenderStatusClip {
     __typename: 'Broadcast';
   };
   broadcaster: null | ShareClipRenderStatusBroadcaster;
-  thumbnailURL: string;
-  createdAt: string;
-  isPublished: boolean;
-  durationSeconds: number;
-  champBadge: unknown;
   playbackAccessToken: {
     signature: string;
     value: string;
@@ -1101,12 +1103,10 @@ export interface ShareClipRenderStatusClip {
     title: string;
     __typename: 'Video';
   };
-  videoOffsetSeconds: null | number;
   videoQualities: {
     sourceURL: string;
     __typename: 'ClipVideoQuality';
   }[];
-  isViewerEditRestricted: boolean;
   suggestedCropping: unknown;
   __typename: 'Clip';
 }

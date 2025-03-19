@@ -1,89 +1,39 @@
 import { Type as T } from '@sinclair/typebox';
-import { getResponseSchema, LegacyRef } from '../../schema.ts';
+import {
+  buildObject,
+  getResponseSchema,
+  LegacyRef,
+  pick,
+} from '../../schema.ts';
+import * as schemas from '../../schemas.ts';
 
 const name = 'ClipsDownloadButton';
 const displayName = name;
 
-export const VariablesSchema = T.Object(
+export const VariablesSchema = buildObject(
   { slug: T.String() },
-  {
-    $id: `${displayName}Variables`,
-    additionalProperties: false,
-  },
+  { $id: `${displayName}Variables` },
 );
 
-export const ClipSchema = T.Object(
+export const ClipSchema = buildObject(
   {
-    id: T.String(),
-    createdAt: T.String({
-      /* format: 'date-time', */
-    }),
-    durationSeconds: T.Number(),
-    viewCount: T.Number(),
-    broadcaster: T.Union([
-      T.Null(),
-      T.Object(
-        {
-          id: T.String(),
-          __typename: T.Literal('User'),
-        },
-        { additionalProperties: false },
-      ),
-    ]),
-    curator: T.Union([
-      T.Null(),
-      T.Object(
-        {
-          id: T.String(),
-          __typename: T.Literal('User'),
-        },
-        { additionalProperties: false },
-      ),
-    ]),
-    game: T.Union([
-      T.Null(),
-      T.Object(
-        {
-          id: T.String(),
-          name: T.String(),
-          __typename: T.Literal('Game'),
-        },
-        { additionalProperties: false },
-      ),
-    ]),
-    playbackAccessToken: T.Object(
-      {
-        signature: T.String(),
-        value: T.String(),
-        __typename: T.Literal('PlaybackAccessToken'),
-      },
-      { additionalProperties: false },
+    ...pick(schemas.Clip, ['id', 'createdAt', 'durationSeconds', 'viewCount']),
+    broadcaster: T.Union([T.Null(), buildObject(pick(schemas.User, ['id']))]),
+    curator: T.Union([T.Null(), buildObject(pick(schemas.User, ['id']))]),
+    game: T.Union([T.Null(), buildObject(pick(schemas.Game, ['id', 'name']))]),
+    playbackAccessToken: buildObject(
+      pick(schemas.PlaybackAccessToken, ['signature', 'value']),
     ),
     videoQualities: T.Array(
-      T.Object(
-        {
-          sourceURL: T.String({
-            /* format: 'uri' */
-          }),
-          __typename: T.Literal('ClipVideoQuality'),
-        },
-        { additionalProperties: false },
-      ),
+      buildObject(pick(schemas.ClipVideoQuality, ['sourceURL'])),
     ),
-    __typename: T.Literal('Clip'),
   },
-  {
-    $id: `${displayName}Clip`,
-    additionalProperties: false,
-  },
+  { $id: `${displayName}Clip` },
 );
 
-export const DataSchema = T.Object(
+export const DataSchema = buildObject(
   { clip: T.Union([T.Null(), LegacyRef(ClipSchema)]) },
-  {
-    $id: `${displayName}Data`,
-    additionalProperties: false,
-  },
+  { $id: `${displayName}Data` },
 );
 
 export const ResponseSchema = getResponseSchema(name, DataSchema);

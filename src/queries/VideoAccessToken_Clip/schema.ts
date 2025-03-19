@@ -1,55 +1,37 @@
 import { Type as T } from '@sinclair/typebox';
-import { getResponseSchema } from '../../schema.ts';
+import { buildObject, getResponseSchema, pick } from '../../schema.ts';
+import * as schemas from '../../schemas.ts';
 
 const name = 'VideoAccessToken_Clip';
 const displayName = 'VideoAccessTokenClip';
 
-export const VariablesSchema = T.Object(
+export const VariablesSchema = buildObject(
   { slug: T.String() },
-  {
-    $id: `${displayName}Variables`,
-    additionalProperties: false,
-  },
+  { $id: `${displayName}Variables` },
 );
 
-export const DataSchema = T.Object(
+export const DataSchema = buildObject(
   {
     clip: T.Union([
       T.Null(),
-      T.Object(
-        {
-          id: T.String(),
-          playbackAccessToken: T.Object(
-            {
-              signature: T.String(),
-              value: T.String(),
-              __typename: T.Literal('PlaybackAccessToken'),
-            },
-            { additionalProperties: false },
+      buildObject({
+        ...pick(schemas.Clip, ['id']),
+        playbackAccessToken: buildObject(
+          pick(schemas.PlaybackAccessToken, ['signature', 'value']),
+        ),
+        videoQualities: T.Array(
+          buildObject(
+            pick(schemas.ClipVideoQuality, [
+              'frameRate',
+              'quality',
+              'sourceURL',
+            ]),
           ),
-          videoQualities: T.Array(
-            T.Object(
-              {
-                frameRate: T.Number(),
-                quality: T.String(),
-                sourceURL: T.String({
-                  /* format: 'uri' */
-                }),
-                __typename: T.Literal('ClipVideoQuality'),
-              },
-              { additionalProperties: false },
-            ),
-          ),
-          __typename: T.Literal('Clip'),
-        },
-        { additionalProperties: false },
-      ),
+        ),
+      }),
     ]),
   },
-  {
-    $id: `${displayName}Data`,
-    additionalProperties: false,
-  },
+  { $id: `${displayName}Data` },
 );
 
 export const ResponseSchema = getResponseSchema(name, DataSchema);
