@@ -88,11 +88,14 @@ export const Team = {
 
 export const Video = {
   id: T.String(),
-  title: T.String(),
+  title: T.Union([T.Null(), T.String()]),
   broadcastType: T.Union([T.Literal('ARCHIVE'), T.Literal('HIGHLIGHT')]),
   lengthSeconds: T.Number(),
   viewCount: T.Number(),
   previewThumbnailURL: T.String({
+    // format: 'uri',
+  }),
+  animatedPreviewURL: T.String({
     // format: 'uri',
   }),
   // TODO: find all possible statuses
@@ -100,7 +103,21 @@ export const Video = {
   createdAt: T.String({
     // format: 'date-time',
   }),
+  publishedAt: T.String({
+    // format: 'date-time',
+  }),
   __typename: T.Literal('Video'),
+} satisfies TProperties;
+
+export const VideoEdge = {
+  cursor: T.Union([T.Null(), T.String()]),
+  __typename: T.Literal('VideoEdge'),
+} satisfies TProperties;
+
+export const VideoSelfEdge = {
+  isRestricted: T.Boolean(),
+  viewingHistory: T.Null(),
+  __typename: T.Literal('VideoSelfEdge'),
 } satisfies TProperties;
 
 export const Clip = {
@@ -200,7 +217,8 @@ export const FreeformTag = {
 } satisfies TProperties;
 
 export const PreviewThumbnailProperties = {
-  blurReason: T.Union([T.Literal('BLUR_NOT_REQUIRED'), T.String()]),
+  // blurReason: T.Union([T.Literal('BLUR_NOT_REQUIRED'), T.String()]),
+  blurReason: T.Union([T.Literal('BLUR_NOT_REQUIRED')]),
   __typename: T.Literal('PreviewThumbnailProperties'),
 } satisfies TProperties;
 

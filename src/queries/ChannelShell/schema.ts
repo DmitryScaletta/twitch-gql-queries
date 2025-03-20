@@ -41,10 +41,7 @@ export const UserSchema = buildObject(
           T.Null(),
           buildObject({
             ...pick(schemas.Video, ['id']),
-            self: buildObject({
-              viewingHistory: T.Null(),
-              __typename: T.Literal('VideoSelfEdge'),
-            }),
+            self: buildObject(pick(schemas.VideoSelfEdge, ['viewingHistory'])),
           }),
         ]),
         __typename: T.Literal('Trailer'),

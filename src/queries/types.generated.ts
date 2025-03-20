@@ -189,6 +189,177 @@ export interface ChannelShellData {
   userOrError: ChannelShellUser | ChannelShellUserDoesNotExist;
 }
 
+export interface ChannelVideoShelvesQueryClip {
+  id: string;
+  slug: string;
+  thumbnailURL: string;
+  createdAt: string;
+  durationSeconds: number;
+  isFeatured: boolean;
+  clipTitle: string;
+  clipViewCount: number;
+  curator: null | {
+    id: string;
+    login: string;
+    displayName: string;
+    __typename: 'User';
+  };
+  clipGame: null | {
+    id: string;
+    slug: string;
+    name: string;
+    boxArtURL: string;
+    __typename: 'Game';
+  };
+  broadcaster: {
+    id: string;
+    login: string;
+    displayName: string;
+    profileImageURL: string;
+    primaryColorHex: null | string;
+    roles: {
+      isPartner: boolean;
+      __typename: 'UserRoles';
+    };
+    __typename: 'User';
+  };
+  guestStarParticipants: null | {
+    guests: {
+      id: string;
+      login: string;
+      displayName: string;
+      profileImageURL: string;
+      primaryColorHex: null | string;
+      description: null | string;
+      __typename: 'User';
+    }[];
+    sessionIdentifier: string;
+    __typename: 'GuestStarParticipants';
+  };
+  __typename: 'Clip';
+}
+
+export interface ChannelVideoShelvesQueryVideo {
+  animatedPreviewURL: string;
+  id: string;
+  lengthSeconds: number;
+  previewThumbnailURL: string;
+  publishedAt: string;
+  title: null | string;
+  viewCount: number;
+  game: null | {
+    boxArtURL: string;
+    id: string;
+    slug: string;
+    displayName: string;
+    name: string;
+    __typename: 'Game';
+  };
+  owner: {
+    displayName: string;
+    id: string;
+    login: string;
+    profileImageURL: string;
+    primaryColorHex: null | string;
+    roles: {
+      isPartner: boolean;
+      __typename: 'UserRoles';
+    };
+    __typename: 'User';
+  };
+  self: {
+    isRestricted: boolean;
+    viewingHistory: null;
+    __typename: 'VideoSelfEdge';
+  };
+  resourceRestriction: null | {
+    id: string;
+    type: 'SUB_ONLY_LIVE';
+    exemptions: {
+      type: 'STAFF' | 'SITE_ADMIN' | 'PRODUCT' | 'PREVIEW';
+      actions: {
+        name: string;
+        title: string;
+        __typename: 'ResourceRestrictionExemptionAction';
+      }[];
+      __typename: 'ResourceRestrictionExemption';
+    }[];
+    options: 'ALLOW_ALL_TIERS'[];
+    __typename: 'ResourceRestriction';
+  };
+  contentTags: unknown[];
+  previewThumbnailProperties?: {
+    blurReason: 'BLUR_NOT_REQUIRED';
+    __typename: 'PreviewThumbnailProperties';
+  };
+  __typename: 'Video';
+}
+
+export interface ChannelVideoShelvesQueryVideoShelf {
+  id: string;
+  title: string;
+  description: null | string;
+  type: 'TOP_CLIPS' | 'LATEST_BROADCASTS' | 'ALL_VIDEOS' | 'LATEST_NON_BROADCASTS' | 'COLLECTION';
+  collection: null | {
+    id: string;
+    description: string;
+    owner: {
+      id: string;
+      login: string;
+      __typename: 'User';
+    };
+    thumbnailURL: string;
+    title: string;
+    type: 'DEFAULT';
+    updatedAt: string;
+    lengthSeconds: number;
+    items: {
+      totalCount: number;
+      edges: {
+        cursor: null | string;
+        node: ChannelVideoShelvesQueryVideo;
+        __typename: 'CollectionItemEdge';
+      }[];
+      pageInfo: {
+        hasNextPage: boolean;
+        __typename: 'PageInfo';
+      };
+      __typename: 'CollectionConnection';
+    };
+    __typename: 'Collection';
+  };
+  items: (ChannelVideoShelvesQueryClip | ChannelVideoShelvesQueryVideo)[];
+  __typename: 'VideoShelf';
+}
+
+export interface ChannelVideoShelvesQueryVariables {
+  includePreviewBlur?: boolean;
+  channelLogin: string;
+  first: number;
+}
+
+export interface ChannelVideoShelvesQueryData {
+  currentUser: unknown;
+  user: null | {
+    id: string;
+    displayName: string;
+    primaryColorHex: null | string;
+    videoShelves: {
+      edges: {
+        cursor: null | string;
+        node: ChannelVideoShelvesQueryVideoShelf;
+        __typename: 'VideoShelfEdge';
+      }[];
+      pageInfo: {
+        hasNextPage: boolean;
+        __typename: 'PageInfo';
+      };
+      __typename: 'VideoShelfConnection';
+    };
+    __typename: 'User';
+  };
+}
+
 export interface ClipsActionButtonsClip {
   id: string;
   title: string;
@@ -220,7 +391,7 @@ export interface ClipsActionButtonsClip {
   video: null | {
     id: string;
     broadcastType: 'ARCHIVE' | 'HIGHLIGHT';
-    title: string;
+    title: null | string;
     __typename: 'Video';
   };
   __typename: 'Clip';
@@ -282,7 +453,7 @@ export interface ClipsCardsGameClip {
     __typename: 'GuestStarParticipants';
   };
   previewThumbnailProperties: {
-    blurReason: 'BLUR_NOT_REQUIRED' | string;
+    blurReason: 'BLUR_NOT_REQUIRED';
     __typename: 'PreviewThumbnailProperties';
   };
   __typename: 'Clip';
@@ -500,7 +671,7 @@ export interface DirectoryPageGameStream {
     __typename: 'Game';
   };
   previewThumbnailProperties: {
-    blurReason: 'BLUR_NOT_REQUIRED' | string;
+    blurReason: 'BLUR_NOT_REQUIRED';
     __typename: 'PreviewThumbnailProperties';
   };
   __typename: 'Stream';
@@ -547,6 +718,89 @@ export interface FfzBroadcastIdVariables {
 
 export interface FfzBroadcastIdData {
   user: null | FfzBroadcastIdUser;
+}
+
+export interface FilterableVideoTowerVideosVideo {
+  animatedPreviewURL: string;
+  id: string;
+  lengthSeconds: number;
+  previewThumbnailURL: string;
+  publishedAt: string;
+  title: null | string;
+  viewCount: number;
+  game: null | {
+    boxArtURL: string;
+    id: string;
+    slug: string;
+    displayName: string;
+    name: string;
+    __typename: 'Game';
+  };
+  owner: {
+    displayName: string;
+    id: string;
+    login: string;
+    profileImageURL: string;
+    primaryColorHex: null | string;
+    roles: {
+      isPartner: boolean;
+      __typename: 'UserRoles';
+    };
+    __typename: 'User';
+  };
+  self: {
+    isRestricted: boolean;
+    viewingHistory: null;
+    __typename: 'VideoSelfEdge';
+  };
+  resourceRestriction: null | {
+    id: string;
+    type: 'SUB_ONLY_LIVE';
+    exemptions: {
+      type: 'STAFF' | 'SITE_ADMIN' | 'PRODUCT' | 'PREVIEW';
+      actions: {
+        name: string;
+        title: string;
+        __typename: 'ResourceRestrictionExemptionAction';
+      }[];
+      __typename: 'ResourceRestrictionExemption';
+    }[];
+    options: 'ALLOW_ALL_TIERS'[];
+    __typename: 'ResourceRestriction';
+  };
+  contentTags: unknown[];
+  previewThumbnailProperties?: {
+    blurReason: 'BLUR_NOT_REQUIRED';
+    __typename: 'PreviewThumbnailProperties';
+  };
+  __typename: 'Video';
+}
+
+export interface FilterableVideoTowerVideosVariables {
+  includePreviewBlur?: boolean;
+  limit: number;
+  channelOwnerLogin: string;
+  broadcastType?: null | 'ARCHIVE' | 'HIGHLIGHT' | 'UPLOAD';
+  videoSort: 'TIME' | 'VIEWS';
+}
+
+export interface FilterableVideoTowerVideosData {
+  user: null | {
+    id: string;
+    videos: {
+      edges: {
+        cursor: null | string;
+        node: FilterableVideoTowerVideosVideo;
+        __typename: 'VideoEdge';
+      }[];
+      pageInfo: {
+        hasNextPage: boolean;
+        __typename: 'PageInfo';
+      };
+      __typename: 'VideoConnection';
+    };
+    __typename: 'User';
+  };
 }
 
 export interface GetPinnedChatMessage {
@@ -693,7 +947,7 @@ export interface SearchResultsPageChannel {
       node: {
         id: string;
         lengthSeconds: number;
-        title: string;
+        title: null | string;
         previewThumbnailURL: string;
         __typename: 'Video';
       };
@@ -798,7 +1052,7 @@ export interface SearchResultsPageVideo {
   id: string;
   lengthSeconds: number;
   previewThumbnailURL: string;
-  title: string;
+  title: null | string;
   viewCount: number;
   owner: {
     id: string;
@@ -1102,7 +1356,7 @@ export interface ShareClipRenderStatusClip {
   video: null | {
     id: string;
     broadcastType: 'ARCHIVE' | 'HIGHLIGHT';
-    title: string;
+    title: null | string;
     __typename: 'Video';
   };
   videoQualities: {
@@ -1269,12 +1523,14 @@ export interface WatchLivePromptData {
 export type BrowsePageAllDirectoriesResponse = QueryResponse<BrowsePageAllDirectoriesData, 'BrowsePage_AllDirectories'>;
 export type ChannelRootAboutPanelResponse = QueryResponse<ChannelRootAboutPanelData, 'ChannelRoot_AboutPanel'>;
 export type ChannelShellResponse = QueryResponse<ChannelShellData, 'ChannelShell'>;
+export type ChannelVideoShelvesQueryResponse = QueryResponse<ChannelVideoShelvesQueryData, 'ChannelVideoShelvesQuery'>;
 export type ClipsActionButtonsResponse = QueryResponse<ClipsActionButtonsData, 'ClipsActionButtons'>;
 export type ClipsCardsGameResponse = QueryResponse<ClipsCardsGameData, 'ClipsCards__Game'>;
 export type ClipsCardsUserResponse = QueryResponse<ClipsCardsUserData, 'ClipsCards__User'>;
 export type ClipsDownloadButtonResponse = QueryResponse<ClipsDownloadButtonData, 'ClipsDownloadButton'>;
 export type DirectoryPageGameResponse = QueryResponse<DirectoryPageGameData, 'DirectoryPage_Game'>;
 export type FfzBroadcastIdResponse = QueryResponse<FfzBroadcastIdData, 'FFZ_BroadcastID'>;
+export type FilterableVideoTowerVideosResponse = QueryResponse<FilterableVideoTowerVideosData, 'FilterableVideoTower_Videos'>;
 export type GetPinnedChatResponse = QueryResponse<GetPinnedChatData, 'GetPinnedChat'>;
 export type GetUserIdResponse = QueryResponse<GetUserIdData, 'GetUserID'>;
 export type GlobalBadgesResponse = QueryResponse<GlobalBadgesData, 'GlobalBadges'>;
@@ -1292,12 +1548,14 @@ export interface QueryResponseMap {
   BrowsePage_AllDirectories: BrowsePageAllDirectoriesResponse;
   ChannelRoot_AboutPanel: ChannelRootAboutPanelResponse;
   ChannelShell: ChannelShellResponse;
+  ChannelVideoShelvesQuery: ChannelVideoShelvesQueryResponse;
   ClipsActionButtons: ClipsActionButtonsResponse;
   ClipsCards__Game: ClipsCardsGameResponse;
   ClipsCards__User: ClipsCardsUserResponse;
   ClipsDownloadButton: ClipsDownloadButtonResponse;
   DirectoryPage_Game: DirectoryPageGameResponse;
   FFZ_BroadcastID: FfzBroadcastIdResponse;
+  FilterableVideoTower_Videos: FilterableVideoTowerVideosResponse;
   GetPinnedChat: GetPinnedChatResponse;
   GetUserID: GetUserIdResponse;
   GlobalBadges: GlobalBadgesResponse;

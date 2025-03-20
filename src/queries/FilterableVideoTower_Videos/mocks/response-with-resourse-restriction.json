@@ -1,0 +1,100 @@
+{
+  "data": {
+    "user": {
+      "id": "908818451",
+      "videos": {
+        "edges": [
+          {
+            "cursor": null,
+            "node": {
+              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/c508c19b9f8ea3be360a_toaststix_317262427260_1741136781/storyboards/2397382584-strip-0.jpg",
+              "game": {
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/32399-40x56.jpg",
+                "id": "32399",
+                "slug": "counter-strike",
+                "displayName": "Counter-Strike",
+                "name": "Counter-Strike",
+                "__typename": "Game"
+              },
+              "id": "2397382584",
+              "lengthSeconds": 8188,
+              "owner": {
+                "displayName": "ToastStix",
+                "id": "908818451",
+                "login": "toaststix",
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/c9760f73-e116-4be7-bb97-b5d1f9c64cca-profile_image-50x50.png",
+                "primaryColorHex": null,
+                "roles": { "isPartner": true, "__typename": "UserRoles" },
+                "__typename": "User"
+              },
+              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/c508c19b9f8ea3be360a_toaststix_317262427260_1741136781//thumb/thumb1-320x180.jpg",
+              "publishedAt": "2025-03-05T01:06:25Z",
+              "self": {
+                "isRestricted": true,
+                "viewingHistory": null,
+                "__typename": "VideoSelfEdge"
+              },
+              "title": "⭐OPENING MY 1ST GOLD⭐100 CASES OPENING⭐",
+              "viewCount": 2160,
+              "resourceRestriction": {
+                "id": "vod:2397382584",
+                "type": "SUB_ONLY_LIVE",
+                "exemptions": [
+                  {
+                    "type": "STAFF",
+                    "actions": [],
+                    "__typename": "ResourceRestrictionExemption"
+                  },
+                  {
+                    "type": "SITE_ADMIN",
+                    "actions": [],
+                    "__typename": "ResourceRestrictionExemption"
+                  },
+                  {
+                    "type": "PRODUCT",
+                    "actions": [
+                      {
+                        "name": "spookodey",
+                        "title": "Subscription (spookodey)",
+                        "__typename": "ResourceRestrictionExemptionAction"
+                      },
+                      {
+                        "name": "spookodey_2000",
+                        "title": "Subscription (spookodey): Tier 2 Sub",
+                        "__typename": "ResourceRestrictionExemptionAction"
+                      },
+                      {
+                        "name": "spookodey_3000",
+                        "title": "Subscription (spookodey): Tier 3 Sub",
+                        "__typename": "ResourceRestrictionExemptionAction"
+                      }
+                    ],
+                    "__typename": "ResourceRestrictionExemption"
+                  },
+                  {
+                    "type": "PREVIEW",
+                    "actions": [],
+                    "__typename": "ResourceRestrictionExemption"
+                  }
+                ],
+                "options": ["ALLOW_ALL_TIERS"],
+                "__typename": "ResourceRestriction"
+              },
+              "contentTags": [],
+              "__typename": "Video"
+            },
+            "__typename": "VideoEdge"
+          }
+        ],
+        "pageInfo": { "hasNextPage": false, "__typename": "PageInfo" },
+        "__typename": "VideoConnection"
+      },
+      "__typename": "User"
+    }
+  },
+  "extensions": {
+    "durationMilliseconds": 111,
+    "operationName": "FilterableVideoTower_Videos",
+    "requestID": "01JPSPRYKV7RTGXEEZTGJ7K6CY"
+  }
+}

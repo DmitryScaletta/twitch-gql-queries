@@ -1,0 +1,82 @@
+### ChannelVideoShelvesQuery
+
+POST https://gql.twitch.tv/gql
+Content-Type: application/json
+Client-Id: {{$dotenv CLIENT_ID}}
+
+{
+  "operationName": "ChannelVideoShelvesQuery",
+  "variables": {
+    "includePreviewBlur": false,
+    "channelLogin": "twitch",
+    "first": 5
+  },
+  "extensions": {
+    "persistedQuery": {
+      "version": 1,
+      "sha256Hash": "eea6c7a6baaa6ee60825f469c943cfda7e7c2415c01c64d7fd1407d172e82a7b"
+    }
+  }
+}
+
+### only required variables
+
+POST https://gql.twitch.tv/gql
+Content-Type: application/json
+Client-Id: {{$dotenv CLIENT_ID}}
+
+{
+  "operationName": "ChannelVideoShelvesQuery",
+  "variables": {
+    "channelLogin": "twitch",
+    "first": 5
+  },
+  "extensions": {
+    "persistedQuery": {
+      "version": 1,
+      "sha256Hash": "eea6c7a6baaa6ee60825f469c943cfda7e7c2415c01c64d7fd1407d172e82a7b"
+    }
+  }
+}
+
+### includePreviewBlur: true
+
+POST https://gql.twitch.tv/gql
+Content-Type: application/json
+Client-Id: {{$dotenv CLIENT_ID}}
+
+{
+  "operationName": "ChannelVideoShelvesQuery",
+  "variables": {
+    "includePreviewBlur": true,
+    "channelLogin": "twitch",
+    "first": 5
+  },
+  "extensions": {
+    "persistedQuery": {
+      "version": 1,
+      "sha256Hash": "eea6c7a6baaa6ee60825f469c943cfda7e7c2415c01c64d7fd1407d172e82a7b"
+    }
+  }
+}
+
+### not exists
+
+POST https://gql.twitch.tv/gql
+Content-Type: application/json
+Client-Id: {{$dotenv CLIENT_ID}}
+
+{
+  "operationName": "ChannelVideoShelvesQuery",
+  "variables": {
+    "includePreviewBlur": false,
+    "channelLogin": "-channel-not-exists-",
+    "first": 5
+  },
+  "extensions": {
+    "persistedQuery": {
+      "version": 1,
+      "sha256Hash": "eea6c7a6baaa6ee60825f469c943cfda7e7c2415c01c64d7fd1407d172e82a7b"
+    }
+  }
+}

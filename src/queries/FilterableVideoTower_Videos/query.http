@@ -1,0 +1,181 @@
+### FilterableVideoTower_Videos
+
+POST https://gql.twitch.tv/gql
+Content-Type: application/json
+Client-Id: {{$dotenv CLIENT_ID}}
+
+{
+  "operationName": "FilterableVideoTower_Videos",
+  "variables": {
+    "includePreviewBlur": false,
+    "limit": 30,
+    "channelOwnerLogin": "twitch",
+    "broadcastType": "ARCHIVE",
+    "videoSort": "TIME"
+  },
+  "extensions": {
+    "persistedQuery": {
+      "version": 1,
+      "sha256Hash": "acea7539a293dfd30f0b0b81a263134bb5d9a7175592e14ac3f7c77b192de416"
+    }
+  }
+}
+
+### only required variables
+
+POST https://gql.twitch.tv/gql
+Content-Type: application/json
+Client-Id: {{$dotenv CLIENT_ID}}
+
+{
+  "operationName": "FilterableVideoTower_Videos",
+  "variables": {
+    "limit": 30,
+    "channelOwnerLogin": "twitch",
+    "videoSort": "TIME"
+  },
+  "extensions": {
+    "persistedQuery": {
+      "version": 1,
+      "sha256Hash": "acea7539a293dfd30f0b0b81a263134bb5d9a7175592e14ac3f7c77b192de416"
+    }
+  }
+}
+
+### includePreviewBlur: true
+
+POST https://gql.twitch.tv/gql
+Content-Type: application/json
+Client-Id: {{$dotenv CLIENT_ID}}
+
+{
+  "operationName": "FilterableVideoTower_Videos",
+  "variables": {
+    "includePreviewBlur": true,
+    "limit": 30,
+    "channelOwnerLogin": "twitch",
+    "broadcastType": "ARCHIVE",
+    "videoSort": "TIME"
+  },
+  "extensions": {
+    "persistedQuery": {
+      "version": 1,
+      "sha256Hash": "acea7539a293dfd30f0b0b81a263134bb5d9a7175592e14ac3f7c77b192de416"
+    }
+  }
+}
+
+### broadcastType: ARCHIVE
+
+POST https://gql.twitch.tv/gql
+Content-Type: application/json
+Client-Id: {{$dotenv CLIENT_ID}}
+
+{
+  "operationName": "FilterableVideoTower_Videos",
+  "variables": {
+    "includePreviewBlur": false,
+    "limit": 30,
+    "channelOwnerLogin": "twitch",
+    "broadcastType": "ARCHIVE",
+    "videoSort": "TIME"
+  },
+  "extensions": {
+    "persistedQuery": {
+      "version": 1,
+      "sha256Hash": "acea7539a293dfd30f0b0b81a263134bb5d9a7175592e14ac3f7c77b192de416"
+    }
+  }
+}
+
+### broadcastType: HIGHLIGHT
+
+POST https://gql.twitch.tv/gql
+Content-Type: application/json
+Client-Id: {{$dotenv CLIENT_ID}}
+
+{
+  "operationName": "FilterableVideoTower_Videos",
+  "variables": {
+    "includePreviewBlur": false,
+    "limit": 30,
+    "channelOwnerLogin": "twitch",
+    "broadcastType": "HIGHLIGHT",
+    "videoSort": "VIEWS"
+  },
+  "extensions": {
+    "persistedQuery": {
+      "version": 1,
+      "sha256Hash": "acea7539a293dfd30f0b0b81a263134bb5d9a7175592e14ac3f7c77b192de416"
+    }
+  }
+}
+
+### broadcastType: UPLOAD
+
+POST https://gql.twitch.tv/gql
+Content-Type: application/json
+Client-Id: {{$dotenv CLIENT_ID}}
+
+{
+  "operationName": "FilterableVideoTower_Videos",
+  "variables": {
+    "includePreviewBlur": false,
+    "limit": 30,
+    "channelOwnerLogin": "twitch",
+    "broadcastType": "UPLOAD",
+    "videoSort": "TIME"
+  },
+  "extensions": {
+    "persistedQuery": {
+      "version": 1,
+      "sha256Hash": "acea7539a293dfd30f0b0b81a263134bb5d9a7175592e14ac3f7c77b192de416"
+    }
+  }
+}
+
+### broadcastType: null (all videos)
+
+POST https://gql.twitch.tv/gql
+Content-Type: application/json
+Client-Id: {{$dotenv CLIENT_ID}}
+
+{
+  "operationName": "FilterableVideoTower_Videos",
+  "variables": {
+    "includePreviewBlur": false,
+    "limit": 30,
+    "channelOwnerLogin": "twitch",
+    "broadcastType": null,
+    "videoSort": "TIME"
+  },
+  "extensions": {
+    "persistedQuery": {
+      "version": 1,
+      "sha256Hash": "acea7539a293dfd30f0b0b81a263134bb5d9a7175592e14ac3f7c77b192de416"
+    }
+  }
+}
+
+### channel not exists
+
+POST https://gql.twitch.tv/gql
+Content-Type: application/json
+Client-Id: {{$dotenv CLIENT_ID}}
+
+{
+  "operationName": "FilterableVideoTower_Videos",
+  "variables": {
+    "includePreviewBlur": false,
+    "limit": 30,
+    "channelOwnerLogin": "-channel-not-exists-",
+    "broadcastType": null,
+    "videoSort": "TIME"
+  },
+  "extensions": {
+    "persistedQuery": {
+      "version": 1,
+      "sha256Hash": "acea7539a293dfd30f0b0b81a263134bb5d9a7175592e14ac3f7c77b192de416"
+    }
+  }
+}

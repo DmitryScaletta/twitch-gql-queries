@@ -95,7 +95,7 @@ const responses = await gqlRequest([
   getQueryGetVideo({ videoId: '1816688726' }),
 ]);
 
-console.log(responses)
+console.log(responses);
 ```
 
 ## Available queries
@@ -103,12 +103,14 @@ console.log(responses)
 * BrowsePage_AllDirectories
 * ChannelRoot_AboutPanel
 * ChannelShell
+* ChannelVideoShelvesQuery
 * ClipsActionButtons
 * ClipsCards__Game
 * ClipsCards__User
 * ClipsDownloadButton
 * DirectoryPage_Game
 * FFZ_BroadcastID
+* FilterableVideoTower_Videos
 * GetPinnedChat
 * GetUserID
 * GlobalBadges
