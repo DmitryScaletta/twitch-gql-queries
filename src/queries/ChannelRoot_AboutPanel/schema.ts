@@ -93,7 +93,7 @@ export const UserSchema = buildObject(
 
 export const DataSchema = buildObject(
   {
-    currentUser: T.Union([T.Null(), T.Unknown()]),
+    currentUser: T.Union([T.Null()]),
     user: T.Union([T.Null(), LegacyRef(UserSchema)]),
   },
   { $id: `${displayName}Data` },

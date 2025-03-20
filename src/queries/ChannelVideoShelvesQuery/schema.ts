@@ -87,7 +87,7 @@ export const VideoSchema = buildObject(
       pick(schemas.VideoSelfEdge, ['isRestricted', 'viewingHistory']),
     ),
     resourceRestriction: T.Union([T.Null(), ResourceRestrictionSchema]),
-    contentTags: T.Array(T.Unknown()),
+    contentTags: T.Array(T.Unknown(), { maxItems: 0 }),
     previewThumbnailProperties: T.Optional(
       buildObject(pick(schemas.PreviewThumbnailProperties, ['blurReason'])),
     ),
@@ -162,7 +162,7 @@ const UserSchema = buildObject({
 
 export const DataSchema = buildObject(
   {
-    currentUser: T.Union([T.Null(), T.Unknown()]),
+    currentUser: T.Union([T.Null()]),
     user: T.Union([T.Null(), UserSchema]),
   },
   { $id: `${displayName}Data` },

@@ -27,10 +27,10 @@ export const UserSchema = buildObject(
       T.Null(),
       buildObject(pick(schemas.Team, ['id', 'name', 'displayName'])),
     ]),
-    squadStream: T.Union([T.Null(), T.Unknown()]),
+    squadStream: T.Union([T.Null()]),
     channel: buildObject({
       ...pick(schemas.Channel, ['id']),
-      chanlets: T.Union([T.Null(), T.Unknown()]),
+      chanlets: T.Union([T.Null()]),
     }),
     // don't use Broadcast schema
     lastBroadcast: buildObject({

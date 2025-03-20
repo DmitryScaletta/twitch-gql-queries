@@ -46,7 +46,7 @@ export const VariablesSchema = buildObject(
 );
 
 // TODO: find example with watch party
-const WatchPartySchema = T.Union([T.Null(), T.Unknown()]);
+const WatchPartySchema = T.Union([T.Null()]);
 
 export const ChannelSchema = buildObject(
   {
@@ -95,7 +95,7 @@ export const ChannelSchema = buildObject(
         }),
       ]),
     }),
-    self: T.Union([T.Null(), T.Unknown()]),
+    self: T.Union([T.Null()]),
     latestVideo: buildObject({
       edges: T.Array(
         buildObject({

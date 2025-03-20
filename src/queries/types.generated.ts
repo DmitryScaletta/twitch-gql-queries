@@ -107,7 +107,7 @@ export interface ChannelRootUser {
     edges: {
       node: {
         id: string;
-        status: 'RECORDED' | string;
+        status: 'RECORDED';
         game: null | {
           id: string;
           displayName: string;
@@ -129,7 +129,7 @@ export interface ChannelRootAboutPanelVariables {
 }
 
 export interface ChannelRootAboutPanelData {
-  currentUser: unknown;
+  currentUser: null;
   user: null | ChannelRootUser;
 }
 
@@ -224,7 +224,7 @@ export interface ChannelVideoShelvesQueryClip {
     __typename: 'User';
   };
   guestStarParticipants: null | {
-    guests: {
+    guests: (null | {
       id: string;
       login: string;
       displayName: string;
@@ -232,7 +232,7 @@ export interface ChannelVideoShelvesQueryClip {
       primaryColorHex: null | string;
       description: null | string;
       __typename: 'User';
-    }[];
+    })[];
     sessionIdentifier: string;
     __typename: 'GuestStarParticipants';
   };
@@ -287,7 +287,10 @@ export interface ChannelVideoShelvesQueryVideo {
     options: 'ALLOW_ALL_TIERS'[];
     __typename: 'ResourceRestriction';
   };
-  contentTags: unknown[];
+  /**
+   * @maxItems 0
+   */
+  contentTags: [];
   previewThumbnailProperties?: {
     blurReason: 'BLUR_NOT_REQUIRED';
     __typename: 'PreviewThumbnailProperties';
@@ -339,7 +342,7 @@ export interface ChannelVideoShelvesQueryVariables {
 }
 
 export interface ChannelVideoShelvesQueryData {
-  currentUser: unknown;
+  currentUser: null;
   user: null | {
     id: string;
     displayName: string;
@@ -440,7 +443,7 @@ export interface ClipsCardsGameClip {
     __typename: 'User';
   };
   guestStarParticipants: null | {
-    guests: {
+    guests: (null | {
       id: string;
       login: string;
       displayName: string;
@@ -448,7 +451,7 @@ export interface ClipsCardsGameClip {
       primaryColorHex: null | string;
       description: null | string;
       __typename: 'User';
-    }[];
+    })[];
     sessionIdentifier: string;
     __typename: 'GuestStarParticipants';
   };
@@ -505,7 +508,7 @@ export interface ClipsCardsUserClip {
   thumbnailURL: string;
   createdAt: string;
   durationSeconds: number;
-  champBadge: unknown;
+  champBadge: null;
   isFeatured: boolean;
   curator: null | {
     id: string;
@@ -533,7 +536,7 @@ export interface ClipsCardsUserClip {
     __typename: 'User';
   };
   guestStarParticipants: null | {
-    guests: {
+    guests: (null | {
       id: string;
       login: string;
       displayName: string;
@@ -541,7 +544,7 @@ export interface ClipsCardsUserClip {
       primaryColorHex: null | string;
       description: null | string;
       __typename: 'User';
-    }[];
+    })[];
     sessionIdentifier: string;
     __typename: 'GuestStarParticipants';
   };
@@ -768,7 +771,10 @@ export interface FilterableVideoTowerVideosVideo {
     options: 'ALLOW_ALL_TIERS'[];
     __typename: 'ResourceRestriction';
   };
-  contentTags: unknown[];
+  /**
+   * @maxItems 0
+   */
+  contentTags: [];
   previewThumbnailProperties?: {
     blurReason: 'BLUR_NOT_REQUIRED';
     __typename: 'PreviewThumbnailProperties';
@@ -809,14 +815,14 @@ export interface GetPinnedChatMessage {
   content: {
     text: string;
     fragments: {
-      content: unknown;
+      content: null;
       text: string;
       __typename: 'MessageFragment';
     }[];
     __typename: 'MessageContent';
   };
-  parentMessage: unknown;
-  threadParentMessage: unknown;
+  parentMessage: null;
+  threadParentMessage: null;
   sender: {
     id: string;
     chatColor: null | string;
@@ -934,14 +940,17 @@ export interface SearchResultsPageChannel {
         endAt: null | string;
         title: string;
         hasReminder: boolean;
-        categories: unknown[];
+        /**
+         * @maxItems 0
+         */
+        categories: [];
         __typename: 'ScheduleSegment';
       };
       __typename: 'Schedule';
     };
     __typename: 'Channel';
   };
-  self: unknown;
+  self: null;
   latestVideo: {
     edges: {
       node: {
@@ -992,7 +1001,7 @@ export interface SearchResultsPageChannel {
     }[];
     __typename: 'Stream';
   };
-  watchParty: unknown;
+  watchParty: null;
   __typename: 'User';
 }
 
@@ -1043,7 +1052,7 @@ export interface SearchResultsPageRelatedLiveChannel {
     };
     __typename: 'Stream';
   };
-  watchParty: unknown;
+  watchParty: null;
   __typename: 'User';
 }
 
@@ -1234,7 +1243,7 @@ export interface ShareClipRenderStatusBroadcaster {
     startedAt: string;
     __typename: 'Broadcast';
   };
-  self: unknown;
+  self: null;
   __typename: 'User';
 }
 
@@ -1243,7 +1252,7 @@ export interface ShareClipRenderStatusClipAsset {
   aspectRatio: number;
   type: 'SOURCE' | 'RECOMPOSED';
   createdAt: string;
-  creationState: 'CREATED' | string;
+  creationState: 'CREATED';
   thumbnailURL: string;
   curator: null | {
     id: string;
@@ -1323,7 +1332,7 @@ export interface ShareClipRenderStatusClip {
   createdAt: string;
   isPublished: boolean;
   durationSeconds: number;
-  champBadge: unknown;
+  champBadge: null;
   videoOffsetSeconds: null | number;
   isViewerEditRestricted: boolean;
   assets: ShareClipRenderStatusClipAsset[];
@@ -1363,7 +1372,7 @@ export interface ShareClipRenderStatusClip {
     sourceURL: string;
     __typename: 'ClipVideoQuality';
   }[];
-  suggestedCropping: unknown;
+  suggestedCropping: null;
   __typename: 'Clip';
 }
 
@@ -1386,10 +1395,10 @@ export interface StreamMetadataUser {
     displayName: string;
     __typename: 'Team';
   };
-  squadStream: unknown;
+  squadStream: null;
   channel: {
     id: string;
-    chanlets: unknown;
+    chanlets: null;
     __typename: 'Channel';
   };
   lastBroadcast: {
@@ -1485,7 +1494,7 @@ export interface VideoPreviewOverlayData {
     stream: null | {
       id: string;
       previewImageURL: string;
-      restrictionType: unknown;
+      restrictionType: null;
       __typename: 'Stream';
     };
     __typename: 'User';

@@ -27,8 +27,9 @@ export const MessageSchema = buildObject(
         buildObject(pick(schemas.MessageFragment, ['content', 'text'])),
       ),
     }),
-    parentMessage: T.Union([T.Null(), T.Unknown()]),
-    threadParentMessage: T.Union([T.Null(), T.Unknown()]),
+    // TODO: find types
+    parentMessage: T.Union([T.Null()]),
+    threadParentMessage: T.Union([T.Null()]),
     sender: buildObject({
       ...pick(schemas.User, ['id', 'chatColor', 'displayName']),
       displayBadges: T.Array(

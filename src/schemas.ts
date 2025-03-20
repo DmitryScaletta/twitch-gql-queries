@@ -65,8 +65,7 @@ export const Stream = {
   }),
   // TODO: are there any other types?
   type: T.Literal('live'),
-  // TODO: find type
-  restrictionType: T.Union([T.Null(), T.Unknown()]),
+  restrictionType: T.Union([T.Null()]),
   createdAt: T.String({
     // format: 'date-time',
   }),
@@ -99,7 +98,7 @@ export const Video = {
     // format: 'uri',
   }),
   // TODO: find all possible statuses
-  status: T.Union([T.Literal('RECORDED'), T.String()]),
+  status: T.Union([T.Literal('RECORDED')]),
   createdAt: T.String({
     // format: 'date-time',
   }),
@@ -137,7 +136,7 @@ export const Clip = {
     // format: 'uri',
   }),
   language: T.String(),
-  champBadge: T.Union([T.Null(), T.Unknown()]),
+  champBadge: T.Null(),
   isFeatured: T.Boolean(),
   isPublished: T.Boolean(),
   isViewerEditRestricted: T.Boolean(),
@@ -153,7 +152,7 @@ export const ClipAsset = {
     // format: 'date-time',
   }),
   // TODO: find all possible statuses
-  creationState: T.Union([T.Literal('CREATED'), T.String()]),
+  creationState: T.Union([T.Literal('CREATED')]),
   thumbnailURL: T.String({
     // format: 'uri',
   }),
@@ -217,7 +216,6 @@ export const FreeformTag = {
 } satisfies TProperties;
 
 export const PreviewThumbnailProperties = {
-  // blurReason: T.Union([T.Literal('BLUR_NOT_REQUIRED'), T.String()]),
   blurReason: T.Union([T.Literal('BLUR_NOT_REQUIRED')]),
   __typename: T.Literal('PreviewThumbnailProperties'),
 } satisfies TProperties;
@@ -244,7 +242,7 @@ export const ScheduleSegment = {
   title: T.String(),
   hasReminder: T.Boolean(),
   // TODO: add schedule categories
-  categories: T.Array(T.Unknown()),
+  categories: T.Array(T.Unknown(), { maxItems: 0 }),
   __typename: T.Literal('ScheduleSegment'),
 } satisfies TProperties;
 
@@ -262,7 +260,7 @@ export const MessageContent = {
 } satisfies TProperties;
 
 export const MessageFragment = {
-  content: T.Union([T.Null(), T.Unknown()]),
+  content: T.Null(),
   text: T.String(),
   __typename: T.Literal('MessageFragment'),
 } satisfies TProperties;

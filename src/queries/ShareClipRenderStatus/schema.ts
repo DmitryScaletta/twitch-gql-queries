@@ -31,7 +31,7 @@ export const BroadcasterSchema = buildObject(
       buildObject(pick(schemas.Stream, ['id', 'viewersCount'])),
     ]),
     lastBroadcast: buildObject(pick(schemas.Broadcast, ['id', 'startedAt'])),
-    self: T.Union([T.Null(), T.Unknown()]),
+    self: T.Union([T.Null()]),
   },
   { $id: `${displayName}Broadcaster` },
 );
@@ -146,7 +146,7 @@ export const ClipSchema = buildObject(
     videoQualities: T.Array(
       buildObject(pick(schemas.ClipVideoQuality, ['sourceURL'])),
     ),
-    suggestedCropping: T.Union([T.Null(), T.Unknown()]),
+    suggestedCropping: T.Union([T.Null()]),
   },
   { $id: `${displayName}Clip` },
 );
