@@ -1,4 +1,5 @@
 import { Type as T, type TProperties } from '@sinclair/typebox';
+import { buildObject } from './schema.ts';
 
 export const User = {
   id: T.String(),
@@ -98,7 +99,7 @@ export const Video = {
     // format: 'uri',
   }),
   // TODO: find all possible statuses
-  status: T.Union([T.Literal('RECORDED')]),
+  status: T.Union([T.Literal('RECORDED'), T.Literal('RECORDING')]),
   createdAt: T.String({
     // format: 'date-time',
   }),
@@ -241,8 +242,6 @@ export const ScheduleSegment = {
   ]),
   title: T.String(),
   hasReminder: T.Boolean(),
-  // TODO: add schedule categories
-  categories: T.Array(T.Unknown(), { maxItems: 0 }),
   __typename: T.Literal('ScheduleSegment'),
 } satisfies TProperties;
 
@@ -260,7 +259,18 @@ export const MessageContent = {
 } satisfies TProperties;
 
 export const MessageFragment = {
-  content: T.Null(),
+  content: T.Union([
+    T.Null(),
+    buildObject({
+      emoteID: T.String(),
+      __typename: T.Literal('Emote'),
+    }),
+    buildObject({
+      userID: T.String(),
+      login: T.String(),
+      __typename: T.Literal('User'),
+    }),
+  ]),
   text: T.String(),
   __typename: T.Literal('MessageFragment'),
 } satisfies TProperties;

@@ -81,16 +81,18 @@ export const ChannelSchema = buildObject(
           ...pick(schemas.Schedule, ['id']),
           nextSegment: T.Union([
             T.Null(),
-            buildObject(
-              pick(schemas.ScheduleSegment, [
+            buildObject({
+              ...pick(schemas.ScheduleSegment, [
                 'id',
                 'startAt',
                 'endAt',
                 'title',
                 'hasReminder',
-                'categories',
               ]),
-            ),
+              categories: T.Array(
+                buildObject(pick(schemas.Game, ['id', 'name'])),
+              ),
+            }),
           ]),
         }),
       ]),

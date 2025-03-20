@@ -23,13 +23,13 @@ export type BrowsePageSort = 'RELEVANCE' | 'VIEWER_COUNT';
 export interface BrowsePageAllDirectoriesVariables {
   limit: number;
   options: {
-    recommendationsContext?: {
+    recommendationsContext?: null | {
       platform?: null | 'web' | string;
-    } | null;
+    };
     sort: BrowsePageSort;
-    tags?: string[] | null;
+    tags?: null[];
   };
-  cursor?: string | null;
+  cursor?: null | string;
 }
 
 export interface BrowsePageAllDirectoriesData {
@@ -107,7 +107,7 @@ export interface ChannelRootUser {
     edges: {
       node: {
         id: string;
-        status: 'RECORDED';
+        status: 'RECORDED' | 'RECORDING';
         game: null | {
           id: string;
           displayName: string;
@@ -468,11 +468,11 @@ export interface ClipsCardsGameVariables {
   categorySlug: string;
   limit: number;
   criteria?: {
-    languages?: string[] | null;
-    filter?: ClipsCardsFilter | null;
-    shouldFilterByDiscoverySetting?: boolean | null;
+    languages?: null[];
+    filter?: null | ClipsCardsFilter;
+    shouldFilterByDiscoverySetting?: null | boolean;
   };
-  cursor?: string | null;
+  cursor?: null | string;
 }
 
 export interface ClipsCardsGameData {
@@ -555,10 +555,10 @@ export interface ClipsCardsUserVariables {
   login: string;
   limit: number;
   criteria?: {
-    filter?: ClipsCardsFilter | null;
-    shouldFilterByDiscoverySetting?: boolean | null;
+    filter?: null | ClipsCardsFilter;
+    shouldFilterByDiscoverySetting?: null | boolean;
   };
-  cursor?: string | null;
+  cursor?: null | string;
 }
 
 export interface ClipsCardsUserData {
@@ -815,7 +815,17 @@ export interface GetPinnedChatMessage {
   content: {
     text: string;
     fragments: {
-      content: null;
+      content:
+        | null
+        | {
+            emoteID: string;
+            __typename: 'Emote';
+          }
+        | {
+            userID: string;
+            login: string;
+            __typename: 'User';
+          };
       text: string;
       __typename: 'MessageFragment';
     }[];
@@ -940,10 +950,11 @@ export interface SearchResultsPageChannel {
         endAt: null | string;
         title: string;
         hasReminder: boolean;
-        /**
-         * @maxItems 0
-         */
-        categories: [];
+        categories: {
+          id: string;
+          name: string;
+          __typename: 'Game';
+        }[];
         __typename: 'ScheduleSegment';
       };
       __typename: 'Schedule';

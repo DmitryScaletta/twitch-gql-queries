@@ -23,6 +23,7 @@ export const VariablesSchema = buildObject(
       {
         recommendationsContext: T.Optional(
           T.Union([
+            T.Null(),
             T.Object(
               {
                 platform: T.Optional(
@@ -31,15 +32,14 @@ export const VariablesSchema = buildObject(
               },
               { additionalProperties: false },
             ),
-            T.Null(),
           ]),
         ),
         sort: LegacyRef(SortSchema),
-        tags: T.Optional(T.Union([T.Array(T.String()), T.Null()])),
+        tags: T.Optional(T.Union([T.Array(T.Null(), T.String())])),
       },
       { additionalProperties: false },
     ),
-    cursor: T.Optional(T.Union([T.String(), T.Null()])),
+    cursor: T.Optional(T.Union([T.Null(), T.String()])),
   },
   { $id: `${displayName}Variables` },
 );

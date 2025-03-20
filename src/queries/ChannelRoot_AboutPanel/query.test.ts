@@ -13,9 +13,9 @@ describe('ChannelRoot_AboutPanel', () => {
   test('real request', async () => {
     const channels = await getChannels();
     const responses = await gqlRequest(
-      channels.map((channel) =>
+      channels.map(({ login }) =>
         getQueryChannelRootAboutPanel({
-          channelLogin: channel.login,
+          channelLogin: login,
           skipSchedule: false,
           includeIsDJ: true,
         }),
@@ -25,24 +25,30 @@ describe('ChannelRoot_AboutPanel', () => {
   });
 
   test('real request: skipSchedule true', async () => {
-    const responses = await gqlRequest([
-      getQueryChannelRootAboutPanel({
-        channelLogin: 'xqc',
-        skipSchedule: true,
-        includeIsDJ: true,
-      }),
-    ]);
+    const channels = await getChannels('dota-2');
+    const responses = await gqlRequest(
+      channels.map(({ login }) =>
+        getQueryChannelRootAboutPanel({
+          channelLogin: login,
+          skipSchedule: true,
+          includeIsDJ: true,
+        }),
+      ),
+    );
     responses.map(validate);
   });
 
   test('real request: includeIsDJ false', async () => {
-    const responses = await gqlRequest([
-      getQueryChannelRootAboutPanel({
-        channelLogin: 'xqc',
-        skipSchedule: false,
-        includeIsDJ: false,
-      }),
-    ]);
+    const channels = await getChannels('counter-strike');
+    const responses = await gqlRequest(
+      channels.map(({ login }) =>
+        getQueryChannelRootAboutPanel({
+          channelLogin: login,
+          skipSchedule: false,
+          includeIsDJ: false,
+        }),
+      ),
+    );
     responses.map(validate);
   });
 

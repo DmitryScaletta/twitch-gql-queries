@@ -20,13 +20,13 @@ export const VariablesSchema = buildObject(
     limit: T.Number(),
     criteria: T.Optional(
       buildObject({
-        filter: T.Optional(T.Union([LegacyRef(FilterSchema), T.Null()])),
+        filter: T.Optional(T.Union([T.Null(), LegacyRef(FilterSchema)])),
         shouldFilterByDiscoverySetting: T.Optional(
-          T.Union([T.Boolean(), T.Null()]),
+          T.Union([T.Null(), T.Boolean()]),
         ),
       }),
     ),
-    cursor: T.Optional(T.Union([T.String(), T.Null()])),
+    cursor: T.Optional(T.Union([T.Null(), T.String()])),
   },
   { $id: `${displayName}Variables` },
 );

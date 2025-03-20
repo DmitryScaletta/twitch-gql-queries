@@ -55,29 +55,25 @@ export const PinnedChatMessageSchema = buildObject(
   { $id: `${displayName}PinnedChatMessage` },
 );
 
+const PinnedChatMessagesSchema = buildObject({
+  edges: T.Array(
+    buildObject({
+      node: LegacyRef(PinnedChatMessageSchema),
+      cursor: T.Union([T.Null(), T.String()]),
+      __typename: T.Literal('PinnedChatMessageEdge'),
+    }),
+  ),
+  pageInfo: buildObject(pick(schemas.PageInfo, ['hasNextPage'])),
+  __typename: T.Literal('PinnedChatMessageConnection'),
+});
+
+const ChannelSchema = buildObject({
+  ...pick(schemas.Channel, ['id']),
+  pinnedChatMessages: T.Union([T.Null(), PinnedChatMessagesSchema]),
+});
+
 export const DataSchema = buildObject(
-  {
-    channel: T.Union([
-      T.Null(),
-      buildObject({
-        ...pick(schemas.Channel, ['id']),
-        pinnedChatMessages: T.Union([
-          T.Null(),
-          buildObject({
-            edges: T.Array(
-              buildObject({
-                node: LegacyRef(PinnedChatMessageSchema),
-                cursor: T.Union([T.Null(), T.String()]),
-                __typename: T.Literal('PinnedChatMessageEdge'),
-              }),
-            ),
-            pageInfo: buildObject(pick(schemas.PageInfo, ['hasNextPage'])),
-            __typename: T.Literal('PinnedChatMessageConnection'),
-          }),
-        ]),
-      }),
-    ]),
-  },
+  { channel: T.Union([T.Null(), ChannelSchema]) },
   { $id: `${displayName}Data` },
 );
 
