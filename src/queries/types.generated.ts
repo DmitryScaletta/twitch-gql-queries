@@ -308,7 +308,7 @@ export interface ChannelVideoShelvesQueryVideoShelf {
       login: string;
       __typename: 'User';
     };
-    thumbnailURL: string;
+    thumbnailURL: null | string;
     title: string;
     type: 'DEFAULT';
     updatedAt: string;
