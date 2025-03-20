@@ -41,16 +41,19 @@ export const VariablesSchema = buildObject(
 
 export const GuestStarParticipantsSchema = buildObject({
   guests: T.Array(
-    buildObject(
-      pick(schemas.User, [
-        'id',
-        'login',
-        'displayName',
-        'profileImageURL',
-        'primaryColorHex',
-        'description',
-      ]),
-    ),
+    T.Union([
+      T.Null(),
+      buildObject(
+        pick(schemas.User, [
+          'id',
+          'login',
+          'displayName',
+          'profileImageURL',
+          'primaryColorHex',
+          'description',
+        ]),
+      ),
+    ]),
   ),
   sessionIdentifier: T.String(),
   __typename: T.Literal('GuestStarParticipants'),
