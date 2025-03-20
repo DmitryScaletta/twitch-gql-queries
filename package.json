@@ -1,6 +1,6 @@
 {
   "name": "twitch-gql-queries",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "Type-safe requests to twitch public GraphQL API",
   "keywords": [
     "twitch",
