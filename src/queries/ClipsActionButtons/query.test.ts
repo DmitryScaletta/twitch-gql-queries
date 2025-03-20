@@ -16,29 +16,29 @@ describe('ClipsActionButtons', () => {
   });
 
   test('real request: no broadcaster', async () => {
-    const [queryResponse] = await gqlRequest([
+    const responses = await gqlRequest([
       getQueryClipsActionButtons({
         slug: 'ShakingBlitheOwlBrokeBack',
       }),
     ]);
-    validate(queryResponse);
+    responses.map(validate);
   });
 
   test('real request: no game', async () => {
-    const [queryResponse] = await gqlRequest([
+    const responses = await gqlRequest([
       getQueryClipsActionButtons({
         slug: 'AstuteEncouragingCroquetteJebaited',
       }),
     ]);
-    validate(queryResponse);
+    responses.map(validate);
   });
 
   test('real request: not exists', async () => {
-    const [queryResponse] = await gqlRequest([
+    const responses = await gqlRequest([
       getQueryClipsActionButtons({
         slug: 'hello-world',
       }),
     ]);
-    validate(queryResponse);
+    responses.map(validate);
   });
 });

@@ -25,47 +25,47 @@ describe('ChannelRoot_AboutPanel', () => {
   });
 
   test('real request: skipSchedule true', async () => {
-    const [queryResponse] = await gqlRequest([
+    const responses = await gqlRequest([
       getQueryChannelRootAboutPanel({
         channelLogin: 'xqc',
         skipSchedule: true,
         includeIsDJ: true,
       }),
     ]);
-    validate(queryResponse);
+    responses.map(validate);
   });
 
   test('real request: includeIsDJ false', async () => {
-    const [queryResponse] = await gqlRequest([
+    const responses = await gqlRequest([
       getQueryChannelRootAboutPanel({
         channelLogin: 'xqc',
         skipSchedule: false,
         includeIsDJ: false,
       }),
     ]);
-    validate(queryResponse);
+    responses.map(validate);
   });
 
   test('real request: not exists', async () => {
-    const [queryResponse] = await gqlRequest([
+    const responses = await gqlRequest([
       getQueryChannelRootAboutPanel({
         channelLogin: 'user-not-exists',
         skipSchedule: false,
         includeIsDJ: true,
       }),
     ]);
-    validate(queryResponse);
+    responses.map(validate);
   });
 
   test('real request: never streamed', async () => {
-    const [queryResponse] = await gqlRequest([
+    const responses = await gqlRequest([
       getQueryChannelRootAboutPanel({
         channelLogin: 'tio777',
         skipSchedule: false,
         includeIsDJ: true,
       }),
     ]);
-    validate(queryResponse);
+    responses.map(validate);
   });
 
   test('mock: with schedule', () => validate(resWithSchedule));

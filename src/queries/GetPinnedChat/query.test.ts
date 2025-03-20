@@ -28,10 +28,10 @@ describe('GetPinnedChat', () => {
   });
 
   test('real request: not-exists', async () => {
-    const [queryResponse] = await gqlRequest([
+    const responses = await gqlRequest([
       getQueryGetPinnedChat({ channelID: 'channel-not-exists', count: 1 }),
     ]);
-    validate(queryResponse);
+    responses.map(validate);
   });
 
   test('mock: pinned message', () => validate(resPinnedMessage));

@@ -8,7 +8,7 @@ describe('GlobalBadges', () => {
   const validate = createValidate(ResponseSchema, [BadgeSchema]);
 
   test('real request', async () => {
-    const [queryResponse] = await gqlRequest([getQueryGlobalBadges()]);
-    validate(queryResponse);
+    const responses = await gqlRequest([getQueryGlobalBadges()]);
+    responses.map(validate);
   });
 });

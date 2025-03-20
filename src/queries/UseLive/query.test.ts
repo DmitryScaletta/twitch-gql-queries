@@ -19,10 +19,10 @@ describe('UseLive', () => {
   });
 
   test('real request: not exists', async () => {
-    const [queryResponse] = await gqlRequest([
+    const responses = await gqlRequest([
       getQueryUseLive({ channelLogin: 'not-exists' }),
     ]);
-    validate(queryResponse);
+    responses.map(validate);
   });
 
   test('mock: online', () => validate(resOnline));

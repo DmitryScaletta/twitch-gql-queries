@@ -20,10 +20,10 @@ describe('FFZ_BroadcastID', () => {
   });
 
   test('real request: not exists', async () => {
-    const [queryResponse] = await gqlRequest([
+    const responses = await gqlRequest([
       getQueryFfzBroadcastId({ id: '9999999999999' }),
     ]);
-    validate(queryResponse);
+    responses.map(validate);
   });
 
   test('mock: online with video', () => validate(resOnlineVideo));

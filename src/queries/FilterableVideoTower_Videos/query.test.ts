@@ -101,7 +101,7 @@ describe('FilterableVideoTower_Videos', () => {
   });
 
   test('real request: not exists', async () => {
-    const [queryResponse] = await gqlRequest([
+    const responses = await gqlRequest([
       getQueryFilterableVideoTowerVideos({
         includePreviewBlur: false,
         limit: 30,
@@ -110,6 +110,6 @@ describe('FilterableVideoTower_Videos', () => {
         videoSort: 'TIME',
       }),
     ]);
-    validate(queryResponse);
+    responses.map(validate);
   });
 });

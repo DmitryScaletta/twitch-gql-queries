@@ -52,7 +52,7 @@ describe('DirectoryPage_Game', () => {
   });
 
   test('real request: broadcasterLanguages', async () => {
-    const [queryResponse] = await gqlRequest([
+    const responses = await gqlRequest([
       getQueryDirectoryPageGame({
         slug: 'dota-2',
         options: { sort: 'VIEWER_COUNT', broadcasterLanguages: ['DE'] },
@@ -61,11 +61,11 @@ describe('DirectoryPage_Game', () => {
         includeIsDJ: true,
       }),
     ]);
-    validate(queryResponse);
+    responses.map(validate);
   });
 
   test('real request: freeformTags', async () => {
-    const [queryResponse] = await gqlRequest([
+    const responses = await gqlRequest([
       getQueryDirectoryPageGame({
         slug: 'grand-theft-auto-v',
         options: { sort: 'VIEWER_COUNT', freeformTags: ['GTARP'] },
@@ -74,11 +74,11 @@ describe('DirectoryPage_Game', () => {
         includeIsDJ: true,
       }),
     ]);
-    validate(queryResponse);
+    responses.map(validate);
   });
 
   test('real request: not exists', async () => {
-    const [queryResponse] = await gqlRequest([
+    const responses = await gqlRequest([
       getQueryDirectoryPageGame({
         slug: '-category-not-exists-',
         options: { sort: 'VIEWER_COUNT' },
@@ -87,7 +87,7 @@ describe('DirectoryPage_Game', () => {
         includeIsDJ: true,
       }),
     ]);
-    validate(queryResponse);
+    responses.map(validate);
   });
 
   test('mocks: no streams', () => validate(resNoStreams));

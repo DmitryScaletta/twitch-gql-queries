@@ -19,17 +19,17 @@ describe('WatchLivePrompt', () => {
   });
 
   test('real request: no broadcaster', async () => {
-    const [queryResponse] = await gqlRequest([
+    const responses = await gqlRequest([
       getQueryWatchLivePrompt({ slug: 'ShakingBlitheOwlBrokeBack' }),
     ]);
-    validate(queryResponse);
+    responses.map(validate);
   });
 
   test('real request: not exists', async () => {
-    const [queryResponse] = await gqlRequest([
+    const responses = await gqlRequest([
       getQueryWatchLivePrompt({ slug: 'not-exists' }),
     ]);
-    validate(queryResponse);
+    responses.map(validate);
   });
 
   test('mock: stream online', () => validate(resStreamOnline));

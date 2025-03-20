@@ -33,10 +33,10 @@ describe('%QUERY_NAME%', () => {
   const validate = createValidate(ResponseSchema);
 
   test('real request', async () => {
-    const [queryResponse] = await gqlRequest([
+    const responses = await gqlRequest([
       getQuery%QUERY_DISPLAY_NAME%({}),
     ]);
-    validate(queryResponse);
+    responses.map(validate)
   });
 });
 ```

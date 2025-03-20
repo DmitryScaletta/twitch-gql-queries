@@ -18,23 +18,23 @@ describe('GetUserID', () => {
   });
 
   test('real request: loockupType ACTIVE', async () => {
-    const [queryResponse] = await gqlRequest([
+    const responses = await gqlRequest([
       getQueryGetUserId({ login: 'xqc', lookupType: 'ACTIVE' }),
     ]);
-    validate(queryResponse);
+    responses.map(validate);
   });
 
   test('real request: loockupType ALL', async () => {
-    const [queryResponse] = await gqlRequest([
+    const responses = await gqlRequest([
       getQueryGetUserId({ login: 'xqc', lookupType: 'ALL' }),
     ]);
-    validate(queryResponse);
+    responses.map(validate);
   });
 
   test('real request: not exists', async () => {
-    const [queryResponse] = await gqlRequest([
+    const responses = await gqlRequest([
       getQueryGetUserId({ login: 'user-not-exists', lookupType: 'ACTIVE' }),
     ]);
-    validate(queryResponse);
+    responses.map(validate);
   });
 });

@@ -8,17 +8,17 @@ describe('BrowsePage_AllDirectories', () => {
   const validate = createValidate(ResponseSchema, [GameSchema]);
 
   test('real request: only required variables', async () => {
-    const [queryResponse] = await gqlRequest([
+    const responses = await gqlRequest([
       getQueryBowsePageAllDirectories({
         limit: 20,
         options: { sort: 'VIEWER_COUNT' },
       }),
     ]);
-    validate(queryResponse);
+    responses.map(validate);
   });
 
   test('real request: all variables', async () => {
-    const [queryResponse] = await gqlRequest([
+    const responses = await gqlRequest([
       getQueryBowsePageAllDirectories({
         cursor: null,
         limit: 20,
@@ -31,17 +31,17 @@ describe('BrowsePage_AllDirectories', () => {
         },
       }),
     ]);
-    validate(queryResponse);
+    responses.map(validate);
   });
 
   test('real request: integrity error', async () => {
-    const [queryResponse] = await gqlRequest([
+    const responses = await gqlRequest([
       getQueryBowsePageAllDirectories({
         cursor: 'eyJzIjoxMDAsImQiOmZhbHNlLCJ0Ijp0cnVlfQ==',
         limit: 20,
         options: { sort: 'RELEVANCE' },
       }),
     ]);
-    validate(queryResponse);
+    responses.map(validate);
   });
 });

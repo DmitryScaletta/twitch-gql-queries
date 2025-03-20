@@ -19,16 +19,16 @@ describe('SearchTray_SearchSuggestions', () => {
   ]);
 
   test('real request 1', async () => {
-    const [queryResponse] = await gqlRequest([
+    const responses = await gqlRequest([
       getQuerySearchTraySuggestions({ queryFragment: 'forse' }),
     ]);
-    validate(queryResponse);
+    responses.map(validate);
   });
 
   test('real request 2', async () => {
-    const [queryResponse] = await gqlRequest([
+    const responses = await gqlRequest([
       getQuerySearchTraySuggestions({ queryFragment: 'summ' }),
     ]);
-    validate(queryResponse);
+    responses.map(validate);
   });
 });

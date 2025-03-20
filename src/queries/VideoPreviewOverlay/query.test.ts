@@ -19,10 +19,10 @@ describe('VideoPreviewOverlay', () => {
   });
 
   test('real request: not exists', async () => {
-    const [queryResponse] = await gqlRequest([
+    const responses = await gqlRequest([
       getQueryVideoPreviewOverlay({ login: 'user-not-exists' }),
     ]);
-    validate(queryResponse);
+    responses.map(validate);
   });
 
   test('mocks: online', () => validate(resOnline));

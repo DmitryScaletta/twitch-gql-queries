@@ -21,10 +21,10 @@ describe('StreamMetadata', () => {
   });
 
   test('real request: never streamed', async () => {
-    const [queryResponse] = await gqlRequest([
+    const responses = await gqlRequest([
       getQueryStreamMetadata({ channelLogin: 'xqcbot' }),
     ]);
-    validate(queryResponse);
+    responses.map(validate);
   });
 
   test('mock: online', () => validate(resOnline));

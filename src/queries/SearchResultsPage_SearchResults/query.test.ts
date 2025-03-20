@@ -26,14 +26,14 @@ describe('SearchResultsPage_SearchResults', () => {
   ]);
 
   test('real request: only required variables', async () => {
-    const [queryResponse] = await gqlRequest([
+    const responses = await gqlRequest([
       getQuerySearchResultsPageSearchResults({ query: 'forse' }),
     ]);
-    validate(queryResponse);
+    responses.map(validate);
   });
 
   test('real request: all variables', async () => {
-    const [queryResponse] = await gqlRequest([
+    const responses = await gqlRequest([
       getQuerySearchResultsPageSearchResults({
         platform: 'web',
         query: 'forsen',
@@ -44,11 +44,11 @@ describe('SearchResultsPage_SearchResults', () => {
         includeIsDJ: true,
       }),
     ]);
-    validate(queryResponse);
+    responses.map(validate);
   });
 
   test('real request: CHANNEL', async () => {
-    const [queryResponse] = await gqlRequest([
+    const responses = await gqlRequest([
       getQuerySearchResultsPageSearchResults({
         platform: 'web',
         query: 'forsen',
@@ -59,11 +59,11 @@ describe('SearchResultsPage_SearchResults', () => {
         includeIsDJ: true,
       }),
     ]);
-    validate(queryResponse);
+    responses.map(validate);
   });
 
   test('real request: CHANNEL_WITH_TAG', async () => {
-    const [queryResponse] = await gqlRequest([
+    const responses = await gqlRequest([
       getQuerySearchResultsPageSearchResults({
         platform: 'web',
         query: 'forsen',
@@ -74,11 +74,11 @@ describe('SearchResultsPage_SearchResults', () => {
         includeIsDJ: true,
       }),
     ]);
-    validate(queryResponse);
+    responses.map(validate);
   });
 
   test('real request: GAME', async () => {
-    const [queryResponse] = await gqlRequest([
+    const responses = await gqlRequest([
       getQuerySearchResultsPageSearchResults({
         platform: 'web',
         query: 'forsen',
@@ -89,11 +89,11 @@ describe('SearchResultsPage_SearchResults', () => {
         includeIsDJ: true,
       }),
     ]);
-    validate(queryResponse);
+    responses.map(validate);
   });
 
   test('real request: VOD', async () => {
-    const [queryResponse] = await gqlRequest([
+    const responses = await gqlRequest([
       getQuerySearchResultsPageSearchResults({
         platform: 'web',
         query: 'forsen',
@@ -104,7 +104,7 @@ describe('SearchResultsPage_SearchResults', () => {
         includeIsDJ: true,
       }),
     ]);
-    validate(queryResponse);
+    responses.map(validate);
   });
 
   test('mock: channels', () => validate(resChannels));

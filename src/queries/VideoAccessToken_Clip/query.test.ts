@@ -16,9 +16,9 @@ describe('VideoAccessToken_Clip', () => {
   });
 
   test('real request: not exists', async () => {
-    const [queryResponse] = await gqlRequest([
+    const responses = await gqlRequest([
       getQueryVideoAccessTokenClip({ slug: 'hello-world' }),
     ]);
-    validate(queryResponse);
+    responses.map(validate);
   });
 });

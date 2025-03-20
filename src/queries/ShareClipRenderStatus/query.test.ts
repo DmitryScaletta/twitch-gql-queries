@@ -27,28 +27,28 @@ describe('ShareClipRenderStatus', () => {
   });
 
   test('real request: no broadcaster', async () => {
-    const [queryResponse] = await gqlRequest([
+    const responses = await gqlRequest([
       getQueryShareClipRenderStatus({ slug: 'ShakingBlitheOwlBrokeBack' }),
     ]);
-    validate(queryResponse);
+    responses.map(validate);
   });
 
   test('real request: no game', async () => {
-    const [queryResponse] = await gqlRequest([
+    const responses = await gqlRequest([
       getQueryShareClipRenderStatus({
         slug: 'AstuteEncouragingCroquetteJebaited',
       }),
     ]);
-    validate(queryResponse);
+    responses.map(validate);
   });
 
   test('real request: not exists', async () => {
-    const [queryResponse] = await gqlRequest([
+    const responses = await gqlRequest([
       getQueryShareClipRenderStatus({
         slug: 'not-exists',
       }),
     ]);
-    validate(queryResponse);
+    responses.map(validate);
   });
 
   test('mocks: clip from highlight', () => validate(resClipFromHighlight));

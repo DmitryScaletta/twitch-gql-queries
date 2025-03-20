@@ -39,23 +39,23 @@ describe('ClipsCards__User', () => {
   });
 
   test('real request: not exists', async () => {
-    const [queryResponse] = await gqlRequest([
+    const responses = await gqlRequest([
       getQueryClipsCardsUser({
         login: 'user-not-exists',
         limit: 20,
       }),
     ]);
-    validate(queryResponse);
+    responses.map(validate);
   });
 
   test('real request: integrity error', async () => {
-    const [queryResponse] = await gqlRequest([
+    const responses = await gqlRequest([
       getQueryClipsCardsUser({
         login: 'xqc',
         limit: 20,
         cursor: 'MjA=',
       }),
     ]);
-    validate(queryResponse);
+    responses.map(validate);
   });
 });
