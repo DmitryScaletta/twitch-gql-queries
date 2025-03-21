@@ -7,6 +7,7 @@ import { gqlRequest, MAX_QUERIES_PER_REQUEST } from './gqlRequest.ts';
 import { getQueryDirectoryPageGame } from './queries/DirectoryPage_Game/query.ts';
 import { getQueryClipsCardsGame } from './queries/ClipsCards__Game/query.ts';
 import { getQueryBowsePageAllDirectories } from './queries/BrowsePage_AllDirectories/query.ts';
+import { getQueryFilterableVideoTowerVideos } from './queries/FilterableVideoTower_Videos/query.ts';
 
 FormatRegistry.Set('date-time', IsDateTime);
 FormatRegistry.Set('uri', IsUrl);
@@ -37,11 +38,18 @@ type Category = (typeof CATEGORIES)[number];
 type CacheCategory = { slug: string };
 type CacheChannel = { id: string; login: string };
 type CacheClip = { slug: string };
+type CacheVideo = {
+  channelLogin: string;
+  archiveIds: string[];
+  highlightIds: string[];
+  uploadIds: string[];
+};
 
 const cache = {
   categories: null as null | CacheCategory[],
   channels: {} as Record<string, CacheChannel[]>,
   clips: {} as Record<string, CacheClip[]>,
+  videos: {} as Record<string, CacheVideo>,
 };
 
 const fetchCategories = async (): Promise<CacheCategory[]> => {
@@ -92,7 +100,6 @@ const fetchClips = async () => {
       getQueryClipsCardsGame({ categorySlug, limit: MAX_QUERIES_PER_REQUEST }),
     ),
   );
-
   const result: Record<string, CacheClip[]> = {};
   for (let i = 0; i < responses.length; i++) {
     const response = responses[i];
@@ -107,6 +114,41 @@ const fetchClips = async () => {
   return result;
 };
 
+const fetchVideos = async (channelOwnerLogin: string) => {
+  const [archive, highlight, upload] = await gqlRequest([
+    getQueryFilterableVideoTowerVideos({
+      limit: MAX_QUERIES_PER_REQUEST,
+      channelOwnerLogin,
+      broadcastType: 'ARCHIVE',
+      videoSort: 'TIME',
+    }),
+    getQueryFilterableVideoTowerVideos({
+      limit: MAX_QUERIES_PER_REQUEST,
+      channelOwnerLogin,
+      broadcastType: 'HIGHLIGHT',
+      videoSort: 'TIME',
+    }),
+    getQueryFilterableVideoTowerVideos({
+      limit: MAX_QUERIES_PER_REQUEST,
+      channelOwnerLogin,
+      broadcastType: 'UPLOAD',
+      videoSort: 'TIME',
+    }),
+  ]);
+  if (!archive.data.user || !highlight.data.user || !upload.data.user) {
+    throw new Error(`Cannot fetch videos: ${channelOwnerLogin}`);
+  }
+  const getIds = <T extends typeof archive.data.user>(user: T) =>
+    user.videos.edges.map((edge) => edge.node.id);
+  const result: CacheVideo = {
+    channelLogin: channelOwnerLogin,
+    archiveIds: getIds(archive.data.user),
+    highlightIds: getIds(highlight.data.user),
+    uploadIds: getIds(upload.data.user),
+  };
+  return result;
+};
+
 export const getCategories = async () =>
   cache.categories || (cache.categories = await fetchCategories());
 
@@ -115,3 +157,7 @@ export const getChannels = async (slug: Category = 'just-chatting') =>
 
 export const getClips = async (slug: Category = 'just-chatting') =>
   cache.clips[slug] || (cache.clips = await fetchClips())[slug];
+
+export const getVideos = async (channelLogin: string) =>
+  cache.videos[channelLogin] ||
+  (cache.videos[channelLogin] = await fetchVideos(channelLogin));
