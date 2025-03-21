@@ -363,51 +363,6 @@ export interface ChannelVideoShelvesQueryData {
   };
 }
 
-export interface ClipsActionButtonsClip {
-  id: string;
-  title: string;
-  videoOffsetSeconds: null | number;
-  durationSeconds: number;
-  viewCount: number;
-  language: string;
-  isFeatured: boolean;
-  isPublished: boolean;
-  createdAt: string;
-  broadcast: {
-    id: string;
-    __typename: 'Broadcast';
-  };
-  broadcaster: null | {
-    id: string;
-    login: string;
-    __typename: 'User';
-  };
-  curator: null | {
-    id: string;
-    __typename: 'User';
-  };
-  game: null | {
-    id: string;
-    displayName: string;
-    __typename: 'Game';
-  };
-  video: null | {
-    id: string;
-    broadcastType: 'ARCHIVE' | 'HIGHLIGHT';
-    title: null | string;
-    __typename: 'Video';
-  };
-  __typename: 'Clip';
-}
-
-export interface ClipsActionButtonsVariables {
-  slug: string;
-}
-
-export interface ClipsActionButtonsData {
-  clip: null | ClipsActionButtonsClip;
-}
-
 export interface ClipsCardsGameClip {
   id: string;
   slug: string;
@@ -1544,7 +1499,6 @@ export type BrowsePageAllDirectoriesResponse = QueryResponse<BrowsePageAllDirect
 export type ChannelRootAboutPanelResponse = QueryResponse<ChannelRootAboutPanelData, 'ChannelRoot_AboutPanel'>;
 export type ChannelShellResponse = QueryResponse<ChannelShellData, 'ChannelShell'>;
 export type ChannelVideoShelvesQueryResponse = QueryResponse<ChannelVideoShelvesQueryData, 'ChannelVideoShelvesQuery'>;
-export type ClipsActionButtonsResponse = QueryResponse<ClipsActionButtonsData, 'ClipsActionButtons'>;
 export type ClipsCardsGameResponse = QueryResponse<ClipsCardsGameData, 'ClipsCards__Game'>;
 export type ClipsCardsUserResponse = QueryResponse<ClipsCardsUserData, 'ClipsCards__User'>;
 export type ClipsDownloadButtonResponse = QueryResponse<ClipsDownloadButtonData, 'ClipsDownloadButton'>;
@@ -1569,7 +1523,6 @@ export interface QueryResponseMap {
   ChannelRoot_AboutPanel: ChannelRootAboutPanelResponse;
   ChannelShell: ChannelShellResponse;
   ChannelVideoShelvesQuery: ChannelVideoShelvesQueryResponse;
-  ClipsActionButtons: ClipsActionButtonsResponse;
   ClipsCards__Game: ClipsCardsGameResponse;
   ClipsCards__User: ClipsCardsUserResponse;
   ClipsDownloadButton: ClipsDownloadButtonResponse;

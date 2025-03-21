@@ -104,7 +104,6 @@ console.log(responses);
 * ChannelRoot_AboutPanel
 * ChannelShell
 * ChannelVideoShelvesQuery
-* ClipsActionButtons
 * ClipsCards__Game
 * ClipsCards__User
 * ClipsDownloadButton

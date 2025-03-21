@@ -6,7 +6,6 @@ export * from './src/queries/BrowsePage_AllDirectories/query.ts';
 export * from './src/queries/ChannelRoot_AboutPanel/query.ts';
 export * from './src/queries/ChannelShell/query.ts';
 export * from './src/queries/ChannelVideoShelvesQuery/query.ts';
-export * from './src/queries/ClipsActionButtons/query.ts';
 export * from './src/queries/ClipsCards__Game/query.ts';
 export * from './src/queries/ClipsCards__User/query.ts';
 export * from './src/queries/ClipsDownloadButton/query.ts';
