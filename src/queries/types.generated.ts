@@ -73,6 +73,9 @@ export interface ChannelRootUser {
           id: string;
           name: string;
           title: string;
+          /**
+           * Can also be a `mailto:` url
+           */
           url: string;
           __typename: 'SocialMedia';
         }[];
@@ -559,6 +562,9 @@ export interface ClipsDownloadButtonClip {
     __typename: 'PlaybackAccessToken';
   };
   videoQualities: {
+    /**
+     * Can be `""` if quality is not generated yet
+     */
     sourceURL: string;
     __typename: 'ClipVideoQuality';
   }[];
@@ -780,14 +786,45 @@ export interface GetPinnedChatMessage {
             userID: string;
             login: string;
             __typename: 'User';
+          }
+        | {
+            bitsAmount: number;
+            prefix: string;
+            tier: number;
+            __typename: 'CheermoteToken';
           };
       text: string;
       __typename: 'MessageFragment';
     }[];
     __typename: 'MessageContent';
   };
-  parentMessage: null;
-  threadParentMessage: null;
+  parentMessage: null | {
+    id: string;
+    sentAt: string;
+    content: {
+      text: string;
+      __typename: 'MessageContent';
+    };
+    sender: {
+      id: string;
+      displayName: string;
+      __typename: 'User';
+    };
+    __typename: 'Message';
+  };
+  threadParentMessage: null | {
+    id: string;
+    content: {
+      text: string;
+      __typename: 'MessageContent';
+    };
+    sender: {
+      id: string;
+      displayName: string;
+      __typename: 'User';
+    };
+    __typename: 'Message';
+  };
   sender: {
     id: string;
     chatColor: null | string;
@@ -1230,6 +1267,9 @@ export interface ShareClipRenderStatusClipAsset {
   videoQualities: {
     frameRate: number;
     quality: string;
+    /**
+     * Can be `""` if quality is not generated yet
+     */
     sourceURL: string;
     __typename: 'ClipVideoQuality';
   }[];
@@ -1335,6 +1375,9 @@ export interface ShareClipRenderStatusClip {
     __typename: 'Video';
   };
   videoQualities: {
+    /**
+     * Can be `""` if quality is not generated yet
+     */
     sourceURL: string;
     __typename: 'ClipVideoQuality';
   }[];
@@ -1443,6 +1486,9 @@ export interface VideoAccessTokenClipData {
     videoQualities: {
       frameRate: number;
       quality: string;
+      /**
+       * Can be `""` if quality is not generated yet
+       */
       sourceURL: string;
       __typename: 'ClipVideoQuality';
     }[];

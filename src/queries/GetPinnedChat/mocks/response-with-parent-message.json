@@ -1,0 +1,142 @@
+{
+  "data": {
+    "channel": {
+      "id": "11692694",
+      "pinnedChatMessages": {
+        "edges": [
+          {
+            "node": {
+              "id": "abf3b52b-6000-4cd4-ab95-361c1f133de1",
+              "type": "MOD",
+              "pinnedMessage": {
+                "id": "18c8aacf-3c6c-4eb4-8f06-51449480cc2b",
+                "content": {
+                  "text": "@冬雨 立即預約，開啟屬於你的勇者之旅： https://drc-tw.onelink.me/SlnJ/onfx4izn(emoji) 《龍族幻想：勇者集結》是龍族幻想系列最新卡牌RPG力作。現代勇 者的都市屠龍冒險，即將啟程！加入官方社群，查看更多遊戲資訊和活動： https://www.facebook.com/DragonRajaReRise https://discord.gg/Hgfn5HZyvA",
+                  "fragments": [
+                    {
+                      "content": {
+                        "userID": "8838201",
+                        "login": "y204682005",
+                        "__typename": "User"
+                      },
+                      "text": "@冬雨",
+                      "__typename": "MessageFragment"
+                    },
+                    {
+                      "content": null,
+                      "text": " 立即預約，開啟屬於你的勇者之旅： ",
+                      "__typename": "MessageFragment"
+                    },
+                    {
+                      "content": null,
+                      "text": "https://drc-tw.onelink.me/SlnJ/onfx4izn(emoji)",
+                      "__typename": "MessageFragment"
+                    },
+                    {
+                      "content": null,
+                      "text": " 《龍族幻想：勇者集結》是龍族幻想系列最新卡牌RPG力作。現代勇者的都市屠龍冒險，即將啟程！加入官方社群，查看更多遊戲資訊和活動： ",
+                      "__typename": "MessageFragment"
+                    },
+                    {
+                      "content": null,
+                      "text": "https://www.facebook.com/DragonRajaReRise",
+                      "__typename": "MessageFragment"
+                    },
+                    {
+                      "content": null,
+                      "text": " ",
+                      "__typename": "MessageFragment"
+                    },
+                    {
+                      "content": null,
+                      "text": "https://discord.gg/Hgfn5HZyvA",
+                      "__typename": "MessageFragment"
+                    }
+                  ],
+                  "__typename": "MessageContent"
+                },
+                "parentMessage": {
+                  "id": "8828a3ba-6c79-4a8b-8f0b-e185b981ccfb",
+                  "content": {
+                    "text": "!龍族",
+                    "__typename": "MessageContent"
+                  },
+                  "sentAt": "2025-03-21T12:52:15.832863832Z",
+                  "sender": {
+                    "id": "8838201",
+                    "displayName": "冬雨",
+                    "__typename": "User"
+                  },
+                  "__typename": "Message"
+                },
+                "threadParentMessage": {
+                  "id": "8828a3ba-6c79-4a8b-8f0b-e185b981ccfb",
+                  "content": {
+                    "text": "!龍族",
+                    "__typename": "MessageContent"
+                  },
+                  "sender": {
+                    "id": "8838201",
+                    "displayName": "冬雨",
+                    "__typename": "User"
+                  },
+                  "__typename": "Message"
+                },
+                "sentAt": "2025-03-21T12:52:16.018841504Z",
+                "sender": {
+                  "id": "1564983",
+                  "chatColor": "#54BC75",
+                  "displayName": "Moobot",
+                  "displayBadges": [
+                    {
+                      "id": "bW9kZXJhdG9yOzE7",
+                      "setID": "moderator",
+                      "version": "1",
+                      "__typename": "Badge"
+                    },
+                    {
+                      "id": "c3Vic2NyaWJlcjsxMjsxMTY5MjY5NA==",
+                      "setID": "subscriber",
+                      "version": "12",
+                      "__typename": "Badge"
+                    },
+                    {
+                      "id": "cGFydG5lcjsxOw==",
+                      "setID": "partner",
+                      "version": "1",
+                      "__typename": "Badge"
+                    }
+                  ],
+                  "__typename": "User"
+                },
+                "__typename": "Message"
+              },
+              "startsAt": "2025-03-21T12:52:17Z",
+              "updatedAt": "2025-03-21T12:52:19Z",
+              "endsAt": null,
+              "pinnedBy": {
+                "id": "8838201",
+                "displayName": "冬雨",
+                "__typename": "User"
+              },
+              "__typename": "PinnedChatMessage"
+            },
+            "cursor": "",
+            "__typename": "PinnedChatMessageEdge"
+          }
+        ],
+        "pageInfo": {
+          "hasNextPage": false,
+          "__typename": "PageInfo"
+        },
+        "__typename": "PinnedChatMessageConnection"
+      },
+      "__typename": "Channel"
+    }
+  },
+  "extensions": {
+    "durationMilliseconds": 75,
+    "operationName": "GetPinnedChat",
+    "requestID": "01JPG2537MSP3RKBXNFVB71329"
+  }
+}

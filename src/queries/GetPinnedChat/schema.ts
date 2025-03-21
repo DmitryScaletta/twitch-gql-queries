@@ -18,6 +18,18 @@ export const VariablesSchema = buildObject(
   { $id: `${displayName}Variables` },
 );
 
+const ParentMessageSchema = buildObject({
+  ...pick(schemas.Message, ['id', 'sentAt']),
+  content: buildObject(pick(schemas.MessageContent, ['text'])),
+  sender: buildObject(pick(schemas.User, ['id', 'displayName'])),
+});
+
+const ThreadParentMessageSchema = buildObject({
+  ...pick(schemas.Message, ['id']),
+  content: buildObject(pick(schemas.MessageContent, ['text'])),
+  sender: buildObject(pick(schemas.User, ['id', 'displayName'])),
+});
+
 export const MessageSchema = buildObject(
   {
     ...pick(schemas.Message, ['id', 'sentAt']),
@@ -27,9 +39,8 @@ export const MessageSchema = buildObject(
         buildObject(pick(schemas.MessageFragment, ['content', 'text'])),
       ),
     }),
-    // TODO: find types
-    parentMessage: T.Union([T.Null()]),
-    threadParentMessage: T.Union([T.Null()]),
+    parentMessage: T.Union([T.Null(), ParentMessageSchema]),
+    threadParentMessage: T.Union([T.Null(), ThreadParentMessageSchema]),
     sender: buildObject({
       ...pick(schemas.User, ['id', 'chatColor', 'displayName']),
       displayBadges: T.Array(

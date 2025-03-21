@@ -10,6 +10,7 @@ import {
 
 import resPinnedMessage from './mocks/response-pinned-message.json' with { type: 'json' };
 import resNoPinnedMessage from './mocks/response-no-pinned-message.json' with { type: 'json' };
+import resWithParentMessage from './mocks/response-with-parent-message.json' with { type: 'json' };
 
 describe('GetPinnedChat', () => {
   const validate = createValidate(ResponseSchema, [
@@ -36,4 +37,5 @@ describe('GetPinnedChat', () => {
 
   test('mock: pinned message', () => validate(resPinnedMessage));
   test('mock: no pinned message', () => validate(resNoPinnedMessage));
+  test('mock: with parent message', () => validate(resWithParentMessage));
 });
