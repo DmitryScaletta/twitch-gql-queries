@@ -12,11 +12,22 @@ export const createValidate =
     const errors = [...Value.Errors(ResponseSchema, references, response)];
     if (errors.length > 0) {
       for (const error of errors) {
-        console.log(error.message, error.path, error.value);
+        console.log(error.message, error.path);
+        console.log(JSON.stringify(error.value, null, 2));
       }
     }
     assert.deepEqual(errors, []);
   };
+
+const CATEGORIES = [
+  'just-chatting',
+  'counter-strike',
+  'dota-2',
+  'pubg-battlegrounds',
+  'league-of-legends',
+  'minecraft',
+] as const;
+type Category = (typeof CATEGORIES)[number];
 
 type CacheCategory = { slug: string };
 type CacheChannel = { id: string; login: string };
@@ -24,8 +35,8 @@ type CacheClip = { slug: string };
 
 const cache = {
   categories: null as null | CacheCategory[],
-  channels: new Map<string, CacheChannel[]>(),
-  clips: new Map<string, CacheClip[]>(),
+  channels: {} as Record<string, CacheChannel[]>,
+  clips: {} as Record<string, CacheClip[]>,
 };
 
 const fetchCategories = async (): Promise<CacheCategory[]> => {
@@ -35,47 +46,67 @@ const fetchCategories = async (): Promise<CacheCategory[]> => {
       limit: MAX_QUERIES_PER_REQUEST,
     }),
   ]);
-  return queryResponse.data.directoriesWithTags!.edges.map((category) => ({
+  if (!queryResponse.data.directoriesWithTags) {
+    throw new Error('Cannot fetch categories');
+  }
+  return queryResponse.data.directoriesWithTags.edges.map((category) => ({
     slug: category.node.slug,
   }));
 };
 
-const fetchChannelsByCategory = async (
-  slug: string,
-): Promise<CacheChannel[]> => {
-  const [queryResponse] = await gqlRequest([
-    getQueryDirectoryPageGame({
-      slug,
-      options: { sort: 'VIEWER_COUNT' },
-      sortTypeIsRecency: false,
-      limit: MAX_QUERIES_PER_REQUEST,
-      includeIsDJ: false,
-    }),
-  ]);
-  return queryResponse.data.game!.streams.edges.map((stream) => ({
-    id: stream.node.broadcaster.id,
-    login: stream.node.broadcaster.login,
-  }));
+const fetchChannels = async () => {
+  const responses = await gqlRequest(
+    CATEGORIES.map((slug) =>
+      getQueryDirectoryPageGame({
+        slug,
+        options: { sort: 'VIEWER_COUNT' },
+        sortTypeIsRecency: false,
+        limit: MAX_QUERIES_PER_REQUEST,
+        includeIsDJ: false,
+      }),
+    ),
+  );
+  const result: Record<string, CacheChannel[]> = {};
+  for (let i = 0; i < responses.length; i++) {
+    const response = responses[i];
+    const slug = CATEGORIES[i];
+    if (!response.data.game) {
+      throw new Error(`Cannot fetch channels: ${slug}`);
+    }
+    result[slug] = response.data.game.streams.edges.map((stream) => ({
+      id: stream.node.broadcaster.id,
+      login: stream.node.broadcaster.login,
+    }));
+  }
+  return result;
 };
 
-const fetchClipsByCategory = async (
-  categorySlug: string,
-): Promise<CacheClip[]> => {
-  const [queryResponse] = await gqlRequest([
-    getQueryClipsCardsGame({ categorySlug, limit: MAX_QUERIES_PER_REQUEST }),
-  ]);
-  return queryResponse.data.game!.clips!.edges.map((clip) => ({
-    slug: clip.node.slug,
-  }));
+const fetchClips = async () => {
+  const responses = await gqlRequest(
+    CATEGORIES.map((categorySlug) =>
+      getQueryClipsCardsGame({ categorySlug, limit: MAX_QUERIES_PER_REQUEST }),
+    ),
+  );
+
+  const result: Record<string, CacheClip[]> = {};
+  for (let i = 0; i < responses.length; i++) {
+    const response = responses[i];
+    const slug = CATEGORIES[i];
+    if (!response.data) {
+      throw new Error(`Cannot fetch clips: ${slug}`);
+    }
+    result[slug] = response.data.game!.clips!.edges.map((clip) => ({
+      slug: clip.node.slug,
+    }));
+  }
+  return result;
 };
 
 export const getCategories = async () =>
   cache.categories || (cache.categories = await fetchCategories());
 
-export const getChannels = async (slug = 'just-chatting') =>
-  cache.channels.get(slug)! ||
-  cache.channels.set(slug, await fetchChannelsByCategory(slug)).get(slug);
+export const getChannels = async (slug: Category = 'just-chatting') =>
+  cache.channels[slug] || (cache.channels = await fetchChannels())[slug];
 
-export const getClips = async (slug = 'just-chatting') =>
-  cache.clips.get(slug)! ||
-  cache.clips.set(slug, await fetchClipsByCategory(slug)).get(slug);
+export const getClips = async (slug: Category = 'just-chatting') =>
+  cache.clips[slug] || (cache.clips = await fetchClips())[slug];
