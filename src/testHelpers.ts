@@ -1,10 +1,15 @@
 import assert from 'node:assert';
-import type { TSchema } from '@sinclair/typebox';
+import { FormatRegistry, type TSchema } from '@sinclair/typebox';
 import { Value } from '@sinclair/typebox/value';
+import { IsDateTime } from '../lib/typebox-formats/date-time.ts';
+import { IsUrl } from '../lib/typebox-formats/url.ts';
 import { gqlRequest, MAX_QUERIES_PER_REQUEST } from './gqlRequest.ts';
 import { getQueryDirectoryPageGame } from './queries/DirectoryPage_Game/query.ts';
 import { getQueryClipsCardsGame } from './queries/ClipsCards__Game/query.ts';
 import { getQueryBowsePageAllDirectories } from './queries/BrowsePage_AllDirectories/query.ts';
+
+FormatRegistry.Set('date-time', IsDateTime);
+FormatRegistry.Set('uri', IsUrl);
 
 export const createValidate =
   (ResponseSchema: TSchema, references: TSchema[] = []) =>
