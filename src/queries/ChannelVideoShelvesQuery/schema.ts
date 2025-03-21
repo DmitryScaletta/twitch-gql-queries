@@ -99,17 +99,10 @@ const CollectionSchema = buildObject({
   id: T.String(),
   description: T.String(),
   owner: buildObject(pick(schemas.User, ['id', 'login'])),
-  thumbnailURL: T.Union([
-    T.Null(),
-    T.String({
-      // format: 'uri',
-    }),
-  ]),
+  thumbnailURL: T.Union([T.Null(), T.String({ format: 'uri' })]),
   title: T.String(),
   type: T.Union([T.Literal('DEFAULT')]),
-  updatedAt: T.String({
-    // format: 'date-time',
-  }),
+  updatedAt: T.String({ format: 'date-time' }),
   lengthSeconds: T.Number(),
   items: buildObject({
     totalCount: T.Number(),

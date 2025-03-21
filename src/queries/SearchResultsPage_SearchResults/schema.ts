@@ -65,12 +65,7 @@ export const ChannelSchema = buildObject(
     // if no last broadcast the response is: { id: null, startedAt: null }
     lastBroadcast: buildObject({
       id: T.Union([T.Null(), T.String()]),
-      startedAt: T.Union([
-        T.Null(),
-        T.String({
-          // format: 'date-time',
-        }),
-      ]),
+      startedAt: T.Union([T.Null(), T.String({ format: 'date-time' })]),
       __typename: T.Literal('Broadcast'),
     }),
     channel: buildObject({

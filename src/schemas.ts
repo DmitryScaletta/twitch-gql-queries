@@ -38,18 +38,14 @@ export const SocialMedia = {
   id: T.String(),
   name: T.String(),
   title: T.String(),
-  url: T.String({
-    // format: 'uri'
-  }),
+  url: T.String({ description: 'Can also be a `mailto:` url' }),
   __typename: T.Literal('SocialMedia'),
 } satisfies Properties;
 
 export const Broadcast = {
   id: T.String(),
   title: T.String(),
-  startedAt: T.String({
-    // format: 'date-time',
-  }),
+  startedAt: T.String({ format: 'date-time' }),
   __typename: T.Literal('Broadcast'),
 } satisfies Properties;
 
@@ -63,15 +59,11 @@ export const Stream = {
   id: T.String(),
   title: T.String(),
   viewersCount: T.Number(),
-  previewImageURL: T.String({
-    // format: 'uri',
-  }),
+  previewImageURL: T.String({ format: 'uri' }),
   // TODO: are there any other types?
   type: T.Literal('live'),
   restrictionType: T.Union([T.Null()]),
-  createdAt: T.String({
-    // format: 'date-time',
-  }),
+  createdAt: T.String({ format: 'date-time' }),
   __typename: T.Literal('Stream'),
 } satisfies Properties;
 
@@ -94,20 +86,12 @@ export const Video = {
   broadcastType: T.Union([T.Literal('ARCHIVE'), T.Literal('HIGHLIGHT')]),
   lengthSeconds: T.Number(),
   viewCount: T.Number(),
-  previewThumbnailURL: T.String({
-    // format: 'uri',
-  }),
-  animatedPreviewURL: T.String({
-    // format: 'uri',
-  }),
+  previewThumbnailURL: T.String({ format: 'uri' }),
+  animatedPreviewURL: T.String({ format: 'uri' }),
   // TODO: find all possible statuses
   status: T.Union([T.Literal('RECORDED'), T.Literal('RECORDING')]),
-  createdAt: T.String({
-    // format: 'date-time',
-  }),
-  publishedAt: T.String({
-    // format: 'date-time',
-  }),
+  createdAt: T.String({ format: 'date-time' }),
+  publishedAt: T.String({ format: 'date-time' }),
   __typename: T.Literal('Video'),
 } satisfies Properties;
 
@@ -125,19 +109,13 @@ export const VideoSelfEdge = {
 export const Clip = {
   id: T.String(),
   slug: T.String(),
-  url: T.String({
-    // format: 'uri',
-  }),
-  embedURL: T.String({
-    // format: 'uri',
-  }),
+  url: T.String({ format: 'uri' }),
+  embedURL: T.String({ format: 'uri' }),
   title: T.String(),
   viewCount: T.Number(),
   videoOffsetSeconds: T.Union([T.Null(), T.Number()]),
   durationSeconds: T.Number(),
-  thumbnailURL: T.String({
-    // format: 'uri',
-  }),
+  thumbnailURL: T.String({ format: 'uri' }),
   language: T.String(),
   champBadge: T.Null(),
   isFeatured: T.Boolean(),
@@ -151,14 +129,10 @@ export const ClipAsset = {
   id: T.String(),
   aspectRatio: T.Number(),
   type: T.Union([T.Literal('SOURCE'), T.Literal('RECOMPOSED')]),
-  createdAt: T.String({
-    // format: 'date-time',
-  }),
+  createdAt: T.String({ format: 'date-time' }),
   // TODO: find all possible statuses
   creationState: T.Union([T.Literal('CREATED')]),
-  thumbnailURL: T.String({
-    // format: 'uri',
-  }),
+  thumbnailURL: T.String({ format: 'uri' }),
   __typename: T.Literal('ClipAsset'),
 } satisfies Properties;
 
@@ -166,7 +140,7 @@ export const ClipVideoQuality = {
   frameRate: T.Number(),
   quality: T.String(),
   sourceURL: T.String({
-    // format: 'uri',
+    description: 'Can be `""` if quality is not generated yet',
   }),
   __typename: T.Literal('ClipVideoQuality'),
 } satisfies Properties;
@@ -182,19 +156,10 @@ export const Game = {
   slug: T.String(),
   displayName: T.String(),
   name: T.String(),
-  avatarURL: T.String({
-    // format: 'uri'
-  }),
-  boxArtURL: T.String({
-    // format: 'uri',
-  }),
+  avatarURL: T.String({ format: 'uri' }),
+  boxArtURL: T.String({ format: 'uri' }),
   viewersCount: T.Union([T.Null(), T.Number()]),
-  originalReleaseDate: T.Union([
-    T.Null(),
-    T.String({
-      // format: 'date-time'
-    }),
-  ]),
+  originalReleaseDate: T.Union([T.Null(), T.String({ format: 'date-time' })]),
   __typename: T.Literal('Game'),
 } satisfies Properties;
 
@@ -236,12 +201,7 @@ export const Schedule = {
 export const ScheduleSegment = {
   id: T.String(),
   startAt: T.String(),
-  endAt: T.Union([
-    T.Null(),
-    T.String({
-      // format: 'date-time',
-    }),
-  ]),
+  endAt: T.Union([T.Null(), T.String({ format: 'date-time' })]),
   title: T.String(),
   hasReminder: T.Boolean(),
   __typename: T.Literal('ScheduleSegment'),
@@ -249,9 +209,7 @@ export const ScheduleSegment = {
 
 export const Message = {
   id: T.String(),
-  sentAt: T.String({
-    // format: 'date-time',
-  }),
+  sentAt: T.String({ format: 'date-time' }),
   __typename: T.Literal('Message'),
 } satisfies Properties;
 
@@ -272,6 +230,12 @@ export const MessageFragment = {
       login: T.String(),
       __typename: T.Literal('User'),
     }),
+    buildObject({
+      bitsAmount: T.Number(),
+      prefix: T.String(),
+      tier: T.Number(),
+      __typename: T.Literal('CheermoteToken'),
+    }),
   ]),
   text: T.String(),
   __typename: T.Literal('MessageFragment'),
@@ -281,18 +245,9 @@ export const PinnedChatMessage = {
   id: T.String(),
   // TODO: BROADCASTER?
   type: T.Union([T.Literal('MOD')]),
-  startsAt: T.String({
-    // format: 'date-time',
-  }),
-  updatedAt: T.String({
-    // format: 'date-time',
-  }),
-  endsAt: T.Union([
-    T.Null(),
-    T.String({
-      // format: 'date-time',
-    }),
-  ]),
+  startsAt: T.String({ format: 'date-time' }),
+  updatedAt: T.String({ format: 'date-time' }),
+  endsAt: T.Union([T.Null(), T.String({ format: 'date-time' })]),
   __typename: T.Literal('PinnedChatMessage'),
 } satisfies Properties;
 
@@ -301,26 +256,16 @@ export const Badge = {
   setID: T.String(),
   version: T.String(),
   title: T.String(),
-  image1x: T.String({
-    // format: 'uri',
-  }),
-  image2x: T.String({
-    // format: 'uri',
-  }),
-  image4x: T.String({
-    // format: 'uri',
-  }),
+  image1x: T.String({ format: 'uri' }),
+  image2x: T.String({ format: 'uri' }),
+  image4x: T.String({ format: 'uri' }),
   clickAction: T.Union([
     T.Null(),
     T.Literal('VISIT_URL'),
     T.Literal('SUBSCRIBE'),
     T.Literal('GET_TURBO'),
   ]),
-  clickURL: T.Union([
-    T.Null(),
-    T.String({
-      // format: 'uri',
-    }),
-  ]),
+  // Can be: "https://www.twitch.tv/directory/category/destiny-2\t"
+  clickURL: T.Union([T.Null(), T.String()]),
   __typename: T.Literal('Badge'),
 } satisfies Properties;
