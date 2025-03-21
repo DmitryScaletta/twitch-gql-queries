@@ -32,12 +32,9 @@ export const UserSchema = buildObject(
   { $id: `${displayName}User` },
 );
 
-export const DataSchema = T.Object(
+export const DataSchema = buildObject(
   { user: T.Union([T.Null(), LegacyRef(UserSchema)]) },
-  {
-    $id: `${displayName}Data`,
-    additionalProperties: false,
-  },
+  { $id: `${displayName}Data` },
 );
 
 export const ResponseSchema = getResponseSchema(DataSchema, name);

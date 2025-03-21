@@ -19,26 +19,20 @@ export const SortSchema = T.Union(
 export const VariablesSchema = buildObject(
   {
     limit: T.Number(),
-    options: T.Object(
-      {
-        recommendationsContext: T.Optional(
-          T.Union([
-            T.Null(),
-            T.Object(
-              {
-                platform: T.Optional(
-                  T.Union([T.Null(), T.Literal('web'), T.String()]),
-                ),
-              },
-              { additionalProperties: false },
+    options: buildObject({
+      recommendationsContext: T.Optional(
+        T.Union([
+          T.Null(),
+          buildObject({
+            platform: T.Optional(
+              T.Union([T.Null(), T.Literal('web'), T.String()]),
             ),
-          ]),
-        ),
-        sort: LegacyRef(SortSchema),
-        tags: T.Optional(T.Union([T.Array(T.Null(), T.String())])),
-      },
-      { additionalProperties: false },
-    ),
+          }),
+        ]),
+      ),
+      sort: LegacyRef(SortSchema),
+      tags: T.Optional(T.Union([T.Null(), T.Array(T.String())])),
+    }),
     cursor: T.Optional(T.Union([T.Null(), T.String()])),
   },
   { $id: `${displayName}Variables` },

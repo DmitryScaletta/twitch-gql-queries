@@ -27,7 +27,7 @@ export interface BrowsePageAllDirectoriesVariables {
       platform?: null | 'web' | string;
     };
     sort: BrowsePageSort;
-    tags?: null[];
+    tags?: null | string[];
   };
   cursor?: null | string;
 }
@@ -423,7 +423,7 @@ export interface ClipsCardsGameVariables {
   categorySlug: string;
   limit: number;
   criteria?: {
-    languages?: null[];
+    languages?: null | string[];
     filter?: null | ClipsCardsFilter;
     shouldFilterByDiscoverySetting?: null | boolean;
   };

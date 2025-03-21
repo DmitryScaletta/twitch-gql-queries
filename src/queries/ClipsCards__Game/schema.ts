@@ -27,7 +27,7 @@ export const VariablesSchema = buildObject(
     limit: T.Number(),
     criteria: T.Optional(
       buildObject({
-        languages: T.Optional(T.Union([T.Array(T.Null(), T.String())])),
+        languages: T.Optional(T.Union([T.Null(), T.Array(T.String())])),
         filter: T.Optional(T.Union([T.Null(), LegacyRef(FilterSchema)])),
         shouldFilterByDiscoverySetting: T.Optional(
           T.Union([T.Null(), T.Boolean()]),
