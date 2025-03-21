@@ -280,7 +280,7 @@ export const MessageFragment = {
 export const PinnedChatMessage = {
   id: T.String(),
   // TODO: BROADCASTER?
-  type: T.Union([T.Literal('MOD'), T.String()]),
+  type: T.Union([T.Literal('MOD')]),
   startsAt: T.String({
     // format: 'date-time',
   }),

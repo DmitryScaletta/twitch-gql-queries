@@ -481,7 +481,7 @@ export interface ClipsCardsGameData {
     name: string;
     displayName: string;
     clips: null | {
-      banners: null | ('MAY_CONTAIN_MATURE_CONTENT' | string)[];
+      banners: null | 'MAY_CONTAIN_MATURE_CONTENT'[];
       pageInfo: {
         hasNextPage: boolean;
         __typename: 'PageInfo';
@@ -623,7 +623,7 @@ export interface DirectoryPageGameGame {
   name: string;
   displayName: string;
   streams: {
-    banners: null | ('MAY_CONTAIN_MATURE_CONTENT' | string)[];
+    banners: null | 'MAY_CONTAIN_MATURE_CONTENT'[];
     edges: {
       cursor: null | string;
       trackingID: null | string;
@@ -850,7 +850,7 @@ export interface GetPinnedChatMessage {
 
 export interface GetPinnedChatPinnedChatMessage {
   id: string;
-  type: 'MOD' | string;
+  type: 'MOD';
   startsAt: string;
   updatedAt: string;
   endsAt: null | string;

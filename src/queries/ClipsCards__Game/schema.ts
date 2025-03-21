@@ -104,7 +104,7 @@ export const ClipSchema = buildObject(
 const ClipsSchema = buildObject({
   banners: T.Union([
     T.Null(),
-    T.Array(T.Union([T.Literal('MAY_CONTAIN_MATURE_CONTENT'), T.String()])),
+    T.Array(T.Union([T.Literal('MAY_CONTAIN_MATURE_CONTENT')])),
   ]),
   pageInfo: buildObject(pick(schemas.PageInfo, ['hasNextPage'])),
   edges: T.Array(

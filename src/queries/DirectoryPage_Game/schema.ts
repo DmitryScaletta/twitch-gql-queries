@@ -95,7 +95,7 @@ export const GameSchema = buildObject(
     streams: buildObject({
       banners: T.Union([
         T.Null(),
-        T.Array(T.Union([T.Literal('MAY_CONTAIN_MATURE_CONTENT'), T.String()])),
+        T.Array(T.Union([T.Literal('MAY_CONTAIN_MATURE_CONTENT')])),
       ]),
       edges: T.Array(
         buildObject({
