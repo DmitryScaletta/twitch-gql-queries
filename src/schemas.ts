@@ -1,5 +1,7 @@
-import { Type as T, type TProperties } from '@sinclair/typebox';
+import { Type as T, type TLiteral, type TProperties } from '@sinclair/typebox';
 import { buildObject } from './schema.ts';
+
+type Properties = TProperties & { __typename: TLiteral<string> };
 
 export const User = {
   id: T.String(),
@@ -12,7 +14,7 @@ export const User = {
   chatColor: T.Union([T.Null(), T.String()]),
   isPartner: T.Boolean(),
   __typename: T.Literal('User'),
-} satisfies TProperties;
+} satisfies Properties;
 
 export const UserRoles = {
   isPartner: T.Boolean(),
@@ -20,17 +22,17 @@ export const UserRoles = {
   isStaff: T.Union([T.Null(), T.Boolean()]),
   isParticipatingDJ: T.Boolean(),
   __typename: T.Literal('UserRoles'),
-} satisfies TProperties;
+} satisfies Properties;
 
 export const FollowerConnection = {
   totalCount: T.Number(),
   __typename: T.Literal('FollowerConnection'),
-} satisfies TProperties;
+} satisfies Properties;
 
 export const Channel = {
   id: T.String(),
   __typename: T.Literal('Channel'),
-};
+} satisfies Properties;
 
 export const SocialMedia = {
   id: T.String(),
@@ -40,7 +42,7 @@ export const SocialMedia = {
     // format: 'uri'
   }),
   __typename: T.Literal('SocialMedia'),
-} satisfies TProperties;
+} satisfies Properties;
 
 export const Broadcast = {
   id: T.String(),
@@ -49,13 +51,13 @@ export const Broadcast = {
     // format: 'date-time',
   }),
   __typename: T.Literal('Broadcast'),
-} satisfies TProperties;
+} satisfies Properties;
 
 export const BroadcastSettings = {
   id: T.String(),
   title: T.String(),
   __typename: T.Literal('BroadcastSettings'),
-} satisfies TProperties;
+} satisfies Properties;
 
 export const Stream = {
   id: T.String(),
@@ -71,20 +73,20 @@ export const Stream = {
     // format: 'date-time',
   }),
   __typename: T.Literal('Stream'),
-} satisfies TProperties;
+} satisfies Properties;
 
 export const StreamEdge = {
   cursor: T.Union([T.Null(), T.String()]),
   trackingID: T.Union([T.Null(), T.String()]),
   __typename: T.Literal('StreamEdge'),
-} satisfies TProperties;
+} satisfies Properties;
 
 export const Team = {
   id: T.String(),
   name: T.String(),
   displayName: T.String(),
   __typename: T.Literal('Team'),
-} satisfies TProperties;
+} satisfies Properties;
 
 export const Video = {
   id: T.String(),
@@ -107,18 +109,18 @@ export const Video = {
     // format: 'date-time',
   }),
   __typename: T.Literal('Video'),
-} satisfies TProperties;
+} satisfies Properties;
 
 export const VideoEdge = {
   cursor: T.Union([T.Null(), T.String()]),
   __typename: T.Literal('VideoEdge'),
-} satisfies TProperties;
+} satisfies Properties;
 
 export const VideoSelfEdge = {
   isRestricted: T.Boolean(),
   viewingHistory: T.Null(),
   __typename: T.Literal('VideoSelfEdge'),
-} satisfies TProperties;
+} satisfies Properties;
 
 export const Clip = {
   id: T.String(),
@@ -143,7 +145,7 @@ export const Clip = {
   isViewerEditRestricted: T.Boolean(),
   createdAt: T.String(),
   __typename: T.Literal('Clip'),
-} satisfies TProperties;
+} satisfies Properties;
 
 export const ClipAsset = {
   id: T.String(),
@@ -158,7 +160,7 @@ export const ClipAsset = {
     // format: 'uri',
   }),
   __typename: T.Literal('ClipAsset'),
-} satisfies TProperties;
+} satisfies Properties;
 
 export const ClipVideoQuality = {
   frameRate: T.Number(),
@@ -167,13 +169,13 @@ export const ClipVideoQuality = {
     // format: 'uri',
   }),
   __typename: T.Literal('ClipVideoQuality'),
-} satisfies TProperties;
+} satisfies Properties;
 
 export const PlaybackAccessToken = {
   signature: T.String(),
   value: T.String(),
   __typename: T.Literal('PlaybackAccessToken'),
-} satisfies TProperties;
+} satisfies Properties;
 
 export const Game = {
   id: T.String(),
@@ -194,13 +196,13 @@ export const Game = {
     }),
   ]),
   __typename: T.Literal('Game'),
-} satisfies TProperties;
+} satisfies Properties;
 
 export const GameEdge = {
   cursor: T.String(),
   trackingID: T.Union([T.Null(), T.String()]),
   __typename: T.Literal('GameEdge'),
-} satisfies TProperties;
+} satisfies Properties;
 
 export const Tag = {
   id: T.String(),
@@ -208,28 +210,28 @@ export const Tag = {
   localizedName: T.String(),
   tagName: T.String(),
   __typename: T.Literal('Tag'),
-} satisfies TProperties;
+} satisfies Properties;
 
 export const FreeformTag = {
   id: T.String(),
   name: T.String(),
   __typename: T.Literal('FreeformTag'),
-} satisfies TProperties;
+} satisfies Properties;
 
 export const PreviewThumbnailProperties = {
   blurReason: T.Union([T.Literal('BLUR_NOT_REQUIRED')]),
   __typename: T.Literal('PreviewThumbnailProperties'),
-} satisfies TProperties;
+} satisfies Properties;
 
 export const PageInfo = {
   hasNextPage: T.Boolean(),
   __typename: T.Literal('PageInfo'),
-} satisfies TProperties;
+} satisfies Properties;
 
 export const Schedule = {
   id: T.String(),
   __typename: T.Literal('Schedule'),
-} satisfies TProperties;
+} satisfies Properties;
 
 export const ScheduleSegment = {
   id: T.String(),
@@ -243,7 +245,7 @@ export const ScheduleSegment = {
   title: T.String(),
   hasReminder: T.Boolean(),
   __typename: T.Literal('ScheduleSegment'),
-} satisfies TProperties;
+} satisfies Properties;
 
 export const Message = {
   id: T.String(),
@@ -251,12 +253,12 @@ export const Message = {
     // format: 'date-time',
   }),
   __typename: T.Literal('Message'),
-} satisfies TProperties;
+} satisfies Properties;
 
 export const MessageContent = {
   text: T.String(),
   __typename: T.Literal('MessageContent'),
-} satisfies TProperties;
+} satisfies Properties;
 
 export const MessageFragment = {
   content: T.Union([
@@ -273,7 +275,7 @@ export const MessageFragment = {
   ]),
   text: T.String(),
   __typename: T.Literal('MessageFragment'),
-} satisfies TProperties;
+} satisfies Properties;
 
 export const PinnedChatMessage = {
   id: T.String(),
@@ -292,7 +294,7 @@ export const PinnedChatMessage = {
     }),
   ]),
   __typename: T.Literal('PinnedChatMessage'),
-} satisfies TProperties;
+} satisfies Properties;
 
 export const Badge = {
   id: T.String(),
@@ -321,4 +323,4 @@ export const Badge = {
     }),
   ]),
   __typename: T.Literal('Badge'),
-} satisfies TProperties;
+} satisfies Properties;
