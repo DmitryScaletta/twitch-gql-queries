@@ -1370,7 +1370,7 @@ export interface ShareClipRenderStatusClip {
   };
   video: null | {
     id: string;
-    broadcastType: 'ARCHIVE' | 'HIGHLIGHT';
+    broadcastType: 'ARCHIVE' | 'HIGHLIGHT' | 'UPLOAD';
     title: null | string;
     __typename: 'Video';
   };
@@ -1496,6 +1496,66 @@ export interface VideoAccessTokenClipData {
   };
 }
 
+export interface VideoMetadataUser {
+  id: string;
+  primaryColorHex: null | string;
+  isPartner: boolean;
+  profileImageURL: string;
+  lastBroadcast: {
+    id: null | string;
+    startedAt: null | string;
+    __typename: 'Broadcast';
+  };
+  stream: null | {
+    id: string;
+    viewersCount: number;
+    __typename: 'Stream';
+  };
+  followers: {
+    totalCount: number;
+    __typename: 'FollowerConnection';
+  };
+  __typename: 'User';
+}
+
+export interface VideoMetadataVideo {
+  id: string;
+  title: null | string;
+  description: null | string;
+  previewThumbnailURL: string;
+  createdAt: string;
+  viewCount: number;
+  publishedAt: string;
+  lengthSeconds: number;
+  broadcastType: 'ARCHIVE' | 'HIGHLIGHT' | 'UPLOAD';
+  owner: {
+    id: string;
+    login: string;
+    displayName: string;
+    __typename: 'User';
+  };
+  game: null | {
+    id: string;
+    slug: string;
+    boxArtURL: string;
+    name: string;
+    displayName: string;
+    __typename: 'Game';
+  };
+  __typename: 'Video';
+}
+
+export interface VideoMetadataVariables {
+  channelLogin: '' | string;
+  videoID: string;
+}
+
+export interface VideoMetadataData {
+  user: null | VideoMetadataUser;
+  currentUser: null;
+  video: null | VideoMetadataVideo;
+}
+
 export interface VideoPreviewOverlayVariables {
   login: string;
 }
@@ -1561,6 +1621,7 @@ export type StreamMetadataResponse = QueryResponse<StreamMetadataData, 'StreamMe
 export type UseLiveResponse = QueryResponse<UseLiveData, 'UseLive'>;
 export type UseViewCountResponse = QueryResponse<UseViewCountData, 'UseViewCount'>;
 export type VideoAccessTokenClipResponse = QueryResponse<VideoAccessTokenClipData, 'VideoAccessToken_Clip'>;
+export type VideoMetadataResponse = QueryResponse<VideoMetadataData, 'VideoMetadata'>;
 export type VideoPreviewOverlayResponse = QueryResponse<VideoPreviewOverlayData, 'VideoPreviewOverlay'>;
 export type WatchLivePromptResponse = QueryResponse<WatchLivePromptData, 'WatchLivePrompt'>;
 
@@ -1585,6 +1646,7 @@ export interface QueryResponseMap {
   UseLive: UseLiveResponse;
   UseViewCount: UseViewCountResponse;
   VideoAccessToken_Clip: VideoAccessTokenClipResponse;
+  VideoMetadata: VideoMetadataResponse;
   VideoPreviewOverlay: VideoPreviewOverlayResponse;
   WatchLivePrompt: WatchLivePromptResponse;
 };

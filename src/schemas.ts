@@ -83,7 +83,12 @@ export const Team = {
 export const Video = {
   id: T.String(),
   title: T.Union([T.Null(), T.String()]),
-  broadcastType: T.Union([T.Literal('ARCHIVE'), T.Literal('HIGHLIGHT')]),
+  description: T.Union([T.Null(), T.String()]),
+  broadcastType: T.Union([
+    T.Literal('ARCHIVE'),
+    T.Literal('HIGHLIGHT'),
+    T.Literal('UPLOAD'),
+  ]),
   lengthSeconds: T.Number(),
   viewCount: T.Number(),
   previewThumbnailURL: T.String({ format: 'uri' }),

@@ -1,0 +1,53 @@
+{
+  "data": {
+    "user": {
+      "id": "12826",
+      "primaryColorHex": "5C16C5",
+      "isPartner": true,
+      "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/d5e6ebb4-a245-4ebf-bea6-2183e2f39600-profile_image-70x70.png",
+      "lastBroadcast": {
+        "id": "317752962300",
+        "startedAt": "2025-03-13T20:05:21.080933Z",
+        "__typename": "Broadcast"
+      },
+      "stream": null,
+      "followers": {
+        "totalCount": 2380069,
+        "__typename": "FollowerConnection"
+      },
+      "__typename": "User"
+    },
+    "currentUser": null,
+    "video": {
+      "id": "2097305181",
+      "title": "Highlight: TwitchCon Las Vegas 2023 Guilds at Opening Ceremony",
+      "description": null,
+      "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/343d795dfbc27ce0bd91_twitch_70222790438_8919699766//thumb/thumb2097305181-90x60.jpg",
+      "createdAt": "2024-03-21T18:04:00Z",
+      "viewCount": 1911,
+      "publishedAt": "2024-03-21T18:04:00Z",
+      "lengthSeconds": 621,
+      "broadcastType": "HIGHLIGHT",
+      "owner": {
+        "id": "12826",
+        "login": "twitch",
+        "displayName": "Twitch",
+        "__typename": "User"
+      },
+      "game": {
+        "id": "509663",
+        "slug": "special-events",
+        "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509663-{width}x{height}.jpg",
+        "name": "Special Events",
+        "displayName": "Special Events",
+        "__typename": "Game"
+      },
+      "__typename": "Video"
+    }
+  },
+  "extensions": {
+    "durationMilliseconds": 43,
+    "operationName": "VideoMetadata",
+    "requestID": "01JPX1E6HG32HJXY0EH7MNMMVK"
+  }
+}

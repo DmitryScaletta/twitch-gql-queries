@@ -1,0 +1,53 @@
+{
+  "data": {
+    "user": {
+      "id": "12826",
+      "primaryColorHex": "5C16C5",
+      "isPartner": true,
+      "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/d5e6ebb4-a245-4ebf-bea6-2183e2f39600-profile_image-70x70.png",
+      "lastBroadcast": {
+        "id": "317752962300",
+        "startedAt": "2025-03-13T20:05:21.080933Z",
+        "__typename": "Broadcast"
+      },
+      "stream": null,
+      "followers": {
+        "totalCount": 2380069,
+        "__typename": "FollowerConnection"
+      },
+      "__typename": "User"
+    },
+    "currentUser": null,
+    "video": {
+      "id": "2404782496",
+      "title": "Creator Camp LIVE: Streaming Basics with @Snackless \u0026 @KawaiiGuy",
+      "description": null,
+      "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/4087ab6ee325487ff1cb_twitch_317752962300_1741891679//thumb/thumb0-90x60.jpg",
+      "createdAt": "2025-03-13T18:48:05Z",
+      "viewCount": 163669,
+      "publishedAt": "2025-03-13T18:48:05Z",
+      "lengthSeconds": 4621,
+      "broadcastType": "ARCHIVE",
+      "owner": {
+        "id": "12826",
+        "login": "twitch",
+        "displayName": "Twitch",
+        "__typename": "User"
+      },
+      "game": {
+        "id": "509658",
+        "slug": "just-chatting",
+        "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509658-{width}x{height}.jpg",
+        "name": "Just Chatting",
+        "displayName": "Just Chatting",
+        "__typename": "Game"
+      },
+      "__typename": "Video"
+    }
+  },
+  "extensions": {
+    "durationMilliseconds": 41,
+    "operationName": "VideoMetadata",
+    "requestID": "01JPX19KSSRFKAZ4A39WQ3D0H1"
+  }
+}

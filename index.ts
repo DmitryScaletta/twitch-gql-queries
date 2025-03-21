@@ -22,5 +22,6 @@ export * from './src/queries/StreamMetadata/query.ts';
 export * from './src/queries/UseLive/query.ts';
 export * from './src/queries/UseViewCount/query.ts';
 export * from './src/queries/VideoAccessToken_Clip/query.ts';
+export * from './src/queries/VideoMetadata/query.ts';
 export * from './src/queries/VideoPreviewOverlay/query.ts';
 export * from './src/queries/WatchLivePrompt/query.ts';
