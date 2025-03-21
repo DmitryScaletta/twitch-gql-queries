@@ -2,6 +2,7 @@ import fs from 'node:fs';
 import fsp from 'node:fs/promises';
 import path from 'node:path';
 import { parseArgs } from 'node:util';
+import { gen } from './gen.ts';
 
 const SYNTAX = `Syntax:
 pnpm add-query QueryName [QueryDisplayName]
@@ -107,6 +108,7 @@ const removeQuery = async (queryName: string) => {
       console.log(`* \x1b[33m${filePath}\x1b[0m`);
     }
   }
+  await gen();
 };
 
 const main = async () => {

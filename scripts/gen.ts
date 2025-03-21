@@ -43,7 +43,7 @@ const jsonSchemaToTs = (schema: TSchema) =>
     },
   );
 
-const main = async () => {
+export const gen = async () => {
   const schemaPaths = await getSchemaPaths();
   const schemaImports: Record<string, TSchema>[] = await Promise.all(
     schemaPaths.map((schemaPath) => import(schemaPath)),
@@ -103,4 +103,4 @@ const main = async () => {
   await fsp.writeFile('./src/queries/types.generated.ts', ts);
 };
 
-main();
+gen();
