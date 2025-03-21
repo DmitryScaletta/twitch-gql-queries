@@ -129,7 +129,7 @@ console.log(responses);
 ### Step 1. Generate query template
 
 ```bash
-pnpm new-query QueryName
+pnpm add-query QueryName
 ```
 
 ### Step 2: Add schemas
@@ -161,3 +161,9 @@ If it's impossible to test some cases with real requests, add responses to `src/
 * `mocks/response-banned.json`
 
 Currently banned channels can be found here: [x.com/StreamerBans](https://x.com/StreamerBans).
+
+## Removing query
+
+```bash
+pnpm remove-query QueryName
+```

@@ -29,7 +29,8 @@
   "scripts": {
     "build": "tsup",
     "gen": "node --no-warnings=ExperimentalWarning scripts/gen.ts",
-    "new-query": "node --no-warnings=ExperimentalWarning scripts/new-query.ts",
+    "add-query": "node --no-warnings=ExperimentalWarning scripts/query.ts add",
+    "remove-query": "node --no-warnings=ExperimentalWarning scripts/query.ts remove",
     "test": "node --no-warnings=ExperimentalWarning --test",
     "test:watch": "node --no-warnings=ExperimentalWarning --test --watch",
     "test:types": "pnpm --package=typescript dlx tsc --noEmit --module nodenext --target esnext --allowImportingTsExtensions src/gqlRequest.test-d.ts"
