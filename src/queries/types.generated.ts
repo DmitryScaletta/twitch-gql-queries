@@ -912,6 +912,37 @@ export interface GlobalBadgesData {
   badges: GlobalBadgesBadge[];
 }
 
+export interface PlaybackAccessTokenStream {
+  value: string;
+  signature: string;
+  authorization: {
+    isForbidden: boolean;
+    forbiddenReasonCode: 'NONE';
+    __typename: 'PlaybackAccessTokenAuthorization';
+  };
+  __typename: 'PlaybackAccessToken';
+}
+
+export interface PlaybackAccessTokenVideo {
+  value: string;
+  signature: string;
+  __typename: 'PlaybackAccessToken';
+}
+
+export interface PlaybackAccessTokenVariables {
+  isLive: boolean;
+  login: '' | string;
+  isVod: boolean;
+  vodID: '' | string;
+  playerType: '' | 'site' | 'channel_home_carousel';
+  platform: 'web' | string;
+}
+
+export interface PlaybackAccessTokenData {
+  streamPlaybackAccessToken?: null | PlaybackAccessTokenStream;
+  videoPlaybackAccessToken?: null | PlaybackAccessTokenVideo;
+}
+
 export interface SearchResultsPageChannel {
   displayName: string;
   id: string;
@@ -1614,6 +1645,7 @@ export type FilterableVideoTowerVideosResponse = QueryResponse<FilterableVideoTo
 export type GetPinnedChatResponse = QueryResponse<GetPinnedChatData, 'GetPinnedChat'>;
 export type GetUserIdResponse = QueryResponse<GetUserIdData, 'GetUserID'>;
 export type GlobalBadgesResponse = QueryResponse<GlobalBadgesData, 'GlobalBadges'>;
+export type PlaybackAccessTokenResponse = QueryResponse<PlaybackAccessTokenData, 'PlaybackAccessToken'>;
 export type SearchResultsPageSearchResultsResponse = QueryResponse<SearchResultsPageSearchResultsData, 'SearchResultsPage_SearchResults'>;
 export type SearchTraySearchSuggestionsResponse = QueryResponse<SearchTraySearchSuggestionsData, 'SearchTray_SearchSuggestions'>;
 export type ShareClipRenderStatusResponse = QueryResponse<ShareClipRenderStatusData, 'ShareClipRenderStatus'>;
@@ -1639,6 +1671,7 @@ export interface QueryResponseMap {
   GetPinnedChat: GetPinnedChatResponse;
   GetUserID: GetUserIdResponse;
   GlobalBadges: GlobalBadgesResponse;
+  PlaybackAccessToken: PlaybackAccessTokenResponse;
   SearchResultsPage_SearchResults: SearchResultsPageSearchResultsResponse;
   SearchTray_SearchSuggestions: SearchTraySearchSuggestionsResponse;
   ShareClipRenderStatus: ShareClipRenderStatusResponse;

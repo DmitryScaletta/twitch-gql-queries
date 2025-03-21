@@ -1,0 +1,19 @@
+{
+  "data": {
+    "streamPlaybackAccessToken": {
+      "value": "{\"adblock\":false,\"authorization\":{\"forbidden\":false,\"reason\":\"\"},\"blackout_enabled\":false,\"channel\":\"jasontheween\",\"channel_id\":107117952,\"chansub\":{\"restricted_bitrates\":[],\"view_until\":1924905600},\"ci_gb\":false,\"geoblock_reason\":\"\",\"device_id\":null,\"expires\":1742589649,\"extended_history_allowed\":false,\"game\":\"\",\"hide_ads\":false,\"https_required\":true,\"mature\":false,\"partner\":false,\"platform\":\"web\",\"player_type\":\"site\",\"private\":{\"allowed_to_view\":true},\"privileged\":false,\"role\":\"\",\"server_ads\":true,\"show_ads\":true,\"subscriber\":false,\"turbo\":false,\"user_id\":null,\"user_ip\":\"178.120.50.141\",\"version\":2}",
+      "signature": "86059ee80bf681f24888fc3ecfb28a426813eda2",
+      "authorization": {
+        "isForbidden": false,
+        "forbiddenReasonCode": "NONE",
+        "__typename": "PlaybackAccessTokenAuthorization"
+      },
+      "__typename": "PlaybackAccessToken"
+    }
+  },
+  "extensions": {
+    "durationMilliseconds": 55,
+    "operationName": "PlaybackAccessToken",
+    "requestID": "01JPX5V47XMHQ1SKAF94BGKAZV"
+  }
+}

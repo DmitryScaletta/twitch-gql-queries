@@ -156,6 +156,12 @@ export const PlaybackAccessToken = {
   __typename: T.Literal('PlaybackAccessToken'),
 } satisfies Properties;
 
+export const PlaybackAccessTokenAuthorization = {
+  isForbidden: T.Boolean(),
+  forbiddenReasonCode: T.Union([T.Literal('NONE')]),
+  __typename: T.Literal('PlaybackAccessTokenAuthorization'),
+} satisfies Properties;
+
 export const Game = {
   id: T.String(),
   slug: T.String(),

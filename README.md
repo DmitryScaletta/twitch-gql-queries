@@ -113,6 +113,7 @@ console.log(responses);
 * GetPinnedChat
 * GetUserID
 * GlobalBadges
+* PlaybackAccessToken
 * SearchResultsPage_SearchResults
 * SearchTray_SearchSuggestions
 * ShareClipRenderStatus

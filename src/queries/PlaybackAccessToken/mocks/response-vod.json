@@ -1,0 +1,14 @@
+{
+  "data": {
+    "videoPlaybackAccessToken": {
+      "value": "{\"authorization\":{\"forbidden\":false,\"reason\":\"\"},\"chansub\":{\"restricted_bitrates\":[]},\"device_id\":null,\"expires\":1742660414,\"https_required\":true,\"privileged\":false,\"user_id\":null,\"version\":2,\"vod_id\":2404782496}",
+      "signature": "9690cf56645d367ba0f7799ea5a3cfaae30a8818",
+      "__typename": "PlaybackAccessToken"
+    }
+  },
+  "extensions": {
+    "durationMilliseconds": 61,
+    "operationName": "PlaybackAccessToken",
+    "requestID": "01JPX5T2Q1CAF4250DG89R3NR0"
+  }
+}

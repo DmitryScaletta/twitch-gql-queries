@@ -15,6 +15,7 @@ export * from './src/queries/FilterableVideoTower_Videos/query.ts';
 export * from './src/queries/GetPinnedChat/query.ts';
 export * from './src/queries/GetUserID/query.ts';
 export * from './src/queries/GlobalBadges/query.ts';
+export * from './src/queries/PlaybackAccessToken/query.ts';
 export * from './src/queries/SearchResultsPage_SearchResults/query.ts';
 export * from './src/queries/SearchTray_SearchSuggestions/query.ts';
 export * from './src/queries/ShareClipRenderStatus/query.ts';
