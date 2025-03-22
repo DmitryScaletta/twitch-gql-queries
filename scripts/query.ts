@@ -85,21 +85,14 @@ const addQuery = async (queryName: string, queryDisplayName: string) => {
 
 const removeQuery = async (queryName: string) => {
   const queryFolder = path.join('src', 'queries', queryName);
-  const dir = await fsp.readdir(queryFolder, {
-    recursive: true,
-    withFileTypes: true,
-  });
-  const entries = [
-    ...dir.filter((f) => f.isFile()),
-    ...dir.filter((f) => f.isDirectory()),
-  ];
-  for (const dirent of entries) {
-    const filePath = path.join(dirent.parentPath, dirent.name);
-    try {
-      await fsp.unlink(filePath);
+  const files = await fsp.readdir(queryFolder, { recursive: true });
+  try {
+    await fsp.rm(queryFolder, { recursive: true, force: true });
+    for (const file of files) {
+      const filePath = path.join(queryFolder, file);
       console.log(`- \x1b[31m${filePath}\x1b[0m`);
-    } catch {}
-  }
+    }
+  } catch {}
   for (const [filePath, [queryLine]] of getLinesInFiles(queryName)) {
     const content = await fsp.readFile(filePath, 'utf8');
     let newContent = content.replace(`${queryLine}\n`, '');
