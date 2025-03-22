@@ -10,6 +10,7 @@ import {
 } from './schema.ts';
 
 import resClipFromHighlight from './mocks/response-clip-from-highlight.json' with { type: 'json' };
+import resStatusCreating from './mocks/response-status-creating.json' with { type: 'json' };
 
 describe('ShareClipRenderStatus', () => {
   const validate = createValidate(ResponseSchema, [
@@ -52,4 +53,5 @@ describe('ShareClipRenderStatus', () => {
   });
 
   test('mocks: clip from highlight', () => validate(resClipFromHighlight));
+  test('mocks: status creating', () => validate(resStatusCreating));
 });

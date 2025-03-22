@@ -135,16 +135,17 @@ export const ClipAsset = {
   aspectRatio: T.Number(),
   type: T.Union([T.Literal('SOURCE'), T.Literal('RECOMPOSED')]),
   createdAt: T.String({ format: 'date-time' }),
-  // TODO: find all possible statuses
-  creationState: T.Union([T.Literal('CREATED')]),
-  thumbnailURL: T.String({ format: 'uri' }),
+  creationState: T.Union([T.Literal('CREATED'), T.Literal('CREATING')]),
+  thumbnailURL: T.Union([T.Literal(''), T.String({ format: 'uri' })], {
+    description: 'Can be `""` if it\'s not created yet',
+  }),
   __typename: T.Literal('ClipAsset'),
 } satisfies Properties;
 
 export const ClipVideoQuality = {
   frameRate: T.Number(),
   quality: T.String(),
-  sourceURL: T.String({
+  sourceURL: T.Union([T.Literal(''), T.String({ format: 'uri' })], {
     description: 'Can be `""` if quality is not generated yet',
   }),
   __typename: T.Literal('ClipVideoQuality'),
@@ -254,8 +255,10 @@ export const MessageFragment = {
 
 export const PinnedChatMessage = {
   id: T.String(),
-  // TODO: BROADCASTER?
-  type: T.Union([T.Literal('MOD')]),
+  type: T.Union([T.Literal('MOD')], {
+    description:
+      "Still `MOD` even if it's a broadcaster's message or pinned by a broadcaster",
+  }),
   startsAt: T.String({ format: 'date-time' }),
   updatedAt: T.String({ format: 'date-time' }),
   endsAt: T.Union([T.Null(), T.String({ format: 'date-time' })]),

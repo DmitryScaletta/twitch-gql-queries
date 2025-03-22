@@ -565,7 +565,7 @@ export interface ClipsDownloadButtonClip {
     /**
      * Can be `""` if quality is not generated yet
      */
-    sourceURL: string;
+    sourceURL: '' | string;
     __typename: 'ClipVideoQuality';
   }[];
   __typename: 'Clip';
@@ -842,6 +842,9 @@ export interface GetPinnedChatMessage {
 
 export interface GetPinnedChatPinnedChatMessage {
   id: string;
+  /**
+   * Still `MOD` even if it's a broadcaster's message or pinned by a broadcaster
+   */
   type: 'MOD';
   startsAt: string;
   updatedAt: string;
@@ -1286,8 +1289,11 @@ export interface ShareClipRenderStatusClipAsset {
   aspectRatio: number;
   type: 'SOURCE' | 'RECOMPOSED';
   createdAt: string;
-  creationState: 'CREATED';
-  thumbnailURL: string;
+  creationState: 'CREATED' | 'CREATING';
+  /**
+   * Can be `""` if it's not created yet
+   */
+  thumbnailURL: '' | string;
   curator: null | {
     id: string;
     login: string;
@@ -1301,7 +1307,7 @@ export interface ShareClipRenderStatusClipAsset {
     /**
      * Can be `""` if quality is not generated yet
      */
-    sourceURL: string;
+    sourceURL: '' | string;
     __typename: 'ClipVideoQuality';
   }[];
   portraitMetadata: null | {
@@ -1409,7 +1415,7 @@ export interface ShareClipRenderStatusClip {
     /**
      * Can be `""` if quality is not generated yet
      */
-    sourceURL: string;
+    sourceURL: '' | string;
     __typename: 'ClipVideoQuality';
   }[];
   suggestedCropping: null;
@@ -1520,7 +1526,7 @@ export interface VideoAccessTokenClipData {
       /**
        * Can be `""` if quality is not generated yet
        */
-      sourceURL: string;
+      sourceURL: '' | string;
       __typename: 'ClipVideoQuality';
     }[];
     __typename: 'Clip';
