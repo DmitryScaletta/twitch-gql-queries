@@ -55,6 +55,25 @@ Client-Id: {{$dotenv CLIENT_ID}}
   }
 }
 
+### 1440p
+
+POST https://gql.twitch.tv/gql
+Content-Type: application/json
+Client-Id: {{$dotenv CLIENT_ID}}
+
+{
+  "operationName": "ShareClipRenderStatus",
+  "variables": {
+    "slug": "TenaciousOriginalMooseNononoCat-AEuwlukHCpsIR0wn"
+  },
+  "extensions": {
+    "persistedQuery": {
+      "version": 1,
+      "sha256Hash": "f130048a462a0ac86bb54d653c968c514e9ab9ca94db52368c1179e97b0f16eb"
+    }
+  }
+}
+
 ### not exists
 
 POST https://gql.twitch.tv/gql

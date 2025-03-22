@@ -28,6 +28,15 @@ describe('ShareClipRenderStatus', () => {
     responses.map(validate);
   });
 
+  test('real request: 1440p', async () => {
+    const responses = await gqlRequest([
+      getQueryShareClipRenderStatus({
+        slug: 'TenaciousOriginalMooseNononoCat-AEuwlukHCpsIR0wn',
+      }),
+    ]);
+    responses.map(validate);
+  });
+
   test('real request: no broadcaster', async () => {
     const responses = await gqlRequest([
       getQueryShareClipRenderStatus({ slug: 'ShakingBlitheOwlBrokeBack' }),

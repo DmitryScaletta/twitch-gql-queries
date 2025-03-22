@@ -1,0 +1,146 @@
+{
+  "data": {
+    "clip": {
+      "id": "1738420918",
+      "slug": "TenaciousOriginalMooseNononoCat-AEuwlukHCpsIR0wn",
+      "url": "https://clips.twitch.tv/TenaciousOriginalMooseNononoCat-AEuwlukHCpsIR0wn",
+      "embedURL": "https://clips.twitch.tv/embed?clip=TenaciousOriginalMooseNononoCat-AEuwlukHCpsIR0wn",
+      "title": "LOL",
+      "viewCount": 129,
+      "language": "EN",
+      "isFeatured": true,
+      "assets": [
+        {
+          "id": "AT-cm|h3uGmgBLsJbpBwqbCEdMJw",
+          "aspectRatio": 1.7777777777777777,
+          "type": "SOURCE",
+          "createdAt": "2025-03-08T10:41:52.017230458Z",
+          "creationState": "CREATED",
+          "curator": {
+            "id": "11148817",
+            "login": "pajlada",
+            "displayName": "pajlada",
+            "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/cbe986e3-06ad-4506-a3aa-eb05466c839c-profile_image-50x50.png",
+            "__typename": "User"
+          },
+          "thumbnailURL": "https://static-cdn.jtvnw.net/twitch-clips/h3uGmgBLsJbpBwqbCEdMJw/AT-cm%7Ch3uGmgBLsJbpBwqbCEdMJw-preview-480x272.jpg",
+          "videoQualities": [
+            {
+              "frameRate": 30.2,
+              "quality": "1440",
+              "sourceURL": "https://production.assets.clips.twitchcdn.net/h3uGmgBLsJbpBwqbCEdMJw/AT-cm%7Ch3uGmgBLsJbpBwqbCEdMJw.mp4",
+              "__typename": "ClipVideoQuality"
+            },
+            {
+              "frameRate": 30.2,
+              "quality": "720",
+              "sourceURL": "https://production.assets.clips.twitchcdn.net/h3uGmgBLsJbpBwqbCEdMJw/AT-cm%7Ch3uGmgBLsJbpBwqbCEdMJw-720.mp4",
+              "__typename": "ClipVideoQuality"
+            },
+            {
+              "frameRate": 30.2,
+              "quality": "480",
+              "sourceURL": "https://production.assets.clips.twitchcdn.net/h3uGmgBLsJbpBwqbCEdMJw/AT-cm%7Ch3uGmgBLsJbpBwqbCEdMJw-480.mp4",
+              "__typename": "ClipVideoQuality"
+            },
+            {
+              "frameRate": 30.2,
+              "quality": "360",
+              "sourceURL": "https://production.assets.clips.twitchcdn.net/h3uGmgBLsJbpBwqbCEdMJw/AT-cm%7Ch3uGmgBLsJbpBwqbCEdMJw-360.mp4",
+              "__typename": "ClipVideoQuality"
+            }
+          ],
+          "portraitMetadata": null,
+          "__typename": "ClipAsset"
+        }
+      ],
+      "curator": {
+        "id": "11148817",
+        "login": "pajlada",
+        "displayName": "pajlada",
+        "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/cbe986e3-06ad-4506-a3aa-eb05466c839c-profile_image-70x70.png",
+        "__typename": "User"
+      },
+      "game": {
+        "id": "1469308723",
+        "name": "Software and Game Development",
+        "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/1469308723-52x72.jpg",
+        "displayName": "Software and Game Development",
+        "slug": "software-and-game-development",
+        "__typename": "Game"
+      },
+      "broadcast": {
+        "id": "316873093625",
+        "title": null,
+        "__typename": "Broadcast"
+      },
+      "broadcaster": {
+        "id": "11148817",
+        "login": "pajlada",
+        "displayName": "pajlada",
+        "primaryColorHex": "CC44FF",
+        "isPartner": true,
+        "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/cbe986e3-06ad-4506-a3aa-eb05466c839c-profile_image-70x70.png",
+        "followers": {
+          "totalCount": 44373,
+          "__typename": "FollowerConnection"
+        },
+        "stream": {
+          "id": "317559194233",
+          "viewersCount": 92,
+          "__typename": "Stream"
+        },
+        "lastBroadcast": {
+          "id": "317559194233",
+          "startedAt": "2025-03-22T10:04:13.07734Z",
+          "__typename": "Broadcast"
+        },
+        "self": null,
+        "__typename": "User"
+      },
+      "thumbnailURL": "https://static-cdn.jtvnw.net/twitch-clips/h3uGmgBLsJbpBwqbCEdMJw/AT-cm%7Ch3uGmgBLsJbpBwqbCEdMJw-preview-260x147.jpg",
+      "createdAt": "2025-03-08T10:41:52Z",
+      "isPublished": true,
+      "durationSeconds": 5,
+      "champBadge": null,
+      "playbackAccessToken": {
+        "signature": "619be9815485cb8a8eba183561a9397363878bb1",
+        "value": "{\"authorization\":{\"forbidden\":false,\"reason\":\"\"},\"clip_uri\":\"https://production.assets.clips.twitchcdn.net/h3uGmgBLsJbpBwqbCEdMJw/AT-cm%7Ch3uGmgBLsJbpBwqbCEdMJw.mp4\",\"clip_slug\":\"TenaciousOriginalMooseNononoCat-AEuwlukHCpsIR0wn\",\"device_id\":null,\"expires\":1742722724,\"user_id\":\"\",\"version\":2}",
+        "__typename": "PlaybackAccessToken"
+      },
+      "video": {
+        "id": "2400241459",
+        "broadcastType": "ARCHIVE",
+        "title": "Programming.S09E19.1440p.MKV-XD.NVENC",
+        "__typename": "Video"
+      },
+      "videoOffsetSeconds": 2696,
+      "videoQualities": [
+        {
+          "sourceURL": "https://production.assets.clips.twitchcdn.net/h3uGmgBLsJbpBwqbCEdMJw/AT-cm%7Ch3uGmgBLsJbpBwqbCEdMJw.mp4",
+          "__typename": "ClipVideoQuality"
+        },
+        {
+          "sourceURL": "https://production.assets.clips.twitchcdn.net/h3uGmgBLsJbpBwqbCEdMJw/AT-cm%7Ch3uGmgBLsJbpBwqbCEdMJw-720.mp4",
+          "__typename": "ClipVideoQuality"
+        },
+        {
+          "sourceURL": "https://production.assets.clips.twitchcdn.net/h3uGmgBLsJbpBwqbCEdMJw/AT-cm%7Ch3uGmgBLsJbpBwqbCEdMJw-480.mp4",
+          "__typename": "ClipVideoQuality"
+        },
+        {
+          "sourceURL": "https://production.assets.clips.twitchcdn.net/h3uGmgBLsJbpBwqbCEdMJw/AT-cm%7Ch3uGmgBLsJbpBwqbCEdMJw-360.mp4",
+          "__typename": "ClipVideoQuality"
+        }
+      ],
+      "isViewerEditRestricted": true,
+      "suggestedCropping": null,
+      "__typename": "Clip"
+    }
+  },
+  "extensions": {
+    "durationMilliseconds": 111,
+    "operationName": "ShareClipRenderStatus",
+    "requestID": "01JPZ17M1N825RWRYYM08K2XTP"
+  }
+}
