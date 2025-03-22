@@ -3,6 +3,7 @@ import { FormatRegistry, type TSchema } from '@sinclair/typebox';
 import { Value } from '@sinclair/typebox/value';
 import { IsDateTime } from '../lib/typebox-formats/date-time.ts';
 import { IsUrl } from '../lib/typebox-formats/url.ts';
+import { IsUuid } from '../lib/typebox-formats/uuid.ts';
 import { gqlRequest, MAX_QUERIES_PER_REQUEST } from './gqlRequest.ts';
 import { getQueryDirectoryPageGame } from './queries/DirectoryPage_Game/query.ts';
 import { getQueryClipsCardsGame } from './queries/ClipsCards__Game/query.ts';
@@ -11,6 +12,7 @@ import { getQueryFilterableVideoTowerVideos } from './queries/FilterableVideoTow
 
 FormatRegistry.Set('date-time', IsDateTime);
 FormatRegistry.Set('uri', IsUrl);
+FormatRegistry.Set('uuid', IsUuid);
 
 export const createValidate =
   (ResponseSchema: TSchema, references: TSchema[] = []) =>
@@ -22,7 +24,11 @@ export const createValidate =
         console.log(JSON.stringify(error.value, null, 2));
       }
     }
-    assert.deepEqual(errors, []);
+    try {
+      assert.deepEqual(errors, []);
+    } catch (e: any) {
+      throw e.message?.split('\n')[0];
+    }
   };
 
 const CATEGORIES = [
