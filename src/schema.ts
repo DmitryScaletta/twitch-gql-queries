@@ -42,7 +42,7 @@ export const getResponseSchema = <TDataSchema extends TObject>(
       T.Array(
         buildObject({
           message: T.String(),
-          path: T.Optional(T.Array(T.String())),
+          path: T.Optional(T.Array(T.Union([T.String(), T.Number()]))),
           locations: T.Optional(
             buildObject({ line: T.Number(), column: T.Number() }),
           ),
