@@ -91,6 +91,9 @@ export interface ChannelRootUser {
     };
     __typename: 'Channel';
   };
+  /**
+   * If never streamed: `{ id: null, game: null }`
+   */
   lastBroadcast: {
     id: null | string;
     game: null | {
@@ -961,6 +964,9 @@ export interface SearchResultsPageChannel {
     totalCount: number;
     __typename: 'FollowerConnection';
   };
+  /**
+   * If never streamed: `{ id: null, startedAt: null }`
+   */
   lastBroadcast: {
     id: null | string;
     startedAt: null | string;
@@ -1395,8 +1401,14 @@ export interface ShareClipRenderStatusClip {
     __typename: 'Game';
   };
   broadcast: {
-    id: string;
-    title: null | string;
+    /**
+     * For clips from highlights or uploads it will be `"1"`
+     */
+    id: '1' | string;
+    /**
+     * Seems to always be `null`
+     */
+    title: null;
     __typename: 'Broadcast';
   };
   broadcaster: null | ShareClipRenderStatusBroadcaster;
@@ -1447,6 +1459,9 @@ export interface StreamMetadataUser {
     chanlets: null;
     __typename: 'Channel';
   };
+  /**
+   * If never streamed: `{ id: null, title: null }`
+   */
   lastBroadcast: {
     id: null | string;
     title: null | string;
@@ -1538,6 +1553,9 @@ export interface VideoMetadataUser {
   primaryColorHex: null | string;
   isPartner: boolean;
   profileImageURL: string;
+  /**
+   * If never streamed: `{ id: null, startedAt: null }`
+   */
   lastBroadcast: {
     id: null | string;
     startedAt: null | string;

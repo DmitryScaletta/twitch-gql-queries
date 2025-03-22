@@ -9,8 +9,8 @@ export const User = {
   displayName: T.String(),
   description: T.Union([T.Null(), T.String()]),
   primaryColorHex: T.Union([T.Null(), T.String()]),
-  profileImageURL: T.String(),
-  bannerImageURL: T.Union([T.Null(), T.String()]),
+  profileImageURL: T.String({ format: 'uri' }),
+  bannerImageURL: T.Union([T.Null(), T.String({ format: 'uri' })]),
   chatColor: T.Union([T.Null(), T.String()]),
   isPartner: T.Boolean(),
   __typename: T.Literal('User'),
@@ -60,7 +60,6 @@ export const Stream = {
   title: T.String(),
   viewersCount: T.Number(),
   previewImageURL: T.String({ format: 'uri' }),
-  // TODO: are there any other types?
   type: T.Literal('live'),
   restrictionType: T.Union([T.Null()]),
   createdAt: T.String({ format: 'date-time' }),
@@ -93,7 +92,6 @@ export const Video = {
   viewCount: T.Number(),
   previewThumbnailURL: T.String({ format: 'uri' }),
   animatedPreviewURL: T.String({ format: 'uri' }),
-  // TODO: find all possible statuses
   status: T.Union([T.Literal('RECORDED'), T.Literal('RECORDING')]),
   createdAt: T.String({ format: 'date-time' }),
   publishedAt: T.String({ format: 'date-time' }),

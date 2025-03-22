@@ -61,13 +61,14 @@ export const ChannelSchema = buildObject(
       pick(schemas.BroadcastSettings, ['id', 'title']),
     ),
     followers: buildObject(pick(schemas.FollowerConnection, ['totalCount'])),
-    // don't use Broadcast schema
-    // if no last broadcast the response is: { id: null, startedAt: null }
-    lastBroadcast: buildObject({
-      id: T.Union([T.Null(), T.String()]),
-      startedAt: T.Union([T.Null(), T.String({ format: 'date-time' })]),
-      __typename: T.Literal('Broadcast'),
-    }),
+    lastBroadcast: buildObject(
+      {
+        id: T.Union([T.Null(), T.String()]),
+        startedAt: T.Union([T.Null(), T.String({ format: 'date-time' })]),
+        __typename: T.Literal('Broadcast'),
+      },
+      { description: 'If never streamed: `{ id: null, startedAt: null }`' },
+    ),
     channel: buildObject({
       ...pick(schemas.Channel, ['id']),
       schedule: T.Union([

@@ -59,15 +59,17 @@ export const UserSchema = buildObject(
         ]),
       ),
     }),
-    // don't use Broadcast object here
-    lastBroadcast: buildObject({
-      id: T.Union([T.Null(), T.String()]),
-      game: T.Union([
-        T.Null(),
-        buildObject(pick(schemas.Game, ['id', 'displayName'])),
-      ]),
-      __typename: T.Literal('Broadcast'),
-    }),
+    lastBroadcast: buildObject(
+      {
+        id: T.Union([T.Null(), T.String()]),
+        game: T.Union([
+          T.Null(),
+          buildObject(pick(schemas.Game, ['id', 'displayName'])),
+        ]),
+        __typename: T.Literal('Broadcast'),
+      },
+      { description: 'If never streamed: `{ id: null, game: null }`' },
+    ),
     primaryTeam: T.Union([
       T.Null(),
       buildObject(pick(schemas.Team, ['id', 'name', 'displayName'])),

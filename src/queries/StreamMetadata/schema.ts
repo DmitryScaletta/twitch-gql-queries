@@ -32,12 +32,14 @@ export const UserSchema = buildObject(
       ...pick(schemas.Channel, ['id']),
       chanlets: T.Union([T.Null()]),
     }),
-    // don't use Broadcast schema
-    lastBroadcast: buildObject({
-      id: T.Union([T.Null(), T.String()]),
-      title: T.Union([T.Null(), T.String()]),
-      __typename: T.Literal('Broadcast'),
-    }),
+    lastBroadcast: buildObject(
+      {
+        id: T.Union([T.Null(), T.String()]),
+        title: T.Union([T.Null(), T.String()]),
+        __typename: T.Literal('Broadcast'),
+      },
+      { description: 'If never streamed: `{ id: null, title: null }`' },
+    ),
     stream: T.Union([
       T.Null(),
       buildObject({

@@ -30,6 +30,7 @@ export const BroadcasterSchema = buildObject(
       T.Null(),
       buildObject(pick(schemas.Stream, ['id', 'viewersCount'])),
     ]),
+    // what if never streamed and a clip was made from an upload?
     lastBroadcast: buildObject(pick(schemas.Broadcast, ['id', 'startedAt'])),
     self: T.Union([T.Null()]),
   },
@@ -128,11 +129,11 @@ export const ClipSchema = buildObject(
         pick(schemas.Game, ['id', 'name', 'boxArtURL', 'displayName', 'slug']),
       ),
     ]),
-    // don't use Broadcast schema here
-    // for highlights the response is: { "id": "1", "title": null }
     broadcast: buildObject({
-      id: T.String(),
-      title: T.Union([T.Null(), T.String()]),
+      id: T.Union([T.Literal('1'), T.String()], {
+        description: 'For clips from highlights or uploads it will be `"1"`',
+      }),
+      title: T.Null({ description: 'Seems to always be `null`' }),
       __typename: T.Literal('Broadcast'),
     }),
     broadcaster: T.Union([T.Null(), LegacyRef(BroadcasterSchema)]),
