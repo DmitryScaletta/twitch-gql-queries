@@ -38,8 +38,8 @@ export const BroadcasterSchema = buildObject(
 );
 
 const PortraitCropCoordinatesSchema = buildObject({
-  xPercentage: T.Number(),
-  yPercentage: T.Number(),
+  xPercentage: T.Number({ minimum: 0, maximum: 100 }),
+  yPercentage: T.Number({ minimum: 0, maximum: 100 }),
   __typename: T.Literal('PortraitCropCoordinates'),
 });
 
@@ -130,7 +130,7 @@ export const ClipSchema = buildObject(
       ),
     ]),
     broadcast: buildObject({
-      id: T.Union([T.Literal('1'), T.String()], {
+      id: T.Union([T.Literal('1'), T.String({ pattern: '^[0-9]+$' })], {
         description: 'For clips from highlights or uploads it will be `"1"`',
       }),
       title: T.Null({ description: 'Seems to always be `null`' }),

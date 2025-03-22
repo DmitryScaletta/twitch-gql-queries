@@ -239,7 +239,7 @@ export interface ChannelVideoShelvesQueryClip {
       description: null | string;
       __typename: 'User';
     })[];
-    sessionIdentifier: string;
+    sessionIdentifier: '' | string;
     __typename: 'GuestStarParticipants';
   };
   __typename: 'Clip';
@@ -413,7 +413,7 @@ export interface ClipsCardsGameClip {
       description: null | string;
       __typename: 'User';
     })[];
-    sessionIdentifier: string;
+    sessionIdentifier: '' | string;
     __typename: 'GuestStarParticipants';
   };
   previewThumbnailProperties: {
@@ -506,7 +506,7 @@ export interface ClipsCardsUserClip {
       description: null | string;
       __typename: 'User';
     })[];
-    sessionIdentifier: string;
+    sessionIdentifier: '' | string;
     __typename: 'GuestStarParticipants';
   };
   __typename: 'Clip';
@@ -1309,7 +1309,7 @@ export interface ShareClipRenderStatusClipAsset {
   };
   videoQualities: {
     frameRate: number;
-    quality: string;
+    quality: '360' | '480' | '720' | '1080' | '1440' | string;
     /**
      * Can be `""` if quality is not generated yet
      */
@@ -1537,7 +1537,7 @@ export interface VideoAccessTokenClipData {
     };
     videoQualities: {
       frameRate: number;
-      quality: string;
+      quality: '360' | '480' | '720' | '1080' | '1440' | string;
       /**
        * Can be `""` if quality is not generated yet
        */

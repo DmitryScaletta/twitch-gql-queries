@@ -23,7 +23,7 @@ export const UserSchema = buildObject(
     ]),
     lastBroadcast: buildObject(
       {
-        id: T.Union([T.Null(), T.String()]),
+        id: T.Union([T.Null(), T.String({ pattern: '^[0-9]+$' })]),
         startedAt: T.Union([T.Null(), T.String({ format: 'date-time' })]),
         __typename: T.Literal('Broadcast'),
       },

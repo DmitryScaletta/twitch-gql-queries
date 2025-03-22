@@ -16,7 +16,7 @@ export const VariablesSchema = buildObject(
   {
     includePreviewBlur: T.Optional(T.Boolean()),
     channelLogin: T.String(),
-    first: T.Number(),
+    first: T.Integer({ minimum: 1 }),
   },
   { $id: `${displayName}Variables` },
 );
@@ -32,7 +32,7 @@ export const ClipSchema = buildObject(
       'isFeatured',
     ]),
     clipTitle: T.String(),
-    clipViewCount: T.Number(),
+    clipViewCount: T.Integer({ minimum: 0 }),
     curator: T.Union([
       T.Null(),
       buildObject(pick(schemas.User, ['id', 'login', 'displayName'])),
@@ -96,16 +96,16 @@ export const VideoSchema = buildObject(
 );
 
 const CollectionSchema = buildObject({
-  id: T.String(),
+  id: T.String({ minLength: 1 }),
   description: T.String(),
   owner: buildObject(pick(schemas.User, ['id', 'login'])),
   thumbnailURL: T.Union([T.Null(), T.String({ format: 'uri' })]),
   title: T.String(),
   type: T.Union([T.Literal('DEFAULT')]),
   updatedAt: T.String({ format: 'date-time' }),
-  lengthSeconds: T.Number(),
+  lengthSeconds: T.Integer({ minimum: 0 }),
   items: buildObject({
-    totalCount: T.Number(),
+    totalCount: T.Integer({ minimum: 0 }),
     edges: T.Array(
       buildObject({
         cursor: T.Union([T.Null(), T.String()]),
@@ -121,7 +121,7 @@ const CollectionSchema = buildObject({
 
 export const VideoShelfSchema = buildObject(
   {
-    id: T.String(),
+    id: T.String({ minLength: 1 }),
     title: T.String(),
     description: T.Union([T.Null(), T.String()]),
     type: T.Union([

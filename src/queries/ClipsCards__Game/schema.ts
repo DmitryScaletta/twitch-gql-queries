@@ -24,7 +24,7 @@ export const FilterSchema = T.Union(
 export const VariablesSchema = buildObject(
   {
     categorySlug: T.String(),
-    limit: T.Number(),
+    limit: T.Integer({ minimum: 1 }),
     criteria: T.Optional(
       buildObject({
         languages: T.Optional(T.Union([T.Null(), T.Array(T.String())])),
@@ -55,7 +55,7 @@ export const GuestStarParticipantsSchema = buildObject({
       ),
     ]),
   ),
-  sessionIdentifier: T.String(),
+  sessionIdentifier: T.Union([T.Literal(''), T.String({ minLength: 1 })]),
   __typename: T.Literal('GuestStarParticipants'),
 });
 

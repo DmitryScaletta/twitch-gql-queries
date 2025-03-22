@@ -13,7 +13,7 @@ const displayName = 'FilterableVideoTowerVideos';
 export const VariablesSchema = buildObject(
   {
     includePreviewBlur: T.Optional(T.Boolean()),
-    limit: T.Number(),
+    limit: T.Integer({ minimum: 1 }),
     channelOwnerLogin: T.String(),
     broadcastType: T.Optional(
       T.Union([
@@ -29,7 +29,8 @@ export const VariablesSchema = buildObject(
 );
 
 export const ResourceRestrictionSchema = buildObject({
-  id: T.String(),
+  // vod:2397382584
+  id: T.String({ minLength: 1 }),
   type: T.Union([T.Literal('SUB_ONLY_LIVE')]),
   exemptions: T.Array(
     buildObject({

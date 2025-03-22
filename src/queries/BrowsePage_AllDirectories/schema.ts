@@ -18,7 +18,7 @@ export const SortSchema = T.Union(
 
 export const VariablesSchema = buildObject(
   {
-    limit: T.Number(),
+    limit: T.Integer({ minimum: 1 }),
     options: buildObject({
       recommendationsContext: T.Optional(
         T.Union([

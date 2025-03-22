@@ -34,7 +34,7 @@ export const UserSchema = buildObject(
     }),
     lastBroadcast: buildObject(
       {
-        id: T.Union([T.Null(), T.String()]),
+        id: T.Union([T.Null(), T.String({ pattern: '^[0-9]+$' })]),
         title: T.Union([T.Null(), T.String()]),
         __typename: T.Literal('Broadcast'),
       },

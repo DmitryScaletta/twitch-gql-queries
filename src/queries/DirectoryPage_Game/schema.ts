@@ -22,7 +22,7 @@ export const SortSchema = T.Union(
 
 export const VariablesSchema = buildObject(
   {
-    imageWidth: T.Optional(T.Number()),
+    imageWidth: T.Optional(T.Integer({ minimum: 0 })),
     slug: T.String(),
     options: buildObject({
       sort: LegacyRef(SortSchema),
@@ -46,7 +46,7 @@ export const VariablesSchema = buildObject(
       systemFilters: T.Optional(T.Union([T.Null(), T.Array(T.String())])),
     }),
     sortTypeIsRecency: T.Boolean(),
-    limit: T.Number(),
+    limit: T.Integer({ minimum: 1 }),
     includeIsDJ: T.Boolean(),
   },
   { $id: `${displayName}Variables` },
@@ -89,9 +89,6 @@ export const StreamSchema = buildObject(
 export const GameSchema = buildObject(
   {
     ...pick(schemas.Game, ['id', 'name', 'displayName']),
-    id: T.String(),
-    name: T.String(),
-    displayName: T.String(),
     streams: buildObject({
       banners: T.Union([
         T.Null(),

@@ -61,7 +61,7 @@ export const UserSchema = buildObject(
     }),
     lastBroadcast: buildObject(
       {
-        id: T.Union([T.Null(), T.String()]),
+        id: T.Union([T.Null(), T.String({ pattern: '^[0-9]+$' })]),
         game: T.Union([
           T.Null(),
           buildObject(pick(schemas.Game, ['id', 'displayName'])),

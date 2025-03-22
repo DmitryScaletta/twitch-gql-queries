@@ -17,7 +17,7 @@ const displayName = 'ClipsCardsUser';
 export const VariablesSchema = buildObject(
   {
     login: T.String(),
-    limit: T.Number(),
+    limit: T.Integer({ minimum: 1 }),
     criteria: T.Optional(
       buildObject({
         filter: T.Optional(T.Union([T.Null(), LegacyRef(FilterSchema)])),

@@ -21,9 +21,9 @@ export const VariablesSchema = buildObject(
 
 export const SuggestionChannelSchema = buildObject(
   {
-    id: T.String(),
+    id: T.String({ pattern: '^[0-9]+$' }),
     login: T.String(),
-    profileImageURL: T.String(),
+    profileImageURL: T.String({ format: 'uri' }),
     isLive: T.Boolean(),
     isVerified: T.Boolean(),
     user: buildObject({
@@ -43,8 +43,8 @@ export const SuggestionChannelSchema = buildObject(
 
 export const SuggestionCategorySchema = buildObject(
   {
-    id: T.String(),
-    boxArtURL: T.String(),
+    id: T.String({ pattern: '^[0-9]+$' }),
+    boxArtURL: T.String({ format: 'uri' }),
     game: buildObject(pick(schemas.Game, ['id', 'slug'])),
     __typename: T.Literal('SearchSuggestionCategory'),
   },
@@ -53,7 +53,7 @@ export const SuggestionCategorySchema = buildObject(
 
 export const SuggestionSchema = buildObject(
   {
-    id: T.String(),
+    id: T.String({ format: 'uuid' }),
     text: T.String(),
     content: T.Union([
       T.Null(),
@@ -61,8 +61,8 @@ export const SuggestionSchema = buildObject(
       LegacyRef(SuggestionCategorySchema),
     ]),
     matchingCharacters: buildObject({
-      start: T.Number(),
-      end: T.Number(),
+      start: T.Integer({ minimum: 0 }),
+      end: T.Integer({ minimum: 0 }),
       __typename: T.Literal('SearchSuggestionHighlight'),
     }),
     __typename: T.Literal('SearchSuggestion'),

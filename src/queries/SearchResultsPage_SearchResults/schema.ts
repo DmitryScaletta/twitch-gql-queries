@@ -63,7 +63,7 @@ export const ChannelSchema = buildObject(
     followers: buildObject(pick(schemas.FollowerConnection, ['totalCount'])),
     lastBroadcast: buildObject(
       {
-        id: T.Union([T.Null(), T.String()]),
+        id: T.Union([T.Null(), T.String({ pattern: '^[0-9]+$' })]),
         startedAt: T.Union([T.Null(), T.String({ format: 'date-time' })]),
         __typename: T.Literal('Broadcast'),
       },
@@ -221,33 +221,23 @@ export const VideoSchema = buildObject(
   { $id: `${category}Video` },
 );
 
+const SearchForResultUsers = buildObject({
+  cursor: T.String(),
+  edges: T.Array(
+    buildObject({
+      trackingID: T.String(),
+      item: LegacyRef(ChannelSchema),
+      __typename: T.Literal('SearchForEdge'),
+    }),
+  ),
+  score: T.Union([T.Null(), T.Integer()]),
+  totalMatches: T.Integer({ minimum: 0 }),
+  __typename: T.Literal('SearchForResultUsers'),
+});
+
 const SearchForSchema = buildObject({
-  channels: buildObject({
-    cursor: T.String(),
-    edges: T.Array(
-      buildObject({
-        trackingID: T.String(),
-        item: LegacyRef(ChannelSchema),
-        __typename: T.Literal('SearchForEdge'),
-      }),
-    ),
-    score: T.Union([T.Null(), T.Number()]),
-    totalMatches: T.Number(),
-    __typename: T.Literal('SearchForResultUsers'),
-  }),
-  channelsWithTag: buildObject({
-    cursor: T.String(),
-    edges: T.Array(
-      buildObject({
-        trackingID: T.String(),
-        item: LegacyRef(ChannelSchema),
-        __typename: T.Literal('SearchForEdge'),
-      }),
-    ),
-    score: T.Union([T.Null(), T.Number()]),
-    totalMatches: T.Number(),
-    __typename: T.Literal('SearchForResultUsers'),
-  }),
+  channels: SearchForResultUsers,
+  channelsWithTag: SearchForResultUsers,
   games: buildObject({
     cursor: T.String(),
     edges: T.Array(
@@ -257,8 +247,8 @@ const SearchForSchema = buildObject({
         __typename: T.Literal('SearchForEdge'),
       }),
     ),
-    score: T.Union([T.Null(), T.Number()]),
-    totalMatches: T.Number(),
+    score: T.Union([T.Null(), T.Integer()]),
+    totalMatches: T.Integer({ minimum: 0 }),
     __typename: T.Literal('SearchForResultGames'),
   }),
   videos: buildObject({
@@ -270,8 +260,8 @@ const SearchForSchema = buildObject({
         __typename: T.Literal('SearchForEdge'),
       }),
     ),
-    score: T.Union([T.Null(), T.Number()]),
-    totalMatches: T.Number(),
+    score: T.Union([T.Null(), T.Integer()]),
+    totalMatches: T.Integer({ minimum: 0 }),
     __typename: T.Literal('SearchForResultVideos'),
   }),
   relatedLiveChannels: buildObject({
@@ -282,7 +272,7 @@ const SearchForSchema = buildObject({
         __typename: T.Literal('SearchForEdgeRelatedLiveChannels'),
       }),
     ),
-    score: T.Union([T.Null(), T.Number()]),
+    score: T.Union([T.Null(), T.Integer()]),
     __typename: T.Literal('SearchForResultRelatedLiveChannels'),
   }),
   __typename: T.Literal('SearchFor'),

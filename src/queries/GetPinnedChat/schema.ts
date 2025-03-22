@@ -13,7 +13,7 @@ const displayName = name;
 export const VariablesSchema = buildObject(
   {
     channelID: T.String(),
-    count: T.Number(),
+    count: T.Integer({ minimum: 1 }),
   },
   { $id: `${displayName}Variables` },
 );

@@ -4,14 +4,17 @@ import { buildObject } from './schema.ts';
 type Properties = TProperties & { __typename: TLiteral<string> };
 
 export const User = {
-  id: T.String(),
+  id: T.String({ pattern: '^[0-9]+$' }),
   login: T.String(),
   displayName: T.String(),
   description: T.Union([T.Null(), T.String()]),
-  primaryColorHex: T.Union([T.Null(), T.String()]),
+  primaryColorHex: T.Union([
+    T.Null(),
+    T.String({ pattern: '^[0-9a-fA-F]{6}$' }),
+  ]),
   profileImageURL: T.String({ format: 'uri' }),
   bannerImageURL: T.Union([T.Null(), T.String({ format: 'uri' })]),
-  chatColor: T.Union([T.Null(), T.String()]),
+  chatColor: T.Union([T.Null(), T.String({ pattern: '^#[0-9a-fA-F]{6}$' })]),
   isPartner: T.Boolean(),
   __typename: T.Literal('User'),
 } satisfies Properties;
@@ -25,17 +28,17 @@ export const UserRoles = {
 } satisfies Properties;
 
 export const FollowerConnection = {
-  totalCount: T.Number(),
+  totalCount: T.Integer({ minimum: 0 }),
   __typename: T.Literal('FollowerConnection'),
 } satisfies Properties;
 
 export const Channel = {
-  id: T.String(),
+  id: T.String({ pattern: '^[0-9]+$' }),
   __typename: T.Literal('Channel'),
 } satisfies Properties;
 
 export const SocialMedia = {
-  id: T.String(),
+  id: T.String({ format: 'uuid' }),
   name: T.String(),
   title: T.String(),
   url: T.String({ description: 'Can also be a `mailto:` url' }),
@@ -43,22 +46,22 @@ export const SocialMedia = {
 } satisfies Properties;
 
 export const Broadcast = {
-  id: T.String(),
+  id: T.String({ pattern: '^[0-9]+$' }),
   title: T.String(),
   startedAt: T.String({ format: 'date-time' }),
   __typename: T.Literal('Broadcast'),
 } satisfies Properties;
 
 export const BroadcastSettings = {
-  id: T.String(),
+  id: T.String({ pattern: '^[0-9]+$' }),
   title: T.String(),
   __typename: T.Literal('BroadcastSettings'),
 } satisfies Properties;
 
 export const Stream = {
-  id: T.String(),
+  id: T.String({ pattern: '^[0-9]+$' }),
   title: T.String(),
-  viewersCount: T.Number(),
+  viewersCount: T.Integer({ minimum: 0 }),
   previewImageURL: T.String({ format: 'uri' }),
   type: T.Literal('live'),
   restrictionType: T.Union([T.Null()]),
@@ -73,14 +76,14 @@ export const StreamEdge = {
 } satisfies Properties;
 
 export const Team = {
-  id: T.String(),
+  id: T.String({ pattern: '^[0-9]+$' }),
   name: T.String(),
   displayName: T.String(),
   __typename: T.Literal('Team'),
 } satisfies Properties;
 
 export const Video = {
-  id: T.String(),
+  id: T.String({ pattern: '^[0-9]+$' }),
   title: T.Union([T.Null(), T.String()]),
   description: T.Union([T.Null(), T.String()]),
   broadcastType: T.Union([
@@ -88,8 +91,8 @@ export const Video = {
     T.Literal('HIGHLIGHT'),
     T.Literal('UPLOAD'),
   ]),
-  lengthSeconds: T.Number(),
-  viewCount: T.Number(),
+  lengthSeconds: T.Integer({ minimum: 0 }),
+  viewCount: T.Integer({ minimum: 0 }),
   previewThumbnailURL: T.String({ format: 'uri' }),
   animatedPreviewURL: T.String({ format: 'uri' }),
   status: T.Union([T.Literal('RECORDED'), T.Literal('RECORDING')]),
@@ -110,27 +113,27 @@ export const VideoSelfEdge = {
 } satisfies Properties;
 
 export const Clip = {
-  id: T.String(),
+  id: T.String({ pattern: '^[0-9]+$' }),
   slug: T.String(),
   url: T.String({ format: 'uri' }),
   embedURL: T.String({ format: 'uri' }),
   title: T.String(),
-  viewCount: T.Number(),
-  videoOffsetSeconds: T.Union([T.Null(), T.Number()]),
-  durationSeconds: T.Number(),
+  viewCount: T.Integer({ minimum: 0 }),
+  videoOffsetSeconds: T.Union([T.Null(), T.Integer({ minimum: 0 })]),
+  durationSeconds: T.Integer({ minimum: 0 }),
   thumbnailURL: T.String({ format: 'uri' }),
-  language: T.String(),
+  language: T.String({ pattern: '^[A-Z]{2}$' }),
   champBadge: T.Null(),
   isFeatured: T.Boolean(),
   isPublished: T.Boolean(),
   isViewerEditRestricted: T.Boolean(),
-  createdAt: T.String(),
+  createdAt: T.String({ format: 'date-time' }),
   __typename: T.Literal('Clip'),
 } satisfies Properties;
 
 export const ClipAsset = {
-  id: T.String(),
-  aspectRatio: T.Number(),
+  id: T.String({ minLength: 1 }),
+  aspectRatio: T.Number({ minimum: 0 }),
   type: T.Union([T.Literal('SOURCE'), T.Literal('RECOMPOSED')]),
   createdAt: T.String({ format: 'date-time' }),
   creationState: T.Union([T.Literal('CREATED'), T.Literal('CREATING')]),
@@ -141,8 +144,15 @@ export const ClipAsset = {
 } satisfies Properties;
 
 export const ClipVideoQuality = {
-  frameRate: T.Number(),
-  quality: T.String(),
+  frameRate: T.Number({ minimum: 0 }),
+  quality: T.Union([
+    T.Literal('360'),
+    T.Literal('480'),
+    T.Literal('720'),
+    T.Literal('1080'),
+    T.Literal('1440'),
+    T.String({ pattern: '^[0-9]+$' }),
+  ]),
   sourceURL: T.Union([T.Literal(''), T.String({ format: 'uri' })], {
     description: 'Can be `""` if quality is not generated yet',
   }),
@@ -162,13 +172,13 @@ export const PlaybackAccessTokenAuthorization = {
 } satisfies Properties;
 
 export const Game = {
-  id: T.String(),
+  id: T.String({ pattern: '^[0-9]+$' }),
   slug: T.String(),
   displayName: T.String(),
   name: T.String(),
   avatarURL: T.String({ format: 'uri' }),
   boxArtURL: T.String({ format: 'uri' }),
-  viewersCount: T.Union([T.Null(), T.Number()]),
+  viewersCount: T.Union([T.Null(), T.Integer({ minimum: 0 })]),
   originalReleaseDate: T.Union([T.Null(), T.String({ format: 'date-time' })]),
   __typename: T.Literal('Game'),
 } satisfies Properties;
@@ -180,7 +190,7 @@ export const GameEdge = {
 } satisfies Properties;
 
 export const Tag = {
-  id: T.String(),
+  id: T.String({ format: 'uuid' }),
   isLanguageTag: T.Boolean(),
   localizedName: T.String(),
   tagName: T.String(),
@@ -188,7 +198,8 @@ export const Tag = {
 } satisfies Properties;
 
 export const FreeformTag = {
-  id: T.String(),
+  // fft:CHANNEL:92463701:4
+  id: T.String({ minLength: 1 }),
   name: T.String(),
   __typename: T.Literal('FreeformTag'),
 } satisfies Properties;
@@ -204,13 +215,14 @@ export const PageInfo = {
 } satisfies Properties;
 
 export const Schedule = {
-  id: T.String(),
+  // schedule-94753024
+  id: T.String({ minLength: 1 }),
   __typename: T.Literal('Schedule'),
 } satisfies Properties;
 
 export const ScheduleSegment = {
-  id: T.String(),
-  startAt: T.String(),
+  id: T.String({ minLength: 1 }),
+  startAt: T.String({ format: 'date-time' }),
   endAt: T.Union([T.Null(), T.String({ format: 'date-time' })]),
   title: T.String(),
   hasReminder: T.Boolean(),
@@ -218,7 +230,7 @@ export const ScheduleSegment = {
 } satisfies Properties;
 
 export const Message = {
-  id: T.String(),
+  id: T.String({ format: 'uuid' }),
   sentAt: T.String({ format: 'date-time' }),
   __typename: T.Literal('Message'),
 } satisfies Properties;
@@ -232,11 +244,11 @@ export const MessageFragment = {
   content: T.Union([
     T.Null(),
     buildObject({
-      emoteID: T.String(),
+      emoteID: T.String({ minLength: 1 }),
       __typename: T.Literal('Emote'),
     }),
     buildObject({
-      userID: T.String(),
+      userID: T.String({ pattern: '^[0-9]+$' }),
       login: T.String(),
       __typename: T.Literal('User'),
     }),
@@ -252,7 +264,7 @@ export const MessageFragment = {
 } satisfies Properties;
 
 export const PinnedChatMessage = {
-  id: T.String(),
+  id: T.String({ format: 'uuid' }),
   type: T.Union([T.Literal('MOD')], {
     description:
       "Still `MOD` even if it's a broadcaster's message or pinned by a broadcaster",
@@ -264,7 +276,7 @@ export const PinnedChatMessage = {
 } satisfies Properties;
 
 export const Badge = {
-  id: T.String(),
+  id: T.String({ minLength: 1 }),
   setID: T.String(),
   version: T.String(),
   title: T.String(),
