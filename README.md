@@ -2,6 +2,8 @@
 
 Type-safe requests to twitch public GraphQL API
 
+See [Swagger UI](https://twitch-gql-swagger.surge.sh) / [Scalar Swagger UI](https://twitch-gql-swagger.surge.sh/scalar/)
+
 ## Features
 
 * **Type-safe**. Types for query variables and responses
