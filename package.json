@@ -27,17 +27,18 @@
   ],
   "type": "module",
   "scripts": {
-    "build": "tsup",
+    "build": "pnpm gen && pnpm swagger && tsup",
     "gen": "node --no-warnings=ExperimentalWarning scripts/gen.ts",
     "add-query": "node --no-warnings=ExperimentalWarning scripts/query.ts add",
     "remove-query": "node --no-warnings=ExperimentalWarning scripts/query.ts remove",
+    "swagger": "node --no-warnings=ExperimentalWarning scripts/swagger.ts",
     "test": "node --no-warnings=ExperimentalWarning --test",
     "test:watch": "node --no-warnings=ExperimentalWarning --test --watch",
     "test:types": "pnpm tsc --noEmit"
   },
   "devDependencies": {
-    "@sinclair/typebox": "^0.34.30",
-    "@types/node": "^22.13.10",
+    "@sinclair/typebox": "^0.34.31",
+    "@types/node": "^22.13.13",
     "json-schema-to-typescript": "^15.0.4",
     "prettier": "^3.5.3",
     "tsup": "^8.4.0",
