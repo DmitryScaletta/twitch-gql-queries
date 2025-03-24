@@ -102,7 +102,10 @@ export const getQueriesMetadata = async () => {
         ?.groups?.requestBody;
       assert(content, `No request body found in ${httpFilePaths[i]}`);
       requestBodies.push({
-        summary: requestBodyArr[j],
+        summary:
+          requestBodyArr[j] === schemaImport.name
+            ? 'default'
+            : requestBodyArr[j],
         value: JSON.parse(content),
       });
     }

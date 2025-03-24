@@ -56,25 +56,25 @@ const buildOpenApi = async () => {
     let reqBodyExample = undefined;
     let reqBodyExamples = undefined;
 
-    if (requestBodies.length > 0) {
+    if (requestBodies.length > 1) {
       reqBodyExamples = {} as any;
       for (const { summary, value } of requestBodies) {
         reqBodyExamples[summary] = { value };
       }
     } else {
-      reqBodyExample = requestBodies[0];
+      reqBodyExample = requestBodies[0].value;
     }
 
     let resExample = undefined;
     let resExamples = undefined;
 
-    if (responseExamples.length > 0) {
+    if (responseExamples.length > 1) {
       resExamples = {} as any;
       for (const { summary, value } of responseExamples) {
         resExamples[summary] = { value };
       }
     } else {
-      resExample = responseExamples[0];
+      resExample = responseExamples[0].value;
     }
 
     openApi.paths[endpointPath] = {
@@ -87,7 +87,10 @@ const buildOpenApi = async () => {
             in: 'header',
             name: 'Client-ID',
             required: true,
-            default: 'kimne78kx3ncx6brgo4mv6wki5h1ko',
+            schema: {
+              type: 'string',
+              default: 'kimne78kx3ncx6brgo4mv6wki5h1ko',
+            },
           },
         ],
         requestBody: {
