@@ -1,6 +1,6 @@
 import { Type as T } from '@sinclair/typebox';
 import {
-  buildObject,
+  strictObject,
   getResponseSchema,
   LegacyRef,
   pick,
@@ -11,7 +11,7 @@ export const name = 'PlaybackAccessToken';
 export const displayName = name;
 export const tags = ['Videos', 'Streams'];
 
-export const VariablesSchema = buildObject(
+export const VariablesSchema = strictObject(
   {
     isLive: T.Boolean(),
     login: T.Union([T.Literal(''), T.String()]),
@@ -27,15 +27,15 @@ export const VariablesSchema = buildObject(
   { $id: `${displayName}Variables` },
 );
 
-export const VideoPlaybackAccessTokenSchema = buildObject(
+export const VideoPlaybackAccessTokenSchema = strictObject(
   pick(schemas.PlaybackAccessToken, ['value', 'signature']),
   { $id: `${displayName}Video` },
 );
 
-export const StreamPlaybackAccessTokenSchema = buildObject(
+export const StreamPlaybackAccessTokenSchema = strictObject(
   {
     ...pick(schemas.PlaybackAccessToken, ['value', 'signature']),
-    authorization: buildObject(
+    authorization: strictObject(
       pick(schemas.PlaybackAccessTokenAuthorization, [
         'isForbidden',
         'forbiddenReasonCode',
@@ -45,7 +45,7 @@ export const StreamPlaybackAccessTokenSchema = buildObject(
   { $id: `${displayName}Stream` },
 );
 
-export const DataSchema = buildObject(
+export const DataSchema = strictObject(
   {
     streamPlaybackAccessToken: T.Optional(
       T.Union([T.Null(), LegacyRef(StreamPlaybackAccessTokenSchema)]),

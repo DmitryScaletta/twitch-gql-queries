@@ -1,6 +1,6 @@
 import { Type as T } from '@sinclair/typebox';
 import {
-  buildObject,
+  strictObject,
   getResponseSchema,
   LegacyRef,
   pick,
@@ -11,28 +11,28 @@ export const name = 'ClipsDownloadButton';
 export const displayName = name;
 export const tags = ['Clips'];
 
-export const VariablesSchema = buildObject(
+export const VariablesSchema = strictObject(
   { slug: T.String() },
   { $id: `${displayName}Variables` },
 );
 
-export const ClipSchema = buildObject(
+export const ClipSchema = strictObject(
   {
     ...pick(schemas.Clip, ['id', 'createdAt', 'durationSeconds', 'viewCount']),
-    broadcaster: T.Union([T.Null(), buildObject(pick(schemas.User, ['id']))]),
-    curator: T.Union([T.Null(), buildObject(pick(schemas.User, ['id']))]),
-    game: T.Union([T.Null(), buildObject(pick(schemas.Game, ['id', 'name']))]),
-    playbackAccessToken: buildObject(
+    broadcaster: T.Union([T.Null(), strictObject(pick(schemas.User, ['id']))]),
+    curator: T.Union([T.Null(), strictObject(pick(schemas.User, ['id']))]),
+    game: T.Union([T.Null(), strictObject(pick(schemas.Game, ['id', 'name']))]),
+    playbackAccessToken: strictObject(
       pick(schemas.PlaybackAccessToken, ['signature', 'value']),
     ),
     videoQualities: T.Array(
-      buildObject(pick(schemas.ClipVideoQuality, ['sourceURL'])),
+      strictObject(pick(schemas.ClipVideoQuality, ['sourceURL'])),
     ),
   },
   { $id: `${displayName}Clip` },
 );
 
-export const DataSchema = buildObject(
+export const DataSchema = strictObject(
   { clip: T.Union([T.Null(), LegacyRef(ClipSchema)]) },
   { $id: `${displayName}Data` },
 );

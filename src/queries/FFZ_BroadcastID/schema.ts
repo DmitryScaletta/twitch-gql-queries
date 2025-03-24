@@ -1,6 +1,6 @@
 import { Type as T } from '@sinclair/typebox';
 import {
-  buildObject,
+  strictObject,
   getResponseSchema,
   LegacyRef,
   pick,
@@ -11,21 +11,21 @@ export const name = 'FFZ_BroadcastID';
 export const displayName = 'FfzBroadcastId';
 export const tags = ['Streams'];
 
-export const VariablesSchema = buildObject(
+export const VariablesSchema = strictObject(
   { id: T.String() },
   { $id: `${displayName}Variables` },
 );
 
-export const UserSchema = buildObject(
+export const UserSchema = strictObject(
   {
     ...pick(schemas.User, ['id']),
     stream: T.Union([
       T.Null(),
-      buildObject({
+      strictObject({
         ...pick(schemas.Stream, ['id']),
         archiveVideo: T.Union([
           T.Null(),
-          buildObject(pick(schemas.Video, ['id'])),
+          strictObject(pick(schemas.Video, ['id'])),
         ]),
       }),
     ]),
@@ -33,7 +33,7 @@ export const UserSchema = buildObject(
   { $id: `${displayName}User` },
 );
 
-export const DataSchema = buildObject(
+export const DataSchema = strictObject(
   { user: T.Union([T.Null(), LegacyRef(UserSchema)]) },
   { $id: `${displayName}Data` },
 );

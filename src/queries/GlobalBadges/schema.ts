@@ -1,6 +1,6 @@
 import { Type as T } from '@sinclair/typebox';
 import {
-  buildObject,
+  strictObject,
   getResponseSchema,
   LegacyRef,
   pick,
@@ -11,12 +11,12 @@ export const name = 'GlobalBadges';
 export const displayName = name;
 export const tags = ['Chat'];
 
-export const VariablesSchema = buildObject(
+export const VariablesSchema = strictObject(
   {},
   { $id: `${displayName}Variables` },
 );
 
-export const BadgeSchema = buildObject(
+export const BadgeSchema = strictObject(
   pick(schemas.Badge, [
     'id',
     'setID',
@@ -31,7 +31,7 @@ export const BadgeSchema = buildObject(
   { $id: `${displayName}Badge` },
 );
 
-export const DataSchema = buildObject(
+export const DataSchema = strictObject(
   { badges: T.Array(LegacyRef(BadgeSchema)) },
   { $id: `${displayName}Data` },
 );

@@ -1,5 +1,5 @@
 import { Type as T, type TLiteral, type TProperties } from '@sinclair/typebox';
-import { buildObject } from './schema.ts';
+import { strictObject } from './schema.ts';
 
 type Properties = TProperties & { __typename: TLiteral<string> };
 
@@ -246,16 +246,16 @@ export const MessageContent = {
 export const MessageFragment = {
   content: T.Union([
     T.Null(),
-    buildObject({
+    strictObject({
       emoteID: T.String({ minLength: 1 }),
       __typename: T.Literal('Emote'),
     }),
-    buildObject({
+    strictObject({
       userID: T.String({ pattern: '^[0-9]+$' }),
       login: T.String(),
       __typename: T.Literal('User'),
     }),
-    buildObject({
+    strictObject({
       bitsAmount: T.Number(),
       prefix: T.String(),
       tier: T.Number(),

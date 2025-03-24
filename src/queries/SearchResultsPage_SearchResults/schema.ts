@@ -1,6 +1,6 @@
 import { Type as T } from '@sinclair/typebox';
 import {
-  buildObject,
+  strictObject,
   getResponseSchema,
   LegacyRef,
   pick,
@@ -12,19 +12,19 @@ export const displayName = 'SearchResultsPageSearchResults';
 export const tags = ['Search'];
 const category = 'SearchResultsPage';
 
-export const VariablesSchema = buildObject(
+export const VariablesSchema = strictObject(
   {
     platform: T.Optional(T.Union([T.Null(), T.Literal('web'), T.String()])),
     query: T.String(),
     options: T.Optional(
       T.Union([
         T.Null(),
-        buildObject({
+        strictObject({
           targets: T.Optional(
             T.Union([
               T.Null(),
               T.Array(
-                buildObject({
+                strictObject({
                   index: T.Union([
                     T.Literal('CHANNEL'),
                     T.Literal('CHANNEL_WITH_TAG'),
@@ -49,7 +49,7 @@ export const VariablesSchema = buildObject(
 // TODO: find example with watch party
 const WatchPartySchema = T.Union([T.Null()]);
 
-export const ChannelSchema = buildObject(
+export const ChannelSchema = strictObject(
   {
     ...pick(schemas.User, [
       'displayName',
@@ -58,11 +58,11 @@ export const ChannelSchema = buildObject(
       'profileImageURL',
       'description',
     ]),
-    broadcastSettings: buildObject(
+    broadcastSettings: strictObject(
       pick(schemas.BroadcastSettings, ['id', 'title']),
     ),
-    followers: buildObject(pick(schemas.FollowerConnection, ['totalCount'])),
-    lastBroadcast: buildObject(
+    followers: strictObject(pick(schemas.FollowerConnection, ['totalCount'])),
+    lastBroadcast: strictObject(
       {
         id: T.Union([T.Null(), T.String({ pattern: '^[0-9]+$' })]),
         startedAt: T.Union([T.Null(), T.String({ format: 'date-time' })]),
@@ -70,15 +70,15 @@ export const ChannelSchema = buildObject(
       },
       { description: 'If never streamed: `{ id: null, startedAt: null }`' },
     ),
-    channel: buildObject({
+    channel: strictObject({
       ...pick(schemas.Channel, ['id']),
       schedule: T.Union([
         T.Null(),
-        buildObject({
+        strictObject({
           ...pick(schemas.Schedule, ['id']),
           nextSegment: T.Union([
             T.Null(),
-            buildObject({
+            strictObject({
               ...pick(schemas.ScheduleSegment, [
                 'id',
                 'startAt',
@@ -87,7 +87,7 @@ export const ChannelSchema = buildObject(
                 'hasReminder',
               ]),
               categories: T.Array(
-                buildObject(pick(schemas.Game, ['id', 'name'])),
+                strictObject(pick(schemas.Game, ['id', 'name'])),
               ),
             }),
           ]),
@@ -95,10 +95,10 @@ export const ChannelSchema = buildObject(
       ]),
     }),
     self: T.Union([T.Null()]),
-    latestVideo: buildObject({
+    latestVideo: strictObject({
       edges: T.Array(
-        buildObject({
-          node: buildObject(
+        strictObject({
+          node: strictObject(
             pick(schemas.Video, [
               'id',
               'lengthSeconds',
@@ -111,10 +111,10 @@ export const ChannelSchema = buildObject(
       ),
       __typename: T.Literal('VideoConnection'),
     }),
-    topClip: buildObject({
+    topClip: strictObject({
       edges: T.Array(
-        buildObject({
-          node: buildObject(
+        strictObject({
+          node: strictObject(
             pick(schemas.Clip, [
               'id',
               'title',
@@ -128,10 +128,10 @@ export const ChannelSchema = buildObject(
       ),
       __typename: T.Literal('ClipConnection'),
     }),
-    roles: buildObject(pick(schemas.UserRoles, ['isPartner'])),
+    roles: strictObject(pick(schemas.UserRoles, ['isPartner'])),
     stream: T.Union([
       T.Null(),
-      buildObject({
+      strictObject({
         ...pick(schemas.Stream, [
           'id',
           'previewImageURL',
@@ -140,12 +140,12 @@ export const ChannelSchema = buildObject(
         ]),
         game: T.Union([
           T.Null(),
-          buildObject(
+          strictObject(
             pick(schemas.Game, ['id', 'slug', 'name', 'displayName']),
           ),
         ]),
         freeformTags: T.Array(
-          buildObject(pick(schemas.FreeformTag, ['id', 'name'])),
+          strictObject(pick(schemas.FreeformTag, ['id', 'name'])),
         ),
       }),
     ]),
@@ -154,26 +154,26 @@ export const ChannelSchema = buildObject(
   { $id: `${category}Channel` },
 );
 
-export const RelatedLiveChannelSchema = buildObject(
+export const RelatedLiveChannelSchema = strictObject(
   {
     ...pick(schemas.User, ['id']),
-    stream: buildObject({
+    stream: strictObject({
       ...pick(schemas.Stream, ['id', 'viewersCount', 'previewImageURL']),
       game: T.Union([
         T.Null(),
-        buildObject(pick(schemas.Game, ['name', 'id', 'slug'])),
+        strictObject(pick(schemas.Game, ['name', 'id', 'slug'])),
       ]),
-      broadcaster: buildObject({
+      broadcaster: strictObject({
         ...pick(schemas.User, [
           'id',
           'primaryColorHex',
           'login',
           'displayName',
         ]),
-        broadcastSettings: buildObject(
+        broadcastSettings: strictObject(
           pick(schemas.BroadcastSettings, ['id', 'title']),
         ),
-        roles: buildObject(pick(schemas.UserRoles, ['isPartner'])),
+        roles: strictObject(pick(schemas.UserRoles, ['isPartner'])),
       }),
     }),
     watchParty: WatchPartySchema,
@@ -181,7 +181,7 @@ export const RelatedLiveChannelSchema = buildObject(
   { $id: `${category}RelatedLiveChannel` },
 );
 
-export const GameSchema = buildObject(
+export const GameSchema = strictObject(
   {
     ...pick(schemas.Game, [
       'id',
@@ -192,7 +192,7 @@ export const GameSchema = buildObject(
       'viewersCount',
     ]),
     tags: T.Array(
-      buildObject(
+      strictObject(
         pick(schemas.Tag, ['id', 'isLanguageTag', 'localizedName', 'tagName']),
       ),
     ),
@@ -200,7 +200,7 @@ export const GameSchema = buildObject(
   { $id: `${category}Game` },
 );
 
-export const VideoSchema = buildObject(
+export const VideoSchema = strictObject(
   {
     ...pick(schemas.Video, [
       'createdAt',
@@ -210,22 +210,22 @@ export const VideoSchema = buildObject(
       'title',
       'viewCount',
     ]),
-    owner: buildObject({
+    owner: strictObject({
       ...pick(schemas.User, ['id', 'displayName', 'login']),
-      roles: buildObject(pick(schemas.UserRoles, ['isPartner'])),
+      roles: strictObject(pick(schemas.UserRoles, ['isPartner'])),
     }),
     game: T.Union([
       T.Null(),
-      buildObject(pick(schemas.Game, ['id', 'slug', 'name', 'displayName'])),
+      strictObject(pick(schemas.Game, ['id', 'slug', 'name', 'displayName'])),
     ]),
   },
   { $id: `${category}Video` },
 );
 
-const SearchForResultUsers = buildObject({
+const SearchForResultUsers = strictObject({
   cursor: T.String(),
   edges: T.Array(
-    buildObject({
+    strictObject({
       trackingID: T.String(),
       item: LegacyRef(ChannelSchema),
       __typename: T.Literal('SearchForEdge'),
@@ -236,13 +236,13 @@ const SearchForResultUsers = buildObject({
   __typename: T.Literal('SearchForResultUsers'),
 });
 
-const SearchForSchema = buildObject({
+const SearchForSchema = strictObject({
   channels: SearchForResultUsers,
   channelsWithTag: SearchForResultUsers,
-  games: buildObject({
+  games: strictObject({
     cursor: T.String(),
     edges: T.Array(
-      buildObject({
+      strictObject({
         trackingID: T.String(),
         item: LegacyRef(GameSchema),
         __typename: T.Literal('SearchForEdge'),
@@ -252,10 +252,10 @@ const SearchForSchema = buildObject({
     totalMatches: T.Integer({ minimum: 0 }),
     __typename: T.Literal('SearchForResultGames'),
   }),
-  videos: buildObject({
+  videos: strictObject({
     cursor: T.String(),
     edges: T.Array(
-      buildObject({
+      strictObject({
         trackingID: T.String(),
         item: LegacyRef(VideoSchema),
         __typename: T.Literal('SearchForEdge'),
@@ -265,9 +265,9 @@ const SearchForSchema = buildObject({
     totalMatches: T.Integer({ minimum: 0 }),
     __typename: T.Literal('SearchForResultVideos'),
   }),
-  relatedLiveChannels: buildObject({
+  relatedLiveChannels: strictObject({
     edges: T.Array(
-      buildObject({
+      strictObject({
         trackingID: T.String(),
         item: LegacyRef(RelatedLiveChannelSchema),
         __typename: T.Literal('SearchForEdgeRelatedLiveChannels'),
@@ -279,7 +279,7 @@ const SearchForSchema = buildObject({
   __typename: T.Literal('SearchFor'),
 });
 
-export const DataSchema = buildObject(
+export const DataSchema = strictObject(
   { searchFor: SearchForSchema },
   { $id: `${displayName}Data` },
 );

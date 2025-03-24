@@ -1,6 +1,6 @@
 import { Type as T } from '@sinclair/typebox';
 import {
-  buildObject,
+  strictObject,
   getResponseSchema,
   LegacyRef,
   pick,
@@ -12,7 +12,7 @@ export const displayName = `SearchTraySearchSuggestions`;
 export const tags = ['Search'];
 const category = 'SearchTray';
 
-export const VariablesSchema = buildObject(
+export const VariablesSchema = strictObject(
   {
     queryFragment: T.String(),
     withOfflineChannelContent: T.Optional(T.Union([T.Null(), T.Boolean()])),
@@ -20,20 +20,20 @@ export const VariablesSchema = buildObject(
   { $id: `${displayName}Variables` },
 );
 
-export const SuggestionChannelSchema = buildObject(
+export const SuggestionChannelSchema = strictObject(
   {
     id: T.String({ pattern: '^[0-9]+$' }),
     login: T.String(),
     profileImageURL: T.String({ format: 'uri' }),
     isLive: T.Boolean(),
     isVerified: T.Boolean(),
-    user: buildObject({
+    user: strictObject({
       ...pick(schemas.User, ['id']),
       stream: T.Union([
         T.Null(),
-        buildObject({
+        strictObject({
           ...pick(schemas.Stream, ['id']),
-          game: T.Union([T.Null(), buildObject(pick(schemas.Game, ['id']))]),
+          game: T.Union([T.Null(), strictObject(pick(schemas.Game, ['id']))]),
         }),
       ]),
     }),
@@ -42,17 +42,17 @@ export const SuggestionChannelSchema = buildObject(
   { $id: `${category}SuggestionChannel` },
 );
 
-export const SuggestionCategorySchema = buildObject(
+export const SuggestionCategorySchema = strictObject(
   {
     id: T.String({ pattern: '^[0-9]+$' }),
     boxArtURL: T.String({ format: 'uri' }),
-    game: buildObject(pick(schemas.Game, ['id', 'slug'])),
+    game: strictObject(pick(schemas.Game, ['id', 'slug'])),
     __typename: T.Literal('SearchSuggestionCategory'),
   },
   { $id: `${category}SuggestionCategory` },
 );
 
-export const SuggestionSchema = buildObject(
+export const SuggestionSchema = strictObject(
   {
     id: T.String({ format: 'uuid' }),
     text: T.String(),
@@ -61,7 +61,7 @@ export const SuggestionSchema = buildObject(
       LegacyRef(SuggestionChannelSchema),
       LegacyRef(SuggestionCategorySchema),
     ]),
-    matchingCharacters: buildObject({
+    matchingCharacters: strictObject({
       start: T.Integer({ minimum: 0 }),
       end: T.Integer({ minimum: 0 }),
       __typename: T.Literal('SearchSuggestionHighlight'),
@@ -71,15 +71,15 @@ export const SuggestionSchema = buildObject(
   { $id: `${category}Suggestion` },
 );
 
-export const SuggestionsSchema = buildObject(
+export const SuggestionsSchema = strictObject(
   {
     edges: T.Array(
-      buildObject({
+      strictObject({
         node: LegacyRef(SuggestionSchema),
         __typename: T.Literal('SearchSuggestionEdge'),
       }),
     ),
-    tracking: buildObject({
+    tracking: strictObject({
       modelTrackingID: T.String(),
       responseID: T.String(),
       __typename: T.Literal('SearchSuggestionTracking'),
@@ -89,7 +89,7 @@ export const SuggestionsSchema = buildObject(
   { $id: `${category}Suggestions` },
 );
 
-export const DataSchema = buildObject(
+export const DataSchema = strictObject(
   { searchSuggestions: LegacyRef(SuggestionsSchema) },
   { $id: `${displayName}Data` },
 );

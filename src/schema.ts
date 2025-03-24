@@ -20,7 +20,7 @@ export const pick = <TSchema extends TProperties, TKey extends keyof TSchema>(
   return obj;
 };
 
-export const buildObject = <TProps extends TProperties>(
+export const strictObject = <TProps extends TProperties>(
   props: TProps,
   options?: ObjectOptions,
 ) => {
@@ -33,25 +33,28 @@ export const buildObject = <TProps extends TProperties>(
   return T.Object(props, { ...options, additionalProperties: false });
 };
 
-export const getResponseSchema = <TDataSchema extends TObject>(
+export const getResponseSchema = <
+  TDataSchema extends TObject,
+  TOperationName extends string = never,
+>(
   DataSchema: TDataSchema,
-  operationName?: string,
+  operationName?: TOperationName,
 ) =>
-  buildObject({
+  strictObject({
     errors: T.Optional(
       T.Array(
-        buildObject({
+        strictObject({
           message: T.String(),
           path: T.Optional(T.Array(T.Union([T.String(), T.Number()]))),
           locations: T.Optional(
-            buildObject({ line: T.Number(), column: T.Number() }),
+            strictObject({ line: T.Number(), column: T.Number() }),
           ),
         }),
       ),
     ),
     data: DataSchema,
-    extensions: buildObject({
-      challenge: T.Optional(buildObject({ type: T.Literal('integrity') })),
+    extensions: strictObject({
+      challenge: T.Optional(strictObject({ type: T.Literal('integrity') })),
       durationMilliseconds: T.Number(),
       ...(operationName ? { operationName: T.Literal(operationName) } : null),
       requestID: T.String(),

@@ -1,6 +1,6 @@
 import { Type as T } from '@sinclair/typebox';
 import {
-  buildObject,
+  strictObject,
   getResponseSchema,
   LegacyRef,
   pick,
@@ -13,7 +13,7 @@ export const name = 'ChannelVideoShelvesQuery';
 export const displayName = name;
 export const tags = ['Videos'];
 
-export const VariablesSchema = buildObject(
+export const VariablesSchema = strictObject(
   {
     includePreviewBlur: T.Optional(T.Boolean()),
     channelLogin: T.String(),
@@ -22,7 +22,7 @@ export const VariablesSchema = buildObject(
   { $id: `${displayName}Variables` },
 );
 
-export const ClipSchema = buildObject(
+export const ClipSchema = strictObject(
   {
     ...pick(schemas.Clip, [
       'id',
@@ -36,13 +36,13 @@ export const ClipSchema = buildObject(
     clipViewCount: T.Integer({ minimum: 0 }),
     curator: T.Union([
       T.Null(),
-      buildObject(pick(schemas.User, ['id', 'login', 'displayName'])),
+      strictObject(pick(schemas.User, ['id', 'login', 'displayName'])),
     ]),
     clipGame: T.Union([
       T.Null(),
-      buildObject(pick(schemas.Game, ['id', 'slug', 'name', 'boxArtURL'])),
+      strictObject(pick(schemas.Game, ['id', 'slug', 'name', 'boxArtURL'])),
     ]),
-    broadcaster: buildObject({
+    broadcaster: strictObject({
       ...pick(schemas.User, [
         'id',
         'login',
@@ -50,14 +50,14 @@ export const ClipSchema = buildObject(
         'profileImageURL',
         'primaryColorHex',
       ]),
-      roles: buildObject(pick(schemas.UserRoles, ['isPartner'])),
+      roles: strictObject(pick(schemas.UserRoles, ['isPartner'])),
     }),
     guestStarParticipants: T.Union([T.Null(), GuestStarParticipantsSchema]),
   },
   { $id: `${displayName}Clip` },
 );
 
-export const VideoSchema = buildObject(
+export const VideoSchema = strictObject(
   {
     ...pick(schemas.Video, [
       'animatedPreviewURL',
@@ -70,11 +70,11 @@ export const VideoSchema = buildObject(
     ]),
     game: T.Union([
       T.Null(),
-      buildObject(
+      strictObject(
         pick(schemas.Game, ['boxArtURL', 'id', 'slug', 'displayName', 'name']),
       ),
     ]),
-    owner: buildObject({
+    owner: strictObject({
       ...pick(schemas.User, [
         'displayName',
         'id',
@@ -82,45 +82,45 @@ export const VideoSchema = buildObject(
         'profileImageURL',
         'primaryColorHex',
       ]),
-      roles: buildObject(pick(schemas.UserRoles, ['isPartner'])),
+      roles: strictObject(pick(schemas.UserRoles, ['isPartner'])),
     }),
-    self: buildObject(
+    self: strictObject(
       pick(schemas.VideoSelfEdge, ['isRestricted', 'viewingHistory']),
     ),
     resourceRestriction: T.Union([T.Null(), ResourceRestrictionSchema]),
     contentTags: T.Array(T.Unknown(), { maxItems: 0 }),
     previewThumbnailProperties: T.Optional(
-      buildObject(pick(schemas.PreviewThumbnailProperties, ['blurReason'])),
+      strictObject(pick(schemas.PreviewThumbnailProperties, ['blurReason'])),
     ),
   },
   { $id: `${displayName}Video` },
 );
 
-const CollectionSchema = buildObject({
+const CollectionSchema = strictObject({
   id: T.String({ minLength: 1 }),
   description: T.String(),
-  owner: buildObject(pick(schemas.User, ['id', 'login'])),
+  owner: strictObject(pick(schemas.User, ['id', 'login'])),
   thumbnailURL: T.Union([T.Null(), T.String({ format: 'uri' })]),
   title: T.String(),
   type: T.Union([T.Literal('DEFAULT')]),
   updatedAt: T.String({ format: 'date-time' }),
   lengthSeconds: T.Integer({ minimum: 0 }),
-  items: buildObject({
+  items: strictObject({
     totalCount: T.Integer({ minimum: 0 }),
     edges: T.Array(
-      buildObject({
+      strictObject({
         cursor: T.Union([T.Null(), T.String()]),
         node: LegacyRef(VideoSchema),
         __typename: T.Literal('CollectionItemEdge'),
       }),
     ),
-    pageInfo: buildObject(pick(schemas.PageInfo, ['hasNextPage'])),
+    pageInfo: strictObject(pick(schemas.PageInfo, ['hasNextPage'])),
     __typename: T.Literal('CollectionConnection'),
   }),
   __typename: T.Literal('Collection'),
 });
 
-export const VideoShelfSchema = buildObject(
+export const VideoShelfSchema = strictObject(
   {
     id: T.String({ minLength: 1 }),
     title: T.String(),
@@ -139,22 +139,22 @@ export const VideoShelfSchema = buildObject(
   { $id: `${displayName}VideoShelf` },
 );
 
-const UserSchema = buildObject({
+const UserSchema = strictObject({
   ...pick(schemas.User, ['id', 'displayName', 'primaryColorHex']),
-  videoShelves: buildObject({
+  videoShelves: strictObject({
     edges: T.Array(
-      buildObject({
+      strictObject({
         cursor: T.Union([T.Null(), T.String()]),
         node: LegacyRef(VideoShelfSchema),
         __typename: T.Literal('VideoShelfEdge'),
       }),
     ),
-    pageInfo: buildObject(pick(schemas.PageInfo, ['hasNextPage'])),
+    pageInfo: strictObject(pick(schemas.PageInfo, ['hasNextPage'])),
     __typename: T.Literal('VideoShelfConnection'),
   }),
 });
 
-export const DataSchema = buildObject(
+export const DataSchema = strictObject(
   {
     currentUser: T.Union([T.Null()]),
     user: T.Union([T.Null(), UserSchema]),

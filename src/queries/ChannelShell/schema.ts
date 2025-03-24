@@ -1,6 +1,6 @@
 import { Type as T } from '@sinclair/typebox';
 import {
-  buildObject,
+  strictObject,
   getResponseSchema,
   LegacyRef,
   pick,
@@ -11,12 +11,12 @@ export const name = 'ChannelShell';
 export const displayName = name;
 export const tags = ['Channels'];
 
-export const VariablesSchema = buildObject(
+export const VariablesSchema = strictObject(
   { login: T.String() },
   { $id: `${displayName}Variables` },
 );
 
-export const UserSchema = buildObject(
+export const UserSchema = strictObject(
   {
     ...pick(schemas.User, [
       'id',
@@ -28,27 +28,27 @@ export const UserSchema = buildObject(
     ]),
     stream: T.Union([
       T.Null(),
-      buildObject(pick(schemas.Stream, ['id', 'viewersCount'])),
+      strictObject(pick(schemas.Stream, ['id', 'viewersCount'])),
     ]),
-    channel: buildObject({
+    channel: strictObject({
       ...pick(schemas.Channel, ['id']),
-      self: buildObject({
+      self: strictObject({
         isAuthorized: T.Boolean(),
         restrictionType: T.Null(),
         __typename: T.Literal('ChannelSelfEdge'),
       }),
-      trailer: buildObject({
+      trailer: strictObject({
         video: T.Union([
           T.Null(),
-          buildObject({
+          strictObject({
             ...pick(schemas.Video, ['id']),
-            self: buildObject(pick(schemas.VideoSelfEdge, ['viewingHistory'])),
+            self: strictObject(pick(schemas.VideoSelfEdge, ['viewingHistory'])),
           }),
         ]),
         __typename: T.Literal('Trailer'),
       }),
-      home: buildObject({
-        preferences: buildObject({
+      home: strictObject({
+        preferences: strictObject({
           heroPreset: T.String(),
           __typename: T.Literal('ChannelHomePreferences'),
         }),
@@ -59,7 +59,7 @@ export const UserSchema = buildObject(
   { $id: `${displayName}User` },
 );
 
-export const UserDoesNotExistSchema = buildObject(
+export const UserDoesNotExistSchema = strictObject(
   {
     userDoesNotExist: T.String(),
     reason: T.Union([
@@ -73,7 +73,7 @@ export const UserDoesNotExistSchema = buildObject(
   { $id: `${displayName}UserDoesNotExist` },
 );
 
-export const DataSchema = buildObject(
+export const DataSchema = strictObject(
   {
     userOrError: T.Union([
       LegacyRef(UserSchema),

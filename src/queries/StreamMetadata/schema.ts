@@ -1,6 +1,6 @@
 import { Type as T } from '@sinclair/typebox';
 import {
-  buildObject,
+  strictObject,
   getResponseSchema,
   LegacyRef,
   pick,
@@ -11,12 +11,12 @@ export const name = 'StreamMetadata';
 export const displayName = name;
 export const tags = ['Streams'];
 
-export const VariablesSchema = buildObject(
+export const VariablesSchema = strictObject(
   { channelLogin: T.String() },
   { $id: `${displayName}Variables` },
 );
 
-export const UserSchema = buildObject(
+export const UserSchema = strictObject(
   {
     ...pick(schemas.User, [
       'id',
@@ -26,14 +26,14 @@ export const UserSchema = buildObject(
     ]),
     primaryTeam: T.Union([
       T.Null(),
-      buildObject(pick(schemas.Team, ['id', 'name', 'displayName'])),
+      strictObject(pick(schemas.Team, ['id', 'name', 'displayName'])),
     ]),
     squadStream: T.Union([T.Null()]),
-    channel: buildObject({
+    channel: strictObject({
       ...pick(schemas.Channel, ['id']),
       chanlets: T.Union([T.Null()]),
     }),
-    lastBroadcast: buildObject(
+    lastBroadcast: strictObject(
       {
         id: T.Union([T.Null(), T.String({ pattern: '^[0-9]+$' })]),
         title: T.Union([T.Null(), T.String()]),
@@ -43,11 +43,11 @@ export const UserSchema = buildObject(
     ),
     stream: T.Union([
       T.Null(),
-      buildObject({
+      strictObject({
         ...pick(schemas.Stream, ['id', 'type', 'createdAt']),
         game: T.Union([
           T.Null(),
-          buildObject(pick(schemas.Game, ['id', 'slug', 'name'])),
+          strictObject(pick(schemas.Game, ['id', 'slug', 'name'])),
         ]),
       }),
     ]),
@@ -56,7 +56,7 @@ export const UserSchema = buildObject(
   { $id: `${displayName}User` },
 );
 
-export const DataSchema = buildObject(
+export const DataSchema = strictObject(
   { user: LegacyRef(UserSchema) },
   { $id: `${displayName}Data` },
 );

@@ -1,6 +1,6 @@
 import { Type as T } from '@sinclair/typebox';
 import {
-  buildObject,
+  strictObject,
   getResponseSchema,
   LegacyRef,
   pick,
@@ -12,7 +12,7 @@ export const displayName = 'ChannelRootAboutPanel';
 export const tags = ['Channels'];
 const category = 'ChannelRoot';
 
-export const VariablesSchema = buildObject(
+export const VariablesSchema = strictObject(
   {
     channelLogin: T.String(),
     skipSchedule: T.Boolean(),
@@ -21,7 +21,7 @@ export const VariablesSchema = buildObject(
   { $id: `${displayName}Variables` },
 );
 
-export const UserSchema = buildObject(
+export const UserSchema = strictObject(
   {
     ...pick(schemas.User, [
       'id',
@@ -30,17 +30,17 @@ export const UserSchema = buildObject(
       'primaryColorHex',
       'profileImageURL',
     ]),
-    followers: buildObject(pick(schemas.FollowerConnection, ['totalCount'])),
-    roles: buildObject({
+    followers: strictObject(pick(schemas.FollowerConnection, ['totalCount'])),
+    roles: strictObject({
       ...pick(schemas.UserRoles, ['isPartner', 'isAffiliate', 'isStaff']),
       isParticipatingDJ: T.Optional(T.Boolean()),
     }),
-    channel: buildObject({
+    channel: strictObject({
       ...pick(schemas.Channel, ['id']),
       socialMedias: T.Union([
         T.Null(),
         T.Array(
-          buildObject(
+          strictObject(
             pick(schemas.SocialMedia, ['id', 'name', 'title', 'url']),
           ),
         ),
@@ -48,11 +48,11 @@ export const UserSchema = buildObject(
       schedule: T.Optional(
         T.Union([
           T.Null(),
-          buildObject({
+          strictObject({
             ...pick(schemas.Schedule, ['id']),
             nextSegment: T.Union([
               T.Null(),
-              buildObject(
+              strictObject(
                 pick(schemas.ScheduleSegment, ['id', 'startAt', 'hasReminder']),
               ),
             ]),
@@ -60,12 +60,12 @@ export const UserSchema = buildObject(
         ]),
       ),
     }),
-    lastBroadcast: buildObject(
+    lastBroadcast: strictObject(
       {
         id: T.Union([T.Null(), T.String({ pattern: '^[0-9]+$' })]),
         game: T.Union([
           T.Null(),
-          buildObject(pick(schemas.Game, ['id', 'displayName'])),
+          strictObject(pick(schemas.Game, ['id', 'displayName'])),
         ]),
         __typename: T.Literal('Broadcast'),
       },
@@ -73,16 +73,16 @@ export const UserSchema = buildObject(
     ),
     primaryTeam: T.Union([
       T.Null(),
-      buildObject(pick(schemas.Team, ['id', 'name', 'displayName'])),
+      strictObject(pick(schemas.Team, ['id', 'name', 'displayName'])),
     ]),
-    videos: buildObject({
+    videos: strictObject({
       edges: T.Array(
-        buildObject({
-          node: buildObject({
+        strictObject({
+          node: strictObject({
             ...pick(schemas.Video, ['id', 'status']),
             game: T.Union([
               T.Null(),
-              buildObject(pick(schemas.Game, ['id', 'displayName'])),
+              strictObject(pick(schemas.Game, ['id', 'displayName'])),
             ]),
           }),
           __typename: T.Literal('VideoEdge'),
@@ -94,7 +94,7 @@ export const UserSchema = buildObject(
   { $id: `${category}User` },
 );
 
-export const DataSchema = buildObject(
+export const DataSchema = strictObject(
   {
     currentUser: T.Union([T.Null()]),
     user: T.Union([T.Null(), LegacyRef(UserSchema)]),

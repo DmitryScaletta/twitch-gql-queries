@@ -1,6 +1,6 @@
 import { Type as T } from '@sinclair/typebox';
 import {
-  buildObject,
+  strictObject,
   getResponseSchema,
   LegacyRef,
   pick,
@@ -11,7 +11,7 @@ export const name = 'GetPinnedChat';
 export const displayName = name;
 export const tags = ['Chat'];
 
-export const VariablesSchema = buildObject(
+export const VariablesSchema = strictObject(
   {
     channelID: T.String(),
     count: T.Integer({ minimum: 1 }),
@@ -19,40 +19,40 @@ export const VariablesSchema = buildObject(
   { $id: `${displayName}Variables` },
 );
 
-const ParentMessageSchema = buildObject({
+const ParentMessageSchema = strictObject({
   ...pick(schemas.Message, ['id', 'sentAt']),
-  content: buildObject(pick(schemas.MessageContent, ['text'])),
-  sender: buildObject(pick(schemas.User, ['id', 'displayName'])),
+  content: strictObject(pick(schemas.MessageContent, ['text'])),
+  sender: strictObject(pick(schemas.User, ['id', 'displayName'])),
 });
 
-const ThreadParentMessageSchema = buildObject({
+const ThreadParentMessageSchema = strictObject({
   ...pick(schemas.Message, ['id']),
-  content: buildObject(pick(schemas.MessageContent, ['text'])),
-  sender: buildObject(pick(schemas.User, ['id', 'displayName'])),
+  content: strictObject(pick(schemas.MessageContent, ['text'])),
+  sender: strictObject(pick(schemas.User, ['id', 'displayName'])),
 });
 
-export const MessageSchema = buildObject(
+export const MessageSchema = strictObject(
   {
     ...pick(schemas.Message, ['id', 'sentAt']),
-    content: buildObject({
+    content: strictObject({
       ...pick(schemas.MessageContent, ['text']),
       fragments: T.Array(
-        buildObject(pick(schemas.MessageFragment, ['content', 'text'])),
+        strictObject(pick(schemas.MessageFragment, ['content', 'text'])),
       ),
     }),
     parentMessage: T.Union([T.Null(), ParentMessageSchema]),
     threadParentMessage: T.Union([T.Null(), ThreadParentMessageSchema]),
-    sender: buildObject({
+    sender: strictObject({
       ...pick(schemas.User, ['id', 'chatColor', 'displayName']),
       displayBadges: T.Array(
-        buildObject(pick(schemas.Badge, ['id', 'setID', 'version'])),
+        strictObject(pick(schemas.Badge, ['id', 'setID', 'version'])),
       ),
     }),
   },
   { $id: `${displayName}Message` },
 );
 
-export const PinnedChatMessageSchema = buildObject(
+export const PinnedChatMessageSchema = strictObject(
   {
     ...pick(schemas.PinnedChatMessage, [
       'id',
@@ -62,29 +62,29 @@ export const PinnedChatMessageSchema = buildObject(
       'endsAt',
     ]),
     pinnedMessage: LegacyRef(MessageSchema),
-    pinnedBy: buildObject(pick(schemas.User, ['id', 'displayName'])),
+    pinnedBy: strictObject(pick(schemas.User, ['id', 'displayName'])),
   },
   { $id: `${displayName}PinnedChatMessage` },
 );
 
-const PinnedChatMessagesSchema = buildObject({
+const PinnedChatMessagesSchema = strictObject({
   edges: T.Array(
-    buildObject({
+    strictObject({
       node: LegacyRef(PinnedChatMessageSchema),
       cursor: T.Union([T.Null(), T.String()]),
       __typename: T.Literal('PinnedChatMessageEdge'),
     }),
   ),
-  pageInfo: buildObject(pick(schemas.PageInfo, ['hasNextPage'])),
+  pageInfo: strictObject(pick(schemas.PageInfo, ['hasNextPage'])),
   __typename: T.Literal('PinnedChatMessageConnection'),
 });
 
-const ChannelSchema = buildObject({
+const ChannelSchema = strictObject({
   ...pick(schemas.Channel, ['id']),
   pinnedChatMessages: T.Union([T.Null(), PinnedChatMessagesSchema]),
 });
 
-export const DataSchema = buildObject(
+export const DataSchema = strictObject(
   { channel: T.Union([T.Null(), ChannelSchema]) },
   { $id: `${displayName}Data` },
 );

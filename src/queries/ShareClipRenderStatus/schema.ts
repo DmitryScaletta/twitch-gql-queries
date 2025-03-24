@@ -1,6 +1,6 @@
 import { Type as T } from '@sinclair/typebox';
 import {
-  buildObject,
+  strictObject,
   getResponseSchema,
   LegacyRef,
   pick,
@@ -11,12 +11,12 @@ export const name = 'ShareClipRenderStatus';
 export const displayName = name;
 export const tags = ['Clips'];
 
-export const VariablesSchema = buildObject(
+export const VariablesSchema = strictObject(
   { slug: T.String() },
   { $id: `${displayName}Variables` },
 );
 
-export const BroadcasterSchema = buildObject(
+export const BroadcasterSchema = strictObject(
   {
     ...pick(schemas.User, [
       'id',
@@ -26,42 +26,42 @@ export const BroadcasterSchema = buildObject(
       'isPartner',
       'profileImageURL',
     ]),
-    followers: buildObject(pick(schemas.FollowerConnection, ['totalCount'])),
+    followers: strictObject(pick(schemas.FollowerConnection, ['totalCount'])),
     stream: T.Union([
       T.Null(),
-      buildObject(pick(schemas.Stream, ['id', 'viewersCount'])),
+      strictObject(pick(schemas.Stream, ['id', 'viewersCount'])),
     ]),
     // what if never streamed and a clip was made from an upload?
-    lastBroadcast: buildObject(pick(schemas.Broadcast, ['id', 'startedAt'])),
+    lastBroadcast: strictObject(pick(schemas.Broadcast, ['id', 'startedAt'])),
     self: T.Union([T.Null()]),
   },
   { $id: `${displayName}Broadcaster` },
 );
 
-const PortraitCropCoordinatesSchema = buildObject({
+const PortraitCropCoordinatesSchema = strictObject({
   xPercentage: T.Number({ minimum: 0, maximum: 100 }),
   yPercentage: T.Number({ minimum: 0, maximum: 100 }),
   __typename: T.Literal('PortraitCropCoordinates'),
 });
 
-const PortraitCropMetadataSchema = buildObject({
+const PortraitCropMetadataSchema = strictObject({
   topLeft: PortraitCropCoordinatesSchema,
   bottomRight: PortraitCropCoordinatesSchema,
   __typename: T.Literal('PortraitCropMetadata'),
 });
 
-const FullTemplateMetadataSchema = buildObject({
+const FullTemplateMetadataSchema = strictObject({
   mainFrame: PortraitCropMetadataSchema,
   __typename: T.Literal('FullTemplateMetadata'),
 });
 
-const StackedTemplateMetadataSchema = buildObject({
+const StackedTemplateMetadataSchema = strictObject({
   topFrame: PortraitCropMetadataSchema,
   bottomFrame: PortraitCropMetadataSchema,
   __typename: T.Literal('StackedTemplateMetadata'),
 });
 
-export const ClipAssetSchema = buildObject(
+export const ClipAssetSchema = strictObject(
   {
     ...pick(schemas.ClipAsset, [
       'id',
@@ -73,18 +73,18 @@ export const ClipAssetSchema = buildObject(
     ]),
     curator: T.Union([
       T.Null(),
-      buildObject(
+      strictObject(
         pick(schemas.User, ['id', 'login', 'displayName', 'profileImageURL']),
       ),
     ]),
     videoQualities: T.Array(
-      buildObject(
+      strictObject(
         pick(schemas.ClipVideoQuality, ['frameRate', 'quality', 'sourceURL']),
       ),
     ),
     portraitMetadata: T.Union([
       T.Null(),
-      buildObject({
+      strictObject({
         portraitClipLayout: T.Union([T.Literal('FULL'), T.Literal('STACKED')]),
         fullTemplateMetadata: T.Union([T.Null(), FullTemplateMetadataSchema]),
         stackedTemplateMetadata: T.Union([
@@ -98,7 +98,7 @@ export const ClipAssetSchema = buildObject(
   { $id: `${displayName}ClipAsset` },
 );
 
-export const ClipSchema = buildObject(
+export const ClipSchema = strictObject(
   {
     ...pick(schemas.Clip, [
       'id',
@@ -120,17 +120,17 @@ export const ClipSchema = buildObject(
     assets: T.Array(LegacyRef(ClipAssetSchema)),
     curator: T.Union([
       T.Null(),
-      buildObject(
+      strictObject(
         pick(schemas.User, ['id', 'login', 'displayName', 'profileImageURL']),
       ),
     ]),
     game: T.Union([
       T.Null(),
-      buildObject(
+      strictObject(
         pick(schemas.Game, ['id', 'name', 'boxArtURL', 'displayName', 'slug']),
       ),
     ]),
-    broadcast: buildObject({
+    broadcast: strictObject({
       id: T.Union([T.Literal('1'), T.String({ pattern: '^[0-9]+$' })], {
         description: 'For clips from highlights or uploads it will be `"1"`',
       }),
@@ -138,22 +138,22 @@ export const ClipSchema = buildObject(
       __typename: T.Literal('Broadcast'),
     }),
     broadcaster: T.Union([T.Null(), LegacyRef(BroadcasterSchema)]),
-    playbackAccessToken: buildObject(
+    playbackAccessToken: strictObject(
       pick(schemas.PlaybackAccessToken, ['signature', 'value']),
     ),
     video: T.Union([
       T.Null(),
-      buildObject(pick(schemas.Video, ['id', 'broadcastType', 'title'])),
+      strictObject(pick(schemas.Video, ['id', 'broadcastType', 'title'])),
     ]),
     videoQualities: T.Array(
-      buildObject(pick(schemas.ClipVideoQuality, ['sourceURL'])),
+      strictObject(pick(schemas.ClipVideoQuality, ['sourceURL'])),
     ),
     suggestedCropping: T.Union([T.Null()]),
   },
   { $id: `${displayName}Clip` },
 );
 
-export const DataSchema = buildObject(
+export const DataSchema = strictObject(
   { clip: T.Union([T.Null(), LegacyRef(ClipSchema)]) },
   { $id: `${displayName}Data` },
 );

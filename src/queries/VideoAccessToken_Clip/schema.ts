@@ -1,27 +1,27 @@
 import { Type as T } from '@sinclair/typebox';
-import { buildObject, getResponseSchema, pick } from '../../schema.ts';
+import { strictObject, getResponseSchema, pick } from '../../schema.ts';
 import * as schemas from '../../schemas.ts';
 
 export const name = 'VideoAccessToken_Clip';
 export const displayName = 'VideoAccessTokenClip';
 export const tags = ['Clips'];
 
-export const VariablesSchema = buildObject(
+export const VariablesSchema = strictObject(
   { slug: T.String() },
   { $id: `${displayName}Variables` },
 );
 
-export const DataSchema = buildObject(
+export const DataSchema = strictObject(
   {
     clip: T.Union([
       T.Null(),
-      buildObject({
+      strictObject({
         ...pick(schemas.Clip, ['id']),
-        playbackAccessToken: buildObject(
+        playbackAccessToken: strictObject(
           pick(schemas.PlaybackAccessToken, ['signature', 'value']),
         ),
         videoQualities: T.Array(
-          buildObject(
+          strictObject(
             pick(schemas.ClipVideoQuality, [
               'frameRate',
               'quality',

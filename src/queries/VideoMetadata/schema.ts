@@ -1,12 +1,12 @@
 import { Type as T } from '@sinclair/typebox';
-import { buildObject, getResponseSchema, pick } from '../../schema.ts';
+import { strictObject, getResponseSchema, pick } from '../../schema.ts';
 import * as schemas from '../../schemas.ts';
 
 export const name = 'VideoMetadata';
 export const displayName = name;
 export const tags = ['Videos'];
 
-export const VariablesSchema = buildObject(
+export const VariablesSchema = strictObject(
   {
     channelLogin: T.Union([T.Literal(''), T.String()]),
     videoID: T.String(),
@@ -14,7 +14,7 @@ export const VariablesSchema = buildObject(
   { $id: `${displayName}Variables` },
 );
 
-export const UserSchema = buildObject(
+export const UserSchema = strictObject(
   {
     ...pick(schemas.User, [
       'id',
@@ -22,7 +22,7 @@ export const UserSchema = buildObject(
       'isPartner',
       'profileImageURL',
     ]),
-    lastBroadcast: buildObject(
+    lastBroadcast: strictObject(
       {
         id: T.Union([T.Null(), T.String({ pattern: '^[0-9]+$' })]),
         startedAt: T.Union([T.Null(), T.String({ format: 'date-time' })]),
@@ -32,14 +32,14 @@ export const UserSchema = buildObject(
     ),
     stream: T.Union([
       T.Null(),
-      buildObject(pick(schemas.Stream, ['id', 'viewersCount'])),
+      strictObject(pick(schemas.Stream, ['id', 'viewersCount'])),
     ]),
-    followers: buildObject(pick(schemas.FollowerConnection, ['totalCount'])),
+    followers: strictObject(pick(schemas.FollowerConnection, ['totalCount'])),
   },
   { $id: `${displayName}User` },
 );
 
-export const VideoSchema = buildObject(
+export const VideoSchema = strictObject(
   {
     ...pick(schemas.Video, [
       'id',
@@ -52,10 +52,10 @@ export const VideoSchema = buildObject(
       'lengthSeconds',
       'broadcastType',
     ]),
-    owner: buildObject(pick(schemas.User, ['id', 'login', 'displayName'])),
+    owner: strictObject(pick(schemas.User, ['id', 'login', 'displayName'])),
     game: T.Union([
       T.Null(),
-      buildObject(
+      strictObject(
         pick(schemas.Game, ['id', 'slug', 'boxArtURL', 'name', 'displayName']),
       ),
     ]),
@@ -63,7 +63,7 @@ export const VideoSchema = buildObject(
   { $id: `${displayName}Video` },
 );
 
-export const DataSchema = buildObject(
+export const DataSchema = strictObject(
   {
     user: T.Union([T.Null(), UserSchema]),
     currentUser: T.Null(),

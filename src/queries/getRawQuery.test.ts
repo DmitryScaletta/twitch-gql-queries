@@ -1,6 +1,6 @@
 import { describe, test } from 'node:test';
 import { Type as T } from '@sinclair/typebox';
-import { buildObject, getResponseSchema } from '../schema.ts';
+import { strictObject, getResponseSchema } from '../schema.ts';
 import { createValidate } from '../testHelpers.ts';
 import { gqlRequest } from '../gqlRequest.ts';
 import { getRawQuery } from './getRawQuery.ts';
@@ -18,13 +18,13 @@ describe('getRawQuery', () => {
         }
       }
     }`;
-    const DataSchema = buildObject({
-      video: buildObject({
+    const DataSchema = strictObject({
+      video: strictObject({
         id: T.String(),
         title: T.String(),
         game: T.Union([
           T.Null(),
-          buildObject({
+          strictObject({
             id: T.String(),
             name: T.String(),
           }),
@@ -54,8 +54,8 @@ describe('getRawQuery', () => {
         signature
       }
     }`;
-    const DataSchema = buildObject({
-      videoPlaybackAccessToken: buildObject({
+    const DataSchema = strictObject({
+      videoPlaybackAccessToken: strictObject({
         value: T.String(),
         signature: T.String(),
       }),

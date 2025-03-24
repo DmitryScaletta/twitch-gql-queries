@@ -1,6 +1,6 @@
 import { Type as T } from '@sinclair/typebox';
 import {
-  buildObject,
+  strictObject,
   getResponseSchema,
   LegacyRef,
   pick,
@@ -15,12 +15,12 @@ export const name = 'ClipsCards__User';
 export const displayName = 'ClipsCardsUser';
 export const tags = ['Clips'];
 
-export const VariablesSchema = buildObject(
+export const VariablesSchema = strictObject(
   {
     login: T.String(),
     limit: T.Integer({ minimum: 1 }),
     criteria: T.Optional(
-      buildObject({
+      strictObject({
         filter: T.Optional(T.Union([T.Null(), LegacyRef(FilterSchema)])),
         shouldFilterByDiscoverySetting: T.Optional(
           T.Union([T.Null(), T.Boolean()]),
@@ -32,7 +32,7 @@ export const VariablesSchema = buildObject(
   { $id: `${displayName}Variables` },
 );
 
-export const ClipSchema = buildObject(
+export const ClipSchema = strictObject(
   {
     ...pick(schemas.Clip, [
       'id',
@@ -50,15 +50,15 @@ export const ClipSchema = buildObject(
     ]),
     curator: T.Union([
       T.Null(),
-      buildObject(pick(schemas.User, ['id', 'login', 'displayName'])),
+      strictObject(pick(schemas.User, ['id', 'login', 'displayName'])),
     ]),
     game: T.Union([
       T.Null(),
-      buildObject(pick(schemas.Game, ['id', 'slug', 'name', 'boxArtURL'])),
+      strictObject(pick(schemas.Game, ['id', 'slug', 'name', 'boxArtURL'])),
     ]),
     broadcaster: T.Union([
       T.Null(),
-      buildObject({
+      strictObject({
         ...pick(schemas.User, [
           'id',
           'login',
@@ -66,7 +66,7 @@ export const ClipSchema = buildObject(
           'profileImageURL',
           'primaryColorHex',
         ]),
-        roles: buildObject(pick(schemas.UserRoles, ['isPartner'])),
+        roles: strictObject(pick(schemas.UserRoles, ['isPartner'])),
       }),
     ]),
     guestStarParticipants: T.Union([T.Null(), GuestStarParticipantsSchema]),
@@ -74,10 +74,10 @@ export const ClipSchema = buildObject(
   { $id: `${displayName}Clip` },
 );
 
-const ClipsSchema = buildObject({
-  pageInfo: buildObject(pick(schemas.PageInfo, ['hasNextPage'])),
+const ClipsSchema = strictObject({
+  pageInfo: strictObject(pick(schemas.PageInfo, ['hasNextPage'])),
   edges: T.Array(
-    buildObject({
+    strictObject({
       cursor: T.Union([T.Null(), T.String()]),
       node: LegacyRef(ClipSchema),
       __typename: T.Literal('ClipEdge'),
@@ -86,12 +86,12 @@ const ClipsSchema = buildObject({
   __typename: T.Literal('ClipConnection'),
 });
 
-const UserSchema = buildObject({
+const UserSchema = strictObject({
   ...pick(schemas.User, ['id']),
   clips: T.Union([T.Null(), ClipsSchema]),
 });
 
-export const DataSchema = buildObject(
+export const DataSchema = strictObject(
   { user: T.Union([T.Null(), UserSchema]) },
   { $id: `${displayName}Data` },
 );

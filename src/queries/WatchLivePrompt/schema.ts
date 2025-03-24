@@ -1,35 +1,35 @@
 import { Type as T } from '@sinclair/typebox';
-import { buildObject, getResponseSchema, pick } from '../../schema.ts';
+import { strictObject, getResponseSchema, pick } from '../../schema.ts';
 import * as schemas from '../../schemas.ts';
 
 export const name = 'WatchLivePrompt';
 export const displayName = name;
 export const tags = ['Clips'];
 
-export const VariablesSchema = buildObject(
+export const VariablesSchema = strictObject(
   { slug: T.String() },
   { $id: `${displayName}Variables` },
 );
 
-const StreamSchema = buildObject({
+const StreamSchema = strictObject({
   ...pick(schemas.Stream, ['id']),
   game: T.Union([
     T.Null(),
-    buildObject(pick(schemas.Game, ['id', 'displayName'])),
+    strictObject(pick(schemas.Game, ['id', 'displayName'])),
   ]),
 });
 
-const BroadcasterSchema = buildObject({
+const BroadcasterSchema = strictObject({
   ...pick(schemas.User, ['id', 'login', 'displayName']),
   stream: T.Union([T.Null(), StreamSchema]),
 });
 
-const ClipSchema = buildObject({
+const ClipSchema = strictObject({
   ...pick(schemas.Clip, ['id', 'durationSeconds', 'thumbnailURL']),
   broadcaster: T.Union([T.Null(), BroadcasterSchema]),
 });
 
-export const DataSchema = buildObject(
+export const DataSchema = strictObject(
   { clip: T.Union([T.Null(), ClipSchema]) },
   { $id: `${displayName}Data` },
 );

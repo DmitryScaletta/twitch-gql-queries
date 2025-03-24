@@ -1,6 +1,6 @@
 import { Type as T } from '@sinclair/typebox';
 import {
-  buildObject,
+  strictObject,
   getResponseSchema,
   LegacyRef,
   pick,
@@ -11,7 +11,7 @@ export const name = 'FilterableVideoTower_Videos';
 export const displayName = 'FilterableVideoTowerVideos';
 export const tags = ['Videos'];
 
-export const VariablesSchema = buildObject(
+export const VariablesSchema = strictObject(
   {
     includePreviewBlur: T.Optional(T.Boolean()),
     limit: T.Integer({ minimum: 1 }),
@@ -29,12 +29,12 @@ export const VariablesSchema = buildObject(
   { $id: `${displayName}Variables` },
 );
 
-export const ResourceRestrictionSchema = buildObject({
+export const ResourceRestrictionSchema = strictObject({
   // vod:2397382584
   id: T.String({ minLength: 1 }),
   type: T.Union([T.Literal('SUB_ONLY_LIVE')]),
   exemptions: T.Array(
-    buildObject({
+    strictObject({
       type: T.Union([
         T.Literal('STAFF'),
         T.Literal('SITE_ADMIN'),
@@ -42,7 +42,7 @@ export const ResourceRestrictionSchema = buildObject({
         T.Literal('PREVIEW'),
       ]),
       actions: T.Array(
-        buildObject({
+        strictObject({
           name: T.String(),
           title: T.String(),
           __typename: T.Literal('ResourceRestrictionExemptionAction'),
@@ -55,7 +55,7 @@ export const ResourceRestrictionSchema = buildObject({
   __typename: T.Literal('ResourceRestriction'),
 });
 
-export const VideoSchema = buildObject(
+export const VideoSchema = strictObject(
   {
     ...pick(schemas.Video, [
       'animatedPreviewURL',
@@ -68,11 +68,11 @@ export const VideoSchema = buildObject(
     ]),
     game: T.Union([
       T.Null(),
-      buildObject(
+      strictObject(
         pick(schemas.Game, ['boxArtURL', 'id', 'slug', 'displayName', 'name']),
       ),
     ]),
-    owner: buildObject({
+    owner: strictObject({
       ...pick(schemas.User, [
         'displayName',
         'id',
@@ -80,35 +80,35 @@ export const VideoSchema = buildObject(
         'profileImageURL',
         'primaryColorHex',
       ]),
-      roles: buildObject(pick(schemas.UserRoles, ['isPartner'])),
+      roles: strictObject(pick(schemas.UserRoles, ['isPartner'])),
     }),
-    self: buildObject(
+    self: strictObject(
       pick(schemas.VideoSelfEdge, ['isRestricted', 'viewingHistory']),
     ),
     resourceRestriction: T.Union([T.Null(), ResourceRestrictionSchema]),
     contentTags: T.Array(T.Unknown(), { maxItems: 0 }),
     previewThumbnailProperties: T.Optional(
-      buildObject(pick(schemas.PreviewThumbnailProperties, ['blurReason'])),
+      strictObject(pick(schemas.PreviewThumbnailProperties, ['blurReason'])),
     ),
   },
   { $id: `${displayName}Video` },
 );
 
-const UserSchema = buildObject({
+const UserSchema = strictObject({
   ...pick(schemas.User, ['id']),
-  videos: buildObject({
+  videos: strictObject({
     edges: T.Array(
-      buildObject({
+      strictObject({
         ...pick(schemas.VideoEdge, ['cursor']),
         node: LegacyRef(VideoSchema),
       }),
     ),
-    pageInfo: buildObject(pick(schemas.PageInfo, ['hasNextPage'])),
+    pageInfo: strictObject(pick(schemas.PageInfo, ['hasNextPage'])),
     __typename: T.Literal('VideoConnection'),
   }),
 });
 
-export const DataSchema = buildObject(
+export const DataSchema = strictObject(
   { user: T.Union([T.Null(), UserSchema]) },
   { $id: `${displayName}Data` },
 );

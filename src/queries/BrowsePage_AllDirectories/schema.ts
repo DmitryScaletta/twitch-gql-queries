@@ -1,6 +1,6 @@
 import { Type as T } from '@sinclair/typebox';
 import {
-  buildObject,
+  strictObject,
   getResponseSchema,
   LegacyRef,
   pick,
@@ -17,14 +17,14 @@ export const SortSchema = T.Union(
   { $id: `${category}Sort` },
 );
 
-export const VariablesSchema = buildObject(
+export const VariablesSchema = strictObject(
   {
     limit: T.Integer({ minimum: 1 }),
-    options: buildObject({
+    options: strictObject({
       recommendationsContext: T.Optional(
         T.Union([
           T.Null(),
-          buildObject({
+          strictObject({
             platform: T.Optional(
               T.Union([T.Null(), T.Literal('web'), T.String()]),
             ),
@@ -39,7 +39,7 @@ export const VariablesSchema = buildObject(
   { $id: `${displayName}Variables` },
 );
 
-export const GameSchema = buildObject(
+export const GameSchema = strictObject(
   {
     ...pick(schemas.Game, [
       'id',
@@ -51,7 +51,7 @@ export const GameSchema = buildObject(
       'originalReleaseDate',
     ]),
     tags: T.Array(
-      buildObject(
+      strictObject(
         pick(schemas.Tag, ['id', 'isLanguageTag', 'localizedName', 'tagName']),
       ),
     ),
@@ -59,18 +59,18 @@ export const GameSchema = buildObject(
   { $id: `${category}Game` },
 );
 
-const GameConnectionSchema = buildObject({
+const GameConnectionSchema = strictObject({
   edges: T.Array(
-    buildObject({
+    strictObject({
       ...pick(schemas.GameEdge, ['cursor', 'trackingID']),
       node: LegacyRef(GameSchema),
     }),
   ),
-  pageInfo: buildObject(pick(schemas.PageInfo, ['hasNextPage'])),
+  pageInfo: strictObject(pick(schemas.PageInfo, ['hasNextPage'])),
   __typename: T.Literal('GameConnection'),
 });
 
-export const DataSchema = buildObject(
+export const DataSchema = strictObject(
   { directoriesWithTags: T.Union([T.Null(), GameConnectionSchema]) },
   { $id: `${displayName}Data` },
 );

@@ -1,6 +1,6 @@
 import { Type as T } from '@sinclair/typebox';
 import {
-  buildObject,
+  strictObject,
   getResponseSchema,
   LegacyRef,
   pick,
@@ -21,16 +21,16 @@ export const SortSchema = T.Union(
   { $id: `${displayName}Sort` },
 );
 
-export const VariablesSchema = buildObject(
+export const VariablesSchema = strictObject(
   {
     imageWidth: T.Optional(T.Integer({ minimum: 0 })),
     slug: T.String(),
-    options: buildObject({
+    options: strictObject({
       sort: LegacyRef(SortSchema),
       recommendationsContext: T.Optional(
         T.Union([
           T.Null(),
-          buildObject({
+          strictObject({
             platform: T.Optional(
               T.Union([T.Null(), T.Literal('web'), T.String()]),
             ),
@@ -53,7 +53,7 @@ export const VariablesSchema = buildObject(
   { $id: `${displayName}Variables` },
 );
 
-export const StreamSchema = buildObject(
+export const StreamSchema = strictObject(
   {
     ...pick(schemas.Stream, [
       'id',
@@ -62,7 +62,7 @@ export const StreamSchema = buildObject(
       'previewImageURL',
       'type',
     ]),
-    broadcaster: buildObject({
+    broadcaster: strictObject({
       ...pick(schemas.User, [
         'id',
         'login',
@@ -70,45 +70,45 @@ export const StreamSchema = buildObject(
         'profileImageURL',
         'primaryColorHex',
       ]),
-      roles: buildObject(
+      roles: strictObject(
         pick(schemas.UserRoles, ['isPartner', 'isParticipatingDJ']),
       ),
     }),
     freeformTags: T.Array(
-      buildObject(pick(schemas.FreeformTag, ['id', 'name'])),
+      strictObject(pick(schemas.FreeformTag, ['id', 'name'])),
     ),
-    game: buildObject(
+    game: strictObject(
       pick(schemas.Game, ['id', 'boxArtURL', 'name', 'displayName', 'slug']),
     ),
-    previewThumbnailProperties: buildObject(
+    previewThumbnailProperties: strictObject(
       pick(schemas.PreviewThumbnailProperties, ['blurReason']),
     ),
   },
   { $id: `${displayName}Stream` },
 );
 
-export const GameSchema = buildObject(
+export const GameSchema = strictObject(
   {
     ...pick(schemas.Game, ['id', 'name', 'displayName']),
-    streams: buildObject({
+    streams: strictObject({
       banners: T.Union([
         T.Null(),
         T.Array(T.Union([T.Literal('MAY_CONTAIN_MATURE_CONTENT')])),
       ]),
       edges: T.Array(
-        buildObject({
+        strictObject({
           ...pick(schemas.StreamEdge, ['cursor', 'trackingID']),
           node: LegacyRef(StreamSchema),
         }),
       ),
-      pageInfo: buildObject(pick(schemas.PageInfo, ['hasNextPage'])),
+      pageInfo: strictObject(pick(schemas.PageInfo, ['hasNextPage'])),
       __typename: T.Literal('StreamConnection'),
     }),
   },
   { $id: `${displayName}Game` },
 );
 
-export const DataSchema = buildObject(
+export const DataSchema = strictObject(
   { game: T.Union([T.Null(), LegacyRef(GameSchema)]) },
   { $id: `${displayName}Data` },
 );

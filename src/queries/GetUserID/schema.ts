@@ -1,12 +1,12 @@
 import { Type as T } from '@sinclair/typebox';
-import { buildObject, getResponseSchema, pick } from '../../schema.ts';
+import { strictObject, getResponseSchema, pick } from '../../schema.ts';
 import * as schemas from '../../schemas.ts';
 
 export const name = 'GetUserID';
 export const displayName = 'GetUserId';
 export const tags = ['Channels'];
 
-export const VariablesSchema = buildObject(
+export const VariablesSchema = strictObject(
   {
     login: T.String(),
     lookupType: T.Union([T.Literal('ACTIVE'), T.Literal('ALL')], {
@@ -17,8 +17,8 @@ export const VariablesSchema = buildObject(
   { $id: `${displayName}Variables` },
 );
 
-export const DataSchema = buildObject(
-  { user: T.Union([T.Null(), buildObject(pick(schemas.User, ['id']))]) },
+export const DataSchema = strictObject(
+  { user: T.Union([T.Null(), strictObject(pick(schemas.User, ['id']))]) },
   { $id: `${displayName}Data` },
 );
 
