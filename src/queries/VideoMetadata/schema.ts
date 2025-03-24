@@ -22,12 +22,15 @@ export const UserSchema = strictObject(
       'isPartner',
       'profileImageURL',
     ]),
-    lastBroadcast: strictObject(
-      {
-        id: T.Union([T.Null(), T.String({ pattern: '^[0-9]+$' })]),
-        startedAt: T.Union([T.Null(), T.String({ format: 'date-time' })]),
-        __typename: T.Literal('Broadcast'),
-      },
+    lastBroadcast: T.Union(
+      [
+        T.Null(),
+        strictObject({
+          id: T.Union([T.Null(), T.String({ pattern: '^[0-9]+$' })]),
+          startedAt: T.Union([T.Null(), T.String({ format: 'date-time' })]),
+          __typename: T.Literal('Broadcast'),
+        }),
+      ],
       { description: 'If never streamed: `{ id: null, startedAt: null }`' },
     ),
     stream: T.Union([

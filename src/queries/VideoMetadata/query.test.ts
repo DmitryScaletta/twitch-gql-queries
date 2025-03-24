@@ -4,6 +4,8 @@ import { createValidate, getVideos } from '../../testHelpers.ts';
 import { getQueryVideoMetadata } from './query.ts';
 import { ResponseSchema } from './schema.ts';
 
+import resNoLastBroadcast from './mocks/6-no-last-broadcast.json' with { type: 'json' };
+
 describe('VideoMetadata', () => {
   const validate = createValidate(ResponseSchema);
 
@@ -53,4 +55,6 @@ describe('VideoMetadata', () => {
     ]);
     responses.map(validate);
   });
+
+  test('mock: no last broadcast', () => validate(resNoLastBroadcast));
 });

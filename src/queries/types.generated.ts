@@ -1563,7 +1563,7 @@ export interface VideoMetadataUser {
   /**
    * If never streamed: `{ id: null, startedAt: null }`
    */
-  lastBroadcast: {
+  lastBroadcast: null | {
     id: null | string;
     startedAt: null | string;
     __typename: 'Broadcast';
