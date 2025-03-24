@@ -4,6 +4,8 @@ import { createValidate } from '../../testHelpers.ts';
 import { getQueryBowsePageAllDirectories } from './query.ts';
 import { GameSchema, ResponseSchema } from './schema.ts';
 
+import resMusicBadDate from './mocks/3-music-bad-release-date.json' with { type: 'json' };
+
 describe('BrowsePage_AllDirectories', () => {
   const validate = createValidate(ResponseSchema, [GameSchema]);
 
@@ -44,4 +46,6 @@ describe('BrowsePage_AllDirectories', () => {
     ]);
     responses.map(validate);
   });
+
+  test('mock', () => validate(resMusicBadDate));
 });
