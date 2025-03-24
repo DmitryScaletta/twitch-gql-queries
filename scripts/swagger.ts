@@ -135,7 +135,10 @@ const buildOpenApi = async () => {
     }
   }
 
-  await fsp.writeFile('openapi.json', JSON.stringify(openApi, null, 2));
+  await Promise.all([
+    fsp.writeFile('openapi.json', JSON.stringify(openApi, null, 2)),
+    fsp.writeFile('docs/openapi.json', JSON.stringify(openApi)),
+  ]);
 };
 
 buildOpenApi();

@@ -32,6 +32,8 @@
     "add-query": "node --no-warnings=ExperimentalWarning scripts/query.ts add",
     "remove-query": "node --no-warnings=ExperimentalWarning scripts/query.ts remove",
     "swagger": "node --no-warnings=ExperimentalWarning scripts/swagger.ts",
+    "deploy": "pnpm swagger && surge docs twitch-gql-swagger.surge.sh",
+    "serve": "pnpm dlx static-server docs",
     "test": "node --no-warnings=ExperimentalWarning --test",
     "test:watch": "node --no-warnings=ExperimentalWarning --test --watch",
     "test:types": "pnpm tsc --noEmit"
