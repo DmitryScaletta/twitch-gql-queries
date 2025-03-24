@@ -7,8 +7,9 @@ import {
 } from '../../schema.ts';
 import * as schemas from '../../schemas.ts';
 
-const name = 'ClipsDownloadButton';
-const displayName = name;
+export const name = 'ClipsDownloadButton';
+export const displayName = name;
+export const tags = ['Clips'];
 
 export const VariablesSchema = buildObject(
   { slug: T.String() },

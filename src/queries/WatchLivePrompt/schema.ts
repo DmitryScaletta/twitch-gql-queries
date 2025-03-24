@@ -2,8 +2,9 @@ import { Type as T } from '@sinclair/typebox';
 import { buildObject, getResponseSchema, pick } from '../../schema.ts';
 import * as schemas from '../../schemas.ts';
 
-const name = 'WatchLivePrompt';
-const displayName = name;
+export const name = 'WatchLivePrompt';
+export const displayName = name;
+export const tags = ['Clips'];
 
 export const VariablesSchema = buildObject(
   { slug: T.String() },

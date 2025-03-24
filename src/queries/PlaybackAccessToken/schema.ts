@@ -7,8 +7,9 @@ import {
 } from '../../schema.ts';
 import * as schemas from '../../schemas.ts';
 
-const name = 'PlaybackAccessToken';
-const displayName = name;
+export const name = 'PlaybackAccessToken';
+export const displayName = name;
+export const tags = ['Videos', 'Streams'];
 
 export const VariablesSchema = buildObject(
   {

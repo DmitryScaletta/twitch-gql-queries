@@ -7,9 +7,10 @@ import {
 } from '../../schema.ts';
 import * as schemas from '../../schemas.ts';
 
-const name = 'ChannelRoot_AboutPanel';
+export const name = 'ChannelRoot_AboutPanel';
+export const displayName = 'ChannelRootAboutPanel';
+export const tags = ['Channels'];
 const category = 'ChannelRoot';
-const displayName = 'ChannelRootAboutPanel';
 
 export const VariablesSchema = buildObject(
   {

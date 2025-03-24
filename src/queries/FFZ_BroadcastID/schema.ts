@@ -7,8 +7,9 @@ import {
 } from '../../schema.ts';
 import * as schemas from '../../schemas.ts';
 
-const name = 'FFZ_BroadcastID';
-const displayName = 'FfzBroadcastId';
+export const name = 'FFZ_BroadcastID';
+export const displayName = 'FfzBroadcastId';
+export const tags = ['Streams'];
 
 export const VariablesSchema = buildObject(
   { id: T.String() },

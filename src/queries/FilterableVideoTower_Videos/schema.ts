@@ -7,8 +7,9 @@ import {
 } from '../../schema.ts';
 import * as schemas from '../../schemas.ts';
 
-const name = 'FilterableVideoTower_Videos';
-const displayName = 'FilterableVideoTowerVideos';
+export const name = 'FilterableVideoTower_Videos';
+export const displayName = 'FilterableVideoTowerVideos';
+export const tags = ['Videos'];
 
 export const VariablesSchema = buildObject(
   {

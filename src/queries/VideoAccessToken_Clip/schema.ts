@@ -2,8 +2,9 @@ import { Type as T } from '@sinclair/typebox';
 import { buildObject, getResponseSchema, pick } from '../../schema.ts';
 import * as schemas from '../../schemas.ts';
 
-const name = 'VideoAccessToken_Clip';
-const displayName = 'VideoAccessTokenClip';
+export const name = 'VideoAccessToken_Clip';
+export const displayName = 'VideoAccessTokenClip';
+export const tags = ['Clips'];
 
 export const VariablesSchema = buildObject(
   { slug: T.String() },

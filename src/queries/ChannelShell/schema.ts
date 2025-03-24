@@ -7,8 +7,9 @@ import {
 } from '../../schema.ts';
 import * as schemas from '../../schemas.ts';
 
-const name = 'ChannelShell';
-const displayName = name;
+export const name = 'ChannelShell';
+export const displayName = name;
+export const tags = ['Channels'];
 
 export const VariablesSchema = buildObject(
   { login: T.String() },

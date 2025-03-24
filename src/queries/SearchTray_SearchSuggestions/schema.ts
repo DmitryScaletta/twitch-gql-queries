@@ -7,9 +7,10 @@ import {
 } from '../../schema.ts';
 import * as schemas from '../../schemas.ts';
 
-const name = 'SearchTray_SearchSuggestions';
+export const name = 'SearchTray_SearchSuggestions';
+export const displayName = `SearchTraySearchSuggestions`;
+export const tags = ['Search'];
 const category = 'SearchTray';
-const displayName = `SearchTraySearchSuggestions`;
 
 export const VariablesSchema = buildObject(
   {

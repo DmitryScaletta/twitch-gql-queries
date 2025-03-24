@@ -11,8 +11,9 @@ import {
   GuestStarParticipantsSchema,
 } from '../ClipsCards__Game/schema.ts';
 
-const name = 'ClipsCards__User';
-const displayName = 'ClipsCardsUser';
+export const name = 'ClipsCards__User';
+export const displayName = 'ClipsCardsUser';
+export const tags = ['Clips'];
 
 export const VariablesSchema = buildObject(
   {

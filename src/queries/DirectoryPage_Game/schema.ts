@@ -7,8 +7,9 @@ import {
 } from '../../schema.ts';
 import * as schemas from '../../schemas.ts';
 
-const name = 'DirectoryPage_Game';
-const displayName = 'DirectoryPageGame';
+export const name = 'DirectoryPage_Game';
+export const displayName = 'DirectoryPageGame';
+export const tags = ['Streams'];
 
 export const SortSchema = T.Union(
   [

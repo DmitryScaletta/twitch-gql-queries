@@ -9,8 +9,9 @@ import * as schemas from '../../schemas.ts';
 import { GuestStarParticipantsSchema } from '../ClipsCards__Game/schema.ts';
 import { ResourceRestrictionSchema } from '../FilterableVideoTower_Videos/schema.ts';
 
-const name = 'ChannelVideoShelvesQuery';
-const displayName = name;
+export const name = 'ChannelVideoShelvesQuery';
+export const displayName = name;
+export const tags = ['Videos'];
 
 export const VariablesSchema = buildObject(
   {

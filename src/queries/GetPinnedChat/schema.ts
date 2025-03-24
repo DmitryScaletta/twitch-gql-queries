@@ -7,8 +7,9 @@ import {
 } from '../../schema.ts';
 import * as schemas from '../../schemas.ts';
 
-const name = 'GetPinnedChat';
-const displayName = name;
+export const name = 'GetPinnedChat';
+export const displayName = name;
+export const tags = ['Chat'];
 
 export const VariablesSchema = buildObject(
   {

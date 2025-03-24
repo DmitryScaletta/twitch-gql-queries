@@ -7,8 +7,14 @@ import {
 } from '../../schema.ts';
 import * as schemas from '../../schemas.ts';
 
-const name = 'GlobalBadges';
-const displayName = name;
+export const name = 'GlobalBadges';
+export const displayName = name;
+export const tags = ['Chat'];
+
+export const VariablesSchema = buildObject(
+  {},
+  { $id: `${displayName}Variables` },
+);
 
 export const BadgeSchema = buildObject(
   pick(schemas.Badge, [

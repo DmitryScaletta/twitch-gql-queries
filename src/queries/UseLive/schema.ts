@@ -2,8 +2,9 @@ import { Type as T } from '@sinclair/typebox';
 import { buildObject, getResponseSchema, pick } from '../../schema.ts';
 import * as schemas from '../../schemas.ts';
 
-const name = 'UseLive';
-const displayName = name;
+export const name = 'UseLive';
+export const displayName = name;
+export const tags = ['Streams'];
 
 export const VariablesSchema = buildObject(
   { channelLogin: T.String() },

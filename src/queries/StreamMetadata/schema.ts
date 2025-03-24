@@ -7,8 +7,9 @@ import {
 } from '../../schema.ts';
 import * as schemas from '../../schemas.ts';
 
-const name = 'StreamMetadata';
-const displayName = name;
+export const name = 'StreamMetadata';
+export const displayName = name;
+export const tags = ['Streams'];
 
 export const VariablesSchema = buildObject(
   { channelLogin: T.String() },

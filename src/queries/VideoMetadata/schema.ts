@@ -2,8 +2,9 @@ import { Type as T } from '@sinclair/typebox';
 import { buildObject, getResponseSchema, pick } from '../../schema.ts';
 import * as schemas from '../../schemas.ts';
 
-const name = 'VideoMetadata';
-const displayName = name;
+export const name = 'VideoMetadata';
+export const displayName = name;
+export const tags = ['Videos'];
 
 export const VariablesSchema = buildObject(
   {

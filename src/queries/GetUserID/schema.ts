@@ -2,8 +2,9 @@ import { Type as T } from '@sinclair/typebox';
 import { buildObject, getResponseSchema, pick } from '../../schema.ts';
 import * as schemas from '../../schemas.ts';
 
-const name = 'GetUserID';
-const displayName = 'GetUserId';
+export const name = 'GetUserID';
+export const displayName = 'GetUserId';
+export const tags = ['Channels'];
 
 export const VariablesSchema = buildObject(
   {

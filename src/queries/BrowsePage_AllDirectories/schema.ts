@@ -7,9 +7,10 @@ import {
 } from '../../schema.ts';
 import * as schemas from '../../schemas.ts';
 
-const name = 'BrowsePage_AllDirectories';
+export const name = 'BrowsePage_AllDirectories';
+export const displayName = 'BrowsePageAllDirectories';
+export const tags = ['Games'];
 const category = 'BrowsePage';
-const displayName = `${category}AllDirectories`;
 
 export const SortSchema = T.Union(
   [T.Literal('RELEVANCE'), T.Literal('VIEWER_COUNT')],
@@ -59,14 +60,14 @@ export const GameSchema = buildObject(
 );
 
 const GameConnectionSchema = buildObject({
-        edges: T.Array(
-          buildObject({
-            ...pick(schemas.GameEdge, ['cursor', 'trackingID']),
-            node: LegacyRef(GameSchema),
-          }),
-        ),
-        pageInfo: buildObject(pick(schemas.PageInfo, ['hasNextPage'])),
-        __typename: T.Literal('GameConnection'),
+  edges: T.Array(
+    buildObject({
+      ...pick(schemas.GameEdge, ['cursor', 'trackingID']),
+      node: LegacyRef(GameSchema),
+    }),
+  ),
+  pageInfo: buildObject(pick(schemas.PageInfo, ['hasNextPage'])),
+  __typename: T.Literal('GameConnection'),
 });
 
 export const DataSchema = buildObject(

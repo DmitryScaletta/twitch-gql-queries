@@ -7,9 +7,10 @@ import {
 } from '../../schema.ts';
 import * as schemas from '../../schemas.ts';
 
-const name = 'ClipsCards__Game';
+export const name = 'ClipsCards__Game';
+export const displayName = 'ClipsCardsGame';
+export const tags = ['Clips'];
 const category = 'ClipsCards';
-const displayName = 'ClipsCardsGame';
 
 export const FilterSchema = T.Union(
   [
