@@ -1,24 +1,4 @@
-### VideoMetadata
-
-### empty channelLogin
-
-POST https://gql.twitch.tv/gql
-Content-Type: application/json
-Client-Id: {{$dotenv CLIENT_ID}}
-
-{
-  "operationName": "VideoMetadata",
-  "variables": {
-    "channelLogin": "",
-    "videoID": "2404782496"
-  },
-  "extensions": {
-    "persistedQuery": {
-      "version": 1,
-      "sha256Hash": "45111672eea2e507f8ba44d101a61862f9c56b11dee09a15634cb75cb9b9084d"
-    }
-  }
-}
+# VideoMetadata
 
 ### archive
 
@@ -71,6 +51,26 @@ Client-Id: {{$dotenv CLIENT_ID}}
   "variables": {
     "channelLogin": "twitch",
     "videoID": "2185567716"
+  },
+  "extensions": {
+    "persistedQuery": {
+      "version": 1,
+      "sha256Hash": "45111672eea2e507f8ba44d101a61862f9c56b11dee09a15634cb75cb9b9084d"
+    }
+  }
+}
+
+### empty channelLogin
+
+POST https://gql.twitch.tv/gql
+Content-Type: application/json
+Client-Id: {{$dotenv CLIENT_ID}}
+
+{
+  "operationName": "VideoMetadata",
+  "variables": {
+    "channelLogin": "",
+    "videoID": "2404782496"
   },
   "extensions": {
     "persistedQuery": {

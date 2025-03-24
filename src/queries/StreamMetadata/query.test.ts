@@ -4,8 +4,8 @@ import { createValidate, getChannels } from '../../testHelpers.ts';
 import { getQueryStreamMetadata } from './query.ts';
 import { ResponseSchema, UserSchema } from './schema.ts';
 
-import resOnline from './mocks/response-online.json' with { type: 'json' };
-import resOffline from './mocks/response-offline.json' with { type: 'json' };
+import resOnline from './mocks/1-online.json' with { type: 'json' };
+import resOffline from './mocks/2-offline.json' with { type: 'json' };
 
 describe('StreamMetadata', () => {
   const validate = createValidate(ResponseSchema, [UserSchema]);

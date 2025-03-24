@@ -8,13 +8,13 @@ import {
   UserSchema,
 } from './schema.ts';
 
-import resOnline from './mocks/response-online.json' with { type: 'json' };
-import resOffline from './mocks/response-offline.json' with { type: 'json' };
-import resNotFound from './mocks/response-not-found.json' with { type: 'json' };
-import resWithTrailer from './mocks/response-with-trailer.json' with { type: 'json' };
-import resBannedDmca from './mocks/response-banned-dmca.json' with { type: 'json' };
-import resBannedTosTemporary from './mocks/response-banned-tos-temporary.json' with { type: 'json' };
-import resBannedTosIndefinite from './mocks/response-banned-tos-indefinite.json' with { type: 'json' };
+import resOnline from './mocks/1-online.json' with { type: 'json' };
+import resOffline from './mocks/2-offline.json' with { type: 'json' };
+import resNotFound from './mocks/3-not-found.json' with { type: 'json' };
+import resWithTrailer from './mocks/4-with-trailer.json' with { type: 'json' };
+import resBannedDmca from './mocks/5-banned-dmca.json' with { type: 'json' };
+import resBannedTosTemporary from './mocks/6-banned-tos-temporary.json' with { type: 'json' };
+import resBannedTosIndefinite from './mocks/7-banned-tos-indefinite.json' with { type: 'json' };
 
 describe('ChannelShell', () => {
   const validate = createValidate(ResponseSchema, [

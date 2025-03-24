@@ -4,9 +4,9 @@ import { createValidate, getChannels } from '../../testHelpers.ts';
 import { getQueryFfzBroadcastId } from './query.ts';
 import { ResponseSchema, UserSchema } from './schema.ts';
 
-import resOnlineVideo from './mocks/response-online-video.json' with { type: 'json' };
-import resOnlineNoVideo from './mocks/response-online-no-video.json' with { type: 'json' };
-import resOffline from './mocks/response-offline.json' with { type: 'json' };
+import resOnlineVideo from './mocks/1-online-video.json' with { type: 'json' };
+import resOnlineNoVideo from './mocks/2-online-no-video.json' with { type: 'json' };
+import resOffline from './mocks/3-offline.json' with { type: 'json' };
 
 describe('FFZ_BroadcastID', () => {
   const validate = createValidate(ResponseSchema, [UserSchema]);

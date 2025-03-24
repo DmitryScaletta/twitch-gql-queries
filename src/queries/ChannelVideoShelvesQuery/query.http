@@ -1,4 +1,6 @@
-### ChannelVideoShelvesQuery
+# ChannelVideoShelvesQuery
+
+### all variables
 
 POST https://gql.twitch.tv/gql
 Content-Type: application/json

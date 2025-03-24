@@ -1,4 +1,6 @@
-### BrowsePage_AllDirectories
+# BrowsePage_AllDirectories
+
+### only required variables
 
 POST https://gql.twitch.tv/gql
 Content-Type: application/json

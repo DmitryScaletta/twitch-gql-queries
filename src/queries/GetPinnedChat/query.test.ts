@@ -8,9 +8,9 @@ import {
   ResponseSchema,
 } from './schema.ts';
 
-import resPinnedMessage from './mocks/response-pinned-message.json' with { type: 'json' };
-import resNoPinnedMessage from './mocks/response-no-pinned-message.json' with { type: 'json' };
-import resWithParentMessage from './mocks/response-with-parent-message.json' with { type: 'json' };
+import resPinnedMessage from './mocks/1-pinned-message.json' with { type: 'json' };
+import resNoPinnedMessage from './mocks/2-no-pinned-message.json' with { type: 'json' };
+import resWithParentMessage from './mocks/4-with-parent-message.json' with { type: 'json' };
 
 describe('GetPinnedChat', () => {
   const validate = createValidate(ResponseSchema, [

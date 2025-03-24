@@ -4,8 +4,8 @@ import { createValidate, getClips } from '../../testHelpers.ts';
 import { getQueryWatchLivePrompt } from './query.ts';
 import { ResponseSchema } from './schema.ts';
 
-import resStreamOnline from './mocks/response-stream-online.json' with { type: 'json' };
-import resStreamOffline from './mocks/response-stream-offline.json' with { type: 'json' };
+import resStreamOnline from './mocks/1-stream-online.json' with { type: 'json' };
+import resStreamOffline from './mocks/2-stream-offline.json' with { type: 'json' };
 
 describe('WatchLivePrompt', () => {
   const validate = createValidate(ResponseSchema);

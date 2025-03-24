@@ -9,9 +9,9 @@ import {
   ResponseSchema,
 } from './schema.ts';
 
-import resClipFromHighlight from './mocks/response-clip-from-highlight.json' with { type: 'json' };
-import resClipFromUpload from './mocks/response-clip-from-upload.json' with { type: 'json' };
-import resStatusCreating from './mocks/response-status-creating.json' with { type: 'json' };
+import resClipFromHighlight from './mocks/2-clip-from-highlight.json' with { type: 'json' };
+import resClipFromUpload from './mocks/3-clip-from-upload.json' with { type: 'json' };
+import resStatusCreating from './mocks/4-status-creating.json' with { type: 'json' };
 
 describe('ShareClipRenderStatus', () => {
   const validate = createValidate(ResponseSchema, [

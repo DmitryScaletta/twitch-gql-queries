@@ -4,7 +4,7 @@ import { createValidate, getCategories } from '../../testHelpers.ts';
 import { getQueryDirectoryPageGame } from './query.ts';
 import { GameSchema, ResponseSchema, StreamSchema } from './schema.ts';
 
-import resNoStreams from './mocks/response-no-streams.json' with { type: 'json' };
+import resNoStreams from './mocks/5-no-streams.json' with { type: 'json' };
 
 describe('DirectoryPage_Game', () => {
   const validate = createValidate(ResponseSchema, [GameSchema, StreamSchema]);
