@@ -179,7 +179,10 @@ export const Game = {
   avatarURL: T.String({ format: 'uri' }),
   boxArtURL: T.String({ format: 'uri' }),
   viewersCount: T.Union([T.Null(), T.Integer({ minimum: 0 })]),
-  originalReleaseDate: T.Union([T.Null(), T.String({ format: 'date-time' })]),
+  originalReleaseDate: T.Union([T.Null(), T.String()], {
+    description:
+      'Possible weird values:\n* `0001-01-01 00:00:00 +0000 UTC`\n* `2003-06-27 00:00:00 +0000 UTC`',
+  }),
   __typename: T.Literal('Game'),
 } satisfies Properties;
 

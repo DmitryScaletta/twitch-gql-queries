@@ -10,7 +10,7 @@ describe('BrowsePage_AllDirectories', () => {
   test('real request: only required variables', async () => {
     const responses = await gqlRequest([
       getQueryBowsePageAllDirectories({
-        limit: 20,
+        limit: 100,
         options: { sort: 'VIEWER_COUNT' },
       }),
     ]);

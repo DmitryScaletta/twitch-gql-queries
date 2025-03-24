@@ -58,11 +58,7 @@ export const GameSchema = buildObject(
   { $id: `${category}Game` },
 );
 
-export const DataSchema = buildObject(
-  {
-    directoriesWithTags: T.Union([
-      T.Null(),
-      buildObject({
+const GameConnectionSchema = buildObject({
         edges: T.Array(
           buildObject({
             ...pick(schemas.GameEdge, ['cursor', 'trackingID']),
@@ -71,9 +67,10 @@ export const DataSchema = buildObject(
         ),
         pageInfo: buildObject(pick(schemas.PageInfo, ['hasNextPage'])),
         __typename: T.Literal('GameConnection'),
-      }),
-    ]),
-  },
+});
+
+export const DataSchema = buildObject(
+  { directoriesWithTags: T.Union([T.Null(), GameConnectionSchema]) },
   { $id: `${displayName}Data` },
 );
 
