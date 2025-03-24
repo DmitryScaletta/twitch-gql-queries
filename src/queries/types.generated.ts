@@ -7,6 +7,11 @@ export interface BrowsePageGame {
   name: string;
   avatarURL: string;
   viewersCount: null | number;
+  /**
+   * Possible weird values:
+   * * `0001-01-01 00:00:00 +0000 UTC`
+   * * `2003-06-27 00:00:00 +0000 UTC`
+   */
   originalReleaseDate: null | string;
   tags: {
     id: string;
@@ -913,6 +918,8 @@ export interface GlobalBadgesBadge {
   clickURL: null | string;
   __typename: 'Badge';
 }
+
+export interface GlobalBadgesVariables {}
 
 export interface GlobalBadgesData {
   badges: GlobalBadgesBadge[];
