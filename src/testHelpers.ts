@@ -1,6 +1,5 @@
-import assert from 'node:assert';
 import { FormatRegistry, type TSchema } from '@sinclair/typebox';
-import { Value } from '@sinclair/typebox/value';
+import { Value, type ValueError } from '@sinclair/typebox/value';
 import { IsDateTime } from '../lib/typebox-formats/date-time.ts';
 import { IsUrl } from '../lib/typebox-formats/url.ts';
 import { IsUuid } from '../lib/typebox-formats/uuid.ts';
@@ -14,21 +13,30 @@ FormatRegistry.Set('date-time', IsDateTime);
 FormatRegistry.Set('uri', IsUrl);
 FormatRegistry.Set('uuid', IsUuid);
 
-export const createValidate =
-  (ResponseSchema: TSchema, references: TSchema[] = []) =>
-  (response: any) => {
-    const errors = [...Value.Errors(ResponseSchema, references, response)];
-    if (errors.length > 0) {
-      for (const error of errors) {
-        console.log(error.message, error.path);
-        console.log(JSON.stringify(error.value, null, 2));
+const showErrors = (errors: Value.ValueErrorIterator): ValueError | null => {
+  let lastError: ValueError | null = null;
+  for (const error of errors) {
+    if (error.errors.length === 0) {
+      const obj = JSON.stringify(error.value, null, 2);
+      console.log(error.message);
+      console.log(error.path);
+      console.log(obj.length < 1000 ? obj : 'TOO LONG', '\n');
+      lastError = error;
+    } else {
+      for (const err of error.errors) {
+        lastError = showErrors(err);
       }
     }
-    try {
-      assert.deepEqual(errors, []);
-    } catch (e: any) {
-      throw e.message?.split('\n')[0];
-    }
+  }
+  return lastError;
+};
+
+export const createValidate =
+  (ResponseSchema: TSchema, references: TSchema[] = []) =>
+  (response: unknown) => {
+    const errors = Value.Errors(ResponseSchema, references, response);
+    const error = showErrors(errors);
+    if (error) throw `${error.message} ${error.path}`;
   };
 
 const CATEGORIES = [
