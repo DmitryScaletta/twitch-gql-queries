@@ -2,7 +2,7 @@ import path from 'node:path';
 import assert from 'node:assert';
 import fsp from 'node:fs/promises';
 import { Type as T, type TSchema } from '@sinclair/typebox';
-import { strictObject } from '../../src/schema.ts';
+import { LegacyRef, strictObject } from '../../src/schema.ts';
 
 type RequestBody = {
   summary: string;
@@ -38,13 +38,13 @@ const REQUIRED_EXPORTS = [
 const createRequestBodySchema = (
   queryName: string,
   displayQueryName: string,
-  variables: TSchema,
+  VariablesSchema: TSchema,
   sha256Hash: string,
 ) =>
   strictObject(
     {
       operationName: T.Literal(queryName),
-      variables,
+      variables: LegacyRef(VariablesSchema),
       extensions: strictObject({
         persistedQuery: strictObject({
           version: T.Literal(1),

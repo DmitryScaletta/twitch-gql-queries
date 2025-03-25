@@ -49636,81 +49636,7 @@
             "type": "string"
           },
           "variables": {
-            "$id": "BrowsePageAllDirectoriesVariables",
-            "additionalProperties": false,
-            "type": "object",
-            "properties": {
-              "limit": {
-                "minimum": 1,
-                "type": "integer"
-              },
-              "options": {
-                "additionalProperties": false,
-                "type": "object",
-                "properties": {
-                  "recommendationsContext": {
-                    "anyOf": [
-                      {
-                        "type": "null"
-                      },
-                      {
-                        "additionalProperties": false,
-                        "type": "object",
-                        "properties": {
-                          "platform": {
-                            "anyOf": [
-                              {
-                                "type": "null"
-                              },
-                              {
-                                "const": "web",
-                                "type": "string"
-                              },
-                              {
-                                "type": "string"
-                              }
-                            ]
-                          }
-                        }
-                      }
-                    ]
-                  },
-                  "sort": {
-                    "$ref": "#/components/schemas/BrowsePageSort"
-                  },
-                  "tags": {
-                    "anyOf": [
-                      {
-                        "type": "null"
-                      },
-                      {
-                        "type": "array",
-                        "items": {
-                          "type": "string"
-                        }
-                      }
-                    ]
-                  }
-                },
-                "required": [
-                  "sort"
-                ]
-              },
-              "cursor": {
-                "anyOf": [
-                  {
-                    "type": "null"
-                  },
-                  {
-                    "type": "string"
-                  }
-                ]
-              }
-            },
-            "required": [
-              "limit",
-              "options"
-            ]
+            "$ref": "#/components/schemas/BrowsePageAllDirectoriesVariables"
           },
           "extensions": {
             "additionalProperties": false,
@@ -50445,25 +50371,7 @@
             "type": "string"
           },
           "variables": {
-            "$id": "ChannelRootAboutPanelVariables",
-            "additionalProperties": false,
-            "type": "object",
-            "properties": {
-              "channelLogin": {
-                "type": "string"
-              },
-              "skipSchedule": {
-                "type": "boolean"
-              },
-              "includeIsDJ": {
-                "type": "boolean"
-              }
-            },
-            "required": [
-              "channelLogin",
-              "skipSchedule",
-              "includeIsDJ"
-            ]
+            "$ref": "#/components/schemas/ChannelRootAboutPanelVariables"
           },
           "extensions": {
             "additionalProperties": false,
@@ -50916,17 +50824,7 @@
             "type": "string"
           },
           "variables": {
-            "$id": "ChannelShellVariables",
-            "additionalProperties": false,
-            "type": "object",
-            "properties": {
-              "login": {
-                "type": "string"
-              }
-            },
-            "required": [
-              "login"
-            ]
+            "$ref": "#/components/schemas/ChannelShellVariables"
           },
           "extensions": {
             "additionalProperties": false,
@@ -51941,25 +51839,7 @@
             "type": "string"
           },
           "variables": {
-            "$id": "ChannelVideoShelvesQueryVariables",
-            "additionalProperties": false,
-            "type": "object",
-            "properties": {
-              "includePreviewBlur": {
-                "type": "boolean"
-              },
-              "channelLogin": {
-                "type": "string"
-              },
-              "first": {
-                "minimum": 1,
-                "type": "integer"
-              }
-            },
-            "required": [
-              "channelLogin",
-              "first"
-            ]
+            "$ref": "#/components/schemas/ChannelVideoShelvesQueryVariables"
           },
           "extensions": {
             "additionalProperties": false,
@@ -52731,71 +52611,7 @@
             "type": "string"
           },
           "variables": {
-            "$id": "ClipsCardsGameVariables",
-            "additionalProperties": false,
-            "type": "object",
-            "properties": {
-              "categorySlug": {
-                "type": "string"
-              },
-              "limit": {
-                "minimum": 1,
-                "type": "integer"
-              },
-              "criteria": {
-                "additionalProperties": false,
-                "type": "object",
-                "properties": {
-                  "languages": {
-                    "anyOf": [
-                      {
-                        "type": "null"
-                      },
-                      {
-                        "type": "array",
-                        "items": {
-                          "type": "string"
-                        }
-                      }
-                    ]
-                  },
-                  "filter": {
-                    "anyOf": [
-                      {
-                        "type": "null"
-                      },
-                      {
-                        "$ref": "#/components/schemas/ClipsCardsFilter"
-                      }
-                    ]
-                  },
-                  "shouldFilterByDiscoverySetting": {
-                    "anyOf": [
-                      {
-                        "type": "null"
-                      },
-                      {
-                        "type": "boolean"
-                      }
-                    ]
-                  }
-                }
-              },
-              "cursor": {
-                "anyOf": [
-                  {
-                    "type": "null"
-                  },
-                  {
-                    "type": "string"
-                  }
-                ]
-              }
-            },
-            "required": [
-              "categorySlug",
-              "limit"
-            ]
+            "$ref": "#/components/schemas/ClipsCardsGameVariables"
           },
           "extensions": {
             "additionalProperties": false,
@@ -53554,58 +53370,7 @@
             "type": "string"
           },
           "variables": {
-            "$id": "ClipsCardsUserVariables",
-            "additionalProperties": false,
-            "type": "object",
-            "properties": {
-              "login": {
-                "type": "string"
-              },
-              "limit": {
-                "minimum": 1,
-                "type": "integer"
-              },
-              "criteria": {
-                "additionalProperties": false,
-                "type": "object",
-                "properties": {
-                  "filter": {
-                    "anyOf": [
-                      {
-                        "type": "null"
-                      },
-                      {
-                        "$ref": "#/components/schemas/ClipsCardsFilter"
-                      }
-                    ]
-                  },
-                  "shouldFilterByDiscoverySetting": {
-                    "anyOf": [
-                      {
-                        "type": "null"
-                      },
-                      {
-                        "type": "boolean"
-                      }
-                    ]
-                  }
-                }
-              },
-              "cursor": {
-                "anyOf": [
-                  {
-                    "type": "null"
-                  },
-                  {
-                    "type": "string"
-                  }
-                ]
-              }
-            },
-            "required": [
-              "login",
-              "limit"
-            ]
+            "$ref": "#/components/schemas/ClipsCardsUserVariables"
           },
           "extensions": {
             "additionalProperties": false,
@@ -54134,17 +53899,7 @@
             "type": "string"
           },
           "variables": {
-            "$id": "ClipsDownloadButtonVariables",
-            "additionalProperties": false,
-            "type": "object",
-            "properties": {
-              "slug": {
-                "type": "string"
-              }
-            },
-            "required": [
-              "slug"
-            ]
+            "$ref": "#/components/schemas/ClipsDownloadButtonVariables"
           },
           "extensions": {
             "additionalProperties": false,
@@ -54764,126 +54519,7 @@
             "type": "string"
           },
           "variables": {
-            "$id": "DirectoryPageGameVariables",
-            "additionalProperties": false,
-            "type": "object",
-            "properties": {
-              "imageWidth": {
-                "minimum": 0,
-                "type": "integer"
-              },
-              "slug": {
-                "type": "string"
-              },
-              "options": {
-                "additionalProperties": false,
-                "type": "object",
-                "properties": {
-                  "sort": {
-                    "$ref": "#/components/schemas/DirectoryPageGameSort"
-                  },
-                  "recommendationsContext": {
-                    "anyOf": [
-                      {
-                        "type": "null"
-                      },
-                      {
-                        "additionalProperties": false,
-                        "type": "object",
-                        "properties": {
-                          "platform": {
-                            "anyOf": [
-                              {
-                                "type": "null"
-                              },
-                              {
-                                "const": "web",
-                                "type": "string"
-                              },
-                              {
-                                "type": "string"
-                              }
-                            ]
-                          }
-                        }
-                      }
-                    ]
-                  },
-                  "freeformTags": {
-                    "anyOf": [
-                      {
-                        "type": "null"
-                      },
-                      {
-                        "type": "array",
-                        "items": {
-                          "type": "string"
-                        }
-                      }
-                    ]
-                  },
-                  "tags": {
-                    "anyOf": [
-                      {
-                        "type": "null"
-                      },
-                      {
-                        "type": "array",
-                        "items": {
-                          "type": "string"
-                        }
-                      }
-                    ]
-                  },
-                  "broadcasterLanguages": {
-                    "anyOf": [
-                      {
-                        "type": "null"
-                      },
-                      {
-                        "type": "array",
-                        "items": {
-                          "type": "string"
-                        }
-                      }
-                    ]
-                  },
-                  "systemFilters": {
-                    "anyOf": [
-                      {
-                        "type": "null"
-                      },
-                      {
-                        "type": "array",
-                        "items": {
-                          "type": "string"
-                        }
-                      }
-                    ]
-                  }
-                },
-                "required": [
-                  "sort"
-                ]
-              },
-              "sortTypeIsRecency": {
-                "type": "boolean"
-              },
-              "limit": {
-                "minimum": 1,
-                "type": "integer"
-              },
-              "includeIsDJ": {
-                "type": "boolean"
-              }
-            },
-            "required": [
-              "slug",
-              "options",
-              "sortTypeIsRecency",
-              "limit",
-              "includeIsDJ"
-            ]
+            "$ref": "#/components/schemas/DirectoryPageGameVariables"
           },
           "extensions": {
             "additionalProperties": false,
@@ -55142,17 +54778,7 @@
             "type": "string"
           },
           "variables": {
-            "$id": "FfzBroadcastIdVariables",
-            "additionalProperties": false,
-            "type": "object",
-            "properties": {
-              "id": {
-                "type": "string"
-              }
-            },
-            "required": [
-              "id"
-            ]
+            "$ref": "#/components/schemas/FfzBroadcastIdVariables"
           },
           "extensions": {
             "additionalProperties": false,
@@ -55688,57 +55314,7 @@
             "type": "string"
           },
           "variables": {
-            "$id": "FilterableVideoTowerVideosVariables",
-            "additionalProperties": false,
-            "type": "object",
-            "properties": {
-              "includePreviewBlur": {
-                "type": "boolean"
-              },
-              "limit": {
-                "minimum": 1,
-                "type": "integer"
-              },
-              "channelOwnerLogin": {
-                "type": "string"
-              },
-              "broadcastType": {
-                "anyOf": [
-                  {
-                    "type": "null"
-                  },
-                  {
-                    "const": "ARCHIVE",
-                    "type": "string"
-                  },
-                  {
-                    "const": "HIGHLIGHT",
-                    "type": "string"
-                  },
-                  {
-                    "const": "UPLOAD",
-                    "type": "string"
-                  }
-                ]
-              },
-              "videoSort": {
-                "anyOf": [
-                  {
-                    "const": "TIME",
-                    "type": "string"
-                  },
-                  {
-                    "const": "VIEWS",
-                    "type": "string"
-                  }
-                ]
-              }
-            },
-            "required": [
-              "limit",
-              "channelOwnerLogin",
-              "videoSort"
-            ]
+            "$ref": "#/components/schemas/FilterableVideoTowerVideosVariables"
           },
           "extensions": {
             "additionalProperties": false,
@@ -56503,22 +56079,7 @@
             "type": "string"
           },
           "variables": {
-            "$id": "GetPinnedChatVariables",
-            "additionalProperties": false,
-            "type": "object",
-            "properties": {
-              "channelID": {
-                "type": "string"
-              },
-              "count": {
-                "minimum": 1,
-                "type": "integer"
-              }
-            },
-            "required": [
-              "channelID",
-              "count"
-            ]
+            "$ref": "#/components/schemas/GetPinnedChatVariables"
           },
           "extensions": {
             "additionalProperties": false,
@@ -56892,31 +56453,7 @@
             "type": "string"
           },
           "variables": {
-            "$id": "GetUserIdVariables",
-            "additionalProperties": false,
-            "type": "object",
-            "properties": {
-              "login": {
-                "type": "string"
-              },
-              "lookupType": {
-                "description": "ACTIVE – only active users\nALL – all users, including suspended",
-                "anyOf": [
-                  {
-                    "const": "ACTIVE",
-                    "type": "string"
-                  },
-                  {
-                    "const": "ALL",
-                    "type": "string"
-                  }
-                ]
-              }
-            },
-            "required": [
-              "login",
-              "lookupType"
-            ]
+            "$ref": "#/components/schemas/GetUserIdVariables"
           },
           "extensions": {
             "additionalProperties": false,
@@ -57204,10 +56741,7 @@
             "type": "string"
           },
           "variables": {
-            "$id": "GlobalBadgesVariables",
-            "additionalProperties": false,
-            "type": "object",
-            "properties": {}
+            "$ref": "#/components/schemas/GlobalBadgesVariables"
           },
           "extensions": {
             "additionalProperties": false,
@@ -57511,74 +57045,7 @@
             "type": "string"
           },
           "variables": {
-            "$id": "PlaybackAccessTokenVariables",
-            "additionalProperties": false,
-            "type": "object",
-            "properties": {
-              "isLive": {
-                "type": "boolean"
-              },
-              "login": {
-                "anyOf": [
-                  {
-                    "const": "",
-                    "type": "string"
-                  },
-                  {
-                    "type": "string"
-                  }
-                ]
-              },
-              "isVod": {
-                "type": "boolean"
-              },
-              "vodID": {
-                "anyOf": [
-                  {
-                    "const": "",
-                    "type": "string"
-                  },
-                  {
-                    "type": "string"
-                  }
-                ]
-              },
-              "playerType": {
-                "anyOf": [
-                  {
-                    "const": "",
-                    "type": "string"
-                  },
-                  {
-                    "const": "site",
-                    "type": "string"
-                  },
-                  {
-                    "const": "channel_home_carousel",
-                    "type": "string"
-                  }
-                ]
-              },
-              "platform": {
-                "anyOf": [
-                  {
-                    "const": "web",
-                    "type": "string"
-                  },
-                  {
-                    "type": "string"
-                  }
-                ]
-              }
-            },
-            "required": [
-              "isLive",
-              "login",
-              "isVod",
-              "vodID",
-              "playerType",
-              "platform"
-            ]
+            "$ref": "#/components/schemas/PlaybackAccessTokenVariables"
           },
           "extensions": {
             "additionalProperties": false,
@@ -58763,103 +58230,7 @@
             "type": "string"
           },
           "variables": {
-            "$id": "SearchResultsPageSearchResultsVariables",
-            "additionalProperties": false,
-            "type": "object",
-            "properties": {
-              "platform": {
-                "anyOf": [
-                  {
-                    "type": "null"
-                  },
-                  {
-                    "const": "web",
-                    "type": "string"
-                  },
-                  {
-                    "type": "string"
-                  }
-                ]
-              },
-              "query": {
-                "type": "string"
-              },
-              "options": {
-                "anyOf": [
-                  {
-                    "type": "null"
-                  },
-                  {
-                    "additionalProperties": false,
-                    "type": "object",
-                    "properties": {
-                      "targets": {
-                        "anyOf": [
-                          {
-                            "type": "null"
-                          },
-                          {
-                            "type": "array",
-                            "items": {
-                              "additionalProperties": false,
-                              "type": "object",
-                              "properties": {
-                                "index": {
-                                  "anyOf": [
-                                    {
-                                      "const": "CHANNEL",
-                                      "type": "string"
-                                    },
-                                    {
-                                      "const": "CHANNEL_WITH_TAG",
-                                      "type": "string"
-                                    },
-                                    {
-                                      "const": "GAME",
-                                      "type": "string"
-                                    },
-                                    {
-                                      "const": "VOD",
-                                      "type": "string"
-                                    }
-                                  ]
-                                }
-                              },
-                              "required": [
-                                "index"
-                              ]
-                            }
-                          }
-                        ]
-                      },
-                      "shouldSkipDiscoveryControl": {
-                        "anyOf": [
-                          {
-                            "type": "null"
-                          },
-                          {
-                            "type": "boolean"
-                          }
-                        ]
-                      }
-                    }
-                  }
-                ]
-              },
-              "includeIsDJ": {
-                "anyOf": [
-                  {
-                    "type": "null"
-                  },
-                  {
-                    "type": "boolean"
-                  }
-                ]
-              }
-            },
-            "required": [
-              "query"
-            ]
+            "$ref": "#/components/schemas/SearchResultsPageSearchResultsVariables"
           },
           "extensions": {
             "additionalProperties": false,
@@ -59907,27 +59278,7 @@
             "type": "string"
           },
           "variables": {
-            "$id": "SearchTraySearchSuggestionsVariables",
-            "additionalProperties": false,
-            "type": "object",
-            "properties": {
-              "queryFragment": {
-                "type": "string"
-              },
-              "withOfflineChannelContent": {
-                "anyOf": [
-                  {
-                    "type": "null"
-                  },
-                  {
-                    "type": "boolean"
-                  }
-                ]
-              }
-            },
-            "required": [
-              "queryFragment"
-            ]
+            "$ref": "#/components/schemas/SearchTraySearchSuggestionsVariables"
           },
           "extensions": {
             "additionalProperties": false,
@@ -61009,17 +60360,7 @@
             "type": "string"
           },
           "variables": {
-            "$id": "ShareClipRenderStatusVariables",
-            "additionalProperties": false,
-            "type": "object",
-            "properties": {
-              "slug": {
-                "type": "string"
-              }
-            },
-            "required": [
-              "slug"
-            ]
+            "$ref": "#/components/schemas/ShareClipRenderStatusVariables"
           },
           "extensions": {
             "additionalProperties": false,
@@ -61416,17 +60757,7 @@
             "type": "string"
           },
           "variables": {
-            "$id": "StreamMetadataVariables",
-            "additionalProperties": false,
-            "type": "object",
-            "properties": {
-              "channelLogin": {
-                "type": "string"
-              }
-            },
-            "required": [
-              "channelLogin"
-            ]
+            "$ref": "#/components/schemas/StreamMetadataVariables"
           },
           "extensions": {
             "additionalProperties": false,
@@ -61600,17 +60931,7 @@
             "type": "string"
           },
           "variables": {
-            "$id": "UseLiveVariables",
-            "additionalProperties": false,
-            "type": "object",
-            "properties": {
-              "channelLogin": {
-                "type": "string"
-              }
-            },
-            "required": [
-              "channelLogin"
-            ]
+            "$ref": "#/components/schemas/UseLiveVariables"
           },
           "extensions": {
             "additionalProperties": false,
@@ -61898,17 +61219,7 @@
             "type": "string"
           },
           "variables": {
-            "$id": "UseViewCountVariables",
-            "additionalProperties": false,
-            "type": "object",
-            "properties": {
-              "channelLogin": {
-                "type": "string"
-              }
-            },
-            "required": [
-              "channelLogin"
-            ]
+            "$ref": "#/components/schemas/UseViewCountVariables"
           },
           "extensions": {
             "additionalProperties": false,
@@ -62188,17 +61499,7 @@
             "type": "string"
           },
           "variables": {
-            "$id": "VideoAccessTokenClipVariables",
-            "additionalProperties": false,
-            "type": "object",
-            "properties": {
-              "slug": {
-                "type": "string"
-              }
-            },
-            "required": [
-              "slug"
-            ]
+            "$ref": "#/components/schemas/VideoAccessTokenClipVariables"
           },
           "extensions": {
             "additionalProperties": false,
@@ -62891,29 +62192,7 @@
             "type": "string"
           },
           "variables": {
-            "$id": "VideoMetadataVariables",
-            "additionalProperties": false,
-            "type": "object",
-            "properties": {
-              "channelLogin": {
-                "anyOf": [
-                  {
-                    "const": "",
-                    "type": "string"
-                  },
-                  {
-                    "type": "string"
-                  }
-                ]
-              },
-              "videoID": {
-                "type": "string"
-              }
-            },
-            "required": [
-              "channelLogin",
-              "videoID"
-            ]
+            "$ref": "#/components/schemas/VideoMetadataVariables"
           },
           "extensions": {
             "additionalProperties": false,
@@ -63697,17 +62976,7 @@
             "type": "string"
           },
           "variables": {
-            "$id": "VideoPreviewOverlayVariables",
-            "additionalProperties": false,
-            "type": "object",
-            "properties": {
-              "login": {
-                "type": "string"
-              }
-            },
-            "required": [
-              "login"
-            ]
+            "$ref": "#/components/schemas/VideoPreviewOverlayVariables"
           },
           "extensions": {
             "additionalProperties": false,
@@ -63995,17 +63264,7 @@
             "type": "string"
           },
           "variables": {
-            "$id": "WatchLivePromptVariables",
-            "additionalProperties": false,
-            "type": "object",
-            "properties": {
-              "slug": {
-                "type": "string"
-              }
-            },
-            "required": [
-              "slug"
-            ]
+            "$ref": "#/components/schemas/WatchLivePromptVariables"
           },
           "extensions": {
             "additionalProperties": false,
