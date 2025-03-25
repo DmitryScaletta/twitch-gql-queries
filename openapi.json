@@ -53022,8 +53022,8 @@
             "type": "integer"
           },
           "language": {
-            "pattern": "^[A-Z]{2,3}$",
-            "description": "Possible values: `EN`, `DE`, `ASL`",
+            "minLength": 2,
+            "description": "Possible values: `EN`, `DE`, `ASL`, `ZH_HK`",
             "type": "string"
           },
           "thumbnailURL": {
@@ -60030,8 +60030,8 @@
             "type": "integer"
           },
           "language": {
-            "pattern": "^[A-Z]{2,3}$",
-            "description": "Possible values: `EN`, `DE`, `ASL`",
+            "minLength": 2,
+            "description": "Possible values: `EN`, `DE`, `ASL`, `ZH_HK`",
             "type": "string"
           },
           "isFeatured": {

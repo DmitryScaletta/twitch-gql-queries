@@ -123,8 +123,8 @@ export const Clip = {
   durationSeconds: T.Integer({ minimum: 0 }),
   thumbnailURL: T.String({ format: 'uri' }),
   language: T.String({
-    pattern: '^[A-Z]{2,3}$',
-    description: 'Possible values: `EN`, `DE`, `ASL`',
+    minLength: 2,
+    description: 'Possible values: `EN`, `DE`, `ASL`, `ZH_HK`',
   }),
   champBadge: T.Null(),
   isFeatured: T.Boolean(),

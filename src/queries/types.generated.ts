@@ -471,7 +471,7 @@ export interface ClipsCardsUserClip {
   title: string;
   viewCount: number;
   /**
-   * Possible values: `EN`, `DE`, `ASL`
+   * Possible values: `EN`, `DE`, `ASL`, `ZH_HK`
    */
   language: string;
   thumbnailURL: string;
@@ -1386,7 +1386,7 @@ export interface ShareClipRenderStatusClip {
   title: string;
   viewCount: number;
   /**
-   * Possible values: `EN`, `DE`, `ASL`
+   * Possible values: `EN`, `DE`, `ASL`, `ZH_HK`
    */
   language: string;
   isFeatured: boolean;
