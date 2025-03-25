@@ -45,18 +45,19 @@ describe('%QUERY_NAME%', () => {
 
 ```ts
 import { Type as T } from '@sinclair/typebox';
-import { buildObject, getResponseSchema, pick } from '../../schema.ts';
+import { strictObject, getResponseSchema, pick } from '../../schema.ts';
 import * as schemas from '../../schemas.ts';
 
-const name = '%QUERY_NAME%';
-const displayName = name;
+export const name = '%QUERY_NAME%';
+export const displayName = name;
+export const tags = [];
 
-export const VariablesSchema = buildObject(
+export const VariablesSchema = strictObject(
   {},
   { $id: `${displayName}Variables` },
 );
 
-export const DataSchema = buildObject(
+export const DataSchema = strictObject(
   {},
   { $id: `${displayName}Data` },
 );
