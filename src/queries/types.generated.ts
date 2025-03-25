@@ -470,6 +470,9 @@ export interface ClipsCardsUserClip {
   embedURL: string;
   title: string;
   viewCount: number;
+  /**
+   * Possible values: `EN`, `DE`, `ASL`
+   */
   language: string;
   thumbnailURL: string;
   createdAt: string;
@@ -1382,6 +1385,9 @@ export interface ShareClipRenderStatusClip {
   embedURL: string;
   title: string;
   viewCount: number;
+  /**
+   * Possible values: `EN`, `DE`, `ASL`
+   */
   language: string;
   isFeatured: boolean;
   thumbnailURL: string;

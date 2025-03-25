@@ -53206,7 +53206,8 @@
             "type": "integer"
           },
           "language": {
-            "pattern": "^[A-Z]{2}$",
+            "pattern": "^[A-Z]{2,3}$",
+            "description": "Possible values: `EN`, `DE`, `ASL`",
             "type": "string"
           },
           "thumbnailURL": {
@@ -60678,7 +60679,8 @@
             "type": "integer"
           },
           "language": {
-            "pattern": "^[A-Z]{2}$",
+            "pattern": "^[A-Z]{2,3}$",
+            "description": "Possible values: `EN`, `DE`, `ASL`",
             "type": "string"
           },
           "isFeatured": {
