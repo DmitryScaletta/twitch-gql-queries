@@ -35807,6 +35807,22 @@
                         "requestID": "01JPSNYSRSQQK64WD4CN8J5VB4"
                       }
                     }
+                  },
+                  "videos null": {
+                    "value": {
+                      "data": {
+                        "user": {
+                          "id": "142919579",
+                          "videos": null,
+                          "__typename": "User"
+                        }
+                      },
+                      "extensions": {
+                        "durationMilliseconds": 124,
+                        "operationName": "FilterableVideoTower_Videos",
+                        "requestID": "01JQ8WK207ZYWB2BWVGMV0XXES"
+                      }
+                    }
                   }
                 }
               }
@@ -55369,66 +55385,73 @@
                     "type": "string"
                   },
                   "videos": {
-                    "additionalProperties": false,
-                    "type": "object",
-                    "properties": {
-                      "edges": {
-                        "type": "array",
-                        "items": {
-                          "additionalProperties": false,
-                          "type": "object",
-                          "properties": {
-                            "cursor": {
-                              "anyOf": [
-                                {
-                                  "type": "null"
-                                },
-                                {
-                                  "type": "string"
-                                }
-                              ]
-                            },
-                            "node": {
-                              "$ref": "#/components/schemas/FilterableVideoTowerVideosVideo"
-                            },
-                            "__typename": {
-                              "const": "VideoEdge",
-                              "type": "string"
-                            }
-                          },
-                          "required": [
-                            "cursor",
-                            "node",
-                            "__typename"
-                          ]
-                        }
+                    "anyOf": [
+                      {
+                        "type": "null"
                       },
-                      "pageInfo": {
+                      {
                         "additionalProperties": false,
                         "type": "object",
                         "properties": {
-                          "hasNextPage": {
-                            "type": "boolean"
+                          "edges": {
+                            "type": "array",
+                            "items": {
+                              "additionalProperties": false,
+                              "type": "object",
+                              "properties": {
+                                "cursor": {
+                                  "anyOf": [
+                                    {
+                                      "type": "null"
+                                    },
+                                    {
+                                      "type": "string"
+                                    }
+                                  ]
+                                },
+                                "node": {
+                                  "$ref": "#/components/schemas/FilterableVideoTowerVideosVideo"
+                                },
+                                "__typename": {
+                                  "const": "VideoEdge",
+                                  "type": "string"
+                                }
+                              },
+                              "required": [
+                                "cursor",
+                                "node",
+                                "__typename"
+                              ]
+                            }
+                          },
+                          "pageInfo": {
+                            "additionalProperties": false,
+                            "type": "object",
+                            "properties": {
+                              "hasNextPage": {
+                                "type": "boolean"
+                              },
+                              "__typename": {
+                                "const": "PageInfo",
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "hasNextPage",
+                              "__typename"
+                            ]
                           },
                           "__typename": {
-                            "const": "PageInfo",
+                            "const": "VideoConnection",
                             "type": "string"
                           }
                         },
                         "required": [
-                          "hasNextPage",
+                          "edges",
+                          "pageInfo",
                           "__typename"
                         ]
-                      },
-                      "__typename": {
-                        "const": "VideoConnection",
-                        "type": "string"
                       }
-                    },
-                    "required": [
-                      "edges",
-                      "pageInfo",
-                      "__typename"
                     ]
                   },
                   "__typename": {
@@ -55516,66 +55539,73 @@
                         "type": "string"
                       },
                       "videos": {
-                        "additionalProperties": false,
-                        "type": "object",
-                        "properties": {
-                          "edges": {
-                            "type": "array",
-                            "items": {
-                              "additionalProperties": false,
-                              "type": "object",
-                              "properties": {
-                                "cursor": {
-                                  "anyOf": [
-                                    {
-                                      "type": "null"
-                                    },
-                                    {
-                                      "type": "string"
-                                    }
-                                  ]
-                                },
-                                "node": {
-                                  "$ref": "#/components/schemas/FilterableVideoTowerVideosVideo"
-                                },
-                                "__typename": {
-                                  "const": "VideoEdge",
-                                  "type": "string"
-                                }
-                              },
-                              "required": [
-                                "cursor",
-                                "node",
-                                "__typename"
-                              ]
-                            }
+                        "anyOf": [
+                          {
+                            "type": "null"
                           },
-                          "pageInfo": {
+                          {
                             "additionalProperties": false,
                             "type": "object",
                             "properties": {
-                              "hasNextPage": {
-                                "type": "boolean"
+                              "edges": {
+                                "type": "array",
+                                "items": {
+                                  "additionalProperties": false,
+                                  "type": "object",
+                                  "properties": {
+                                    "cursor": {
+                                      "anyOf": [
+                                        {
+                                          "type": "null"
+                                        },
+                                        {
+                                          "type": "string"
+                                        }
+                                      ]
+                                    },
+                                    "node": {
+                                      "$ref": "#/components/schemas/FilterableVideoTowerVideosVideo"
+                                    },
+                                    "__typename": {
+                                      "const": "VideoEdge",
+                                      "type": "string"
+                                    }
+                                  },
+                                  "required": [
+                                    "cursor",
+                                    "node",
+                                    "__typename"
+                                  ]
+                                }
+                              },
+                              "pageInfo": {
+                                "additionalProperties": false,
+                                "type": "object",
+                                "properties": {
+                                  "hasNextPage": {
+                                    "type": "boolean"
+                                  },
+                                  "__typename": {
+                                    "const": "PageInfo",
+                                    "type": "string"
+                                  }
+                                },
+                                "required": [
+                                  "hasNextPage",
+                                  "__typename"
+                                ]
                               },
                               "__typename": {
-                                "const": "PageInfo",
+                                "const": "VideoConnection",
                                 "type": "string"
                               }
                             },
                             "required": [
-                              "hasNextPage",
+                              "edges",
+                              "pageInfo",
                               "__typename"
                             ]
-                          },
-                          "__typename": {
-                            "const": "VideoConnection",
-                            "type": "string"
                           }
-                        },
-                        "required": [
-                          "edges",
-                          "pageInfo",
-                          "__typename"
                         ]
                       },
                       "__typename": {

@@ -765,7 +765,7 @@ export interface FilterableVideoTowerVideosVariables {
 export interface FilterableVideoTowerVideosData {
   user: null | {
     id: string;
-    videos: {
+    videos: null | {
       edges: {
         cursor: null | string;
         node: FilterableVideoTowerVideosVideo;
