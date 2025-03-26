@@ -60,10 +60,10 @@ type CacheVideo = {
 };
 
 const cache = {
-  categories: null as null | CacheCategory[],
+  categories: null as null | CacheCategory[] | Promise<CacheCategory[]>,
   channels: {} as Record<string, CacheChannel[]>,
   clips: {} as Record<string, CacheClip[]>,
-  videos: {} as Record<string, CacheVideo>,
+  videos: {} as Record<string, CacheVideo | Promise<CacheVideo>>,
 };
 
 const fetchCategories = async (): Promise<CacheCategory[]> => {
@@ -100,10 +100,12 @@ const fetchChannels = async () => {
     if (!response.data.game) {
       throw new Error(`Cannot fetch channels: ${slug}`);
     }
-    result[slug] = response.data.game.streams.edges.map((stream) => ({
-      id: stream.node.broadcaster.id,
-      login: stream.node.broadcaster.login,
-    }));
+    result[slug] = response.data.game.streams.edges
+      .filter((stream) => stream.node.broadcaster)
+      .map((stream) => ({
+        id: stream.node.broadcaster!.id,
+        login: stream.node.broadcaster!.login,
+      }));
   }
   return result;
 };
@@ -153,7 +155,7 @@ const fetchVideos = async (channelOwnerLogin: string) => {
     throw new Error(`Cannot fetch videos: ${channelOwnerLogin}`);
   }
   const getIds = <T extends typeof archive.data.user>(user: T) =>
-    user.videos.edges.map((edge) => edge.node.id);
+    user.videos!.edges.map((edge) => edge.node.id);
   const result: CacheVideo = {
     channelLogin: channelOwnerLogin,
     archiveIds: getIds(archive.data.user),
@@ -163,15 +165,17 @@ const fetchVideos = async (channelOwnerLogin: string) => {
   return result;
 };
 
-export const getCategories = async () =>
-  cache.categories || (cache.categories = await fetchCategories());
+export const getCategories = () =>
+  cache.categories || (cache.categories = fetchCategories());
 
-export const getChannels = async (slug: Category = 'just-chatting') =>
-  cache.channels[slug] || (cache.channels = await fetchChannels())[slug];
+export const getChannels = (slug: Category = 'just-chatting') =>
+  cache.channels[slug] ||
+  fetchChannels().then((channels) => (cache.channels = channels)[slug]);
 
-export const getClips = async (slug: Category = 'just-chatting') =>
-  cache.clips[slug] || (cache.clips = await fetchClips())[slug];
+export const getClips = (slug: Category = 'just-chatting') =>
+  cache.clips[slug] ||
+  fetchClips().then((clips) => (cache.clips = clips)[slug]);
 
-export const getVideos = async (channelLogin: string) =>
+export const getVideos = (channelLogin: string) =>
   cache.videos[channelLogin] ||
-  (cache.videos[channelLogin] = await fetchVideos(channelLogin));
+  (cache.videos[channelLogin] = fetchVideos(channelLogin));
