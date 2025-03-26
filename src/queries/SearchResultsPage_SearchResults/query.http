@@ -10,7 +10,7 @@ Client-Id: {{$dotenv CLIENT_ID}}
   "operationName": "SearchResultsPage_SearchResults",
   "variables": {
     "platform": "web",
-    "query": "forse",
+    "query": "action",
     "options": {
       "targets": null,
       "shouldSkipDiscoveryControl": false
@@ -20,7 +20,7 @@ Client-Id: {{$dotenv CLIENT_ID}}
   "extensions": {
     "persistedQuery": {
       "version": 1,
-      "sha256Hash": "f4964f83289fa2d6b6454e7d765e32a1f2d1d2b63884ff919c96a3d597a35518"
+      "sha256Hash": "f6c2575aee4418e8a616e03364d8bcdbf0b10a5c87b59f523569dacc963e8da5"
     }
   }
 }
@@ -34,17 +34,18 @@ Client-Id: {{$dotenv CLIENT_ID}}
 {
   "operationName": "SearchResultsPage_SearchResults",
   "variables": {
-    "query": "forse"
+    "query": "forsen",
+    "includeIsDJ": true
   },
   "extensions": {
     "persistedQuery": {
       "version": 1,
-      "sha256Hash": "f4964f83289fa2d6b6454e7d765e32a1f2d1d2b63884ff919c96a3d597a35518"
+      "sha256Hash": "f6c2575aee4418e8a616e03364d8bcdbf0b10a5c87b59f523569dacc963e8da5"
     }
   }
 }
 
-### with channelsWithTag
+### shouldSkipDiscoveryControl: true
 
 POST https://gql.twitch.tv/gql
 Content-Type: application/json
@@ -54,49 +55,47 @@ Client-Id: {{$dotenv CLIENT_ID}}
   "operationName": "SearchResultsPage_SearchResults",
   "variables": {
     "platform": "web",
-    "query": "gtnh",
+    "query": "asmr",
+    "options": {
+      "targets": null,
+      "shouldSkipDiscoveryControl": true
+    },
+    "includeIsDJ": false
+  },
+  "extensions": {
+    "persistedQuery": {
+      "version": 1,
+      "sha256Hash": "f6c2575aee4418e8a616e03364d8bcdbf0b10a5c87b59f523569dacc963e8da5"
+    }
+  }
+}
+
+### includeIsDJ: false
+
+POST https://gql.twitch.tv/gql
+Content-Type: application/json
+Client-Id: {{$dotenv CLIENT_ID}}
+
+{
+  "operationName": "SearchResultsPage_SearchResults",
+  "variables": {
+    "platform": "web",
+    "query": "moba",
     "options": {
       "targets": null,
       "shouldSkipDiscoveryControl": false
     },
-    "includeIsDJ": true
+    "includeIsDJ": false
   },
   "extensions": {
     "persistedQuery": {
       "version": 1,
-      "sha256Hash": "f4964f83289fa2d6b6454e7d765e32a1f2d1d2b63884ff919c96a3d597a35518"
+      "sha256Hash": "f6c2575aee4418e8a616e03364d8bcdbf0b10a5c87b59f523569dacc963e8da5"
     }
   }
 }
 
-### CHANNEL
-
-POST https://gql.twitch.tv/gql
-Content-Type: application/json
-Client-Id: {{$dotenv CLIENT_ID}}
-
-{
-  "operationName": "SearchResultsPage_SearchResults",
-  "variables": {
-    "platform": "web",
-    "query": "forsen",
-    "options": {
-      "targets": [
-        { "index": "CHANNEL" }
-      ],
-      "shouldSkipDiscoveryControl": false
-    },
-    "includeIsDJ": true
-  },
-  "extensions": {
-    "persistedQuery": {
-      "version": 1,
-      "sha256Hash": "f4964f83289fa2d6b6454e7d765e32a1f2d1d2b63884ff919c96a3d597a35518"
-    }
-  }
-}
-
-### CHANNEL (with schedule)
+### targets: CHANNEL (with schedule)
 
 POST https://gql.twitch.tv/gql
 Content-Type: application/json
@@ -118,12 +117,12 @@ Client-Id: {{$dotenv CLIENT_ID}}
   "extensions": {
     "persistedQuery": {
       "version": 1,
-      "sha256Hash": "f4964f83289fa2d6b6454e7d765e32a1f2d1d2b63884ff919c96a3d597a35518"
+      "sha256Hash": "f6c2575aee4418e8a616e03364d8bcdbf0b10a5c87b59f523569dacc963e8da5"
     }
   }
 }
 
-### CHANNEL_WITH_TAG
+### targets: CHANNEL_WITH_TAG
 
 POST https://gql.twitch.tv/gql
 Content-Type: application/json
@@ -145,13 +144,13 @@ Client-Id: {{$dotenv CLIENT_ID}}
   "extensions": {
     "persistedQuery": {
       "version": 1,
-      "sha256Hash": "f4964f83289fa2d6b6454e7d765e32a1f2d1d2b63884ff919c96a3d597a35518"
+      "sha256Hash": "f6c2575aee4418e8a616e03364d8bcdbf0b10a5c87b59f523569dacc963e8da5"
     }
   }
 }
 
 
-### GAME
+### targets: GAME
 
 POST https://gql.twitch.tv/gql
 Content-Type: application/json
@@ -173,12 +172,12 @@ Client-Id: {{$dotenv CLIENT_ID}}
   "extensions": {
     "persistedQuery": {
       "version": 1,
-      "sha256Hash": "f4964f83289fa2d6b6454e7d765e32a1f2d1d2b63884ff919c96a3d597a35518"
+      "sha256Hash": "f6c2575aee4418e8a616e03364d8bcdbf0b10a5c87b59f523569dacc963e8da5"
     }
   }
 }
 
-### VOD
+### targets: VOD
 
 POST https://gql.twitch.tv/gql
 Content-Type: application/json
@@ -200,7 +199,7 @@ Client-Id: {{$dotenv CLIENT_ID}}
   "extensions": {
     "persistedQuery": {
       "version": 1,
-      "sha256Hash": "f4964f83289fa2d6b6454e7d765e32a1f2d1d2b63884ff919c96a3d597a35518"
+      "sha256Hash": "f6c2575aee4418e8a616e03364d8bcdbf0b10a5c87b59f523569dacc963e8da5"
     }
   }
 }

@@ -1,0 +1,527 @@
+{
+  "data": {
+    "searchFor": {
+      "banners": null,
+      "channels": {
+        "cursor": "",
+        "edges": [],
+        "score": 0,
+        "totalMatches": 0,
+        "__typename": "SearchForResultUsers"
+      },
+      "channelsWithTag": {
+        "cursor": "",
+        "edges": [],
+        "score": 0,
+        "totalMatches": 0,
+        "__typename": "SearchForResultUsers"
+      },
+      "games": {
+        "cursor": "",
+        "edges": [],
+        "score": 0,
+        "totalMatches": 0,
+        "__typename": "SearchForResultGames"
+      },
+      "videos": {
+        "cursor": "MTU=",
+        "edges": [
+          {
+            "trackingID": "febadf8c-6fb9-459d-8ab1-f35132d8a6ae",
+            "item": {
+              "createdAt": "2025-03-23T09:25:29Z",
+              "owner": {
+                "id": "235547355",
+                "displayName": "DuckedGTNH",
+                "login": "duckedgtnh",
+                "roles": { "isPartner": false, "__typename": "UserRoles" },
+                "__typename": "User"
+              },
+              "id": "2413146583",
+              "game": {
+                "id": "27471",
+                "slug": "minecraft",
+                "name": "Minecraft",
+                "displayName": "Minecraft",
+                "__typename": "Game"
+              },
+              "lengthSeconds": 20140,
+              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/a06dd7feeb66090e952c_duckedgtnh_314184272251_1742721924//thumb/thumb0-214x120.jpg",
+              "templatePreviewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/a06dd7feeb66090e952c_duckedgtnh_314184272251_1742721924//thumb/thumb0-{width}x{height}.jpg",
+              "title": "GTNH - Nether Only Challenge Run - Rushed EV.",
+              "viewCount": 453,
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Video"
+            },
+            "__typename": "SearchForEdge"
+          },
+          {
+            "trackingID": "d3e38c38-59b2-4e36-8695-023f9def71e7",
+            "item": {
+              "createdAt": "2025-03-24T16:54:38Z",
+              "owner": {
+                "id": "1051842650",
+                "displayName": "CatsCozyGames",
+                "login": "catscozygames",
+                "roles": { "isPartner": false, "__typename": "UserRoles" },
+                "__typename": "User"
+              },
+              "id": "2414228488",
+              "game": {
+                "id": "27471",
+                "slug": "minecraft",
+                "name": "Minecraft",
+                "displayName": "Minecraft",
+                "__typename": "Game"
+              },
+              "lengthSeconds": 15096,
+              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d1m7jfoe9zdc1j/d2e7b81f5c8189bb44c1_catscozygames_319679644157_1742835274//thumb/thumb0-214x120.jpg",
+              "templatePreviewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d1m7jfoe9zdc1j/d2e7b81f5c8189bb44c1_catscozygames_319679644157_1742835274//thumb/thumb0-{width}x{height}.jpg",
+              "title": "A New GTNH Run! !doublehelix | Twist Space with a Twist | Cat \u0026 Vin swap roles! | Day 1 w/ @Vindrake",
+              "viewCount": 367,
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Video"
+            },
+            "__typename": "SearchForEdge"
+          },
+          {
+            "trackingID": "ae2d3d39-0600-4230-9aa9-502fe0560ef8",
+            "item": {
+              "createdAt": "2025-03-25T22:57:30Z",
+              "owner": {
+                "id": "49178534",
+                "displayName": "YannickMG",
+                "login": "yannickmg",
+                "roles": { "isPartner": false, "__typename": "UserRoles" },
+                "__typename": "User"
+              },
+              "id": "2415356219",
+              "game": {
+                "id": "1469308723",
+                "slug": "software-and-game-development",
+                "name": "Software and Game Development",
+                "displayName": "Software and Game Development",
+                "__typename": "Game"
+              },
+              "lengthSeconds": 14341,
+              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/4b18bcdbee3796663ec2_yannickmg_318464382076_1742943445//thumb/thumb0-214x120.jpg",
+              "templatePreviewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/4b18bcdbee3796663ec2_yannickmg_318464382076_1742943445//thumb/thumb0-{width}x{height}.jpg",
+              "title": "GTNH Dev \u0026 Play || Debugging pipe collisions",
+              "viewCount": 95,
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Video"
+            },
+            "__typename": "SearchForEdge"
+          },
+          {
+            "trackingID": "770541d5-b848-41fa-88c5-11d073daebd7",
+            "item": {
+              "createdAt": "2025-03-22T23:45:03Z",
+              "owner": {
+                "id": "235547355",
+                "displayName": "DuckedGTNH",
+                "login": "duckedgtnh",
+                "roles": { "isPartner": false, "__typename": "UserRoles" },
+                "__typename": "User"
+              },
+              "id": "2412818360",
+              "game": {
+                "id": "27471",
+                "slug": "minecraft",
+                "name": "Minecraft",
+                "displayName": "Minecraft",
+                "__typename": "Game"
+              },
+              "lengthSeconds": 12731,
+              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/13b76bf0a4545835ec39_duckedgtnh_314183312123_1742687097//thumb/thumb0-214x120.jpg",
+              "templatePreviewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/13b76bf0a4545835ec39_duckedgtnh_314183312123_1742687097//thumb/thumb0-{width}x{height}.jpg",
+              "title": "GTNH - Nether Only Challenge Run - Rushed EV.",
+              "viewCount": 269,
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Video"
+            },
+            "__typename": "SearchForEdge"
+          },
+          {
+            "trackingID": "f1e3256a-c5ac-4960-bac0-486679c1ec43",
+            "item": {
+              "createdAt": "2025-03-23T13:24:40Z",
+              "owner": {
+                "id": "119850884",
+                "displayName": "Mr__SiB",
+                "login": "mr__sib",
+                "roles": { "isPartner": false, "__typename": "UserRoles" },
+                "__typename": "User"
+              },
+              "id": "2413256829",
+              "game": {
+                "id": "27471",
+                "slug": "minecraft",
+                "name": "Minecraft",
+                "displayName": "Minecraft",
+                "__typename": "Game"
+              },
+              "lengthSeconds": 19561,
+              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/4caa2f79cdd55806419d_mr__sib_317625729913_1742736274//thumb/thumb0-214x120.jpg",
+              "templatePreviewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/4caa2f79cdd55806419d_mr__sib_317625729913_1742736274//thumb/thumb0-{width}x{height}.jpg",
+              "title": "[18+] GTNH 2.7.3. Далеко до DTPF?",
+              "viewCount": 445,
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Video"
+            },
+            "__typename": "SearchForEdge"
+          },
+          {
+            "trackingID": "78e53bf6-72ff-4be1-977c-ff257694c6a0",
+            "item": {
+              "createdAt": "2025-03-23T10:50:44Z",
+              "owner": {
+                "id": "449972912",
+                "displayName": "Kaev_i",
+                "login": "kaev_i",
+                "roles": { "isPartner": false, "__typename": "UserRoles" },
+                "__typename": "User"
+              },
+              "id": "2413177983",
+              "game": {
+                "id": "27471",
+                "slug": "minecraft",
+                "name": "Minecraft",
+                "displayName": "Minecraft",
+                "__typename": "Game"
+              },
+              "lengthSeconds": 17520,
+              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/255f0f351dd6a33a8d32_kaev_i_317618115961_1742727039//thumb/thumb0-214x120.jpg",
+              "templatePreviewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/255f0f351dd6a33a8d32_kaev_i_317618115961_1742727039//thumb/thumb0-{width}x{height}.jpg",
+              "title": "GTNH",
+              "viewCount": 208,
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Video"
+            },
+            "__typename": "SearchForEdge"
+          },
+          {
+            "trackingID": "4be2dbd8-cf3a-48de-a9a5-835ea1014f2a",
+            "item": {
+              "createdAt": "2025-03-24T23:37:20Z",
+              "owner": {
+                "id": "190426267",
+                "displayName": "Vintage_Jack",
+                "login": "vintage_jack",
+                "roles": { "isPartner": false, "__typename": "UserRoles" },
+                "__typename": "User"
+              },
+              "id": "2414549891",
+              "game": {
+                "id": "27471",
+                "slug": "minecraft",
+                "name": "Minecraft",
+                "displayName": "Minecraft",
+                "__typename": "Game"
+              },
+              "lengthSeconds": 18947,
+              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d1m7jfoe9zdc1j/cf04a5c4044ae5c18269_vintage_jack_319707057021_1742859435//thumb/thumb0-214x120.jpg",
+              "templatePreviewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d1m7jfoe9zdc1j/cf04a5c4044ae5c18269_vintage_jack_319707057021_1742859435//thumb/thumb0-{width}x{height}.jpg",
+              "title": "[GTNH Ep: 24] Benzene Automation and POSSIBLY Max Sized Clean Room",
+              "viewCount": 107,
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Video"
+            },
+            "__typename": "SearchForEdge"
+          },
+          {
+            "trackingID": "3a0f1b82-d59d-4da0-bd6c-6513d754adc6",
+            "item": {
+              "createdAt": "2025-03-23T14:43:42Z",
+              "owner": {
+                "id": "227311493",
+                "displayName": "VeTeRoKChannel",
+                "login": "veterokchannel",
+                "roles": { "isPartner": false, "__typename": "UserRoles" },
+                "__typename": "User"
+              },
+              "id": "2413307110",
+              "game": {
+                "id": "27471",
+                "slug": "minecraft",
+                "name": "Minecraft",
+                "displayName": "Minecraft",
+                "__typename": "Game"
+              },
+              "lengthSeconds": 23990,
+              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d1m7jfoe9zdc1j/fbab6e22f111bff2677f_veterokchannel_319591682429_1742741017//thumb/thumb0-214x120.jpg",
+              "templatePreviewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d1m7jfoe9zdc1j/fbab6e22f111bff2677f_veterokchannel_319591682429_1742741017//thumb/thumb0-{width}x{height}.jpg",
+              "title": "HV Energy Hatch, Freezer, убийство Wither'a! Minecraft. GT New Horizons(GTNH). Стрим 33",
+              "viewCount": 307,
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Video"
+            },
+            "__typename": "SearchForEdge"
+          },
+          {
+            "trackingID": "488d6f31-54f2-4b65-8b80-12035b29df7f",
+            "item": {
+              "createdAt": "2025-03-23T07:59:41Z",
+              "owner": {
+                "id": "119850884",
+                "displayName": "Mr__SiB",
+                "login": "mr__sib",
+                "roles": { "isPartner": false, "__typename": "UserRoles" },
+                "__typename": "User"
+              },
+              "id": "2413117120",
+              "game": {
+                "id": "27471",
+                "slug": "minecraft",
+                "name": "Minecraft",
+                "displayName": "Minecraft",
+                "__typename": "Game"
+              },
+              "lengthSeconds": 8276,
+              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/6c619598d876a4430460_mr__sib_317610510841_1742716775//thumb/thumb0-214x120.jpg",
+              "templatePreviewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/6c619598d876a4430460_mr__sib_317610510841_1742716775//thumb/thumb0-{width}x{height}.jpg",
+              "title": "[18+] GTNH 2.7.3. Войд майнеры везде!",
+              "viewCount": 218,
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Video"
+            },
+            "__typename": "SearchForEdge"
+          },
+          {
+            "trackingID": "7a128556-4689-46e7-8c6d-bc3d3675de1d",
+            "item": {
+              "createdAt": "2025-03-23T08:34:42Z",
+              "owner": {
+                "id": "69856798",
+                "displayName": "Ivalol",
+                "login": "ivalol",
+                "roles": { "isPartner": false, "__typename": "UserRoles" },
+                "__typename": "User"
+              },
+              "id": "2413128640",
+              "game": {
+                "id": "27471",
+                "slug": "minecraft",
+                "name": "Minecraft",
+                "displayName": "Minecraft",
+                "__typename": "Game"
+              },
+              "lengthSeconds": 19990,
+              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/d96ea3343823ddebbcbc_ivalol_317611644665_1742718876//thumb/thumb0-214x120.jpg",
+              "templatePreviewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/d96ea3343823ddebbcbc_ivalol_317611644665_1742718876//thumb/thumb0-{width}x{height}.jpg",
+              "title": "GTNH 2.7.2 Garden of grind [MV]",
+              "viewCount": 200,
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Video"
+            },
+            "__typename": "SearchForEdge"
+          },
+          {
+            "trackingID": "d77c5cf1-52fd-4a1e-b390-e1dc94f151db",
+            "item": {
+              "createdAt": "2025-03-22T11:01:04Z",
+              "owner": {
+                "id": "119850884",
+                "displayName": "Mr__SiB",
+                "login": "mr__sib",
+                "roles": { "isPartner": false, "__typename": "UserRoles" },
+                "__typename": "User"
+              },
+              "id": "2412259885",
+              "game": {
+                "id": "27471",
+                "slug": "minecraft",
+                "name": "Minecraft",
+                "displayName": "Minecraft",
+                "__typename": "Game"
+              },
+              "lengthSeconds": 15858,
+              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/11e9035b478920bb4616_mr__sib_317562107897_1742641258//thumb/thumb0-214x120.jpg",
+              "templatePreviewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/11e9035b478920bb4616_mr__sib_317562107897_1742641258//thumb/thumb0-{width}x{height}.jpg",
+              "title": "[18+] GTNH 2.7.3. Вползаем в UEV. Часть 2",
+              "viewCount": 304,
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Video"
+            },
+            "__typename": "SearchForEdge"
+          },
+          {
+            "trackingID": "a74878c0-94c6-4fa8-93e3-c52d91653b5c",
+            "item": {
+              "createdAt": "2025-03-21T12:45:09Z",
+              "owner": {
+                "id": "185948957",
+                "displayName": "RandomPotato10",
+                "login": "randompotato10",
+                "roles": { "isPartner": false, "__typename": "UserRoles" },
+                "__typename": "User"
+              },
+              "id": "2411404035",
+              "game": {
+                "id": "27471",
+                "slug": "minecraft",
+                "name": "Minecraft",
+                "displayName": "Minecraft",
+                "__typename": "Game"
+              },
+              "lengthSeconds": 24960,
+              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/20d3f71b7bfbf7ba45c2_randompotato10_317508764025_1742561102//thumb/thumb0-214x120.jpg",
+              "templatePreviewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/20d3f71b7bfbf7ba45c2_randompotato10_317508764025_1742561102//thumb/thumb0-{width}x{height}.jpg",
+              "title": "GTNH 2.7.2 - The Rocket Craft begins! Is the moon made of cheese? | Day 21 | [Twistspace] | !commands",
+              "viewCount": 832,
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Video"
+            },
+            "__typename": "SearchForEdge"
+          },
+          {
+            "trackingID": "b98902eb-070a-47b2-8361-f7a286e5bfe8",
+            "item": {
+              "createdAt": "2025-03-23T18:57:13Z",
+              "owner": {
+                "id": "179059192",
+                "displayName": "CimmerianHydra",
+                "login": "cimmerianhydra",
+                "roles": { "isPartner": false, "__typename": "UserRoles" },
+                "__typename": "User"
+              },
+              "id": "2413511263",
+              "game": {
+                "id": "27471",
+                "slug": "minecraft",
+                "name": "Minecraft",
+                "displayName": "Minecraft",
+                "__typename": "Game"
+              },
+              "lengthSeconds": 6710,
+              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/4af2f8152b4bd230e08d_cimmerianhydra_318342986364_1742756229//thumb/thumb0-214x120.jpg",
+              "templatePreviewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/4af2f8152b4bd230e08d_cimmerianhydra_318342986364_1742756229//thumb/thumb0-{width}x{height}.jpg",
+              "title": "🐉🏙️ 【 GTNH 2.7 】 150 days of GTNH | !yt !discord !songrequests",
+              "viewCount": 90,
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Video"
+            },
+            "__typename": "SearchForEdge"
+          },
+          {
+            "trackingID": "30b3356a-7dab-4561-9ff2-abc7c16aa4bf",
+            "item": {
+              "createdAt": "2025-03-21T16:46:13Z",
+              "owner": {
+                "id": "119850884",
+                "displayName": "Mr__SiB",
+                "login": "mr__sib",
+                "roles": { "isPartner": false, "__typename": "UserRoles" },
+                "__typename": "User"
+              },
+              "id": "2411544178",
+              "game": {
+                "id": "27471",
+                "slug": "minecraft",
+                "name": "Minecraft",
+                "displayName": "Minecraft",
+                "__typename": "Game"
+              },
+              "lengthSeconds": 25193,
+              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d1m7jfoe9zdc1j/0d489be060da0f73d349_mr__sib_319431124221_1742575568//thumb/thumb0-214x120.jpg",
+              "templatePreviewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d1m7jfoe9zdc1j/0d489be060da0f73d349_mr__sib_319431124221_1742575568//thumb/thumb0-{width}x{height}.jpg",
+              "title": "[18+] GTNH 2.7.3. Вползаем в UEV. Тенгам метеориты...",
+              "viewCount": 487,
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Video"
+            },
+            "__typename": "SearchForEdge"
+          },
+          {
+            "trackingID": "7fd03c33-5360-454d-90f7-0e9aab521b10",
+            "item": {
+              "createdAt": "2025-03-25T09:46:50Z",
+              "owner": {
+                "id": "118087110",
+                "displayName": "quanau",
+                "login": "quanau",
+                "roles": { "isPartner": false, "__typename": "UserRoles" },
+                "__typename": "User"
+              },
+              "id": "2414859645",
+              "game": {
+                "id": "27471",
+                "slug": "minecraft",
+                "name": "Minecraft",
+                "displayName": "Minecraft",
+                "__typename": "Game"
+              },
+              "lengthSeconds": 7082,
+              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/733a1899136f21e327db_quanau_314187154427_1742896000//thumb/thumb0-214x120.jpg",
+              "templatePreviewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/733a1899136f21e327db_quanau_314187154427_1742896000//thumb/thumb0-{width}x{height}.jpg",
+              "title": "🚨 20/100 Days of streaming🚨 GTNH Nightly 🖥️",
+              "viewCount": 40,
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Video"
+            },
+            "__typename": "SearchForEdge"
+          }
+        ],
+        "score": 0,
+        "totalMatches": 935,
+        "__typename": "SearchForResultVideos"
+      },
+      "relatedLiveChannels": {
+        "edges": [],
+        "score": null,
+        "__typename": "SearchForResultRelatedLiveChannels"
+      },
+      "__typename": "SearchFor"
+    }
+  },
+  "extensions": {
+    "durationMilliseconds": 108,
+    "operationName": "SearchResultsPage_SearchResults",
+    "requestID": "01JQ9AQ4FE32BFTQZJZZDK3PR2"
+  }
+}

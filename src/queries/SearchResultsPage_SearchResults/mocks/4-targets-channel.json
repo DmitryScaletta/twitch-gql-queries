@@ -1,0 +1,280 @@
+{
+  "data": {
+    "searchFor": {
+      "banners": null,
+      "channels": {
+        "cursor": "",
+        "edges": [
+          {
+            "trackingID": "52447db4-7e7a-4c54-a99e-8046edd42488",
+            "item": {
+              "broadcastSettings": {
+                "id": "26610234",
+                "title": "ATOMFALL (Hardest - 100 Cohhcent)! - !AFThoughts - GAME of THRONES at 12pm ET! - !MobileApp / !Emberville / !Wartorn",
+                "__typename": "BroadcastSettings"
+              },
+              "displayName": "CohhCarnage",
+              "followers": {
+                "totalCount": 1632502,
+                "__typename": "FollowerConnection"
+              },
+              "id": "26610234",
+              "lastBroadcast": {
+                "id": "319812944125",
+                "startedAt": "2025-03-26T11:51:24.411696Z",
+                "__typename": "Broadcast"
+              },
+              "login": "cohhcarnage",
+              "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/148c3b8a-a78b-4139-a429-7d3d90ce8a27-profile_image-150x150.png",
+              "description": "Happy, helpful and respectful people welcome. Come say hello!",
+              "channel": {
+                "id": "26610234",
+                "schedule": {
+                  "id": "schedule-26610234",
+                  "nextSegment": {
+                    "id": "eyJzZWdtZW50SUQiOiIwNDQ0ZmUxNy1mMTg3LTQxZWUtOTdlNC05ZDBmZTg1NDZiYjciLCJpc29ZZWFyIjoyMDI1LCJpc29XZWVrIjoxM30=",
+                    "startAt": "2025-03-27T13:00:00Z",
+                    "endAt": "2025-03-27T21:00:00Z",
+                    "title": "Normal Stream!",
+                    "hasReminder": false,
+                    "categories": [],
+                    "__typename": "ScheduleSegment"
+                  },
+                  "__typename": "Schedule"
+                },
+                "__typename": "Channel"
+              },
+              "self": null,
+              "latestVideo": {
+                "edges": [
+                  {
+                    "node": {
+                      "id": "2414065267",
+                      "lengthSeconds": 33641,
+                      "title": "HUGE DAY! - Ronin -\u003e First Berserker: Khazan -\u003e Atomfall - LONG STREAM TODAY! - !MobileApp / !Emberville / !Wartorn",
+                      "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d1m7jfoe9zdc1j/c42b2982ee05b8985791_cohhcarnage_319664843389_1742816812//thumb/thumb0-100x56.jpg",
+                      "templatePreviewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d1m7jfoe9zdc1j/c42b2982ee05b8985791_cohhcarnage_319664843389_1742816812//thumb/thumb0-{width}x{height}.jpg",
+                      "previewThumbnailProperties": {
+                        "blurReason": "BLUR_NOT_REQUIRED",
+                        "__typename": "PreviewThumbnailProperties"
+                      },
+                      "__typename": "Video"
+                    },
+                    "__typename": "VideoEdge"
+                  }
+                ],
+                "__typename": "VideoConnection"
+              },
+              "topClip": {
+                "edges": [
+                  {
+                    "node": {
+                      "id": "645535595",
+                      "title": "New AC in a nutshell",
+                      "durationSeconds": 50,
+                      "thumbnailURL": "https://static-cdn.jtvnw.net/twitch-clips-thumbnails-prod/TriangularFaintStingrayShadyLulu-YfNhNsg_FE1ZGHMX/7be7693c-f196-4997-9020-1b5d90002279/preview.jpg",
+                      "slug": "TriangularFaintStingrayShadyLulu-YfNhNsg_FE1ZGHMX",
+                      "previewThumbnailProperties": {
+                        "blurReason": "BLUR_NOT_REQUIRED",
+                        "__typename": "PreviewThumbnailProperties"
+                      },
+                      "__typename": "Clip"
+                    },
+                    "__typename": "ClipEdge"
+                  }
+                ],
+                "__typename": "ClipConnection"
+              },
+              "roles": {
+                "isPartner": true,
+                "isParticipatingDJ": false,
+                "__typename": "UserRoles"
+              },
+              "stream": {
+                "game": {
+                  "id": "456360118",
+                  "slug": "atomfall",
+                  "name": "Atomfall",
+                  "displayName": "Atomfall",
+                  "__typename": "Game"
+                },
+                "id": "319812944125",
+                "previewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_cohhcarnage-214x120.jpg",
+                "templatePreviewImageURL": "https://static-cdn.jtvnw.net/previews-ttv/live_user_cohhcarnage-{width}x{height}.jpg",
+                "freeformTags": [
+                  {
+                    "id": "fft:CHANNEL:26610234:0",
+                    "name": "SFW",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:26610234:1",
+                    "name": "Parent",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:26610234:2",
+                    "name": "Chill",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:26610234:3",
+                    "name": "ADHD",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:26610234:4",
+                    "name": "moderated",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:26610234:5",
+                    "name": "NoPolitics",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:26610234:6",
+                    "name": "NoReligion",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:26610234:7",
+                    "name": "Interactive",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:26610234:8",
+                    "name": "Overencumbered",
+                    "__typename": "FreeformTag"
+                  },
+                  {
+                    "id": "fft:CHANNEL:26610234:9",
+                    "name": "LootGoblin",
+                    "__typename": "FreeformTag"
+                  }
+                ],
+                "type": "live",
+                "viewersCount": 10199,
+                "previewThumbnailProperties": {
+                  "blurReason": "BLUR_NOT_REQUIRED",
+                  "__typename": "PreviewThumbnailProperties"
+                },
+                "__typename": "Stream"
+              },
+              "watchParty": null,
+              "__typename": "User"
+            },
+            "__typename": "SearchForEdge"
+          },
+          {
+            "trackingID": "3f3c712c-f315-46fd-848d-100f40e462c3",
+            "item": {
+              "broadcastSettings": {
+                "id": "59685493",
+                "title": "Timeshifted ReRun: Atomfall - !KCD2Thoughts / !Emberville / !Wartorn",
+                "__typename": "BroadcastSettings"
+              },
+              "displayName": "Cohh",
+              "followers": {
+                "totalCount": 204850,
+                "__typename": "FollowerConnection"
+              },
+              "id": "59685493",
+              "lastBroadcast": {
+                "id": "317745051129",
+                "startedAt": "2025-03-26T01:34:28.631382Z",
+                "__typename": "Broadcast"
+              },
+              "login": "cohh",
+              "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/50dbcad5-012f-4f82-a9be-0822fc62b4a7-profile_image-150x150.png",
+              "description": "Heya! I'm Cohh! This is my alternate channel (my main being /CohhCarnage). This is a place for me to get cozy, relax and do whatever I want to! A place to just unwind. Hope you enjoy the ride!",
+              "channel": {
+                "id": "59685493",
+                "schedule": {
+                  "id": "schedule-59685493",
+                  "nextSegment": {
+                    "id": "eyJzZWdtZW50SUQiOiJkYTA4MTY2OS0wYzg3LTQ4OTUtODc5Ny1iMzJlYzJmODg1NjgiLCJpc29ZZWFyIjoyMDI1LCJpc29XZWVrIjoxM30=",
+                    "startAt": "2025-03-26T23:30:00Z",
+                    "endAt": "2025-03-27T02:30:00Z",
+                    "title": "Daily Timeshift ReRun of /CohhCarnage day Stream",
+                    "hasReminder": false,
+                    "categories": [],
+                    "__typename": "ScheduleSegment"
+                  },
+                  "__typename": "Schedule"
+                },
+                "__typename": "Channel"
+              },
+              "self": null,
+              "latestVideo": { "edges": [], "__typename": "VideoConnection" },
+              "topClip": {
+                "edges": [
+                  {
+                    "node": {
+                      "id": "3096364797",
+                      "title": "*COUGH* *COUGH*",
+                      "durationSeconds": 10,
+                      "thumbnailURL": "https://static-cdn.jtvnw.net/twitch-clips-thumbnails-prod/EnthusiasticGrossKaleSuperVinlin-1w0Ts-B8b0cB5fbs/34be484c-6135-4008-a54b-9dab61f56237/preview.jpg",
+                      "slug": "EnthusiasticGrossKaleSuperVinlin-1w0Ts-B8b0cB5fbs",
+                      "previewThumbnailProperties": {
+                        "blurReason": "BLUR_NOT_REQUIRED",
+                        "__typename": "PreviewThumbnailProperties"
+                      },
+                      "__typename": "Clip"
+                    },
+                    "__typename": "ClipEdge"
+                  }
+                ],
+                "__typename": "ClipConnection"
+              },
+              "roles": {
+                "isPartner": true,
+                "isParticipatingDJ": false,
+                "__typename": "UserRoles"
+              },
+              "stream": null,
+              "watchParty": null,
+              "__typename": "User"
+            },
+            "__typename": "SearchForEdge"
+          }
+        ],
+        "score": 0,
+        "totalMatches": 2,
+        "__typename": "SearchForResultUsers"
+      },
+      "channelsWithTag": {
+        "cursor": "",
+        "edges": [],
+        "score": 0,
+        "totalMatches": 0,
+        "__typename": "SearchForResultUsers"
+      },
+      "games": {
+        "cursor": "",
+        "edges": [],
+        "score": 0,
+        "totalMatches": 0,
+        "__typename": "SearchForResultGames"
+      },
+      "videos": {
+        "cursor": "",
+        "edges": [],
+        "score": 0,
+        "totalMatches": 0,
+        "__typename": "SearchForResultVideos"
+      },
+      "relatedLiveChannels": {
+        "edges": [],
+        "score": null,
+        "__typename": "SearchForResultRelatedLiveChannels"
+      },
+      "__typename": "SearchFor"
+    }
+  },
+  "extensions": {
+    "durationMilliseconds": 154,
+    "operationName": "SearchResultsPage_SearchResults",
+    "requestID": "01JQ9AMRG5NMZ4PVZEKSN5QQH1"
+  }
+}

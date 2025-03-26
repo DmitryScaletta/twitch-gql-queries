@@ -63,6 +63,7 @@ export const Stream = {
   title: T.String(),
   viewersCount: T.Integer({ minimum: 0 }),
   previewImageURL: T.String({ format: 'uri' }),
+  templatePreviewImageURL: T.String({ format: 'uri' }),
   type: T.Literal('live'),
   restrictionType: T.Union([T.Null()]),
   createdAt: T.String({ format: 'date-time' }),
@@ -94,6 +95,7 @@ export const Video = {
   lengthSeconds: T.Integer({ minimum: 0 }),
   viewCount: T.Integer({ minimum: 0 }),
   previewThumbnailURL: T.String({ format: 'uri' }),
+  templatePreviewThumbnailURL: T.String({ format: 'uri' }),
   animatedPreviewURL: T.String({ format: 'uri' }),
   status: T.Union([T.Literal('RECORDED'), T.Literal('RECORDING')]),
   createdAt: T.String({ format: 'date-time' }),
@@ -121,7 +123,7 @@ export const Clip = {
   viewCount: T.Integer({ minimum: 0 }),
   videoOffsetSeconds: T.Union([T.Null(), T.Integer({ minimum: 0 })]),
   durationSeconds: T.Integer({ minimum: 0 }),
-  thumbnailURL: T.String({ format: 'uri' }),
+  thumbnailURL: T.Union([T.Literal(''), T.String({ format: 'uri' })]),
   language: T.String({
     minLength: 2,
     description: 'Possible values: `EN`, `DE`, `ASL`, `ZH_HK`',
@@ -181,6 +183,7 @@ export const Game = {
   name: T.String(),
   avatarURL: T.String({ format: 'uri' }),
   boxArtURL: T.String({ format: 'uri' }),
+  templateBoxArtURL: T.String({ format: 'uri' }),
   viewersCount: T.Union([T.Null(), T.Integer({ minimum: 0 })]),
   originalReleaseDate: T.Union([T.Null(), T.String()], {
     description:
@@ -211,7 +214,10 @@ export const FreeformTag = {
 } satisfies Properties;
 
 export const PreviewThumbnailProperties = {
-  blurReason: T.Union([T.Literal('BLUR_NOT_REQUIRED')]),
+  blurReason: T.Union([
+    T.Literal('BLUR_NOT_REQUIRED'),
+    T.Literal('BLUR_REASON_TYPE_SEXUAL_THEMES'),
+  ]),
   __typename: T.Literal('PreviewThumbnailProperties'),
 } satisfies Properties;
 

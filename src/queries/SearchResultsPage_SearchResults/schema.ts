@@ -41,7 +41,7 @@ export const VariablesSchema = strictObject(
         }),
       ]),
     ),
-    includeIsDJ: T.Optional(T.Union([T.Null(), T.Boolean()])),
+    includeIsDJ: T.Boolean(),
   },
   { $id: `${displayName}Variables` },
 );
@@ -98,14 +98,18 @@ export const ChannelSchema = strictObject(
     latestVideo: strictObject({
       edges: T.Array(
         strictObject({
-          node: strictObject(
-            pick(schemas.Video, [
+          node: strictObject({
+            ...pick(schemas.Video, [
               'id',
               'lengthSeconds',
               'title',
               'previewThumbnailURL',
+              'templatePreviewThumbnailURL',
             ]),
-          ),
+            previewThumbnailProperties: strictObject(
+              pick(schemas.PreviewThumbnailProperties, ['blurReason']),
+            ),
+          }),
           __typename: T.Literal('VideoEdge'),
         }),
       ),
@@ -114,27 +118,34 @@ export const ChannelSchema = strictObject(
     topClip: strictObject({
       edges: T.Array(
         strictObject({
-          node: strictObject(
-            pick(schemas.Clip, [
+          node: strictObject({
+            ...pick(schemas.Clip, [
               'id',
               'title',
               'durationSeconds',
               'thumbnailURL',
               'slug',
             ]),
-          ),
+            previewThumbnailProperties: strictObject(
+              pick(schemas.PreviewThumbnailProperties, ['blurReason']),
+            ),
+          }),
           __typename: T.Literal('ClipEdge'),
         }),
       ),
       __typename: T.Literal('ClipConnection'),
     }),
-    roles: strictObject(pick(schemas.UserRoles, ['isPartner'])),
+    roles: strictObject({
+      ...pick(schemas.UserRoles, ['isPartner']),
+      isParticipatingDJ: T.Optional(T.Boolean()),
+    }),
     stream: T.Union([
       T.Null(),
       strictObject({
         ...pick(schemas.Stream, [
           'id',
           'previewImageURL',
+          'templatePreviewImageURL',
           'type',
           'viewersCount',
         ]),
@@ -147,6 +158,9 @@ export const ChannelSchema = strictObject(
         freeformTags: T.Array(
           strictObject(pick(schemas.FreeformTag, ['id', 'name'])),
         ),
+        previewThumbnailProperties: strictObject(
+          pick(schemas.PreviewThumbnailProperties, ['blurReason']),
+        ),
       }),
     ]),
     watchParty: WatchPartySchema,
@@ -158,7 +172,12 @@ export const RelatedLiveChannelSchema = strictObject(
   {
     ...pick(schemas.User, ['id']),
     stream: strictObject({
-      ...pick(schemas.Stream, ['id', 'viewersCount', 'previewImageURL']),
+      ...pick(schemas.Stream, [
+        'id',
+        'viewersCount',
+        'previewImageURL',
+        'templatePreviewImageURL',
+      ]),
       game: T.Union([
         T.Null(),
         strictObject(pick(schemas.Game, ['name', 'id', 'slug'])),
@@ -173,8 +192,14 @@ export const RelatedLiveChannelSchema = strictObject(
         broadcastSettings: strictObject(
           pick(schemas.BroadcastSettings, ['id', 'title']),
         ),
-        roles: strictObject(pick(schemas.UserRoles, ['isPartner'])),
+        roles: strictObject({
+          ...pick(schemas.UserRoles, ['isPartner']),
+          isParticipatingDJ: T.Optional(T.Boolean()),
+        }),
       }),
+      previewThumbnailProperties: strictObject(
+        pick(schemas.PreviewThumbnailProperties, ['blurReason']),
+      ),
     }),
     watchParty: WatchPartySchema,
   },
@@ -189,6 +214,7 @@ export const GameSchema = strictObject(
       'name',
       'displayName',
       'boxArtURL',
+      'templateBoxArtURL',
       'viewersCount',
     ]),
     tags: T.Array(
@@ -207,6 +233,7 @@ export const VideoSchema = strictObject(
       'id',
       'lengthSeconds',
       'previewThumbnailURL',
+      'templatePreviewThumbnailURL',
       'title',
       'viewCount',
     ]),
@@ -218,6 +245,9 @@ export const VideoSchema = strictObject(
       T.Null(),
       strictObject(pick(schemas.Game, ['id', 'slug', 'name', 'displayName'])),
     ]),
+    previewThumbnailProperties: strictObject(
+      pick(schemas.PreviewThumbnailProperties, ['blurReason']),
+    ),
   },
   { $id: `${category}Video` },
 );
@@ -237,6 +267,7 @@ const SearchForResultUsers = strictObject({
 });
 
 const SearchForSchema = strictObject({
+  banners: T.Union([T.Null(), T.Literal('DISCOVERY_PREFERENCE')]),
   channels: SearchForResultUsers,
   channelsWithTag: SearchForResultUsers,
   games: strictObject({

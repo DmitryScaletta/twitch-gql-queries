@@ -62,18 +62,21 @@ export const StreamSchema = strictObject(
       'previewImageURL',
       'type',
     ]),
-    broadcaster: strictObject({
-      ...pick(schemas.User, [
-        'id',
-        'login',
-        'displayName',
-        'profileImageURL',
-        'primaryColorHex',
-      ]),
-      roles: strictObject(
-        pick(schemas.UserRoles, ['isPartner', 'isParticipatingDJ']),
-      ),
-    }),
+    broadcaster: T.Union([
+      T.Null(),
+      strictObject({
+        ...pick(schemas.User, [
+          'id',
+          'login',
+          'displayName',
+          'profileImageURL',
+          'primaryColorHex',
+        ]),
+        roles: strictObject(
+          pick(schemas.UserRoles, ['isPartner', 'isParticipatingDJ']),
+        ),
+      }),
+    ]),
     freeformTags: T.Array(
       strictObject(pick(schemas.FreeformTag, ['id', 'name'])),
     ),

@@ -203,7 +203,7 @@ export interface ChannelShellData {
 export interface ChannelVideoShelvesQueryClip {
   id: string;
   slug: string;
-  thumbnailURL: string;
+  thumbnailURL: '' | string;
   createdAt: string;
   durationSeconds: number;
   isFeatured: boolean;
@@ -303,7 +303,7 @@ export interface ChannelVideoShelvesQueryVideo {
    */
   contentTags: [];
   previewThumbnailProperties?: {
-    blurReason: 'BLUR_NOT_REQUIRED';
+    blurReason: 'BLUR_NOT_REQUIRED' | 'BLUR_REASON_TYPE_SEXUAL_THEMES';
     __typename: 'PreviewThumbnailProperties';
   };
   __typename: 'Video';
@@ -379,7 +379,7 @@ export interface ClipsCardsGameClip {
   slug: string;
   title: string;
   viewCount: number;
-  thumbnailURL: string;
+  thumbnailURL: '' | string;
   createdAt: string;
   durationSeconds: number;
   isFeatured: boolean;
@@ -422,7 +422,7 @@ export interface ClipsCardsGameClip {
     __typename: 'GuestStarParticipants';
   };
   previewThumbnailProperties: {
-    blurReason: 'BLUR_NOT_REQUIRED';
+    blurReason: 'BLUR_NOT_REQUIRED' | 'BLUR_REASON_TYPE_SEXUAL_THEMES';
     __typename: 'PreviewThumbnailProperties';
   };
   __typename: 'Clip';
@@ -474,7 +474,7 @@ export interface ClipsCardsUserClip {
    * Possible values: `EN`, `DE`, `ASL`, `ZH_HK`
    */
   language: string;
-  thumbnailURL: string;
+  thumbnailURL: '' | string;
   createdAt: string;
   durationSeconds: number;
   champBadge: null;
@@ -619,7 +619,7 @@ export interface DirectoryPageGameStream {
   viewersCount: number;
   previewImageURL: string;
   type: 'live';
-  broadcaster: {
+  broadcaster: null | {
     id: string;
     login: string;
     displayName: string;
@@ -646,7 +646,7 @@ export interface DirectoryPageGameStream {
     __typename: 'Game';
   };
   previewThumbnailProperties: {
-    blurReason: 'BLUR_NOT_REQUIRED';
+    blurReason: 'BLUR_NOT_REQUIRED' | 'BLUR_REASON_TYPE_SEXUAL_THEMES';
     __typename: 'PreviewThumbnailProperties';
   };
   __typename: 'Stream';
@@ -748,7 +748,7 @@ export interface FilterableVideoTowerVideosVideo {
    */
   contentTags: [];
   previewThumbnailProperties?: {
-    blurReason: 'BLUR_NOT_REQUIRED';
+    blurReason: 'BLUR_NOT_REQUIRED' | 'BLUR_REASON_TYPE_SEXUAL_THEMES';
     __typename: 'PreviewThumbnailProperties';
   };
   __typename: 'Video';
@@ -1011,6 +1011,11 @@ export interface SearchResultsPageChannel {
         lengthSeconds: number;
         title: null | string;
         previewThumbnailURL: string;
+        templatePreviewThumbnailURL: string;
+        previewThumbnailProperties: {
+          blurReason: 'BLUR_NOT_REQUIRED' | 'BLUR_REASON_TYPE_SEXUAL_THEMES';
+          __typename: 'PreviewThumbnailProperties';
+        };
         __typename: 'Video';
       };
       __typename: 'VideoEdge';
@@ -1023,8 +1028,12 @@ export interface SearchResultsPageChannel {
         id: string;
         title: string;
         durationSeconds: number;
-        thumbnailURL: string;
+        thumbnailURL: '' | string;
         slug: string;
+        previewThumbnailProperties: {
+          blurReason: 'BLUR_NOT_REQUIRED' | 'BLUR_REASON_TYPE_SEXUAL_THEMES';
+          __typename: 'PreviewThumbnailProperties';
+        };
         __typename: 'Clip';
       };
       __typename: 'ClipEdge';
@@ -1033,11 +1042,13 @@ export interface SearchResultsPageChannel {
   };
   roles: {
     isPartner: boolean;
+    isParticipatingDJ?: boolean;
     __typename: 'UserRoles';
   };
   stream: null | {
     id: string;
     previewImageURL: string;
+    templatePreviewImageURL: string;
     type: 'live';
     viewersCount: number;
     game: null | {
@@ -1052,6 +1063,10 @@ export interface SearchResultsPageChannel {
       name: string;
       __typename: 'FreeformTag';
     }[];
+    previewThumbnailProperties: {
+      blurReason: 'BLUR_NOT_REQUIRED' | 'BLUR_REASON_TYPE_SEXUAL_THEMES';
+      __typename: 'PreviewThumbnailProperties';
+    };
     __typename: 'Stream';
   };
   watchParty: null;
@@ -1064,6 +1079,7 @@ export interface SearchResultsPageGame {
   name: string;
   displayName: string;
   boxArtURL: string;
+  templateBoxArtURL: string;
   viewersCount: null | number;
   tags: {
     id: string;
@@ -1081,6 +1097,7 @@ export interface SearchResultsPageRelatedLiveChannel {
     id: string;
     viewersCount: number;
     previewImageURL: string;
+    templatePreviewImageURL: string;
     game: null | {
       name: string;
       id: string;
@@ -1099,9 +1116,14 @@ export interface SearchResultsPageRelatedLiveChannel {
       };
       roles: {
         isPartner: boolean;
+        isParticipatingDJ?: boolean;
         __typename: 'UserRoles';
       };
       __typename: 'User';
+    };
+    previewThumbnailProperties: {
+      blurReason: 'BLUR_NOT_REQUIRED' | 'BLUR_REASON_TYPE_SEXUAL_THEMES';
+      __typename: 'PreviewThumbnailProperties';
     };
     __typename: 'Stream';
   };
@@ -1114,6 +1136,7 @@ export interface SearchResultsPageVideo {
   id: string;
   lengthSeconds: number;
   previewThumbnailURL: string;
+  templatePreviewThumbnailURL: string;
   title: null | string;
   viewCount: number;
   owner: {
@@ -1133,6 +1156,10 @@ export interface SearchResultsPageVideo {
     displayName: string;
     __typename: 'Game';
   };
+  previewThumbnailProperties: {
+    blurReason: 'BLUR_NOT_REQUIRED' | 'BLUR_REASON_TYPE_SEXUAL_THEMES';
+    __typename: 'PreviewThumbnailProperties';
+  };
   __typename: 'Video';
 }
 
@@ -1147,11 +1174,12 @@ export interface SearchResultsPageSearchResultsVariables {
         }[];
     shouldSkipDiscoveryControl?: null | boolean;
   };
-  includeIsDJ?: null | boolean;
+  includeIsDJ: boolean;
 }
 
 export interface SearchResultsPageSearchResultsData {
   searchFor: {
+    banners: null | 'DISCOVERY_PREFERENCE';
     channels: {
       cursor: string;
       edges: {
@@ -1390,7 +1418,7 @@ export interface ShareClipRenderStatusClip {
    */
   language: string;
   isFeatured: boolean;
-  thumbnailURL: string;
+  thumbnailURL: '' | string;
   createdAt: string;
   isPublished: boolean;
   durationSeconds: number;
@@ -1649,7 +1677,7 @@ export interface WatchLivePromptData {
   clip: null | {
     id: string;
     durationSeconds: number;
-    thumbnailURL: string;
+    thumbnailURL: '' | string;
     broadcaster: null | {
       id: string;
       login: string;

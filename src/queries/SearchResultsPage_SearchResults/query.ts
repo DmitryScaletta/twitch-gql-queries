@@ -9,7 +9,7 @@ export const getQuerySearchResultsPageSearchResults = (
     persistedQuery: {
       version: 1,
       sha256Hash:
-        'f4964f83289fa2d6b6454e7d765e32a1f2d1d2b63884ff919c96a3d597a35518',
+        'f6c2575aee4418e8a616e03364d8bcdbf0b10a5c87b59f523569dacc963e8da5',
     },
   },
 });

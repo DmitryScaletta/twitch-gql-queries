@@ -10,13 +10,6 @@ import {
   VideoSchema,
 } from './schema.ts';
 
-import resChannels from './mocks/1-channels.json' with { type: 'json' };
-import resGames from './mocks/2-games.json' with { type: 'json' };
-import resVods from './mocks/3-vods.json' with { type: 'json' };
-import resChannelsWithTag from './mocks/4-channels-with-tag.json' with { type: 'json' };
-import resChannelWithSchedule from './mocks/5-channel-with-schedule.json' with { type: 'json' };
-import resWithRelatedChannels from './mocks/6-with-related-live-channels.json' with { type: 'json' };
-
 describe('SearchResultsPage_SearchResults', () => {
   const validate = createValidate(ResponseSchema, [
     ChannelSchema,
@@ -25,18 +18,11 @@ describe('SearchResultsPage_SearchResults', () => {
     VideoSchema,
   ]);
 
-  test('real request: only required variables', async () => {
-    const responses = await gqlRequest([
-      getQuerySearchResultsPageSearchResults({ query: 'forse' }),
-    ]);
-    responses.map(validate);
-  });
-
   test('real request: all variables', async () => {
     const responses = await gqlRequest([
       getQuerySearchResultsPageSearchResults({
         platform: 'web',
-        query: 'forsen',
+        query: 'action',
         options: {
           targets: null,
           shouldSkipDiscoveryControl: false,
@@ -47,11 +33,51 @@ describe('SearchResultsPage_SearchResults', () => {
     responses.map(validate);
   });
 
+  test('real request: only required variables', async () => {
+    const responses = await gqlRequest([
+      getQuerySearchResultsPageSearchResults({
+        query: 'forsen',
+        includeIsDJ: true,
+      }),
+    ]);
+    responses.map(validate);
+  });
+
+  test('real request: shouldSkipDiscoveryControl true', async () => {
+    const responses = await gqlRequest([
+      getQuerySearchResultsPageSearchResults({
+        platform: 'web',
+        query: 'asmr',
+        options: {
+          targets: null,
+          shouldSkipDiscoveryControl: true,
+        },
+        includeIsDJ: true,
+      }),
+    ]);
+    responses.map(validate);
+  });
+
+  test('real request: includeIsDJ false', async () => {
+    const responses = await gqlRequest([
+      getQuerySearchResultsPageSearchResults({
+        platform: 'web',
+        query: 'action',
+        options: {
+          targets: null,
+          shouldSkipDiscoveryControl: false,
+        },
+        includeIsDJ: false,
+      }),
+    ]);
+    responses.map(validate);
+  });
+
   test('real request: CHANNEL', async () => {
     const responses = await gqlRequest([
       getQuerySearchResultsPageSearchResults({
         platform: 'web',
-        query: 'forsen',
+        query: 'cohhcarnage',
         options: {
           targets: [{ index: 'CHANNEL' }],
           shouldSkipDiscoveryControl: false,
@@ -81,7 +107,7 @@ describe('SearchResultsPage_SearchResults', () => {
     const responses = await gqlRequest([
       getQuerySearchResultsPageSearchResults({
         platform: 'web',
-        query: 'forsen',
+        query: 'monster',
         options: {
           targets: [{ index: 'GAME' }],
           shouldSkipDiscoveryControl: false,
@@ -96,7 +122,7 @@ describe('SearchResultsPage_SearchResults', () => {
     const responses = await gqlRequest([
       getQuerySearchResultsPageSearchResults({
         platform: 'web',
-        query: 'forsen',
+        query: 'gtnh',
         options: {
           targets: [{ index: 'VOD' }],
           shouldSkipDiscoveryControl: false,
@@ -106,12 +132,4 @@ describe('SearchResultsPage_SearchResults', () => {
     ]);
     responses.map(validate);
   });
-
-  test('mock: channels', () => validate(resChannels));
-  test('mock: games', () => validate(resGames));
-  test('mock: vods', () => validate(resVods));
-  test('mock: channels with tag', () => validate(resChannelsWithTag));
-  test('mock: channel with schedule', () => validate(resChannelWithSchedule));
-  test('mock: with relatedLiveChannels', () =>
-    validate(resWithRelatedChannels));
 });
