@@ -121,12 +121,12 @@ export const getQueriesMetadata = async () => {
       const responseFilePath = responsesFilePaths[i];
       const responseFile = responseFiles[i];
       if (!responseFilePath.includes(schemaImport.name)) continue;
+      const parsedPath = path.parse(responseFilePath);
+      if (parsedPath.name.endsWith('!')) continue;
       responseExamples.push({
         summary:
-          path
-            .parse(responseFilePath)
-            .name.replace(/^\d+-?/, '')
-            .replaceAll('-', ' ') || 'default',
+          parsedPath.name.replace(/^\d+-?/, '').replaceAll('-', ' ') ||
+          'default',
         value: JSON.parse(responseFile),
       });
     }
