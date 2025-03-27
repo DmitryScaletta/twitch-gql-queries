@@ -114,7 +114,7 @@ export interface ChannelRootUser {
     displayName: string;
     __typename: 'Team';
   };
-  videos: {
+  videos: null | {
     edges: {
       node: {
         id: string;

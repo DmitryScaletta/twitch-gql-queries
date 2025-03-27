@@ -75,21 +75,24 @@ export const UserSchema = strictObject(
       T.Null(),
       strictObject(pick(schemas.Team, ['id', 'name', 'displayName'])),
     ]),
-    videos: strictObject({
-      edges: T.Array(
-        strictObject({
-          node: strictObject({
-            ...pick(schemas.Video, ['id', 'status']),
-            game: T.Union([
-              T.Null(),
-              strictObject(pick(schemas.Game, ['id', 'displayName'])),
-            ]),
+    videos: T.Union([
+      T.Null(),
+      strictObject({
+        edges: T.Array(
+          strictObject({
+            node: strictObject({
+              ...pick(schemas.Video, ['id', 'status']),
+              game: T.Union([
+                T.Null(),
+                strictObject(pick(schemas.Game, ['id', 'displayName'])),
+              ]),
+            }),
+            __typename: T.Literal('VideoEdge'),
           }),
-          __typename: T.Literal('VideoEdge'),
-        }),
-      ),
-      __typename: T.Literal('VideoConnection'),
-    }),
+        ),
+        __typename: T.Literal('VideoConnection'),
+      }),
+    ]),
   },
   { $id: `${category}User` },
 );

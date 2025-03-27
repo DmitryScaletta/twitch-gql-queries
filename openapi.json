@@ -7283,10 +7283,7 @@
                             "__typename": "Broadcast"
                           },
                           "primaryTeam": null,
-                          "videos": {
-                            "edges": [],
-                            "__typename": "VideoConnection"
-                          },
+                          "videos": null,
                           "__typename": "User"
                         }
                       },
@@ -47504,95 +47501,102 @@
             ]
           },
           "videos": {
-            "additionalProperties": false,
-            "type": "object",
-            "properties": {
-              "edges": {
-                "type": "array",
-                "items": {
-                  "additionalProperties": false,
-                  "type": "object",
-                  "properties": {
-                    "node": {
+            "anyOf": [
+              {
+                "type": "null"
+              },
+              {
+                "additionalProperties": false,
+                "type": "object",
+                "properties": {
+                  "edges": {
+                    "type": "array",
+                    "items": {
                       "additionalProperties": false,
                       "type": "object",
                       "properties": {
-                        "id": {
-                          "pattern": "^[0-9]+$",
-                          "type": "string"
-                        },
-                        "status": {
-                          "anyOf": [
-                            {
-                              "const": "RECORDED",
+                        "node": {
+                          "additionalProperties": false,
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "pattern": "^[0-9]+$",
                               "type": "string"
                             },
-                            {
-                              "const": "RECORDING",
-                              "type": "string"
-                            }
-                          ]
-                        },
-                        "game": {
-                          "anyOf": [
-                            {
-                              "type": "null"
-                            },
-                            {
-                              "additionalProperties": false,
-                              "type": "object",
-                              "properties": {
-                                "id": {
-                                  "pattern": "^[0-9]+$",
+                            "status": {
+                              "anyOf": [
+                                {
+                                  "const": "RECORDED",
                                   "type": "string"
                                 },
-                                "displayName": {
-                                  "type": "string"
-                                },
-                                "__typename": {
-                                  "const": "Game",
+                                {
+                                  "const": "RECORDING",
                                   "type": "string"
                                 }
-                              },
-                              "required": [
-                                "id",
-                                "displayName",
-                                "__typename"
                               ]
+                            },
+                            "game": {
+                              "anyOf": [
+                                {
+                                  "type": "null"
+                                },
+                                {
+                                  "additionalProperties": false,
+                                  "type": "object",
+                                  "properties": {
+                                    "id": {
+                                      "pattern": "^[0-9]+$",
+                                      "type": "string"
+                                    },
+                                    "displayName": {
+                                      "type": "string"
+                                    },
+                                    "__typename": {
+                                      "const": "Game",
+                                      "type": "string"
+                                    }
+                                  },
+                                  "required": [
+                                    "id",
+                                    "displayName",
+                                    "__typename"
+                                  ]
+                                }
+                              ]
+                            },
+                            "__typename": {
+                              "const": "Video",
+                              "type": "string"
                             }
+                          },
+                          "required": [
+                            "id",
+                            "status",
+                            "game",
+                            "__typename"
                           ]
                         },
                         "__typename": {
-                          "const": "Video",
+                          "const": "VideoEdge",
                           "type": "string"
                         }
                       },
                       "required": [
-                        "id",
-                        "status",
-                        "game",
+                        "node",
                         "__typename"
                       ]
-                    },
-                    "__typename": {
-                      "const": "VideoEdge",
-                      "type": "string"
                     }
                   },
-                  "required": [
-                    "node",
-                    "__typename"
-                  ]
-                }
-              },
-              "__typename": {
-                "const": "VideoConnection",
-                "type": "string"
+                  "__typename": {
+                    "const": "VideoConnection",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "edges",
+                  "__typename"
+                ]
               }
-            },
-            "required": [
-              "edges",
-              "__typename"
             ]
           },
           "__typename": {

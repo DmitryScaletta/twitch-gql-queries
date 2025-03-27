@@ -23,7 +23,7 @@
       },
       "lastBroadcast": { "id": null, "game": null, "__typename": "Broadcast" },
       "primaryTeam": null,
-      "videos": { "edges": [], "__typename": "VideoConnection" },
+      "videos": null,
       "__typename": "User"
     }
   },
