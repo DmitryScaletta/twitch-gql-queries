@@ -54361,7 +54361,15 @@
                 "type": "string"
               },
               {
+                "const": "embed",
+                "type": "string"
+              },
+              {
                 "const": "site",
+                "type": "string"
+              },
+              {
+                "const": "frontpage",
                 "type": "string"
               },
               {

@@ -19,7 +19,9 @@ export const VariablesSchema = strictObject(
     vodID: T.Union([T.Literal(''), T.String()]),
     playerType: T.Union([
       T.Literal(''),
+      T.Literal('embed'),
       T.Literal('site'),
+      T.Literal('frontpage'),
       T.Literal('channel_home_carousel'),
     ]),
     platform: T.Union([T.Literal('web'), T.String()]),

@@ -950,7 +950,7 @@ export interface PlaybackAccessTokenVariables {
   login: '' | string;
   isVod: boolean;
   vodID: '' | string;
-  playerType: '' | 'site' | 'channel_home_carousel';
+  playerType: '' | 'embed' | 'site' | 'frontpage' | 'channel_home_carousel';
   platform: 'web' | string;
 }
 
