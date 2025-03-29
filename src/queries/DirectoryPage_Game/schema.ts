@@ -80,9 +80,12 @@ export const StreamSchema = strictObject(
     freeformTags: T.Array(
       strictObject(pick(schemas.FreeformTag, ['id', 'name'])),
     ),
-    game: strictObject(
-      pick(schemas.Game, ['id', 'boxArtURL', 'name', 'displayName', 'slug']),
-    ),
+    game: T.Union([
+      T.Null(),
+      strictObject(
+        pick(schemas.Game, ['id', 'boxArtURL', 'name', 'displayName', 'slug']),
+      ),
+    ]),
     previewThumbnailProperties: strictObject(
       pick(schemas.PreviewThumbnailProperties, ['blurReason']),
     ),

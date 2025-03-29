@@ -637,7 +637,7 @@ export interface DirectoryPageGameStream {
     name: string;
     __typename: 'FreeformTag';
   }[];
-  game: {
+  game: null | {
     id: string;
     boxArtURL: string;
     name: string;

@@ -51643,38 +51643,45 @@
             }
           },
           "game": {
-            "additionalProperties": false,
-            "type": "object",
-            "properties": {
-              "id": {
-                "pattern": "^[0-9]+$",
-                "type": "string"
+            "anyOf": [
+              {
+                "type": "null"
               },
-              "boxArtURL": {
-                "format": "uri",
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "displayName": {
-                "type": "string"
-              },
-              "slug": {
-                "type": "string"
-              },
-              "__typename": {
-                "const": "Game",
-                "type": "string"
+              {
+                "additionalProperties": false,
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "pattern": "^[0-9]+$",
+                    "type": "string"
+                  },
+                  "boxArtURL": {
+                    "format": "uri",
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "displayName": {
+                    "type": "string"
+                  },
+                  "slug": {
+                    "type": "string"
+                  },
+                  "__typename": {
+                    "const": "Game",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "id",
+                  "boxArtURL",
+                  "name",
+                  "displayName",
+                  "slug",
+                  "__typename"
+                ]
               }
-            },
-            "required": [
-              "id",
-              "boxArtURL",
-              "name",
-              "displayName",
-              "slug",
-              "__typename"
             ]
           },
           "previewThumbnailProperties": {
