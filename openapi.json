@@ -55310,59 +55310,11 @@
             "type": "string"
           },
           "stream": {
-            "additionalProperties": false,
-            "type": "object",
-            "properties": {
-              "id": {
-                "pattern": "^[0-9]+$",
-                "type": "string"
+            "anyOf": [
+              {
+                "type": "null"
               },
-              "viewersCount": {
-                "minimum": 0,
-                "type": "integer"
-              },
-              "previewImageURL": {
-                "format": "uri",
-                "type": "string"
-              },
-              "templatePreviewImageURL": {
-                "format": "uri",
-                "type": "string"
-              },
-              "game": {
-                "anyOf": [
-                  {
-                    "type": "null"
-                  },
-                  {
-                    "additionalProperties": false,
-                    "type": "object",
-                    "properties": {
-                      "name": {
-                        "type": "string"
-                      },
-                      "id": {
-                        "pattern": "^[0-9]+$",
-                        "type": "string"
-                      },
-                      "slug": {
-                        "type": "string"
-                      },
-                      "__typename": {
-                        "const": "Game",
-                        "type": "string"
-                      }
-                    },
-                    "required": [
-                      "name",
-                      "id",
-                      "slug",
-                      "__typename"
-                    ]
-                  }
-                ]
-              },
-              "broadcaster": {
+              {
                 "additionalProperties": false,
                 "type": "object",
                 "properties": {
@@ -55370,24 +55322,52 @@
                     "pattern": "^[0-9]+$",
                     "type": "string"
                   },
-                  "primaryColorHex": {
+                  "viewersCount": {
+                    "minimum": 0,
+                    "type": "integer"
+                  },
+                  "previewImageURL": {
+                    "format": "uri",
+                    "type": "string"
+                  },
+                  "templatePreviewImageURL": {
+                    "format": "uri",
+                    "type": "string"
+                  },
+                  "game": {
                     "anyOf": [
                       {
                         "type": "null"
                       },
                       {
-                        "pattern": "^[0-9a-fA-F]{6}$",
-                        "type": "string"
+                        "additionalProperties": false,
+                        "type": "object",
+                        "properties": {
+                          "name": {
+                            "type": "string"
+                          },
+                          "id": {
+                            "pattern": "^[0-9]+$",
+                            "type": "string"
+                          },
+                          "slug": {
+                            "type": "string"
+                          },
+                          "__typename": {
+                            "const": "Game",
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "name",
+                          "id",
+                          "slug",
+                          "__typename"
+                        ]
                       }
                     ]
                   },
-                  "login": {
-                    "type": "string"
-                  },
-                  "displayName": {
-                    "type": "string"
-                  },
-                  "broadcastSettings": {
+                  "broadcaster": {
                     "additionalProperties": false,
                     "type": "object",
                     "properties": {
@@ -55395,95 +55375,122 @@
                         "pattern": "^[0-9]+$",
                         "type": "string"
                       },
-                      "title": {
+                      "primaryColorHex": {
+                        "anyOf": [
+                          {
+                            "type": "null"
+                          },
+                          {
+                            "pattern": "^[0-9a-fA-F]{6}$",
+                            "type": "string"
+                          }
+                        ]
+                      },
+                      "login": {
                         "type": "string"
                       },
+                      "displayName": {
+                        "type": "string"
+                      },
+                      "broadcastSettings": {
+                        "additionalProperties": false,
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "pattern": "^[0-9]+$",
+                            "type": "string"
+                          },
+                          "title": {
+                            "type": "string"
+                          },
+                          "__typename": {
+                            "const": "BroadcastSettings",
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "id",
+                          "title",
+                          "__typename"
+                        ]
+                      },
+                      "roles": {
+                        "additionalProperties": false,
+                        "type": "object",
+                        "properties": {
+                          "isPartner": {
+                            "type": "boolean"
+                          },
+                          "isParticipatingDJ": {
+                            "type": "boolean"
+                          },
+                          "__typename": {
+                            "const": "UserRoles",
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "isPartner",
+                          "__typename"
+                        ]
+                      },
                       "__typename": {
-                        "const": "BroadcastSettings",
+                        "const": "User",
                         "type": "string"
                       }
                     },
                     "required": [
                       "id",
-                      "title",
+                      "primaryColorHex",
+                      "login",
+                      "displayName",
+                      "broadcastSettings",
+                      "roles",
                       "__typename"
                     ]
                   },
-                  "roles": {
+                  "previewThumbnailProperties": {
                     "additionalProperties": false,
                     "type": "object",
                     "properties": {
-                      "isPartner": {
-                        "type": "boolean"
-                      },
-                      "isParticipatingDJ": {
-                        "type": "boolean"
+                      "blurReason": {
+                        "anyOf": [
+                          {
+                            "const": "BLUR_NOT_REQUIRED",
+                            "type": "string"
+                          },
+                          {
+                            "const": "BLUR_REASON_TYPE_SEXUAL_THEMES",
+                            "type": "string"
+                          }
+                        ]
                       },
                       "__typename": {
-                        "const": "UserRoles",
+                        "const": "PreviewThumbnailProperties",
                         "type": "string"
                       }
                     },
                     "required": [
-                      "isPartner",
+                      "blurReason",
                       "__typename"
                     ]
                   },
                   "__typename": {
-                    "const": "User",
+                    "const": "Stream",
                     "type": "string"
                   }
                 },
                 "required": [
                   "id",
-                  "primaryColorHex",
-                  "login",
-                  "displayName",
-                  "broadcastSettings",
-                  "roles",
+                  "viewersCount",
+                  "previewImageURL",
+                  "templatePreviewImageURL",
+                  "game",
+                  "broadcaster",
+                  "previewThumbnailProperties",
                   "__typename"
                 ]
-              },
-              "previewThumbnailProperties": {
-                "additionalProperties": false,
-                "type": "object",
-                "properties": {
-                  "blurReason": {
-                    "anyOf": [
-                      {
-                        "const": "BLUR_NOT_REQUIRED",
-                        "type": "string"
-                      },
-                      {
-                        "const": "BLUR_REASON_TYPE_SEXUAL_THEMES",
-                        "type": "string"
-                      }
-                    ]
-                  },
-                  "__typename": {
-                    "const": "PreviewThumbnailProperties",
-                    "type": "string"
-                  }
-                },
-                "required": [
-                  "blurReason",
-                  "__typename"
-                ]
-              },
-              "__typename": {
-                "const": "Stream",
-                "type": "string"
               }
-            },
-            "required": [
-              "id",
-              "viewersCount",
-              "previewImageURL",
-              "templatePreviewImageURL",
-              "game",
-              "broadcaster",
-              "previewThumbnailProperties",
-              "__typename"
             ]
           },
           "watchParty": {

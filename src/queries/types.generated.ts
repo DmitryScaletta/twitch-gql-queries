@@ -1093,7 +1093,7 @@ export interface SearchResultsPageGame {
 
 export interface SearchResultsPageRelatedLiveChannel {
   id: string;
-  stream: {
+  stream: null | {
     id: string;
     viewersCount: number;
     previewImageURL: string;

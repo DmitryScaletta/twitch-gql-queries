@@ -168,39 +168,36 @@ export const ChannelSchema = strictObject(
   { $id: `${category}Channel` },
 );
 
+const RelatedLiveChannelStreamSchema = strictObject({
+  ...pick(schemas.Stream, [
+    'id',
+    'viewersCount',
+    'previewImageURL',
+    'templatePreviewImageURL',
+  ]),
+  game: T.Union([
+    T.Null(),
+    strictObject(pick(schemas.Game, ['name', 'id', 'slug'])),
+  ]),
+  broadcaster: strictObject({
+    ...pick(schemas.User, ['id', 'primaryColorHex', 'login', 'displayName']),
+    broadcastSettings: strictObject(
+      pick(schemas.BroadcastSettings, ['id', 'title']),
+    ),
+    roles: strictObject({
+      ...pick(schemas.UserRoles, ['isPartner']),
+      isParticipatingDJ: T.Optional(T.Boolean()),
+    }),
+  }),
+  previewThumbnailProperties: strictObject(
+    pick(schemas.PreviewThumbnailProperties, ['blurReason']),
+  ),
+});
+
 export const RelatedLiveChannelSchema = strictObject(
   {
     ...pick(schemas.User, ['id']),
-    stream: strictObject({
-      ...pick(schemas.Stream, [
-        'id',
-        'viewersCount',
-        'previewImageURL',
-        'templatePreviewImageURL',
-      ]),
-      game: T.Union([
-        T.Null(),
-        strictObject(pick(schemas.Game, ['name', 'id', 'slug'])),
-      ]),
-      broadcaster: strictObject({
-        ...pick(schemas.User, [
-          'id',
-          'primaryColorHex',
-          'login',
-          'displayName',
-        ]),
-        broadcastSettings: strictObject(
-          pick(schemas.BroadcastSettings, ['id', 'title']),
-        ),
-        roles: strictObject({
-          ...pick(schemas.UserRoles, ['isPartner']),
-          isParticipatingDJ: T.Optional(T.Boolean()),
-        }),
-      }),
-      previewThumbnailProperties: strictObject(
-        pick(schemas.PreviewThumbnailProperties, ['blurReason']),
-      ),
-    }),
+    stream: T.Union([T.Null(), RelatedLiveChannelStreamSchema]),
     watchParty: WatchPartySchema,
   },
   { $id: `${category}RelatedLiveChannel` },
