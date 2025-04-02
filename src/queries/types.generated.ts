@@ -1004,7 +1004,7 @@ export interface SearchResultsPageChannel {
     __typename: 'Channel';
   };
   self: null;
-  latestVideo: {
+  latestVideo: null | {
     edges: {
       node: {
         id: string;

@@ -95,26 +95,29 @@ export const ChannelSchema = strictObject(
       ]),
     }),
     self: T.Union([T.Null()]),
-    latestVideo: strictObject({
-      edges: T.Array(
-        strictObject({
-          node: strictObject({
-            ...pick(schemas.Video, [
-              'id',
-              'lengthSeconds',
-              'title',
-              'previewThumbnailURL',
-              'templatePreviewThumbnailURL',
-            ]),
-            previewThumbnailProperties: strictObject(
-              pick(schemas.PreviewThumbnailProperties, ['blurReason']),
-            ),
+    latestVideo: T.Union([
+      T.Null(),
+      strictObject({
+        edges: T.Array(
+          strictObject({
+            node: strictObject({
+              ...pick(schemas.Video, [
+                'id',
+                'lengthSeconds',
+                'title',
+                'previewThumbnailURL',
+                'templatePreviewThumbnailURL',
+              ]),
+              previewThumbnailProperties: strictObject(
+                pick(schemas.PreviewThumbnailProperties, ['blurReason']),
+              ),
+            }),
+            __typename: T.Literal('VideoEdge'),
           }),
-          __typename: T.Literal('VideoEdge'),
-        }),
-      ),
-      __typename: T.Literal('VideoConnection'),
-    }),
+        ),
+        __typename: T.Literal('VideoConnection'),
+      }),
+    ]),
     topClip: strictObject({
       edges: T.Array(
         strictObject({

@@ -54827,105 +54827,112 @@
             "type": "null"
           },
           "latestVideo": {
-            "additionalProperties": false,
-            "type": "object",
-            "properties": {
-              "edges": {
-                "type": "array",
-                "items": {
-                  "additionalProperties": false,
-                  "type": "object",
-                  "properties": {
-                    "node": {
+            "anyOf": [
+              {
+                "type": "null"
+              },
+              {
+                "additionalProperties": false,
+                "type": "object",
+                "properties": {
+                  "edges": {
+                    "type": "array",
+                    "items": {
                       "additionalProperties": false,
                       "type": "object",
                       "properties": {
-                        "id": {
-                          "pattern": "^[0-9]+$",
-                          "type": "string"
-                        },
-                        "lengthSeconds": {
-                          "minimum": 0,
-                          "type": "integer"
-                        },
-                        "title": {
-                          "anyOf": [
-                            {
-                              "type": "null"
-                            },
-                            {
-                              "type": "string"
-                            }
-                          ]
-                        },
-                        "previewThumbnailURL": {
-                          "format": "uri",
-                          "type": "string"
-                        },
-                        "templatePreviewThumbnailURL": {
-                          "format": "uri",
-                          "type": "string"
-                        },
-                        "previewThumbnailProperties": {
+                        "node": {
                           "additionalProperties": false,
                           "type": "object",
                           "properties": {
-                            "blurReason": {
+                            "id": {
+                              "pattern": "^[0-9]+$",
+                              "type": "string"
+                            },
+                            "lengthSeconds": {
+                              "minimum": 0,
+                              "type": "integer"
+                            },
+                            "title": {
                               "anyOf": [
                                 {
-                                  "const": "BLUR_NOT_REQUIRED",
-                                  "type": "string"
+                                  "type": "null"
                                 },
                                 {
-                                  "const": "BLUR_REASON_TYPE_SEXUAL_THEMES",
                                   "type": "string"
                                 }
                               ]
                             },
+                            "previewThumbnailURL": {
+                              "format": "uri",
+                              "type": "string"
+                            },
+                            "templatePreviewThumbnailURL": {
+                              "format": "uri",
+                              "type": "string"
+                            },
+                            "previewThumbnailProperties": {
+                              "additionalProperties": false,
+                              "type": "object",
+                              "properties": {
+                                "blurReason": {
+                                  "anyOf": [
+                                    {
+                                      "const": "BLUR_NOT_REQUIRED",
+                                      "type": "string"
+                                    },
+                                    {
+                                      "const": "BLUR_REASON_TYPE_SEXUAL_THEMES",
+                                      "type": "string"
+                                    }
+                                  ]
+                                },
+                                "__typename": {
+                                  "const": "PreviewThumbnailProperties",
+                                  "type": "string"
+                                }
+                              },
+                              "required": [
+                                "blurReason",
+                                "__typename"
+                              ]
+                            },
                             "__typename": {
-                              "const": "PreviewThumbnailProperties",
+                              "const": "Video",
                               "type": "string"
                             }
                           },
                           "required": [
-                            "blurReason",
+                            "id",
+                            "lengthSeconds",
+                            "title",
+                            "previewThumbnailURL",
+                            "templatePreviewThumbnailURL",
+                            "previewThumbnailProperties",
                             "__typename"
                           ]
                         },
                         "__typename": {
-                          "const": "Video",
+                          "const": "VideoEdge",
                           "type": "string"
                         }
                       },
                       "required": [
-                        "id",
-                        "lengthSeconds",
-                        "title",
-                        "previewThumbnailURL",
-                        "templatePreviewThumbnailURL",
-                        "previewThumbnailProperties",
+                        "node",
                         "__typename"
                       ]
-                    },
-                    "__typename": {
-                      "const": "VideoEdge",
-                      "type": "string"
                     }
                   },
-                  "required": [
-                    "node",
-                    "__typename"
-                  ]
-                }
-              },
-              "__typename": {
-                "const": "VideoConnection",
-                "type": "string"
+                  "__typename": {
+                    "const": "VideoConnection",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "edges",
+                  "__typename"
+                ]
               }
-            },
-            "required": [
-              "edges",
-              "__typename"
             ]
           },
           "topClip": {
