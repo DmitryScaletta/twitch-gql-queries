@@ -34,8 +34,8 @@
     "swagger": "node --no-warnings=ExperimentalWarning scripts/swagger.ts",
     "deploy": "pnpm swagger && surge docs twitch-gql-swagger.surge.sh",
     "serve": "pnpm dlx static-server docs",
-    "test": "node --no-warnings=ExperimentalWarning --test",
-    "test:watch": "node --no-warnings=ExperimentalWarning --test --watch",
+    "test": "node --no-warnings=ExperimentalWarning --test **/*.test.ts",
+    "test:watch": "node --no-warnings=ExperimentalWarning --test --watch **/*.test.ts",
     "test:types": "pnpm tsc --noEmit"
   },
   "devDependencies": {

@@ -26,6 +26,6 @@ jobs:
       - name: Install dependencies
         run: pnpm i --frozen-lockfile
       - name: Run tests
-        run: pnpm test **/*.test.ts
+        run: pnpm test
       - name: Run type tests
         run: pnpm test:types
