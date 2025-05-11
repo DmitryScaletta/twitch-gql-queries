@@ -99,7 +99,7 @@ export const Video = {
   animatedPreviewURL: T.String({ format: 'uri' }),
   status: T.Union([T.Literal('RECORDED'), T.Literal('RECORDING')]),
   createdAt: T.String({ format: 'date-time' }),
-  publishedAt: T.String({ format: 'date-time' }),
+  publishedAt: T.Union([T.Null(), T.String({ format: 'date-time' })]),
   __typename: T.Literal('Video'),
 } satisfies Properties;
 

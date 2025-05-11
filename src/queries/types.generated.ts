@@ -255,7 +255,7 @@ export interface ChannelVideoShelvesQueryVideo {
   id: string;
   lengthSeconds: number;
   previewThumbnailURL: string;
-  publishedAt: string;
+  publishedAt: null | string;
   title: null | string;
   viewCount: number;
   game: null | {
@@ -700,7 +700,7 @@ export interface FilterableVideoTowerVideosVideo {
   id: string;
   lengthSeconds: number;
   previewThumbnailURL: string;
-  publishedAt: string;
+  publishedAt: null | string;
   title: null | string;
   viewCount: number;
   game: null | {
@@ -1621,7 +1621,7 @@ export interface VideoMetadataVideo {
   previewThumbnailURL: string;
   createdAt: string;
   viewCount: number;
-  publishedAt: string;
+  publishedAt: null | string;
   lengthSeconds: number;
   broadcastType: 'ARCHIVE' | 'HIGHLIGHT' | 'UPLOAD';
   owner: {
