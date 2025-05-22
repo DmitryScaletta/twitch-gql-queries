@@ -34,7 +34,7 @@ describe('getRawQuery', () => {
     const responses = await gqlRequest([
       getRawQuery({
         query,
-        variables: { videoId: '1622426365' },
+        variables: { videoId: '1816688726' },
       }),
     ]);
     responses.map(createValidate(getResponseSchema(DataSchema)));
