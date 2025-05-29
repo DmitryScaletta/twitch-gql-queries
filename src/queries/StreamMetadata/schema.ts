@@ -12,27 +12,25 @@ export const displayName = name;
 export const tags = ['Streams'];
 
 export const VariablesSchema = strictObject(
-  { channelLogin: T.String() },
+  {
+    channelLogin: T.String(),
+    includeIsDJ: T.Boolean(),
+  },
   { $id: `${displayName}Variables` },
 );
 
 export const UserSchema = strictObject(
   {
-    ...pick(schemas.User, [
-      'id',
-      'primaryColorHex',
-      'isPartner',
-      'profileImageURL',
-    ]),
+    ...pick(schemas.User, ['id', 'primaryColorHex', 'profileImageURL']),
+    roles: strictObject({
+      ...pick(schemas.UserRoles, ['isPartner']),
+      isParticipatingDJ: T.Optional(T.Boolean()),
+    }),
     primaryTeam: T.Union([
       T.Null(),
       strictObject(pick(schemas.Team, ['id', 'name', 'displayName'])),
     ]),
-    squadStream: T.Union([T.Null()]),
-    channel: strictObject({
-      ...pick(schemas.Channel, ['id']),
-      chanlets: T.Union([T.Null()]),
-    }),
+    channel: strictObject(pick(schemas.Channel, ['id'])),
     lastBroadcast: strictObject(
       {
         id: T.Union([T.Null(), T.String({ pattern: '^[0-9]+$' })]),

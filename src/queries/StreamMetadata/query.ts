@@ -7,7 +7,7 @@ export const getQueryStreamMetadata = (variables: StreamMetadataVariables) => ({
     persistedQuery: {
       version: 1,
       sha256Hash:
-        '252a46e3f5b1ddc431b396e688331d8d020daec27079893ac7d4e6db759a7402',
+        'b57f9b910f8cd1a4659d894fe7550ccc81ec9052c01e438b290fd66a040b9b93',
     },
   },
 });

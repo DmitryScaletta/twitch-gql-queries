@@ -3,11 +3,7 @@
     "user": {
       "id": "71092938",
       "primaryColorHex": "FFBF00",
-      "roles": {
-        "isPartner": true,
-        "isParticipatingDJ": false,
-        "__typename": "UserRoles"
-      },
+      "roles": { "isPartner": true, "__typename": "UserRoles" },
       "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/xqc-profile_image-9298dca608632101-70x70.jpeg",
       "primaryTeam": null,
       "channel": { "id": "71092938", "__typename": "Channel" },
@@ -21,8 +17,8 @@
     }
   },
   "extensions": {
-    "durationMilliseconds": 58,
+    "durationMilliseconds": 40,
     "operationName": "StreamMetadata",
-    "requestID": "01JWENQ5W18DEWBF42RE0RDA8G"
+    "requestID": "01JWENTWM00SQ938DDD9ES12FD"
   }
 }

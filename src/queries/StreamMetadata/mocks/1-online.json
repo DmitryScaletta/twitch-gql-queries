@@ -1,35 +1,34 @@
 {
   "data": {
     "user": {
-      "id": "26490481",
-      "primaryColorHex": "2A292E",
-      "isPartner": true,
-      "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/99aa4739-21d6-40af-86ae-4b4d3457fce4-profile_image-70x70.png",
+      "id": "22484632",
+      "primaryColorHex": null,
+      "roles": {
+        "isPartner": true,
+        "isParticipatingDJ": false,
+        "__typename": "UserRoles"
+      },
+      "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/forsen-profile_image-48b43e1e4f54b5c8-70x70.png",
       "primaryTeam": {
-        "id": "2570",
-        "name": "1gsquad",
-        "displayName": "1G SQUAD",
+        "id": "8977",
+        "name": "ggtalentgroup",
+        "displayName": "GG Talent Group",
         "__typename": "Team"
       },
-      "squadStream": null,
-      "channel": {
-        "id": "26490481",
-        "chanlets": null,
-        "__typename": "Channel"
-      },
+      "channel": { "id": "22484632", "__typename": "Channel" },
       "lastBroadcast": {
-        "id": "318597135869",
-        "title": "wow raid @summit1g !starforge @starforgesystems",
+        "id": "324949817341",
+        "title": "Games and shit!",
         "__typename": "Broadcast"
       },
       "stream": {
-        "id": "318597135869",
+        "id": "324949817341",
         "type": "live",
-        "createdAt": "2025-03-10T14:51:04Z",
+        "createdAt": "2025-05-29T13:59:47Z",
         "game": {
-          "id": "18122",
-          "slug": "world-of-warcraft",
-          "name": "World of Warcraft",
+          "id": "1418178189",
+          "slug": "guilty-as-sock",
+          "name": "Guilty as Sock!",
           "__typename": "Game"
         },
         "__typename": "Stream"
@@ -38,8 +37,8 @@
     }
   },
   "extensions": {
-    "durationMilliseconds": 60,
+    "durationMilliseconds": 59,
     "operationName": "StreamMetadata",
-    "requestID": "01JP0Q7P3W10ZJG8KBC82CEGB5"
+    "requestID": "01JWENNXW9BCAQRGXHY8RX7NSX"
   }
 }

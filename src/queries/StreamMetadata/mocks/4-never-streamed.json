@@ -3,23 +3,22 @@
     "user": {
       "id": "120612352",
       "primaryColorHex": null,
-      "isPartner": false,
+      "roles": {
+        "isPartner": false,
+        "isParticipatingDJ": false,
+        "__typename": "UserRoles"
+      },
       "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/xqcbot-profile_image-ce125e5caa9ae73b-70x70.png",
       "primaryTeam": null,
-      "squadStream": null,
-      "channel": {
-        "id": "120612352",
-        "chanlets": null,
-        "__typename": "Channel"
-      },
+      "channel": { "id": "120612352", "__typename": "Channel" },
       "lastBroadcast": { "id": null, "title": null, "__typename": "Broadcast" },
       "stream": null,
       "__typename": "User"
     }
   },
   "extensions": {
-    "durationMilliseconds": 55,
+    "durationMilliseconds": 63,
     "operationName": "StreamMetadata",
-    "requestID": "01JP0TBTTNVXFZC29CR712B9R1"
+    "requestID": "01JWENRNVH0A2QWQHH94TFXBYC"
   }
 }

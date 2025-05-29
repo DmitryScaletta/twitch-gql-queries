@@ -1486,18 +1486,20 @@ export interface ShareClipRenderStatusData {
 export interface StreamMetadataUser {
   id: string;
   primaryColorHex: null | string;
-  isPartner: boolean;
   profileImageURL: string;
+  roles: {
+    isPartner: boolean;
+    isParticipatingDJ?: boolean;
+    __typename: 'UserRoles';
+  };
   primaryTeam: null | {
     id: string;
     name: string;
     displayName: string;
     __typename: 'Team';
   };
-  squadStream: null;
   channel: {
     id: string;
-    chanlets: null;
     __typename: 'Channel';
   };
   /**
@@ -1525,6 +1527,7 @@ export interface StreamMetadataUser {
 
 export interface StreamMetadataVariables {
   channelLogin: string;
+  includeIsDJ: boolean;
 }
 
 export interface StreamMetadataData {
