@@ -45572,12 +45572,28 @@
                   "value": {
                     "operationName": "StreamMetadata",
                     "variables": {
-                      "channelLogin": "xqc"
+                      "channelLogin": "xqc",
+                      "includeIsDJ": true
                     },
                     "extensions": {
                       "persistedQuery": {
                         "version": 1,
-                        "sha256Hash": "252a46e3f5b1ddc431b396e688331d8d020daec27079893ac7d4e6db759a7402"
+                        "sha256Hash": "b57f9b910f8cd1a4659d894fe7550ccc81ec9052c01e438b290fd66a040b9b93"
+                      }
+                    }
+                  }
+                },
+                "includeIsDJ: false": {
+                  "value": {
+                    "operationName": "StreamMetadata",
+                    "variables": {
+                      "channelLogin": "xqc",
+                      "includeIsDJ": false
+                    },
+                    "extensions": {
+                      "persistedQuery": {
+                        "version": 1,
+                        "sha256Hash": "b57f9b910f8cd1a4659d894fe7550ccc81ec9052c01e438b290fd66a040b9b93"
                       }
                     }
                   }
@@ -45586,12 +45602,13 @@
                   "value": {
                     "operationName": "StreamMetadata",
                     "variables": {
-                      "channelLogin": "xqcbot"
+                      "channelLogin": "xqcbot",
+                      "includeIsDJ": true
                     },
                     "extensions": {
                       "persistedQuery": {
                         "version": 1,
-                        "sha256Hash": "252a46e3f5b1ddc431b396e688331d8d020daec27079893ac7d4e6db759a7402"
+                        "sha256Hash": "b57f9b910f8cd1a4659d894fe7550ccc81ec9052c01e438b290fd66a040b9b93"
                       }
                     }
                   }
@@ -45613,35 +45630,37 @@
                     "value": {
                       "data": {
                         "user": {
-                          "id": "26490481",
-                          "primaryColorHex": "2A292E",
-                          "isPartner": true,
-                          "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/99aa4739-21d6-40af-86ae-4b4d3457fce4-profile_image-70x70.png",
+                          "id": "22484632",
+                          "primaryColorHex": null,
+                          "roles": {
+                            "isPartner": true,
+                            "isParticipatingDJ": false,
+                            "__typename": "UserRoles"
+                          },
+                          "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/forsen-profile_image-48b43e1e4f54b5c8-70x70.png",
                           "primaryTeam": {
-                            "id": "2570",
-                            "name": "1gsquad",
-                            "displayName": "1G SQUAD",
+                            "id": "8977",
+                            "name": "ggtalentgroup",
+                            "displayName": "GG Talent Group",
                             "__typename": "Team"
                           },
-                          "squadStream": null,
                           "channel": {
-                            "id": "26490481",
-                            "chanlets": null,
+                            "id": "22484632",
                             "__typename": "Channel"
                           },
                           "lastBroadcast": {
-                            "id": "318597135869",
-                            "title": "wow raid @summit1g !starforge @starforgesystems",
+                            "id": "324949817341",
+                            "title": "Games and shit!",
                             "__typename": "Broadcast"
                           },
                           "stream": {
-                            "id": "318597135869",
+                            "id": "324949817341",
                             "type": "live",
-                            "createdAt": "2025-03-10T14:51:04Z",
+                            "createdAt": "2025-05-29T13:59:47Z",
                             "game": {
-                              "id": "18122",
-                              "slug": "world-of-warcraft",
-                              "name": "World of Warcraft",
+                              "id": "1418178189",
+                              "slug": "guilty-as-sock",
+                              "name": "Guilty as Sock!",
                               "__typename": "Game"
                             },
                             "__typename": "Stream"
@@ -45650,9 +45669,9 @@
                         }
                       },
                       "extensions": {
-                        "durationMilliseconds": 60,
+                        "durationMilliseconds": 59,
                         "operationName": "StreamMetadata",
-                        "requestID": "01JP0Q7P3W10ZJG8KBC82CEGB5"
+                        "requestID": "01JWENNXW9BCAQRGXHY8RX7NSX"
                       }
                     }
                   },
@@ -45662,18 +45681,52 @@
                         "user": {
                           "id": "71092938",
                           "primaryColorHex": "FFBF00",
-                          "isPartner": true,
+                          "roles": {
+                            "isPartner": true,
+                            "isParticipatingDJ": false,
+                            "__typename": "UserRoles"
+                          },
                           "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/xqc-profile_image-9298dca608632101-70x70.jpeg",
                           "primaryTeam": null,
-                          "squadStream": null,
                           "channel": {
                             "id": "71092938",
-                            "chanlets": null,
                             "__typename": "Channel"
                           },
                           "lastBroadcast": {
-                            "id": "317349374204",
-                            "title": "🇬🇧 LONDON 🇬🇧 IRL 🇬🇧 NO PLANS 🇬🇧 GET IN 🇬🇧 OI 🇬🇧 BRUV 🇬🇧 INNIT 🇬🇧 WITH @Stableronaldo",
+                            "id": "324829321853",
+                            "title": "not live yet",
+                            "__typename": "Broadcast"
+                          },
+                          "stream": null,
+                          "__typename": "User"
+                        }
+                      },
+                      "extensions": {
+                        "durationMilliseconds": 58,
+                        "operationName": "StreamMetadata",
+                        "requestID": "01JWENQ5W18DEWBF42RE0RDA8G"
+                      }
+                    }
+                  },
+                  "include is dj false": {
+                    "value": {
+                      "data": {
+                        "user": {
+                          "id": "71092938",
+                          "primaryColorHex": "FFBF00",
+                          "roles": {
+                            "isPartner": true,
+                            "__typename": "UserRoles"
+                          },
+                          "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/xqc-profile_image-9298dca608632101-70x70.jpeg",
+                          "primaryTeam": null,
+                          "channel": {
+                            "id": "71092938",
+                            "__typename": "Channel"
+                          },
+                          "lastBroadcast": {
+                            "id": "324829321853",
+                            "title": "not live yet",
                             "__typename": "Broadcast"
                           },
                           "stream": null,
@@ -45683,7 +45736,7 @@
                       "extensions": {
                         "durationMilliseconds": 40,
                         "operationName": "StreamMetadata",
-                        "requestID": "01JP0Q96VVD7BHT8CTKYKMHHAE"
+                        "requestID": "01JWENTWM00SQ938DDD9ES12FD"
                       }
                     }
                   },
@@ -45693,13 +45746,15 @@
                         "user": {
                           "id": "120612352",
                           "primaryColorHex": null,
-                          "isPartner": false,
+                          "roles": {
+                            "isPartner": false,
+                            "isParticipatingDJ": false,
+                            "__typename": "UserRoles"
+                          },
                           "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/xqcbot-profile_image-ce125e5caa9ae73b-70x70.png",
                           "primaryTeam": null,
-                          "squadStream": null,
                           "channel": {
                             "id": "120612352",
-                            "chanlets": null,
                             "__typename": "Channel"
                           },
                           "lastBroadcast": {
@@ -45712,9 +45767,9 @@
                         }
                       },
                       "extensions": {
-                        "durationMilliseconds": 55,
+                        "durationMilliseconds": 63,
                         "operationName": "StreamMetadata",
-                        "requestID": "01JP0TBTTNVXFZC29CR712B9R1"
+                        "requestID": "01JWENRNVH0A2QWQHH94TFXBYC"
                       }
                     }
                   }
@@ -58216,12 +58271,29 @@
               }
             ]
           },
-          "isPartner": {
-            "type": "boolean"
-          },
           "profileImageURL": {
             "format": "uri",
             "type": "string"
+          },
+          "roles": {
+            "additionalProperties": false,
+            "type": "object",
+            "properties": {
+              "isPartner": {
+                "type": "boolean"
+              },
+              "isParticipatingDJ": {
+                "type": "boolean"
+              },
+              "__typename": {
+                "const": "UserRoles",
+                "type": "string"
+              }
+            },
+            "required": [
+              "isPartner",
+              "__typename"
+            ]
           },
           "primaryTeam": {
             "anyOf": [
@@ -58256,9 +58328,6 @@
               }
             ]
           },
-          "squadStream": {
-            "type": "null"
-          },
           "channel": {
             "additionalProperties": false,
             "type": "object",
@@ -58267,9 +58336,6 @@
                 "pattern": "^[0-9]+$",
                 "type": "string"
               },
-              "chanlets": {
-                "type": "null"
-              },
               "__typename": {
                 "const": "Channel",
                 "type": "string"
@@ -58277,7 +58343,6 @@
             },
             "required": [
               "id",
-              "chanlets",
               "__typename"
             ]
           },
@@ -58395,10 +58460,9 @@
         "required": [
           "id",
           "primaryColorHex",
-          "isPartner",
           "profileImageURL",
+          "roles",
           "primaryTeam",
-          "squadStream",
           "channel",
           "lastBroadcast",
           "stream",
@@ -58412,10 +58476,14 @@
         "properties": {
           "channelLogin": {
             "type": "string"
+          },
+          "includeIsDJ": {
+            "type": "boolean"
           }
         },
         "required": [
-          "channelLogin"
+          "channelLogin",
+          "includeIsDJ"
         ]
       },
       "StreamMetadataRequestBody": {
@@ -58443,7 +58511,7 @@
                     "type": "number"
                   },
                   "sha256Hash": {
-                    "const": "252a46e3f5b1ddc431b396e688331d8d020daec27079893ac7d4e6db759a7402",
+                    "const": "b57f9b910f8cd1a4659d894fe7550ccc81ec9052c01e438b290fd66a040b9b93",
                     "type": "string"
                   }
                 },
