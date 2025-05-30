@@ -838,8 +838,8 @@ export interface GetPinnedChatMessage {
   };
   sender: {
     id: string;
-    chatColor: null | string;
     displayName: string;
+    chatColor: null | string;
     displayBadges: {
       id: string;
       setID: string;
@@ -1308,8 +1308,8 @@ export interface ShareClipRenderStatusBroadcaster {
   login: string;
   displayName: string;
   primaryColorHex: null | string;
-  isPartner: boolean;
   profileImageURL: string;
+  isPartner: boolean;
   followers: {
     totalCount: number;
     __typename: 'FollowerConnection';
@@ -1595,8 +1595,8 @@ export interface VideoAccessTokenClipData {
 export interface VideoMetadataUser {
   id: string;
   primaryColorHex: null | string;
-  isPartner: boolean;
   profileImageURL: string;
+  isPartner: boolean;
   /**
    * If never streamed: `{ id: null, startedAt: null }`
    */

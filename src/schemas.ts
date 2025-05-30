@@ -14,9 +14,6 @@ export const User = {
   ]),
   profileImageURL: T.String({ format: 'uri' }),
   bannerImageURL: T.Union([T.Null(), T.String({ format: 'uri' })]),
-  // the following fields doesn't exist directly in the User object
-  chatColor: T.Union([T.Null(), T.String({ pattern: '^#[0-9a-fA-F]{6}$' })]),
-  isPartner: T.Boolean(),
   __typename: T.Literal('User'),
 } satisfies Properties;
 

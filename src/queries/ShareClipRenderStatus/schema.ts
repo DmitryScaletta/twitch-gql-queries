@@ -23,9 +23,9 @@ export const BroadcasterSchema = strictObject(
       'login',
       'displayName',
       'primaryColorHex',
-      'isPartner',
       'profileImageURL',
     ]),
+    isPartner: T.Boolean(),
     followers: strictObject(pick(schemas.FollowerConnection, ['totalCount'])),
     stream: T.Union([
       T.Null(),

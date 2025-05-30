@@ -16,12 +16,8 @@ export const VariablesSchema = strictObject(
 
 export const UserSchema = strictObject(
   {
-    ...pick(schemas.User, [
-      'id',
-      'primaryColorHex',
-      'isPartner',
-      'profileImageURL',
-    ]),
+    ...pick(schemas.User, ['id', 'primaryColorHex', 'profileImageURL']),
+    isPartner: T.Boolean(),
     lastBroadcast: T.Union(
       [
         T.Null(),

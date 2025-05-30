@@ -43,7 +43,11 @@ export const MessageSchema = strictObject(
     parentMessage: T.Union([T.Null(), ParentMessageSchema]),
     threadParentMessage: T.Union([T.Null(), ThreadParentMessageSchema]),
     sender: strictObject({
-      ...pick(schemas.User, ['id', 'chatColor', 'displayName']),
+      ...pick(schemas.User, ['id', 'displayName']),
+      chatColor: T.Union([
+        T.Null(),
+        T.String({ pattern: '^#[0-9a-fA-F]{6}$' }),
+      ]),
       displayBadges: T.Array(
         strictObject(pick(schemas.Badge, ['id', 'setID', 'version'])),
       ),
