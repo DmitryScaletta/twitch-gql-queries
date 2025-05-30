@@ -53410,6 +53410,9 @@
                 "pattern": "^[0-9]+$",
                 "type": "string"
               },
+              "displayName": {
+                "type": "string"
+              },
               "chatColor": {
                 "anyOf": [
                   {
@@ -53420,9 +53423,6 @@
                     "type": "string"
                   }
                 ]
-              },
-              "displayName": {
-                "type": "string"
               },
               "displayBadges": {
                 "type": "array",
@@ -53460,8 +53460,8 @@
             },
             "required": [
               "id",
-              "chatColor",
               "displayName",
+              "chatColor",
               "displayBadges",
               "__typename"
             ]
@@ -57173,12 +57173,12 @@
               }
             ]
           },
-          "isPartner": {
-            "type": "boolean"
-          },
           "profileImageURL": {
             "format": "uri",
             "type": "string"
+          },
+          "isPartner": {
+            "type": "boolean"
           },
           "followers": {
             "additionalProperties": false,
@@ -57264,8 +57264,8 @@
           "login",
           "displayName",
           "primaryColorHex",
-          "isPartner",
           "profileImageURL",
+          "isPartner",
           "followers",
           "stream",
           "lastBroadcast",
@@ -59627,12 +59627,12 @@
               }
             ]
           },
-          "isPartner": {
-            "type": "boolean"
-          },
           "profileImageURL": {
             "format": "uri",
             "type": "string"
+          },
+          "isPartner": {
+            "type": "boolean"
           },
           "lastBroadcast": {
             "description": "If never streamed: `{ id: null, startedAt: null }`",
@@ -59735,8 +59735,8 @@
         "required": [
           "id",
           "primaryColorHex",
-          "isPartner",
           "profileImageURL",
+          "isPartner",
           "lastBroadcast",
           "stream",
           "followers",
@@ -60004,12 +60004,12 @@
                       }
                     ]
                   },
-                  "isPartner": {
-                    "type": "boolean"
-                  },
                   "profileImageURL": {
                     "format": "uri",
                     "type": "string"
+                  },
+                  "isPartner": {
+                    "type": "boolean"
                   },
                   "lastBroadcast": {
                     "description": "If never streamed: `{ id: null, startedAt: null }`",
@@ -60112,8 +60112,8 @@
                 "required": [
                   "id",
                   "primaryColorHex",
-                  "isPartner",
                   "profileImageURL",
+                  "isPartner",
                   "lastBroadcast",
                   "stream",
                   "followers",
@@ -60377,12 +60377,12 @@
                           }
                         ]
                       },
-                      "isPartner": {
-                        "type": "boolean"
-                      },
                       "profileImageURL": {
                         "format": "uri",
                         "type": "string"
+                      },
+                      "isPartner": {
+                        "type": "boolean"
                       },
                       "lastBroadcast": {
                         "description": "If never streamed: `{ id: null, startedAt: null }`",
@@ -60485,8 +60485,8 @@
                     "required": [
                       "id",
                       "primaryColorHex",
-                      "isPartner",
                       "profileImageURL",
+                      "isPartner",
                       "lastBroadcast",
                       "stream",
                       "followers",
