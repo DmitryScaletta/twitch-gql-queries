@@ -61,8 +61,8 @@ type CacheVideo = {
 
 const cache = {
   categories: null as null | CacheCategory[] | Promise<CacheCategory[]>,
-  channels: {} as Record<string, CacheChannel[]>,
-  clips: {} as Record<string, CacheClip[]>,
+  channels: {} as Record<string, CacheChannel[] | undefined>,
+  clips: {} as Record<string, CacheClip[] | undefined>,
   videos: {} as Record<string, CacheVideo | Promise<CacheVideo>>,
 };
 
