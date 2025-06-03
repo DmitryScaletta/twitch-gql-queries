@@ -67,12 +67,16 @@ export const gen = async () => {
     '};\n',
   ].join('\n');
 
-  // TODO: add better fix
-  // when linking the same schema with another schema multiple times
-  // `json-schema-to-typescript` adds numbers to the end of the schema name
   for (const schema of tsSchemas) {
-    if (!schema.$id) continue;
-    ts = ts.replaceAll(new RegExp(`(${schema.$id})\\d+`, 'g'), '$1');
+    // ts hack for string autocomplete
+    ts = ts.replaceAll("' | string;", "' | string & {};");
+
+    // TODO: add better fix
+    // when linking the same schema with another schema multiple times
+    // `json-schema-to-typescript` adds numbers to the end of the schema name
+    if (schema.$id) {
+      ts = ts.replaceAll(new RegExp(`(${schema.$id})\\d+`, 'g'), '$1');
+    }
   }
 
   await fsp.writeFile('./src/queries/types.generated.ts', ts);

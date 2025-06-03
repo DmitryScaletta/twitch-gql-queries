@@ -29,7 +29,7 @@ export interface BrowsePageAllDirectoriesVariables {
   limit: number;
   options: {
     recommendationsContext?: null | {
-      platform?: null | 'web' | string;
+      platform?: null | 'web' | string & {};
     };
     sort: BrowsePageSort;
     tags?: null | string[];
@@ -203,7 +203,7 @@ export interface ChannelShellData {
 export interface ChannelVideoShelvesQueryClip {
   id: string;
   slug: string;
-  thumbnailURL: '' | string;
+  thumbnailURL: '' | string & {};
   createdAt: string;
   durationSeconds: number;
   isFeatured: boolean;
@@ -244,7 +244,7 @@ export interface ChannelVideoShelvesQueryClip {
       description: null | string;
       __typename: 'User';
     })[];
-    sessionIdentifier: '' | string;
+    sessionIdentifier: '' | string & {};
     __typename: 'GuestStarParticipants';
   };
   __typename: 'Clip';
@@ -379,7 +379,7 @@ export interface ClipsCardsGameClip {
   slug: string;
   title: string;
   viewCount: number;
-  thumbnailURL: '' | string;
+  thumbnailURL: '' | string & {};
   createdAt: string;
   durationSeconds: number;
   isFeatured: boolean;
@@ -418,7 +418,7 @@ export interface ClipsCardsGameClip {
       description: null | string;
       __typename: 'User';
     })[];
-    sessionIdentifier: '' | string;
+    sessionIdentifier: '' | string & {};
     __typename: 'GuestStarParticipants';
   };
   previewThumbnailProperties: {
@@ -474,7 +474,7 @@ export interface ClipsCardsUserClip {
    * Possible values: `EN`, `DE`, `ASL`, `ZH_HK`
    */
   language: string;
-  thumbnailURL: '' | string;
+  thumbnailURL: '' | string & {};
   createdAt: string;
   durationSeconds: number;
   champBadge: null;
@@ -514,7 +514,7 @@ export interface ClipsCardsUserClip {
       description: null | string;
       __typename: 'User';
     })[];
-    sessionIdentifier: '' | string;
+    sessionIdentifier: '' | string & {};
     __typename: 'GuestStarParticipants';
   };
   __typename: 'Clip';
@@ -576,7 +576,7 @@ export interface ClipsDownloadButtonClip {
     /**
      * Can be `""` if quality is not generated yet
      */
-    sourceURL: '' | string;
+    sourceURL: '' | string & {};
     __typename: 'ClipVideoQuality';
   }[];
   __typename: 'Clip';
@@ -658,7 +658,7 @@ export interface DirectoryPageGameVariables {
   options: {
     sort: DirectoryPageGameSort;
     recommendationsContext?: null | {
-      platform?: null | 'web' | string;
+      platform?: null | 'web' | string & {};
     };
     freeformTags?: null | string[];
     tags?: null | string[];
@@ -947,11 +947,11 @@ export interface PlaybackAccessTokenVideo {
 
 export interface PlaybackAccessTokenVariables {
   isLive: boolean;
-  login: '' | string;
+  login: '' | string & {};
   isVod: boolean;
-  vodID: '' | string;
+  vodID: '' | string & {};
   playerType: '' | 'embed' | 'site' | 'frontpage' | 'channel_home_carousel';
-  platform: 'web' | string;
+  platform: 'web' | string & {};
 }
 
 export interface PlaybackAccessTokenData {
@@ -1028,7 +1028,7 @@ export interface SearchResultsPageChannel {
         id: string;
         title: string;
         durationSeconds: number;
-        thumbnailURL: '' | string;
+        thumbnailURL: '' | string & {};
         slug: string;
         previewThumbnailProperties: {
           blurReason: 'BLUR_NOT_REQUIRED' | 'BLUR_REASON_TYPE_SEXUAL_THEMES';
@@ -1164,7 +1164,7 @@ export interface SearchResultsPageVideo {
 }
 
 export interface SearchResultsPageSearchResultsVariables {
-  platform?: null | 'web' | string;
+  platform?: null | 'web' | string & {};
   query: string;
   options?: null | {
     targets?:
@@ -1337,7 +1337,7 @@ export interface ShareClipRenderStatusClipAsset {
   /**
    * Can be `""` if it's not created yet
    */
-  thumbnailURL: '' | string;
+  thumbnailURL: '' | string & {};
   curator: null | {
     id: string;
     login: string;
@@ -1347,11 +1347,11 @@ export interface ShareClipRenderStatusClipAsset {
   };
   videoQualities: {
     frameRate: number;
-    quality: '360' | '480' | '720' | '1080' | '1440' | string;
+    quality: '360' | '480' | '720' | '1080' | '1440' | string & {};
     /**
      * Can be `""` if quality is not generated yet
      */
-    sourceURL: '' | string;
+    sourceURL: '' | string & {};
     __typename: 'ClipVideoQuality';
   }[];
   portraitMetadata: null | {
@@ -1418,7 +1418,7 @@ export interface ShareClipRenderStatusClip {
    */
   language: string;
   isFeatured: boolean;
-  thumbnailURL: '' | string;
+  thumbnailURL: '' | string & {};
   createdAt: string;
   isPublished: boolean;
   durationSeconds: number;
@@ -1445,7 +1445,7 @@ export interface ShareClipRenderStatusClip {
     /**
      * For clips from highlights or uploads it will be `"1"`
      */
-    id: '1' | string;
+    id: '1' | string & {};
     /**
      * Seems to always be `null`
      */
@@ -1468,7 +1468,7 @@ export interface ShareClipRenderStatusClip {
     /**
      * Can be `""` if quality is not generated yet
      */
-    sourceURL: '' | string;
+    sourceURL: '' | string & {};
     __typename: 'ClipVideoQuality';
   }[];
   suggestedCropping: null;
@@ -1581,11 +1581,11 @@ export interface VideoAccessTokenClipData {
     };
     videoQualities: {
       frameRate: number;
-      quality: '360' | '480' | '720' | '1080' | '1440' | string;
+      quality: '360' | '480' | '720' | '1080' | '1440' | string & {};
       /**
        * Can be `""` if quality is not generated yet
        */
-      sourceURL: '' | string;
+      sourceURL: '' | string & {};
       __typename: 'ClipVideoQuality';
     }[];
     __typename: 'Clip';
@@ -1645,7 +1645,7 @@ export interface VideoMetadataVideo {
 }
 
 export interface VideoMetadataVariables {
-  channelLogin: '' | string;
+  channelLogin: '' | string & {};
   videoID: string;
 }
 
@@ -1680,7 +1680,7 @@ export interface WatchLivePromptData {
   clip: null | {
     id: string;
     durationSeconds: number;
-    thumbnailURL: '' | string;
+    thumbnailURL: '' | string & {};
     broadcaster: null | {
       id: string;
       login: string;
