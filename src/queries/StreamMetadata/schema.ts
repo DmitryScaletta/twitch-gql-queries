@@ -49,7 +49,6 @@ export const UserSchema = strictObject(
         ]),
       }),
     ]),
-    __typename: T.Literal('User'),
   },
   { $id: `${displayName}User` },
 );
