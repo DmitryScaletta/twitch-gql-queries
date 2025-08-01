@@ -54421,8 +54421,16 @@
                 "type": "boolean"
               },
               "forbiddenReasonCode": {
-                "const": "NONE",
-                "type": "string"
+                "anyOf": [
+                  {
+                    "const": "NONE",
+                    "type": "string"
+                  },
+                  {
+                    "const": "GEOBLOCKED",
+                    "type": "string"
+                  }
+                ]
               },
               "__typename": {
                 "const": "PlaybackAccessTokenAuthorization",

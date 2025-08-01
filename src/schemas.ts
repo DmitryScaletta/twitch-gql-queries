@@ -170,7 +170,7 @@ export const PlaybackAccessToken = {
 
 export const PlaybackAccessTokenAuthorization = {
   isForbidden: T.Boolean(),
-  forbiddenReasonCode: T.Union([T.Literal('NONE')]),
+  forbiddenReasonCode: T.Union([T.Literal('NONE'), T.Literal('GEOBLOCKED')]),
   __typename: T.Literal('PlaybackAccessTokenAuthorization'),
 } satisfies Properties;
 

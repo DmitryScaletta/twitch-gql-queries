@@ -933,7 +933,7 @@ export interface PlaybackAccessTokenStream {
   signature: string;
   authorization: {
     isForbidden: boolean;
-    forbiddenReasonCode: 'NONE';
+    forbiddenReasonCode: 'NONE' | 'GEOBLOCKED';
     __typename: 'PlaybackAccessTokenAuthorization';
   };
   __typename: 'PlaybackAccessToken';
