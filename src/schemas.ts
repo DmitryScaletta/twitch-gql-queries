@@ -303,3 +303,29 @@ export const Badge = {
   clickURL: T.Union([T.Null(), T.String()]),
   __typename: T.Literal('Badge'),
 } satisfies Properties;
+
+export const CheermoteType = T.Union([
+  T.Literal('SPONSORED'),
+  T.Literal('DEFAULT'),
+  T.Literal('CUSTOM'),
+  T.Literal('CHARITY'),
+  T.Literal('FIRST_PARTY'),
+  T.Literal('THIRD_PARTY'),
+  T.Literal('ANONYMOUS'),
+  T.Literal('DISPLAY_ONLY'),
+]);
+
+export const Cheermote = {
+  id: T.String(),
+  prefix: T.String(),
+  type: CheermoteType,
+  campaign: T.Union([T.Null()]),
+  __typename: T.Literal('Cheermote'),
+} satisfies Properties;
+
+export const CheermoteTier = {
+  id: T.String(),
+  bits: T.Number(),
+  canShowInBitsCard: T.Boolean(),
+  __typename: T.Literal('CheermoteTier'),
+} satisfies Properties;

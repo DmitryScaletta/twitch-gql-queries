@@ -1,0 +1,1340 @@
+{
+  "data": {
+    "cheerConfig": {
+      "displayConfig": {
+        "backgrounds": ["light", "dark"],
+        "colors": [
+          {
+            "bits": 1,
+            "color": "#979797",
+            "__typename": "CheermoteColorConfig"
+          },
+          {
+            "bits": 100,
+            "color": "#9c3ee8",
+            "__typename": "CheermoteColorConfig"
+          },
+          {
+            "bits": 1000,
+            "color": "#1db2a5",
+            "__typename": "CheermoteColorConfig"
+          },
+          {
+            "bits": 5000,
+            "color": "#0099fe",
+            "__typename": "CheermoteColorConfig"
+          },
+          {
+            "bits": 10000,
+            "color": "#f43021",
+            "__typename": "CheermoteColorConfig"
+          },
+          {
+            "bits": 100000,
+            "color": "#f3a71a",
+            "__typename": "CheermoteColorConfig"
+          }
+        ],
+        "order": [
+          "SPONSORED",
+          "DEFAULT",
+          "CUSTOM",
+          "CHARITY",
+          "FIRST_PARTY",
+          "THIRD_PARTY",
+          "ANONYMOUS",
+          "DISPLAY_ONLY"
+        ],
+        "scales": ["1", "1.5", "2", "3", "4"],
+        "types": [
+          {
+            "animation": "static",
+            "extension": "png",
+            "__typename": "CheermoteDisplayType"
+          },
+          {
+            "animation": "animated",
+            "extension": "gif",
+            "__typename": "CheermoteDisplayType"
+          }
+        ],
+        "__typename": "CheermoteDisplayConfig"
+      },
+      "groups": [
+        {
+          "templateURL": "https://d3aqoihi2n8ty8.cloudfront.net/actions/PREFIX/BACKGROUND/ANIMATION/TIER/SCALE.EXTENSION",
+          "nodes": [
+            {
+              "id": "Cheer",
+              "prefix": "Cheer",
+              "type": "DEFAULT",
+              "campaign": null,
+              "tiers": [
+                {
+                  "id": "Cheer;1",
+                  "bits": 1,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "Cheer;100",
+                  "bits": 100,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "Cheer;1000",
+                  "bits": 1000,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "Cheer;5000",
+                  "bits": 5000,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "Cheer;10000",
+                  "bits": 10000,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "Cheer;100000",
+                  "bits": 100000,
+                  "canShowInBitsCard": false,
+                  "__typename": "CheermoteTier"
+                }
+              ],
+              "__typename": "Cheermote"
+            },
+            {
+              "id": "cheerwhal",
+              "prefix": "cheerwhal",
+              "type": "FIRST_PARTY",
+              "campaign": null,
+              "tiers": [
+                {
+                  "id": "cheerwhal;1",
+                  "bits": 1,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "cheerwhal;100",
+                  "bits": 100,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "cheerwhal;1000",
+                  "bits": 1000,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "cheerwhal;5000",
+                  "bits": 5000,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "cheerwhal;10000",
+                  "bits": 10000,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                }
+              ],
+              "__typename": "Cheermote"
+            },
+            {
+              "id": "Corgo",
+              "prefix": "Corgo",
+              "type": "FIRST_PARTY",
+              "campaign": null,
+              "tiers": [
+                {
+                  "id": "Corgo;1",
+                  "bits": 1,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "Corgo;100",
+                  "bits": 100,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "Corgo;1000",
+                  "bits": 1000,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "Corgo;5000",
+                  "bits": 5000,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "Corgo;10000",
+                  "bits": 10000,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                }
+              ],
+              "__typename": "Cheermote"
+            },
+            {
+              "id": "Scoops",
+              "prefix": "Scoops",
+              "type": "DISPLAY_ONLY",
+              "campaign": null,
+              "tiers": [
+                {
+                  "id": "Scoops;1",
+                  "bits": 1,
+                  "canShowInBitsCard": false,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "Scoops;100",
+                  "bits": 100,
+                  "canShowInBitsCard": false,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "Scoops;1000",
+                  "bits": 1000,
+                  "canShowInBitsCard": false,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "Scoops;5000",
+                  "bits": 5000,
+                  "canShowInBitsCard": false,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "Scoops;10000",
+                  "bits": 10000,
+                  "canShowInBitsCard": false,
+                  "__typename": "CheermoteTier"
+                }
+              ],
+              "__typename": "Cheermote"
+            },
+            {
+              "id": "uni",
+              "prefix": "uni",
+              "type": "FIRST_PARTY",
+              "campaign": null,
+              "tiers": [
+                {
+                  "id": "uni;1",
+                  "bits": 1,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "uni;100",
+                  "bits": 100,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "uni;1000",
+                  "bits": 1000,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "uni;5000",
+                  "bits": 5000,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "uni;10000",
+                  "bits": 10000,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                }
+              ],
+              "__typename": "Cheermote"
+            },
+            {
+              "id": "ShowLove",
+              "prefix": "ShowLove",
+              "type": "FIRST_PARTY",
+              "campaign": null,
+              "tiers": [
+                {
+                  "id": "ShowLove;1",
+                  "bits": 1,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "ShowLove;100",
+                  "bits": 100,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "ShowLove;1000",
+                  "bits": 1000,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "ShowLove;5000",
+                  "bits": 5000,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "ShowLove;10000",
+                  "bits": 10000,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                }
+              ],
+              "__typename": "Cheermote"
+            },
+            {
+              "id": "Party",
+              "prefix": "Party",
+              "type": "FIRST_PARTY",
+              "campaign": null,
+              "tiers": [
+                {
+                  "id": "Party;1",
+                  "bits": 1,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "Party;100",
+                  "bits": 100,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "Party;1000",
+                  "bits": 1000,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "Party;5000",
+                  "bits": 5000,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "Party;10000",
+                  "bits": 10000,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                }
+              ],
+              "__typename": "Cheermote"
+            },
+            {
+              "id": "SeemsGood",
+              "prefix": "SeemsGood",
+              "type": "FIRST_PARTY",
+              "campaign": null,
+              "tiers": [
+                {
+                  "id": "SeemsGood;1",
+                  "bits": 1,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "SeemsGood;100",
+                  "bits": 100,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "SeemsGood;1000",
+                  "bits": 1000,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "SeemsGood;5000",
+                  "bits": 5000,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "SeemsGood;10000",
+                  "bits": 10000,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                }
+              ],
+              "__typename": "Cheermote"
+            },
+            {
+              "id": "Pride",
+              "prefix": "Pride",
+              "type": "FIRST_PARTY",
+              "campaign": null,
+              "tiers": [
+                {
+                  "id": "Pride;1",
+                  "bits": 1,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "Pride;100",
+                  "bits": 100,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "Pride;1000",
+                  "bits": 1000,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "Pride;5000",
+                  "bits": 5000,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "Pride;10000",
+                  "bits": 10000,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                }
+              ],
+              "__typename": "Cheermote"
+            },
+            {
+              "id": "Kappa",
+              "prefix": "Kappa",
+              "type": "FIRST_PARTY",
+              "campaign": null,
+              "tiers": [
+                {
+                  "id": "Kappa;1",
+                  "bits": 1,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "Kappa;100",
+                  "bits": 100,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "Kappa;1000",
+                  "bits": 1000,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "Kappa;5000",
+                  "bits": 5000,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "Kappa;10000",
+                  "bits": 10000,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                }
+              ],
+              "__typename": "Cheermote"
+            },
+            {
+              "id": "FrankerZ",
+              "prefix": "FrankerZ",
+              "type": "FIRST_PARTY",
+              "campaign": null,
+              "tiers": [
+                {
+                  "id": "FrankerZ;1",
+                  "bits": 1,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "FrankerZ;100",
+                  "bits": 100,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "FrankerZ;1000",
+                  "bits": 1000,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "FrankerZ;5000",
+                  "bits": 5000,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "FrankerZ;10000",
+                  "bits": 10000,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                }
+              ],
+              "__typename": "Cheermote"
+            },
+            {
+              "id": "HeyGuys",
+              "prefix": "HeyGuys",
+              "type": "FIRST_PARTY",
+              "campaign": null,
+              "tiers": [
+                {
+                  "id": "HeyGuys;1",
+                  "bits": 1,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "HeyGuys;100",
+                  "bits": 100,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "HeyGuys;1000",
+                  "bits": 1000,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "HeyGuys;5000",
+                  "bits": 5000,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "HeyGuys;10000",
+                  "bits": 10000,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                }
+              ],
+              "__typename": "Cheermote"
+            },
+            {
+              "id": "DansGame",
+              "prefix": "DansGame",
+              "type": "FIRST_PARTY",
+              "campaign": null,
+              "tiers": [
+                {
+                  "id": "DansGame;1",
+                  "bits": 1,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "DansGame;100",
+                  "bits": 100,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "DansGame;1000",
+                  "bits": 1000,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "DansGame;5000",
+                  "bits": 5000,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "DansGame;10000",
+                  "bits": 10000,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                }
+              ],
+              "__typename": "Cheermote"
+            },
+            {
+              "id": "TriHard",
+              "prefix": "TriHard",
+              "type": "FIRST_PARTY",
+              "campaign": null,
+              "tiers": [
+                {
+                  "id": "TriHard;1",
+                  "bits": 1,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "TriHard;100",
+                  "bits": 100,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "TriHard;1000",
+                  "bits": 1000,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "TriHard;5000",
+                  "bits": 5000,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "TriHard;10000",
+                  "bits": 10000,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                }
+              ],
+              "__typename": "Cheermote"
+            },
+            {
+              "id": "Kreygasm",
+              "prefix": "Kreygasm",
+              "type": "FIRST_PARTY",
+              "campaign": null,
+              "tiers": [
+                {
+                  "id": "Kreygasm;1",
+                  "bits": 1,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "Kreygasm;100",
+                  "bits": 100,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "Kreygasm;1000",
+                  "bits": 1000,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "Kreygasm;5000",
+                  "bits": 5000,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "Kreygasm;10000",
+                  "bits": 10000,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                }
+              ],
+              "__typename": "Cheermote"
+            },
+            {
+              "id": "4Head",
+              "prefix": "4Head",
+              "type": "FIRST_PARTY",
+              "campaign": null,
+              "tiers": [
+                {
+                  "id": "4Head;1",
+                  "bits": 1,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "4Head;100",
+                  "bits": 100,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "4Head;1000",
+                  "bits": 1000,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "4Head;5000",
+                  "bits": 5000,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "4Head;10000",
+                  "bits": 10000,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                }
+              ],
+              "__typename": "Cheermote"
+            },
+            {
+              "id": "SwiftRage",
+              "prefix": "SwiftRage",
+              "type": "FIRST_PARTY",
+              "campaign": null,
+              "tiers": [
+                {
+                  "id": "SwiftRage;1",
+                  "bits": 1,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "SwiftRage;100",
+                  "bits": 100,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "SwiftRage;1000",
+                  "bits": 1000,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "SwiftRage;5000",
+                  "bits": 5000,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "SwiftRage;10000",
+                  "bits": 10000,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                }
+              ],
+              "__typename": "Cheermote"
+            },
+            {
+              "id": "NotLikeThis",
+              "prefix": "NotLikeThis",
+              "type": "FIRST_PARTY",
+              "campaign": null,
+              "tiers": [
+                {
+                  "id": "NotLikeThis;1",
+                  "bits": 1,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "NotLikeThis;100",
+                  "bits": 100,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "NotLikeThis;1000",
+                  "bits": 1000,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "NotLikeThis;5000",
+                  "bits": 5000,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "NotLikeThis;10000",
+                  "bits": 10000,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                }
+              ],
+              "__typename": "Cheermote"
+            },
+            {
+              "id": "FailFish",
+              "prefix": "FailFish",
+              "type": "FIRST_PARTY",
+              "campaign": null,
+              "tiers": [
+                {
+                  "id": "FailFish;1",
+                  "bits": 1,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "FailFish;100",
+                  "bits": 100,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "FailFish;1000",
+                  "bits": 1000,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "FailFish;5000",
+                  "bits": 5000,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "FailFish;10000",
+                  "bits": 10000,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                }
+              ],
+              "__typename": "Cheermote"
+            },
+            {
+              "id": "VoHiYo",
+              "prefix": "VoHiYo",
+              "type": "FIRST_PARTY",
+              "campaign": null,
+              "tiers": [
+                {
+                  "id": "VoHiYo;1",
+                  "bits": 1,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "VoHiYo;100",
+                  "bits": 100,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "VoHiYo;1000",
+                  "bits": 1000,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "VoHiYo;5000",
+                  "bits": 5000,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "VoHiYo;10000",
+                  "bits": 10000,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                }
+              ],
+              "__typename": "Cheermote"
+            },
+            {
+              "id": "PJSalt",
+              "prefix": "PJSalt",
+              "type": "FIRST_PARTY",
+              "campaign": null,
+              "tiers": [
+                {
+                  "id": "PJSalt;1",
+                  "bits": 1,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "PJSalt;100",
+                  "bits": 100,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "PJSalt;1000",
+                  "bits": 1000,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "PJSalt;5000",
+                  "bits": 5000,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "PJSalt;10000",
+                  "bits": 10000,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                }
+              ],
+              "__typename": "Cheermote"
+            },
+            {
+              "id": "MrDestructoid",
+              "prefix": "MrDestructoid",
+              "type": "FIRST_PARTY",
+              "campaign": null,
+              "tiers": [
+                {
+                  "id": "MrDestructoid;1",
+                  "bits": 1,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "MrDestructoid;100",
+                  "bits": 100,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "MrDestructoid;1000",
+                  "bits": 1000,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "MrDestructoid;5000",
+                  "bits": 5000,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "MrDestructoid;10000",
+                  "bits": 10000,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                }
+              ],
+              "__typename": "Cheermote"
+            },
+            {
+              "id": "bday",
+              "prefix": "bday",
+              "type": "FIRST_PARTY",
+              "campaign": null,
+              "tiers": [
+                {
+                  "id": "bday;1",
+                  "bits": 1,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "bday;100",
+                  "bits": 100,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "bday;1000",
+                  "bits": 1000,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "bday;5000",
+                  "bits": 5000,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "bday;10000",
+                  "bits": 10000,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                }
+              ],
+              "__typename": "Cheermote"
+            },
+            {
+              "id": "RIPCheer",
+              "prefix": "RIPCheer",
+              "type": "FIRST_PARTY",
+              "campaign": null,
+              "tiers": [
+                {
+                  "id": "RIPCheer;1",
+                  "bits": 1,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "RIPCheer;100",
+                  "bits": 100,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "RIPCheer;1000",
+                  "bits": 1000,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "RIPCheer;5000",
+                  "bits": 5000,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "RIPCheer;10000",
+                  "bits": 10000,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                }
+              ],
+              "__typename": "Cheermote"
+            },
+            {
+              "id": "Shamrock",
+              "prefix": "Shamrock",
+              "type": "FIRST_PARTY",
+              "campaign": null,
+              "tiers": [
+                {
+                  "id": "Shamrock;1",
+                  "bits": 1,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "Shamrock;100",
+                  "bits": 100,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "Shamrock;1000",
+                  "bits": 1000,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "Shamrock;5000",
+                  "bits": 5000,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "Shamrock;10000",
+                  "bits": 10000,
+                  "canShowInBitsCard": true,
+                  "__typename": "CheermoteTier"
+                }
+              ],
+              "__typename": "Cheermote"
+            },
+            {
+              "id": "DoodleCheer",
+              "prefix": "DoodleCheer",
+              "type": "THIRD_PARTY",
+              "campaign": null,
+              "tiers": [
+                {
+                  "id": "DoodleCheer;1",
+                  "bits": 1,
+                  "canShowInBitsCard": false,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "DoodleCheer;100",
+                  "bits": 100,
+                  "canShowInBitsCard": false,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "DoodleCheer;1000",
+                  "bits": 1000,
+                  "canShowInBitsCard": false,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "DoodleCheer;5000",
+                  "bits": 5000,
+                  "canShowInBitsCard": false,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "DoodleCheer;10000",
+                  "bits": 10000,
+                  "canShowInBitsCard": false,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "DoodleCheer;100000",
+                  "bits": 100000,
+                  "canShowInBitsCard": false,
+                  "__typename": "CheermoteTier"
+                }
+              ],
+              "__typename": "Cheermote"
+            },
+            {
+              "id": "BitBoss",
+              "prefix": "BitBoss",
+              "type": "THIRD_PARTY",
+              "campaign": null,
+              "tiers": [
+                {
+                  "id": "BitBoss;1",
+                  "bits": 1,
+                  "canShowInBitsCard": false,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "BitBoss;100",
+                  "bits": 100,
+                  "canShowInBitsCard": false,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "BitBoss;1000",
+                  "bits": 1000,
+                  "canShowInBitsCard": false,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "BitBoss;5000",
+                  "bits": 5000,
+                  "canShowInBitsCard": false,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "BitBoss;10000",
+                  "bits": 10000,
+                  "canShowInBitsCard": false,
+                  "__typename": "CheermoteTier"
+                }
+              ],
+              "__typename": "Cheermote"
+            },
+            {
+              "id": "Streamlabs",
+              "prefix": "Streamlabs",
+              "type": "THIRD_PARTY",
+              "campaign": null,
+              "tiers": [
+                {
+                  "id": "Streamlabs;1",
+                  "bits": 1,
+                  "canShowInBitsCard": false,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "Streamlabs;100",
+                  "bits": 100,
+                  "canShowInBitsCard": false,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "Streamlabs;1000",
+                  "bits": 1000,
+                  "canShowInBitsCard": false,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "Streamlabs;5000",
+                  "bits": 5000,
+                  "canShowInBitsCard": false,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "Streamlabs;10000",
+                  "bits": 10000,
+                  "canShowInBitsCard": false,
+                  "__typename": "CheermoteTier"
+                }
+              ],
+              "__typename": "Cheermote"
+            },
+            {
+              "id": "Muxy",
+              "prefix": "Muxy",
+              "type": "THIRD_PARTY",
+              "campaign": null,
+              "tiers": [
+                {
+                  "id": "Muxy;1",
+                  "bits": 1,
+                  "canShowInBitsCard": false,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "Muxy;100",
+                  "bits": 100,
+                  "canShowInBitsCard": false,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "Muxy;1000",
+                  "bits": 1000,
+                  "canShowInBitsCard": false,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "Muxy;5000",
+                  "bits": 5000,
+                  "canShowInBitsCard": false,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "Muxy;10000",
+                  "bits": 10000,
+                  "canShowInBitsCard": false,
+                  "__typename": "CheermoteTier"
+                }
+              ],
+              "__typename": "Cheermote"
+            },
+            {
+              "id": "HolidayCheer",
+              "prefix": "HolidayCheer",
+              "type": "THIRD_PARTY",
+              "campaign": null,
+              "tiers": [
+                {
+                  "id": "HolidayCheer;1",
+                  "bits": 1,
+                  "canShowInBitsCard": false,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "HolidayCheer;100",
+                  "bits": 100,
+                  "canShowInBitsCard": false,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "HolidayCheer;1000",
+                  "bits": 1000,
+                  "canShowInBitsCard": false,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "HolidayCheer;5000",
+                  "bits": 5000,
+                  "canShowInBitsCard": false,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "HolidayCheer;10000",
+                  "bits": 10000,
+                  "canShowInBitsCard": false,
+                  "__typename": "CheermoteTier"
+                }
+              ],
+              "__typename": "Cheermote"
+            },
+            {
+              "id": "Goal",
+              "prefix": "Goal",
+              "type": "THIRD_PARTY",
+              "campaign": null,
+              "tiers": [
+                {
+                  "id": "Goal;1",
+                  "bits": 1,
+                  "canShowInBitsCard": false,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "Goal;100",
+                  "bits": 100,
+                  "canShowInBitsCard": false,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "Goal;1000",
+                  "bits": 1000,
+                  "canShowInBitsCard": false,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "Goal;5000",
+                  "bits": 5000,
+                  "canShowInBitsCard": false,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "Goal;10000",
+                  "bits": 10000,
+                  "canShowInBitsCard": false,
+                  "__typename": "CheermoteTier"
+                }
+              ],
+              "__typename": "Cheermote"
+            },
+            {
+              "id": "Anon",
+              "prefix": "Anon",
+              "type": "DISPLAY_ONLY",
+              "campaign": null,
+              "tiers": [
+                {
+                  "id": "Anon;1",
+                  "bits": 1,
+                  "canShowInBitsCard": false,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "Anon;100",
+                  "bits": 100,
+                  "canShowInBitsCard": false,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "Anon;1000",
+                  "bits": 1000,
+                  "canShowInBitsCard": false,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "Anon;5000",
+                  "bits": 5000,
+                  "canShowInBitsCard": false,
+                  "__typename": "CheermoteTier"
+                },
+                {
+                  "id": "Anon;10000",
+                  "bits": 10000,
+                  "canShowInBitsCard": false,
+                  "__typename": "CheermoteTier"
+                }
+              ],
+              "__typename": "Cheermote"
+            }
+          ],
+          "__typename": "CheermoteGroup"
+        }
+      ],
+      "__typename": "GlobalCheerConfig"
+    },
+    "__typename": "Query"
+  },
+  "extensions": {
+    "durationMilliseconds": 5,
+    "operationName": "BitsConfigContext_Global",
+    "requestID": "01K1NJK6SYNX8DB82231BR5VX7"
+  }
+}

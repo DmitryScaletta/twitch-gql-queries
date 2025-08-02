@@ -1,5 +1,60 @@
 import type { QueryResponse } from '../types.ts';
 
+export interface BitsConfigContextGlobalCheerConfig {
+  displayConfig: {
+    backgrounds: ('light' | 'dark')[];
+    colors: {
+      bits: number;
+      color: string;
+      __typename: 'CheermoteColorConfig';
+    }[];
+    order: (
+      | 'SPONSORED'
+      | 'DEFAULT'
+      | 'CUSTOM'
+      | 'CHARITY'
+      | 'FIRST_PARTY'
+      | 'THIRD_PARTY'
+      | 'ANONYMOUS'
+      | 'DISPLAY_ONLY'
+    )[];
+    scales: string[];
+    types: {
+      animation: 'static' | 'animated';
+      extension: 'png' | 'gif';
+      __typename: 'CheermoteDisplayType';
+    }[];
+    __typename: 'CheermoteDisplayConfig';
+  };
+  groups: {
+    templateURL: string;
+    nodes: BitsConfigContextGlobalCheermote[];
+    __typename: 'CheermoteGroup';
+  }[];
+  __typename: 'GlobalCheerConfig';
+}
+
+export interface BitsConfigContextGlobalCheermote {
+  id: string;
+  prefix: string;
+  type: 'SPONSORED' | 'DEFAULT' | 'CUSTOM' | 'CHARITY' | 'FIRST_PARTY' | 'THIRD_PARTY' | 'ANONYMOUS' | 'DISPLAY_ONLY';
+  campaign: null;
+  tiers: {
+    id: string;
+    bits: number;
+    canShowInBitsCard: boolean;
+    __typename: 'CheermoteTier';
+  }[];
+  __typename: 'Cheermote';
+}
+
+export interface BitsConfigContextGlobalVariables {}
+
+export interface BitsConfigContextGlobalData {
+  cheerConfig: BitsConfigContextGlobalCheerConfig;
+  __typename: 'Query';
+}
+
 export interface BrowsePageGame {
   id: string;
   slug: string;
@@ -372,6 +427,33 @@ export interface ChannelVideoShelvesQueryData {
     };
     __typename: 'User';
   };
+}
+
+export interface ChatListBadgesUser {
+  id: string;
+  primaryColorHex: null | string;
+  broadcastBadges: {
+    id: string;
+    setID: string;
+    version: string;
+    title: string;
+    image1x: string;
+    image2x: string;
+    image4x: string;
+    clickAction: null | 'VISIT_URL' | 'SUBSCRIBE' | 'GET_TURBO';
+    clickURL: null | string;
+    __typename: 'Badge';
+  }[];
+  self: null;
+  __typename: 'User';
+}
+
+export interface ChatListBadgesVariables {
+  channelLogin: string;
+}
+
+export interface ChatListBadgesData {
+  user: null | ChatListBadgesUser;
 }
 
 export interface ClipsCardsGameClip {
@@ -1700,10 +1782,12 @@ export interface WatchLivePromptData {
   };
 }
 
+export type BitsConfigContextGlobalResponse = QueryResponse<BitsConfigContextGlobalData, 'BitsConfigContext_Global'>;
 export type BrowsePageAllDirectoriesResponse = QueryResponse<BrowsePageAllDirectoriesData, 'BrowsePage_AllDirectories'>;
 export type ChannelRootAboutPanelResponse = QueryResponse<ChannelRootAboutPanelData, 'ChannelRoot_AboutPanel'>;
 export type ChannelShellResponse = QueryResponse<ChannelShellData, 'ChannelShell'>;
 export type ChannelVideoShelvesQueryResponse = QueryResponse<ChannelVideoShelvesQueryData, 'ChannelVideoShelvesQuery'>;
+export type ChatListBadgesResponse = QueryResponse<ChatListBadgesData, 'ChatList_Badges'>;
 export type ClipsCardsGameResponse = QueryResponse<ClipsCardsGameData, 'ClipsCards__Game'>;
 export type ClipsCardsUserResponse = QueryResponse<ClipsCardsUserData, 'ClipsCards__User'>;
 export type ClipsDownloadButtonResponse = QueryResponse<ClipsDownloadButtonData, 'ClipsDownloadButton'>;
@@ -1726,10 +1810,12 @@ export type VideoPreviewOverlayResponse = QueryResponse<VideoPreviewOverlayData,
 export type WatchLivePromptResponse = QueryResponse<WatchLivePromptData, 'WatchLivePrompt'>;
 
 export interface QueryResponseMap {
+  BitsConfigContext_Global: BitsConfigContextGlobalResponse;
   BrowsePage_AllDirectories: BrowsePageAllDirectoriesResponse;
   ChannelRoot_AboutPanel: ChannelRootAboutPanelResponse;
   ChannelShell: ChannelShellResponse;
   ChannelVideoShelvesQuery: ChannelVideoShelvesQueryResponse;
+  ChatList_Badges: ChatListBadgesResponse;
   ClipsCards__Game: ClipsCardsGameResponse;
   ClipsCards__User: ClipsCardsUserResponse;
   ClipsDownloadButton: ClipsDownloadButtonResponse;

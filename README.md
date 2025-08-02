@@ -104,10 +104,12 @@ console.log(responses);
 
 ## Available queries
 
+* BitsConfigContext_Global
 * BrowsePage_AllDirectories
 * ChannelRoot_AboutPanel
 * ChannelShell
 * ChannelVideoShelvesQuery
+* ChatList_Badges
 * ClipsCards__Game
 * ClipsCards__User
 * ClipsDownloadButton
