@@ -14,6 +14,1407 @@
   "security": [],
   "tags": [],
   "paths": {
+    "#BitsConfigContext_Global": {
+      "post": {
+        "summary": "",
+        "tags": [
+          "Chat"
+        ],
+        "parameters": [
+          {
+            "in": "header",
+            "name": "Client-ID",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "default": "kimne78kx3ncx6brgo4mv6wki5h1ko"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BitsConfigContextGlobalRequestBody"
+              },
+              "example": {
+                "operationName": "BitsConfigContext_Global",
+                "variables": {},
+                "extensions": {
+                  "persistedQuery": {
+                    "version": 1,
+                    "sha256Hash": "6a265b86f3be1c8d11bdcf32c183e106028c6171e985cc2584d15f7840f5fee6"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BitsConfigContextGlobalResponse"
+                },
+                "example": {
+                  "data": {
+                    "cheerConfig": {
+                      "displayConfig": {
+                        "backgrounds": [
+                          "light",
+                          "dark"
+                        ],
+                        "colors": [
+                          {
+                            "bits": 1,
+                            "color": "#979797",
+                            "__typename": "CheermoteColorConfig"
+                          },
+                          {
+                            "bits": 100,
+                            "color": "#9c3ee8",
+                            "__typename": "CheermoteColorConfig"
+                          },
+                          {
+                            "bits": 1000,
+                            "color": "#1db2a5",
+                            "__typename": "CheermoteColorConfig"
+                          },
+                          {
+                            "bits": 5000,
+                            "color": "#0099fe",
+                            "__typename": "CheermoteColorConfig"
+                          },
+                          {
+                            "bits": 10000,
+                            "color": "#f43021",
+                            "__typename": "CheermoteColorConfig"
+                          },
+                          {
+                            "bits": 100000,
+                            "color": "#f3a71a",
+                            "__typename": "CheermoteColorConfig"
+                          }
+                        ],
+                        "order": [
+                          "SPONSORED",
+                          "DEFAULT",
+                          "CUSTOM",
+                          "CHARITY",
+                          "FIRST_PARTY",
+                          "THIRD_PARTY",
+                          "ANONYMOUS",
+                          "DISPLAY_ONLY"
+                        ],
+                        "scales": [
+                          "1",
+                          "1.5",
+                          "2",
+                          "3",
+                          "4"
+                        ],
+                        "types": [
+                          {
+                            "animation": "static",
+                            "extension": "png",
+                            "__typename": "CheermoteDisplayType"
+                          },
+                          {
+                            "animation": "animated",
+                            "extension": "gif",
+                            "__typename": "CheermoteDisplayType"
+                          }
+                        ],
+                        "__typename": "CheermoteDisplayConfig"
+                      },
+                      "groups": [
+                        {
+                          "templateURL": "https://d3aqoihi2n8ty8.cloudfront.net/actions/PREFIX/BACKGROUND/ANIMATION/TIER/SCALE.EXTENSION",
+                          "nodes": [
+                            {
+                              "id": "Cheer",
+                              "prefix": "Cheer",
+                              "type": "DEFAULT",
+                              "campaign": null,
+                              "tiers": [
+                                {
+                                  "id": "Cheer;1",
+                                  "bits": 1,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "Cheer;100",
+                                  "bits": 100,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "Cheer;1000",
+                                  "bits": 1000,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "Cheer;5000",
+                                  "bits": 5000,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "Cheer;10000",
+                                  "bits": 10000,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "Cheer;100000",
+                                  "bits": 100000,
+                                  "canShowInBitsCard": false,
+                                  "__typename": "CheermoteTier"
+                                }
+                              ],
+                              "__typename": "Cheermote"
+                            },
+                            {
+                              "id": "cheerwhal",
+                              "prefix": "cheerwhal",
+                              "type": "FIRST_PARTY",
+                              "campaign": null,
+                              "tiers": [
+                                {
+                                  "id": "cheerwhal;1",
+                                  "bits": 1,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "cheerwhal;100",
+                                  "bits": 100,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "cheerwhal;1000",
+                                  "bits": 1000,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "cheerwhal;5000",
+                                  "bits": 5000,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "cheerwhal;10000",
+                                  "bits": 10000,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                }
+                              ],
+                              "__typename": "Cheermote"
+                            },
+                            {
+                              "id": "Corgo",
+                              "prefix": "Corgo",
+                              "type": "FIRST_PARTY",
+                              "campaign": null,
+                              "tiers": [
+                                {
+                                  "id": "Corgo;1",
+                                  "bits": 1,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "Corgo;100",
+                                  "bits": 100,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "Corgo;1000",
+                                  "bits": 1000,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "Corgo;5000",
+                                  "bits": 5000,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "Corgo;10000",
+                                  "bits": 10000,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                }
+                              ],
+                              "__typename": "Cheermote"
+                            },
+                            {
+                              "id": "Scoops",
+                              "prefix": "Scoops",
+                              "type": "DISPLAY_ONLY",
+                              "campaign": null,
+                              "tiers": [
+                                {
+                                  "id": "Scoops;1",
+                                  "bits": 1,
+                                  "canShowInBitsCard": false,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "Scoops;100",
+                                  "bits": 100,
+                                  "canShowInBitsCard": false,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "Scoops;1000",
+                                  "bits": 1000,
+                                  "canShowInBitsCard": false,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "Scoops;5000",
+                                  "bits": 5000,
+                                  "canShowInBitsCard": false,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "Scoops;10000",
+                                  "bits": 10000,
+                                  "canShowInBitsCard": false,
+                                  "__typename": "CheermoteTier"
+                                }
+                              ],
+                              "__typename": "Cheermote"
+                            },
+                            {
+                              "id": "uni",
+                              "prefix": "uni",
+                              "type": "FIRST_PARTY",
+                              "campaign": null,
+                              "tiers": [
+                                {
+                                  "id": "uni;1",
+                                  "bits": 1,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "uni;100",
+                                  "bits": 100,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "uni;1000",
+                                  "bits": 1000,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "uni;5000",
+                                  "bits": 5000,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "uni;10000",
+                                  "bits": 10000,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                }
+                              ],
+                              "__typename": "Cheermote"
+                            },
+                            {
+                              "id": "ShowLove",
+                              "prefix": "ShowLove",
+                              "type": "FIRST_PARTY",
+                              "campaign": null,
+                              "tiers": [
+                                {
+                                  "id": "ShowLove;1",
+                                  "bits": 1,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "ShowLove;100",
+                                  "bits": 100,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "ShowLove;1000",
+                                  "bits": 1000,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "ShowLove;5000",
+                                  "bits": 5000,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "ShowLove;10000",
+                                  "bits": 10000,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                }
+                              ],
+                              "__typename": "Cheermote"
+                            },
+                            {
+                              "id": "Party",
+                              "prefix": "Party",
+                              "type": "FIRST_PARTY",
+                              "campaign": null,
+                              "tiers": [
+                                {
+                                  "id": "Party;1",
+                                  "bits": 1,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "Party;100",
+                                  "bits": 100,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "Party;1000",
+                                  "bits": 1000,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "Party;5000",
+                                  "bits": 5000,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "Party;10000",
+                                  "bits": 10000,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                }
+                              ],
+                              "__typename": "Cheermote"
+                            },
+                            {
+                              "id": "SeemsGood",
+                              "prefix": "SeemsGood",
+                              "type": "FIRST_PARTY",
+                              "campaign": null,
+                              "tiers": [
+                                {
+                                  "id": "SeemsGood;1",
+                                  "bits": 1,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "SeemsGood;100",
+                                  "bits": 100,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "SeemsGood;1000",
+                                  "bits": 1000,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "SeemsGood;5000",
+                                  "bits": 5000,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "SeemsGood;10000",
+                                  "bits": 10000,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                }
+                              ],
+                              "__typename": "Cheermote"
+                            },
+                            {
+                              "id": "Pride",
+                              "prefix": "Pride",
+                              "type": "FIRST_PARTY",
+                              "campaign": null,
+                              "tiers": [
+                                {
+                                  "id": "Pride;1",
+                                  "bits": 1,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "Pride;100",
+                                  "bits": 100,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "Pride;1000",
+                                  "bits": 1000,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "Pride;5000",
+                                  "bits": 5000,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "Pride;10000",
+                                  "bits": 10000,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                }
+                              ],
+                              "__typename": "Cheermote"
+                            },
+                            {
+                              "id": "Kappa",
+                              "prefix": "Kappa",
+                              "type": "FIRST_PARTY",
+                              "campaign": null,
+                              "tiers": [
+                                {
+                                  "id": "Kappa;1",
+                                  "bits": 1,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "Kappa;100",
+                                  "bits": 100,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "Kappa;1000",
+                                  "bits": 1000,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "Kappa;5000",
+                                  "bits": 5000,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "Kappa;10000",
+                                  "bits": 10000,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                }
+                              ],
+                              "__typename": "Cheermote"
+                            },
+                            {
+                              "id": "FrankerZ",
+                              "prefix": "FrankerZ",
+                              "type": "FIRST_PARTY",
+                              "campaign": null,
+                              "tiers": [
+                                {
+                                  "id": "FrankerZ;1",
+                                  "bits": 1,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "FrankerZ;100",
+                                  "bits": 100,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "FrankerZ;1000",
+                                  "bits": 1000,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "FrankerZ;5000",
+                                  "bits": 5000,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "FrankerZ;10000",
+                                  "bits": 10000,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                }
+                              ],
+                              "__typename": "Cheermote"
+                            },
+                            {
+                              "id": "HeyGuys",
+                              "prefix": "HeyGuys",
+                              "type": "FIRST_PARTY",
+                              "campaign": null,
+                              "tiers": [
+                                {
+                                  "id": "HeyGuys;1",
+                                  "bits": 1,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "HeyGuys;100",
+                                  "bits": 100,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "HeyGuys;1000",
+                                  "bits": 1000,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "HeyGuys;5000",
+                                  "bits": 5000,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "HeyGuys;10000",
+                                  "bits": 10000,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                }
+                              ],
+                              "__typename": "Cheermote"
+                            },
+                            {
+                              "id": "DansGame",
+                              "prefix": "DansGame",
+                              "type": "FIRST_PARTY",
+                              "campaign": null,
+                              "tiers": [
+                                {
+                                  "id": "DansGame;1",
+                                  "bits": 1,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "DansGame;100",
+                                  "bits": 100,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "DansGame;1000",
+                                  "bits": 1000,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "DansGame;5000",
+                                  "bits": 5000,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "DansGame;10000",
+                                  "bits": 10000,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                }
+                              ],
+                              "__typename": "Cheermote"
+                            },
+                            {
+                              "id": "TriHard",
+                              "prefix": "TriHard",
+                              "type": "FIRST_PARTY",
+                              "campaign": null,
+                              "tiers": [
+                                {
+                                  "id": "TriHard;1",
+                                  "bits": 1,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "TriHard;100",
+                                  "bits": 100,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "TriHard;1000",
+                                  "bits": 1000,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "TriHard;5000",
+                                  "bits": 5000,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "TriHard;10000",
+                                  "bits": 10000,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                }
+                              ],
+                              "__typename": "Cheermote"
+                            },
+                            {
+                              "id": "Kreygasm",
+                              "prefix": "Kreygasm",
+                              "type": "FIRST_PARTY",
+                              "campaign": null,
+                              "tiers": [
+                                {
+                                  "id": "Kreygasm;1",
+                                  "bits": 1,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "Kreygasm;100",
+                                  "bits": 100,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "Kreygasm;1000",
+                                  "bits": 1000,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "Kreygasm;5000",
+                                  "bits": 5000,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "Kreygasm;10000",
+                                  "bits": 10000,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                }
+                              ],
+                              "__typename": "Cheermote"
+                            },
+                            {
+                              "id": "4Head",
+                              "prefix": "4Head",
+                              "type": "FIRST_PARTY",
+                              "campaign": null,
+                              "tiers": [
+                                {
+                                  "id": "4Head;1",
+                                  "bits": 1,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "4Head;100",
+                                  "bits": 100,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "4Head;1000",
+                                  "bits": 1000,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "4Head;5000",
+                                  "bits": 5000,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "4Head;10000",
+                                  "bits": 10000,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                }
+                              ],
+                              "__typename": "Cheermote"
+                            },
+                            {
+                              "id": "SwiftRage",
+                              "prefix": "SwiftRage",
+                              "type": "FIRST_PARTY",
+                              "campaign": null,
+                              "tiers": [
+                                {
+                                  "id": "SwiftRage;1",
+                                  "bits": 1,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "SwiftRage;100",
+                                  "bits": 100,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "SwiftRage;1000",
+                                  "bits": 1000,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "SwiftRage;5000",
+                                  "bits": 5000,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "SwiftRage;10000",
+                                  "bits": 10000,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                }
+                              ],
+                              "__typename": "Cheermote"
+                            },
+                            {
+                              "id": "NotLikeThis",
+                              "prefix": "NotLikeThis",
+                              "type": "FIRST_PARTY",
+                              "campaign": null,
+                              "tiers": [
+                                {
+                                  "id": "NotLikeThis;1",
+                                  "bits": 1,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "NotLikeThis;100",
+                                  "bits": 100,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "NotLikeThis;1000",
+                                  "bits": 1000,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "NotLikeThis;5000",
+                                  "bits": 5000,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "NotLikeThis;10000",
+                                  "bits": 10000,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                }
+                              ],
+                              "__typename": "Cheermote"
+                            },
+                            {
+                              "id": "FailFish",
+                              "prefix": "FailFish",
+                              "type": "FIRST_PARTY",
+                              "campaign": null,
+                              "tiers": [
+                                {
+                                  "id": "FailFish;1",
+                                  "bits": 1,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "FailFish;100",
+                                  "bits": 100,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "FailFish;1000",
+                                  "bits": 1000,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "FailFish;5000",
+                                  "bits": 5000,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "FailFish;10000",
+                                  "bits": 10000,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                }
+                              ],
+                              "__typename": "Cheermote"
+                            },
+                            {
+                              "id": "VoHiYo",
+                              "prefix": "VoHiYo",
+                              "type": "FIRST_PARTY",
+                              "campaign": null,
+                              "tiers": [
+                                {
+                                  "id": "VoHiYo;1",
+                                  "bits": 1,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "VoHiYo;100",
+                                  "bits": 100,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "VoHiYo;1000",
+                                  "bits": 1000,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "VoHiYo;5000",
+                                  "bits": 5000,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "VoHiYo;10000",
+                                  "bits": 10000,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                }
+                              ],
+                              "__typename": "Cheermote"
+                            },
+                            {
+                              "id": "PJSalt",
+                              "prefix": "PJSalt",
+                              "type": "FIRST_PARTY",
+                              "campaign": null,
+                              "tiers": [
+                                {
+                                  "id": "PJSalt;1",
+                                  "bits": 1,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "PJSalt;100",
+                                  "bits": 100,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "PJSalt;1000",
+                                  "bits": 1000,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "PJSalt;5000",
+                                  "bits": 5000,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "PJSalt;10000",
+                                  "bits": 10000,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                }
+                              ],
+                              "__typename": "Cheermote"
+                            },
+                            {
+                              "id": "MrDestructoid",
+                              "prefix": "MrDestructoid",
+                              "type": "FIRST_PARTY",
+                              "campaign": null,
+                              "tiers": [
+                                {
+                                  "id": "MrDestructoid;1",
+                                  "bits": 1,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "MrDestructoid;100",
+                                  "bits": 100,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "MrDestructoid;1000",
+                                  "bits": 1000,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "MrDestructoid;5000",
+                                  "bits": 5000,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "MrDestructoid;10000",
+                                  "bits": 10000,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                }
+                              ],
+                              "__typename": "Cheermote"
+                            },
+                            {
+                              "id": "bday",
+                              "prefix": "bday",
+                              "type": "FIRST_PARTY",
+                              "campaign": null,
+                              "tiers": [
+                                {
+                                  "id": "bday;1",
+                                  "bits": 1,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "bday;100",
+                                  "bits": 100,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "bday;1000",
+                                  "bits": 1000,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "bday;5000",
+                                  "bits": 5000,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "bday;10000",
+                                  "bits": 10000,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                }
+                              ],
+                              "__typename": "Cheermote"
+                            },
+                            {
+                              "id": "RIPCheer",
+                              "prefix": "RIPCheer",
+                              "type": "FIRST_PARTY",
+                              "campaign": null,
+                              "tiers": [
+                                {
+                                  "id": "RIPCheer;1",
+                                  "bits": 1,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "RIPCheer;100",
+                                  "bits": 100,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "RIPCheer;1000",
+                                  "bits": 1000,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "RIPCheer;5000",
+                                  "bits": 5000,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "RIPCheer;10000",
+                                  "bits": 10000,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                }
+                              ],
+                              "__typename": "Cheermote"
+                            },
+                            {
+                              "id": "Shamrock",
+                              "prefix": "Shamrock",
+                              "type": "FIRST_PARTY",
+                              "campaign": null,
+                              "tiers": [
+                                {
+                                  "id": "Shamrock;1",
+                                  "bits": 1,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "Shamrock;100",
+                                  "bits": 100,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "Shamrock;1000",
+                                  "bits": 1000,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "Shamrock;5000",
+                                  "bits": 5000,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "Shamrock;10000",
+                                  "bits": 10000,
+                                  "canShowInBitsCard": true,
+                                  "__typename": "CheermoteTier"
+                                }
+                              ],
+                              "__typename": "Cheermote"
+                            },
+                            {
+                              "id": "DoodleCheer",
+                              "prefix": "DoodleCheer",
+                              "type": "THIRD_PARTY",
+                              "campaign": null,
+                              "tiers": [
+                                {
+                                  "id": "DoodleCheer;1",
+                                  "bits": 1,
+                                  "canShowInBitsCard": false,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "DoodleCheer;100",
+                                  "bits": 100,
+                                  "canShowInBitsCard": false,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "DoodleCheer;1000",
+                                  "bits": 1000,
+                                  "canShowInBitsCard": false,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "DoodleCheer;5000",
+                                  "bits": 5000,
+                                  "canShowInBitsCard": false,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "DoodleCheer;10000",
+                                  "bits": 10000,
+                                  "canShowInBitsCard": false,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "DoodleCheer;100000",
+                                  "bits": 100000,
+                                  "canShowInBitsCard": false,
+                                  "__typename": "CheermoteTier"
+                                }
+                              ],
+                              "__typename": "Cheermote"
+                            },
+                            {
+                              "id": "BitBoss",
+                              "prefix": "BitBoss",
+                              "type": "THIRD_PARTY",
+                              "campaign": null,
+                              "tiers": [
+                                {
+                                  "id": "BitBoss;1",
+                                  "bits": 1,
+                                  "canShowInBitsCard": false,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "BitBoss;100",
+                                  "bits": 100,
+                                  "canShowInBitsCard": false,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "BitBoss;1000",
+                                  "bits": 1000,
+                                  "canShowInBitsCard": false,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "BitBoss;5000",
+                                  "bits": 5000,
+                                  "canShowInBitsCard": false,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "BitBoss;10000",
+                                  "bits": 10000,
+                                  "canShowInBitsCard": false,
+                                  "__typename": "CheermoteTier"
+                                }
+                              ],
+                              "__typename": "Cheermote"
+                            },
+                            {
+                              "id": "Streamlabs",
+                              "prefix": "Streamlabs",
+                              "type": "THIRD_PARTY",
+                              "campaign": null,
+                              "tiers": [
+                                {
+                                  "id": "Streamlabs;1",
+                                  "bits": 1,
+                                  "canShowInBitsCard": false,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "Streamlabs;100",
+                                  "bits": 100,
+                                  "canShowInBitsCard": false,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "Streamlabs;1000",
+                                  "bits": 1000,
+                                  "canShowInBitsCard": false,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "Streamlabs;5000",
+                                  "bits": 5000,
+                                  "canShowInBitsCard": false,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "Streamlabs;10000",
+                                  "bits": 10000,
+                                  "canShowInBitsCard": false,
+                                  "__typename": "CheermoteTier"
+                                }
+                              ],
+                              "__typename": "Cheermote"
+                            },
+                            {
+                              "id": "Muxy",
+                              "prefix": "Muxy",
+                              "type": "THIRD_PARTY",
+                              "campaign": null,
+                              "tiers": [
+                                {
+                                  "id": "Muxy;1",
+                                  "bits": 1,
+                                  "canShowInBitsCard": false,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "Muxy;100",
+                                  "bits": 100,
+                                  "canShowInBitsCard": false,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "Muxy;1000",
+                                  "bits": 1000,
+                                  "canShowInBitsCard": false,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "Muxy;5000",
+                                  "bits": 5000,
+                                  "canShowInBitsCard": false,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "Muxy;10000",
+                                  "bits": 10000,
+                                  "canShowInBitsCard": false,
+                                  "__typename": "CheermoteTier"
+                                }
+                              ],
+                              "__typename": "Cheermote"
+                            },
+                            {
+                              "id": "HolidayCheer",
+                              "prefix": "HolidayCheer",
+                              "type": "THIRD_PARTY",
+                              "campaign": null,
+                              "tiers": [
+                                {
+                                  "id": "HolidayCheer;1",
+                                  "bits": 1,
+                                  "canShowInBitsCard": false,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "HolidayCheer;100",
+                                  "bits": 100,
+                                  "canShowInBitsCard": false,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "HolidayCheer;1000",
+                                  "bits": 1000,
+                                  "canShowInBitsCard": false,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "HolidayCheer;5000",
+                                  "bits": 5000,
+                                  "canShowInBitsCard": false,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "HolidayCheer;10000",
+                                  "bits": 10000,
+                                  "canShowInBitsCard": false,
+                                  "__typename": "CheermoteTier"
+                                }
+                              ],
+                              "__typename": "Cheermote"
+                            },
+                            {
+                              "id": "Goal",
+                              "prefix": "Goal",
+                              "type": "THIRD_PARTY",
+                              "campaign": null,
+                              "tiers": [
+                                {
+                                  "id": "Goal;1",
+                                  "bits": 1,
+                                  "canShowInBitsCard": false,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "Goal;100",
+                                  "bits": 100,
+                                  "canShowInBitsCard": false,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "Goal;1000",
+                                  "bits": 1000,
+                                  "canShowInBitsCard": false,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "Goal;5000",
+                                  "bits": 5000,
+                                  "canShowInBitsCard": false,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "Goal;10000",
+                                  "bits": 10000,
+                                  "canShowInBitsCard": false,
+                                  "__typename": "CheermoteTier"
+                                }
+                              ],
+                              "__typename": "Cheermote"
+                            },
+                            {
+                              "id": "Anon",
+                              "prefix": "Anon",
+                              "type": "DISPLAY_ONLY",
+                              "campaign": null,
+                              "tiers": [
+                                {
+                                  "id": "Anon;1",
+                                  "bits": 1,
+                                  "canShowInBitsCard": false,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "Anon;100",
+                                  "bits": 100,
+                                  "canShowInBitsCard": false,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "Anon;1000",
+                                  "bits": 1000,
+                                  "canShowInBitsCard": false,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "Anon;5000",
+                                  "bits": 5000,
+                                  "canShowInBitsCard": false,
+                                  "__typename": "CheermoteTier"
+                                },
+                                {
+                                  "id": "Anon;10000",
+                                  "bits": 10000,
+                                  "canShowInBitsCard": false,
+                                  "__typename": "CheermoteTier"
+                                }
+                              ],
+                              "__typename": "Cheermote"
+                            }
+                          ],
+                          "__typename": "CheermoteGroup"
+                        }
+                      ],
+                      "__typename": "GlobalCheerConfig"
+                    },
+                    "__typename": "Query"
+                  },
+                  "extensions": {
+                    "durationMilliseconds": 5,
+                    "operationName": "BitsConfigContext_Global",
+                    "requestID": "01K1NJK6SYNX8DB82231BR5VX7"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "#BrowsePage_AllDirectories": {
       "post": {
         "summary": "",
@@ -18592,6 +19993,867 @@
                         "durationMilliseconds": 21,
                         "operationName": "ChannelVideoShelvesQuery",
                         "requestID": "01JPSQGFZD8X0FWKWJSJNQ86T4"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "#ChatList_Badges": {
+      "post": {
+        "summary": "",
+        "tags": [
+          "Chat"
+        ],
+        "parameters": [
+          {
+            "in": "header",
+            "name": "Client-ID",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "default": "kimne78kx3ncx6brgo4mv6wki5h1ko"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatListBadgesRequestBody"
+              },
+              "examples": {
+                "default": {
+                  "value": {
+                    "operationName": "ChatList_Badges",
+                    "variables": {
+                      "channelLogin": "xqc"
+                    },
+                    "extensions": {
+                      "persistedQuery": {
+                        "version": 1,
+                        "sha256Hash": "838a7e0b47c09cac05f93ff081a9ff4f876b68f7624f0fc465fe30031e372fc2"
+                      }
+                    }
+                  }
+                },
+                "not exists": {
+                  "value": {
+                    "operationName": "ChatList_Badges",
+                    "variables": {
+                      "channelLogin": "user-not-exists"
+                    },
+                    "extensions": {
+                      "persistedQuery": {
+                        "version": 1,
+                        "sha256Hash": "838a7e0b47c09cac05f93ff081a9ff4f876b68f7624f0fc465fe30031e372fc2"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ChatListBadgesResponse"
+                },
+                "examples": {
+                  "default": {
+                    "value": {
+                      "data": {
+                        "user": {
+                          "id": "71092938",
+                          "primaryColorHex": "FFBF00",
+                          "broadcastBadges": [
+                            {
+                              "id": "Yml0czsxMDAwOzcxMDkyOTM4",
+                              "setID": "bits",
+                              "version": "1000",
+                              "title": "cheer 1000",
+                              "image1x": "https://static-cdn.jtvnw.net/badges/v1/8e443882-eba2-40ed-aee2-8f66995a4205/1",
+                              "image2x": "https://static-cdn.jtvnw.net/badges/v1/8e443882-eba2-40ed-aee2-8f66995a4205/2",
+                              "image4x": "https://static-cdn.jtvnw.net/badges/v1/8e443882-eba2-40ed-aee2-8f66995a4205/3",
+                              "clickAction": "VISIT_URL",
+                              "clickURL": "https://help.twitch.tv/s/article/guide-to-cheering-with-bits",
+                              "__typename": "Badge"
+                            },
+                            {
+                              "id": "Yml0czsxMDA7NzEwOTI5Mzg=",
+                              "setID": "bits",
+                              "version": "100",
+                              "title": "cheer 100",
+                              "image1x": "https://static-cdn.jtvnw.net/badges/v1/7695da2c-7e42-4652-9b94-a3f695b0ebfc/1",
+                              "image2x": "https://static-cdn.jtvnw.net/badges/v1/7695da2c-7e42-4652-9b94-a3f695b0ebfc/2",
+                              "image4x": "https://static-cdn.jtvnw.net/badges/v1/7695da2c-7e42-4652-9b94-a3f695b0ebfc/3",
+                              "clickAction": "VISIT_URL",
+                              "clickURL": "https://help.twitch.tv/s/article/guide-to-cheering-with-bits",
+                              "__typename": "Badge"
+                            },
+                            {
+                              "id": "Yml0czs3NTAwMDs3MTA5MjkzOA==",
+                              "setID": "bits",
+                              "version": "75000",
+                              "title": "cheer 75000",
+                              "image1x": "https://static-cdn.jtvnw.net/badges/v1/e47f1661-ee4a-4e5c-9cd5-d927b5121109/1",
+                              "image2x": "https://static-cdn.jtvnw.net/badges/v1/e47f1661-ee4a-4e5c-9cd5-d927b5121109/2",
+                              "image4x": "https://static-cdn.jtvnw.net/badges/v1/e47f1661-ee4a-4e5c-9cd5-d927b5121109/3",
+                              "clickAction": "VISIT_URL",
+                              "clickURL": "https://help.twitch.tv/s/article/guide-to-cheering-with-bits",
+                              "__typename": "Badge"
+                            },
+                            {
+                              "id": "Yml0czszMDAwMDA7NzEwOTI5Mzg=",
+                              "setID": "bits",
+                              "version": "300000",
+                              "title": "cheer 300000",
+                              "image1x": "https://static-cdn.jtvnw.net/badges/v1/0d693257-b3d1-4f39-af5b-ada537cee01a/1",
+                              "image2x": "https://static-cdn.jtvnw.net/badges/v1/0d693257-b3d1-4f39-af5b-ada537cee01a/2",
+                              "image4x": "https://static-cdn.jtvnw.net/badges/v1/0d693257-b3d1-4f39-af5b-ada537cee01a/3",
+                              "clickAction": "VISIT_URL",
+                              "clickURL": "https://help.twitch.tv/s/article/guide-to-cheering-with-bits",
+                              "__typename": "Badge"
+                            },
+                            {
+                              "id": "Yml0czsxMDAwMDA7NzEwOTI5Mzg=",
+                              "setID": "bits",
+                              "version": "100000",
+                              "title": "cheer 100000",
+                              "image1x": "https://static-cdn.jtvnw.net/badges/v1/d99ca01f-94e0-4395-9b9a-8c8eccd4ec92/1",
+                              "image2x": "https://static-cdn.jtvnw.net/badges/v1/d99ca01f-94e0-4395-9b9a-8c8eccd4ec92/2",
+                              "image4x": "https://static-cdn.jtvnw.net/badges/v1/d99ca01f-94e0-4395-9b9a-8c8eccd4ec92/3",
+                              "clickAction": "VISIT_URL",
+                              "clickURL": "https://help.twitch.tv/s/article/guide-to-cheering-with-bits",
+                              "__typename": "Badge"
+                            },
+                            {
+                              "id": "Yml0czs1MDAwMDA7NzEwOTI5Mzg=",
+                              "setID": "bits",
+                              "version": "500000",
+                              "title": "cheer 500000",
+                              "image1x": "https://static-cdn.jtvnw.net/badges/v1/d24f235b-8d9b-4d55-b7b1-732cb775b391/1",
+                              "image2x": "https://static-cdn.jtvnw.net/badges/v1/d24f235b-8d9b-4d55-b7b1-732cb775b391/2",
+                              "image4x": "https://static-cdn.jtvnw.net/badges/v1/d24f235b-8d9b-4d55-b7b1-732cb775b391/3",
+                              "clickAction": "VISIT_URL",
+                              "clickURL": "https://help.twitch.tv/s/article/guide-to-cheering-with-bits",
+                              "__typename": "Badge"
+                            },
+                            {
+                              "id": "Yml0czs0MDAwMDA7NzEwOTI5Mzg=",
+                              "setID": "bits",
+                              "version": "400000",
+                              "title": "cheer 400000",
+                              "image1x": "https://static-cdn.jtvnw.net/badges/v1/f13eae65-b81d-418c-b57b-cd7a33cbe5c3/1",
+                              "image2x": "https://static-cdn.jtvnw.net/badges/v1/f13eae65-b81d-418c-b57b-cd7a33cbe5c3/2",
+                              "image4x": "https://static-cdn.jtvnw.net/badges/v1/f13eae65-b81d-418c-b57b-cd7a33cbe5c3/3",
+                              "clickAction": "VISIT_URL",
+                              "clickURL": "https://help.twitch.tv/s/article/guide-to-cheering-with-bits",
+                              "__typename": "Badge"
+                            },
+                            {
+                              "id": "Yml0czs1MDAwOzcxMDkyOTM4",
+                              "setID": "bits",
+                              "version": "5000",
+                              "title": "cheer 5000",
+                              "image1x": "https://static-cdn.jtvnw.net/badges/v1/f8a33d94-2298-4bb4-8991-eeaaafcea359/1",
+                              "image2x": "https://static-cdn.jtvnw.net/badges/v1/f8a33d94-2298-4bb4-8991-eeaaafcea359/2",
+                              "image4x": "https://static-cdn.jtvnw.net/badges/v1/f8a33d94-2298-4bb4-8991-eeaaafcea359/3",
+                              "clickAction": "VISIT_URL",
+                              "clickURL": "https://help.twitch.tv/s/article/guide-to-cheering-with-bits",
+                              "__typename": "Badge"
+                            },
+                            {
+                              "id": "Yml0czsyNTAwMDs3MTA5MjkzOA==",
+                              "setID": "bits",
+                              "version": "25000",
+                              "title": "cheer 25000",
+                              "image1x": "https://static-cdn.jtvnw.net/badges/v1/c8338101-948a-4a2d-abea-0884b08d75c4/1",
+                              "image2x": "https://static-cdn.jtvnw.net/badges/v1/c8338101-948a-4a2d-abea-0884b08d75c4/2",
+                              "image4x": "https://static-cdn.jtvnw.net/badges/v1/c8338101-948a-4a2d-abea-0884b08d75c4/3",
+                              "clickAction": "VISIT_URL",
+                              "clickURL": "https://help.twitch.tv/s/article/guide-to-cheering-with-bits",
+                              "__typename": "Badge"
+                            },
+                            {
+                              "id": "Yml0czsyMDAwMDA7NzEwOTI5Mzg=",
+                              "setID": "bits",
+                              "version": "200000",
+                              "title": "cheer 200000",
+                              "image1x": "https://static-cdn.jtvnw.net/badges/v1/e444436e-b83b-4377-974f-0b1f84d9cbd9/1",
+                              "image2x": "https://static-cdn.jtvnw.net/badges/v1/e444436e-b83b-4377-974f-0b1f84d9cbd9/2",
+                              "image4x": "https://static-cdn.jtvnw.net/badges/v1/e444436e-b83b-4377-974f-0b1f84d9cbd9/3",
+                              "clickAction": "VISIT_URL",
+                              "clickURL": "https://help.twitch.tv/s/article/guide-to-cheering-with-bits",
+                              "__typename": "Badge"
+                            },
+                            {
+                              "id": "Yml0czsxMDAwMDs3MTA5MjkzOA==",
+                              "setID": "bits",
+                              "version": "10000",
+                              "title": "cheer 10000",
+                              "image1x": "https://static-cdn.jtvnw.net/badges/v1/6c5170c1-96e0-44f1-93eb-55c02f6a66f9/1",
+                              "image2x": "https://static-cdn.jtvnw.net/badges/v1/6c5170c1-96e0-44f1-93eb-55c02f6a66f9/2",
+                              "image4x": "https://static-cdn.jtvnw.net/badges/v1/6c5170c1-96e0-44f1-93eb-55c02f6a66f9/3",
+                              "clickAction": "VISIT_URL",
+                              "clickURL": "https://help.twitch.tv/s/article/guide-to-cheering-with-bits",
+                              "__typename": "Badge"
+                            },
+                            {
+                              "id": "Yml0czs1MDAwMDs3MTA5MjkzOA==",
+                              "setID": "bits",
+                              "version": "50000",
+                              "title": "cheer 50000",
+                              "image1x": "https://static-cdn.jtvnw.net/badges/v1/b682a073-d4bf-4155-be6a-dffb53671b7b/1",
+                              "image2x": "https://static-cdn.jtvnw.net/badges/v1/b682a073-d4bf-4155-be6a-dffb53671b7b/2",
+                              "image4x": "https://static-cdn.jtvnw.net/badges/v1/b682a073-d4bf-4155-be6a-dffb53671b7b/3",
+                              "clickAction": "VISIT_URL",
+                              "clickURL": "https://help.twitch.tv/s/article/guide-to-cheering-with-bits",
+                              "__typename": "Badge"
+                            },
+                            {
+                              "id": "c3Vic2NyaWJlcjs3Mjs3MTA5MjkzOA==",
+                              "setID": "subscriber",
+                              "version": "72",
+                              "title": "6-Year Subscriber",
+                              "image1x": "https://static-cdn.jtvnw.net/badges/v1/da69fb3c-e268-431b-93e3-0be828b26447/1",
+                              "image2x": "https://static-cdn.jtvnw.net/badges/v1/da69fb3c-e268-431b-93e3-0be828b26447/2",
+                              "image4x": "https://static-cdn.jtvnw.net/badges/v1/da69fb3c-e268-431b-93e3-0be828b26447/3",
+                              "clickAction": "SUBSCRIBE",
+                              "clickURL": null,
+                              "__typename": "Badge"
+                            },
+                            {
+                              "id": "c3Vic2NyaWJlcjszNjs3MTA5MjkzOA==",
+                              "setID": "subscriber",
+                              "version": "36",
+                              "title": "3-Year Subscriber",
+                              "image1x": "https://static-cdn.jtvnw.net/badges/v1/003036de-dcca-41be-851c-62ecb4400373/1",
+                              "image2x": "https://static-cdn.jtvnw.net/badges/v1/003036de-dcca-41be-851c-62ecb4400373/2",
+                              "image4x": "https://static-cdn.jtvnw.net/badges/v1/003036de-dcca-41be-851c-62ecb4400373/3",
+                              "clickAction": "SUBSCRIBE",
+                              "clickURL": null,
+                              "__typename": "Badge"
+                            },
+                            {
+                              "id": "c3Vic2NyaWJlcjs2MDs3MTA5MjkzOA==",
+                              "setID": "subscriber",
+                              "version": "60",
+                              "title": "5-Year Subscriber",
+                              "image1x": "https://static-cdn.jtvnw.net/badges/v1/977b4b6f-3923-4747-a416-119795e1c96a/1",
+                              "image2x": "https://static-cdn.jtvnw.net/badges/v1/977b4b6f-3923-4747-a416-119795e1c96a/2",
+                              "image4x": "https://static-cdn.jtvnw.net/badges/v1/977b4b6f-3923-4747-a416-119795e1c96a/3",
+                              "clickAction": "SUBSCRIBE",
+                              "clickURL": null,
+                              "__typename": "Badge"
+                            },
+                            {
+                              "id": "c3Vic2NyaWJlcjsyMDA2OzcxMDkyOTM4",
+                              "setID": "subscriber",
+                              "version": "2006",
+                              "title": "6-Month Subscriber",
+                              "image1x": "https://static-cdn.jtvnw.net/badges/v1/4c489109-0514-415a-8299-25b985ab8672/1",
+                              "image2x": "https://static-cdn.jtvnw.net/badges/v1/4c489109-0514-415a-8299-25b985ab8672/2",
+                              "image4x": "https://static-cdn.jtvnw.net/badges/v1/4c489109-0514-415a-8299-25b985ab8672/3",
+                              "clickAction": "SUBSCRIBE",
+                              "clickURL": null,
+                              "__typename": "Badge"
+                            },
+                            {
+                              "id": "c3Vic2NyaWJlcjs2OzcxMDkyOTM4",
+                              "setID": "subscriber",
+                              "version": "6",
+                              "title": "6-Month Subscriber",
+                              "image1x": "https://static-cdn.jtvnw.net/badges/v1/49a31432-3515-440f-8b57-f74b6bb156df/1",
+                              "image2x": "https://static-cdn.jtvnw.net/badges/v1/49a31432-3515-440f-8b57-f74b6bb156df/2",
+                              "image4x": "https://static-cdn.jtvnw.net/badges/v1/49a31432-3515-440f-8b57-f74b6bb156df/3",
+                              "clickAction": "SUBSCRIBE",
+                              "clickURL": null,
+                              "__typename": "Badge"
+                            },
+                            {
+                              "id": "c3Vic2NyaWJlcjszMDEyOzcxMDkyOTM4",
+                              "setID": "subscriber",
+                              "version": "3012",
+                              "title": "1-Year Subscriber",
+                              "image1x": "https://static-cdn.jtvnw.net/badges/v1/55382468-e07b-462c-a2a4-f56caf9ae155/1",
+                              "image2x": "https://static-cdn.jtvnw.net/badges/v1/55382468-e07b-462c-a2a4-f56caf9ae155/2",
+                              "image4x": "https://static-cdn.jtvnw.net/badges/v1/55382468-e07b-462c-a2a4-f56caf9ae155/3",
+                              "clickAction": "SUBSCRIBE",
+                              "clickURL": null,
+                              "__typename": "Badge"
+                            },
+                            {
+                              "id": "c3Vic2NyaWJlcjsyMDQ4OzcxMDkyOTM4",
+                              "setID": "subscriber",
+                              "version": "2048",
+                              "title": "4-Year Subscriber",
+                              "image1x": "https://static-cdn.jtvnw.net/badges/v1/f9ad5356-71dd-41bb-a7cd-92408844186e/1",
+                              "image2x": "https://static-cdn.jtvnw.net/badges/v1/f9ad5356-71dd-41bb-a7cd-92408844186e/2",
+                              "image4x": "https://static-cdn.jtvnw.net/badges/v1/f9ad5356-71dd-41bb-a7cd-92408844186e/3",
+                              "clickAction": "SUBSCRIBE",
+                              "clickURL": null,
+                              "__typename": "Badge"
+                            },
+                            {
+                              "id": "c3Vic2NyaWJlcjszOzcxMDkyOTM4",
+                              "setID": "subscriber",
+                              "version": "3",
+                              "title": "3-Month Subscriber",
+                              "image1x": "https://static-cdn.jtvnw.net/badges/v1/f944dba1-498a-4a78-a74e-587ae32aebda/1",
+                              "image2x": "https://static-cdn.jtvnw.net/badges/v1/f944dba1-498a-4a78-a74e-587ae32aebda/2",
+                              "image4x": "https://static-cdn.jtvnw.net/badges/v1/f944dba1-498a-4a78-a74e-587ae32aebda/3",
+                              "clickAction": "SUBSCRIBE",
+                              "clickURL": null,
+                              "__typename": "Badge"
+                            },
+                            {
+                              "id": "c3Vic2NyaWJlcjsyMDAzOzcxMDkyOTM4",
+                              "setID": "subscriber",
+                              "version": "2003",
+                              "title": "3-Month Subscriber",
+                              "image1x": "https://static-cdn.jtvnw.net/badges/v1/2cb07d59-38fc-43b3-ba43-18c05e442f9e/1",
+                              "image2x": "https://static-cdn.jtvnw.net/badges/v1/2cb07d59-38fc-43b3-ba43-18c05e442f9e/2",
+                              "image4x": "https://static-cdn.jtvnw.net/badges/v1/2cb07d59-38fc-43b3-ba43-18c05e442f9e/3",
+                              "clickAction": "SUBSCRIBE",
+                              "clickURL": null,
+                              "__typename": "Badge"
+                            },
+                            {
+                              "id": "c3Vic2NyaWJlcjs3ODs3MTA5MjkzOA==",
+                              "setID": "subscriber",
+                              "version": "78",
+                              "title": "6.5-Year Subscriber",
+                              "image1x": "https://static-cdn.jtvnw.net/badges/v1/83c831b9-660d-41f8-8add-d18e82fb6a10/1",
+                              "image2x": "https://static-cdn.jtvnw.net/badges/v1/83c831b9-660d-41f8-8add-d18e82fb6a10/2",
+                              "image4x": "https://static-cdn.jtvnw.net/badges/v1/83c831b9-660d-41f8-8add-d18e82fb6a10/3",
+                              "clickAction": "SUBSCRIBE",
+                              "clickURL": null,
+                              "__typename": "Badge"
+                            },
+                            {
+                              "id": "c3Vic2NyaWJlcjszMDAzOzcxMDkyOTM4",
+                              "setID": "subscriber",
+                              "version": "3003",
+                              "title": "3-Month Subscriber",
+                              "image1x": "https://static-cdn.jtvnw.net/badges/v1/014d0940-fdd2-4f09-8b18-07d8fb9a9fc8/1",
+                              "image2x": "https://static-cdn.jtvnw.net/badges/v1/014d0940-fdd2-4f09-8b18-07d8fb9a9fc8/2",
+                              "image4x": "https://static-cdn.jtvnw.net/badges/v1/014d0940-fdd2-4f09-8b18-07d8fb9a9fc8/3",
+                              "clickAction": "SUBSCRIBE",
+                              "clickURL": null,
+                              "__typename": "Badge"
+                            },
+                            {
+                              "id": "c3Vic2NyaWJlcjsyNDs3MTA5MjkzOA==",
+                              "setID": "subscriber",
+                              "version": "24",
+                              "title": "2-Year Subscriber",
+                              "image1x": "https://static-cdn.jtvnw.net/badges/v1/4a52ff82-3da8-4863-b7c3-8fc236c8f4de/1",
+                              "image2x": "https://static-cdn.jtvnw.net/badges/v1/4a52ff82-3da8-4863-b7c3-8fc236c8f4de/2",
+                              "image4x": "https://static-cdn.jtvnw.net/badges/v1/4a52ff82-3da8-4863-b7c3-8fc236c8f4de/3",
+                              "clickAction": "SUBSCRIBE",
+                              "clickURL": null,
+                              "__typename": "Badge"
+                            },
+                            {
+                              "id": "c3Vic2NyaWJlcjszMDQ4OzcxMDkyOTM4",
+                              "setID": "subscriber",
+                              "version": "3048",
+                              "title": "4-Year Subscriber",
+                              "image1x": "https://static-cdn.jtvnw.net/badges/v1/a3b25d22-7dbb-4c93-91e2-5ab56440bf9a/1",
+                              "image2x": "https://static-cdn.jtvnw.net/badges/v1/a3b25d22-7dbb-4c93-91e2-5ab56440bf9a/2",
+                              "image4x": "https://static-cdn.jtvnw.net/badges/v1/a3b25d22-7dbb-4c93-91e2-5ab56440bf9a/3",
+                              "clickAction": "SUBSCRIBE",
+                              "clickURL": null,
+                              "__typename": "Badge"
+                            },
+                            {
+                              "id": "c3Vic2NyaWJlcjszMDA5OzcxMDkyOTM4",
+                              "setID": "subscriber",
+                              "version": "3009",
+                              "title": "9-Month Subscriber",
+                              "image1x": "https://static-cdn.jtvnw.net/badges/v1/72592b47-8b4e-4bb4-a414-f4f6fe24cdaa/1",
+                              "image2x": "https://static-cdn.jtvnw.net/badges/v1/72592b47-8b4e-4bb4-a414-f4f6fe24cdaa/2",
+                              "image4x": "https://static-cdn.jtvnw.net/badges/v1/72592b47-8b4e-4bb4-a414-f4f6fe24cdaa/3",
+                              "clickAction": "SUBSCRIBE",
+                              "clickURL": null,
+                              "__typename": "Badge"
+                            },
+                            {
+                              "id": "c3Vic2NyaWJlcjsyMDYwOzcxMDkyOTM4",
+                              "setID": "subscriber",
+                              "version": "2060",
+                              "title": "5-Year Subscriber",
+                              "image1x": "https://static-cdn.jtvnw.net/badges/v1/aa6ee603-80f6-41e9-b4f1-b3f6942dad65/1",
+                              "image2x": "https://static-cdn.jtvnw.net/badges/v1/aa6ee603-80f6-41e9-b4f1-b3f6942dad65/2",
+                              "image4x": "https://static-cdn.jtvnw.net/badges/v1/aa6ee603-80f6-41e9-b4f1-b3f6942dad65/3",
+                              "clickAction": "SUBSCRIBE",
+                              "clickURL": null,
+                              "__typename": "Badge"
+                            },
+                            {
+                              "id": "c3Vic2NyaWJlcjszMDI0OzcxMDkyOTM4",
+                              "setID": "subscriber",
+                              "version": "3024",
+                              "title": "2-Year Subscriber",
+                              "image1x": "https://static-cdn.jtvnw.net/badges/v1/d7a0c6d6-68a9-442a-bef1-7931cddb3caf/1",
+                              "image2x": "https://static-cdn.jtvnw.net/badges/v1/d7a0c6d6-68a9-442a-bef1-7931cddb3caf/2",
+                              "image4x": "https://static-cdn.jtvnw.net/badges/v1/d7a0c6d6-68a9-442a-bef1-7931cddb3caf/3",
+                              "clickAction": "SUBSCRIBE",
+                              "clickURL": null,
+                              "__typename": "Badge"
+                            },
+                            {
+                              "id": "c3Vic2NyaWJlcjsyMDAyOzcxMDkyOTM4",
+                              "setID": "subscriber",
+                              "version": "2002",
+                              "title": "2-Month Subscriber",
+                              "image1x": "https://static-cdn.jtvnw.net/badges/v1/cfe48f2d-b1d6-41ce-b990-5ad22c8df175/1",
+                              "image2x": "https://static-cdn.jtvnw.net/badges/v1/cfe48f2d-b1d6-41ce-b990-5ad22c8df175/2",
+                              "image4x": "https://static-cdn.jtvnw.net/badges/v1/cfe48f2d-b1d6-41ce-b990-5ad22c8df175/3",
+                              "clickAction": "SUBSCRIBE",
+                              "clickURL": null,
+                              "__typename": "Badge"
+                            },
+                            {
+                              "id": "c3Vic2NyaWJlcjszMDcyOzcxMDkyOTM4",
+                              "setID": "subscriber",
+                              "version": "3072",
+                              "title": "6-Year Subscriber",
+                              "image1x": "https://static-cdn.jtvnw.net/badges/v1/86327417-fa8c-4ce8-96bc-bc59d194719a/1",
+                              "image2x": "https://static-cdn.jtvnw.net/badges/v1/86327417-fa8c-4ce8-96bc-bc59d194719a/2",
+                              "image4x": "https://static-cdn.jtvnw.net/badges/v1/86327417-fa8c-4ce8-96bc-bc59d194719a/3",
+                              "clickAction": "SUBSCRIBE",
+                              "clickURL": null,
+                              "__typename": "Badge"
+                            },
+                            {
+                              "id": "c3Vic2NyaWJlcjszMDA2OzcxMDkyOTM4",
+                              "setID": "subscriber",
+                              "version": "3006",
+                              "title": "6-Month Subscriber",
+                              "image1x": "https://static-cdn.jtvnw.net/badges/v1/72511b54-50fb-42eb-8e0d-744b35f3d278/1",
+                              "image2x": "https://static-cdn.jtvnw.net/badges/v1/72511b54-50fb-42eb-8e0d-744b35f3d278/2",
+                              "image4x": "https://static-cdn.jtvnw.net/badges/v1/72511b54-50fb-42eb-8e0d-744b35f3d278/3",
+                              "clickAction": "SUBSCRIBE",
+                              "clickURL": null,
+                              "__typename": "Badge"
+                            },
+                            {
+                              "id": "c3Vic2NyaWJlcjsyMDY2OzcxMDkyOTM4",
+                              "setID": "subscriber",
+                              "version": "2066",
+                              "title": "5.5-Year Subscriber",
+                              "image1x": "https://static-cdn.jtvnw.net/badges/v1/4fd4d194-b94c-418d-9863-9903a1bf2046/1",
+                              "image2x": "https://static-cdn.jtvnw.net/badges/v1/4fd4d194-b94c-418d-9863-9903a1bf2046/2",
+                              "image4x": "https://static-cdn.jtvnw.net/badges/v1/4fd4d194-b94c-418d-9863-9903a1bf2046/3",
+                              "clickAction": "SUBSCRIBE",
+                              "clickURL": null,
+                              "__typename": "Badge"
+                            },
+                            {
+                              "id": "c3Vic2NyaWJlcjszMDs3MTA5MjkzOA==",
+                              "setID": "subscriber",
+                              "version": "30",
+                              "title": "2.5-Year Subscriber",
+                              "image1x": "https://static-cdn.jtvnw.net/badges/v1/cfc78670-1b59-42d4-970a-305962e445dd/1",
+                              "image2x": "https://static-cdn.jtvnw.net/badges/v1/cfc78670-1b59-42d4-970a-305962e445dd/2",
+                              "image4x": "https://static-cdn.jtvnw.net/badges/v1/cfc78670-1b59-42d4-970a-305962e445dd/3",
+                              "clickAction": "SUBSCRIBE",
+                              "clickURL": null,
+                              "__typename": "Badge"
+                            },
+                            {
+                              "id": "c3Vic2NyaWJlcjs0ODs3MTA5MjkzOA==",
+                              "setID": "subscriber",
+                              "version": "48",
+                              "title": "4-Year Subscriber",
+                              "image1x": "https://static-cdn.jtvnw.net/badges/v1/a6123ea1-c396-4e97-ba80-40a4bd388bc0/1",
+                              "image2x": "https://static-cdn.jtvnw.net/badges/v1/a6123ea1-c396-4e97-ba80-40a4bd388bc0/2",
+                              "image4x": "https://static-cdn.jtvnw.net/badges/v1/a6123ea1-c396-4e97-ba80-40a4bd388bc0/3",
+                              "clickAction": "SUBSCRIBE",
+                              "clickURL": null,
+                              "__typename": "Badge"
+                            },
+                            {
+                              "id": "c3Vic2NyaWJlcjszMDM2OzcxMDkyOTM4",
+                              "setID": "subscriber",
+                              "version": "3036",
+                              "title": "3-Year Subscriber",
+                              "image1x": "https://static-cdn.jtvnw.net/badges/v1/b4ede532-a27a-4df9-9591-a193b5b0f8bc/1",
+                              "image2x": "https://static-cdn.jtvnw.net/badges/v1/b4ede532-a27a-4df9-9591-a193b5b0f8bc/2",
+                              "image4x": "https://static-cdn.jtvnw.net/badges/v1/b4ede532-a27a-4df9-9591-a193b5b0f8bc/3",
+                              "clickAction": "SUBSCRIBE",
+                              "clickURL": null,
+                              "__typename": "Badge"
+                            },
+                            {
+                              "id": "c3Vic2NyaWJlcjsyMDI0OzcxMDkyOTM4",
+                              "setID": "subscriber",
+                              "version": "2024",
+                              "title": "2-Year Subscriber",
+                              "image1x": "https://static-cdn.jtvnw.net/badges/v1/acfec79f-6fb7-457a-a1b8-5fe87b55e9c2/1",
+                              "image2x": "https://static-cdn.jtvnw.net/badges/v1/acfec79f-6fb7-457a-a1b8-5fe87b55e9c2/2",
+                              "image4x": "https://static-cdn.jtvnw.net/badges/v1/acfec79f-6fb7-457a-a1b8-5fe87b55e9c2/3",
+                              "clickAction": "SUBSCRIBE",
+                              "clickURL": null,
+                              "__typename": "Badge"
+                            },
+                            {
+                              "id": "c3Vic2NyaWJlcjsyOzcxMDkyOTM4",
+                              "setID": "subscriber",
+                              "version": "2",
+                              "title": "2-Month Subscriber",
+                              "image1x": "https://static-cdn.jtvnw.net/badges/v1/ad6a380a-1cbe-4d63-bb22-3f2843f7d243/1",
+                              "image2x": "https://static-cdn.jtvnw.net/badges/v1/ad6a380a-1cbe-4d63-bb22-3f2843f7d243/2",
+                              "image4x": "https://static-cdn.jtvnw.net/badges/v1/ad6a380a-1cbe-4d63-bb22-3f2843f7d243/3",
+                              "clickAction": "SUBSCRIBE",
+                              "clickURL": null,
+                              "__typename": "Badge"
+                            },
+                            {
+                              "id": "c3Vic2NyaWJlcjsxMjs3MTA5MjkzOA==",
+                              "setID": "subscriber",
+                              "version": "12",
+                              "title": "1-Year Subscriber",
+                              "image1x": "https://static-cdn.jtvnw.net/badges/v1/fd0dd500-9bdc-4c38-b7eb-a6009c5f6aed/1",
+                              "image2x": "https://static-cdn.jtvnw.net/badges/v1/fd0dd500-9bdc-4c38-b7eb-a6009c5f6aed/2",
+                              "image4x": "https://static-cdn.jtvnw.net/badges/v1/fd0dd500-9bdc-4c38-b7eb-a6009c5f6aed/3",
+                              "clickAction": "SUBSCRIBE",
+                              "clickURL": null,
+                              "__typename": "Badge"
+                            },
+                            {
+                              "id": "c3Vic2NyaWJlcjs1NDs3MTA5MjkzOA==",
+                              "setID": "subscriber",
+                              "version": "54",
+                              "title": "4.5-Year Subscriber",
+                              "image1x": "https://static-cdn.jtvnw.net/badges/v1/157581d0-b4fa-4a90-a4c4-532c80b52af8/1",
+                              "image2x": "https://static-cdn.jtvnw.net/badges/v1/157581d0-b4fa-4a90-a4c4-532c80b52af8/2",
+                              "image4x": "https://static-cdn.jtvnw.net/badges/v1/157581d0-b4fa-4a90-a4c4-532c80b52af8/3",
+                              "clickAction": "SUBSCRIBE",
+                              "clickURL": null,
+                              "__typename": "Badge"
+                            },
+                            {
+                              "id": "c3Vic2NyaWJlcjs0Mjs3MTA5MjkzOA==",
+                              "setID": "subscriber",
+                              "version": "42",
+                              "title": "3.5-Year Subscriber",
+                              "image1x": "https://static-cdn.jtvnw.net/badges/v1/ecf16608-a321-4b02-b22c-83489436be8b/1",
+                              "image2x": "https://static-cdn.jtvnw.net/badges/v1/ecf16608-a321-4b02-b22c-83489436be8b/2",
+                              "image4x": "https://static-cdn.jtvnw.net/badges/v1/ecf16608-a321-4b02-b22c-83489436be8b/3",
+                              "clickAction": "SUBSCRIBE",
+                              "clickURL": null,
+                              "__typename": "Badge"
+                            },
+                            {
+                              "id": "c3Vic2NyaWJlcjsyMDU0OzcxMDkyOTM4",
+                              "setID": "subscriber",
+                              "version": "2054",
+                              "title": "4.5-Year Subscriber",
+                              "image1x": "https://static-cdn.jtvnw.net/badges/v1/b7985d4f-ccd9-4507-9c97-d729b2f16b19/1",
+                              "image2x": "https://static-cdn.jtvnw.net/badges/v1/b7985d4f-ccd9-4507-9c97-d729b2f16b19/2",
+                              "image4x": "https://static-cdn.jtvnw.net/badges/v1/b7985d4f-ccd9-4507-9c97-d729b2f16b19/3",
+                              "clickAction": "SUBSCRIBE",
+                              "clickURL": null,
+                              "__typename": "Badge"
+                            },
+                            {
+                              "id": "c3Vic2NyaWJlcjszMDE4OzcxMDkyOTM4",
+                              "setID": "subscriber",
+                              "version": "3018",
+                              "title": "1.5-Year Subscriber",
+                              "image1x": "https://static-cdn.jtvnw.net/badges/v1/76f0e314-50d5-4c0e-83e9-3c6502a83ffd/1",
+                              "image2x": "https://static-cdn.jtvnw.net/badges/v1/76f0e314-50d5-4c0e-83e9-3c6502a83ffd/2",
+                              "image4x": "https://static-cdn.jtvnw.net/badges/v1/76f0e314-50d5-4c0e-83e9-3c6502a83ffd/3",
+                              "clickAction": "SUBSCRIBE",
+                              "clickURL": null,
+                              "__typename": "Badge"
+                            },
+                            {
+                              "id": "c3Vic2NyaWJlcjszMDAwOzcxMDkyOTM4",
+                              "setID": "subscriber",
+                              "version": "3000",
+                              "title": "Subscriber",
+                              "image1x": "https://static-cdn.jtvnw.net/badges/v1/bc880389-00a3-4235-b0b7-bdefb3b00989/1",
+                              "image2x": "https://static-cdn.jtvnw.net/badges/v1/bc880389-00a3-4235-b0b7-bdefb3b00989/2",
+                              "image4x": "https://static-cdn.jtvnw.net/badges/v1/bc880389-00a3-4235-b0b7-bdefb3b00989/3",
+                              "clickAction": "SUBSCRIBE",
+                              "clickURL": null,
+                              "__typename": "Badge"
+                            },
+                            {
+                              "id": "c3Vic2NyaWJlcjsxODs3MTA5MjkzOA==",
+                              "setID": "subscriber",
+                              "version": "18",
+                              "title": "1.5-Year Subscriber",
+                              "image1x": "https://static-cdn.jtvnw.net/badges/v1/5d81cf33-3855-4b79-9983-b636a97d2c78/1",
+                              "image2x": "https://static-cdn.jtvnw.net/badges/v1/5d81cf33-3855-4b79-9983-b636a97d2c78/2",
+                              "image4x": "https://static-cdn.jtvnw.net/badges/v1/5d81cf33-3855-4b79-9983-b636a97d2c78/3",
+                              "clickAction": "SUBSCRIBE",
+                              "clickURL": null,
+                              "__typename": "Badge"
+                            },
+                            {
+                              "id": "c3Vic2NyaWJlcjszMDc4OzcxMDkyOTM4",
+                              "setID": "subscriber",
+                              "version": "3078",
+                              "title": "6.5-Year Subscriber",
+                              "image1x": "https://static-cdn.jtvnw.net/badges/v1/c2da8714-a717-449d-93e0-41189709320d/1",
+                              "image2x": "https://static-cdn.jtvnw.net/badges/v1/c2da8714-a717-449d-93e0-41189709320d/2",
+                              "image4x": "https://static-cdn.jtvnw.net/badges/v1/c2da8714-a717-449d-93e0-41189709320d/3",
+                              "clickAction": "SUBSCRIBE",
+                              "clickURL": null,
+                              "__typename": "Badge"
+                            },
+                            {
+                              "id": "c3Vic2NyaWJlcjsyMDcyOzcxMDkyOTM4",
+                              "setID": "subscriber",
+                              "version": "2072",
+                              "title": "6-Year Subscriber",
+                              "image1x": "https://static-cdn.jtvnw.net/badges/v1/1a5c74f7-a000-45a1-85f3-260200ee3c51/1",
+                              "image2x": "https://static-cdn.jtvnw.net/badges/v1/1a5c74f7-a000-45a1-85f3-260200ee3c51/2",
+                              "image4x": "https://static-cdn.jtvnw.net/badges/v1/1a5c74f7-a000-45a1-85f3-260200ee3c51/3",
+                              "clickAction": "SUBSCRIBE",
+                              "clickURL": null,
+                              "__typename": "Badge"
+                            },
+                            {
+                              "id": "c3Vic2NyaWJlcjsyMDMwOzcxMDkyOTM4",
+                              "setID": "subscriber",
+                              "version": "2030",
+                              "title": "2.5-Year Subscriber",
+                              "image1x": "https://static-cdn.jtvnw.net/badges/v1/43816eb8-0f6e-470d-9e2b-87301b0de1b3/1",
+                              "image2x": "https://static-cdn.jtvnw.net/badges/v1/43816eb8-0f6e-470d-9e2b-87301b0de1b3/2",
+                              "image4x": "https://static-cdn.jtvnw.net/badges/v1/43816eb8-0f6e-470d-9e2b-87301b0de1b3/3",
+                              "clickAction": "SUBSCRIBE",
+                              "clickURL": null,
+                              "__typename": "Badge"
+                            },
+                            {
+                              "id": "c3Vic2NyaWJlcjsyMDc4OzcxMDkyOTM4",
+                              "setID": "subscriber",
+                              "version": "2078",
+                              "title": "6.5-Year Subscriber",
+                              "image1x": "https://static-cdn.jtvnw.net/badges/v1/77959e7f-f232-45ae-bea8-52b50bf94233/1",
+                              "image2x": "https://static-cdn.jtvnw.net/badges/v1/77959e7f-f232-45ae-bea8-52b50bf94233/2",
+                              "image4x": "https://static-cdn.jtvnw.net/badges/v1/77959e7f-f232-45ae-bea8-52b50bf94233/3",
+                              "clickAction": "SUBSCRIBE",
+                              "clickURL": null,
+                              "__typename": "Badge"
+                            },
+                            {
+                              "id": "c3Vic2NyaWJlcjsyMDE4OzcxMDkyOTM4",
+                              "setID": "subscriber",
+                              "version": "2018",
+                              "title": "1.5-Year Subscriber",
+                              "image1x": "https://static-cdn.jtvnw.net/badges/v1/6dae756e-c977-4c0e-bc07-3fdd143b18a9/1",
+                              "image2x": "https://static-cdn.jtvnw.net/badges/v1/6dae756e-c977-4c0e-bc07-3fdd143b18a9/2",
+                              "image4x": "https://static-cdn.jtvnw.net/badges/v1/6dae756e-c977-4c0e-bc07-3fdd143b18a9/3",
+                              "clickAction": "SUBSCRIBE",
+                              "clickURL": null,
+                              "__typename": "Badge"
+                            },
+                            {
+                              "id": "c3Vic2NyaWJlcjsyMDEyOzcxMDkyOTM4",
+                              "setID": "subscriber",
+                              "version": "2012",
+                              "title": "1-Year Subscriber",
+                              "image1x": "https://static-cdn.jtvnw.net/badges/v1/dde34f6d-716e-43e4-be35-c63ffa744eb3/1",
+                              "image2x": "https://static-cdn.jtvnw.net/badges/v1/dde34f6d-716e-43e4-be35-c63ffa744eb3/2",
+                              "image4x": "https://static-cdn.jtvnw.net/badges/v1/dde34f6d-716e-43e4-be35-c63ffa744eb3/3",
+                              "clickAction": "SUBSCRIBE",
+                              "clickURL": null,
+                              "__typename": "Badge"
+                            },
+                            {
+                              "id": "c3Vic2NyaWJlcjsyMDA5OzcxMDkyOTM4",
+                              "setID": "subscriber",
+                              "version": "2009",
+                              "title": "9-Month Subscriber",
+                              "image1x": "https://static-cdn.jtvnw.net/badges/v1/c1b777c7-e301-418a-a158-3c0cac7d4d8a/1",
+                              "image2x": "https://static-cdn.jtvnw.net/badges/v1/c1b777c7-e301-418a-a158-3c0cac7d4d8a/2",
+                              "image4x": "https://static-cdn.jtvnw.net/badges/v1/c1b777c7-e301-418a-a158-3c0cac7d4d8a/3",
+                              "clickAction": "SUBSCRIBE",
+                              "clickURL": null,
+                              "__typename": "Badge"
+                            },
+                            {
+                              "id": "c3Vic2NyaWJlcjszMDYwOzcxMDkyOTM4",
+                              "setID": "subscriber",
+                              "version": "3060",
+                              "title": "5-Year Subscriber",
+                              "image1x": "https://static-cdn.jtvnw.net/badges/v1/fbf60141-4642-49f7-afb9-06c441c5db1a/1",
+                              "image2x": "https://static-cdn.jtvnw.net/badges/v1/fbf60141-4642-49f7-afb9-06c441c5db1a/2",
+                              "image4x": "https://static-cdn.jtvnw.net/badges/v1/fbf60141-4642-49f7-afb9-06c441c5db1a/3",
+                              "clickAction": "SUBSCRIBE",
+                              "clickURL": null,
+                              "__typename": "Badge"
+                            },
+                            {
+                              "id": "c3Vic2NyaWJlcjs2Njs3MTA5MjkzOA==",
+                              "setID": "subscriber",
+                              "version": "66",
+                              "title": "5.5-Year Subscriber",
+                              "image1x": "https://static-cdn.jtvnw.net/badges/v1/0d914fbd-371b-479f-aceb-34dc3b9d7cc3/1",
+                              "image2x": "https://static-cdn.jtvnw.net/badges/v1/0d914fbd-371b-479f-aceb-34dc3b9d7cc3/2",
+                              "image4x": "https://static-cdn.jtvnw.net/badges/v1/0d914fbd-371b-479f-aceb-34dc3b9d7cc3/3",
+                              "clickAction": "SUBSCRIBE",
+                              "clickURL": null,
+                              "__typename": "Badge"
+                            },
+                            {
+                              "id": "c3Vic2NyaWJlcjszMDU0OzcxMDkyOTM4",
+                              "setID": "subscriber",
+                              "version": "3054",
+                              "title": "4.5-Year Subscriber",
+                              "image1x": "https://static-cdn.jtvnw.net/badges/v1/774975e4-8880-471c-8972-c07514f9a70c/1",
+                              "image2x": "https://static-cdn.jtvnw.net/badges/v1/774975e4-8880-471c-8972-c07514f9a70c/2",
+                              "image4x": "https://static-cdn.jtvnw.net/badges/v1/774975e4-8880-471c-8972-c07514f9a70c/3",
+                              "clickAction": "SUBSCRIBE",
+                              "clickURL": null,
+                              "__typename": "Badge"
+                            },
+                            {
+                              "id": "c3Vic2NyaWJlcjswOzcxMDkyOTM4",
+                              "setID": "subscriber",
+                              "version": "0",
+                              "title": "Subscriber",
+                              "image1x": "https://static-cdn.jtvnw.net/badges/v1/42212029-4b13-4e76-91b5-c8d7d520a08a/1",
+                              "image2x": "https://static-cdn.jtvnw.net/badges/v1/42212029-4b13-4e76-91b5-c8d7d520a08a/2",
+                              "image4x": "https://static-cdn.jtvnw.net/badges/v1/42212029-4b13-4e76-91b5-c8d7d520a08a/3",
+                              "clickAction": "SUBSCRIBE",
+                              "clickURL": null,
+                              "__typename": "Badge"
+                            },
+                            {
+                              "id": "c3Vic2NyaWJlcjszMDQyOzcxMDkyOTM4",
+                              "setID": "subscriber",
+                              "version": "3042",
+                              "title": "3.5-Year Subscriber",
+                              "image1x": "https://static-cdn.jtvnw.net/badges/v1/6bfa36ae-f65d-4feb-8d53-b1b55e6a6002/1",
+                              "image2x": "https://static-cdn.jtvnw.net/badges/v1/6bfa36ae-f65d-4feb-8d53-b1b55e6a6002/2",
+                              "image4x": "https://static-cdn.jtvnw.net/badges/v1/6bfa36ae-f65d-4feb-8d53-b1b55e6a6002/3",
+                              "clickAction": "SUBSCRIBE",
+                              "clickURL": null,
+                              "__typename": "Badge"
+                            },
+                            {
+                              "id": "c3Vic2NyaWJlcjsyMDQyOzcxMDkyOTM4",
+                              "setID": "subscriber",
+                              "version": "2042",
+                              "title": "3.5-Year Subscriber",
+                              "image1x": "https://static-cdn.jtvnw.net/badges/v1/601558b1-eea0-4014-859a-b99c85517c2b/1",
+                              "image2x": "https://static-cdn.jtvnw.net/badges/v1/601558b1-eea0-4014-859a-b99c85517c2b/2",
+                              "image4x": "https://static-cdn.jtvnw.net/badges/v1/601558b1-eea0-4014-859a-b99c85517c2b/3",
+                              "clickAction": "SUBSCRIBE",
+                              "clickURL": null,
+                              "__typename": "Badge"
+                            },
+                            {
+                              "id": "c3Vic2NyaWJlcjszMDAyOzcxMDkyOTM4",
+                              "setID": "subscriber",
+                              "version": "3002",
+                              "title": "2-Month Subscriber",
+                              "image1x": "https://static-cdn.jtvnw.net/badges/v1/9f6c1d38-814e-41f4-b929-9bda149957d0/1",
+                              "image2x": "https://static-cdn.jtvnw.net/badges/v1/9f6c1d38-814e-41f4-b929-9bda149957d0/2",
+                              "image4x": "https://static-cdn.jtvnw.net/badges/v1/9f6c1d38-814e-41f4-b929-9bda149957d0/3",
+                              "clickAction": "SUBSCRIBE",
+                              "clickURL": null,
+                              "__typename": "Badge"
+                            },
+                            {
+                              "id": "c3Vic2NyaWJlcjsyMDAwOzcxMDkyOTM4",
+                              "setID": "subscriber",
+                              "version": "2000",
+                              "title": "Subscriber",
+                              "image1x": "https://static-cdn.jtvnw.net/badges/v1/72467880-2890-4d73-9c92-4bcda0f89299/1",
+                              "image2x": "https://static-cdn.jtvnw.net/badges/v1/72467880-2890-4d73-9c92-4bcda0f89299/2",
+                              "image4x": "https://static-cdn.jtvnw.net/badges/v1/72467880-2890-4d73-9c92-4bcda0f89299/3",
+                              "clickAction": "SUBSCRIBE",
+                              "clickURL": null,
+                              "__typename": "Badge"
+                            },
+                            {
+                              "id": "c3Vic2NyaWJlcjs5OzcxMDkyOTM4",
+                              "setID": "subscriber",
+                              "version": "9",
+                              "title": "9-Month Subscriber",
+                              "image1x": "https://static-cdn.jtvnw.net/badges/v1/98a6b69b-3c08-4e59-a53c-b680e4dfbefb/1",
+                              "image2x": "https://static-cdn.jtvnw.net/badges/v1/98a6b69b-3c08-4e59-a53c-b680e4dfbefb/2",
+                              "image4x": "https://static-cdn.jtvnw.net/badges/v1/98a6b69b-3c08-4e59-a53c-b680e4dfbefb/3",
+                              "clickAction": "SUBSCRIBE",
+                              "clickURL": null,
+                              "__typename": "Badge"
+                            },
+                            {
+                              "id": "c3Vic2NyaWJlcjszMDMwOzcxMDkyOTM4",
+                              "setID": "subscriber",
+                              "version": "3030",
+                              "title": "2.5-Year Subscriber",
+                              "image1x": "https://static-cdn.jtvnw.net/badges/v1/62dbf0ee-cfe4-433d-af97-83aaa4e56548/1",
+                              "image2x": "https://static-cdn.jtvnw.net/badges/v1/62dbf0ee-cfe4-433d-af97-83aaa4e56548/2",
+                              "image4x": "https://static-cdn.jtvnw.net/badges/v1/62dbf0ee-cfe4-433d-af97-83aaa4e56548/3",
+                              "clickAction": "SUBSCRIBE",
+                              "clickURL": null,
+                              "__typename": "Badge"
+                            },
+                            {
+                              "id": "c3Vic2NyaWJlcjszMDY2OzcxMDkyOTM4",
+                              "setID": "subscriber",
+                              "version": "3066",
+                              "title": "5.5-Year Subscriber",
+                              "image1x": "https://static-cdn.jtvnw.net/badges/v1/d0bc0614-4c36-44eb-a2c6-4f6d107bdec4/1",
+                              "image2x": "https://static-cdn.jtvnw.net/badges/v1/d0bc0614-4c36-44eb-a2c6-4f6d107bdec4/2",
+                              "image4x": "https://static-cdn.jtvnw.net/badges/v1/d0bc0614-4c36-44eb-a2c6-4f6d107bdec4/3",
+                              "clickAction": "SUBSCRIBE",
+                              "clickURL": null,
+                              "__typename": "Badge"
+                            },
+                            {
+                              "id": "c3Vic2NyaWJlcjsyMDM2OzcxMDkyOTM4",
+                              "setID": "subscriber",
+                              "version": "2036",
+                              "title": "3-Year Subscriber",
+                              "image1x": "https://static-cdn.jtvnw.net/badges/v1/99373278-843f-4194-a2d8-3ec1a55a9c70/1",
+                              "image2x": "https://static-cdn.jtvnw.net/badges/v1/99373278-843f-4194-a2d8-3ec1a55a9c70/2",
+                              "image4x": "https://static-cdn.jtvnw.net/badges/v1/99373278-843f-4194-a2d8-3ec1a55a9c70/3",
+                              "clickAction": "SUBSCRIBE",
+                              "clickURL": null,
+                              "__typename": "Badge"
+                            }
+                          ],
+                          "self": null,
+                          "__typename": "User"
+                        }
+                      },
+                      "extensions": {
+                        "durationMilliseconds": 24,
+                        "operationName": "ChatList_Badges",
+                        "requestID": "01K1NM40DG2V2TRX6SVZQYNQB8"
+                      }
+                    }
+                  },
+                  "not exists": {
+                    "value": {
+                      "data": {
+                        "user": null
+                      },
+                      "extensions": {
+                        "durationMilliseconds": 24,
+                        "operationName": "ChatList_Badges",
+                        "requestID": "01K1NM74WXBATQY65M688557JN"
                       }
                     }
                   }
@@ -46841,6 +49103,464 @@
   },
   "components": {
     "schemas": {
+      "BitsConfigContextGlobalCheerConfig": {
+        "$id": "BitsConfigContextGlobalCheerConfig",
+        "additionalProperties": false,
+        "type": "object",
+        "properties": {
+          "displayConfig": {
+            "additionalProperties": false,
+            "type": "object",
+            "properties": {
+              "backgrounds": {
+                "type": "array",
+                "items": {
+                  "anyOf": [
+                    {
+                      "const": "light",
+                      "type": "string"
+                    },
+                    {
+                      "const": "dark",
+                      "type": "string"
+                    }
+                  ]
+                }
+              },
+              "colors": {
+                "type": "array",
+                "items": {
+                  "additionalProperties": false,
+                  "type": "object",
+                  "properties": {
+                    "bits": {
+                      "minimum": 1,
+                      "type": "integer"
+                    },
+                    "color": {
+                      "pattern": "^#[0-9a-fA-F]{6}$",
+                      "type": "string"
+                    },
+                    "__typename": {
+                      "const": "CheermoteColorConfig",
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "bits",
+                    "color",
+                    "__typename"
+                  ]
+                }
+              },
+              "order": {
+                "type": "array",
+                "items": {
+                  "anyOf": [
+                    {
+                      "const": "SPONSORED",
+                      "type": "string"
+                    },
+                    {
+                      "const": "DEFAULT",
+                      "type": "string"
+                    },
+                    {
+                      "const": "CUSTOM",
+                      "type": "string"
+                    },
+                    {
+                      "const": "CHARITY",
+                      "type": "string"
+                    },
+                    {
+                      "const": "FIRST_PARTY",
+                      "type": "string"
+                    },
+                    {
+                      "const": "THIRD_PARTY",
+                      "type": "string"
+                    },
+                    {
+                      "const": "ANONYMOUS",
+                      "type": "string"
+                    },
+                    {
+                      "const": "DISPLAY_ONLY",
+                      "type": "string"
+                    }
+                  ]
+                }
+              },
+              "scales": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "types": {
+                "type": "array",
+                "items": {
+                  "additionalProperties": false,
+                  "type": "object",
+                  "properties": {
+                    "animation": {
+                      "anyOf": [
+                        {
+                          "const": "static",
+                          "type": "string"
+                        },
+                        {
+                          "const": "animated",
+                          "type": "string"
+                        }
+                      ]
+                    },
+                    "extension": {
+                      "anyOf": [
+                        {
+                          "const": "png",
+                          "type": "string"
+                        },
+                        {
+                          "const": "gif",
+                          "type": "string"
+                        }
+                      ]
+                    },
+                    "__typename": {
+                      "const": "CheermoteDisplayType",
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "animation",
+                    "extension",
+                    "__typename"
+                  ]
+                }
+              },
+              "__typename": {
+                "const": "CheermoteDisplayConfig",
+                "type": "string"
+              }
+            },
+            "required": [
+              "backgrounds",
+              "colors",
+              "order",
+              "scales",
+              "types",
+              "__typename"
+            ]
+          },
+          "groups": {
+            "type": "array",
+            "items": {
+              "additionalProperties": false,
+              "type": "object",
+              "properties": {
+                "templateURL": {
+                  "type": "string"
+                },
+                "nodes": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/BitsConfigContextGlobalCheermote"
+                  }
+                },
+                "__typename": {
+                  "const": "CheermoteGroup",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "templateURL",
+                "nodes",
+                "__typename"
+              ]
+            }
+          },
+          "__typename": {
+            "const": "GlobalCheerConfig",
+            "type": "string"
+          }
+        },
+        "required": [
+          "displayConfig",
+          "groups",
+          "__typename"
+        ]
+      },
+      "BitsConfigContextGlobalCheermote": {
+        "$id": "BitsConfigContextGlobalCheermote",
+        "additionalProperties": false,
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "prefix": {
+            "type": "string"
+          },
+          "type": {
+            "anyOf": [
+              {
+                "const": "SPONSORED",
+                "type": "string"
+              },
+              {
+                "const": "DEFAULT",
+                "type": "string"
+              },
+              {
+                "const": "CUSTOM",
+                "type": "string"
+              },
+              {
+                "const": "CHARITY",
+                "type": "string"
+              },
+              {
+                "const": "FIRST_PARTY",
+                "type": "string"
+              },
+              {
+                "const": "THIRD_PARTY",
+                "type": "string"
+              },
+              {
+                "const": "ANONYMOUS",
+                "type": "string"
+              },
+              {
+                "const": "DISPLAY_ONLY",
+                "type": "string"
+              }
+            ]
+          },
+          "campaign": {
+            "type": "null"
+          },
+          "tiers": {
+            "type": "array",
+            "items": {
+              "additionalProperties": false,
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "bits": {
+                  "type": "number"
+                },
+                "canShowInBitsCard": {
+                  "type": "boolean"
+                },
+                "__typename": {
+                  "const": "CheermoteTier",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "bits",
+                "canShowInBitsCard",
+                "__typename"
+              ]
+            }
+          },
+          "__typename": {
+            "const": "Cheermote",
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "prefix",
+          "type",
+          "campaign",
+          "tiers",
+          "__typename"
+        ]
+      },
+      "BitsConfigContextGlobalVariables": {
+        "$id": "BitsConfigContextGlobalVariables",
+        "additionalProperties": false,
+        "type": "object",
+        "properties": {}
+      },
+      "BitsConfigContextGlobalRequestBody": {
+        "$id": "BitsConfigContextGlobalRequestBody",
+        "additionalProperties": false,
+        "type": "object",
+        "properties": {
+          "operationName": {
+            "const": "BitsConfigContext_Global",
+            "type": "string"
+          },
+          "variables": {
+            "$ref": "#/components/schemas/BitsConfigContextGlobalVariables"
+          },
+          "extensions": {
+            "additionalProperties": false,
+            "type": "object",
+            "properties": {
+              "persistedQuery": {
+                "additionalProperties": false,
+                "type": "object",
+                "properties": {
+                  "version": {
+                    "const": 1,
+                    "type": "number"
+                  },
+                  "sha256Hash": {
+                    "const": "6a265b86f3be1c8d11bdcf32c183e106028c6171e985cc2584d15f7840f5fee6",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "version",
+                  "sha256Hash"
+                ]
+              }
+            },
+            "required": [
+              "persistedQuery"
+            ]
+          }
+        },
+        "required": [
+          "operationName",
+          "variables",
+          "extensions"
+        ]
+      },
+      "BitsConfigContextGlobalData": {
+        "$id": "BitsConfigContextGlobalData",
+        "additionalProperties": false,
+        "type": "object",
+        "properties": {
+          "cheerConfig": {
+            "$ref": "#/components/schemas/BitsConfigContextGlobalCheerConfig"
+          },
+          "__typename": {
+            "const": "Query",
+            "type": "string"
+          }
+        },
+        "required": [
+          "cheerConfig",
+          "__typename"
+        ]
+      },
+      "BitsConfigContextGlobalResponse": {
+        "additionalProperties": false,
+        "type": "object",
+        "properties": {
+          "errors": {
+            "type": "array",
+            "items": {
+              "additionalProperties": false,
+              "type": "object",
+              "properties": {
+                "message": {
+                  "type": "string"
+                },
+                "path": {
+                  "type": "array",
+                  "items": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "number"
+                      }
+                    ]
+                  }
+                },
+                "locations": {
+                  "additionalProperties": false,
+                  "type": "object",
+                  "properties": {
+                    "line": {
+                      "type": "number"
+                    },
+                    "column": {
+                      "type": "number"
+                    }
+                  },
+                  "required": [
+                    "line",
+                    "column"
+                  ]
+                }
+              },
+              "required": [
+                "message"
+              ]
+            }
+          },
+          "data": {
+            "$id": "BitsConfigContextGlobalData",
+            "additionalProperties": false,
+            "type": "object",
+            "properties": {
+              "cheerConfig": {
+                "$ref": "#/components/schemas/BitsConfigContextGlobalCheerConfig"
+              },
+              "__typename": {
+                "const": "Query",
+                "type": "string"
+              }
+            },
+            "required": [
+              "cheerConfig",
+              "__typename"
+            ]
+          },
+          "extensions": {
+            "additionalProperties": false,
+            "type": "object",
+            "properties": {
+              "challenge": {
+                "additionalProperties": false,
+                "type": "object",
+                "properties": {
+                  "type": {
+                    "const": "integrity",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "type"
+                ]
+              },
+              "durationMilliseconds": {
+                "type": "number"
+              },
+              "operationName": {
+                "const": "BitsConfigContext_Global",
+                "type": "string"
+              },
+              "requestID": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "durationMilliseconds",
+              "operationName",
+              "requestID"
+            ]
+          }
+        },
+        "required": [
+          "data",
+          "extensions"
+        ],
+        "$id": "BitsConfigContextGlobalResponse"
+      },
       "BrowsePageGame": {
         "$id": "BrowsePageGame",
         "additionalProperties": false,
@@ -49630,6 +52350,309 @@
           "extensions"
         ],
         "$id": "ChannelVideoShelvesQueryResponse"
+      },
+      "ChatListBadgesUser": {
+        "$id": "ChatListBadgesUser",
+        "additionalProperties": false,
+        "type": "object",
+        "properties": {
+          "id": {
+            "pattern": "^[0-9]+$",
+            "type": "string"
+          },
+          "primaryColorHex": {
+            "anyOf": [
+              {
+                "type": "null"
+              },
+              {
+                "pattern": "^[0-9a-fA-F]{6}$",
+                "type": "string"
+              }
+            ]
+          },
+          "broadcastBadges": {
+            "type": "array",
+            "items": {
+              "additionalProperties": false,
+              "type": "object",
+              "properties": {
+                "id": {
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "setID": {
+                  "type": "string"
+                },
+                "version": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "image1x": {
+                  "format": "uri",
+                  "type": "string"
+                },
+                "image2x": {
+                  "format": "uri",
+                  "type": "string"
+                },
+                "image4x": {
+                  "format": "uri",
+                  "type": "string"
+                },
+                "clickAction": {
+                  "anyOf": [
+                    {
+                      "type": "null"
+                    },
+                    {
+                      "const": "VISIT_URL",
+                      "type": "string"
+                    },
+                    {
+                      "const": "SUBSCRIBE",
+                      "type": "string"
+                    },
+                    {
+                      "const": "GET_TURBO",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "clickURL": {
+                  "anyOf": [
+                    {
+                      "type": "null"
+                    },
+                    {
+                      "type": "string"
+                    }
+                  ]
+                },
+                "__typename": {
+                  "const": "Badge",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "setID",
+                "version",
+                "title",
+                "image1x",
+                "image2x",
+                "image4x",
+                "clickAction",
+                "clickURL",
+                "__typename"
+              ]
+            }
+          },
+          "self": {
+            "type": "null"
+          },
+          "__typename": {
+            "const": "User",
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "primaryColorHex",
+          "broadcastBadges",
+          "self",
+          "__typename"
+        ]
+      },
+      "ChatListBadgesVariables": {
+        "$id": "ChatListBadgesVariables",
+        "additionalProperties": false,
+        "type": "object",
+        "properties": {
+          "channelLogin": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "channelLogin"
+        ]
+      },
+      "ChatListBadgesRequestBody": {
+        "$id": "ChatListBadgesRequestBody",
+        "additionalProperties": false,
+        "type": "object",
+        "properties": {
+          "operationName": {
+            "const": "ChatList_Badges",
+            "type": "string"
+          },
+          "variables": {
+            "$ref": "#/components/schemas/ChatListBadgesVariables"
+          },
+          "extensions": {
+            "additionalProperties": false,
+            "type": "object",
+            "properties": {
+              "persistedQuery": {
+                "additionalProperties": false,
+                "type": "object",
+                "properties": {
+                  "version": {
+                    "const": 1,
+                    "type": "number"
+                  },
+                  "sha256Hash": {
+                    "const": "838a7e0b47c09cac05f93ff081a9ff4f876b68f7624f0fc465fe30031e372fc2",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "version",
+                  "sha256Hash"
+                ]
+              }
+            },
+            "required": [
+              "persistedQuery"
+            ]
+          }
+        },
+        "required": [
+          "operationName",
+          "variables",
+          "extensions"
+        ]
+      },
+      "ChatListBadgesData": {
+        "$id": "ChatListBadgesData",
+        "additionalProperties": false,
+        "type": "object",
+        "properties": {
+          "user": {
+            "anyOf": [
+              {
+                "type": "null"
+              },
+              {
+                "$ref": "#/components/schemas/ChatListBadgesUser"
+              }
+            ]
+          }
+        },
+        "required": [
+          "user"
+        ]
+      },
+      "ChatListBadgesResponse": {
+        "additionalProperties": false,
+        "type": "object",
+        "properties": {
+          "errors": {
+            "type": "array",
+            "items": {
+              "additionalProperties": false,
+              "type": "object",
+              "properties": {
+                "message": {
+                  "type": "string"
+                },
+                "path": {
+                  "type": "array",
+                  "items": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "number"
+                      }
+                    ]
+                  }
+                },
+                "locations": {
+                  "additionalProperties": false,
+                  "type": "object",
+                  "properties": {
+                    "line": {
+                      "type": "number"
+                    },
+                    "column": {
+                      "type": "number"
+                    }
+                  },
+                  "required": [
+                    "line",
+                    "column"
+                  ]
+                }
+              },
+              "required": [
+                "message"
+              ]
+            }
+          },
+          "data": {
+            "$id": "ChatListBadgesData",
+            "additionalProperties": false,
+            "type": "object",
+            "properties": {
+              "user": {
+                "anyOf": [
+                  {
+                    "type": "null"
+                  },
+                  {
+                    "$ref": "#/components/schemas/ChatListBadgesUser"
+                  }
+                ]
+              }
+            },
+            "required": [
+              "user"
+            ]
+          },
+          "extensions": {
+            "additionalProperties": false,
+            "type": "object",
+            "properties": {
+              "challenge": {
+                "additionalProperties": false,
+                "type": "object",
+                "properties": {
+                  "type": {
+                    "const": "integrity",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "type"
+                ]
+              },
+              "durationMilliseconds": {
+                "type": "number"
+              },
+              "operationName": {
+                "const": "ChatList_Badges",
+                "type": "string"
+              },
+              "requestID": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "durationMilliseconds",
+              "operationName",
+              "requestID"
+            ]
+          }
+        },
+        "required": [
+          "data",
+          "extensions"
+        ],
+        "$id": "ChatListBadgesResponse"
       },
       "ClipsCardsGameClip": {
         "$id": "ClipsCardsGameClip",
