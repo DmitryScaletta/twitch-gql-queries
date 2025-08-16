@@ -1,8 +1,8 @@
 {
-  "data": { "user": null },
+  "data": { "user": { "id": "", "stream": null, "__typename": "User" } },
   "extensions": {
     "durationMilliseconds": 21,
     "operationName": "UseViewCount",
-    "requestID": "01JP2AQA7CPWWPPT6PX9Y7R5XY"
+    "requestID": "01K2SB9SQCJPRATSEVHBBDKTVH"
   }
 }

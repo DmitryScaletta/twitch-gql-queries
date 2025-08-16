@@ -95,7 +95,8 @@ export const VideoSchema = strictObject(
 );
 
 const UserSchema = strictObject({
-  ...pick(schemas.User, ['id']),
+  ...pick(schemas.User, []),
+  id: T.Union([T.Literal(''), schemas.User.id]),
   videos: T.Union([
     T.Null(),
     strictObject({
@@ -112,7 +113,7 @@ const UserSchema = strictObject({
 });
 
 export const DataSchema = strictObject(
-  { user: T.Union([T.Null(), UserSchema]) },
+  { user: UserSchema },
   { $id: `${displayName}Data` },
 );
 

@@ -613,8 +613,8 @@ export interface ClipsCardsUserVariables {
 }
 
 export interface ClipsCardsUserData {
-  user: null | {
-    id: string;
+  user: {
+    id: '' | string & {};
     clips: null | {
       pageInfo: {
         hasNextPage: boolean;
@@ -845,8 +845,8 @@ export interface FilterableVideoTowerVideosVariables {
 }
 
 export interface FilterableVideoTowerVideosData {
-  user: null | {
-    id: string;
+  user: {
+    id: '' | string & {};
     videos: null | {
       edges: {
         cursor: null | string;
@@ -985,8 +985,8 @@ export interface GetUserIdVariables {
 }
 
 export interface GetUserIdData {
-  user: null | {
-    id: string;
+  user: {
+    id: '' | string & {};
     __typename: 'User';
   };
 }
@@ -1638,8 +1638,8 @@ export interface UseViewCountVariables {
 }
 
 export interface UseViewCountData {
-  user: null | {
-    id: string;
+  user: {
+    id: '' | string & {};
     stream: null | {
       id: string;
       viewersCount: number;
@@ -1742,8 +1742,8 @@ export interface VideoPreviewOverlayVariables {
 }
 
 export interface VideoPreviewOverlayData {
-  user: null | {
-    id: string;
+  user: {
+    id: '' | string & {};
     stream: null | {
       id: string;
       previewImageURL: string;

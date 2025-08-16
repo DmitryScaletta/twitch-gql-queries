@@ -1,8 +1,18 @@
 {
-  "data": { "user": null },
+  "data": {
+    "user": {
+      "id": "",
+      "clips": {
+        "pageInfo": { "hasNextPage": false, "__typename": "PageInfo" },
+        "edges": [],
+        "__typename": "ClipConnection"
+      },
+      "__typename": "User"
+    }
+  },
   "extensions": {
-    "durationMilliseconds": 20,
+    "durationMilliseconds": 30,
     "operationName": "ClipsCards__User",
-    "requestID": "01JPMZESRBCKGPZ34ND4EFAPTG"
+    "requestID": "01K2SARSZYCH0HRR59XR99J21T"
   }
 }

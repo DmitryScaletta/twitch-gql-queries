@@ -1,8 +1,8 @@
 {
-  "data": { "user": null },
+  "data": { "user": { "id": "", "__typename": "User" } },
   "extensions": {
-    "durationMilliseconds": 21,
+    "durationMilliseconds": 23,
     "operationName": "GetUserID",
-    "requestID": "01JPFYRGSA0PS8QGJ9X7P4TRRR"
+    "requestID": "01K2SB60AW4E0QMB5V4936SWTD"
   }
 }
