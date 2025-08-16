@@ -23104,12 +23104,23 @@
                   "not exists": {
                     "value": {
                       "data": {
-                        "user": null
+                        "user": {
+                          "id": "",
+                          "clips": {
+                            "pageInfo": {
+                              "hasNextPage": false,
+                              "__typename": "PageInfo"
+                            },
+                            "edges": [],
+                            "__typename": "ClipConnection"
+                          },
+                          "__typename": "User"
+                        }
                       },
                       "extensions": {
-                        "durationMilliseconds": 20,
+                        "durationMilliseconds": 30,
                         "operationName": "ClipsCards__User",
-                        "requestID": "01JPMZESRBCKGPZ34ND4EFAPTG"
+                        "requestID": "01K2SARSZYCH0HRR59XR99J21T"
                       }
                     }
                   },
@@ -36694,12 +36705,16 @@
                   "not exists": {
                     "value": {
                       "data": {
-                        "user": null
+                        "user": {
+                          "id": "",
+                          "videos": null,
+                          "__typename": "User"
+                        }
                       },
                       "extensions": {
                         "durationMilliseconds": 20,
                         "operationName": "FilterableVideoTower_Videos",
-                        "requestID": "01JPSM5GQSC25ETAKDRP668TN4"
+                        "requestID": "01K2SB32PF69KAZ36QNXKGPS7G"
                       }
                     }
                   },
@@ -38537,12 +38552,15 @@
                   "not exists": {
                     "value": {
                       "data": {
-                        "user": null
+                        "user": {
+                          "id": "",
+                          "__typename": "User"
+                        }
                       },
                       "extensions": {
-                        "durationMilliseconds": 21,
+                        "durationMilliseconds": 23,
                         "operationName": "GetUserID",
-                        "requestID": "01JPFYRGSA0PS8QGJ9X7P4TRRR"
+                        "requestID": "01K2SB60AW4E0QMB5V4936SWTD"
                       }
                     }
                   }
@@ -48272,12 +48290,16 @@
                   "not exists": {
                     "value": {
                       "data": {
-                        "user": null
+                        "user": {
+                          "id": "",
+                          "stream": null,
+                          "__typename": "User"
+                        }
                       },
                       "extensions": {
                         "durationMilliseconds": 21,
                         "operationName": "UseViewCount",
-                        "requestID": "01JP2AQA7CPWWPPT6PX9Y7R5XY"
+                        "requestID": "01K2SB9SQCJPRATSEVHBBDKTVH"
                       }
                     }
                   }
@@ -48910,12 +48932,16 @@
                   "not exists": {
                     "value": {
                       "data": {
-                        "user": null
+                        "user": {
+                          "id": "",
+                          "stream": null,
+                          "__typename": "User"
+                        }
                       },
                       "extensions": {
-                        "durationMilliseconds": 20,
+                        "durationMilliseconds": 21,
                         "operationName": "VideoPreviewOverlay",
-                        "requestID": "01JPFY4FW9893R0P7S71BJZPS3"
+                        "requestID": "01K2SBC71XAZ6NHWGD29PQJYF4"
                       }
                     }
                   }
@@ -53888,17 +53914,175 @@
         "type": "object",
         "properties": {
           "user": {
-            "anyOf": [
-              {
-                "type": "null"
+            "additionalProperties": false,
+            "type": "object",
+            "properties": {
+              "id": {
+                "anyOf": [
+                  {
+                    "const": "",
+                    "type": "string"
+                  },
+                  {
+                    "pattern": "^[0-9]+$",
+                    "type": "string"
+                  }
+                ]
               },
-              {
+              "clips": {
+                "anyOf": [
+                  {
+                    "type": "null"
+                  },
+                  {
+                    "additionalProperties": false,
+                    "type": "object",
+                    "properties": {
+                      "pageInfo": {
+                        "additionalProperties": false,
+                        "type": "object",
+                        "properties": {
+                          "hasNextPage": {
+                            "type": "boolean"
+                          },
+                          "__typename": {
+                            "const": "PageInfo",
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "hasNextPage",
+                          "__typename"
+                        ]
+                      },
+                      "edges": {
+                        "type": "array",
+                        "items": {
+                          "additionalProperties": false,
+                          "type": "object",
+                          "properties": {
+                            "cursor": {
+                              "anyOf": [
+                                {
+                                  "type": "null"
+                                },
+                                {
+                                  "type": "string"
+                                }
+                              ]
+                            },
+                            "node": {
+                              "$ref": "#/components/schemas/ClipsCardsUserClip"
+                            },
+                            "__typename": {
+                              "const": "ClipEdge",
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "cursor",
+                            "node",
+                            "__typename"
+                          ]
+                        }
+                      },
+                      "__typename": {
+                        "const": "ClipConnection",
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "pageInfo",
+                      "edges",
+                      "__typename"
+                    ]
+                  }
+                ]
+              },
+              "__typename": {
+                "const": "User",
+                "type": "string"
+              }
+            },
+            "required": [
+              "id",
+              "clips",
+              "__typename"
+            ]
+          }
+        },
+        "required": [
+          "user"
+        ]
+      },
+      "ClipsCardsUserResponse": {
+        "additionalProperties": false,
+        "type": "object",
+        "properties": {
+          "errors": {
+            "type": "array",
+            "items": {
+              "additionalProperties": false,
+              "type": "object",
+              "properties": {
+                "message": {
+                  "type": "string"
+                },
+                "path": {
+                  "type": "array",
+                  "items": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "number"
+                      }
+                    ]
+                  }
+                },
+                "locations": {
+                  "additionalProperties": false,
+                  "type": "object",
+                  "properties": {
+                    "line": {
+                      "type": "number"
+                    },
+                    "column": {
+                      "type": "number"
+                    }
+                  },
+                  "required": [
+                    "line",
+                    "column"
+                  ]
+                }
+              },
+              "required": [
+                "message"
+              ]
+            }
+          },
+          "data": {
+            "$id": "ClipsCardsUserData",
+            "additionalProperties": false,
+            "type": "object",
+            "properties": {
+              "user": {
                 "additionalProperties": false,
                 "type": "object",
                 "properties": {
                   "id": {
-                    "pattern": "^[0-9]+$",
-                    "type": "string"
+                    "anyOf": [
+                      {
+                        "const": "",
+                        "type": "string"
+                      },
+                      {
+                        "pattern": "^[0-9]+$",
+                        "type": "string"
+                      }
+                    ]
                   },
                   "clips": {
                     "anyOf": [
@@ -53979,162 +54163,6 @@
                   "id",
                   "clips",
                   "__typename"
-                ]
-              }
-            ]
-          }
-        },
-        "required": [
-          "user"
-        ]
-      },
-      "ClipsCardsUserResponse": {
-        "additionalProperties": false,
-        "type": "object",
-        "properties": {
-          "errors": {
-            "type": "array",
-            "items": {
-              "additionalProperties": false,
-              "type": "object",
-              "properties": {
-                "message": {
-                  "type": "string"
-                },
-                "path": {
-                  "type": "array",
-                  "items": {
-                    "anyOf": [
-                      {
-                        "type": "string"
-                      },
-                      {
-                        "type": "number"
-                      }
-                    ]
-                  }
-                },
-                "locations": {
-                  "additionalProperties": false,
-                  "type": "object",
-                  "properties": {
-                    "line": {
-                      "type": "number"
-                    },
-                    "column": {
-                      "type": "number"
-                    }
-                  },
-                  "required": [
-                    "line",
-                    "column"
-                  ]
-                }
-              },
-              "required": [
-                "message"
-              ]
-            }
-          },
-          "data": {
-            "$id": "ClipsCardsUserData",
-            "additionalProperties": false,
-            "type": "object",
-            "properties": {
-              "user": {
-                "anyOf": [
-                  {
-                    "type": "null"
-                  },
-                  {
-                    "additionalProperties": false,
-                    "type": "object",
-                    "properties": {
-                      "id": {
-                        "pattern": "^[0-9]+$",
-                        "type": "string"
-                      },
-                      "clips": {
-                        "anyOf": [
-                          {
-                            "type": "null"
-                          },
-                          {
-                            "additionalProperties": false,
-                            "type": "object",
-                            "properties": {
-                              "pageInfo": {
-                                "additionalProperties": false,
-                                "type": "object",
-                                "properties": {
-                                  "hasNextPage": {
-                                    "type": "boolean"
-                                  },
-                                  "__typename": {
-                                    "const": "PageInfo",
-                                    "type": "string"
-                                  }
-                                },
-                                "required": [
-                                  "hasNextPage",
-                                  "__typename"
-                                ]
-                              },
-                              "edges": {
-                                "type": "array",
-                                "items": {
-                                  "additionalProperties": false,
-                                  "type": "object",
-                                  "properties": {
-                                    "cursor": {
-                                      "anyOf": [
-                                        {
-                                          "type": "null"
-                                        },
-                                        {
-                                          "type": "string"
-                                        }
-                                      ]
-                                    },
-                                    "node": {
-                                      "$ref": "#/components/schemas/ClipsCardsUserClip"
-                                    },
-                                    "__typename": {
-                                      "const": "ClipEdge",
-                                      "type": "string"
-                                    }
-                                  },
-                                  "required": [
-                                    "cursor",
-                                    "node",
-                                    "__typename"
-                                  ]
-                                }
-                              },
-                              "__typename": {
-                                "const": "ClipConnection",
-                                "type": "string"
-                              }
-                            },
-                            "required": [
-                              "pageInfo",
-                              "edges",
-                              "__typename"
-                            ]
-                          }
-                        ]
-                      },
-                      "__typename": {
-                        "const": "User",
-                        "type": "string"
-                      }
-                    },
-                    "required": [
-                      "id",
-                      "clips",
-                      "__typename"
-                    ]
-                  }
                 ]
               }
             },
@@ -55869,17 +55897,175 @@
         "type": "object",
         "properties": {
           "user": {
-            "anyOf": [
-              {
-                "type": "null"
+            "additionalProperties": false,
+            "type": "object",
+            "properties": {
+              "id": {
+                "anyOf": [
+                  {
+                    "const": "",
+                    "type": "string"
+                  },
+                  {
+                    "pattern": "^[0-9]+$",
+                    "type": "string"
+                  }
+                ]
               },
-              {
+              "videos": {
+                "anyOf": [
+                  {
+                    "type": "null"
+                  },
+                  {
+                    "additionalProperties": false,
+                    "type": "object",
+                    "properties": {
+                      "edges": {
+                        "type": "array",
+                        "items": {
+                          "additionalProperties": false,
+                          "type": "object",
+                          "properties": {
+                            "cursor": {
+                              "anyOf": [
+                                {
+                                  "type": "null"
+                                },
+                                {
+                                  "type": "string"
+                                }
+                              ]
+                            },
+                            "node": {
+                              "$ref": "#/components/schemas/FilterableVideoTowerVideosVideo"
+                            },
+                            "__typename": {
+                              "const": "VideoEdge",
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "cursor",
+                            "node",
+                            "__typename"
+                          ]
+                        }
+                      },
+                      "pageInfo": {
+                        "additionalProperties": false,
+                        "type": "object",
+                        "properties": {
+                          "hasNextPage": {
+                            "type": "boolean"
+                          },
+                          "__typename": {
+                            "const": "PageInfo",
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "hasNextPage",
+                          "__typename"
+                        ]
+                      },
+                      "__typename": {
+                        "const": "VideoConnection",
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "edges",
+                      "pageInfo",
+                      "__typename"
+                    ]
+                  }
+                ]
+              },
+              "__typename": {
+                "const": "User",
+                "type": "string"
+              }
+            },
+            "required": [
+              "id",
+              "videos",
+              "__typename"
+            ]
+          }
+        },
+        "required": [
+          "user"
+        ]
+      },
+      "FilterableVideoTowerVideosResponse": {
+        "additionalProperties": false,
+        "type": "object",
+        "properties": {
+          "errors": {
+            "type": "array",
+            "items": {
+              "additionalProperties": false,
+              "type": "object",
+              "properties": {
+                "message": {
+                  "type": "string"
+                },
+                "path": {
+                  "type": "array",
+                  "items": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "number"
+                      }
+                    ]
+                  }
+                },
+                "locations": {
+                  "additionalProperties": false,
+                  "type": "object",
+                  "properties": {
+                    "line": {
+                      "type": "number"
+                    },
+                    "column": {
+                      "type": "number"
+                    }
+                  },
+                  "required": [
+                    "line",
+                    "column"
+                  ]
+                }
+              },
+              "required": [
+                "message"
+              ]
+            }
+          },
+          "data": {
+            "$id": "FilterableVideoTowerVideosData",
+            "additionalProperties": false,
+            "type": "object",
+            "properties": {
+              "user": {
                 "additionalProperties": false,
                 "type": "object",
                 "properties": {
                   "id": {
-                    "pattern": "^[0-9]+$",
-                    "type": "string"
+                    "anyOf": [
+                      {
+                        "const": "",
+                        "type": "string"
+                      },
+                      {
+                        "pattern": "^[0-9]+$",
+                        "type": "string"
+                      }
+                    ]
                   },
                   "videos": {
                     "anyOf": [
@@ -55960,162 +56146,6 @@
                   "id",
                   "videos",
                   "__typename"
-                ]
-              }
-            ]
-          }
-        },
-        "required": [
-          "user"
-        ]
-      },
-      "FilterableVideoTowerVideosResponse": {
-        "additionalProperties": false,
-        "type": "object",
-        "properties": {
-          "errors": {
-            "type": "array",
-            "items": {
-              "additionalProperties": false,
-              "type": "object",
-              "properties": {
-                "message": {
-                  "type": "string"
-                },
-                "path": {
-                  "type": "array",
-                  "items": {
-                    "anyOf": [
-                      {
-                        "type": "string"
-                      },
-                      {
-                        "type": "number"
-                      }
-                    ]
-                  }
-                },
-                "locations": {
-                  "additionalProperties": false,
-                  "type": "object",
-                  "properties": {
-                    "line": {
-                      "type": "number"
-                    },
-                    "column": {
-                      "type": "number"
-                    }
-                  },
-                  "required": [
-                    "line",
-                    "column"
-                  ]
-                }
-              },
-              "required": [
-                "message"
-              ]
-            }
-          },
-          "data": {
-            "$id": "FilterableVideoTowerVideosData",
-            "additionalProperties": false,
-            "type": "object",
-            "properties": {
-              "user": {
-                "anyOf": [
-                  {
-                    "type": "null"
-                  },
-                  {
-                    "additionalProperties": false,
-                    "type": "object",
-                    "properties": {
-                      "id": {
-                        "pattern": "^[0-9]+$",
-                        "type": "string"
-                      },
-                      "videos": {
-                        "anyOf": [
-                          {
-                            "type": "null"
-                          },
-                          {
-                            "additionalProperties": false,
-                            "type": "object",
-                            "properties": {
-                              "edges": {
-                                "type": "array",
-                                "items": {
-                                  "additionalProperties": false,
-                                  "type": "object",
-                                  "properties": {
-                                    "cursor": {
-                                      "anyOf": [
-                                        {
-                                          "type": "null"
-                                        },
-                                        {
-                                          "type": "string"
-                                        }
-                                      ]
-                                    },
-                                    "node": {
-                                      "$ref": "#/components/schemas/FilterableVideoTowerVideosVideo"
-                                    },
-                                    "__typename": {
-                                      "const": "VideoEdge",
-                                      "type": "string"
-                                    }
-                                  },
-                                  "required": [
-                                    "cursor",
-                                    "node",
-                                    "__typename"
-                                  ]
-                                }
-                              },
-                              "pageInfo": {
-                                "additionalProperties": false,
-                                "type": "object",
-                                "properties": {
-                                  "hasNextPage": {
-                                    "type": "boolean"
-                                  },
-                                  "__typename": {
-                                    "const": "PageInfo",
-                                    "type": "string"
-                                  }
-                                },
-                                "required": [
-                                  "hasNextPage",
-                                  "__typename"
-                                ]
-                              },
-                              "__typename": {
-                                "const": "VideoConnection",
-                                "type": "string"
-                              }
-                            },
-                            "required": [
-                              "edges",
-                              "pageInfo",
-                              "__typename"
-                            ]
-                          }
-                        ]
-                      },
-                      "__typename": {
-                        "const": "User",
-                        "type": "string"
-                      }
-                    },
-                    "required": [
-                      "id",
-                      "videos",
-                      "__typename"
-                    ]
-                  }
                 ]
               }
             },
@@ -57022,28 +57052,29 @@
         "type": "object",
         "properties": {
           "user": {
-            "anyOf": [
-              {
-                "type": "null"
-              },
-              {
-                "additionalProperties": false,
-                "type": "object",
-                "properties": {
-                  "id": {
-                    "pattern": "^[0-9]+$",
+            "additionalProperties": false,
+            "type": "object",
+            "properties": {
+              "id": {
+                "anyOf": [
+                  {
+                    "const": "",
                     "type": "string"
                   },
-                  "__typename": {
-                    "const": "User",
+                  {
+                    "pattern": "^[0-9]+$",
                     "type": "string"
                   }
-                },
-                "required": [
-                  "id",
-                  "__typename"
                 ]
+              },
+              "__typename": {
+                "const": "User",
+                "type": "string"
               }
+            },
+            "required": [
+              "id",
+              "__typename"
             ]
           }
         },
@@ -57105,28 +57136,29 @@
             "type": "object",
             "properties": {
               "user": {
-                "anyOf": [
-                  {
-                    "type": "null"
-                  },
-                  {
-                    "additionalProperties": false,
-                    "type": "object",
-                    "properties": {
-                      "id": {
-                        "pattern": "^[0-9]+$",
+                "additionalProperties": false,
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "anyOf": [
+                      {
+                        "const": "",
                         "type": "string"
                       },
-                      "__typename": {
-                        "const": "User",
+                      {
+                        "pattern": "^[0-9]+$",
                         "type": "string"
                       }
-                    },
-                    "required": [
-                      "id",
-                      "__typename"
                     ]
+                  },
+                  "__typename": {
+                    "const": "User",
+                    "type": "string"
                   }
+                },
+                "required": [
+                  "id",
+                  "__typename"
                 ]
               }
             },
@@ -62031,59 +62063,60 @@
         "type": "object",
         "properties": {
           "user": {
-            "anyOf": [
-              {
-                "type": "null"
-              },
-              {
-                "additionalProperties": false,
-                "type": "object",
-                "properties": {
-                  "id": {
+            "additionalProperties": false,
+            "type": "object",
+            "properties": {
+              "id": {
+                "anyOf": [
+                  {
+                    "const": "",
+                    "type": "string"
+                  },
+                  {
                     "pattern": "^[0-9]+$",
                     "type": "string"
-                  },
-                  "stream": {
-                    "anyOf": [
-                      {
-                        "type": "null"
-                      },
-                      {
-                        "additionalProperties": false,
-                        "type": "object",
-                        "properties": {
-                          "id": {
-                            "pattern": "^[0-9]+$",
-                            "type": "string"
-                          },
-                          "viewersCount": {
-                            "minimum": 0,
-                            "type": "integer"
-                          },
-                          "__typename": {
-                            "const": "Stream",
-                            "type": "string"
-                          }
-                        },
-                        "required": [
-                          "id",
-                          "viewersCount",
-                          "__typename"
-                        ]
-                      }
-                    ]
-                  },
-                  "__typename": {
-                    "const": "User",
-                    "type": "string"
                   }
-                },
-                "required": [
-                  "id",
-                  "stream",
-                  "__typename"
                 ]
+              },
+              "stream": {
+                "anyOf": [
+                  {
+                    "type": "null"
+                  },
+                  {
+                    "additionalProperties": false,
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "pattern": "^[0-9]+$",
+                        "type": "string"
+                      },
+                      "viewersCount": {
+                        "minimum": 0,
+                        "type": "integer"
+                      },
+                      "__typename": {
+                        "const": "Stream",
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "id",
+                      "viewersCount",
+                      "__typename"
+                    ]
+                  }
+                ]
+              },
+              "__typename": {
+                "const": "User",
+                "type": "string"
               }
+            },
+            "required": [
+              "id",
+              "stream",
+              "__typename"
             ]
           }
         },
@@ -62145,59 +62178,60 @@
             "type": "object",
             "properties": {
               "user": {
-                "anyOf": [
-                  {
-                    "type": "null"
-                  },
-                  {
-                    "additionalProperties": false,
-                    "type": "object",
-                    "properties": {
-                      "id": {
+                "additionalProperties": false,
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "anyOf": [
+                      {
+                        "const": "",
+                        "type": "string"
+                      },
+                      {
                         "pattern": "^[0-9]+$",
                         "type": "string"
-                      },
-                      "stream": {
-                        "anyOf": [
-                          {
-                            "type": "null"
-                          },
-                          {
-                            "additionalProperties": false,
-                            "type": "object",
-                            "properties": {
-                              "id": {
-                                "pattern": "^[0-9]+$",
-                                "type": "string"
-                              },
-                              "viewersCount": {
-                                "minimum": 0,
-                                "type": "integer"
-                              },
-                              "__typename": {
-                                "const": "Stream",
-                                "type": "string"
-                              }
-                            },
-                            "required": [
-                              "id",
-                              "viewersCount",
-                              "__typename"
-                            ]
-                          }
-                        ]
-                      },
-                      "__typename": {
-                        "const": "User",
-                        "type": "string"
                       }
-                    },
-                    "required": [
-                      "id",
-                      "stream",
-                      "__typename"
                     ]
+                  },
+                  "stream": {
+                    "anyOf": [
+                      {
+                        "type": "null"
+                      },
+                      {
+                        "additionalProperties": false,
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "pattern": "^[0-9]+$",
+                            "type": "string"
+                          },
+                          "viewersCount": {
+                            "minimum": 0,
+                            "type": "integer"
+                          },
+                          "__typename": {
+                            "const": "Stream",
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "id",
+                          "viewersCount",
+                          "__typename"
+                        ]
+                      }
+                    ]
+                  },
+                  "__typename": {
+                    "const": "User",
+                    "type": "string"
                   }
+                },
+                "required": [
+                  "id",
+                  "stream",
+                  "__typename"
                 ]
               }
             },
@@ -63809,63 +63843,64 @@
         "type": "object",
         "properties": {
           "user": {
-            "anyOf": [
-              {
-                "type": "null"
-              },
-              {
-                "additionalProperties": false,
-                "type": "object",
-                "properties": {
-                  "id": {
+            "additionalProperties": false,
+            "type": "object",
+            "properties": {
+              "id": {
+                "anyOf": [
+                  {
+                    "const": "",
+                    "type": "string"
+                  },
+                  {
                     "pattern": "^[0-9]+$",
                     "type": "string"
+                  }
+                ]
+              },
+              "stream": {
+                "anyOf": [
+                  {
+                    "type": "null"
                   },
-                  "stream": {
-                    "anyOf": [
-                      {
+                  {
+                    "additionalProperties": false,
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "pattern": "^[0-9]+$",
+                        "type": "string"
+                      },
+                      "previewImageURL": {
+                        "format": "uri",
+                        "type": "string"
+                      },
+                      "restrictionType": {
                         "type": "null"
                       },
-                      {
-                        "additionalProperties": false,
-                        "type": "object",
-                        "properties": {
-                          "id": {
-                            "pattern": "^[0-9]+$",
-                            "type": "string"
-                          },
-                          "previewImageURL": {
-                            "format": "uri",
-                            "type": "string"
-                          },
-                          "restrictionType": {
-                            "type": "null"
-                          },
-                          "__typename": {
-                            "const": "Stream",
-                            "type": "string"
-                          }
-                        },
-                        "required": [
-                          "id",
-                          "previewImageURL",
-                          "restrictionType",
-                          "__typename"
-                        ]
+                      "__typename": {
+                        "const": "Stream",
+                        "type": "string"
                       }
+                    },
+                    "required": [
+                      "id",
+                      "previewImageURL",
+                      "restrictionType",
+                      "__typename"
                     ]
-                  },
-                  "__typename": {
-                    "const": "User",
-                    "type": "string"
                   }
-                },
-                "required": [
-                  "id",
-                  "stream",
-                  "__typename"
                 ]
+              },
+              "__typename": {
+                "const": "User",
+                "type": "string"
               }
+            },
+            "required": [
+              "id",
+              "stream",
+              "__typename"
             ]
           }
         },
@@ -63927,63 +63962,64 @@
             "type": "object",
             "properties": {
               "user": {
-                "anyOf": [
-                  {
-                    "type": "null"
-                  },
-                  {
-                    "additionalProperties": false,
-                    "type": "object",
-                    "properties": {
-                      "id": {
+                "additionalProperties": false,
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "anyOf": [
+                      {
+                        "const": "",
+                        "type": "string"
+                      },
+                      {
                         "pattern": "^[0-9]+$",
                         "type": "string"
+                      }
+                    ]
+                  },
+                  "stream": {
+                    "anyOf": [
+                      {
+                        "type": "null"
                       },
-                      "stream": {
-                        "anyOf": [
-                          {
+                      {
+                        "additionalProperties": false,
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "pattern": "^[0-9]+$",
+                            "type": "string"
+                          },
+                          "previewImageURL": {
+                            "format": "uri",
+                            "type": "string"
+                          },
+                          "restrictionType": {
                             "type": "null"
                           },
-                          {
-                            "additionalProperties": false,
-                            "type": "object",
-                            "properties": {
-                              "id": {
-                                "pattern": "^[0-9]+$",
-                                "type": "string"
-                              },
-                              "previewImageURL": {
-                                "format": "uri",
-                                "type": "string"
-                              },
-                              "restrictionType": {
-                                "type": "null"
-                              },
-                              "__typename": {
-                                "const": "Stream",
-                                "type": "string"
-                              }
-                            },
-                            "required": [
-                              "id",
-                              "previewImageURL",
-                              "restrictionType",
-                              "__typename"
-                            ]
+                          "__typename": {
+                            "const": "Stream",
+                            "type": "string"
                           }
+                        },
+                        "required": [
+                          "id",
+                          "previewImageURL",
+                          "restrictionType",
+                          "__typename"
                         ]
-                      },
-                      "__typename": {
-                        "const": "User",
-                        "type": "string"
                       }
-                    },
-                    "required": [
-                      "id",
-                      "stream",
-                      "__typename"
                     ]
+                  },
+                  "__typename": {
+                    "const": "User",
+                    "type": "string"
                   }
+                },
+                "required": [
+                  "id",
+                  "stream",
+                  "__typename"
                 ]
               }
             },
