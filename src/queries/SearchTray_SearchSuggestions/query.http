@@ -1,4 +1,6 @@
-### SearchTray_SearchSuggestions
+# SearchTray_SearchSuggestions
+
+### all variables
 
 POST https://gql.twitch.tv/gql
 Content-Type: application/json
@@ -8,12 +10,54 @@ Client-Id: {{$dotenv CLIENT_ID}}
   "operationName": "SearchTray_SearchSuggestions",
   "variables": {
     "queryFragment": "forse",
-    "withOfflineChannelContent": true
+    "withOfflineChannelContent": false,
+    "includeIsDJ": true
   },
   "extensions": {
     "persistedQuery": {
       "version": 1,
-      "sha256Hash": "34e1899cd559b7d6a4ac25e3bdaad37a83324644b0085b4cc478d0f845f8f0de"
+      "sha256Hash": "2749d8bc89a2ddd37518e23742a4287becd3064c40465d8b57317cabd0efe096"
+    }
+  }
+}
+
+### includeIsDJ: false
+
+POST https://gql.twitch.tv/gql
+Content-Type: application/json
+Client-Id: {{$dotenv CLIENT_ID}}
+
+{
+  "operationName": "SearchTray_SearchSuggestions",
+  "variables": {
+    "queryFragment": "summ",
+    "includeIsDJ": false
+  },
+  "extensions": {
+    "persistedQuery": {
+      "version": 1,
+      "sha256Hash": "2749d8bc89a2ddd37518e23742a4287becd3064c40465d8b57317cabd0efe096"
+    }
+  }
+}
+
+### withOfflineChannelContent: true
+
+POST https://gql.twitch.tv/gql
+Content-Type: application/json
+Client-Id: {{$dotenv CLIENT_ID}}
+
+{
+  "operationName": "SearchTray_SearchSuggestions",
+  "variables": {
+    "queryFragment": "xqc",
+    "withOfflineChannelContent": true,
+    "includeIsDJ": true
+  },
+  "extensions": {
+    "persistedQuery": {
+      "version": 1,
+      "sha256Hash": "2749d8bc89a2ddd37518e23742a4287becd3064c40465d8b57317cabd0efe096"
     }
   }
 }

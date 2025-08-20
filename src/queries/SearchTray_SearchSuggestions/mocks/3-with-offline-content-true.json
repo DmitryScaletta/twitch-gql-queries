@@ -1,0 +1,229 @@
+{
+  "data": {
+    "searchSuggestions": {
+      "edges": [
+        {
+          "node": {
+            "content": {
+              "__typename": "SearchSuggestionChannel",
+              "id": "71092938",
+              "isLive": false,
+              "isVerified": true,
+              "login": "xqc",
+              "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/xqc-profile_image-9298dca608632101-50x50.jpeg",
+              "user": {
+                "id": "71092938",
+                "roles": {
+                  "isParticipatingDJ": false,
+                  "__typename": "UserRoles"
+                },
+                "stream": null,
+                "__typename": "User"
+              }
+            },
+            "matchingCharacters": {
+              "start": 0,
+              "end": 3,
+              "__typename": "SearchSuggestionHighlight"
+            },
+            "id": "b23429ba-edff-4fed-aba6-a877f2c21c35",
+            "text": "xqc",
+            "__typename": "SearchSuggestion"
+          },
+          "__typename": "SearchSuggestionEdge"
+        },
+        {
+          "node": {
+            "content": {
+              "__typename": "SearchSuggestionChannel",
+              "id": "1140379413",
+              "isLive": false,
+              "isVerified": false,
+              "login": "xqc_destiny",
+              "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/607f82a6-2cb5-4230-a345-cd090724a0f8-profile_image-50x50.png",
+              "user": {
+                "id": "1140379413",
+                "roles": {
+                  "isParticipatingDJ": false,
+                  "__typename": "UserRoles"
+                },
+                "stream": null,
+                "__typename": "User"
+              }
+            },
+            "matchingCharacters": {
+              "start": 0,
+              "end": 3,
+              "__typename": "SearchSuggestionHighlight"
+            },
+            "id": "c8c19701-4455-4cc8-87ae-24b2d0b80c8c",
+            "text": "xqc_destiny",
+            "__typename": "SearchSuggestion"
+          },
+          "__typename": "SearchSuggestionEdge"
+        },
+        {
+          "node": {
+            "content": {
+              "__typename": "SearchSuggestionChannel",
+              "id": "1149531372",
+              "isLive": false,
+              "isVerified": false,
+              "login": "xqc_bigest_fan_ever_380kg",
+              "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/4f866820-9e86-4d11-b3b9-e41a40397b0d-profile_image-50x50.png",
+              "user": {
+                "id": "1149531372",
+                "roles": {
+                  "isParticipatingDJ": false,
+                  "__typename": "UserRoles"
+                },
+                "stream": null,
+                "__typename": "User"
+              }
+            },
+            "matchingCharacters": {
+              "start": 0,
+              "end": 3,
+              "__typename": "SearchSuggestionHighlight"
+            },
+            "id": "93842182-eaf6-4fa2-b30f-2bbb0f0e74cc",
+            "text": "xqc_bigest_fan_ever_380kg",
+            "__typename": "SearchSuggestion"
+          },
+          "__typename": "SearchSuggestionEdge"
+        },
+        {
+          "node": {
+            "content": {
+              "__typename": "SearchSuggestionChannel",
+              "id": "247808909",
+              "isLive": false,
+              "isVerified": true,
+              "login": "qtcinderella",
+              "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/051f2eb6-fac4-4921-bf65-b87f2177939c-profile_image-50x50.png",
+              "user": {
+                "id": "247808909",
+                "roles": {
+                  "isParticipatingDJ": false,
+                  "__typename": "UserRoles"
+                },
+                "stream": null,
+                "__typename": "User"
+              }
+            },
+            "matchingCharacters": {
+              "start": 0,
+              "end": 0,
+              "__typename": "SearchSuggestionHighlight"
+            },
+            "id": "54ded32c-e12c-4089-8b21-1d228508004b",
+            "text": "qtcinderella",
+            "__typename": "SearchSuggestion"
+          },
+          "__typename": "SearchSuggestionEdge"
+        },
+        {
+          "node": {
+            "content": {
+              "__typename": "SearchSuggestionChannel",
+              "id": "1216662566",
+              "isLive": false,
+              "isVerified": false,
+              "login": "xqc2011",
+              "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/d27d8eae-9c0c-441b-891c-94f000c974b9-profile_image-50x50.png",
+              "user": {
+                "id": "1216662566",
+                "roles": {
+                  "isParticipatingDJ": false,
+                  "__typename": "UserRoles"
+                },
+                "stream": null,
+                "__typename": "User"
+              }
+            },
+            "matchingCharacters": {
+              "start": 0,
+              "end": 3,
+              "__typename": "SearchSuggestionHighlight"
+            },
+            "id": "b22c8a83-f3ae-4453-b7c9-5597dfc003a7",
+            "text": "xqc2011",
+            "__typename": "SearchSuggestion"
+          },
+          "__typename": "SearchSuggestionEdge"
+        },
+        {
+          "node": {
+            "content": {
+              "__typename": "SearchSuggestionChannel",
+              "id": "922029573",
+              "isLive": false,
+              "isVerified": false,
+              "login": "xqc9therealest",
+              "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/9f1a48aa-be25-494e-bd31-5bd5ab2ba4f7-profile_image-50x50.png",
+              "user": {
+                "id": "922029573",
+                "roles": {
+                  "isParticipatingDJ": false,
+                  "__typename": "UserRoles"
+                },
+                "stream": null,
+                "__typename": "User"
+              }
+            },
+            "matchingCharacters": {
+              "start": 0,
+              "end": 3,
+              "__typename": "SearchSuggestionHighlight"
+            },
+            "id": "6e068a16-fbe9-4704-a418-9c1517672216",
+            "text": "xqc9therealest",
+            "__typename": "SearchSuggestion"
+          },
+          "__typename": "SearchSuggestionEdge"
+        },
+        {
+          "node": {
+            "content": {
+              "__typename": "SearchSuggestionChannel",
+              "id": "1273706025",
+              "isLive": false,
+              "isVerified": false,
+              "login": "xqc617",
+              "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/5e2e00ca-58e0-4888-aaf9-c0bd5f9f50a6-profile_image-50x50.jpeg",
+              "user": {
+                "id": "1273706025",
+                "roles": {
+                  "isParticipatingDJ": false,
+                  "__typename": "UserRoles"
+                },
+                "stream": null,
+                "__typename": "User"
+              }
+            },
+            "matchingCharacters": {
+              "start": 0,
+              "end": 3,
+              "__typename": "SearchSuggestionHighlight"
+            },
+            "id": "0fc13665-9210-4122-b77a-447206db5851",
+            "text": "xqc617",
+            "__typename": "SearchSuggestion"
+          },
+          "__typename": "SearchSuggestionEdge"
+        }
+      ],
+      "tracking": {
+        "modelTrackingID": "28dfbd88eb1af7c6144c294aefb24fdb",
+        "responseID": "3eb5a654-0391-4cdd-ba5c-5aa2540ebd53",
+        "__typename": "SearchSuggestionTracking"
+      },
+      "__typename": "SearchSuggestionConnection"
+    }
+  },
+  "extensions": {
+    "durationMilliseconds": 65,
+    "operationName": "SearchTray_SearchSuggestions",
+    "requestID": "01K33FX29DJJ9Y3Z7G4PTANNME"
+  }
+}

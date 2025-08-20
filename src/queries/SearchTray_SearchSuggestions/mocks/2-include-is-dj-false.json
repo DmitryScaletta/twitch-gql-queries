@@ -5,33 +5,22 @@
         {
           "node": {
             "content": {
-              "__typename": "SearchSuggestionChannel",
-              "id": "722490662",
-              "isLive": true,
-              "isVerified": false,
-              "login": "forsen_impostor",
-              "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/2d793244-d901-443a-a7db-1eafbb5628ee-profile_image-50x50.png",
-              "user": {
-                "id": "722490662",
-                "roles": {
-                  "isParticipatingDJ": false,
-                  "__typename": "UserRoles"
-                },
-                "stream": {
-                  "id": "314231550164",
-                  "game": { "id": "16937", "__typename": "Game" },
-                  "__typename": "Stream"
-                },
-                "__typename": "User"
+              "__typename": "SearchSuggestionCategory",
+              "id": "489111",
+              "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/489111_IGDB-30x40.jpg",
+              "game": {
+                "id": "489111",
+                "slug": "summoners-war-sky-arena",
+                "__typename": "Game"
               }
             },
             "matchingCharacters": {
               "start": 0,
-              "end": 5,
+              "end": 4,
               "__typename": "SearchSuggestionHighlight"
             },
-            "id": "74966f28-3feb-4361-86f5-8435406e5948",
-            "text": "forsen_impostor",
+            "id": "fa5bc1f8-858a-4bd1-99fc-01f709d63d5f",
+            "text": "Summoners War: Sky Arena",
             "__typename": "SearchSuggestion"
           },
           "__typename": "SearchSuggestionEdge"
@@ -41,11 +30,11 @@
             "content": null,
             "matchingCharacters": {
               "start": 0,
-              "end": 5,
+              "end": 4,
               "__typename": "SearchSuggestionHighlight"
             },
-            "id": "3a48262a-27f5-4e43-b7a8-c34e2c7c3db3",
-            "text": "forsen",
+            "id": "ff3b391e-a5c6-46df-9039-79857a929f40",
+            "text": "summit1g",
             "__typename": "SearchSuggestion"
           },
           "__typename": "SearchSuggestionEdge"
@@ -55,11 +44,11 @@
             "content": null,
             "matchingCharacters": {
               "start": 0,
-              "end": 5,
+              "end": 4,
               "__typename": "SearchSuggestionHighlight"
             },
-            "id": "123764fe-4fca-4cf0-8269-c0362be97789",
-            "text": "forsenk",
+            "id": "e62ac3d5-a7b6-440a-88a7-9aee26025b00",
+            "text": "summyahmarie",
             "__typename": "SearchSuggestion"
           },
           "__typename": "SearchSuggestionEdge"
@@ -69,11 +58,11 @@
             "content": null,
             "matchingCharacters": {
               "start": 0,
-              "end": 5,
+              "end": 4,
               "__typename": "SearchSuggestionHighlight"
             },
-            "id": "b94834d9-0cf5-4fce-8d2d-a01dcf9767a7",
-            "text": "forsemajor06",
+            "id": "bf9b0d74-52c1-4573-a0c8-b4d4b32a6891",
+            "text": "summy",
             "__typename": "SearchSuggestion"
           },
           "__typename": "SearchSuggestionEdge"
@@ -83,11 +72,11 @@
             "content": null,
             "matchingCharacters": {
               "start": 0,
-              "end": 5,
+              "end": 4,
               "__typename": "SearchSuggestionHighlight"
             },
-            "id": "314ba521-013f-4324-bb01-c849a89e9ef6",
-            "text": "forsenspectate",
+            "id": "3600ddee-a8fc-4bb0-8463-84b15b735aab",
+            "text": "summerxiriss",
             "__typename": "SearchSuggestion"
           },
           "__typename": "SearchSuggestionEdge"
@@ -97,11 +86,11 @@
             "content": null,
             "matchingCharacters": {
               "start": 0,
-              "end": 5,
+              "end": 4,
               "__typename": "SearchSuggestionHighlight"
             },
-            "id": "adf1b57e-951f-456a-bf7b-2f2a8541148c",
-            "text": "forsekyn",
+            "id": "9bcb22e3-de42-4d9f-b598-c49e1ba62d9b",
+            "text": "summonersnetwork",
             "__typename": "SearchSuggestion"
           },
           "__typename": "SearchSuggestionEdge"
@@ -111,11 +100,11 @@
             "content": null,
             "matchingCharacters": {
               "start": 0,
-              "end": 5,
+              "end": 4,
               "__typename": "SearchSuggestionHighlight"
             },
-            "id": "69b4d9f1-801c-4720-9c52-436b3713cfa0",
-            "text": "forsecskiy",
+            "id": "e1204653-001f-41fb-899f-3ba7fbbd763d",
+            "text": "summonersinc",
             "__typename": "SearchSuggestion"
           },
           "__typename": "SearchSuggestionEdge"
@@ -123,15 +112,15 @@
       ],
       "tracking": {
         "modelTrackingID": "28dfbd88eb1af7c6144c294aefb24fdb",
-        "responseID": "7794aa6d-8314-4b52-8788-625f169c12be",
+        "responseID": "7c7ed3c7-c392-4295-826e-a46d9638ce95",
         "__typename": "SearchSuggestionTracking"
       },
       "__typename": "SearchSuggestionConnection"
     }
   },
   "extensions": {
-    "durationMilliseconds": 65,
+    "durationMilliseconds": 53,
     "operationName": "SearchTray_SearchSuggestions",
-    "requestID": "01K33G16ZPA3TC5CQ8V5SHKDR5"
+    "requestID": "01K33FWTGHG1SM6RM9G2BP0WJV"
   }
 }

@@ -16,6 +16,7 @@ export const VariablesSchema = strictObject(
   {
     queryFragment: T.String(),
     withOfflineChannelContent: T.Optional(T.Union([T.Null(), T.Boolean()])),
+    includeIsDJ: T.Boolean(),
   },
   { $id: `${displayName}Variables` },
 );
@@ -29,6 +30,9 @@ export const SuggestionChannelSchema = strictObject(
     isVerified: T.Boolean(),
     user: strictObject({
       ...pick(schemas.User, ['id']),
+      roles: T.Optional(
+        strictObject(pick(schemas.UserRoles, ['isParticipatingDJ'])),
+      ),
       stream: T.Union([
         T.Null(),
         strictObject({

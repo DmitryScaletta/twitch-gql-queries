@@ -1338,6 +1338,10 @@ export interface SearchTraySuggestionChannel {
   isVerified: boolean;
   user: {
     id: string;
+    roles?: {
+      isParticipatingDJ: boolean;
+      __typename: 'UserRoles';
+    };
     stream: null | {
       id: string;
       game: null | {
@@ -1379,6 +1383,7 @@ export interface SearchTraySuggestions {
 export interface SearchTraySearchSuggestionsVariables {
   queryFragment: string;
   withOfflineChannelContent?: null | boolean;
+  includeIsDJ: boolean;
 }
 
 export interface SearchTraySearchSuggestionsData {

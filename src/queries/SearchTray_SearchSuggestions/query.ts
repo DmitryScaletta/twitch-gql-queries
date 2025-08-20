@@ -9,7 +9,7 @@ export const getQuerySearchTraySuggestions = (
     persistedQuery: {
       version: 1,
       sha256Hash:
-        '34e1899cd559b7d6a4ac25e3bdaad37a83324644b0085b4cc478d0f845f8f0de',
+        '2749d8bc89a2ddd37518e23742a4287becd3064c40465d8b57317cabd0efe096',
     },
   },
 });

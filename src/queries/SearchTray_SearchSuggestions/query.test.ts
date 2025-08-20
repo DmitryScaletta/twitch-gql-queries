@@ -18,16 +18,34 @@ describe('SearchTray_SearchSuggestions', () => {
     SuggestionsSchema,
   ]);
 
-  test('real request 1', async () => {
+  test('real request: all variables', async () => {
     const responses = await gqlRequest([
-      getQuerySearchTraySuggestions({ queryFragment: 'forse' }),
+      getQuerySearchTraySuggestions({
+        queryFragment: 'forse',
+        withOfflineChannelContent: false,
+        includeIsDJ: true,
+      }),
     ]);
     responses.map(validate);
   });
 
-  test('real request 2', async () => {
+  test('real request: includeIsDJ = false', async () => {
     const responses = await gqlRequest([
-      getQuerySearchTraySuggestions({ queryFragment: 'summ' }),
+      getQuerySearchTraySuggestions({
+        queryFragment: 'summ',
+        includeIsDJ: false,
+      }),
+    ]);
+    responses.map(validate);
+  });
+
+  test('real request: withOfflineChannelContent = true', async () => {
+    const responses = await gqlRequest([
+      getQuerySearchTraySuggestions({
+        queryFragment: 'xqc',
+        withOfflineChannelContent: true,
+        includeIsDJ: true,
+      }),
     ]);
     responses.map(validate);
   });
