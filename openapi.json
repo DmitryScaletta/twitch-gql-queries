@@ -46243,16 +46243,52 @@
               "schema": {
                 "$ref": "#/components/schemas/SearchTraySearchSuggestionsRequestBody"
               },
-              "example": {
-                "operationName": "SearchTray_SearchSuggestions",
-                "variables": {
-                  "queryFragment": "forse",
-                  "withOfflineChannelContent": true
+              "examples": {
+                "all variables": {
+                  "value": {
+                    "operationName": "SearchTray_SearchSuggestions",
+                    "variables": {
+                      "queryFragment": "forse",
+                      "withOfflineChannelContent": false,
+                      "includeIsDJ": true
+                    },
+                    "extensions": {
+                      "persistedQuery": {
+                        "version": 1,
+                        "sha256Hash": "2749d8bc89a2ddd37518e23742a4287becd3064c40465d8b57317cabd0efe096"
+                      }
+                    }
+                  }
                 },
-                "extensions": {
-                  "persistedQuery": {
-                    "version": 1,
-                    "sha256Hash": "34e1899cd559b7d6a4ac25e3bdaad37a83324644b0085b4cc478d0f845f8f0de"
+                "includeIsDJ: false": {
+                  "value": {
+                    "operationName": "SearchTray_SearchSuggestions",
+                    "variables": {
+                      "queryFragment": "summ",
+                      "includeIsDJ": false
+                    },
+                    "extensions": {
+                      "persistedQuery": {
+                        "version": 1,
+                        "sha256Hash": "2749d8bc89a2ddd37518e23742a4287becd3064c40465d8b57317cabd0efe096"
+                      }
+                    }
+                  }
+                },
+                "withOfflineChannelContent: true": {
+                  "value": {
+                    "operationName": "SearchTray_SearchSuggestions",
+                    "variables": {
+                      "queryFragment": "xqc",
+                      "withOfflineChannelContent": true,
+                      "includeIsDJ": true
+                    },
+                    "extensions": {
+                      "persistedQuery": {
+                        "version": 1,
+                        "sha256Hash": "2749d8bc89a2ddd37518e23742a4287becd3064c40465d8b57317cabd0efe096"
+                      }
+                    }
                   }
                 }
               }
@@ -46267,219 +46303,507 @@
                 "schema": {
                   "$ref": "#/components/schemas/SearchTraySearchSuggestionsResponse"
                 },
-                "example": {
-                  "data": {
-                    "searchSuggestions": {
-                      "edges": [
-                        {
-                          "node": {
-                            "content": {
-                              "__typename": "SearchSuggestionChannel",
-                              "id": "22484632",
-                              "isLive": true,
-                              "isVerified": true,
-                              "login": "forsen",
-                              "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/forsen-profile_image-48b43e1e4f54b5c8-50x50.png",
-                              "user": {
-                                "id": "22484632",
-                                "stream": {
-                                  "id": "318597564669",
-                                  "game": {
-                                    "id": "32399",
-                                    "__typename": "Game"
-                                  },
-                                  "__typename": "Stream"
+                "examples": {
+                  "default": {
+                    "value": {
+                      "data": {
+                        "searchSuggestions": {
+                          "edges": [
+                            {
+                              "node": {
+                                "content": {
+                                  "__typename": "SearchSuggestionChannel",
+                                  "id": "722490662",
+                                  "isLive": true,
+                                  "isVerified": false,
+                                  "login": "forsen_impostor",
+                                  "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/2d793244-d901-443a-a7db-1eafbb5628ee-profile_image-50x50.png",
+                                  "user": {
+                                    "id": "722490662",
+                                    "roles": {
+                                      "isParticipatingDJ": false,
+                                      "__typename": "UserRoles"
+                                    },
+                                    "stream": {
+                                      "id": "314231550164",
+                                      "game": {
+                                        "id": "16937",
+                                        "__typename": "Game"
+                                      },
+                                      "__typename": "Stream"
+                                    },
+                                    "__typename": "User"
+                                  }
                                 },
-                                "__typename": "User"
-                              }
-                            },
-                            "matchingCharacters": {
-                              "start": 0,
-                              "end": 5,
-                              "__typename": "SearchSuggestionHighlight"
-                            },
-                            "id": "2c10b7d5-89a2-485f-afae-9c73e0944f85",
-                            "text": "forsen",
-                            "__typename": "SearchSuggestion"
-                          },
-                          "__typename": "SearchSuggestionEdge"
-                        },
-                        {
-                          "node": {
-                            "content": {
-                              "__typename": "SearchSuggestionChannel",
-                              "id": "41291638",
-                              "isLive": true,
-                              "isVerified": false,
-                              "login": "forsenk",
-                              "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/b0dad4dc-ac06-4e5b-892f-6f84e56c09b0-profile_image-50x50.png",
-                              "user": {
-                                "id": "41291638",
-                                "stream": {
-                                  "id": "316994695417",
-                                  "game": {
-                                    "id": "175629385",
-                                    "__typename": "Game"
-                                  },
-                                  "__typename": "Stream"
+                                "matchingCharacters": {
+                                  "start": 0,
+                                  "end": 5,
+                                  "__typename": "SearchSuggestionHighlight"
                                 },
-                                "__typename": "User"
-                              }
+                                "id": "74966f28-3feb-4361-86f5-8435406e5948",
+                                "text": "forsen_impostor",
+                                "__typename": "SearchSuggestion"
+                              },
+                              "__typename": "SearchSuggestionEdge"
                             },
-                            "matchingCharacters": {
-                              "start": 0,
-                              "end": 5,
-                              "__typename": "SearchSuggestionHighlight"
+                            {
+                              "node": {
+                                "content": null,
+                                "matchingCharacters": {
+                                  "start": 0,
+                                  "end": 5,
+                                  "__typename": "SearchSuggestionHighlight"
+                                },
+                                "id": "3a48262a-27f5-4e43-b7a8-c34e2c7c3db3",
+                                "text": "forsen",
+                                "__typename": "SearchSuggestion"
+                              },
+                              "__typename": "SearchSuggestionEdge"
                             },
-                            "id": "5a1f17f6-ad8d-4233-90b6-6ad660c9e4d1",
-                            "text": "forsenK",
-                            "__typename": "SearchSuggestion"
+                            {
+                              "node": {
+                                "content": null,
+                                "matchingCharacters": {
+                                  "start": 0,
+                                  "end": 5,
+                                  "__typename": "SearchSuggestionHighlight"
+                                },
+                                "id": "123764fe-4fca-4cf0-8269-c0362be97789",
+                                "text": "forsenk",
+                                "__typename": "SearchSuggestion"
+                              },
+                              "__typename": "SearchSuggestionEdge"
+                            },
+                            {
+                              "node": {
+                                "content": null,
+                                "matchingCharacters": {
+                                  "start": 0,
+                                  "end": 5,
+                                  "__typename": "SearchSuggestionHighlight"
+                                },
+                                "id": "b94834d9-0cf5-4fce-8d2d-a01dcf9767a7",
+                                "text": "forsemajor06",
+                                "__typename": "SearchSuggestion"
+                              },
+                              "__typename": "SearchSuggestionEdge"
+                            },
+                            {
+                              "node": {
+                                "content": null,
+                                "matchingCharacters": {
+                                  "start": 0,
+                                  "end": 5,
+                                  "__typename": "SearchSuggestionHighlight"
+                                },
+                                "id": "314ba521-013f-4324-bb01-c849a89e9ef6",
+                                "text": "forsenspectate",
+                                "__typename": "SearchSuggestion"
+                              },
+                              "__typename": "SearchSuggestionEdge"
+                            },
+                            {
+                              "node": {
+                                "content": null,
+                                "matchingCharacters": {
+                                  "start": 0,
+                                  "end": 5,
+                                  "__typename": "SearchSuggestionHighlight"
+                                },
+                                "id": "adf1b57e-951f-456a-bf7b-2f2a8541148c",
+                                "text": "forsekyn",
+                                "__typename": "SearchSuggestion"
+                              },
+                              "__typename": "SearchSuggestionEdge"
+                            },
+                            {
+                              "node": {
+                                "content": null,
+                                "matchingCharacters": {
+                                  "start": 0,
+                                  "end": 5,
+                                  "__typename": "SearchSuggestionHighlight"
+                                },
+                                "id": "69b4d9f1-801c-4720-9c52-436b3713cfa0",
+                                "text": "forsecskiy",
+                                "__typename": "SearchSuggestion"
+                              },
+                              "__typename": "SearchSuggestionEdge"
+                            }
+                          ],
+                          "tracking": {
+                            "modelTrackingID": "28dfbd88eb1af7c6144c294aefb24fdb",
+                            "responseID": "7794aa6d-8314-4b52-8788-625f169c12be",
+                            "__typename": "SearchSuggestionTracking"
                           },
-                          "__typename": "SearchSuggestionEdge"
-                        },
-                        {
-                          "node": {
-                            "content": {
-                              "__typename": "SearchSuggestionChannel",
-                              "id": "1075773331",
-                              "isLive": false,
-                              "isVerified": false,
-                              "login": "forsenspectate",
-                              "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/cddf9b2b-ef85-4228-b105-4377986764a1-profile_image-50x50.png",
-                              "user": {
-                                "id": "1075773331",
-                                "stream": null,
-                                "__typename": "User"
-                              }
-                            },
-                            "matchingCharacters": {
-                              "start": 0,
-                              "end": 5,
-                              "__typename": "SearchSuggestionHighlight"
-                            },
-                            "id": "2dc12f8b-8937-4cf1-854c-0f13311aafd7",
-                            "text": "forsenspectate",
-                            "__typename": "SearchSuggestion"
-                          },
-                          "__typename": "SearchSuggestionEdge"
-                        },
-                        {
-                          "node": {
-                            "content": {
-                              "__typename": "SearchSuggestionChannel",
-                              "id": "946269547",
-                              "isLive": false,
-                              "isVerified": false,
-                              "login": "forsengodseed",
-                              "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/c57ffe27-011c-4495-9254-aab8341a649c-profile_image-50x50.png",
-                              "user": {
-                                "id": "946269547",
-                                "stream": null,
-                                "__typename": "User"
-                              }
-                            },
-                            "matchingCharacters": {
-                              "start": 0,
-                              "end": 5,
-                              "__typename": "SearchSuggestionHighlight"
-                            },
-                            "id": "875b1f2a-9487-43fa-9b4b-9fcd809dcef0",
-                            "text": "forsengodseed",
-                            "__typename": "SearchSuggestion"
-                          },
-                          "__typename": "SearchSuggestionEdge"
-                        },
-                        {
-                          "node": {
-                            "content": {
-                              "__typename": "SearchSuggestionChannel",
-                              "id": "1217223602",
-                              "isLive": false,
-                              "isVerified": false,
-                              "login": "forseenbottwitch",
-                              "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/488b6ff4-1c98-45ca-bea6-c0b8747a330b-profile_image-50x50.png",
-                              "user": {
-                                "id": "1217223602",
-                                "stream": null,
-                                "__typename": "User"
-                              }
-                            },
-                            "matchingCharacters": {
-                              "start": 0,
-                              "end": 5,
-                              "__typename": "SearchSuggestionHighlight"
-                            },
-                            "id": "0bc246b2-1828-47fb-809f-3625d0504fbf",
-                            "text": "forseenbottwitch",
-                            "__typename": "SearchSuggestion"
-                          },
-                          "__typename": "SearchSuggestionEdge"
-                        },
-                        {
-                          "node": {
-                            "content": {
-                              "__typename": "SearchSuggestionChannel",
-                              "id": "1235411492",
-                              "isLive": false,
-                              "isVerified": false,
-                              "login": "forseenjay",
-                              "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/83e5d5e2-6acf-495b-ac63-7645a751c0b9-profile_image-50x50.png",
-                              "user": {
-                                "id": "1235411492",
-                                "stream": null,
-                                "__typename": "User"
-                              }
-                            },
-                            "matchingCharacters": {
-                              "start": 0,
-                              "end": 5,
-                              "__typename": "SearchSuggestionHighlight"
-                            },
-                            "id": "8b937cd3-456a-405c-aca7-0e68ff217cda",
-                            "text": "forseenjay",
-                            "__typename": "SearchSuggestion"
-                          },
-                          "__typename": "SearchSuggestionEdge"
-                        },
-                        {
-                          "node": {
-                            "content": {
-                              "__typename": "SearchSuggestionChannel",
-                              "id": "540372341",
-                              "isLive": false,
-                              "isVerified": false,
-                              "login": "f0rsetii",
-                              "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/50667c20-4f77-425f-a449-77875eb13e32-profile_image-50x50.png",
-                              "user": {
-                                "id": "540372341",
-                                "stream": null,
-                                "__typename": "User"
-                              }
-                            },
-                            "matchingCharacters": {
-                              "start": 0,
-                              "end": 0,
-                              "__typename": "SearchSuggestionHighlight"
-                            },
-                            "id": "89c41420-df91-447f-a6a3-55a735e1006a",
-                            "text": "f0rsetii",
-                            "__typename": "SearchSuggestion"
-                          },
-                          "__typename": "SearchSuggestionEdge"
+                          "__typename": "SearchSuggestionConnection"
                         }
-                      ],
-                      "tracking": {
-                        "modelTrackingID": "45003516f07ee19667e3fb448c80d82a",
-                        "responseID": "fb2a9423-635b-40bc-9e6b-1fe001550eb7",
-                        "__typename": "SearchSuggestionTracking"
                       },
-                      "__typename": "SearchSuggestionConnection"
+                      "extensions": {
+                        "durationMilliseconds": 65,
+                        "operationName": "SearchTray_SearchSuggestions",
+                        "requestID": "01K33G16ZPA3TC5CQ8V5SHKDR5"
+                      }
                     }
                   },
-                  "extensions": {
-                    "durationMilliseconds": 71,
-                    "operationName": "SearchTray_SearchSuggestions",
-                    "requestID": "01JP0SZN8V52906SKR3Z257N1E"
+                  "include is dj false": {
+                    "value": {
+                      "data": {
+                        "searchSuggestions": {
+                          "edges": [
+                            {
+                              "node": {
+                                "content": {
+                                  "__typename": "SearchSuggestionCategory",
+                                  "id": "489111",
+                                  "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/489111_IGDB-30x40.jpg",
+                                  "game": {
+                                    "id": "489111",
+                                    "slug": "summoners-war-sky-arena",
+                                    "__typename": "Game"
+                                  }
+                                },
+                                "matchingCharacters": {
+                                  "start": 0,
+                                  "end": 4,
+                                  "__typename": "SearchSuggestionHighlight"
+                                },
+                                "id": "fa5bc1f8-858a-4bd1-99fc-01f709d63d5f",
+                                "text": "Summoners War: Sky Arena",
+                                "__typename": "SearchSuggestion"
+                              },
+                              "__typename": "SearchSuggestionEdge"
+                            },
+                            {
+                              "node": {
+                                "content": null,
+                                "matchingCharacters": {
+                                  "start": 0,
+                                  "end": 4,
+                                  "__typename": "SearchSuggestionHighlight"
+                                },
+                                "id": "ff3b391e-a5c6-46df-9039-79857a929f40",
+                                "text": "summit1g",
+                                "__typename": "SearchSuggestion"
+                              },
+                              "__typename": "SearchSuggestionEdge"
+                            },
+                            {
+                              "node": {
+                                "content": null,
+                                "matchingCharacters": {
+                                  "start": 0,
+                                  "end": 4,
+                                  "__typename": "SearchSuggestionHighlight"
+                                },
+                                "id": "e62ac3d5-a7b6-440a-88a7-9aee26025b00",
+                                "text": "summyahmarie",
+                                "__typename": "SearchSuggestion"
+                              },
+                              "__typename": "SearchSuggestionEdge"
+                            },
+                            {
+                              "node": {
+                                "content": null,
+                                "matchingCharacters": {
+                                  "start": 0,
+                                  "end": 4,
+                                  "__typename": "SearchSuggestionHighlight"
+                                },
+                                "id": "bf9b0d74-52c1-4573-a0c8-b4d4b32a6891",
+                                "text": "summy",
+                                "__typename": "SearchSuggestion"
+                              },
+                              "__typename": "SearchSuggestionEdge"
+                            },
+                            {
+                              "node": {
+                                "content": null,
+                                "matchingCharacters": {
+                                  "start": 0,
+                                  "end": 4,
+                                  "__typename": "SearchSuggestionHighlight"
+                                },
+                                "id": "3600ddee-a8fc-4bb0-8463-84b15b735aab",
+                                "text": "summerxiriss",
+                                "__typename": "SearchSuggestion"
+                              },
+                              "__typename": "SearchSuggestionEdge"
+                            },
+                            {
+                              "node": {
+                                "content": null,
+                                "matchingCharacters": {
+                                  "start": 0,
+                                  "end": 4,
+                                  "__typename": "SearchSuggestionHighlight"
+                                },
+                                "id": "9bcb22e3-de42-4d9f-b598-c49e1ba62d9b",
+                                "text": "summonersnetwork",
+                                "__typename": "SearchSuggestion"
+                              },
+                              "__typename": "SearchSuggestionEdge"
+                            },
+                            {
+                              "node": {
+                                "content": null,
+                                "matchingCharacters": {
+                                  "start": 0,
+                                  "end": 4,
+                                  "__typename": "SearchSuggestionHighlight"
+                                },
+                                "id": "e1204653-001f-41fb-899f-3ba7fbbd763d",
+                                "text": "summonersinc",
+                                "__typename": "SearchSuggestion"
+                              },
+                              "__typename": "SearchSuggestionEdge"
+                            }
+                          ],
+                          "tracking": {
+                            "modelTrackingID": "28dfbd88eb1af7c6144c294aefb24fdb",
+                            "responseID": "7c7ed3c7-c392-4295-826e-a46d9638ce95",
+                            "__typename": "SearchSuggestionTracking"
+                          },
+                          "__typename": "SearchSuggestionConnection"
+                        }
+                      },
+                      "extensions": {
+                        "durationMilliseconds": 53,
+                        "operationName": "SearchTray_SearchSuggestions",
+                        "requestID": "01K33FWTGHG1SM6RM9G2BP0WJV"
+                      }
+                    }
+                  },
+                  "with offline content true": {
+                    "value": {
+                      "data": {
+                        "searchSuggestions": {
+                          "edges": [
+                            {
+                              "node": {
+                                "content": {
+                                  "__typename": "SearchSuggestionChannel",
+                                  "id": "71092938",
+                                  "isLive": false,
+                                  "isVerified": true,
+                                  "login": "xqc",
+                                  "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/xqc-profile_image-9298dca608632101-50x50.jpeg",
+                                  "user": {
+                                    "id": "71092938",
+                                    "roles": {
+                                      "isParticipatingDJ": false,
+                                      "__typename": "UserRoles"
+                                    },
+                                    "stream": null,
+                                    "__typename": "User"
+                                  }
+                                },
+                                "matchingCharacters": {
+                                  "start": 0,
+                                  "end": 3,
+                                  "__typename": "SearchSuggestionHighlight"
+                                },
+                                "id": "b23429ba-edff-4fed-aba6-a877f2c21c35",
+                                "text": "xqc",
+                                "__typename": "SearchSuggestion"
+                              },
+                              "__typename": "SearchSuggestionEdge"
+                            },
+                            {
+                              "node": {
+                                "content": {
+                                  "__typename": "SearchSuggestionChannel",
+                                  "id": "1140379413",
+                                  "isLive": false,
+                                  "isVerified": false,
+                                  "login": "xqc_destiny",
+                                  "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/607f82a6-2cb5-4230-a345-cd090724a0f8-profile_image-50x50.png",
+                                  "user": {
+                                    "id": "1140379413",
+                                    "roles": {
+                                      "isParticipatingDJ": false,
+                                      "__typename": "UserRoles"
+                                    },
+                                    "stream": null,
+                                    "__typename": "User"
+                                  }
+                                },
+                                "matchingCharacters": {
+                                  "start": 0,
+                                  "end": 3,
+                                  "__typename": "SearchSuggestionHighlight"
+                                },
+                                "id": "c8c19701-4455-4cc8-87ae-24b2d0b80c8c",
+                                "text": "xqc_destiny",
+                                "__typename": "SearchSuggestion"
+                              },
+                              "__typename": "SearchSuggestionEdge"
+                            },
+                            {
+                              "node": {
+                                "content": {
+                                  "__typename": "SearchSuggestionChannel",
+                                  "id": "1149531372",
+                                  "isLive": false,
+                                  "isVerified": false,
+                                  "login": "xqc_bigest_fan_ever_380kg",
+                                  "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/4f866820-9e86-4d11-b3b9-e41a40397b0d-profile_image-50x50.png",
+                                  "user": {
+                                    "id": "1149531372",
+                                    "roles": {
+                                      "isParticipatingDJ": false,
+                                      "__typename": "UserRoles"
+                                    },
+                                    "stream": null,
+                                    "__typename": "User"
+                                  }
+                                },
+                                "matchingCharacters": {
+                                  "start": 0,
+                                  "end": 3,
+                                  "__typename": "SearchSuggestionHighlight"
+                                },
+                                "id": "93842182-eaf6-4fa2-b30f-2bbb0f0e74cc",
+                                "text": "xqc_bigest_fan_ever_380kg",
+                                "__typename": "SearchSuggestion"
+                              },
+                              "__typename": "SearchSuggestionEdge"
+                            },
+                            {
+                              "node": {
+                                "content": {
+                                  "__typename": "SearchSuggestionChannel",
+                                  "id": "247808909",
+                                  "isLive": false,
+                                  "isVerified": true,
+                                  "login": "qtcinderella",
+                                  "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/051f2eb6-fac4-4921-bf65-b87f2177939c-profile_image-50x50.png",
+                                  "user": {
+                                    "id": "247808909",
+                                    "roles": {
+                                      "isParticipatingDJ": false,
+                                      "__typename": "UserRoles"
+                                    },
+                                    "stream": null,
+                                    "__typename": "User"
+                                  }
+                                },
+                                "matchingCharacters": {
+                                  "start": 0,
+                                  "end": 0,
+                                  "__typename": "SearchSuggestionHighlight"
+                                },
+                                "id": "54ded32c-e12c-4089-8b21-1d228508004b",
+                                "text": "qtcinderella",
+                                "__typename": "SearchSuggestion"
+                              },
+                              "__typename": "SearchSuggestionEdge"
+                            },
+                            {
+                              "node": {
+                                "content": {
+                                  "__typename": "SearchSuggestionChannel",
+                                  "id": "1216662566",
+                                  "isLive": false,
+                                  "isVerified": false,
+                                  "login": "xqc2011",
+                                  "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/d27d8eae-9c0c-441b-891c-94f000c974b9-profile_image-50x50.png",
+                                  "user": {
+                                    "id": "1216662566",
+                                    "roles": {
+                                      "isParticipatingDJ": false,
+                                      "__typename": "UserRoles"
+                                    },
+                                    "stream": null,
+                                    "__typename": "User"
+                                  }
+                                },
+                                "matchingCharacters": {
+                                  "start": 0,
+                                  "end": 3,
+                                  "__typename": "SearchSuggestionHighlight"
+                                },
+                                "id": "b22c8a83-f3ae-4453-b7c9-5597dfc003a7",
+                                "text": "xqc2011",
+                                "__typename": "SearchSuggestion"
+                              },
+                              "__typename": "SearchSuggestionEdge"
+                            },
+                            {
+                              "node": {
+                                "content": {
+                                  "__typename": "SearchSuggestionChannel",
+                                  "id": "922029573",
+                                  "isLive": false,
+                                  "isVerified": false,
+                                  "login": "xqc9therealest",
+                                  "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/9f1a48aa-be25-494e-bd31-5bd5ab2ba4f7-profile_image-50x50.png",
+                                  "user": {
+                                    "id": "922029573",
+                                    "roles": {
+                                      "isParticipatingDJ": false,
+                                      "__typename": "UserRoles"
+                                    },
+                                    "stream": null,
+                                    "__typename": "User"
+                                  }
+                                },
+                                "matchingCharacters": {
+                                  "start": 0,
+                                  "end": 3,
+                                  "__typename": "SearchSuggestionHighlight"
+                                },
+                                "id": "6e068a16-fbe9-4704-a418-9c1517672216",
+                                "text": "xqc9therealest",
+                                "__typename": "SearchSuggestion"
+                              },
+                              "__typename": "SearchSuggestionEdge"
+                            },
+                            {
+                              "node": {
+                                "content": {
+                                  "__typename": "SearchSuggestionChannel",
+                                  "id": "1273706025",
+                                  "isLive": false,
+                                  "isVerified": false,
+                                  "login": "xqc617",
+                                  "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/5e2e00ca-58e0-4888-aaf9-c0bd5f9f50a6-profile_image-50x50.jpeg",
+                                  "user": {
+                                    "id": "1273706025",
+                                    "roles": {
+                                      "isParticipatingDJ": false,
+                                      "__typename": "UserRoles"
+                                    },
+                                    "stream": null,
+                                    "__typename": "User"
+                                  }
+                                },
+                                "matchingCharacters": {
+                                  "start": 0,
+                                  "end": 3,
+                                  "__typename": "SearchSuggestionHighlight"
+                                },
+                                "id": "0fc13665-9210-4122-b77a-447206db5851",
+                                "text": "xqc617",
+                                "__typename": "SearchSuggestion"
+                              },
+                              "__typename": "SearchSuggestionEdge"
+                            }
+                          ],
+                          "tracking": {
+                            "modelTrackingID": "28dfbd88eb1af7c6144c294aefb24fdb",
+                            "responseID": "3eb5a654-0391-4cdd-ba5c-5aa2540ebd53",
+                            "__typename": "SearchSuggestionTracking"
+                          },
+                          "__typename": "SearchSuggestionConnection"
+                        }
+                      },
+                      "extensions": {
+                        "durationMilliseconds": 65,
+                        "operationName": "SearchTray_SearchSuggestions",
+                        "requestID": "01K33FX29DJJ9Y3Z7G4PTANNME"
+                      }
+                    }
                   }
                 }
               }
@@ -59831,6 +60155,23 @@
                 "pattern": "^[0-9]+$",
                 "type": "string"
               },
+              "roles": {
+                "additionalProperties": false,
+                "type": "object",
+                "properties": {
+                  "isParticipatingDJ": {
+                    "type": "boolean"
+                  },
+                  "__typename": {
+                    "const": "UserRoles",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "isParticipatingDJ",
+                  "__typename"
+                ]
+              },
               "stream": {
                 "anyOf": [
                   {
@@ -60043,10 +60384,14 @@
                 "type": "boolean"
               }
             ]
+          },
+          "includeIsDJ": {
+            "type": "boolean"
           }
         },
         "required": [
-          "queryFragment"
+          "queryFragment",
+          "includeIsDJ"
         ]
       },
       "SearchTraySearchSuggestionsRequestBody": {
@@ -60074,7 +60419,7 @@
                     "type": "number"
                   },
                   "sha256Hash": {
-                    "const": "34e1899cd559b7d6a4ac25e3bdaad37a83324644b0085b4cc478d0f845f8f0de",
+                    "const": "2749d8bc89a2ddd37518e23742a4287becd3064c40465d8b57317cabd0efe096",
                     "type": "string"
                   }
                 },
