@@ -30,9 +30,10 @@ export const SuggestionChannelSchema = strictObject(
     isVerified: T.Boolean(),
     user: strictObject({
       ...pick(schemas.User, ['id']),
-      roles: T.Optional(
-        strictObject(pick(schemas.UserRoles, ['isParticipatingDJ'])),
-      ),
+      roles: strictObject({
+        isParticipatingDJ: T.Optional(schemas.UserRoles.isParticipatingDJ),
+        ...pick(schemas.UserRoles, []),
+      }),
       stream: T.Union([
         T.Null(),
         strictObject({

@@ -60168,7 +60168,6 @@
                   }
                 },
                 "required": [
-                  "isParticipatingDJ",
                   "__typename"
                 ]
               },
@@ -60230,6 +60229,7 @@
             },
             "required": [
               "id",
+              "roles",
               "stream",
               "__typename"
             ]

@@ -1338,8 +1338,8 @@ export interface SearchTraySuggestionChannel {
   isVerified: boolean;
   user: {
     id: string;
-    roles?: {
-      isParticipatingDJ: boolean;
+    roles: {
+      isParticipatingDJ?: boolean;
       __typename: 'UserRoles';
     };
     stream: null | {
