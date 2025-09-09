@@ -50440,8 +50440,15 @@
             "type": "object",
             "properties": {
               "totalCount": {
-                "minimum": 0,
-                "type": "integer"
+                "anyOf": [
+                  {
+                    "type": "null"
+                  },
+                  {
+                    "minimum": 0,
+                    "type": "integer"
+                  }
+                ]
               },
               "__typename": {
                 "const": "FollowerConnection",
@@ -58179,8 +58186,15 @@
             "type": "object",
             "properties": {
               "totalCount": {
-                "minimum": 0,
-                "type": "integer"
+                "anyOf": [
+                  {
+                    "type": "null"
+                  },
+                  {
+                    "minimum": 0,
+                    "type": "integer"
+                  }
+                ]
               },
               "__typename": {
                 "const": "FollowerConnection",
@@ -60593,8 +60607,15 @@
             "type": "object",
             "properties": {
               "totalCount": {
-                "minimum": 0,
-                "type": "integer"
+                "anyOf": [
+                  {
+                    "type": "null"
+                  },
+                  {
+                    "minimum": 0,
+                    "type": "integer"
+                  }
+                ]
               },
               "__typename": {
                 "const": "FollowerConnection",
@@ -63124,8 +63145,15 @@
             "type": "object",
             "properties": {
               "totalCount": {
-                "minimum": 0,
-                "type": "integer"
+                "anyOf": [
+                  {
+                    "type": "null"
+                  },
+                  {
+                    "minimum": 0,
+                    "type": "integer"
+                  }
+                ]
               },
               "__typename": {
                 "const": "FollowerConnection",
@@ -63501,8 +63529,15 @@
                     "type": "object",
                     "properties": {
                       "totalCount": {
-                        "minimum": 0,
-                        "type": "integer"
+                        "anyOf": [
+                          {
+                            "type": "null"
+                          },
+                          {
+                            "minimum": 0,
+                            "type": "integer"
+                          }
+                        ]
                       },
                       "__typename": {
                         "const": "FollowerConnection",
@@ -63874,8 +63909,15 @@
                         "type": "object",
                         "properties": {
                           "totalCount": {
-                            "minimum": 0,
-                            "type": "integer"
+                            "anyOf": [
+                              {
+                                "type": "null"
+                              },
+                              {
+                                "minimum": 0,
+                                "type": "integer"
+                              }
+                            ]
                           },
                           "__typename": {
                             "const": "FollowerConnection",

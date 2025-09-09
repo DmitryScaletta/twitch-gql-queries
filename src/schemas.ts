@@ -26,7 +26,7 @@ export const UserRoles = {
 } satisfies Properties;
 
 export const FollowerConnection = {
-  totalCount: T.Integer({ minimum: 0 }),
+  totalCount: T.Union([T.Null(), T.Integer({ minimum: 0 })]),
   __typename: T.Literal('FollowerConnection'),
 } satisfies Properties;
 

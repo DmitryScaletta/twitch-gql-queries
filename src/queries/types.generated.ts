@@ -115,7 +115,7 @@ export interface ChannelRootUser {
   primaryColorHex: null | string;
   profileImageURL: string;
   followers: {
-    totalCount: number;
+    totalCount: null | number;
     __typename: 'FollowerConnection';
   };
   roles: {
@@ -1053,7 +1053,7 @@ export interface SearchResultsPageChannel {
     __typename: 'BroadcastSettings';
   };
   followers: {
-    totalCount: number;
+    totalCount: null | number;
     __typename: 'FollowerConnection';
   };
   /**
@@ -1398,7 +1398,7 @@ export interface ShareClipRenderStatusBroadcaster {
   profileImageURL: string;
   isPartner: boolean;
   followers: {
-    totalCount: number;
+    totalCount: null | number;
     __typename: 'FollowerConnection';
   };
   stream: null | {
@@ -1698,7 +1698,7 @@ export interface VideoMetadataUser {
     __typename: 'Stream';
   };
   followers: {
-    totalCount: number;
+    totalCount: null | number;
     __typename: 'FollowerConnection';
   };
   __typename: 'User';
