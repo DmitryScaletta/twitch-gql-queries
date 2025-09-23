@@ -147,6 +147,16 @@ export const ClipAsset = {
 } satisfies Properties;
 
 export const ClipVideoQuality = {
+  bitrate: T.Integer({ minimum: 0 }),
+  codecs: T.String(),
+  height: T.Integer({ minimum: 0 }),
+  width: T.Integer({ minimum: 0 }),
+  videoCodec: T.Union([
+    T.Null(),
+    T.Literal('AVC'),
+    T.Literal('HEVC'),
+    T.String(),
+  ]),
   frameRate: T.Number({ minimum: 0 }),
   quality: T.Union([
     T.Literal('360'),

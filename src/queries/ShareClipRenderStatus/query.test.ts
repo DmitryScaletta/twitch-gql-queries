@@ -9,10 +9,6 @@ import {
   ResponseSchema,
 } from './schema.ts';
 
-import resClipFromHighlight from './mocks/2-clip-from-highlight.json' with { type: 'json' };
-import resClipFromUpload from './mocks/3-clip-from-upload.json' with { type: 'json' };
-import resStatusCreating from './mocks/4-status-creating.json' with { type: 'json' };
-
 describe('ShareClipRenderStatus', () => {
   const validate = createValidate(ResponseSchema, [
     BroadcasterSchema,
@@ -25,15 +21,6 @@ describe('ShareClipRenderStatus', () => {
     const responses = await gqlRequest(
       clips.map(({ slug }) => getQueryShareClipRenderStatus({ slug })),
     );
-    responses.map(validate);
-  });
-
-  test('real request: 1440p', async () => {
-    const responses = await gqlRequest([
-      getQueryShareClipRenderStatus({
-        slug: 'TenaciousOriginalMooseNononoCat-AEuwlukHCpsIR0wn',
-      }),
-    ]);
     responses.map(validate);
   });
 
@@ -62,7 +49,21 @@ describe('ShareClipRenderStatus', () => {
     responses.map(validate);
   });
 
-  test('mocks: clip from highlight', () => validate(resClipFromHighlight));
-  test('mocks: clip from upload', () => validate(resClipFromUpload));
-  test('mocks: status creating', () => validate(resStatusCreating));
+  test('real request: 1440p', async () => {
+    const responses = await gqlRequest([
+      getQueryShareClipRenderStatus({
+        slug: 'TenaciousOriginalMooseNononoCat-AEuwlukHCpsIR0wn',
+      }),
+    ]);
+    responses.map(validate);
+  });
+
+  test('real request: HEVC', async () => {
+    const responses = await gqlRequest([
+      getQueryShareClipRenderStatus({
+        slug: 'DeliciousCarelessCrowLitty-ccS0mlymOKwRZBjV',
+      }),
+    ]);
+    responses.map(validate);
+  });
 });

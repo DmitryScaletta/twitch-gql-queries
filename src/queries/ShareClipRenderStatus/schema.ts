@@ -79,7 +79,16 @@ export const ClipAssetSchema = strictObject(
     ]),
     videoQualities: T.Array(
       strictObject(
-        pick(schemas.ClipVideoQuality, ['frameRate', 'quality', 'sourceURL']),
+        pick(schemas.ClipVideoQuality, [
+          'bitrate',
+          'codecs',
+          'height',
+          'width',
+          'videoCodec',
+          'frameRate',
+          'quality',
+          'sourceURL',
+        ]),
       ),
     ),
     portraitMetadata: T.Union([

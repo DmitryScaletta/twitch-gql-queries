@@ -1,0 +1,273 @@
+{
+  "data": {
+    "clip": {
+      "id": "2519210639",
+      "slug": "DeliciousCarelessCrowLitty-ccS0mlymOKwRZBjV",
+      "url": "https://www.twitch.tv/dakillzor/clip/DeliciousCarelessCrowLitty-ccS0mlymOKwRZBjV",
+      "embedURL": "https://clips.twitch.tv/embed?clip=DeliciousCarelessCrowLitty-ccS0mlymOKwRZBjV",
+      "title": "xd",
+      "viewCount": 11,
+      "language": "EN",
+      "isFeatured": false,
+      "assets": [
+        {
+          "id": "f8aac34c-36b0-4bd6-9e43-2387e4023b64",
+          "aspectRatio": 1.7777777910232544,
+          "type": "SOURCE",
+          "createdAt": "2025-09-22T16:51:32.820471891Z",
+          "creationState": "CREATED",
+          "curator": {
+            "id": "153057175",
+            "login": "norbi_24",
+            "displayName": "Norbi_24",
+            "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/b596ac9b-d444-4334-b1c1-bd11e81c6547-profile_image-50x50.png",
+            "__typename": "User"
+          },
+          "thumbnailURL": "https://static-cdn.jtvnw.net/twitch-clips-thumbnails-prod/DeliciousCarelessCrowLitty-ccS0mlymOKwRZBjV/f8aac34c-36b0-4bd6-9e43-2387e4023b64/preview.jpg",
+          "videoQualities": [
+            {
+              "bitrate": 9004135,
+              "codecs": "hvc1.1.2.L150.90.0.0.0.0.0,mp4a.40.2",
+              "height": 1440,
+              "width": 2560,
+              "videoCodec": "HEVC",
+              "frameRate": 60,
+              "quality": "1440",
+              "sourceURL": "https://production.assets.clips.twitchcdn.net/v2/media/DeliciousCarelessCrowLitty-ccS0mlymOKwRZBjV/f8aac34c-36b0-4bd6-9e43-2387e4023b64/vtg-video-1440.mp4",
+              "__typename": "ClipVideoQuality"
+            },
+            {
+              "bitrate": 7503559,
+              "codecs": "avc1.64002A,mp4a.40.2",
+              "height": 1080,
+              "width": 1920,
+              "videoCodec": "AVC",
+              "frameRate": 60,
+              "quality": "1080",
+              "sourceURL": "https://production.assets.clips.twitchcdn.net/v2/media/DeliciousCarelessCrowLitty-ccS0mlymOKwRZBjV/f8aac34c-36b0-4bd6-9e43-2387e4023b64/video-1080.mp4",
+              "__typename": "ClipVideoQuality"
+            },
+            {
+              "bitrate": 0,
+              "codecs": "",
+              "height": 0,
+              "width": 0,
+              "videoCodec": "AVC",
+              "frameRate": 60.13105392456055,
+              "quality": "720",
+              "sourceURL": "https://production.assets.clips.twitchcdn.net/v2/media/DeliciousCarelessCrowLitty-ccS0mlymOKwRZBjV/f8aac34c-36b0-4bd6-9e43-2387e4023b64/video-720.mp4",
+              "__typename": "ClipVideoQuality"
+            },
+            {
+              "bitrate": 0,
+              "codecs": "",
+              "height": 0,
+              "width": 0,
+              "videoCodec": "AVC",
+              "frameRate": 30.08098793029785,
+              "quality": "480",
+              "sourceURL": "https://production.assets.clips.twitchcdn.net/v2/media/DeliciousCarelessCrowLitty-ccS0mlymOKwRZBjV/f8aac34c-36b0-4bd6-9e43-2387e4023b64/video-480.mp4",
+              "__typename": "ClipVideoQuality"
+            },
+            {
+              "bitrate": 0,
+              "codecs": "",
+              "height": 0,
+              "width": 0,
+              "videoCodec": "AVC",
+              "frameRate": 30.08098793029785,
+              "quality": "360",
+              "sourceURL": "https://production.assets.clips.twitchcdn.net/v2/media/DeliciousCarelessCrowLitty-ccS0mlymOKwRZBjV/f8aac34c-36b0-4bd6-9e43-2387e4023b64/video-360.mp4",
+              "__typename": "ClipVideoQuality"
+            }
+          ],
+          "portraitMetadata": null,
+          "__typename": "ClipAsset"
+        },
+        {
+          "id": "61dbe382-57ad-4d6d-9ac3-36e2205dacad",
+          "aspectRatio": 0.5625,
+          "type": "RECOMPOSED",
+          "createdAt": "2025-09-22T16:51:32.820471891Z",
+          "creationState": "CREATED",
+          "curator": {
+            "id": "153057175",
+            "login": "norbi_24",
+            "displayName": "Norbi_24",
+            "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/b596ac9b-d444-4334-b1c1-bd11e81c6547-profile_image-50x50.png",
+            "__typename": "User"
+          },
+          "thumbnailURL": "https://static-cdn.jtvnw.net/twitch-clips-thumbnails-prod/DeliciousCarelessCrowLitty-ccS0mlymOKwRZBjV/61dbe382-57ad-4d6d-9ac3-36e2205dacad/preview-153x272.jpg",
+          "videoQualities": [
+            {
+              "bitrate": 0,
+              "codecs": "avc1.64002A,mp4a.40.2",
+              "height": 0,
+              "width": 0,
+              "videoCodec": "AVC",
+              "frameRate": 60,
+              "quality": "918",
+              "sourceURL": "https://production.assets.clips.twitchcdn.net/v2/media/DeliciousCarelessCrowLitty-ccS0mlymOKwRZBjV/61dbe382-57ad-4d6d-9ac3-36e2205dacad/video-918.mp4",
+              "__typename": "ClipVideoQuality"
+            },
+            {
+              "bitrate": 0,
+              "codecs": "",
+              "height": 0,
+              "width": 0,
+              "videoCodec": "AVC",
+              "frameRate": 60.13105392456055,
+              "quality": "720",
+              "sourceURL": "https://production.assets.clips.twitchcdn.net/v2/media/DeliciousCarelessCrowLitty-ccS0mlymOKwRZBjV/61dbe382-57ad-4d6d-9ac3-36e2205dacad/video-720.mp4",
+              "__typename": "ClipVideoQuality"
+            },
+            {
+              "bitrate": 0,
+              "codecs": "",
+              "height": 0,
+              "width": 0,
+              "videoCodec": "AVC",
+              "frameRate": 30.08098793029785,
+              "quality": "480",
+              "sourceURL": "https://production.assets.clips.twitchcdn.net/v2/media/DeliciousCarelessCrowLitty-ccS0mlymOKwRZBjV/61dbe382-57ad-4d6d-9ac3-36e2205dacad/video-480.mp4",
+              "__typename": "ClipVideoQuality"
+            },
+            {
+              "bitrate": 0,
+              "codecs": "",
+              "height": 0,
+              "width": 0,
+              "videoCodec": "AVC",
+              "frameRate": 30.08098793029785,
+              "quality": "360",
+              "sourceURL": "https://production.assets.clips.twitchcdn.net/v2/media/DeliciousCarelessCrowLitty-ccS0mlymOKwRZBjV/61dbe382-57ad-4d6d-9ac3-36e2205dacad/video-360.mp4",
+              "__typename": "ClipVideoQuality"
+            }
+          ],
+          "portraitMetadata": {
+            "portraitClipLayout": "STACKED",
+            "fullTemplateMetadata": null,
+            "stackedTemplateMetadata": {
+              "topFrame": {
+                "topLeft": {
+                  "xPercentage": 0,
+                  "yPercentage": 51.91999816894531,
+                  "__typename": "PortraitCropCoordinates"
+                },
+                "bottomRight": {
+                  "xPercentage": 22.8799991607666,
+                  "yPercentage": 76.08000183105469,
+                  "__typename": "PortraitCropCoordinates"
+                },
+                "__typename": "PortraitCropMetadata"
+              },
+              "bottomFrame": {
+                "topLeft": {
+                  "xPercentage": 26.299999237060547,
+                  "yPercentage": 0,
+                  "__typename": "PortraitCropCoordinates"
+                },
+                "bottomRight": {
+                  "xPercentage": 73.7300033569336,
+                  "yPercentage": 100,
+                  "__typename": "PortraitCropCoordinates"
+                },
+                "__typename": "PortraitCropMetadata"
+              },
+              "__typename": "StackedTemplateMetadata"
+            },
+            "__typename": "PortraitClipCropping"
+          },
+          "__typename": "ClipAsset"
+        }
+      ],
+      "curator": {
+        "id": "153057175",
+        "login": "norbi_24",
+        "displayName": "Norbi_24",
+        "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/b596ac9b-d444-4334-b1c1-bd11e81c6547-profile_image-70x70.png",
+        "__typename": "User"
+      },
+      "game": {
+        "id": "27546",
+        "name": "World of Tanks",
+        "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/27546_IGDB-52x72.jpg",
+        "displayName": "World of Tanks",
+        "slug": "world-of-tanks",
+        "__typename": "Game"
+      },
+      "broadcast": {
+        "id": "314404239569",
+        "title": null,
+        "__typename": "Broadcast"
+      },
+      "broadcaster": {
+        "id": "25722719",
+        "login": "dakillzor",
+        "displayName": "Dakillzor",
+        "primaryColorHex": "CD13A7",
+        "isPartner": true,
+        "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/ba5e4714-b7dd-43f5-9c62-df0c91647482-profile_image-70x70.png",
+        "followers": {
+          "totalCount": 295900,
+          "__typename": "FollowerConnection"
+        },
+        "stream": {
+          "id": "314437099859",
+          "viewersCount": 2819,
+          "__typename": "Stream"
+        },
+        "lastBroadcast": {
+          "id": "314437099859",
+          "startedAt": "2025-09-23T07:56:15.473065Z",
+          "__typename": "Broadcast"
+        },
+        "self": null,
+        "__typename": "User"
+      },
+      "thumbnailURL": "https://static-cdn.jtvnw.net/twitch-clips-thumbnails-prod/DeliciousCarelessCrowLitty-ccS0mlymOKwRZBjV/f8aac34c-36b0-4bd6-9e43-2387e4023b64/preview.jpg",
+      "createdAt": "2025-09-22T16:51:32Z",
+      "isPublished": true,
+      "durationSeconds": 7,
+      "champBadge": null,
+      "playbackAccessToken": {
+        "signature": "fe811b7f4429ef9cab4df9455b793fc88c67ed57",
+        "value": "{\"authorization\":{\"forbidden\":false,\"reason\":\"\"},\"clip_uri\":\"\",\"clip_slug\":\"DeliciousCarelessCrowLitty-ccS0mlymOKwRZBjV\",\"device_id\":null,\"expires\":1758695789,\"user_id\":\"\",\"version\":3}",
+        "__typename": "PlaybackAccessToken"
+      },
+      "video": {
+        "id": "2571927466",
+        "broadcastType": "ARCHIVE",
+        "title": "🔥2x !DROPS🔥Night ft @platinumdust | !DAKITHON DAY 20 !fav !T11 | New acc —\u003e !NEW🔥!mods !YT",
+        "__typename": "Video"
+      },
+      "videoOffsetSeconds": 118595,
+      "videoQualities": [
+        {
+          "sourceURL": "https://production.assets.clips.twitchcdn.net/v2/media/DeliciousCarelessCrowLitty-ccS0mlymOKwRZBjV/f8aac34c-36b0-4bd6-9e43-2387e4023b64/video-1080.mp4",
+          "__typename": "ClipVideoQuality"
+        },
+        {
+          "sourceURL": "https://production.assets.clips.twitchcdn.net/v2/media/DeliciousCarelessCrowLitty-ccS0mlymOKwRZBjV/f8aac34c-36b0-4bd6-9e43-2387e4023b64/video-720.mp4",
+          "__typename": "ClipVideoQuality"
+        },
+        {
+          "sourceURL": "https://production.assets.clips.twitchcdn.net/v2/media/DeliciousCarelessCrowLitty-ccS0mlymOKwRZBjV/f8aac34c-36b0-4bd6-9e43-2387e4023b64/video-480.mp4",
+          "__typename": "ClipVideoQuality"
+        },
+        {
+          "sourceURL": "https://production.assets.clips.twitchcdn.net/v2/media/DeliciousCarelessCrowLitty-ccS0mlymOKwRZBjV/f8aac34c-36b0-4bd6-9e43-2387e4023b64/video-360.mp4",
+          "__typename": "ClipVideoQuality"
+        }
+      ],
+      "isViewerEditRestricted": false,
+      "suggestedCropping": null,
+      "__typename": "Clip"
+    }
+  },
+  "extensions": {
+    "durationMilliseconds": 103,
+    "operationName": "ShareClipRenderStatus",
+    "requestID": "01K5V2AWCJY6Z5VY9WEAMQQ5F6"
+  }
+}

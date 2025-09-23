@@ -3,10 +3,10 @@
     "clip": {
       "id": "1738420918",
       "slug": "TenaciousOriginalMooseNononoCat-AEuwlukHCpsIR0wn",
-      "url": "https://clips.twitch.tv/TenaciousOriginalMooseNononoCat-AEuwlukHCpsIR0wn",
+      "url": "https://www.twitch.tv/pajlada/clip/TenaciousOriginalMooseNononoCat-AEuwlukHCpsIR0wn",
       "embedURL": "https://clips.twitch.tv/embed?clip=TenaciousOriginalMooseNononoCat-AEuwlukHCpsIR0wn",
       "title": "LOL",
-      "viewCount": 129,
+      "viewCount": 631,
       "language": "EN",
       "isFeatured": true,
       "assets": [
@@ -26,24 +26,44 @@
           "thumbnailURL": "https://static-cdn.jtvnw.net/twitch-clips/h3uGmgBLsJbpBwqbCEdMJw/AT-cm%7Ch3uGmgBLsJbpBwqbCEdMJw-preview-480x272.jpg",
           "videoQualities": [
             {
+              "bitrate": 0,
+              "codecs": "",
+              "height": 0,
+              "width": 0,
+              "videoCodec": null,
               "frameRate": 30.2,
               "quality": "1440",
               "sourceURL": "https://production.assets.clips.twitchcdn.net/h3uGmgBLsJbpBwqbCEdMJw/AT-cm%7Ch3uGmgBLsJbpBwqbCEdMJw.mp4",
               "__typename": "ClipVideoQuality"
             },
             {
+              "bitrate": 0,
+              "codecs": "",
+              "height": 0,
+              "width": 0,
+              "videoCodec": null,
               "frameRate": 30.2,
               "quality": "720",
               "sourceURL": "https://production.assets.clips.twitchcdn.net/h3uGmgBLsJbpBwqbCEdMJw/AT-cm%7Ch3uGmgBLsJbpBwqbCEdMJw-720.mp4",
               "__typename": "ClipVideoQuality"
             },
             {
+              "bitrate": 0,
+              "codecs": "",
+              "height": 0,
+              "width": 0,
+              "videoCodec": null,
               "frameRate": 30.2,
               "quality": "480",
               "sourceURL": "https://production.assets.clips.twitchcdn.net/h3uGmgBLsJbpBwqbCEdMJw/AT-cm%7Ch3uGmgBLsJbpBwqbCEdMJw-480.mp4",
               "__typename": "ClipVideoQuality"
             },
             {
+              "bitrate": 0,
+              "codecs": "",
+              "height": 0,
+              "width": 0,
+              "videoCodec": null,
               "frameRate": 30.2,
               "quality": "360",
               "sourceURL": "https://production.assets.clips.twitchcdn.net/h3uGmgBLsJbpBwqbCEdMJw/AT-cm%7Ch3uGmgBLsJbpBwqbCEdMJw-360.mp4",
@@ -82,17 +102,13 @@
         "isPartner": true,
         "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/cbe986e3-06ad-4506-a3aa-eb05466c839c-profile_image-70x70.png",
         "followers": {
-          "totalCount": 44373,
+          "totalCount": 44443,
           "__typename": "FollowerConnection"
         },
-        "stream": {
-          "id": "317559194233",
-          "viewersCount": 92,
-          "__typename": "Stream"
-        },
+        "stream": null,
         "lastBroadcast": {
-          "id": "317559194233",
-          "startedAt": "2025-03-22T10:04:13.07734Z",
+          "id": "314896774757",
+          "startedAt": "2025-09-21T14:01:58.65754Z",
           "__typename": "Broadcast"
         },
         "self": null,
@@ -104,17 +120,12 @@
       "durationSeconds": 5,
       "champBadge": null,
       "playbackAccessToken": {
-        "signature": "619be9815485cb8a8eba183561a9397363878bb1",
-        "value": "{\"authorization\":{\"forbidden\":false,\"reason\":\"\"},\"clip_uri\":\"https://production.assets.clips.twitchcdn.net/h3uGmgBLsJbpBwqbCEdMJw/AT-cm%7Ch3uGmgBLsJbpBwqbCEdMJw.mp4\",\"clip_slug\":\"TenaciousOriginalMooseNononoCat-AEuwlukHCpsIR0wn\",\"device_id\":null,\"expires\":1742722724,\"user_id\":\"\",\"version\":2}",
+        "signature": "2724336bf639b2835da7809ddbd0dff848b4f857",
+        "value": "{\"authorization\":{\"forbidden\":false,\"reason\":\"\"},\"clip_uri\":\"https://production.assets.clips.twitchcdn.net/h3uGmgBLsJbpBwqbCEdMJw/AT-cm%7Ch3uGmgBLsJbpBwqbCEdMJw.mp4\",\"clip_slug\":\"TenaciousOriginalMooseNononoCat-AEuwlukHCpsIR0wn\",\"device_id\":null,\"expires\":1758695269,\"user_id\":\"\",\"version\":3}",
         "__typename": "PlaybackAccessToken"
       },
-      "video": {
-        "id": "2400241459",
-        "broadcastType": "ARCHIVE",
-        "title": "Programming.S09E19.1440p.MKV-XD.NVENC",
-        "__typename": "Video"
-      },
-      "videoOffsetSeconds": 2696,
+      "video": null,
+      "videoOffsetSeconds": null,
       "videoQualities": [
         {
           "sourceURL": "https://production.assets.clips.twitchcdn.net/h3uGmgBLsJbpBwqbCEdMJw/AT-cm%7Ch3uGmgBLsJbpBwqbCEdMJw.mp4",
@@ -139,8 +150,8 @@
     }
   },
   "extensions": {
-    "durationMilliseconds": 111,
+    "durationMilliseconds": 103,
     "operationName": "ShareClipRenderStatus",
-    "requestID": "01JPZ17M1N825RWRYYM08K2XTP"
+    "requestID": "01K5V1V059A8TZCZ87A2DZB1GP"
   }
 }

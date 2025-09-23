@@ -3,10 +3,10 @@
     "clip": {
       "id": "3846773990",
       "slug": "ManlyLittleHabaneroTwitchRaid-FIvuPaqPC4CHIif4",
-      "url": "https://clips.twitch.tv/ManlyLittleHabaneroTwitchRaid-FIvuPaqPC4CHIif4",
+      "url": "https://www.twitch.tv/giantwaffle/clip/ManlyLittleHabaneroTwitchRaid-FIvuPaqPC4CHIif4",
       "embedURL": "https://clips.twitch.tv/embed?clip=ManlyLittleHabaneroTwitchRaid-FIvuPaqPC4CHIif4",
       "title": "picked up in under 5 mins",
-      "viewCount": 289,
+      "viewCount": 295,
       "language": "EN",
       "isFeatured": false,
       "assets": [
@@ -26,24 +26,44 @@
           "thumbnailURL": "https://static-cdn.jtvnw.net/twitch-clips-thumbnails-prod/ManlyLittleHabaneroTwitchRaid-FIvuPaqPC4CHIif4/c54db84b-e719-4644-890d-6f360c3c08db/preview.jpg",
           "videoQualities": [
             {
+              "bitrate": 0,
+              "codecs": "",
+              "height": 0,
+              "width": 0,
+              "videoCodec": null,
               "frameRate": 59.99863815307617,
               "quality": "1080",
               "sourceURL": "https://production.assets.clips.twitchcdn.net/v2/media/ManlyLittleHabaneroTwitchRaid-FIvuPaqPC4CHIif4/c54db84b-e719-4644-890d-6f360c3c08db/video.mp4",
               "__typename": "ClipVideoQuality"
             },
             {
+              "bitrate": 0,
+              "codecs": "",
+              "height": 0,
+              "width": 0,
+              "videoCodec": null,
               "frameRate": 59.996578216552734,
               "quality": "720",
               "sourceURL": "https://production.assets.clips.twitchcdn.net/v2/media/ManlyLittleHabaneroTwitchRaid-FIvuPaqPC4CHIif4/c54db84b-e719-4644-890d-6f360c3c08db/video-720.mp4",
               "__typename": "ClipVideoQuality"
             },
             {
+              "bitrate": 0,
+              "codecs": "",
+              "height": 0,
+              "width": 0,
+              "videoCodec": null,
               "frameRate": 30.032495498657227,
               "quality": "480",
               "sourceURL": "https://production.assets.clips.twitchcdn.net/v2/media/ManlyLittleHabaneroTwitchRaid-FIvuPaqPC4CHIif4/c54db84b-e719-4644-890d-6f360c3c08db/video-480.mp4",
               "__typename": "ClipVideoQuality"
             },
             {
+              "bitrate": 0,
+              "codecs": "",
+              "height": 0,
+              "width": 0,
+              "videoCodec": null,
               "frameRate": 30.032495498657227,
               "quality": "360",
               "sourceURL": "https://production.assets.clips.twitchcdn.net/v2/media/ManlyLittleHabaneroTwitchRaid-FIvuPaqPC4CHIif4/c54db84b-e719-4644-890d-6f360c3c08db/video-360.mp4",
@@ -69,18 +89,33 @@
           "thumbnailURL": "https://static-cdn.jtvnw.net/twitch-clips-thumbnails-prod/ManlyLittleHabaneroTwitchRaid-FIvuPaqPC4CHIif4/6089ff9c-3264-4804-a0d8-6bb219868c52/preview-153x272.jpg",
           "videoQualities": [
             {
+              "bitrate": 0,
+              "codecs": "",
+              "height": 0,
+              "width": 0,
+              "videoCodec": null,
               "frameRate": 60,
               "quality": "607",
               "sourceURL": "https://production.assets.clips.twitchcdn.net/v2/media/ManlyLittleHabaneroTwitchRaid-FIvuPaqPC4CHIif4/6089ff9c-3264-4804-a0d8-6bb219868c52/video.mp4",
               "__typename": "ClipVideoQuality"
             },
             {
+              "bitrate": 0,
+              "codecs": "",
+              "height": 0,
+              "width": 0,
+              "videoCodec": null,
               "frameRate": 0,
               "quality": "480",
               "sourceURL": "",
               "__typename": "ClipVideoQuality"
             },
             {
+              "bitrate": 0,
+              "codecs": "",
+              "height": 0,
+              "width": 0,
+              "videoCodec": null,
               "frameRate": 0,
               "quality": "360",
               "sourceURL": "",
@@ -139,17 +174,13 @@
         "isPartner": true,
         "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/f03ca1a6-9b96-4296-a50a-c33778238c72-profile_image-70x70.png",
         "followers": {
-          "totalCount": 854855,
+          "totalCount": 852982,
           "__typename": "FollowerConnection"
         },
-        "stream": {
-          "id": "319125443197",
-          "viewersCount": 1964,
-          "__typename": "Stream"
-        },
+        "stream": null,
         "lastBroadcast": {
-          "id": "319125443197",
-          "startedAt": "2025-03-17T12:01:04.343135Z",
+          "id": "315064975324",
+          "startedAt": "2025-09-22T20:40:36.603898Z",
           "__typename": "Broadcast"
         },
         "self": null,
@@ -161,8 +192,8 @@
       "durationSeconds": 29,
       "champBadge": null,
       "playbackAccessToken": {
-        "signature": "9e501df39afc916b5925a0f8ca824e1f1d045772",
-        "value": "{\"authorization\":{\"forbidden\":false,\"reason\":\"\"},\"clip_uri\":\"\",\"clip_slug\":\"ManlyLittleHabaneroTwitchRaid-FIvuPaqPC4CHIif4\",\"device_id\":null,\"expires\":1742297838,\"user_id\":\"\",\"version\":2}",
+        "signature": "17909c5711d2a4e211b6f2d46f9f2f4d29535128",
+        "value": "{\"authorization\":{\"forbidden\":false,\"reason\":\"\"},\"clip_uri\":\"\",\"clip_slug\":\"ManlyLittleHabaneroTwitchRaid-FIvuPaqPC4CHIif4\",\"device_id\":null,\"expires\":1758694941,\"user_id\":\"\",\"version\":3}",
         "__typename": "PlaybackAccessToken"
       },
       "video": {
@@ -196,8 +227,8 @@
     }
   },
   "extensions": {
-    "durationMilliseconds": 101,
+    "durationMilliseconds": 84,
     "operationName": "ShareClipRenderStatus",
-    "requestID": "01JPJC145GZ00C7GVS5YN218B6"
+    "requestID": "01K5V1H04B0G0GFCDKFCP4QE0N"
   }
 }

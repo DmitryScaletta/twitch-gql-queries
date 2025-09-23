@@ -1433,6 +1433,11 @@ export interface ShareClipRenderStatusClipAsset {
     __typename: 'User';
   };
   videoQualities: {
+    bitrate: number;
+    codecs: string;
+    height: number;
+    width: number;
+    videoCodec: null | 'AVC' | 'HEVC' | string & {};
     frameRate: number;
     quality: '360' | '480' | '720' | '1080' | '1440' | string & {};
     /**

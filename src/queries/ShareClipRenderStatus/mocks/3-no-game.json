@@ -3,7 +3,7 @@
     "clip": {
       "id": "468568798",
       "slug": "AstuteEncouragingCroquetteJebaited",
-      "url": "https://clips.twitch.tv/AstuteEncouragingCroquetteJebaited",
+      "url": "https://www.twitch.tv/twitch/clip/AstuteEncouragingCroquetteJebaited",
       "embedURL": "https://clips.twitch.tv/embed?clip=AstuteEncouragingCroquetteJebaited",
       "title": "TTFAF Pog",
       "viewCount": 413,
@@ -26,24 +26,44 @@
           "thumbnailURL": "https://static-cdn.jtvnw.net/twitch-clips/AT-cm%7C541849220-preview-480x272.jpg",
           "videoQualities": [
             {
+              "bitrate": 0,
+              "codecs": "",
+              "height": 0,
+              "width": 0,
+              "videoCodec": null,
               "frameRate": 59.9499845842897,
               "quality": "1080",
               "sourceURL": "https://production.assets.clips.twitchcdn.net/AT-cm%7C541849220.mp4",
               "__typename": "ClipVideoQuality"
             },
             {
+              "bitrate": 0,
+              "codecs": "",
+              "height": 0,
+              "width": 0,
+              "videoCodec": null,
               "frameRate": 59.9499845842897,
               "quality": "720",
               "sourceURL": "https://production.assets.clips.twitchcdn.net/AT-cm%7C541849220-720.mp4",
               "__typename": "ClipVideoQuality"
             },
             {
+              "bitrate": 0,
+              "codecs": "",
+              "height": 0,
+              "width": 0,
+              "videoCodec": null,
               "frameRate": 29.9821820175439,
               "quality": "480",
               "sourceURL": "https://production.assets.clips.twitchcdn.net/AT-cm%7C541849220-480.mp4",
               "__typename": "ClipVideoQuality"
             },
             {
+              "bitrate": 0,
+              "codecs": "",
+              "height": 0,
+              "width": 0,
+              "videoCodec": null,
               "frameRate": 29.9821820175439,
               "quality": "360",
               "sourceURL": "https://production.assets.clips.twitchcdn.net/AT-cm%7C541849220-360.mp4",
@@ -73,15 +93,15 @@
         "displayName": "Twitch",
         "primaryColorHex": "5C16C5",
         "isPartner": true,
-        "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/d5e6ebb4-a245-4ebf-bea6-2183e2f39600-profile_image-70x70.png",
+        "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/d5dc8fed-5b81-4bdd-aead-ab7f8e5fb232-profile_image-70x70.png",
         "followers": {
-          "totalCount": 2379973,
+          "totalCount": 2392537,
           "__typename": "FollowerConnection"
         },
         "stream": null,
         "lastBroadcast": {
-          "id": "317752962300",
-          "startedAt": "2025-03-13T20:05:21.080933Z",
+          "id": "314946519003",
+          "startedAt": "2025-09-11T19:09:08.963195Z",
           "__typename": "Broadcast"
         },
         "self": null,
@@ -93,8 +113,8 @@
       "durationSeconds": 58,
       "champBadge": null,
       "playbackAccessToken": {
-        "signature": "e48adf76187f3359afcb2924b1a378069e5bff15",
-        "value": "{\"authorization\":{\"forbidden\":false,\"reason\":\"\"},\"clip_uri\":\"https://production.assets.clips.twitchcdn.net/AT-cm%7C541849220.mp4\",\"clip_slug\":\"AstuteEncouragingCroquetteJebaited\",\"device_id\":null,\"expires\":1742299379,\"user_id\":\"\",\"version\":2}",
+        "signature": "ad261faa19e66ceebfd9cf3a541865caed32b80e",
+        "value": "{\"authorization\":{\"forbidden\":false,\"reason\":\"\"},\"clip_uri\":\"https://production.assets.clips.twitchcdn.net/AT-cm%7C541849220.mp4\",\"clip_slug\":\"AstuteEncouragingCroquetteJebaited\",\"device_id\":null,\"expires\":1758695242,\"user_id\":\"\",\"version\":3}",
         "__typename": "PlaybackAccessToken"
       },
       "video": null,
@@ -123,8 +143,8 @@
     }
   },
   "extensions": {
-    "durationMilliseconds": 100,
+    "durationMilliseconds": 104,
     "operationName": "ShareClipRenderStatus",
-    "requestID": "01JPJDG4YB7SXQJC5RJVF9DJNT"
+    "requestID": "01K5V1T60TVCDFDGSJC1GC7YSH"
   }
 }
