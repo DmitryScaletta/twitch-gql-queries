@@ -17,7 +17,8 @@ const showErrors = (errors: Value.ValueErrorIterator): ValueError | null => {
   let lastError: ValueError | null = null;
   for (const error of errors) {
     if (error.errors.length === 0) {
-      const obj = JSON.stringify(error.value, null, 2);
+      let obj = JSON.stringify(error.value, null, 2);
+      if (obj === undefined) obj = 'undefined';
       console.log(error.message);
       console.log(error.path);
       console.log(obj.length < 1000 ? obj : 'TOO LONG', '\n');
