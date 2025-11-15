@@ -1,0 +1,129 @@
+{
+  "data": {
+    "user": {
+      "id": "106013742",
+      "videos": {
+        "edges": [
+          {
+            "cursor": "2608107675|45617|2025-11-02T19:26:41Z|32620",
+            "node": {
+              "id": "2618913488",
+              "title": "TARKOV 1.0 IS HERE! LETS PARTY! TARKOVTV THEN GAME GOES LIVE!",
+              "createdAt": "2025-11-15T07:36:43Z",
+              "publishedAt": "2025-11-15T07:36:43Z",
+              "__typename": "Video"
+            },
+            "__typename": "VideoEdge"
+          },
+          {
+            "cursor": "2608107675|45617|2025-11-02T19:26:41Z|32620",
+            "node": {
+              "id": "2615458039",
+              "title": "TARKOV PRE 1.0 LAUNCH EVENT SOON!",
+              "createdAt": "2025-11-11T10:10:06Z",
+              "publishedAt": "2025-11-11T10:10:06Z",
+              "__typename": "Video"
+            },
+            "__typename": "VideoEdge"
+          },
+          {
+            "cursor": "2608107675|45617|2025-11-02T19:26:41Z|32620",
+            "node": {
+              "id": "2614609892",
+              "title": "[DROPS] LVL 72 | TRYHARD II TRIALS GRIND",
+              "createdAt": "2025-11-10T09:59:55Z",
+              "publishedAt": "2025-11-10T09:59:55Z",
+              "__typename": "Video"
+            },
+            "__typename": "VideoEdge"
+          },
+          {
+            "cursor": "2608107675|45617|2025-11-02T19:26:41Z|32620",
+            "node": {
+              "id": "2614034098",
+              "title": "[DROPS] LVL 67 | TRAILS ROOKIE III RANK 1 | FARMING 1 MIL \u0026 ALL BP's",
+              "createdAt": "2025-11-09T17:47:19Z",
+              "publishedAt": "2025-11-09T17:47:19Z",
+              "__typename": "Video"
+            },
+            "__typename": "VideoEdge"
+          },
+          {
+            "cursor": "2608107675|45617|2025-11-02T19:26:41Z|32620",
+            "node": {
+              "id": "2611957269",
+              "title": "[DROPS] BIRTHDAY STREAM! | LVL 61 | TRAILS ROOKIE III RANK 1 | FARMING 1 MIL \u0026 ALL BP's",
+              "createdAt": "2025-11-07T11:20:29Z",
+              "publishedAt": "2025-11-07T11:20:29Z",
+              "__typename": "Video"
+            },
+            "__typename": "VideoEdge"
+          },
+          {
+            "cursor": "2608107675|45617|2025-11-02T19:26:41Z|32620",
+            "node": {
+              "id": "2611357978",
+              "title": "[DROPS] BIRTHDAY STREAM! | LVL 57 | TRAILS ROOKIE III RANK 1 | FARMING 1 MIL \u0026 ALL BP's",
+              "createdAt": "2025-11-06T18:09:17Z",
+              "publishedAt": "2025-11-06T18:09:17Z",
+              "__typename": "Video"
+            },
+            "__typename": "VideoEdge"
+          },
+          {
+            "cursor": "2608107675|45617|2025-11-02T19:26:41Z|32620",
+            "node": {
+              "id": "2610567446",
+              "title": "[DROPS] LVL 53 | TRAILS ROOKIE III RANK 1 | SOLO BEAST (BUT FRIENDLY)",
+              "createdAt": "2025-11-05T19:00:51Z",
+              "publishedAt": "2025-11-05T19:00:51Z",
+              "__typename": "Video"
+            },
+            "__typename": "VideoEdge"
+          },
+          {
+            "cursor": "2608107675|45617|2025-11-02T19:26:41Z|32620",
+            "node": {
+              "id": "2609657703",
+              "title": "[DROPS] LVL 49 | TRAILS ROOKIE III RANK 1 | SOLO BEAST (BUT FRIENDLY)",
+              "createdAt": "2025-11-04T17:22:56Z",
+              "publishedAt": "2025-11-04T17:22:56Z",
+              "__typename": "Video"
+            },
+            "__typename": "VideoEdge"
+          },
+          {
+            "cursor": "2608107675|45617|2025-11-02T19:26:41Z|32620",
+            "node": {
+              "id": "2608887369",
+              "title": "[DROPS] LVL 42 | SOLO BEAST (BUT FRIENDLY)",
+              "createdAt": "2025-11-03T18:49:00Z",
+              "publishedAt": "2025-11-03T18:49:00Z",
+              "__typename": "Video"
+            },
+            "__typename": "VideoEdge"
+          },
+          {
+            "cursor": "2608107675|45617|2025-11-02T19:26:41Z|32620",
+            "node": {
+              "id": "2608107675",
+              "title": "[DROPS] LVL 34 | RANK 1 TRIALS | SOLO BEAST (BUT FRIENDLY)",
+              "createdAt": "2025-11-02T19:26:41Z",
+              "publishedAt": "2025-11-02T19:26:41Z",
+              "__typename": "Video"
+            },
+            "__typename": "VideoEdge"
+          }
+        ],
+        "pageInfo": { "hasNextPage": true, "__typename": "PageInfo" },
+        "__typename": "VideoConnection"
+      },
+      "__typename": "User"
+    }
+  },
+  "extensions": {
+    "durationMilliseconds": 44,
+    "operationName": "FFZ_RecentBroadcasts",
+    "requestID": "01KA4A3TC4MQTQ27D3RNBF43NH"
+  }
+}

@@ -11,20 +11,22 @@ export const name = 'FilterableVideoTower_Videos';
 export const displayName = 'FilterableVideoTowerVideos';
 export const tags = ['Videos'];
 
+export const BroadcastTypeSchema = T.Union(
+  [T.Null(), ...schemas.Video_BroadcastType],
+  { $id: 'BroadcastType' },
+);
+export const VideoSortSchema = T.Union(
+  [T.Literal('TIME'), T.Literal('VIEWS')],
+  { $id: 'VideoSort' },
+);
+
 export const VariablesSchema = strictObject(
   {
     includePreviewBlur: T.Optional(T.Boolean()),
     limit: T.Integer({ minimum: 1 }),
     channelOwnerLogin: T.String(),
-    broadcastType: T.Optional(
-      T.Union([
-        T.Null(),
-        T.Literal('ARCHIVE'),
-        T.Literal('HIGHLIGHT'),
-        T.Literal('UPLOAD'),
-      ]),
-    ),
-    videoSort: T.Union([T.Literal('TIME'), T.Literal('VIEWS')]),
+    broadcastType: T.Optional(BroadcastTypeSchema),
+    videoSort: VideoSortSchema,
   },
   { $id: `${displayName}Variables` },
 );

@@ -756,26 +756,38 @@ export interface DirectoryPageGameData {
   game: null | DirectoryPageGameGame;
 }
 
-export interface FfzBroadcastIdUser {
+export interface FfzRecentBroadcastsUser {
   id: string;
-  stream: null | {
-    id: string;
-    archiveVideo: null | {
-      id: string;
-      __typename: 'Video';
-    };
-    __typename: 'Stream';
+  videos: {
+    edges: {
+      cursor: null | string;
+      node: FfzRecentBroadcastsVideo;
+      __typename: 'VideoEdge';
+    }[];
   };
   __typename: 'User';
 }
 
-export interface FfzBroadcastIdVariables {
+export interface FfzRecentBroadcastsVideo {
   id: string;
+  title: null | string;
+  createdAt: string;
+  publishedAt: null | string;
+  __typename: 'Video';
 }
 
-export interface FfzBroadcastIdData {
-  user: null | FfzBroadcastIdUser;
+export interface FfzRecentBroadcastsVariables {
+  id: string;
+  type?: BroadcastType;
+  sort: VideoSort;
+  limit: number;
 }
+
+export interface FfzRecentBroadcastsData {
+  user: null | FfzRecentBroadcastsUser;
+}
+
+export type BroadcastType = null | 'ARCHIVE' | 'HIGHLIGHT' | 'UPLOAD';
 
 export interface FilterableVideoTowerVideosVideo {
   animatedPreviewURL: string;
@@ -836,12 +848,14 @@ export interface FilterableVideoTowerVideosVideo {
   __typename: 'Video';
 }
 
+export type VideoSort = 'TIME' | 'VIEWS';
+
 export interface FilterableVideoTowerVideosVariables {
   includePreviewBlur?: boolean;
   limit: number;
   channelOwnerLogin: string;
-  broadcastType?: null | 'ARCHIVE' | 'HIGHLIGHT' | 'UPLOAD';
-  videoSort: 'TIME' | 'VIEWS';
+  broadcastType?: BroadcastType;
+  videoSort: VideoSort;
 }
 
 export interface FilterableVideoTowerVideosData {
@@ -1802,7 +1816,7 @@ export type ClipsCardsGameResponse = QueryResponse<ClipsCardsGameData, 'ClipsCar
 export type ClipsCardsUserResponse = QueryResponse<ClipsCardsUserData, 'ClipsCards__User'>;
 export type ClipsDownloadButtonResponse = QueryResponse<ClipsDownloadButtonData, 'ClipsDownloadButton'>;
 export type DirectoryPageGameResponse = QueryResponse<DirectoryPageGameData, 'DirectoryPage_Game'>;
-export type FfzBroadcastIdResponse = QueryResponse<FfzBroadcastIdData, 'FFZ_BroadcastID'>;
+export type FfzRecentBroadcastsResponse = QueryResponse<FfzRecentBroadcastsData, 'FFZ_RecentBroadcasts'>;
 export type FilterableVideoTowerVideosResponse = QueryResponse<FilterableVideoTowerVideosData, 'FilterableVideoTower_Videos'>;
 export type GetPinnedChatResponse = QueryResponse<GetPinnedChatData, 'GetPinnedChat'>;
 export type GetUserIdResponse = QueryResponse<GetUserIdData, 'GetUserID'>;
@@ -1830,7 +1844,7 @@ export interface QueryResponseMap {
   ClipsCards__User: ClipsCardsUserResponse;
   ClipsDownloadButton: ClipsDownloadButtonResponse;
   DirectoryPage_Game: DirectoryPageGameResponse;
-  FFZ_BroadcastID: FfzBroadcastIdResponse;
+  FFZ_RecentBroadcasts: FfzRecentBroadcastsResponse;
   FilterableVideoTower_Videos: FilterableVideoTowerVideosResponse;
   GetPinnedChat: GetPinnedChatResponse;
   GetUserID: GetUserIdResponse;

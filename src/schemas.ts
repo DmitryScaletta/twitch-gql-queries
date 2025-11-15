@@ -81,15 +81,17 @@ export const Team = {
   __typename: T.Literal('Team'),
 } satisfies Properties;
 
+export const Video_BroadcastType = [
+  T.Literal('ARCHIVE'),
+  T.Literal('HIGHLIGHT'),
+  T.Literal('UPLOAD'),
+];
+
 export const Video = {
   id: T.String({ pattern: '^[0-9]+$' }),
   title: T.Union([T.Null(), T.String()]),
   description: T.Union([T.Null(), T.String()]),
-  broadcastType: T.Union([
-    T.Literal('ARCHIVE'),
-    T.Literal('HIGHLIGHT'),
-    T.Literal('UPLOAD'),
-  ]),
+  broadcastType: T.Union(Video_BroadcastType),
   lengthSeconds: T.Integer({ minimum: 0 }),
   viewCount: T.Integer({ minimum: 0 }),
   previewThumbnailURL: T.String({ format: 'uri' }),
