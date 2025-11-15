@@ -28,18 +28,18 @@ yarn add twitch-gql-queries
 import {
   getQueryClipsCardsUser,
   getQueryStreamMetadata,
-  getQueryFfzBroadcastId,
+  getQueryFfzRecentBroadcasts,
   getQueryUseViewCount,
   gqlRequest,
 } from 'twitch-gql-queries';
 
 const [
   streamMetadataResponse,
-  ffzBroadcastIdResponse,
+  FfzRecentBroadcastsResponse,
   clipsCardsUserResponse,
 ] = await gqlRequest([
   getQueryStreamMetadata({ channelLogin: 'xqc' }),
-  getQueryFfzBroadcastId({ id: '71092938' }),
+  getQueryFfzRecentBroadcasts({ id: '71092938', sort: 'time', limit: 5 }),
   getQueryClipsCardsUser({
     login: 'xqc',
     limit: 30,
@@ -114,7 +114,7 @@ console.log(responses);
 * ClipsCards__User
 * ClipsDownloadButton
 * DirectoryPage_Game
-* FFZ_BroadcastID
+* FFZ_RecentBroadcasts
 * FilterableVideoTower_Videos
 * GetPinnedChat
 * GetUserID
