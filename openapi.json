@@ -30275,7 +30275,7 @@
         }
       }
     },
-    "#FFZ_BroadcastID": {
+    "#FFZ_RecentBroadcasts": {
       "post": {
         "summary": "",
         "tags": [
@@ -30298,17 +30298,20 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/FfzBroadcastIdRequestBody"
+                "$ref": "#/components/schemas/FfzRecentBroadcastsRequestBody"
               },
               "example": {
-                "operationName": "FFZ_BroadcastID",
+                "operationName": "FFZ_RecentBroadcasts",
                 "variables": {
-                  "id": "26490481"
+                  "id": "106013742",
+                  "type": "ARCHIVE",
+                  "sort": "TIME",
+                  "limit": 10
                 },
                 "extensions": {
                   "persistedQuery": {
                     "version": 1,
-                    "sha256Hash": "cc89dfe8fcfe71235313b05b34799eaa519d162ebf85faf0c51d17c274614f0f"
+                    "sha256Hash": "a92c0ad34fdba9b3f5e6125dce4b0acc9373f2b2c06c74c92187749d12f73d4c"
                   }
                 }
               }
@@ -30321,67 +30324,138 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/FfzBroadcastIdResponse"
+                  "$ref": "#/components/schemas/FfzRecentBroadcastsResponse"
                 },
-                "examples": {
-                  "online video": {
-                    "value": {
-                      "data": {
-                        "user": {
-                          "id": "26490481",
-                          "stream": {
-                            "id": "318597135869",
-                            "archiveVideo": {
-                              "id": "2402139682",
+                "example": {
+                  "data": {
+                    "user": {
+                      "id": "106013742",
+                      "videos": {
+                        "edges": [
+                          {
+                            "cursor": "2608107675|45617|2025-11-02T19:26:41Z|32620",
+                            "node": {
+                              "id": "2618913488",
+                              "title": "TARKOV 1.0 IS HERE! LETS PARTY! TARKOVTV THEN GAME GOES LIVE!",
+                              "createdAt": "2025-11-15T07:36:43Z",
+                              "publishedAt": "2025-11-15T07:36:43Z",
                               "__typename": "Video"
                             },
-                            "__typename": "Stream"
+                            "__typename": "VideoEdge"
                           },
-                          "__typename": "User"
-                        }
+                          {
+                            "cursor": "2608107675|45617|2025-11-02T19:26:41Z|32620",
+                            "node": {
+                              "id": "2615458039",
+                              "title": "TARKOV PRE 1.0 LAUNCH EVENT SOON!",
+                              "createdAt": "2025-11-11T10:10:06Z",
+                              "publishedAt": "2025-11-11T10:10:06Z",
+                              "__typename": "Video"
+                            },
+                            "__typename": "VideoEdge"
+                          },
+                          {
+                            "cursor": "2608107675|45617|2025-11-02T19:26:41Z|32620",
+                            "node": {
+                              "id": "2614609892",
+                              "title": "[DROPS] LVL 72 | TRYHARD II TRIALS GRIND",
+                              "createdAt": "2025-11-10T09:59:55Z",
+                              "publishedAt": "2025-11-10T09:59:55Z",
+                              "__typename": "Video"
+                            },
+                            "__typename": "VideoEdge"
+                          },
+                          {
+                            "cursor": "2608107675|45617|2025-11-02T19:26:41Z|32620",
+                            "node": {
+                              "id": "2614034098",
+                              "title": "[DROPS] LVL 67 | TRAILS ROOKIE III RANK 1 | FARMING 1 MIL & ALL BP's",
+                              "createdAt": "2025-11-09T17:47:19Z",
+                              "publishedAt": "2025-11-09T17:47:19Z",
+                              "__typename": "Video"
+                            },
+                            "__typename": "VideoEdge"
+                          },
+                          {
+                            "cursor": "2608107675|45617|2025-11-02T19:26:41Z|32620",
+                            "node": {
+                              "id": "2611957269",
+                              "title": "[DROPS] BIRTHDAY STREAM! | LVL 61 | TRAILS ROOKIE III RANK 1 | FARMING 1 MIL & ALL BP's",
+                              "createdAt": "2025-11-07T11:20:29Z",
+                              "publishedAt": "2025-11-07T11:20:29Z",
+                              "__typename": "Video"
+                            },
+                            "__typename": "VideoEdge"
+                          },
+                          {
+                            "cursor": "2608107675|45617|2025-11-02T19:26:41Z|32620",
+                            "node": {
+                              "id": "2611357978",
+                              "title": "[DROPS] BIRTHDAY STREAM! | LVL 57 | TRAILS ROOKIE III RANK 1 | FARMING 1 MIL & ALL BP's",
+                              "createdAt": "2025-11-06T18:09:17Z",
+                              "publishedAt": "2025-11-06T18:09:17Z",
+                              "__typename": "Video"
+                            },
+                            "__typename": "VideoEdge"
+                          },
+                          {
+                            "cursor": "2608107675|45617|2025-11-02T19:26:41Z|32620",
+                            "node": {
+                              "id": "2610567446",
+                              "title": "[DROPS] LVL 53 | TRAILS ROOKIE III RANK 1 | SOLO BEAST (BUT FRIENDLY)",
+                              "createdAt": "2025-11-05T19:00:51Z",
+                              "publishedAt": "2025-11-05T19:00:51Z",
+                              "__typename": "Video"
+                            },
+                            "__typename": "VideoEdge"
+                          },
+                          {
+                            "cursor": "2608107675|45617|2025-11-02T19:26:41Z|32620",
+                            "node": {
+                              "id": "2609657703",
+                              "title": "[DROPS] LVL 49 | TRAILS ROOKIE III RANK 1 | SOLO BEAST (BUT FRIENDLY)",
+                              "createdAt": "2025-11-04T17:22:56Z",
+                              "publishedAt": "2025-11-04T17:22:56Z",
+                              "__typename": "Video"
+                            },
+                            "__typename": "VideoEdge"
+                          },
+                          {
+                            "cursor": "2608107675|45617|2025-11-02T19:26:41Z|32620",
+                            "node": {
+                              "id": "2608887369",
+                              "title": "[DROPS] LVL 42 | SOLO BEAST (BUT FRIENDLY)",
+                              "createdAt": "2025-11-03T18:49:00Z",
+                              "publishedAt": "2025-11-03T18:49:00Z",
+                              "__typename": "Video"
+                            },
+                            "__typename": "VideoEdge"
+                          },
+                          {
+                            "cursor": "2608107675|45617|2025-11-02T19:26:41Z|32620",
+                            "node": {
+                              "id": "2608107675",
+                              "title": "[DROPS] LVL 34 | RANK 1 TRIALS | SOLO BEAST (BUT FRIENDLY)",
+                              "createdAt": "2025-11-02T19:26:41Z",
+                              "publishedAt": "2025-11-02T19:26:41Z",
+                              "__typename": "Video"
+                            },
+                            "__typename": "VideoEdge"
+                          }
+                        ],
+                        "pageInfo": {
+                          "hasNextPage": true,
+                          "__typename": "PageInfo"
+                        },
+                        "__typename": "VideoConnection"
                       },
-                      "extensions": {
-                        "durationMilliseconds": 41,
-                        "operationName": "FFZ_BroadcastID",
-                        "requestID": "01JP0BJTTREGWDDGEXHJXX8P9V"
-                      }
+                      "__typename": "User"
                     }
                   },
-                  "online no video": {
-                    "value": {
-                      "data": {
-                        "user": {
-                          "id": "26819117",
-                          "stream": {
-                            "id": "316975501561",
-                            "archiveVideo": null,
-                            "__typename": "Stream"
-                          },
-                          "__typename": "User"
-                        }
-                      },
-                      "extensions": {
-                        "durationMilliseconds": 42,
-                        "operationName": "FFZ_BroadcastID",
-                        "requestID": "01JP0BVSQX1ANTJN5EC5PG5G22"
-                      }
-                    }
-                  },
-                  "offline": {
-                    "value": {
-                      "data": {
-                        "user": {
-                          "id": "71092938",
-                          "stream": null,
-                          "__typename": "User"
-                        }
-                      },
-                      "extensions": {
-                        "durationMilliseconds": 20,
-                        "operationName": "FFZ_BroadcastID",
-                        "requestID": "01JP0BX0QMM1P3ZRNJ9BSD9CBV"
-                      }
-                    }
+                  "extensions": {
+                    "durationMilliseconds": 44,
+                    "operationName": "FFZ_RecentBroadcasts",
+                    "requestID": "01KA4A3TC4MQTQ27D3RNBF43NH"
                   }
                 }
               }
@@ -55296,8 +55370,8 @@
         ],
         "$id": "DirectoryPageGameResponse"
       },
-      "FfzBroadcastIdUser": {
-        "$id": "FfzBroadcastIdUser",
+      "FfzRecentBroadcastsUser": {
+        "$id": "FfzRecentBroadcastsUser",
         "additionalProperties": false,
         "type": "object",
         "properties": {
@@ -55305,55 +55379,67 @@
             "pattern": "^[0-9]+$",
             "type": "string"
           },
-          "stream": {
-            "anyOf": [
-              {
-                "type": "null"
+          "videos": {
+            "additionalProperties": false,
+            "type": "object",
+            "properties": {
+              "edges": {
+                "type": "array",
+                "items": {
+                  "additionalProperties": false,
+                  "type": "object",
+                  "properties": {
+                    "cursor": {
+                      "anyOf": [
+                        {
+                          "type": "null"
+                        },
+                        {
+                          "type": "string"
+                        }
+                      ]
+                    },
+                    "node": {
+                      "$ref": "#/components/schemas/FfzRecentBroadcastsVideo"
+                    },
+                    "__typename": {
+                      "const": "VideoEdge",
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "cursor",
+                    "node",
+                    "__typename"
+                  ]
+                }
               },
-              {
+              "pageInfo": {
                 "additionalProperties": false,
                 "type": "object",
                 "properties": {
-                  "id": {
-                    "pattern": "^[0-9]+$",
-                    "type": "string"
-                  },
-                  "archiveVideo": {
-                    "anyOf": [
-                      {
-                        "type": "null"
-                      },
-                      {
-                        "additionalProperties": false,
-                        "type": "object",
-                        "properties": {
-                          "id": {
-                            "pattern": "^[0-9]+$",
-                            "type": "string"
-                          },
-                          "__typename": {
-                            "const": "Video",
-                            "type": "string"
-                          }
-                        },
-                        "required": [
-                          "id",
-                          "__typename"
-                        ]
-                      }
-                    ]
+                  "hasNextPage": {
+                    "type": "boolean"
                   },
                   "__typename": {
-                    "const": "Stream",
+                    "const": "PageInfo",
                     "type": "string"
                   }
                 },
                 "required": [
-                  "id",
-                  "archiveVideo",
+                  "hasNextPage",
                   "__typename"
                 ]
+              },
+              "__typename": {
+                "const": "VideoConnection",
+                "type": "string"
               }
+            },
+            "required": [
+              "edges",
+              "pageInfo",
+              "__typename"
             ]
           },
           "__typename": {
@@ -55363,34 +55449,120 @@
         },
         "required": [
           "id",
-          "stream",
+          "videos",
           "__typename"
         ]
       },
-      "FfzBroadcastIdVariables": {
-        "$id": "FfzBroadcastIdVariables",
+      "FfzRecentBroadcastsVideo": {
+        "$id": "FfzRecentBroadcastsVideo",
+        "additionalProperties": false,
+        "type": "object",
+        "properties": {
+          "id": {
+            "pattern": "^[0-9]+$",
+            "type": "string"
+          },
+          "title": {
+            "anyOf": [
+              {
+                "type": "null"
+              },
+              {
+                "type": "string"
+              }
+            ]
+          },
+          "createdAt": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "publishedAt": {
+            "anyOf": [
+              {
+                "type": "null"
+              },
+              {
+                "format": "date-time",
+                "type": "string"
+              }
+            ]
+          },
+          "__typename": {
+            "const": "Video",
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "title",
+          "createdAt",
+          "publishedAt",
+          "__typename"
+        ]
+      },
+      "FfzRecentBroadcastsVariables": {
+        "$id": "FfzRecentBroadcastsVariables",
         "additionalProperties": false,
         "type": "object",
         "properties": {
           "id": {
             "type": "string"
+          },
+          "type": {
+            "$id": "BroadcastType",
+            "anyOf": [
+              {
+                "type": "null"
+              },
+              {
+                "const": "ARCHIVE",
+                "type": "string"
+              },
+              {
+                "const": "HIGHLIGHT",
+                "type": "string"
+              },
+              {
+                "const": "UPLOAD",
+                "type": "string"
+              }
+            ]
+          },
+          "sort": {
+            "$id": "VideoSort",
+            "anyOf": [
+              {
+                "const": "TIME",
+                "type": "string"
+              },
+              {
+                "const": "VIEWS",
+                "type": "string"
+              }
+            ]
+          },
+          "limit": {
+            "minimum": 1,
+            "type": "integer"
           }
         },
         "required": [
-          "id"
+          "id",
+          "sort",
+          "limit"
         ]
       },
-      "FfzBroadcastIdRequestBody": {
-        "$id": "FfzBroadcastIdRequestBody",
+      "FfzRecentBroadcastsRequestBody": {
+        "$id": "FfzRecentBroadcastsRequestBody",
         "additionalProperties": false,
         "type": "object",
         "properties": {
           "operationName": {
-            "const": "FFZ_BroadcastID",
+            "const": "FFZ_RecentBroadcasts",
             "type": "string"
           },
           "variables": {
-            "$ref": "#/components/schemas/FfzBroadcastIdVariables"
+            "$ref": "#/components/schemas/FfzRecentBroadcastsVariables"
           },
           "extensions": {
             "additionalProperties": false,
@@ -55405,7 +55577,7 @@
                     "type": "number"
                   },
                   "sha256Hash": {
-                    "const": "cc89dfe8fcfe71235313b05b34799eaa519d162ebf85faf0c51d17c274614f0f",
+                    "const": "a92c0ad34fdba9b3f5e6125dce4b0acc9373f2b2c06c74c92187749d12f73d4c",
                     "type": "string"
                   }
                 },
@@ -55426,8 +55598,8 @@
           "extensions"
         ]
       },
-      "FfzBroadcastIdData": {
-        "$id": "FfzBroadcastIdData",
+      "FfzRecentBroadcastsData": {
+        "$id": "FfzRecentBroadcastsData",
         "additionalProperties": false,
         "type": "object",
         "properties": {
@@ -55437,7 +55609,7 @@
                 "type": "null"
               },
               {
-                "$ref": "#/components/schemas/FfzBroadcastIdUser"
+                "$ref": "#/components/schemas/FfzRecentBroadcastsUser"
               }
             ]
           }
@@ -55446,7 +55618,7 @@
           "user"
         ]
       },
-      "FfzBroadcastIdResponse": {
+      "FfzRecentBroadcastsResponse": {
         "additionalProperties": false,
         "type": "object",
         "properties": {
@@ -55495,7 +55667,7 @@
             }
           },
           "data": {
-            "$id": "FfzBroadcastIdData",
+            "$id": "FfzRecentBroadcastsData",
             "additionalProperties": false,
             "type": "object",
             "properties": {
@@ -55505,7 +55677,7 @@
                     "type": "null"
                   },
                   {
-                    "$ref": "#/components/schemas/FfzBroadcastIdUser"
+                    "$ref": "#/components/schemas/FfzRecentBroadcastsUser"
                   }
                 ]
               }
@@ -55535,7 +55707,7 @@
                 "type": "number"
               },
               "operationName": {
-                "const": "FFZ_BroadcastID",
+                "const": "FFZ_RecentBroadcasts",
                 "type": "string"
               },
               "requestID": {
@@ -55553,7 +55725,27 @@
           "data",
           "extensions"
         ],
-        "$id": "FfzBroadcastIdResponse"
+        "$id": "FfzRecentBroadcastsResponse"
+      },
+      "BroadcastType": {
+        "$id": "BroadcastType",
+        "anyOf": [
+          {
+            "type": "null"
+          },
+          {
+            "const": "ARCHIVE",
+            "type": "string"
+          },
+          {
+            "const": "HIGHLIGHT",
+            "type": "string"
+          },
+          {
+            "const": "UPLOAD",
+            "type": "string"
+          }
+        ]
       },
       "FilterableVideoTowerVideosVideo": {
         "$id": "FilterableVideoTowerVideosVideo",
@@ -55878,6 +56070,19 @@
           "__typename"
         ]
       },
+      "VideoSort": {
+        "$id": "VideoSort",
+        "anyOf": [
+          {
+            "const": "TIME",
+            "type": "string"
+          },
+          {
+            "const": "VIEWS",
+            "type": "string"
+          }
+        ]
+      },
       "FilterableVideoTowerVideosVariables": {
         "$id": "FilterableVideoTowerVideosVariables",
         "additionalProperties": false,
@@ -55894,6 +56099,7 @@
             "type": "string"
           },
           "broadcastType": {
+            "$id": "BroadcastType",
             "anyOf": [
               {
                 "type": "null"
@@ -55913,6 +56119,7 @@
             ]
           },
           "videoSort": {
+            "$id": "VideoSort",
             "anyOf": [
               {
                 "const": "TIME",

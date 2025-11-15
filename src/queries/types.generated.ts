@@ -764,6 +764,11 @@ export interface FfzRecentBroadcastsUser {
       node: FfzRecentBroadcastsVideo;
       __typename: 'VideoEdge';
     }[];
+    pageInfo: {
+      hasNextPage: boolean;
+      __typename: 'PageInfo';
+    };
+    __typename: 'VideoConnection';
   };
   __typename: 'User';
 }
