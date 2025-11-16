@@ -33,16 +33,19 @@ export const VideoSchema = strictObject(
 export const UserSchema = strictObject(
   {
     ...pick(schemas.User, ['id']),
-    videos: strictObject({
-      edges: T.Array(
-        strictObject({
-          ...pick(schemas.VideoEdge, ['cursor']),
-          node: LegacyRef(VideoSchema),
-        }),
-      ),
-      pageInfo: strictObject(pick(schemas.PageInfo, ['hasNextPage'])),
-      __typename: T.Literal('VideoConnection'),
-    }),
+    videos: T.Union([
+      T.Null(),
+      strictObject({
+        edges: T.Array(
+          strictObject({
+            ...pick(schemas.VideoEdge, ['cursor']),
+            node: LegacyRef(VideoSchema),
+          }),
+        ),
+        pageInfo: strictObject(pick(schemas.PageInfo, ['hasNextPage'])),
+        __typename: T.Literal('VideoConnection'),
+      }),
+    ]),
   },
   { $id: `${displayName}User` },
 );

@@ -758,7 +758,7 @@ export interface DirectoryPageGameData {
 
 export interface FfzRecentBroadcastsUser {
   id: string;
-  videos: {
+  videos: null | {
     edges: {
       cursor: null | string;
       node: FfzRecentBroadcastsVideo;
