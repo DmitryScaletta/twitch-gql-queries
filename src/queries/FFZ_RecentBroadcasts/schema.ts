@@ -51,7 +51,7 @@ export const UserSchema = strictObject(
 );
 
 export const DataSchema = strictObject(
-  { user: T.Union([T.Null(), LegacyRef(UserSchema)]) },
+  { user: LegacyRef(UserSchema) },
   { $id: `${displayName}Data` },
 );
 

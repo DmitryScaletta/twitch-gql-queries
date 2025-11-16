@@ -55611,14 +55611,7 @@
         "type": "object",
         "properties": {
           "user": {
-            "anyOf": [
-              {
-                "type": "null"
-              },
-              {
-                "$ref": "#/components/schemas/FfzRecentBroadcastsUser"
-              }
-            ]
+            "$ref": "#/components/schemas/FfzRecentBroadcastsUser"
           }
         },
         "required": [
@@ -55679,14 +55672,7 @@
             "type": "object",
             "properties": {
               "user": {
-                "anyOf": [
-                  {
-                    "type": "null"
-                  },
-                  {
-                    "$ref": "#/components/schemas/FfzRecentBroadcastsUser"
-                  }
-                ]
+                "$ref": "#/components/schemas/FfzRecentBroadcastsUser"
               }
             },
             "required": [

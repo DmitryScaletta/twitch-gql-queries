@@ -789,7 +789,7 @@ export interface FfzRecentBroadcastsVariables {
 }
 
 export interface FfzRecentBroadcastsData {
-  user: null | FfzRecentBroadcastsUser;
+  user: FfzRecentBroadcastsUser;
 }
 
 export type BroadcastType = null | 'ARCHIVE' | 'HIGHLIGHT' | 'UPLOAD';
