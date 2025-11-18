@@ -181,18 +181,15 @@ const retry = async <T>(fn: () => Promise<T>, tries = 3): Promise<T> => {
 
 export const getCategories = () =>
   cache.categories ||
-  retry(fetchCategories).then((cats) => (cache.categories = cats), console.log);
+  retry(fetchCategories).then((cats) => (cache.categories = cats));
 
 export const getChannels = (slug: Category = 'just-chatting') =>
   cache.channels[slug] ||
-  retry(fetchChannels).then(
-    (channels) => (cache.channels = channels)[slug],
-    console.log,
-  );
+  retry(fetchChannels).then((channels) => (cache.channels = channels)[slug]);
 
 export const getClips = (slug: Category = 'just-chatting') =>
   cache.clips[slug] ||
-  retry(fetchClips).then((clips) => (cache.clips = clips)[slug], console.log);
+  retry(fetchClips).then((clips) => (cache.clips = clips)[slug]);
 
 export const getVideos = (channelLogin: string) =>
   cache.videos[channelLogin] ||
