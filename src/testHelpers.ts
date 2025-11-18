@@ -1,3 +1,4 @@
+import { setTimeout } from 'node:timers/promises';
 import { FormatRegistry, type TSchema } from '@sinclair/typebox';
 import { Value, type ValueError } from '@sinclair/typebox/value';
 import { IsDateTime } from '../lib/typebox-formats/date-time.ts';
@@ -166,17 +167,33 @@ const fetchVideos = async (channelOwnerLogin: string) => {
   return result;
 };
 
+const retry = async <T>(fn: () => Promise<T>, tries = 3): Promise<T> => {
+  try {
+    return await fn();
+  } catch (error) {
+    if (tries > 0) {
+      await setTimeout(1000);
+      return retry(fn, tries - 1);
+    }
+    throw error;
+  }
+};
+
 export const getCategories = () =>
-  cache.categories || (cache.categories = fetchCategories());
+  cache.categories ||
+  retry(fetchCategories).then((cats) => (cache.categories = cats), console.log);
 
 export const getChannels = (slug: Category = 'just-chatting') =>
   cache.channels[slug] ||
-  fetchChannels().then((channels) => (cache.channels = channels)[slug]);
+  retry(fetchChannels).then(
+    (channels) => (cache.channels = channels)[slug],
+    console.log,
+  );
 
 export const getClips = (slug: Category = 'just-chatting') =>
   cache.clips[slug] ||
-  fetchClips().then((clips) => (cache.clips = clips)[slug]);
+  retry(fetchClips).then((clips) => (cache.clips = clips)[slug], console.log);
 
 export const getVideos = (channelLogin: string) =>
   cache.videos[channelLogin] ||
-  (cache.videos[channelLogin] = fetchVideos(channelLogin));
+  (cache.videos[channelLogin] = retry(() => fetchVideos(channelLogin)));
