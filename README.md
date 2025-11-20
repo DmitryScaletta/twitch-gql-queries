@@ -49,7 +49,7 @@ const [
 
 console.log({
   streamMetadataResponse,
-  ffzBroadcastIdResponse,
+  FfzRecentBroadcastsResponse,
   clipsCardsUserResponse,
 });
 
