@@ -21,6 +21,52 @@ export const VariablesSchema = strictObject(
   { $id: `${displayName}Variables` },
 );
 
+const ScheduleSchema = strictObject({
+  ...pick(schemas.Schedule, ['id']),
+  nextSegment: T.Union([
+    T.Null(),
+    strictObject(
+      pick(schemas.ScheduleSegment, ['id', 'startAt', 'hasReminder']),
+    ),
+  ]),
+});
+const ChannelSchema = strictObject({
+  ...pick(schemas.Channel, ['id']),
+  socialMedias: T.Union([
+    T.Null(),
+    T.Array(
+      strictObject(pick(schemas.SocialMedia, ['id', 'name', 'title', 'url'])),
+    ),
+  ]),
+  schedule: T.Optional(T.Union([T.Null(), ScheduleSchema])),
+});
+const LastBroadcastSchema = strictObject(
+  {
+    id: T.Union([T.Null(), T.String({ pattern: '^[0-9]+$' })]),
+    game: T.Union([
+      T.Null(),
+      strictObject(pick(schemas.Game, ['id', 'displayName'])),
+    ]),
+    __typename: T.Literal('Broadcast'),
+  },
+  { description: 'If never streamed: `{ id: null, game: null }`' },
+);
+const VideosSchema = strictObject({
+  edges: T.Array(
+    strictObject({
+      node: strictObject({
+        ...pick(schemas.Video, ['id', 'status']),
+        game: T.Union([
+          T.Null(),
+          strictObject(pick(schemas.Game, ['id', 'displayName'])),
+        ]),
+      }),
+      __typename: T.Literal('VideoEdge'),
+    }),
+  ),
+  __typename: T.Literal('VideoConnection'),
+});
+
 export const UserSchema = strictObject(
   {
     ...pick(schemas.User, [
@@ -35,64 +81,13 @@ export const UserSchema = strictObject(
       ...pick(schemas.UserRoles, ['isPartner', 'isAffiliate', 'isStaff']),
       isParticipatingDJ: T.Optional(T.Boolean()),
     }),
-    channel: strictObject({
-      ...pick(schemas.Channel, ['id']),
-      socialMedias: T.Union([
-        T.Null(),
-        T.Array(
-          strictObject(
-            pick(schemas.SocialMedia, ['id', 'name', 'title', 'url']),
-          ),
-        ),
-      ]),
-      schedule: T.Optional(
-        T.Union([
-          T.Null(),
-          strictObject({
-            ...pick(schemas.Schedule, ['id']),
-            nextSegment: T.Union([
-              T.Null(),
-              strictObject(
-                pick(schemas.ScheduleSegment, ['id', 'startAt', 'hasReminder']),
-              ),
-            ]),
-          }),
-        ]),
-      ),
-    }),
-    lastBroadcast: strictObject(
-      {
-        id: T.Union([T.Null(), T.String({ pattern: '^[0-9]+$' })]),
-        game: T.Union([
-          T.Null(),
-          strictObject(pick(schemas.Game, ['id', 'displayName'])),
-        ]),
-        __typename: T.Literal('Broadcast'),
-      },
-      { description: 'If never streamed: `{ id: null, game: null }`' },
-    ),
+    channel: T.Union([T.Null(), ChannelSchema]),
+    lastBroadcast: T.Union([T.Null(), LastBroadcastSchema]),
     primaryTeam: T.Union([
       T.Null(),
       strictObject(pick(schemas.Team, ['id', 'name', 'displayName'])),
     ]),
-    videos: T.Union([
-      T.Null(),
-      strictObject({
-        edges: T.Array(
-          strictObject({
-            node: strictObject({
-              ...pick(schemas.Video, ['id', 'status']),
-              game: T.Union([
-                T.Null(),
-                strictObject(pick(schemas.Game, ['id', 'displayName'])),
-              ]),
-            }),
-            __typename: T.Literal('VideoEdge'),
-          }),
-        ),
-        __typename: T.Literal('VideoConnection'),
-      }),
-    ]),
+    videos: T.Union([T.Null(), VideosSchema]),
   },
   { $id: `${category}User` },
 );

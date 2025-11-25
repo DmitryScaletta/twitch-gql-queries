@@ -125,7 +125,7 @@ export interface ChannelRootUser {
     isParticipatingDJ?: boolean;
     __typename: 'UserRoles';
   };
-  channel: {
+  channel: null | {
     id: string;
     socialMedias:
       | null
@@ -151,10 +151,7 @@ export interface ChannelRootUser {
     };
     __typename: 'Channel';
   };
-  /**
-   * If never streamed: `{ id: null, game: null }`
-   */
-  lastBroadcast: {
+  lastBroadcast: null | {
     id: null | string;
     game: null | {
       id: string;

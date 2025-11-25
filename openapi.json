@@ -50325,179 +50325,193 @@
             ]
           },
           "channel": {
-            "additionalProperties": false,
-            "type": "object",
-            "properties": {
-              "id": {
-                "pattern": "^[0-9]+$",
-                "type": "string"
+            "anyOf": [
+              {
+                "type": "null"
               },
-              "socialMedias": {
-                "anyOf": [
-                  {
-                    "type": "null"
+              {
+                "additionalProperties": false,
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "pattern": "^[0-9]+$",
+                    "type": "string"
                   },
-                  {
-                    "type": "array",
-                    "items": {
-                      "additionalProperties": false,
-                      "type": "object",
-                      "properties": {
-                        "id": {
-                          "format": "uuid",
-                          "type": "string"
-                        },
-                        "name": {
-                          "type": "string"
-                        },
-                        "title": {
-                          "type": "string"
-                        },
-                        "url": {
-                          "description": "Can also be a `mailto:` url",
-                          "type": "string"
-                        },
-                        "__typename": {
-                          "const": "SocialMedia",
-                          "type": "string"
-                        }
+                  "socialMedias": {
+                    "anyOf": [
+                      {
+                        "type": "null"
                       },
-                      "required": [
-                        "id",
-                        "name",
-                        "title",
-                        "url",
-                        "__typename"
-                      ]
-                    }
-                  }
-                ]
-              },
-              "schedule": {
-                "anyOf": [
-                  {
-                    "type": "null"
-                  },
-                  {
-                    "additionalProperties": false,
-                    "type": "object",
-                    "properties": {
-                      "id": {
-                        "minLength": 1,
-                        "type": "string"
-                      },
-                      "nextSegment": {
-                        "anyOf": [
-                          {
-                            "type": "null"
-                          },
-                          {
-                            "additionalProperties": false,
-                            "type": "object",
-                            "properties": {
-                              "id": {
-                                "minLength": 1,
-                                "type": "string"
-                              },
-                              "startAt": {
-                                "format": "date-time",
-                                "type": "string"
-                              },
-                              "hasReminder": {
-                                "type": "boolean"
-                              },
-                              "__typename": {
-                                "const": "ScheduleSegment",
-                                "type": "string"
-                              }
+                      {
+                        "type": "array",
+                        "items": {
+                          "additionalProperties": false,
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "format": "uuid",
+                              "type": "string"
                             },
-                            "required": [
-                              "id",
-                              "startAt",
-                              "hasReminder",
-                              "__typename"
-                            ]
-                          }
-                        ]
-                      },
-                      "__typename": {
-                        "const": "Schedule",
-                        "type": "string"
+                            "name": {
+                              "type": "string"
+                            },
+                            "title": {
+                              "type": "string"
+                            },
+                            "url": {
+                              "description": "Can also be a `mailto:` url",
+                              "type": "string"
+                            },
+                            "__typename": {
+                              "const": "SocialMedia",
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "id",
+                            "name",
+                            "title",
+                            "url",
+                            "__typename"
+                          ]
+                        }
                       }
-                    },
-                    "required": [
-                      "id",
-                      "nextSegment",
-                      "__typename"
                     ]
+                  },
+                  "schedule": {
+                    "anyOf": [
+                      {
+                        "type": "null"
+                      },
+                      {
+                        "additionalProperties": false,
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "minLength": 1,
+                            "type": "string"
+                          },
+                          "nextSegment": {
+                            "anyOf": [
+                              {
+                                "type": "null"
+                              },
+                              {
+                                "additionalProperties": false,
+                                "type": "object",
+                                "properties": {
+                                  "id": {
+                                    "minLength": 1,
+                                    "type": "string"
+                                  },
+                                  "startAt": {
+                                    "format": "date-time",
+                                    "type": "string"
+                                  },
+                                  "hasReminder": {
+                                    "type": "boolean"
+                                  },
+                                  "__typename": {
+                                    "const": "ScheduleSegment",
+                                    "type": "string"
+                                  }
+                                },
+                                "required": [
+                                  "id",
+                                  "startAt",
+                                  "hasReminder",
+                                  "__typename"
+                                ]
+                              }
+                            ]
+                          },
+                          "__typename": {
+                            "const": "Schedule",
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "id",
+                          "nextSegment",
+                          "__typename"
+                        ]
+                      }
+                    ]
+                  },
+                  "__typename": {
+                    "const": "Channel",
+                    "type": "string"
                   }
+                },
+                "required": [
+                  "id",
+                  "socialMedias",
+                  "__typename"
                 ]
-              },
-              "__typename": {
-                "const": "Channel",
-                "type": "string"
               }
-            },
-            "required": [
-              "id",
-              "socialMedias",
-              "__typename"
             ]
           },
           "lastBroadcast": {
-            "description": "If never streamed: `{ id: null, game: null }`",
-            "additionalProperties": false,
-            "type": "object",
-            "properties": {
-              "id": {
-                "anyOf": [
-                  {
-                    "type": "null"
-                  },
-                  {
-                    "pattern": "^[0-9]+$",
-                    "type": "string"
-                  }
-                ]
+            "anyOf": [
+              {
+                "type": "null"
               },
-              "game": {
-                "anyOf": [
-                  {
-                    "type": "null"
-                  },
-                  {
-                    "additionalProperties": false,
-                    "type": "object",
-                    "properties": {
-                      "id": {
+              {
+                "description": "If never streamed: `{ id: null, game: null }`",
+                "additionalProperties": false,
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "anyOf": [
+                      {
+                        "type": "null"
+                      },
+                      {
                         "pattern": "^[0-9]+$",
                         "type": "string"
-                      },
-                      "displayName": {
-                        "type": "string"
-                      },
-                      "__typename": {
-                        "const": "Game",
-                        "type": "string"
                       }
-                    },
-                    "required": [
-                      "id",
-                      "displayName",
-                      "__typename"
                     ]
+                  },
+                  "game": {
+                    "anyOf": [
+                      {
+                        "type": "null"
+                      },
+                      {
+                        "additionalProperties": false,
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "pattern": "^[0-9]+$",
+                            "type": "string"
+                          },
+                          "displayName": {
+                            "type": "string"
+                          },
+                          "__typename": {
+                            "const": "Game",
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "id",
+                          "displayName",
+                          "__typename"
+                        ]
+                      }
+                    ]
+                  },
+                  "__typename": {
+                    "const": "Broadcast",
+                    "type": "string"
                   }
+                },
+                "required": [
+                  "id",
+                  "game",
+                  "__typename"
                 ]
-              },
-              "__typename": {
-                "const": "Broadcast",
-                "type": "string"
               }
-            },
-            "required": [
-              "id",
-              "game",
-              "__typename"
             ]
           },
           "primaryTeam": {
