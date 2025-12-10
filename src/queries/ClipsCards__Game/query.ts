@@ -7,7 +7,7 @@ export const getQueryClipsCardsGame = (variables: ClipsCardsGameVariables) => ({
     persistedQuery: {
       version: 1,
       sha256Hash:
-        'ebcf54afb9aa5d6cec8aad2c35b84e2737a109dac5b184308aae73a27d176707',
+        'cc14976959c8f31c617e956a7c4c32216c3e04f6b586088b7bf49561c35e841b',
     },
   },
 });

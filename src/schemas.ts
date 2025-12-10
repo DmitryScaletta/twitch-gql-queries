@@ -56,6 +56,11 @@ export const BroadcastSettings = {
   __typename: T.Literal('BroadcastSettings'),
 } satisfies Properties;
 
+export const BroadcastIdentifier = {
+  id: T.String({ pattern: '^-?[0-9]+$' }),
+  __typename: T.Literal('BroadcastIdOnly'),
+} satisfies Properties;
+
 export const Stream = {
   id: T.String({ pattern: '^[0-9]+$' }),
   title: T.String(),
@@ -130,6 +135,7 @@ export const Clip = {
   }),
   champBadge: T.Null(),
   isFeatured: T.Boolean(),
+  isAutoCurated: T.Boolean(),
   isPublished: T.Boolean(),
   isViewerEditRestricted: T.Boolean(),
   createdAt: T.String({ format: 'date-time' }),

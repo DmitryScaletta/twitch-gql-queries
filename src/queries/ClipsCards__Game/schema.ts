@@ -71,6 +71,7 @@ export const ClipSchema = strictObject(
       'createdAt',
       'durationSeconds',
       'isFeatured',
+      'isAutoCurated',
     ]),
     curator: T.Union([
       T.Null(),
@@ -92,6 +93,10 @@ export const ClipSchema = strictObject(
         ]),
         roles: strictObject(pick(schemas.UserRoles, ['isPartner'])),
       }),
+    ]),
+    broadcastIdentifier: T.Union([
+      T.Null(),
+      strictObject(pick(schemas.BroadcastIdentifier, ['id'])),
     ]),
     guestStarParticipants: T.Union([T.Null(), GuestStarParticipantsSchema]),
     previewThumbnailProperties: strictObject(

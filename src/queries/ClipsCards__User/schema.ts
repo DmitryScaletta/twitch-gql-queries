@@ -47,6 +47,7 @@ export const ClipSchema = strictObject(
       'durationSeconds',
       'champBadge',
       'isFeatured',
+      'isAutoCurated',
     ]),
     curator: T.Union([
       T.Null(),
@@ -55,6 +56,10 @@ export const ClipSchema = strictObject(
     game: T.Union([
       T.Null(),
       strictObject(pick(schemas.Game, ['id', 'slug', 'name', 'boxArtURL'])),
+    ]),
+    broadcastIdentifier: T.Union([
+      T.Null(),
+      strictObject(pick(schemas.BroadcastIdentifier, ['id'])),
     ]),
     broadcaster: T.Union([
       T.Null(),

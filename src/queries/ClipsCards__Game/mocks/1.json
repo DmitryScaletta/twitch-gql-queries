@@ -11,14 +11,14 @@
           {
             "cursor": null,
             "node": {
-              "id": "95888142",
-              "slug": "ZealousRamshackleTitanCharlieBitMe-c9KPh9CTKbn20Kit",
-              "title": "Northernlion is a witch",
-              "viewCount": 150431,
+              "id": "2041282624",
+              "slug": "BoredTrappedTruffleAMPEnergyCherry-fIumNiRUtAei64SR",
+              "title": "сиси гали",
+              "viewCount": 46180,
               "curator": {
-                "id": "63305737",
-                "login": "vizumn",
-                "displayName": "Vizumn",
+                "id": "703213566",
+                "login": "s1mphonyyyy",
+                "displayName": "s1mphonyyyy",
                 "__typename": "User"
               },
               "game": {
@@ -29,21 +29,26 @@
                 "__typename": "Game"
               },
               "broadcaster": {
-                "id": "14371185",
-                "login": "northernlion",
-                "displayName": "Northernlion",
-                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/6e593335-c2f3-4227-bc0d-34634472cf0f-profile_image-50x50.png",
-                "primaryColorHex": null,
+                "id": "233741947",
+                "login": "strogo",
+                "displayName": "StRoGo",
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/8a9c0603-7ff0-4189-bdc1-3072029a613d-profile_image-50x50.png",
+                "primaryColorHex": "00FF1F",
                 "roles": { "isPartner": true, "__typename": "UserRoles" },
                 "__typename": "User"
               },
-              "thumbnailURL": "https://static-cdn.jtvnw.net/twitch-clips-thumbnails-prod/ZealousRamshackleTitanCharlieBitMe-c9KPh9CTKbn20Kit/fa056162-4d7a-4b02-a108-79f3b44401f5/preview.jpg",
-              "createdAt": "2025-03-13T16:32:55Z",
-              "durationSeconds": 38,
+              "broadcastIdentifier": {
+                "id": "314848221910",
+                "__typename": "BroadcastIdOnly"
+              },
+              "thumbnailURL": "https://static-cdn.jtvnw.net/twitch-clips-thumbnails-prod/BoredTrappedTruffleAMPEnergyCherry-fIumNiRUtAei64SR/663fccb7-2404-4d9a-838b-141967a2e554/preview.jpg",
+              "createdAt": "2025-12-03T14:01:10Z",
+              "durationSeconds": 5,
               "isFeatured": false,
+              "isAutoCurated": false,
               "guestStarParticipants": {
                 "guests": [],
-                "sessionIdentifier": "2kuEsOgCkFFpcocUy5hEQAB36Fw",
+                "sessionIdentifier": "34NS5Wt9YVbV2XKoCOl26CS0Vv3",
                 "__typename": "GuestStarParticipants"
               },
               "previewThumbnailProperties": {
@@ -57,14 +62,14 @@
           {
             "cursor": null,
             "node": {
-              "id": "1351306924",
-              "slug": "PleasantRockyBillSquadGoals-v-IAFV8M6g_JpFNK",
-              "title": "QT unbans from Lilypichu chat",
-              "viewCount": 143328,
+              "id": "1682642606",
+              "slug": "BrightSpunkyClintmullinsPupper-tvHQg8KFVoRN976G",
+              "title": "ボドカdiscord通話1/6ねこたつと通話",
+              "viewCount": 44935,
               "curator": {
-                "id": "57253241",
-                "login": "evadyfresh",
-                "displayName": "evadyfresh",
+                "id": "1166440851",
+                "login": "neon_168",
+                "displayName": "ネオン街で夢見る猫",
                 "__typename": "User"
               },
               "game": {
@@ -75,21 +80,26 @@
                 "__typename": "Game"
               },
               "broadcaster": {
-                "id": "247808909",
-                "login": "qtcinderella",
-                "displayName": "QTCinderella",
-                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/051f2eb6-fac4-4921-bf65-b87f2177939c-profile_image-50x50.png",
-                "primaryColorHex": "FA1ED2",
+                "id": "48962167",
+                "login": "vodkavdk",
+                "displayName": "ボドカさん",
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/4e5103d0-fdd9-45fd-8549-2d6e3f67c1ad-profile_image-50x50.png",
+                "primaryColorHex": "FFAA00",
                 "roles": { "isPartner": true, "__typename": "UserRoles" },
                 "__typename": "User"
               },
-              "thumbnailURL": "https://static-cdn.jtvnw.net/twitch-clips-thumbnails-prod/PleasantRockyBillSquadGoals-v-IAFV8M6g_JpFNK/99050ec5-b20c-44b1-81e5-ff1c04c05f99/preview.jpg",
-              "createdAt": "2025-03-16T04:38:02Z",
-              "durationSeconds": 42,
+              "broadcastIdentifier": {
+                "id": "315179798386",
+                "__typename": "BroadcastIdOnly"
+              },
+              "thumbnailURL": "https://static-cdn.jtvnw.net/twitch-clips-thumbnails-prod/BrightSpunkyClintmullinsPupper-tvHQg8KFVoRN976G/767c2ec2-ab10-4085-ac75-63eb799fac9a/preview.jpg",
+              "createdAt": "2025-12-05T08:38:06Z",
+              "durationSeconds": 50,
               "isFeatured": false,
+              "isAutoCurated": false,
               "guestStarParticipants": {
                 "guests": [],
-                "sessionIdentifier": "2uHBgsASGQknVw44qDZ4pyqh2qW",
+                "sessionIdentifier": "36KQnu0ZX6gbWb5frkjkloCeLku",
                 "__typename": "GuestStarParticipants"
               },
               "previewThumbnailProperties": {
@@ -103,607 +113,14 @@
           {
             "cursor": null,
             "node": {
-              "id": "2025761002",
-              "slug": "SpookyZealousVelociraptorArgieB8-6mwzgaRKJWxqfYhQ",
-              "title": "Stavros roasts Hasan",
-              "viewCount": 129328,
+              "id": "3503772219",
+              "slug": "AmazingLovelyEyeballDancingBaby-X0vwSN-AVd0aaPe1",
+              "title": "ФРИК ВЫБЕЖАЛ НА СЦЕНУ",
+              "viewCount": 34868,
               "curator": {
-                "id": "57253241",
-                "login": "evadyfresh",
-                "displayName": "evadyfresh",
-                "__typename": "User"
-              },
-              "game": {
-                "id": "509658",
-                "slug": "just-chatting",
-                "name": "Just Chatting",
-                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509658-52x72.jpg",
-                "__typename": "Game"
-              },
-              "broadcaster": {
-                "id": "207813352",
-                "login": "hasanabi",
-                "displayName": "HasanAbi",
-                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/0347a9aa-e396-49a5-b0f1-31261704bab8-profile_image-50x50.jpeg",
-                "primaryColorHex": null,
-                "roles": { "isPartner": true, "__typename": "UserRoles" },
-                "__typename": "User"
-              },
-              "thumbnailURL": "https://static-cdn.jtvnw.net/twitch-clips-thumbnails-prod/SpookyZealousVelociraptorArgieB8-6mwzgaRKJWxqfYhQ/0f9ee53c-c0c8-4a16-80c5-67374fa87ee3/preview.jpg",
-              "createdAt": "2025-03-11T22:15:38Z",
-              "durationSeconds": 42,
-              "isFeatured": false,
-              "guestStarParticipants": {
-                "guests": [],
-                "sessionIdentifier": "2r5dv4LxpdqHXfYLQKcqEx46FIJ",
-                "__typename": "GuestStarParticipants"
-              },
-              "previewThumbnailProperties": {
-                "blurReason": "BLUR_NOT_REQUIRED",
-                "__typename": "PreviewThumbnailProperties"
-              },
-              "__typename": "Clip"
-            },
-            "__typename": "ClipEdge"
-          },
-          {
-            "cursor": null,
-            "node": {
-              "id": "3989542142",
-              "slug": "TenuousSuperWatermelonChefFrank-D7RmdWg3OqoIpE1L",
-              "title": "final moment",
-              "viewCount": 118061,
-              "curator": {
-                "id": "129606432",
-                "login": "mastersodapop",
-                "displayName": "mastersodapop",
-                "__typename": "User"
-              },
-              "game": {
-                "id": "509658",
-                "slug": "just-chatting",
-                "name": "Just Chatting",
-                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509658-52x72.jpg",
-                "__typename": "Game"
-              },
-              "broadcaster": {
-                "id": "94753024",
-                "login": "mizkif",
-                "displayName": "Mizkif",
-                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/ddd88d33-6c4f-424f-9246-5f4978c93148-profile_image-50x50.png",
-                "primaryColorHex": "C41616",
-                "roles": { "isPartner": true, "__typename": "UserRoles" },
-                "__typename": "User"
-              },
-              "thumbnailURL": "https://static-cdn.jtvnw.net/twitch-clips-thumbnails-prod/TenuousSuperWatermelonChefFrank-D7RmdWg3OqoIpE1L/842ec7a6-64dd-435d-ac8e-fe7b0c4dd980/preview.jpg",
-              "createdAt": "2025-03-15T00:24:14Z",
-              "durationSeconds": 30,
-              "isFeatured": false,
-              "guestStarParticipants": {
-                "guests": [],
-                "sessionIdentifier": "2slc7UpkXCxjvnSbcRlHockisHD",
-                "__typename": "GuestStarParticipants"
-              },
-              "previewThumbnailProperties": {
-                "blurReason": "BLUR_NOT_REQUIRED",
-                "__typename": "PreviewThumbnailProperties"
-              },
-              "__typename": "Clip"
-            },
-            "__typename": "ClipEdge"
-          },
-          {
-            "cursor": null,
-            "node": {
-              "id": "2628238375",
-              "slug": "FineDrabTardigradeAMPTropPunch-v5zAsfIVNJNlkktn",
-              "title": "IMABROTHA",
-              "viewCount": 110111,
-              "curator": null,
-              "game": {
-                "id": "509658",
-                "slug": "just-chatting",
-                "name": "Just Chatting",
-                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509658-52x72.jpg",
-                "__typename": "Game"
-              },
-              "broadcaster": {
-                "id": "107117952",
-                "login": "jasontheween",
-                "displayName": "jasontheween",
-                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/a04be2b0-9cc1-403c-a4b0-47b32d1fe640-profile_image-50x50.png",
-                "primaryColorHex": "8205B3",
-                "roles": { "isPartner": true, "__typename": "UserRoles" },
-                "__typename": "User"
-              },
-              "thumbnailURL": "https://static-cdn.jtvnw.net/twitch-clips-thumbnails-prod/FineDrabTardigradeAMPTropPunch-v5zAsfIVNJNlkktn/71017a87-281a-4769-839f-55bcd9482542/preview.jpg",
-              "createdAt": "2025-03-12T22:33:02Z",
-              "durationSeconds": 19,
-              "isFeatured": false,
-              "guestStarParticipants": {
-                "guests": [],
-                "sessionIdentifier": "2sY7Ryc6Welt8Y7PYvHWHzSHNsK",
-                "__typename": "GuestStarParticipants"
-              },
-              "previewThumbnailProperties": {
-                "blurReason": "BLUR_NOT_REQUIRED",
-                "__typename": "PreviewThumbnailProperties"
-              },
-              "__typename": "Clip"
-            },
-            "__typename": "ClipEdge"
-          },
-          {
-            "cursor": null,
-            "node": {
-              "id": "349255098",
-              "slug": "PunchyDepressedTruffleSmoocherZ-0Vlba5S6BfpQV96O",
-              "title": "Бустер сигма",
-              "viewCount": 82458,
-              "curator": {
-                "id": "876972528",
-                "login": "daniroxas",
-                "displayName": "daniroxas",
-                "__typename": "User"
-              },
-              "game": {
-                "id": "509658",
-                "slug": "just-chatting",
-                "name": "Just Chatting",
-                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509658-52x72.jpg",
-                "__typename": "Game"
-              },
-              "broadcaster": {
-                "id": "712201914",
-                "login": "lydiaviolet",
-                "displayName": "lydiaviolet",
-                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/03b43302-8793-40e4-8825-a714817ae7ad-profile_image-50x50.png",
-                "primaryColorHex": "AA4CC6",
-                "roles": { "isPartner": true, "__typename": "UserRoles" },
-                "__typename": "User"
-              },
-              "thumbnailURL": "https://static-cdn.jtvnw.net/twitch-clips-thumbnails-prod/PunchyDepressedTruffleSmoocherZ-0Vlba5S6BfpQV96O/a4fe1646-8110-44b8-8827-5b0709d9903a/preview.jpg",
-              "createdAt": "2025-03-12T18:52:59Z",
-              "durationSeconds": 13,
-              "isFeatured": false,
-              "guestStarParticipants": {
-                "guests": [],
-                "sessionIdentifier": "2u2sxFYJgdLT4Qc96RyzKUpQhQD",
-                "__typename": "GuestStarParticipants"
-              },
-              "previewThumbnailProperties": {
-                "blurReason": "BLUR_NOT_REQUIRED",
-                "__typename": "PreviewThumbnailProperties"
-              },
-              "__typename": "Clip"
-            },
-            "__typename": "ClipEdge"
-          },
-          {
-            "cursor": null,
-            "node": {
-              "id": "2666420006",
-              "slug": "SuperEasyTrianglePJSalt-J0IgXQHTA0_ws9Lk",
-              "title": "Trying to steal the speaker until they found out he was live",
-              "viewCount": 80771,
-              "curator": {
-                "id": "447301800",
-                "login": "jarrydrayes",
-                "displayName": "jarrydrayes",
-                "__typename": "User"
-              },
-              "game": {
-                "id": "509658",
-                "slug": "just-chatting",
-                "name": "Just Chatting",
-                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509658-52x72.jpg",
-                "__typename": "Game"
-              },
-              "broadcaster": {
-                "id": "211234859",
-                "login": "adapt",
-                "displayName": "Adapt",
-                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/6ea282b2-75ca-4994-9fbb-51d3ec63003f-profile_image-50x50.png",
-                "primaryColorHex": null,
-                "roles": { "isPartner": true, "__typename": "UserRoles" },
-                "__typename": "User"
-              },
-              "thumbnailURL": "https://static-cdn.jtvnw.net/twitch-clips-thumbnails-prod/SuperEasyTrianglePJSalt-J0IgXQHTA0_ws9Lk/ff8ceac5-98c4-4298-a75b-32b4a510979c/preview.jpg",
-              "createdAt": "2025-03-12T01:48:04Z",
-              "durationSeconds": 41,
-              "isFeatured": false,
-              "guestStarParticipants": {
-                "guests": [],
-                "sessionIdentifier": "2tjZRAMe5GMtu6Xb9siGrOODhLv",
-                "__typename": "GuestStarParticipants"
-              },
-              "previewThumbnailProperties": {
-                "blurReason": "BLUR_NOT_REQUIRED",
-                "__typename": "PreviewThumbnailProperties"
-              },
-              "__typename": "Clip"
-            },
-            "__typename": "ClipEdge"
-          },
-          {
-            "cursor": null,
-            "node": {
-              "id": "4251213767",
-              "slug": "SarcasticMiniatureCheeseVoHiYo-vZxu4P2Qi-knVdZt",
-              "title": "monkas",
-              "viewCount": 80178,
-              "curator": {
-                "id": "129606432",
-                "login": "mastersodapop",
-                "displayName": "mastersodapop",
-                "__typename": "User"
-              },
-              "game": {
-                "id": "509658",
-                "slug": "just-chatting",
-                "name": "Just Chatting",
-                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509658-52x72.jpg",
-                "__typename": "Game"
-              },
-              "broadcaster": {
-                "id": "94753024",
-                "login": "mizkif",
-                "displayName": "Mizkif",
-                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/ddd88d33-6c4f-424f-9246-5f4978c93148-profile_image-50x50.png",
-                "primaryColorHex": "C41616",
-                "roles": { "isPartner": true, "__typename": "UserRoles" },
-                "__typename": "User"
-              },
-              "thumbnailURL": "https://static-cdn.jtvnw.net/twitch-clips-thumbnails-prod/SarcasticMiniatureCheeseVoHiYo-vZxu4P2Qi-knVdZt/456acb0a-e3f6-4e75-affe-153ed0d48669/preview.jpg",
-              "createdAt": "2025-03-15T01:04:42Z",
-              "durationSeconds": 24,
-              "isFeatured": true,
-              "guestStarParticipants": {
-                "guests": [],
-                "sessionIdentifier": "2slc7UpkXCxjvnSbcRlHockisHD",
-                "__typename": "GuestStarParticipants"
-              },
-              "previewThumbnailProperties": {
-                "blurReason": "BLUR_NOT_REQUIRED",
-                "__typename": "PreviewThumbnailProperties"
-              },
-              "__typename": "Clip"
-            },
-            "__typename": "ClipEdge"
-          },
-          {
-            "cursor": null,
-            "node": {
-              "id": "1494632907",
-              "slug": "CutePoisedMangoCopyThis-diPA360CaX0sotXR",
-              "title": "AA meeting",
-              "viewCount": 71743,
-              "curator": {
-                "id": "186870",
-                "login": "natelane2",
-                "displayName": "natelane2",
-                "__typename": "User"
-              },
-              "game": {
-                "id": "509658",
-                "slug": "just-chatting",
-                "name": "Just Chatting",
-                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509658-52x72.jpg",
-                "__typename": "Game"
-              },
-              "broadcaster": {
-                "id": "107117952",
-                "login": "jasontheween",
-                "displayName": "jasontheween",
-                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/a04be2b0-9cc1-403c-a4b0-47b32d1fe640-profile_image-50x50.png",
-                "primaryColorHex": "8205B3",
-                "roles": { "isPartner": true, "__typename": "UserRoles" },
-                "__typename": "User"
-              },
-              "thumbnailURL": "https://static-cdn.jtvnw.net/twitch-clips-thumbnails-prod/CutePoisedMangoCopyThis-diPA360CaX0sotXR/ef656228-d055-4e2c-82c8-07b070a5bdb8/preview.jpg",
-              "createdAt": "2025-03-12T23:37:24Z",
-              "durationSeconds": 16,
-              "isFeatured": false,
-              "guestStarParticipants": {
-                "guests": [],
-                "sessionIdentifier": "2sY7Ryc6Welt8Y7PYvHWHzSHNsK",
-                "__typename": "GuestStarParticipants"
-              },
-              "previewThumbnailProperties": {
-                "blurReason": "BLUR_NOT_REQUIRED",
-                "__typename": "PreviewThumbnailProperties"
-              },
-              "__typename": "Clip"
-            },
-            "__typename": "ClipEdge"
-          },
-          {
-            "cursor": null,
-            "node": {
-              "id": "2540711386",
-              "slug": "DullYawningArmadilloCharlieBitMe-AaDaQw67_qetDdeL",
-              "title": "insane gooner behavior",
-              "viewCount": 60334,
-              "curator": {
-                "id": "82105493",
-                "login": "bobtheskuil",
-                "displayName": "bobtheskuIl",
-                "__typename": "User"
-              },
-              "game": {
-                "id": "509658",
-                "slug": "just-chatting",
-                "name": "Just Chatting",
-                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509658-52x72.jpg",
-                "__typename": "Game"
-              },
-              "broadcaster": {
-                "id": "38251312",
-                "login": "paymoneywubby",
-                "displayName": "PaymoneyWubby",
-                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/6624a175-5e4c-4d12-aaeb-993810378640-profile_image-50x50.png",
-                "primaryColorHex": null,
-                "roles": { "isPartner": true, "__typename": "UserRoles" },
-                "__typename": "User"
-              },
-              "thumbnailURL": "https://static-cdn.jtvnw.net/twitch-clips-thumbnails-prod/DullYawningArmadilloCharlieBitMe-AaDaQw67_qetDdeL/9fb57af4-3aed-4e06-bc29-fb67bc8d5288/preview.jpg",
-              "createdAt": "2025-03-15T03:12:04Z",
-              "durationSeconds": 40,
-              "isFeatured": false,
-              "guestStarParticipants": {
-                "guests": [],
-                "sessionIdentifier": "2ghCRPrphdCebn0WJlVgdNuPVxJ",
-                "__typename": "GuestStarParticipants"
-              },
-              "previewThumbnailProperties": {
-                "blurReason": "BLUR_NOT_REQUIRED",
-                "__typename": "PreviewThumbnailProperties"
-              },
-              "__typename": "Clip"
-            },
-            "__typename": "ClipEdge"
-          },
-          {
-            "cursor": null,
-            "node": {
-              "id": "2706567517",
-              "slug": "FantasticHotPidgeonPRChase-DH7rUbuH4hCX_36-",
-              "title": "Squeex Beats Bop-It",
-              "viewCount": 58551,
-              "curator": {
-                "id": "130918878",
-                "login": "scutoel",
-                "displayName": "scutoel",
-                "__typename": "User"
-              },
-              "game": {
-                "id": "509658",
-                "slug": "just-chatting",
-                "name": "Just Chatting",
-                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509658-52x72.jpg",
-                "__typename": "Game"
-              },
-              "broadcaster": {
-                "id": "35958947",
-                "login": "squeex",
-                "displayName": "Squeex",
-                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/a2ecf408-3633-42f9-a461-b3081088308c-profile_image-50x50.png",
-                "primaryColorHex": "6F2EC4",
-                "roles": { "isPartner": true, "__typename": "UserRoles" },
-                "__typename": "User"
-              },
-              "thumbnailURL": "https://static-cdn.jtvnw.net/twitch-clips-thumbnails-prod/FantasticHotPidgeonPRChase-DH7rUbuH4hCX_36-/62ee4836-2d2a-4669-b5a7-0836b91dbc75/preview.jpg",
-              "createdAt": "2025-03-16T21:54:23Z",
-              "durationSeconds": 34,
-              "isFeatured": false,
-              "guestStarParticipants": {
-                "guests": [],
-                "sessionIdentifier": "2tjJ1HcWh5W3gcC7R7ozQnNlSoz",
-                "__typename": "GuestStarParticipants"
-              },
-              "previewThumbnailProperties": {
-                "blurReason": "BLUR_NOT_REQUIRED",
-                "__typename": "PreviewThumbnailProperties"
-              },
-              "__typename": "Clip"
-            },
-            "__typename": "ClipEdge"
-          },
-          {
-            "cursor": null,
-            "node": {
-              "id": "3464088148",
-              "slug": "KnottyObliqueDinosaurChocolateRain-aO62p4_3gRw4i4_u",
-              "title": "forsenFilter",
-              "viewCount": 39830,
-              "curator": {
-                "id": "203901206",
-                "login": "biggeordieuk",
-                "displayName": "BigGeordieUK",
-                "__typename": "User"
-              },
-              "game": {
-                "id": "509658",
-                "slug": "just-chatting",
-                "name": "Just Chatting",
-                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509658-52x72.jpg",
-                "__typename": "Game"
-              },
-              "broadcaster": {
-                "id": "22484632",
-                "login": "forsen",
-                "displayName": "forsen",
-                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/forsen-profile_image-48b43e1e4f54b5c8-50x50.png",
-                "primaryColorHex": null,
-                "roles": { "isPartner": true, "__typename": "UserRoles" },
-                "__typename": "User"
-              },
-              "thumbnailURL": "https://static-cdn.jtvnw.net/twitch-clips-thumbnails-prod/KnottyObliqueDinosaurChocolateRain-aO62p4_3gRw4i4_u/51bfc039-471e-4564-9179-e201576b969d/preview.jpg",
-              "createdAt": "2025-03-13T15:20:35Z",
-              "durationSeconds": 25,
-              "isFeatured": false,
-              "guestStarParticipants": {
-                "guests": [],
-                "sessionIdentifier": "",
-                "__typename": "GuestStarParticipants"
-              },
-              "previewThumbnailProperties": {
-                "blurReason": "BLUR_NOT_REQUIRED",
-                "__typename": "PreviewThumbnailProperties"
-              },
-              "__typename": "Clip"
-            },
-            "__typename": "ClipEdge"
-          },
-          {
-            "cursor": null,
-            "node": {
-              "id": "3514796289",
-              "slug": "SweetRefinedTapirPogChamp-4gYDmCNnWybY05wg",
-              "title": "ugliest man in texas",
-              "viewCount": 39747,
-              "curator": {
-                "id": "177162588",
-                "login": "m4ngo",
-                "displayName": "m4ngo",
-                "__typename": "User"
-              },
-              "game": {
-                "id": "509658",
-                "slug": "just-chatting",
-                "name": "Just Chatting",
-                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509658-52x72.jpg",
-                "__typename": "Game"
-              },
-              "broadcaster": {
-                "id": "107117952",
-                "login": "jasontheween",
-                "displayName": "jasontheween",
-                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/a04be2b0-9cc1-403c-a4b0-47b32d1fe640-profile_image-50x50.png",
-                "primaryColorHex": "8205B3",
-                "roles": { "isPartner": true, "__typename": "UserRoles" },
-                "__typename": "User"
-              },
-              "thumbnailURL": "https://static-cdn.jtvnw.net/twitch-clips-thumbnails-prod/SweetRefinedTapirPogChamp-4gYDmCNnWybY05wg/8df1670b-25d1-4040-852d-9f722abb2c23/preview.jpg",
-              "createdAt": "2025-03-12T22:08:00Z",
-              "durationSeconds": 36,
-              "isFeatured": false,
-              "guestStarParticipants": {
-                "guests": [],
-                "sessionIdentifier": "2sY7Ryc6Welt8Y7PYvHWHzSHNsK",
-                "__typename": "GuestStarParticipants"
-              },
-              "previewThumbnailProperties": {
-                "blurReason": "BLUR_NOT_REQUIRED",
-                "__typename": "PreviewThumbnailProperties"
-              },
-              "__typename": "Clip"
-            },
-            "__typename": "ClipEdge"
-          },
-          {
-            "cursor": null,
-            "node": {
-              "id": "1369257340",
-              "slug": "PluckyHotLeopardLitty-jBgi9S03lmA7qHbu",
-              "title": "KEKW",
-              "viewCount": 39227,
-              "curator": {
-                "id": "663150682",
-                "login": "hartgeman",
-                "displayName": "의할트",
-                "__typename": "User"
-              },
-              "game": {
-                "id": "509658",
-                "slug": "just-chatting",
-                "name": "Just Chatting",
-                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509658-52x72.jpg",
-                "__typename": "Game"
-              },
-              "broadcaster": {
-                "id": "130727794",
-                "login": "yunicorn19",
-                "displayName": "Yunicorn19",
-                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/yunicorn19-profile_image-693b37dca8fe22c9-50x50.jpeg",
-                "primaryColorHex": "FAB3FF",
-                "roles": { "isPartner": true, "__typename": "UserRoles" },
-                "__typename": "User"
-              },
-              "thumbnailURL": "https://static-cdn.jtvnw.net/twitch-clips-thumbnails-prod/PluckyHotLeopardLitty-jBgi9S03lmA7qHbu/cce6a4fd-c26b-439b-a569-94f36c19259c/preview.jpg",
-              "createdAt": "2025-03-11T16:38:09Z",
-              "durationSeconds": 60,
-              "isFeatured": false,
-              "guestStarParticipants": {
-                "guests": [],
-                "sessionIdentifier": "2u9y3EoqCtaEkWSabVV7lpN4Cpy",
-                "__typename": "GuestStarParticipants"
-              },
-              "previewThumbnailProperties": {
-                "blurReason": "BLUR_NOT_REQUIRED",
-                "__typename": "PreviewThumbnailProperties"
-              },
-              "__typename": "Clip"
-            },
-            "__typename": "ClipEdge"
-          },
-          {
-            "cursor": null,
-            "node": {
-              "id": "3387569329",
-              "slug": "PluckySarcasticBeePrimeMe-eU5d8CBJ5edW5LcS",
-              "title": "ПАРОДИЯ НА ЛИДИЮ",
-              "viewCount": 33572,
-              "curator": {
-                "id": "527645568",
-                "login": "drwho0o",
-                "displayName": "DrWho0o",
-                "__typename": "User"
-              },
-              "game": {
-                "id": "509658",
-                "slug": "just-chatting",
-                "name": "Just Chatting",
-                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509658-52x72.jpg",
-                "__typename": "Game"
-              },
-              "broadcaster": {
-                "id": "738000896",
-                "login": "evelone2004",
-                "displayName": "evelone2004",
-                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/4af340ba-8d13-44e8-9e72-14c4c86d1f20-profile_image-50x50.png",
-                "primaryColorHex": null,
-                "roles": { "isPartner": false, "__typename": "UserRoles" },
-                "__typename": "User"
-              },
-              "thumbnailURL": "https://static-cdn.jtvnw.net/twitch-clips-thumbnails-prod/PluckySarcasticBeePrimeMe-eU5d8CBJ5edW5LcS/00a4f1fe-df99-48ab-9367-ac2d59e2eb4c/preview.jpg",
-              "createdAt": "2025-03-15T20:06:02Z",
-              "durationSeconds": 36,
-              "isFeatured": false,
-              "guestStarParticipants": {
-                "guests": [],
-                "sessionIdentifier": "2pLe789lylQZHWEKumWVsug8PCF",
-                "__typename": "GuestStarParticipants"
-              },
-              "previewThumbnailProperties": {
-                "blurReason": "BLUR_NOT_REQUIRED",
-                "__typename": "PreviewThumbnailProperties"
-              },
-              "__typename": "Clip"
-            },
-            "__typename": "ClipEdge"
-          },
-          {
-            "cursor": null,
-            "node": {
-              "id": "1478991270",
-              "slug": "PlumpPhilanthropicHamburgerHassaanChop-BfVcA4QHSGndghAT",
-              "title": "ПОПИЛ ВОДИЧКИ",
-              "viewCount": 33296,
-              "curator": {
-                "id": "532359555",
-                "login": "bigbslls_",
-                "displayName": "bigbslls_",
+                "id": "702216180",
+                "login": "dangers9",
+                "displayName": "dangers9",
                 "__typename": "User"
               },
               "game": {
@@ -722,23 +139,18 @@
                 "roles": { "isPartner": true, "__typename": "UserRoles" },
                 "__typename": "User"
               },
-              "thumbnailURL": "https://static-cdn.jtvnw.net/twitch-clips-thumbnails-prod/PlumpPhilanthropicHamburgerHassaanChop-BfVcA4QHSGndghAT/014a3776-f0eb-42cc-a079-9ec0a67a4b45/preview.jpg",
-              "createdAt": "2025-03-13T19:44:28Z",
-              "durationSeconds": 10,
+              "broadcastIdentifier": {
+                "id": "314823756501",
+                "__typename": "BroadcastIdOnly"
+              },
+              "thumbnailURL": "https://static-cdn.jtvnw.net/twitch-clips-thumbnails-prod/AmazingLovelyEyeballDancingBaby-X0vwSN-AVd0aaPe1/9cb465f8-b160-4e53-8bfd-5a488c68d2ff/preview.jpg",
+              "createdAt": "2025-12-03T18:23:09Z",
+              "durationSeconds": 25,
               "isFeatured": false,
+              "isAutoCurated": false,
               "guestStarParticipants": {
-                "guests": [
-                  {
-                    "id": "712201914",
-                    "login": "lydiaviolet",
-                    "displayName": "lydiaviolet",
-                    "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/03b43302-8793-40e4-8825-a714817ae7ad-profile_image-300x300.png",
-                    "primaryColorHex": "AA4CC6",
-                    "description": "live everyday at 5PM UK time!! 😊 - lydiavtwitch@gmail.com ",
-                    "__typename": "User"
-                  }
-                ],
-                "sessionIdentifier": "2uH7UuW621tNJkUe04jXBF5wLNA",
+                "guests": [],
+                "sessionIdentifier": "35ZFosu2lLfxhXCQvpAf27JOpkW",
                 "__typename": "GuestStarParticipants"
               },
               "previewThumbnailProperties": {
@@ -752,14 +164,14 @@
           {
             "cursor": null,
             "node": {
-              "id": "722792246",
-              "slug": "GiftedKitschyCodKlappa-2Fp_XdNTTv_muuih",
-              "title": "narcissistboicarti",
-              "viewCount": 32991,
+              "id": "3780900837",
+              "slug": "CalmIntelligentCoyoteFutureMan-1KvPTNbSzKfLVsje",
+              "title": "ボドカが1番仲良いVTuber",
+              "viewCount": 33588,
               "curator": {
-                "id": "1131156920",
-                "login": "ranni_feet_enjoyer",
-                "displayName": "RANNI_FEET_ENJOYER",
+                "id": "1166440851",
+                "login": "neon_168",
+                "displayName": "ネオン街で夢見る猫",
                 "__typename": "User"
               },
               "game": {
@@ -770,21 +182,26 @@
                 "__typename": "Game"
               },
               "broadcaster": {
-                "id": "672238954",
-                "login": "plaqueboymax",
-                "displayName": "plaqueboymax",
-                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/111c56c3-ac28-423e-ac5b-9c93e10556a8-profile_image-50x50.png",
-                "primaryColorHex": "FFFFFF",
+                "id": "48962167",
+                "login": "vodkavdk",
+                "displayName": "ボドカさん",
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/4e5103d0-fdd9-45fd-8549-2d6e3f67c1ad-profile_image-50x50.png",
+                "primaryColorHex": "FFAA00",
                 "roles": { "isPartner": true, "__typename": "UserRoles" },
                 "__typename": "User"
               },
-              "thumbnailURL": "https://static-cdn.jtvnw.net/twitch-clips-thumbnails-prod/GiftedKitschyCodKlappa-2Fp_XdNTTv_muuih/7868c508-59f9-4324-be72-060eaa4ba221/preview.jpg",
-              "createdAt": "2025-03-14T08:09:41Z",
-              "durationSeconds": 30,
+              "broadcastIdentifier": {
+                "id": "315179798386",
+                "__typename": "BroadcastIdOnly"
+              },
+              "thumbnailURL": "https://static-cdn.jtvnw.net/twitch-clips-thumbnails-prod/CalmIntelligentCoyoteFutureMan-1KvPTNbSzKfLVsje/e6185dbb-f930-4afe-acd0-ce239e479b80/preview.jpg",
+              "createdAt": "2025-12-05T08:34:55Z",
+              "durationSeconds": 47,
               "isFeatured": false,
+              "isAutoCurated": false,
               "guestStarParticipants": {
                 "guests": [],
-                "sessionIdentifier": "2qeGFpYDdOzgSEWqwaKBSfFafhE",
+                "sessionIdentifier": "36KQnu0ZX6gbWb5frkjkloCeLku",
                 "__typename": "GuestStarParticipants"
               },
               "previewThumbnailProperties": {
@@ -798,14 +215,14 @@
           {
             "cursor": null,
             "node": {
-              "id": "402282244",
-              "slug": "EvilStupidBeanShadyLulu-yWIAJnr_GACDooVv",
-              "title": "NL GOT BARS",
-              "viewCount": 32488,
+              "id": "1711047229",
+              "slug": "AgitatedAgileChipmunkPrimeMe-NTshlpU4YWon0JG5",
+              "title": "Ostonox(hasans editor) tries to deny allegations of editing Xqc out of the clips",
+              "viewCount": 32586,
               "curator": {
-                "id": "24246535",
-                "login": "mmmeissa",
-                "displayName": "mmmeissa",
+                "id": "762721991",
+                "login": "liar12134",
+                "displayName": "liar12134",
                 "__typename": "User"
               },
               "game": {
@@ -816,21 +233,750 @@
                 "__typename": "Game"
               },
               "broadcaster": {
-                "id": "14371185",
-                "login": "northernlion",
-                "displayName": "Northernlion",
-                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/6e593335-c2f3-4227-bc0d-34634472cf0f-profile_image-50x50.png",
+                "id": "71092938",
+                "login": "xqc",
+                "displayName": "xQc",
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/xqc-profile_image-9298dca608632101-50x50.jpeg",
+                "primaryColorHex": "FFBF00",
+                "roles": { "isPartner": true, "__typename": "UserRoles" },
+                "__typename": "User"
+              },
+              "broadcastIdentifier": {
+                "id": "316238152542",
+                "__typename": "BroadcastIdOnly"
+              },
+              "thumbnailURL": "https://static-cdn.jtvnw.net/twitch-clips-thumbnails-prod/AgitatedAgileChipmunkPrimeMe-NTshlpU4YWon0JG5/039a1334-eaa5-4864-910c-89875b02189b/preview.jpg",
+              "createdAt": "2025-12-08T01:16:05Z",
+              "durationSeconds": 60,
+              "isFeatured": false,
+              "isAutoCurated": false,
+              "guestStarParticipants": {
+                "guests": [],
+                "sessionIdentifier": "2zt9iFeTrg9NYlEqDpS08hN1ceK",
+                "__typename": "GuestStarParticipants"
+              },
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Clip"
+            },
+            "__typename": "ClipEdge"
+          },
+          {
+            "cursor": null,
+            "node": {
+              "id": "541283535",
+              "slug": "ArbitraryPuzzledPanPunchTrees-0p4lqtcZ4dh2cSwj",
+              "title": "Will is \"punished\"",
+              "viewCount": 32131,
+              "curator": {
+                "id": "42231769",
+                "login": "chriswithguns",
+                "displayName": "chriswithguns",
+                "__typename": "User"
+              },
+              "game": {
+                "id": "509658",
+                "slug": "just-chatting",
+                "name": "Just Chatting",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509658-52x72.jpg",
+                "__typename": "Game"
+              },
+              "broadcaster": {
+                "id": "38251312",
+                "login": "paymoneywubby",
+                "displayName": "PaymoneyWubby",
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/6624a175-5e4c-4d12-aaeb-993810378640-profile_image-50x50.png",
                 "primaryColorHex": null,
                 "roles": { "isPartner": true, "__typename": "UserRoles" },
                 "__typename": "User"
               },
-              "thumbnailURL": "https://static-cdn.jtvnw.net/twitch-clips/Qqi5icliACZ6_xgAg6KFbw/AT-cm%7CQqi5icliACZ6_xgAg6KFbw-preview-260x147.jpg",
-              "createdAt": "2025-03-11T17:30:14Z",
-              "durationSeconds": 44,
+              "broadcastIdentifier": {
+                "id": "315436105719",
+                "__typename": "BroadcastIdOnly"
+              },
+              "thumbnailURL": "https://static-cdn.jtvnw.net/twitch-clips-thumbnails-prod/ArbitraryPuzzledPanPunchTrees-0p4lqtcZ4dh2cSwj/2b552e32-e3e6-4ac9-91ef-04dca5dd9261/preview.jpg",
+              "createdAt": "2025-12-07T06:06:23Z",
+              "durationSeconds": 60,
               "isFeatured": false,
+              "isAutoCurated": false,
               "guestStarParticipants": {
                 "guests": [],
-                "sessionIdentifier": "2kuEsOgCkFFpcocUy5hEQAB36Fw",
+                "sessionIdentifier": "35JPPLPReki4z88VuNN9w0YgtZ9",
+                "__typename": "GuestStarParticipants"
+              },
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Clip"
+            },
+            "__typename": "ClipEdge"
+          },
+          {
+            "cursor": null,
+            "node": {
+              "id": "2721950741",
+              "slug": "CallousAmazingAmazonTF2John-CbErqj-SuadYEAIB",
+              "title": "father daughter cam",
+              "viewCount": 32035,
+              "curator": {
+                "id": "42690335",
+                "login": "shillnyethescienceguy",
+                "displayName": "ShillNyeTheScienceGuy",
+                "__typename": "User"
+              },
+              "game": {
+                "id": "509658",
+                "slug": "just-chatting",
+                "name": "Just Chatting",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509658-52x72.jpg",
+                "__typename": "Game"
+              },
+              "broadcaster": {
+                "id": "247808909",
+                "login": "qtcinderella",
+                "displayName": "QTCinderella",
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/051f2eb6-fac4-4921-bf65-b87f2177939c-profile_image-50x50.png",
+                "primaryColorHex": "FA1ED2",
+                "roles": { "isPartner": true, "__typename": "UserRoles" },
+                "__typename": "User"
+              },
+              "broadcastIdentifier": {
+                "id": "315930663511",
+                "__typename": "BroadcastIdOnly"
+              },
+              "thumbnailURL": "https://static-cdn.jtvnw.net/twitch-clips-thumbnails-prod/CallousAmazingAmazonTF2John-CbErqj-SuadYEAIB/f07dd923-620f-4682-83c6-aa401db70d63/preview.jpg",
+              "createdAt": "2025-12-07T02:19:30Z",
+              "durationSeconds": 12,
+              "isFeatured": false,
+              "isAutoCurated": false,
+              "guestStarParticipants": {
+                "guests": [],
+                "sessionIdentifier": "36ARENqu2MJhAE4w0XcfP4Z07gU",
+                "__typename": "GuestStarParticipants"
+              },
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Clip"
+            },
+            "__typename": "ClipEdge"
+          },
+          {
+            "cursor": null,
+            "node": {
+              "id": "2788839003",
+              "slug": "GorgeousRelievedPlumagePeoplesChamp-6b5eSuzucsaiQT-n",
+              "title": "ЛИЗА/РЕВНУЕТ",
+              "viewCount": 31021,
+              "curator": {
+                "id": "1056068065",
+                "login": "z1musik",
+                "displayName": "z1musik",
+                "__typename": "User"
+              },
+              "game": {
+                "id": "509658",
+                "slug": "just-chatting",
+                "name": "Just Chatting",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509658-52x72.jpg",
+                "__typename": "Game"
+              },
+              "broadcaster": {
+                "id": "86277097",
+                "login": "buster",
+                "displayName": "buster",
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/96d66837-22f0-4393-89c5-2e5c2408485b-profile_image-50x50.png",
+                "primaryColorHex": "FA1ED2",
+                "roles": { "isPartner": true, "__typename": "UserRoles" },
+                "__typename": "User"
+              },
+              "broadcastIdentifier": {
+                "id": "314823756501",
+                "__typename": "BroadcastIdOnly"
+              },
+              "thumbnailURL": "https://static-cdn.jtvnw.net/twitch-clips-thumbnails-prod/GorgeousRelievedPlumagePeoplesChamp-6b5eSuzucsaiQT-n/b10cac32-bc65-4007-875e-c86874b052e0/preview.jpg",
+              "createdAt": "2025-12-03T14:37:43Z",
+              "durationSeconds": 11,
+              "isFeatured": false,
+              "isAutoCurated": false,
+              "guestStarParticipants": {
+                "guests": [],
+                "sessionIdentifier": "35ZFosu2lLfxhXCQvpAf27JOpkW",
+                "__typename": "GuestStarParticipants"
+              },
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Clip"
+            },
+            "__typename": "ClipEdge"
+          },
+          {
+            "cursor": null,
+            "node": {
+              "id": "2604211175",
+              "slug": "TriumphantClumsyAlpacaUWot-q-YyV8MPqzQLqfHM",
+              "title": "обращение бустику от банана",
+              "viewCount": 30664,
+              "curator": {
+                "id": "1324730600",
+                "login": "f1xxg",
+                "displayName": "f1xxg",
+                "__typename": "User"
+              },
+              "game": {
+                "id": "509658",
+                "slug": "just-chatting",
+                "name": "Just Chatting",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509658-52x72.jpg",
+                "__typename": "Game"
+              },
+              "broadcaster": {
+                "id": "44748026",
+                "login": "stintik",
+                "displayName": "Stintik",
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/1fdc84cb-9f9d-48a3-b84f-b5944d76cb82-profile_image-50x50.png",
+                "primaryColorHex": "FF0000",
+                "roles": { "isPartner": true, "__typename": "UserRoles" },
+                "__typename": "User"
+              },
+              "broadcastIdentifier": {
+                "id": "315595953254",
+                "__typename": "BroadcastIdOnly"
+              },
+              "thumbnailURL": "https://static-cdn.jtvnw.net/twitch-clips-thumbnails-prod/TriumphantClumsyAlpacaUWot-q-YyV8MPqzQLqfHM/980f4ad0-870f-4019-8603-2ebfc4c02b89/preview.jpg",
+              "createdAt": "2025-12-04T13:20:39Z",
+              "durationSeconds": 24,
+              "isFeatured": true,
+              "isAutoCurated": false,
+              "guestStarParticipants": {
+                "guests": [],
+                "sessionIdentifier": "33jv4j0Sf9GXjeHXI57QMewSn1H",
+                "__typename": "GuestStarParticipants"
+              },
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Clip"
+            },
+            "__typename": "ClipEdge"
+          },
+          {
+            "cursor": null,
+            "node": {
+              "id": "3713347358",
+              "slug": "DarkDirtyPuddingKappa-F5azv-eCJwXTl5aT",
+              "title": "lol",
+              "viewCount": 29243,
+              "curator": {
+                "id": "768198835",
+                "login": "puertoricanporo",
+                "displayName": "puertoricanporo",
+                "__typename": "User"
+              },
+              "game": {
+                "id": "509658",
+                "slug": "just-chatting",
+                "name": "Just Chatting",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509658-52x72.jpg",
+                "__typename": "Game"
+              },
+              "broadcaster": {
+                "id": "71092938",
+                "login": "xqc",
+                "displayName": "xQc",
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/xqc-profile_image-9298dca608632101-50x50.jpeg",
+                "primaryColorHex": "FFBF00",
+                "roles": { "isPartner": true, "__typename": "UserRoles" },
+                "__typename": "User"
+              },
+              "broadcastIdentifier": {
+                "id": "316159413212",
+                "__typename": "BroadcastIdOnly"
+              },
+              "thumbnailURL": "https://static-cdn.jtvnw.net/twitch-clips-thumbnails-prod/DarkDirtyPuddingKappa-F5azv-eCJwXTl5aT/b94752a3-57f2-4a7c-a991-ab9b579db0cf/preview.jpg",
+              "createdAt": "2025-12-06T19:30:53Z",
+              "durationSeconds": 30,
+              "isFeatured": false,
+              "isAutoCurated": false,
+              "guestStarParticipants": {
+                "guests": [],
+                "sessionIdentifier": "2zt9iFeTrg9NYlEqDpS08hN1ceK",
+                "__typename": "GuestStarParticipants"
+              },
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Clip"
+            },
+            "__typename": "ClipEdge"
+          },
+          {
+            "cursor": null,
+            "node": {
+              "id": "2484031319",
+              "slug": "BashfulCrowdedGullPJSugar-AxQ8uQQH693IL3LN",
+              "title": "да ну нах САША",
+              "viewCount": 28324,
+              "curator": {
+                "id": "553543320",
+                "login": "dagger_ol",
+                "displayName": "Dagger_ol",
+                "__typename": "User"
+              },
+              "game": {
+                "id": "509658",
+                "slug": "just-chatting",
+                "name": "Just Chatting",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509658-52x72.jpg",
+                "__typename": "Game"
+              },
+              "broadcaster": {
+                "id": "669445653",
+                "login": "korya_mc",
+                "displayName": "korya_mc",
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/5dd62cba-cdbc-42d9-96ff-66b0417b7815-profile_image-50x50.png",
+                "primaryColorHex": "82E8FF",
+                "roles": { "isPartner": true, "__typename": "UserRoles" },
+                "__typename": "User"
+              },
+              "broadcastIdentifier": {
+                "id": "314881384660",
+                "__typename": "BroadcastIdOnly"
+              },
+              "thumbnailURL": "https://static-cdn.jtvnw.net/twitch-clips-thumbnails-prod/BashfulCrowdedGullPJSugar-AxQ8uQQH693IL3LN/7b77fd74-882e-43dc-a7ab-a903d7d434ec/preview.jpg",
+              "createdAt": "2025-12-05T20:20:11Z",
+              "durationSeconds": 30,
+              "isFeatured": true,
+              "isAutoCurated": false,
+              "guestStarParticipants": {
+                "guests": [],
+                "sessionIdentifier": "32VeLE3acXmkt71Y7x1ucx11mgF",
+                "__typename": "GuestStarParticipants"
+              },
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Clip"
+            },
+            "__typename": "ClipEdge"
+          },
+          {
+            "cursor": null,
+            "node": {
+              "id": "567995082",
+              "slug": "IncredulousNeighborlyCocoaWutFace-4PncqDVcAvGfOD5x",
+              "title": "This is how Markus takes picture with his friends",
+              "viewCount": 26316,
+              "curator": {
+                "id": "231545562",
+                "login": "villenthessis",
+                "displayName": "Villenthessis",
+                "__typename": "User"
+              },
+              "game": {
+                "id": "509658",
+                "slug": "just-chatting",
+                "name": "Just Chatting",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509658-52x72.jpg",
+                "__typename": "Game"
+              },
+              "broadcaster": {
+                "id": "517475551",
+                "login": "extraemily",
+                "displayName": "ExtraEmily",
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/4d2f4f20-4dba-4866-8a41-542378cb7089-profile_image-50x50.png",
+                "primaryColorHex": "FBB7FF",
+                "roles": { "isPartner": true, "__typename": "UserRoles" },
+                "__typename": "User"
+              },
+              "broadcastIdentifier": {
+                "id": "316159329372",
+                "__typename": "BroadcastIdOnly"
+              },
+              "thumbnailURL": "https://static-cdn.jtvnw.net/twitch-clips-thumbnails-prod/IncredulousNeighborlyCocoaWutFace-4PncqDVcAvGfOD5x/450e7b06-b013-4038-84e6-bb292562a06e/preview.jpg",
+              "createdAt": "2025-12-07T00:03:49Z",
+              "durationSeconds": 60,
+              "isFeatured": false,
+              "isAutoCurated": false,
+              "guestStarParticipants": {
+                "guests": [],
+                "sessionIdentifier": "35vzVFHWdqQ19hiT27VFnvFj5EQ",
+                "__typename": "GuestStarParticipants"
+              },
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Clip"
+            },
+            "__typename": "ClipEdge"
+          },
+          {
+            "cursor": null,
+            "node": {
+              "id": "3140212596",
+              "slug": "ExuberantDignifiedCougarEagleEye-7dWOHuwUPHoylOc4",
+              "title": "debunked live",
+              "viewCount": 25856,
+              "curator": {
+                "id": "768198835",
+                "login": "puertoricanporo",
+                "displayName": "puertoricanporo",
+                "__typename": "User"
+              },
+              "game": {
+                "id": "509658",
+                "slug": "just-chatting",
+                "name": "Just Chatting",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509658-52x72.jpg",
+                "__typename": "Game"
+              },
+              "broadcaster": {
+                "id": "71092938",
+                "login": "xqc",
+                "displayName": "xQc",
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/xqc-profile_image-9298dca608632101-50x50.jpeg",
+                "primaryColorHex": "FFBF00",
+                "roles": { "isPartner": true, "__typename": "UserRoles" },
+                "__typename": "User"
+              },
+              "broadcastIdentifier": {
+                "id": "316312525664",
+                "__typename": "BroadcastIdOnly"
+              },
+              "thumbnailURL": "https://static-cdn.jtvnw.net/twitch-clips-thumbnails-prod/ExuberantDignifiedCougarEagleEye-7dWOHuwUPHoylOc4/a4db5264-48d1-442a-a2fb-64f019e716a6/preview.jpg",
+              "createdAt": "2025-12-09T01:57:22Z",
+              "durationSeconds": 30,
+              "isFeatured": false,
+              "isAutoCurated": false,
+              "guestStarParticipants": {
+                "guests": [],
+                "sessionIdentifier": "2zt9iFeTrg9NYlEqDpS08hN1ceK",
+                "__typename": "GuestStarParticipants"
+              },
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Clip"
+            },
+            "__typename": "ClipEdge"
+          },
+          {
+            "cursor": null,
+            "node": {
+              "id": "4178236062",
+              "slug": "EnergeticBoldPlumShazBotstix-1wrw6AqzIlAIxP7c",
+              "title": "Peter gets mugged by locals",
+              "viewCount": 25386,
+              "curator": {
+                "id": "88674511",
+                "login": "loose_critic",
+                "displayName": "Loose_Critic",
+                "__typename": "User"
+              },
+              "game": {
+                "id": "509658",
+                "slug": "just-chatting",
+                "name": "Just Chatting",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509658-52x72.jpg",
+                "__typename": "Game"
+              },
+              "broadcaster": {
+                "id": "582765062",
+                "login": "peter",
+                "displayName": "Peter",
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/81314008-19fc-47c3-a65d-6a9994828444-profile_image-50x50.png",
+                "primaryColorHex": "3B76ED",
+                "roles": { "isPartner": true, "__typename": "UserRoles" },
+                "__typename": "User"
+              },
+              "broadcastIdentifier": {
+                "id": "315352950759",
+                "__typename": "BroadcastIdOnly"
+              },
+              "thumbnailURL": "https://static-cdn.jtvnw.net/twitch-clips-thumbnails-prod/EnergeticBoldPlumShazBotstix-1wrw6AqzIlAIxP7c/5759122b-82ab-47f4-99fe-00dc936c551b/preview.jpg",
+              "createdAt": "2025-12-05T04:34:19Z",
+              "durationSeconds": 17,
+              "isFeatured": false,
+              "isAutoCurated": false,
+              "guestStarParticipants": {
+                "guests": [
+                  {
+                    "id": "45098797",
+                    "login": "cdawg",
+                    "displayName": "CDawg",
+                    "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/49110706-4c6c-4da5-8037-0fbd429405f5-profile_image-300x300.png",
+                    "primaryColorHex": null,
+                    "description": "I'm that guy",
+                    "__typename": "User"
+                  }
+                ],
+                "sessionIdentifier": "33ZyPKUbA7t0d1bgkktNK8fLsp9",
+                "__typename": "GuestStarParticipants"
+              },
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Clip"
+            },
+            "__typename": "ClipEdge"
+          },
+          {
+            "cursor": null,
+            "node": {
+              "id": "3964359859",
+              "slug": "RelievedDarkEggBuddhaBar-4DpaI5i2IAHtJLr2",
+              "title": "Пятерку выкинули с сцены",
+              "viewCount": 23323,
+              "curator": {
+                "id": "578241942",
+                "login": "mortalis_x7",
+                "displayName": "mortalis_x7",
+                "__typename": "User"
+              },
+              "game": {
+                "id": "509658",
+                "slug": "just-chatting",
+                "name": "Just Chatting",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509658-52x72.jpg",
+                "__typename": "Game"
+              },
+              "broadcaster": {
+                "id": "86277097",
+                "login": "buster",
+                "displayName": "buster",
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/96d66837-22f0-4393-89c5-2e5c2408485b-profile_image-50x50.png",
+                "primaryColorHex": "FA1ED2",
+                "roles": { "isPartner": true, "__typename": "UserRoles" },
+                "__typename": "User"
+              },
+              "broadcastIdentifier": {
+                "id": "314823756501",
+                "__typename": "BroadcastIdOnly"
+              },
+              "thumbnailURL": "https://static-cdn.jtvnw.net/twitch-clips-thumbnails-prod/RelievedDarkEggBuddhaBar-4DpaI5i2IAHtJLr2/a1301de1-79e6-42cf-be1c-5a5fd8c8ccc7/preview.jpg",
+              "createdAt": "2025-12-03T18:21:38Z",
+              "durationSeconds": 10,
+              "isFeatured": false,
+              "isAutoCurated": false,
+              "guestStarParticipants": {
+                "guests": [],
+                "sessionIdentifier": "35ZFosu2lLfxhXCQvpAf27JOpkW",
+                "__typename": "GuestStarParticipants"
+              },
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Clip"
+            },
+            "__typename": "ClipEdge"
+          },
+          {
+            "cursor": null,
+            "node": {
+              "id": "3697569080",
+              "slug": "CrowdedFilthyPandaDatBoi-YBGvWFuze-s8VSnC",
+              "title": "guitartime",
+              "viewCount": 22544,
+              "curator": {
+                "id": "126311719",
+                "login": "echomotn",
+                "displayName": "echoMOTN",
+                "__typename": "User"
+              },
+              "game": {
+                "id": "509658",
+                "slug": "just-chatting",
+                "name": "Just Chatting",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509658-52x72.jpg",
+                "__typename": "Game"
+              },
+              "broadcaster": {
+                "id": "95304188",
+                "login": "zoil",
+                "displayName": "Zoil",
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/4e7b09df-5f03-4e92-9b53-7d8025818da0-profile_image-50x50.png",
+                "primaryColorHex": "FF00AE",
+                "roles": { "isPartner": true, "__typename": "UserRoles" },
+                "__typename": "User"
+              },
+              "broadcastIdentifier": {
+                "id": "316173191262",
+                "__typename": "BroadcastIdOnly"
+              },
+              "thumbnailURL": "https://static-cdn.jtvnw.net/twitch-clips-thumbnails-prod/CrowdedFilthyPandaDatBoi-YBGvWFuze-s8VSnC/43e20472-e4cd-49c6-8e57-b8f9705268b2/preview.jpg",
+              "createdAt": "2025-12-03T18:30:57Z",
+              "durationSeconds": 60,
+              "isFeatured": false,
+              "isAutoCurated": false,
+              "guestStarParticipants": {
+                "guests": [],
+                "sessionIdentifier": "36GTc5uUoOlZ28qb4zaQpHX0RA0",
+                "__typename": "GuestStarParticipants"
+              },
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Clip"
+            },
+            "__typename": "ClipEdge"
+          },
+          {
+            "cursor": null,
+            "node": {
+              "id": "3352821513",
+              "slug": "CourageousSquareDiscGrammarKing-b2jZvSleupFITC3B",
+              "title": "Have a good night",
+              "viewCount": 21342,
+              "curator": {
+                "id": "61260612",
+                "login": "kels0",
+                "displayName": "KELS0",
+                "__typename": "User"
+              },
+              "game": {
+                "id": "509658",
+                "slug": "just-chatting",
+                "name": "Just Chatting",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509658-52x72.jpg",
+                "__typename": "Game"
+              },
+              "broadcaster": {
+                "id": "31746577",
+                "login": "mund",
+                "displayName": "MUND",
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/f11f5905-4dbf-43e4-adf4-111be2b5625f-profile_image-50x50.png",
+                "primaryColorHex": "4DF385",
+                "roles": { "isPartner": true, "__typename": "UserRoles" },
+                "__typename": "User"
+              },
+              "broadcastIdentifier": {
+                "id": "316422794458",
+                "__typename": "BroadcastIdOnly"
+              },
+              "thumbnailURL": "https://static-cdn.jtvnw.net/twitch-clips-thumbnails-prod/CourageousSquareDiscGrammarKing-b2jZvSleupFITC3B/e4ee7ced-9027-42ee-be89-9ab3e587537a/preview.jpg",
+              "createdAt": "2025-12-07T02:40:17Z",
+              "durationSeconds": 50,
+              "isFeatured": false,
+              "isAutoCurated": false,
+              "guestStarParticipants": {
+                "guests": [],
+                "sessionIdentifier": "35UWz9C9Qn59Cr3BB7AAz8FcZyB",
+                "__typename": "GuestStarParticipants"
+              },
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Clip"
+            },
+            "__typename": "ClipEdge"
+          },
+          {
+            "cursor": null,
+            "node": {
+              "id": "3188821164",
+              "slug": "DaintyBlueSpindleDBstyle-nKX84LZjtKBmP0fx",
+              "title": "LMFAOOOOOOOOO",
+              "viewCount": 20495,
+              "curator": {
+                "id": "210410653",
+                "login": "ibrothe_kidd",
+                "displayName": "ibrothe_kidd",
+                "__typename": "User"
+              },
+              "game": {
+                "id": "509658",
+                "slug": "just-chatting",
+                "name": "Just Chatting",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509658-52x72.jpg",
+                "__typename": "Game"
+              },
+              "broadcaster": {
+                "id": "95304188",
+                "login": "zoil",
+                "displayName": "Zoil",
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/4e7b09df-5f03-4e92-9b53-7d8025818da0-profile_image-50x50.png",
+                "primaryColorHex": "FF00AE",
+                "roles": { "isPartner": true, "__typename": "UserRoles" },
+                "__typename": "User"
+              },
+              "broadcastIdentifier": {
+                "id": "316275127520",
+                "__typename": "BroadcastIdOnly"
+              },
+              "thumbnailURL": "https://static-cdn.jtvnw.net/twitch-clips-thumbnails-prod/DaintyBlueSpindleDBstyle-nKX84LZjtKBmP0fx/9fa2d9f4-b164-4c00-8e49-471b602d52c0/preview.jpg",
+              "createdAt": "2025-12-08T08:44:14Z",
+              "durationSeconds": 12,
+              "isFeatured": false,
+              "isAutoCurated": false,
+              "guestStarParticipants": {
+                "guests": [],
+                "sessionIdentifier": "36UCHVvShCepehMMVD7aMmtph62",
+                "__typename": "GuestStarParticipants"
+              },
+              "previewThumbnailProperties": {
+                "blurReason": "BLUR_NOT_REQUIRED",
+                "__typename": "PreviewThumbnailProperties"
+              },
+              "__typename": "Clip"
+            },
+            "__typename": "ClipEdge"
+          },
+          {
+            "cursor": null,
+            "node": {
+              "id": "2427166193",
+              "slug": "StrongAltruisticBaboonRuleFive-IQPYkyvfzGlf95dP",
+              "title": "\"Should I Wash My Hands?\"",
+              "viewCount": 19334,
+              "curator": {
+                "id": "1134186618",
+                "login": "goosetogo",
+                "displayName": "goosetogo",
+                "__typename": "User"
+              },
+              "game": {
+                "id": "509658",
+                "slug": "just-chatting",
+                "name": "Just Chatting",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509658-52x72.jpg",
+                "__typename": "Game"
+              },
+              "broadcaster": {
+                "id": "97035984",
+                "login": "shaneyit",
+                "displayName": "ShaneYit",
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/3ad94bad-b400-442f-b487-52219052b518-profile_image-50x50.png",
+                "primaryColorHex": "FF38DB",
+                "roles": { "isPartner": true, "__typename": "UserRoles" },
+                "__typename": "User"
+              },
+              "broadcastIdentifier": {
+                "id": "316124202972",
+                "__typename": "BroadcastIdOnly"
+              },
+              "thumbnailURL": "https://static-cdn.jtvnw.net/twitch-clips-thumbnails-prod/StrongAltruisticBaboonRuleFive-IQPYkyvfzGlf95dP/96a22966-6375-419d-a6b3-e9235971835b/preview.jpg",
+              "createdAt": "2025-12-04T00:37:48Z",
+              "durationSeconds": 39,
+              "isFeatured": false,
+              "isAutoCurated": false,
+              "guestStarParticipants": {
+                "guests": [],
+                "sessionIdentifier": "36AtKV891XueEUIuozw3V2F8Jyc",
                 "__typename": "GuestStarParticipants"
               },
               "previewThumbnailProperties": {
@@ -844,14 +990,14 @@
           {
             "cursor": "MjA=",
             "node": {
-              "id": "2496479456",
-              "slug": "FineTalentedTurnipAMPEnergyCherry-7PYXncYtqrN6gYbL",
-              "title": "Part 2",
-              "viewCount": 30420,
+              "id": "2309642573",
+              "slug": "TentativeEphemeralCurlewStrawBeary-8q-O5T4EoRcjjMj-",
+              "title": "ГЛЕБ И РОСТИК НАПАЛИ НА РАГОВСКОГО",
+              "viewCount": 17862,
               "curator": {
-                "id": "447301800",
-                "login": "jarrydrayes",
-                "displayName": "jarrydrayes",
+                "id": "1337963200",
+                "login": "romchik_shumniy",
+                "displayName": "romchik_shumniy",
                 "__typename": "User"
               },
               "game": {
@@ -862,21 +1008,26 @@
                 "__typename": "Game"
               },
               "broadcaster": {
-                "id": "211234859",
-                "login": "adapt",
-                "displayName": "Adapt",
-                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/6ea282b2-75ca-4994-9fbb-51d3ec63003f-profile_image-50x50.png",
+                "id": "760728622",
+                "login": "vladragovsky",
+                "displayName": "VladRagovsky",
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/3ab20e75-4163-41a2-ab1c-538548027d01-profile_image-50x50.png",
                 "primaryColorHex": null,
-                "roles": { "isPartner": true, "__typename": "UserRoles" },
+                "roles": { "isPartner": false, "__typename": "UserRoles" },
                 "__typename": "User"
               },
-              "thumbnailURL": "https://static-cdn.jtvnw.net/twitch-clips-thumbnails-prod/FineTalentedTurnipAMPEnergyCherry-7PYXncYtqrN6gYbL/854ce7a9-efa6-4a53-aeb1-b43a16268c63/preview.jpg",
-              "createdAt": "2025-03-12T01:49:21Z",
-              "durationSeconds": 23,
+              "broadcastIdentifier": {
+                "id": "315596790758",
+                "__typename": "BroadcastIdOnly"
+              },
+              "thumbnailURL": "https://static-cdn.jtvnw.net/twitch-clips-thumbnails-prod/TentativeEphemeralCurlewStrawBeary-8q-O5T4EoRcjjMj-/16b954f3-4779-49ab-9bb1-2673134d88c4/preview.jpg",
+              "createdAt": "2025-12-04T14:18:43Z",
+              "durationSeconds": 47,
               "isFeatured": false,
+              "isAutoCurated": false,
               "guestStarParticipants": {
                 "guests": [],
-                "sessionIdentifier": "2tjZRAMe5GMtu6Xb9siGrOODhLv",
+                "sessionIdentifier": "2zF0t9xKOmIm4Jrmnea0oev6r9D",
                 "__typename": "GuestStarParticipants"
               },
               "previewThumbnailProperties": {
@@ -894,8 +1045,8 @@
     }
   },
   "extensions": {
-    "durationMilliseconds": 305,
+    "durationMilliseconds": 256,
     "operationName": "ClipsCards__Game",
-    "requestID": "01JPMYY2B6NJDC9ZHX672Z2X4J"
+    "requestID": "01KC4065ZP0AAYM0750SAE6YWF"
   }
 }

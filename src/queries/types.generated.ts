@@ -462,6 +462,7 @@ export interface ClipsCardsGameClip {
   createdAt: string;
   durationSeconds: number;
   isFeatured: boolean;
+  isAutoCurated: boolean;
   curator: null | {
     id: string;
     login: string;
@@ -486,6 +487,10 @@ export interface ClipsCardsGameClip {
       __typename: 'UserRoles';
     };
     __typename: 'User';
+  };
+  broadcastIdentifier: null | {
+    id: string;
+    __typename: 'BroadcastIdOnly';
   };
   guestStarParticipants: null | {
     guests: (null | {
@@ -558,6 +563,7 @@ export interface ClipsCardsUserClip {
   durationSeconds: number;
   champBadge: null;
   isFeatured: boolean;
+  isAutoCurated: boolean;
   curator: null | {
     id: string;
     login: string;
@@ -570,6 +576,10 @@ export interface ClipsCardsUserClip {
     name: string;
     boxArtURL: string;
     __typename: 'Game';
+  };
+  broadcastIdentifier: null | {
+    id: string;
+    __typename: 'BroadcastIdOnly';
   };
   broadcaster: null | {
     id: string;
