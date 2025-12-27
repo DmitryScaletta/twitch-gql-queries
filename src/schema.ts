@@ -1,14 +1,14 @@
 import {
   Type as T,
-  type ObjectOptions,
   type Static,
   type TObject,
+  type TObjectOptions,
   type TProperties,
   type TSchema,
-} from '@sinclair/typebox';
+} from 'typebox';
 
-export const LegacyRef = <T extends TSchema>(schema: T) =>
-  T.Unsafe<Static<T>>(T.Ref(schema.$id!));
+export const TRef = <T extends TSchema>(schema: T) =>
+  T.Ref<Static<T>>((schema as any).$id);
 
 export const pick = <TSchema extends TProperties, TKey extends keyof TSchema>(
   schema: TSchema,
@@ -22,7 +22,7 @@ export const pick = <TSchema extends TProperties, TKey extends keyof TSchema>(
 
 export const strictObject = <TProps extends TProperties>(
   props: TProps,
-  options?: ObjectOptions,
+  options?: TObjectOptions,
 ) => {
   if ('__typename' in props) {
     const __typename = props.__typename;

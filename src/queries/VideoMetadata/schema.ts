@@ -1,4 +1,4 @@
-import { Type as T } from '@sinclair/typebox';
+import { Type as T } from 'typebox';
 import { strictObject, getResponseSchema, pick } from '../../schema.ts';
 import * as schemas from '../../schemas.ts';
 

@@ -1,10 +1,5 @@
-import { Type as T } from '@sinclair/typebox';
-import {
-  strictObject,
-  getResponseSchema,
-  LegacyRef,
-  pick,
-} from '../../schema.ts';
+import { Type as T } from 'typebox';
+import { strictObject, getResponseSchema, TRef, pick } from '../../schema.ts';
 import * as schemas from '../../schemas.ts';
 
 export const name = 'DirectoryPage_Game';
@@ -26,7 +21,7 @@ export const VariablesSchema = strictObject(
     imageWidth: T.Optional(T.Integer({ minimum: 0 })),
     slug: T.String(),
     options: strictObject({
-      sort: LegacyRef(SortSchema),
+      sort: TRef(SortSchema),
       recommendationsContext: T.Optional(
         T.Union([
           T.Null(),
@@ -104,7 +99,7 @@ export const GameSchema = strictObject(
       edges: T.Array(
         strictObject({
           ...pick(schemas.StreamEdge, ['cursor', 'trackingID']),
-          node: LegacyRef(StreamSchema),
+          node: TRef(StreamSchema),
         }),
       ),
       pageInfo: strictObject(pick(schemas.PageInfo, ['hasNextPage'])),
@@ -115,7 +110,7 @@ export const GameSchema = strictObject(
 );
 
 export const DataSchema = strictObject(
-  { game: T.Union([T.Null(), LegacyRef(GameSchema)]) },
+  { game: T.Union([T.Null(), TRef(GameSchema)]) },
   { $id: `${displayName}Data` },
 );
 

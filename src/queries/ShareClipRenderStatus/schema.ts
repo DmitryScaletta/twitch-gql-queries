@@ -1,10 +1,5 @@
-import { Type as T } from '@sinclair/typebox';
-import {
-  strictObject,
-  getResponseSchema,
-  LegacyRef,
-  pick,
-} from '../../schema.ts';
+import { Type as T } from 'typebox';
+import { strictObject, getResponseSchema, TRef, pick } from '../../schema.ts';
 import * as schemas from '../../schemas.ts';
 
 export const name = 'ShareClipRenderStatus';
@@ -126,7 +121,7 @@ export const ClipSchema = strictObject(
       'videoOffsetSeconds',
       'isViewerEditRestricted',
     ]),
-    assets: T.Array(LegacyRef(ClipAssetSchema)),
+    assets: T.Array(TRef(ClipAssetSchema)),
     curator: T.Union([
       T.Null(),
       strictObject(
@@ -146,7 +141,7 @@ export const ClipSchema = strictObject(
       title: T.Null({ description: 'Seems to always be `null`' }),
       __typename: T.Literal('Broadcast'),
     }),
-    broadcaster: T.Union([T.Null(), LegacyRef(BroadcasterSchema)]),
+    broadcaster: T.Union([T.Null(), TRef(BroadcasterSchema)]),
     playbackAccessToken: strictObject(
       pick(schemas.PlaybackAccessToken, ['signature', 'value']),
     ),
@@ -163,7 +158,7 @@ export const ClipSchema = strictObject(
 );
 
 export const DataSchema = strictObject(
-  { clip: T.Union([T.Null(), LegacyRef(ClipSchema)]) },
+  { clip: T.Union([T.Null(), TRef(ClipSchema)]) },
   { $id: `${displayName}Data` },
 );
 

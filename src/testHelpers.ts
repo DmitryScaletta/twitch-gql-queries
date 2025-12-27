@@ -1,34 +1,34 @@
 import { setTimeout } from 'node:timers/promises';
-import { FormatRegistry, type TSchema } from '@sinclair/typebox';
-import { Value, type ValueError } from '@sinclair/typebox/value';
-import { IsDateTime } from '../lib/typebox-formats/date-time.ts';
-import { IsUrl } from '../lib/typebox-formats/url.ts';
-import { IsUuid } from '../lib/typebox-formats/uuid.ts';
+import { type TProperties, type TSchema } from 'typebox';
+import { Value } from 'typebox/value';
+import type { TLocalizedValidationError } from 'typebox/error';
 import { gqlRequest, MAX_QUERIES_PER_REQUEST } from './gqlRequest.ts';
 import { getQueryDirectoryPageGame } from './queries/DirectoryPage_Game/query.ts';
 import { getQueryClipsCardsGame } from './queries/ClipsCards__Game/query.ts';
 import { getQueryBowsePageAllDirectories } from './queries/BrowsePage_AllDirectories/query.ts';
 import { getQueryFilterableVideoTowerVideos } from './queries/FilterableVideoTower_Videos/query.ts';
 
-FormatRegistry.Set('date-time', IsDateTime);
-FormatRegistry.Set('uri', IsUrl);
-FormatRegistry.Set('uuid', IsUuid);
+const getValueByInstancePath = (data: unknown, instancePath: string) => {
+  const paths = instancePath.split('/').slice(1);
+  let value = data;
+  for (const path of paths) value = (value as any)[path];
+  return value;
+};
 
-const showErrors = (errors: Value.ValueErrorIterator): ValueError | null => {
-  let lastError: ValueError | null = null;
+const showErrors = (errors: TLocalizedValidationError[], value: unknown) => {
+  let lastError: TLocalizedValidationError | null = null;
   for (const error of errors) {
-    if (error.errors.length === 0) {
-      let obj = JSON.stringify(error.value, null, 2);
-      if (obj === undefined) obj = 'undefined';
-      console.log(error.message);
-      console.log(error.path);
-      console.log(obj.length < 1000 ? obj : 'TOO LONG', '\n');
-      lastError = error;
-    } else {
-      for (const err of error.errors) {
-        lastError = showErrors(err);
-      }
+    let errorValue: unknown = undefined;
+    try {
+      errorValue = getValueByInstancePath(value, error.instancePath);
+    } catch (e) {
+      console.error('getValueByInstancePath error', error.instancePath);
     }
+    let obj = JSON.stringify(errorValue, null, 2);
+    if (obj === undefined) obj = 'undefined';
+    console.log(error);
+    console.log(obj.length < 1000 ? obj : 'TOO LONG', '\n');
+    lastError = error;
   }
   return lastError;
 };
@@ -36,9 +36,13 @@ const showErrors = (errors: Value.ValueErrorIterator): ValueError | null => {
 export const createValidate =
   (ResponseSchema: TSchema, references: TSchema[] = []) =>
   (response: unknown) => {
-    const errors = Value.Errors(ResponseSchema, references, response);
-    const error = showErrors(errors);
-    if (error) throw `${error.message} ${error.path}`;
+    const context: TProperties = {};
+    for (const schema of references) context[(schema as any).$id] = schema;
+    const errors = Value.Errors(context, ResponseSchema, response);
+    if (errors.length > 0) {
+      const lastError = showErrors(errors, response);
+      throw lastError;
+    }
   };
 
 const CATEGORIES = [

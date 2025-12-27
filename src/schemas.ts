@@ -1,4 +1,4 @@
-import { Type as T, type TLiteral, type TProperties } from '@sinclair/typebox';
+import { Type as T, type TLiteral, type TProperties } from 'typebox';
 import { strictObject } from './schema.ts';
 
 type Properties = TProperties & { __typename: TLiteral<string> };

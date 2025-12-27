@@ -1,10 +1,5 @@
-import { Type as T } from '@sinclair/typebox';
-import {
-  strictObject,
-  getResponseSchema,
-  LegacyRef,
-  pick,
-} from '../../schema.ts';
+import { Type as T } from 'typebox';
+import { strictObject, getResponseSchema, TRef, pick } from '../../schema.ts';
 import * as schemas from '../../schemas.ts';
 
 export const name = 'BrowsePage_AllDirectories';
@@ -31,7 +26,7 @@ export const VariablesSchema = strictObject(
           }),
         ]),
       ),
-      sort: LegacyRef(SortSchema),
+      sort: TRef(SortSchema),
       tags: T.Optional(T.Union([T.Null(), T.Array(T.String())])),
     }),
     cursor: T.Optional(T.Union([T.Null(), T.String()])),
@@ -63,7 +58,7 @@ const GameConnectionSchema = strictObject({
   edges: T.Array(
     strictObject({
       ...pick(schemas.GameEdge, ['cursor', 'trackingID']),
-      node: LegacyRef(GameSchema),
+      node: TRef(GameSchema),
     }),
   ),
   pageInfo: strictObject(pick(schemas.PageInfo, ['hasNextPage'])),

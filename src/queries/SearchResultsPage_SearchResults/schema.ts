@@ -1,10 +1,5 @@
-import { Type as T } from '@sinclair/typebox';
-import {
-  strictObject,
-  getResponseSchema,
-  LegacyRef,
-  pick,
-} from '../../schema.ts';
+import { Type as T } from 'typebox';
+import { strictObject, getResponseSchema, TRef, pick } from '../../schema.ts';
 import * as schemas from '../../schemas.ts';
 
 export const name = 'SearchResultsPage_SearchResults';
@@ -257,7 +252,7 @@ const SearchForResultUsers = strictObject({
   edges: T.Array(
     strictObject({
       trackingID: T.String(),
-      item: LegacyRef(ChannelSchema),
+      item: TRef(ChannelSchema),
       __typename: T.Literal('SearchForEdge'),
     }),
   ),
@@ -275,7 +270,7 @@ const SearchForSchema = strictObject({
     edges: T.Array(
       strictObject({
         trackingID: T.String(),
-        item: LegacyRef(GameSchema),
+        item: TRef(GameSchema),
         __typename: T.Literal('SearchForEdge'),
       }),
     ),
@@ -288,7 +283,7 @@ const SearchForSchema = strictObject({
     edges: T.Array(
       strictObject({
         trackingID: T.String(),
-        item: LegacyRef(VideoSchema),
+        item: TRef(VideoSchema),
         __typename: T.Literal('SearchForEdge'),
       }),
     ),
@@ -300,7 +295,7 @@ const SearchForSchema = strictObject({
     edges: T.Array(
       strictObject({
         trackingID: T.String(),
-        item: LegacyRef(RelatedLiveChannelSchema),
+        item: TRef(RelatedLiveChannelSchema),
         __typename: T.Literal('SearchForEdgeRelatedLiveChannels'),
       }),
     ),

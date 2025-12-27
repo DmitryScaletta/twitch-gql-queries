@@ -1,10 +1,5 @@
-import { Type as T } from '@sinclair/typebox';
-import {
-  strictObject,
-  getResponseSchema,
-  LegacyRef,
-  pick,
-} from '../../schema.ts';
+import { Type as T } from 'typebox';
+import { strictObject, getResponseSchema, TRef, pick } from '../../schema.ts';
 import * as schemas from '../../schemas.ts';
 
 export const name = 'ClipsDownloadButton';
@@ -33,7 +28,7 @@ export const ClipSchema = strictObject(
 );
 
 export const DataSchema = strictObject(
-  { clip: T.Union([T.Null(), LegacyRef(ClipSchema)]) },
+  { clip: T.Union([T.Null(), TRef(ClipSchema)]) },
   { $id: `${displayName}Data` },
 );
 

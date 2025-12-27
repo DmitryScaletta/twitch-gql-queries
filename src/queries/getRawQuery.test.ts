@@ -1,5 +1,5 @@
 import { describe, test } from 'node:test';
-import { Type as T } from '@sinclair/typebox';
+import { Type as T } from 'typebox';
 import { strictObject, getResponseSchema } from '../schema.ts';
 import { createValidate } from '../testHelpers.ts';
 import { gqlRequest } from '../gqlRequest.ts';

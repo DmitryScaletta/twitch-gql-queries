@@ -1,10 +1,5 @@
-import { Type as T } from '@sinclair/typebox';
-import {
-  strictObject,
-  getResponseSchema,
-  pick,
-  LegacyRef,
-} from '../../schema.ts';
+import { Type as T } from 'typebox';
+import { strictObject, getResponseSchema, pick, TRef } from '../../schema.ts';
 import * as schemas from '../../schemas.ts';
 
 export const name = 'BitsConfigContext_Global';
@@ -53,7 +48,7 @@ export const CheerConfigSchema = strictObject(
     groups: T.Array(
       strictObject({
         templateURL: T.String(),
-        nodes: T.Array(LegacyRef(CheermoteSchema)),
+        nodes: T.Array(TRef(CheermoteSchema)),
         __typename: T.Literal('CheermoteGroup'),
       }),
     ),
@@ -64,7 +59,7 @@ export const CheerConfigSchema = strictObject(
 
 export const DataSchema = strictObject(
   {
-    cheerConfig: LegacyRef(CheerConfigSchema),
+    cheerConfig: TRef(CheerConfigSchema),
     __typename: T.Literal('Query'),
   },
   { $id: `${displayName}Data` },

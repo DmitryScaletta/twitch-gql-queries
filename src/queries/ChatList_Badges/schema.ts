@@ -1,10 +1,5 @@
-import { Type as T } from '@sinclair/typebox';
-import {
-  strictObject,
-  getResponseSchema,
-  pick,
-  LegacyRef,
-} from '../../schema.ts';
+import { Type as T } from 'typebox';
+import { strictObject, getResponseSchema, pick, TRef } from '../../schema.ts';
 import * as schemas from '../../schemas.ts';
 
 export const name = 'ChatList_Badges';
@@ -40,7 +35,7 @@ export const VariablesSchema = strictObject(
 );
 
 export const DataSchema = strictObject(
-  { user: T.Union([T.Null(), LegacyRef(UserSchema)]) },
+  { user: T.Union([T.Null(), TRef(UserSchema)]) },
   { $id: `${displayName}Data` },
 );
 

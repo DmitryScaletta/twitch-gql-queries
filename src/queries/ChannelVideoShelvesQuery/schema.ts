@@ -1,10 +1,5 @@
-import { Type as T } from '@sinclair/typebox';
-import {
-  strictObject,
-  getResponseSchema,
-  LegacyRef,
-  pick,
-} from '../../schema.ts';
+import { Type as T } from 'typebox';
+import { strictObject, getResponseSchema, TRef, pick } from '../../schema.ts';
 import * as schemas from '../../schemas.ts';
 import { GuestStarParticipantsSchema } from '../ClipsCards__Game/schema.ts';
 import { ResourceRestrictionSchema } from '../FilterableVideoTower_Videos/schema.ts';
@@ -110,7 +105,7 @@ const CollectionSchema = strictObject({
     edges: T.Array(
       strictObject({
         cursor: T.Union([T.Null(), T.String()]),
-        node: LegacyRef(VideoSchema),
+        node: TRef(VideoSchema),
         __typename: T.Literal('CollectionItemEdge'),
       }),
     ),
@@ -133,7 +128,7 @@ export const VideoShelfSchema = strictObject(
       T.Literal('COLLECTION'),
     ]),
     collection: T.Union([T.Null(), CollectionSchema]),
-    items: T.Array(T.Union([LegacyRef(ClipSchema), LegacyRef(VideoSchema)])),
+    items: T.Array(T.Union([TRef(ClipSchema), TRef(VideoSchema)])),
     __typename: T.Literal('VideoShelf'),
   },
   { $id: `${displayName}VideoShelf` },
@@ -145,7 +140,7 @@ const UserSchema = strictObject({
     edges: T.Array(
       strictObject({
         cursor: T.Union([T.Null(), T.String()]),
-        node: LegacyRef(VideoShelfSchema),
+        node: TRef(VideoShelfSchema),
         __typename: T.Literal('VideoShelfEdge'),
       }),
     ),

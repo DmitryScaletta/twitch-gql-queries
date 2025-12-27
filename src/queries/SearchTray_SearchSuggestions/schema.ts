@@ -1,10 +1,5 @@
-import { Type as T } from '@sinclair/typebox';
-import {
-  strictObject,
-  getResponseSchema,
-  LegacyRef,
-  pick,
-} from '../../schema.ts';
+import { Type as T } from 'typebox';
+import { strictObject, getResponseSchema, TRef, pick } from '../../schema.ts';
 import * as schemas from '../../schemas.ts';
 
 export const name = 'SearchTray_SearchSuggestions';
@@ -63,8 +58,8 @@ export const SuggestionSchema = strictObject(
     text: T.String(),
     content: T.Union([
       T.Null(),
-      LegacyRef(SuggestionChannelSchema),
-      LegacyRef(SuggestionCategorySchema),
+      TRef(SuggestionChannelSchema),
+      TRef(SuggestionCategorySchema),
     ]),
     matchingCharacters: strictObject({
       start: T.Integer({ minimum: 0 }),
@@ -80,7 +75,7 @@ export const SuggestionsSchema = strictObject(
   {
     edges: T.Array(
       strictObject({
-        node: LegacyRef(SuggestionSchema),
+        node: TRef(SuggestionSchema),
         __typename: T.Literal('SearchSuggestionEdge'),
       }),
     ),
@@ -95,7 +90,7 @@ export const SuggestionsSchema = strictObject(
 );
 
 export const DataSchema = strictObject(
-  { searchSuggestions: LegacyRef(SuggestionsSchema) },
+  { searchSuggestions: TRef(SuggestionsSchema) },
   { $id: `${displayName}Data` },
 );
 

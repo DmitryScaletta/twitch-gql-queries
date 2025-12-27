@@ -1,10 +1,5 @@
-import { Type as T } from '@sinclair/typebox';
-import {
-  strictObject,
-  getResponseSchema,
-  LegacyRef,
-  pick,
-} from '../../schema.ts';
+import { Type as T } from 'typebox';
+import { strictObject, getResponseSchema, TRef, pick } from '../../schema.ts';
 import * as schemas from '../../schemas.ts';
 
 export const name = 'GlobalBadges';
@@ -32,7 +27,7 @@ export const BadgeSchema = strictObject(
 );
 
 export const DataSchema = strictObject(
-  { badges: T.Array(LegacyRef(BadgeSchema)) },
+  { badges: T.Array(TRef(BadgeSchema)) },
   { $id: `${displayName}Data` },
 );
 

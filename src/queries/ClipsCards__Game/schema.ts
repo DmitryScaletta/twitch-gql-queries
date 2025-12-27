@@ -1,10 +1,5 @@
-import { Type as T } from '@sinclair/typebox';
-import {
-  strictObject,
-  getResponseSchema,
-  LegacyRef,
-  pick,
-} from '../../schema.ts';
+import { Type as T } from 'typebox';
+import { strictObject, getResponseSchema, TRef, pick } from '../../schema.ts';
 import * as schemas from '../../schemas.ts';
 
 export const name = 'ClipsCards__Game';
@@ -29,7 +24,7 @@ export const VariablesSchema = strictObject(
     criteria: T.Optional(
       strictObject({
         languages: T.Optional(T.Union([T.Null(), T.Array(T.String())])),
-        filter: T.Optional(T.Union([T.Null(), LegacyRef(FilterSchema)])),
+        filter: T.Optional(T.Union([T.Null(), TRef(FilterSchema)])),
         shouldFilterByDiscoverySetting: T.Optional(
           T.Union([T.Null(), T.Boolean()]),
         ),
@@ -116,7 +111,7 @@ const ClipsSchema = strictObject({
   edges: T.Array(
     strictObject({
       cursor: T.Union([T.Null(), T.String()]),
-      node: LegacyRef(ClipSchema),
+      node: TRef(ClipSchema),
       __typename: T.Literal('ClipEdge'),
     }),
   ),

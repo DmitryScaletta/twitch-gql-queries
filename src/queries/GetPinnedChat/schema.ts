@@ -1,10 +1,5 @@
-import { Type as T } from '@sinclair/typebox';
-import {
-  strictObject,
-  getResponseSchema,
-  LegacyRef,
-  pick,
-} from '../../schema.ts';
+import { Type as T } from 'typebox';
+import { strictObject, getResponseSchema, TRef, pick } from '../../schema.ts';
 import * as schemas from '../../schemas.ts';
 
 export const name = 'GetPinnedChat';
@@ -65,7 +60,7 @@ export const PinnedChatMessageSchema = strictObject(
       'updatedAt',
       'endsAt',
     ]),
-    pinnedMessage: LegacyRef(MessageSchema),
+    pinnedMessage: TRef(MessageSchema),
     pinnedBy: strictObject(pick(schemas.User, ['id', 'displayName'])),
   },
   { $id: `${displayName}PinnedChatMessage` },
@@ -74,7 +69,7 @@ export const PinnedChatMessageSchema = strictObject(
 const PinnedChatMessagesSchema = strictObject({
   edges: T.Array(
     strictObject({
-      node: LegacyRef(PinnedChatMessageSchema),
+      node: TRef(PinnedChatMessageSchema),
       cursor: T.Union([T.Null(), T.String()]),
       __typename: T.Literal('PinnedChatMessageEdge'),
     }),

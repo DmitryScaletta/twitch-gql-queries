@@ -1,10 +1,5 @@
-import { Type as T } from '@sinclair/typebox';
-import {
-  strictObject,
-  getResponseSchema,
-  LegacyRef,
-  pick,
-} from '../../schema.ts';
+import { Type as T } from 'typebox';
+import { strictObject, getResponseSchema, TRef, pick } from '../../schema.ts';
 import * as schemas from '../../schemas.ts';
 
 export const name = 'ChannelRoot_AboutPanel';
@@ -95,7 +90,7 @@ export const UserSchema = strictObject(
 export const DataSchema = strictObject(
   {
     currentUser: T.Union([T.Null()]),
-    user: T.Union([T.Null(), LegacyRef(UserSchema)]),
+    user: T.Union([T.Null(), TRef(UserSchema)]),
   },
   { $id: `${displayName}Data` },
 );
