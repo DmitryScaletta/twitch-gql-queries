@@ -67,7 +67,7 @@ export const Stream = {
   viewersCount: T.Integer({ minimum: 0 }),
   previewImageURL: T.String({ format: 'uri' }),
   templatePreviewImageURL: T.String({ format: 'uri' }),
-  type: T.Literal('live'),
+  type: T.Union([T.Null(), T.Literal('live')]),
   restrictionType: T.Union([T.Null()]),
   createdAt: T.String({ format: 'date-time' }),
   __typename: T.Literal('Stream'),

@@ -57,6 +57,17 @@ export const ResourceRestrictionSchema = strictObject({
   __typename: T.Literal('ResourceRestriction'),
 });
 
+const VideoOwnerSchema = strictObject({
+  ...pick(schemas.User, [
+    'displayName',
+    'id',
+    'login',
+    'profileImageURL',
+    'primaryColorHex',
+  ]),
+  roles: strictObject(pick(schemas.UserRoles, ['isPartner'])),
+});
+
 export const VideoSchema = strictObject(
   {
     ...pick(schemas.Video, [
@@ -74,16 +85,7 @@ export const VideoSchema = strictObject(
         pick(schemas.Game, ['boxArtURL', 'id', 'slug', 'displayName', 'name']),
       ),
     ]),
-    owner: strictObject({
-      ...pick(schemas.User, [
-        'displayName',
-        'id',
-        'login',
-        'profileImageURL',
-        'primaryColorHex',
-      ]),
-      roles: strictObject(pick(schemas.UserRoles, ['isPartner'])),
-    }),
+    owner: T.Union([T.Null(), VideoOwnerSchema]),
     self: strictObject(
       pick(schemas.VideoSelfEdge, ['isRestricted', 'viewingHistory']),
     ),

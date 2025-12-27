@@ -707,7 +707,7 @@ export interface DirectoryPageGameStream {
   title: string;
   viewersCount: number;
   previewImageURL: string;
-  type: 'live';
+  type: null | 'live';
   broadcaster: null | {
     id: string;
     login: string;
@@ -817,7 +817,7 @@ export interface FilterableVideoTowerVideosVideo {
     name: string;
     __typename: 'Game';
   };
-  owner: {
+  owner: null | {
     displayName: string;
     id: string;
     login: string;
@@ -1157,7 +1157,7 @@ export interface SearchResultsPageChannel {
     id: string;
     previewImageURL: string;
     templatePreviewImageURL: string;
-    type: 'live';
+    type: null | 'live';
     viewersCount: number;
     game: null | {
       id: string;
@@ -1630,7 +1630,7 @@ export interface StreamMetadataUser {
   };
   stream: null | {
     id: string;
-    type: 'live';
+    type: null | 'live';
     createdAt: string;
     game: null | {
       id: string;
