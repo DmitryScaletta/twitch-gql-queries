@@ -1,8 +1,8 @@
 import path from 'node:path';
 import assert from 'node:assert';
 import fsp from 'node:fs/promises';
-import { Type as T, type TSchema } from '@sinclair/typebox';
-import { LegacyRef, strictObject } from '../../src/schema.ts';
+import { Type as T, type TSchema } from 'typebox';
+import { TRef, strictObject } from '../../src/schema.ts';
 
 type RequestBody = {
   summary: string;
@@ -44,7 +44,7 @@ const createRequestBodySchema = (
   strictObject(
     {
       operationName: T.Literal(queryName),
-      variables: LegacyRef(VariablesSchema),
+      variables: TRef(VariablesSchema),
       extensions: strictObject({
         persistedQuery: strictObject({
           version: T.Literal(1),

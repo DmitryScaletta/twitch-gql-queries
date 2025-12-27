@@ -1,5 +1,5 @@
 import fsp from 'node:fs/promises';
-import type { TSchema } from '@sinclair/typebox';
+import type { TSchema } from 'typebox';
 import { getQueriesMetadata } from './utils/getQueriesMetadata.ts';
 
 const template: any = {
@@ -123,7 +123,7 @@ const buildOpenApi = async () => {
       },
     };
 
-    ResponseSchema.$id = `${displayName}Response`;
+    (ResponseSchema as any).$id = `${displayName}Response`;
 
     for (const schema of [
       ...additionalSchemas,
@@ -132,8 +132,8 @@ const buildOpenApi = async () => {
       DataSchema,
       ResponseSchema,
     ]) {
-      if (!schema.$id) continue;
-      openApi.components.schemas[schema.$id.replace(/Schema$/, '')] =
+      if (!(schema as any).$id) continue;
+      openApi.components.schemas[(schema as any).$id.replace(/Schema$/, '')] =
         normalizeRefs(schema);
     }
   }

@@ -1,5 +1,5 @@
 import fsp from 'node:fs/promises';
-import { type TSchema } from '@sinclair/typebox';
+import { type TSchema } from 'typebox';
 import { compile } from 'json-schema-to-typescript';
 import { getQueriesMetadata } from './utils/getQueriesMetadata.ts';
 
@@ -47,7 +47,7 @@ export const gen = async () => {
     DataSchema,
   } of queriesMetadata) {
     tsSchemas.push(
-      ...additionalSchemas.filter((s) => s.$id),
+      ...additionalSchemas.filter((s) => (s as any).$id),
       VariablesSchema,
       DataSchema,
     );
@@ -74,8 +74,8 @@ export const gen = async () => {
     // TODO: add better fix
     // when linking the same schema with another schema multiple times
     // `json-schema-to-typescript` adds numbers to the end of the schema name
-    if (schema.$id) {
-      ts = ts.replaceAll(new RegExp(`(${schema.$id})\\d+`, 'g'), '$1');
+    if ((schema as any).$id) {
+      ts = ts.replaceAll(new RegExp(`(${(schema as any).$id})\\d+`, 'g'), '$1');
     }
   }
 
