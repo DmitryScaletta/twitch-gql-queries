@@ -61,7 +61,10 @@ export const PinnedChatMessageSchema = strictObject(
       'endsAt',
     ]),
     pinnedMessage: TRef(MessageSchema),
-    pinnedBy: strictObject(pick(schemas.User, ['id', 'displayName'])),
+    pinnedBy: T.Union([
+      T.Null(),
+      strictObject(pick(schemas.User, ['id', 'displayName'])),
+    ]),
   },
   { $id: `${displayName}PinnedChatMessage` },
 );

@@ -969,7 +969,7 @@ export interface GetPinnedChatPinnedChatMessage {
   updatedAt: string;
   endsAt: null | string;
   pinnedMessage: GetPinnedChatMessage;
-  pinnedBy: {
+  pinnedBy: null | {
     id: string;
     displayName: string;
     __typename: 'User';

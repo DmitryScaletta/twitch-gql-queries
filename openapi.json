@@ -57267,26 +57267,33 @@
             "$ref": "#/components/schemas/GetPinnedChatMessage"
           },
           "pinnedBy": {
-            "type": "object",
-            "required": [
-              "id",
-              "displayName",
-              "__typename"
-            ],
-            "properties": {
-              "id": {
-                "type": "string",
-                "pattern": "^[0-9]+$"
+            "anyOf": [
+              {
+                "type": "null"
               },
-              "displayName": {
-                "type": "string"
-              },
-              "__typename": {
-                "type": "string",
-                "const": "User"
+              {
+                "type": "object",
+                "required": [
+                  "id",
+                  "displayName",
+                  "__typename"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "string",
+                    "pattern": "^[0-9]+$"
+                  },
+                  "displayName": {
+                    "type": "string"
+                  },
+                  "__typename": {
+                    "type": "string",
+                    "const": "User"
+                  }
+                },
+                "additionalProperties": false
               }
-            },
-            "additionalProperties": false
+            ]
           },
           "__typename": {
             "type": "string",
