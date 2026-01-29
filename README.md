@@ -2,7 +2,7 @@
 
 Type-safe requests to twitch public GraphQL API
 
-You can try queries right in the browser: [Swagger UI](https://twitch-gql-swagger.surge.sh) / [Scalar Swagger UI](https://twitch-gql-swagger.surge.sh/scalar/)
+You can try queries right in the browser: [Swagger UI](https://twitch-gql-swagger.surge.sh) ([mirror](https://dmitryscaletta.github.io/twitch-gql-queries/)) / [Scalar Swagger UI](https://twitch-gql-swagger.surge.sh/scalar/) ([mirror](https://dmitryscaletta.github.io/twitch-gql-queries/scalar/))
 
 ## Features
 
@@ -11,6 +11,8 @@ You can try queries right in the browser: [Swagger UI](https://twitch-gql-swagge
 * **TypeBox Schemas** for *Variables* and *Response* objects
 * **Tests** to validate types with real requests
 * **Zero dependencies**
+
+See also: [twitch-api-swagger](https://github.com/DmitryScaletta/twitch-api-swagger)
 
 ## Installation
 
