@@ -5,30 +5,34 @@
       "videos": {
         "edges": [
           {
-            "cursor": "209971013|514|2017-12-16T09:11:03Z|100",
+            "cursor": "140903003|422|2017-05-07T20:22:14Z|27",
             "node": {
-              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/ea5f7fee363e3f75dac7_12826_2185567716_48450dbc-7391-4903-90d9-0b16abfbcd27/storyboards/2185567716-strip-0.jpg",
+              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/63b77961bfbeb660969e_12826_2594660854_1ad1cbcb-9809-4330-8c7f-e95eed0f2b28/storyboards/2594660854-strip-0.jpg",
               "game": null,
-              "id": "2185567716",
-              "lengthSeconds": 4472,
+              "broadcastIdentifier": {
+                "id": "1",
+                "__typename": "BroadcastIdOnly"
+              },
+              "id": "2594660854",
+              "lengthSeconds": 3699,
               "owner": {
                 "displayName": "Twitch",
                 "id": "12826",
                 "login": "twitch",
-                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/d5e6ebb4-a245-4ebf-bea6-2183e2f39600-profile_image-50x50.png",
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-50x50.png",
                 "primaryColorHex": "5C16C5",
                 "roles": { "isPartner": true, "__typename": "UserRoles" },
                 "__typename": "User"
               },
-              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/ea5f7fee363e3f75dac7_12826_2185567716_48450dbc-7391-4903-90d9-0b16abfbcd27/thumb/index-0000000024-320x180.jpg",
-              "publishedAt": "2024-06-30T11:59:17Z",
+              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/63b77961bfbeb660969e_12826_2594660854_1ad1cbcb-9809-4330-8c7f-e95eed0f2b28/thumb/custom-e431bf7a-fbcb-4c74-9afd-9970039c0e0e-320x180.jpeg",
+              "publishedAt": "2025-10-18T01:30:36Z",
               "self": {
                 "isRestricted": false,
                 "viewingHistory": null,
                 "__typename": "VideoSelfEdge"
               },
-              "title": "TwitchCon EuropeDrag Showcase ft. @roselred @heatherphetish and more! ",
-              "viewCount": 684,
+              "title": "Opening Ceremony | TwitchCon San Diego 2025",
+              "viewCount": 227,
               "resourceRestriction": null,
               "contentTags": [],
               "__typename": "Video"
@@ -36,55 +40,21 @@
             "__typename": "VideoEdge"
           },
           {
-            "cursor": "209971013|514|2017-12-16T09:11:03Z|100",
-            "node": {
-              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/2c65c008d0fcf1f549d9_12826_2184776763_42750fd9-3508-4b73-8020-10c6a9472087/storyboards/2184776763-strip-0.jpg",
-              "game": {
-                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509663-40x56.jpg",
-                "id": "509663",
-                "slug": "special-events",
-                "displayName": "Special Events",
-                "name": "Special Events",
-                "__typename": "Game"
-              },
-              "id": "2184776763",
-              "lengthSeconds": 3309,
-              "owner": {
-                "displayName": "Twitch",
-                "id": "12826",
-                "login": "twitch",
-                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/d5e6ebb4-a245-4ebf-bea6-2183e2f39600-profile_image-50x50.png",
-                "primaryColorHex": "5C16C5",
-                "roles": { "isPartner": true, "__typename": "UserRoles" },
-                "__typename": "User"
-              },
-              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/2c65c008d0fcf1f549d9_12826_2184776763_42750fd9-3508-4b73-8020-10c6a9472087/thumb/index-0000000009-320x180.jpg",
-              "publishedAt": "2024-06-29T14:06:13Z",
-              "self": {
-                "isRestricted": false,
-                "viewingHistory": null,
-                "__typename": "VideoSelfEdge"
-              },
-              "title": "TwitchCon Europe 2024 Opening Ceremony ",
-              "viewCount": 3159,
-              "resourceRestriction": null,
-              "contentTags": [],
-              "__typename": "Video"
-            },
-            "__typename": "VideoEdge"
-          },
-          {
-            "cursor": "209971013|514|2017-12-16T09:11:03Z|100",
+            "cursor": "140903003|422|2017-05-07T20:22:14Z|27",
             "node": {
               "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/f6fb26a4fc319171fbd4_12826_1816688726_67c67a23-a2fb-4221-9df3-604bd9d487dc/storyboards/1816688726-strip-0.jpg",
               "game": null,
+              "broadcastIdentifier": {
+                "id": "1",
+                "__typename": "BroadcastIdOnly"
+              },
               "id": "1816688726",
               "lengthSeconds": 58,
               "owner": {
                 "displayName": "Twitch",
                 "id": "12826",
                 "login": "twitch",
-                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/d5e6ebb4-a245-4ebf-bea6-2183e2f39600-profile_image-50x50.png",
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-50x50.png",
                 "primaryColorHex": "5C16C5",
                 "roles": { "isPartner": true, "__typename": "UserRoles" },
                 "__typename": "User"
@@ -97,7 +67,7 @@
                 "__typename": "VideoSelfEdge"
               },
               "title": "Twitch's Channel Trailer",
-              "viewCount": 1130516,
+              "viewCount": 1460263,
               "resourceRestriction": null,
               "contentTags": [],
               "__typename": "Video"
@@ -105,17 +75,21 @@
             "__typename": "VideoEdge"
           },
           {
-            "cursor": "209971013|514|2017-12-16T09:11:03Z|100",
+            "cursor": "140903003|422|2017-05-07T20:22:14Z|27",
             "node": {
               "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/ecb2c312930008c6eb5d_12826_1730380575_1d685ce5-f624-4a05-a3a6-f3951d48acb2/storyboards/1730380575-strip-0.jpg",
               "game": null,
+              "broadcastIdentifier": {
+                "id": "1",
+                "__typename": "BroadcastIdOnly"
+              },
               "id": "1730380575",
               "lengthSeconds": 58,
               "owner": {
                 "displayName": "Twitch",
                 "id": "12826",
                 "login": "twitch",
-                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/d5e6ebb4-a245-4ebf-bea6-2183e2f39600-profile_image-50x50.png",
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-50x50.png",
                 "primaryColorHex": "5C16C5",
                 "roles": { "isPartner": true, "__typename": "UserRoles" },
                 "__typename": "User"
@@ -128,7 +102,7 @@
                 "__typename": "VideoSelfEdge"
               },
               "title": "Twitch's Channel Trailer",
-              "viewCount": 327810,
+              "viewCount": 327832,
               "resourceRestriction": null,
               "contentTags": [],
               "__typename": "Video"
@@ -136,17 +110,21 @@
             "__typename": "VideoEdge"
           },
           {
-            "cursor": "209971013|514|2017-12-16T09:11:03Z|100",
+            "cursor": "140903003|422|2017-05-07T20:22:14Z|27",
             "node": {
               "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/twitch/799499623/7cb93eee-bb02-4a8b-802d-f51a4b04db0d/storyboards/799499623-strip-0.jpg",
               "game": null,
+              "broadcastIdentifier": {
+                "id": "1",
+                "__typename": "BroadcastIdOnly"
+              },
               "id": "799499623",
               "lengthSeconds": 29,
               "owner": {
                 "displayName": "Twitch",
                 "id": "12826",
                 "login": "twitch",
-                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/d5e6ebb4-a245-4ebf-bea6-2183e2f39600-profile_image-50x50.png",
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-50x50.png",
                 "primaryColorHex": "5C16C5",
                 "roles": { "isPartner": true, "__typename": "UserRoles" },
                 "__typename": "User"
@@ -159,7 +137,7 @@
                 "__typename": "VideoSelfEdge"
               },
               "title": "Twitch's Channel Trailer",
-              "viewCount": 2467235,
+              "viewCount": 2467280,
               "resourceRestriction": null,
               "contentTags": [],
               "__typename": "Video"
@@ -167,17 +145,21 @@
             "__typename": "VideoEdge"
           },
           {
-            "cursor": "209971013|514|2017-12-16T09:11:03Z|100",
+            "cursor": "140903003|422|2017-05-07T20:22:14Z|27",
             "node": {
               "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/twitch/790943515/ef397815-6ed5-4d89-aff6-e232ede29619/storyboards/790943515-strip-0.jpg",
               "game": null,
+              "broadcastIdentifier": {
+                "id": "1",
+                "__typename": "BroadcastIdOnly"
+              },
               "id": "790943515",
               "lengthSeconds": 34,
               "owner": {
                 "displayName": "Twitch",
                 "id": "12826",
                 "login": "twitch",
-                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/d5e6ebb4-a245-4ebf-bea6-2183e2f39600-profile_image-50x50.png",
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-50x50.png",
                 "primaryColorHex": "5C16C5",
                 "roles": { "isPartner": true, "__typename": "UserRoles" },
                 "__typename": "User"
@@ -190,7 +172,7 @@
                 "__typename": "VideoSelfEdge"
               },
               "title": "Twitch's Channel Trailer",
-              "viewCount": 43836,
+              "viewCount": 43846,
               "resourceRestriction": null,
               "contentTags": [],
               "__typename": "Video"
@@ -198,17 +180,21 @@
             "__typename": "VideoEdge"
           },
           {
-            "cursor": "209971013|514|2017-12-16T09:11:03Z|100",
+            "cursor": "140903003|422|2017-05-07T20:22:14Z|27",
             "node": {
               "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/twitch/612977898/712d9dec-8d9e-4ad2-8585-7eecf14c5f9c/storyboards/612977898-strip-0.jpg",
               "game": null,
+              "broadcastIdentifier": {
+                "id": "1",
+                "__typename": "BroadcastIdOnly"
+              },
               "id": "612977898",
               "lengthSeconds": 60,
               "owner": {
                 "displayName": "Twitch",
                 "id": "12826",
                 "login": "twitch",
-                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/d5e6ebb4-a245-4ebf-bea6-2183e2f39600-profile_image-50x50.png",
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-50x50.png",
                 "primaryColorHex": "5C16C5",
                 "roles": { "isPartner": true, "__typename": "UserRoles" },
                 "__typename": "User"
@@ -221,7 +207,7 @@
                 "__typename": "VideoSelfEdge"
               },
               "title": "Twitch's Channel Trailer",
-              "viewCount": 75982,
+              "viewCount": 76131,
               "resourceRestriction": null,
               "contentTags": [],
               "__typename": "Video"
@@ -229,17 +215,21 @@
             "__typename": "VideoEdge"
           },
           {
-            "cursor": "209971013|514|2017-12-16T09:11:03Z|100",
+            "cursor": "140903003|422|2017-05-07T20:22:14Z|27",
             "node": {
               "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/twitch/577910756/46a9bd42-7e22-4b18-91b2-c886c811109a/storyboards/577910756-strip-0.jpg",
               "game": null,
+              "broadcastIdentifier": {
+                "id": "1",
+                "__typename": "BroadcastIdOnly"
+              },
               "id": "577910756",
               "lengthSeconds": 781,
               "owner": {
                 "displayName": "Twitch",
                 "id": "12826",
                 "login": "twitch",
-                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/d5e6ebb4-a245-4ebf-bea6-2183e2f39600-profile_image-50x50.png",
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-50x50.png",
                 "primaryColorHex": "5C16C5",
                 "roles": { "isPartner": true, "__typename": "UserRoles" },
                 "__typename": "User"
@@ -252,7 +242,7 @@
                 "__typename": "VideoSelfEdge"
               },
               "title": "Aly Raisman's daily meditation routine for #TwitchStreamAid",
-              "viewCount": 6557,
+              "viewCount": 6567,
               "resourceRestriction": null,
               "contentTags": [],
               "__typename": "Video"
@@ -260,38 +250,7 @@
             "__typename": "VideoEdge"
           },
           {
-            "cursor": "209971013|514|2017-12-16T09:11:03Z|100",
-            "node": {
-              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/twitch/491337162/4f527465-8101-46ce-908a-dc15075ff908/storyboards/491337162-strip-0.jpg",
-              "game": null,
-              "id": "491337162",
-              "lengthSeconds": 7201,
-              "owner": {
-                "displayName": "Twitch",
-                "id": "12826",
-                "login": "twitch",
-                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/d5e6ebb4-a245-4ebf-bea6-2183e2f39600-profile_image-50x50.png",
-                "primaryColorHex": "5C16C5",
-                "roles": { "isPartner": true, "__typename": "UserRoles" },
-                "__typename": "User"
-              },
-              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/twitch/491337162/4f527465-8101-46ce-908a-dc15075ff908/thumb/custom-3aa73f55-6830-4710-905d-24f334337b7e-320x180.jpeg",
-              "publishedAt": "2019-10-07T13:36:37Z",
-              "self": {
-                "isRestricted": false,
-                "viewingHistory": null,
-                "__typename": "VideoSelfEdge"
-              },
-              "title": "Opening Ceremony · TwitchCon 2019 San Diego · Glitch Theater Day 1",
-              "viewCount": 2229,
-              "resourceRestriction": null,
-              "contentTags": [],
-              "__typename": "Video"
-            },
-            "__typename": "VideoEdge"
-          },
-          {
-            "cursor": "209971013|514|2017-12-16T09:11:03Z|100",
+            "cursor": "140903003|422|2017-05-07T20:22:14Z|27",
             "node": {
               "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/twitch/437728635/9832fc09-e40c-4b49-a5c6-4a2463263fb2/storyboards/437728635-strip-0.jpg",
               "game": {
@@ -302,13 +261,17 @@
                 "name": "Special Events",
                 "__typename": "Game"
               },
+              "broadcastIdentifier": {
+                "id": "1",
+                "__typename": "BroadcastIdOnly"
+              },
               "id": "437728635",
               "lengthSeconds": 728,
               "owner": {
                 "displayName": "Twitch",
                 "id": "12826",
                 "login": "twitch",
-                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/d5e6ebb4-a245-4ebf-bea6-2183e2f39600-profile_image-50x50.png",
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-50x50.png",
                 "primaryColorHex": "5C16C5",
                 "roles": { "isPartner": true, "__typename": "UserRoles" },
                 "__typename": "User"
@@ -321,7 +284,7 @@
                 "__typename": "VideoSelfEdge"
               },
               "title": "Wolfenstein: Youngblood | Twitch @ E3 2019",
-              "viewCount": 4922,
+              "viewCount": 4929,
               "resourceRestriction": null,
               "contentTags": [],
               "__typename": "Video"
@@ -329,162 +292,21 @@
             "__typename": "VideoEdge"
           },
           {
-            "cursor": "209971013|514|2017-12-16T09:11:03Z|100",
-            "node": {
-              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/twitch/365506910/af8ca6a5-58f2-4db8-be31-b89aec1b4361/storyboards/365506910-strip-0.jpg",
-              "game": {
-                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509663-40x56.jpg",
-                "id": "509663",
-                "slug": "special-events",
-                "displayName": "Special Events",
-                "name": "Special Events",
-                "__typename": "Game"
-              },
-              "id": "365506910",
-              "lengthSeconds": 10013,
-              "owner": {
-                "displayName": "Twitch",
-                "id": "12826",
-                "login": "twitch",
-                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/d5e6ebb4-a245-4ebf-bea6-2183e2f39600-profile_image-50x50.png",
-                "primaryColorHex": "5C16C5",
-                "roles": { "isPartner": true, "__typename": "UserRoles" },
-                "__typename": "User"
-              },
-              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/twitch/365506910/af8ca6a5-58f2-4db8-be31-b89aec1b4361/thumb/index-0000000000-320x180.jpg",
-              "publishedAt": "2019-01-18T19:22:32Z",
-              "self": {
-                "isRestricted": false,
-                "viewingHistory": null,
-                "__typename": "VideoSelfEdge"
-              },
-              "title": "FreshStock / Nike Adapt BB",
-              "viewCount": 1070,
-              "resourceRestriction": null,
-              "contentTags": [],
-              "__typename": "Video"
-            },
-            "__typename": "VideoEdge"
-          },
-          {
-            "cursor": "209971013|514|2017-12-16T09:11:03Z|100",
-            "node": {
-              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/twitch/330351076/0ba32639-9ba7-4b3f-bdab-184a47f9e6cb/storyboards/330351076-strip-0.jpg",
-              "game": {
-                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509663-40x56.jpg",
-                "id": "509663",
-                "slug": "special-events",
-                "displayName": "Special Events",
-                "name": "Special Events",
-                "__typename": "Game"
-              },
-              "id": "330351076",
-              "lengthSeconds": 494,
-              "owner": {
-                "displayName": "Twitch",
-                "id": "12826",
-                "login": "twitch",
-                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/d5e6ebb4-a245-4ebf-bea6-2183e2f39600-profile_image-50x50.png",
-                "primaryColorHex": "5C16C5",
-                "roles": { "isPartner": true, "__typename": "UserRoles" },
-                "__typename": "User"
-              },
-              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/twitch/330351076/0ba32639-9ba7-4b3f-bdab-184a47f9e6cb/thumb/custom-37a42359-acc8-4243-bd80-40fc8dd9f7e4-320x180.jpg",
-              "publishedAt": "2018-11-01T22:58:47Z",
-              "self": {
-                "isRestricted": false,
-                "viewingHistory": null,
-                "__typename": "VideoSelfEdge"
-              },
-              "title": "The Year of Collaboration - Twitch Yearly 2018",
-              "viewCount": 606,
-              "resourceRestriction": null,
-              "contentTags": [],
-              "__typename": "Video"
-            },
-            "__typename": "VideoEdge"
-          },
-          {
-            "cursor": "209971013|514|2017-12-16T09:11:03Z|100",
-            "node": {
-              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/twitch/330350995/6744cfd8-d20e-4329-9edc-1fce75a037f0/storyboards/330350995-strip-0.jpg",
-              "game": {
-                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509663-40x56.jpg",
-                "id": "509663",
-                "slug": "special-events",
-                "displayName": "Special Events",
-                "name": "Special Events",
-                "__typename": "Game"
-              },
-              "id": "330350995",
-              "lengthSeconds": 239,
-              "owner": {
-                "displayName": "Twitch",
-                "id": "12826",
-                "login": "twitch",
-                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/d5e6ebb4-a245-4ebf-bea6-2183e2f39600-profile_image-50x50.png",
-                "primaryColorHex": "5C16C5",
-                "roles": { "isPartner": true, "__typename": "UserRoles" },
-                "__typename": "User"
-              },
-              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/twitch/330350995/6744cfd8-d20e-4329-9edc-1fce75a037f0/thumb/custom-6479491b-2940-4b0a-99ea-43ba2c3348cd-320x180.jpg",
-              "publishedAt": "2018-11-01T22:46:16Z",
-              "self": {
-                "isRestricted": false,
-                "viewingHistory": null,
-                "__typename": "VideoSelfEdge"
-              },
-              "title": "The Year of Battle Royale - Twitch Yearly 2018",
-              "viewCount": 286,
-              "resourceRestriction": null,
-              "contentTags": [],
-              "__typename": "Video"
-            },
-            "__typename": "VideoEdge"
-          },
-          {
-            "cursor": "209971013|514|2017-12-16T09:11:03Z|100",
-            "node": {
-              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/twitch/242066123/657b4862-53ce-4b30-9ec8-77456b08384c/storyboards/242066123-strip-0.jpg",
-              "game": null,
-              "id": "242066123",
-              "lengthSeconds": 68,
-              "owner": {
-                "displayName": "Twitch",
-                "id": "12826",
-                "login": "twitch",
-                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/d5e6ebb4-a245-4ebf-bea6-2183e2f39600-profile_image-50x50.png",
-                "primaryColorHex": "5C16C5",
-                "roles": { "isPartner": true, "__typename": "UserRoles" },
-                "__typename": "User"
-              },
-              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/twitch/242066123/657b4862-53ce-4b30-9ec8-77456b08384c/thumb/index-0000000000-320x180.jpg",
-              "publishedAt": "2018-03-23T21:51:08Z",
-              "self": {
-                "isRestricted": false,
-                "viewingHistory": null,
-                "__typename": "VideoSelfEdge"
-              },
-              "title": "Stream On - Pixel Hunt Extension",
-              "viewCount": 1382,
-              "resourceRestriction": null,
-              "contentTags": [],
-              "__typename": "Video"
-            },
-            "__typename": "VideoEdge"
-          },
-          {
-            "cursor": "209971013|514|2017-12-16T09:11:03Z|100",
+            "cursor": "140903003|422|2017-05-07T20:22:14Z|27",
             "node": {
               "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/twitch/219893540/d7b8213f-f518-42dc-a273-ab29bc99d04f/storyboards/219893540-strip-0.jpg",
               "game": null,
+              "broadcastIdentifier": {
+                "id": "1",
+                "__typename": "BroadcastIdOnly"
+              },
               "id": "219893540",
               "lengthSeconds": 30,
               "owner": {
                 "displayName": "Twitch",
                 "id": "12826",
                 "login": "twitch",
-                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/d5e6ebb4-a245-4ebf-bea6-2183e2f39600-profile_image-50x50.png",
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-50x50.png",
                 "primaryColorHex": "5C16C5",
                 "roles": { "isPartner": true, "__typename": "UserRoles" },
                 "__typename": "User"
@@ -497,7 +319,7 @@
                 "__typename": "VideoSelfEdge"
               },
               "title": "Say Hello to Video Producer",
-              "viewCount": 426,
+              "viewCount": 427,
               "resourceRestriction": null,
               "contentTags": [],
               "__typename": "Video"
@@ -505,452 +327,21 @@
             "__typename": "VideoEdge"
           },
           {
-            "cursor": "209971013|514|2017-12-16T09:11:03Z|100",
-            "node": {
-              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/twitch/219782216/d0c809d0-08f1-4fdc-b8bb-0ece69bd381b/storyboards/219782216-strip-0.jpg",
-              "game": null,
-              "id": "219782216",
-              "lengthSeconds": 103,
-              "owner": {
-                "displayName": "Twitch",
-                "id": "12826",
-                "login": "twitch",
-                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/d5e6ebb4-a245-4ebf-bea6-2183e2f39600-profile_image-50x50.png",
-                "primaryColorHex": "5C16C5",
-                "roles": { "isPartner": true, "__typename": "UserRoles" },
-                "__typename": "User"
-              },
-              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/twitch/219782216/d0c809d0-08f1-4fdc-b8bb-0ece69bd381b/thumb/custom46de4a6936d74bba-320x180.jpeg",
-              "publishedAt": "2018-01-18T17:34:07Z",
-              "self": {
-                "isRestricted": false,
-                "viewingHistory": null,
-                "__typename": "VideoSelfEdge"
-              },
-              "title": "Twitch \u003c3 Creators: Casy",
-              "viewCount": 2997,
-              "resourceRestriction": null,
-              "contentTags": [],
-              "__typename": "Video"
-            },
-            "__typename": "VideoEdge"
-          },
-          {
-            "cursor": "209971013|514|2017-12-16T09:11:03Z|100",
-            "node": {
-              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/twitch/219175633/87fceebc-d89f-40e1-bb58-5efd5730b34e/storyboards/219175633-strip-0.jpg",
-              "game": null,
-              "id": "219175633",
-              "lengthSeconds": 108,
-              "owner": {
-                "displayName": "Twitch",
-                "id": "12826",
-                "login": "twitch",
-                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/d5e6ebb4-a245-4ebf-bea6-2183e2f39600-profile_image-50x50.png",
-                "primaryColorHex": "5C16C5",
-                "roles": { "isPartner": true, "__typename": "UserRoles" },
-                "__typename": "User"
-              },
-              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/twitch/219175633/87fceebc-d89f-40e1-bb58-5efd5730b34e/thumb/custom2ec38478bd7bd851-320x180.jpeg",
-              "publishedAt": "2018-01-17T00:16:37Z",
-              "self": {
-                "isRestricted": false,
-                "viewingHistory": null,
-                "__typename": "VideoSelfEdge"
-              },
-              "title": "Twitch \u003c3 Creators: sienimiili",
-              "viewCount": 295,
-              "resourceRestriction": null,
-              "contentTags": [],
-              "__typename": "Video"
-            },
-            "__typename": "VideoEdge"
-          },
-          {
-            "cursor": "209971013|514|2017-12-16T09:11:03Z|100",
-            "node": {
-              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/twitch/216616930/6a53a976-8b8c-42ea-b481-62870707aea6/storyboards/216616930-strip-0.jpg",
-              "game": {
-                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/417752-40x56.jpg",
-                "id": "417752",
-                "slug": "talk-shows-and-podcasts",
-                "displayName": "Talk Shows \u0026 Podcasts",
-                "name": "Talk Shows \u0026 Podcasts",
-                "__typename": "Game"
-              },
-              "id": "216616930",
-              "lengthSeconds": 90,
-              "owner": {
-                "displayName": "Twitch",
-                "id": "12826",
-                "login": "twitch",
-                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/d5e6ebb4-a245-4ebf-bea6-2183e2f39600-profile_image-50x50.png",
-                "primaryColorHex": "5C16C5",
-                "roles": { "isPartner": true, "__typename": "UserRoles" },
-                "__typename": "User"
-              },
-              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/twitch/216616930/6a53a976-8b8c-42ea-b481-62870707aea6/thumb/custom249789fe2f4f296c-320x180.png",
-              "publishedAt": "2018-01-08T19:13:12Z",
-              "self": {
-                "isRestricted": false,
-                "viewingHistory": null,
-                "__typename": "VideoSelfEdge"
-              },
-              "title": "Twitch \u003c3 Creators: LeagueofLia",
-              "viewCount": 334,
-              "resourceRestriction": null,
-              "contentTags": [],
-              "__typename": "Video"
-            },
-            "__typename": "VideoEdge"
-          },
-          {
-            "cursor": "209971013|514|2017-12-16T09:11:03Z|100",
-            "node": {
-              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/twitch/216616857/2a5d362f-4ace-4bf7-bb94-35cef89a0695/storyboards/216616857-strip-0.jpg",
-              "game": null,
-              "id": "216616857",
-              "lengthSeconds": 106,
-              "owner": {
-                "displayName": "Twitch",
-                "id": "12826",
-                "login": "twitch",
-                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/d5e6ebb4-a245-4ebf-bea6-2183e2f39600-profile_image-50x50.png",
-                "primaryColorHex": "5C16C5",
-                "roles": { "isPartner": true, "__typename": "UserRoles" },
-                "__typename": "User"
-              },
-              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/twitch/216616857/2a5d362f-4ace-4bf7-bb94-35cef89a0695/thumb/custom229acc7478e60920-320x180.png",
-              "publishedAt": "2018-01-08T19:13:02Z",
-              "self": {
-                "isRestricted": false,
-                "viewingHistory": null,
-                "__typename": "VideoSelfEdge"
-              },
-              "title": "Twitch \u003c3 Creators: Andyraecosplay",
-              "viewCount": 569,
-              "resourceRestriction": null,
-              "contentTags": [],
-              "__typename": "Video"
-            },
-            "__typename": "VideoEdge"
-          },
-          {
-            "cursor": "209971013|514|2017-12-16T09:11:03Z|100",
-            "node": {
-              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/twitch/215296777/ef94f652-25a7-476e-9fb0-fae0e27ca0e3/storyboards/215296777-strip-0.jpg",
-              "game": {
-                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/417752-40x56.jpg",
-                "id": "417752",
-                "slug": "talk-shows-and-podcasts",
-                "displayName": "Talk Shows \u0026 Podcasts",
-                "name": "Talk Shows \u0026 Podcasts",
-                "__typename": "Game"
-              },
-              "id": "215296777",
-              "lengthSeconds": 76,
-              "owner": {
-                "displayName": "Twitch",
-                "id": "12826",
-                "login": "twitch",
-                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/d5e6ebb4-a245-4ebf-bea6-2183e2f39600-profile_image-50x50.png",
-                "primaryColorHex": "5C16C5",
-                "roles": { "isPartner": true, "__typename": "UserRoles" },
-                "__typename": "User"
-              },
-              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/twitch/215296777/ef94f652-25a7-476e-9fb0-fae0e27ca0e3/thumb/custom12a288dfde66fdb4-320x180.jpeg",
-              "publishedAt": "2018-01-04T18:41:17Z",
-              "self": {
-                "isRestricted": false,
-                "viewingHistory": null,
-                "__typename": "VideoSelfEdge"
-              },
-              "title": "Twitch \u003c3 Creators: Mindowner",
-              "viewCount": 70,
-              "resourceRestriction": null,
-              "contentTags": [],
-              "__typename": "Video"
-            },
-            "__typename": "VideoEdge"
-          },
-          {
-            "cursor": "209971013|514|2017-12-16T09:11:03Z|100",
-            "node": {
-              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/twitch/215294330/a0b44990-0ca3-4b6f-ac03-f3f58f2b2b81/storyboards/215294330-strip-0.jpg",
-              "game": {
-                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/417752-40x56.jpg",
-                "id": "417752",
-                "slug": "talk-shows-and-podcasts",
-                "displayName": "Talk Shows \u0026 Podcasts",
-                "name": "Talk Shows \u0026 Podcasts",
-                "__typename": "Game"
-              },
-              "id": "215294330",
-              "lengthSeconds": 99,
-              "owner": {
-                "displayName": "Twitch",
-                "id": "12826",
-                "login": "twitch",
-                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/d5e6ebb4-a245-4ebf-bea6-2183e2f39600-profile_image-50x50.png",
-                "primaryColorHex": "5C16C5",
-                "roles": { "isPartner": true, "__typename": "UserRoles" },
-                "__typename": "User"
-              },
-              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/twitch/215294330/a0b44990-0ca3-4b6f-ac03-f3f58f2b2b81/thumb/custom845f674e42732a99-320x180.png",
-              "publishedAt": "2018-01-04T18:41:24Z",
-              "self": {
-                "isRestricted": false,
-                "viewingHistory": null,
-                "__typename": "VideoSelfEdge"
-              },
-              "title": "Twitch \u003c3 Creators: BunkerNerd",
-              "viewCount": 60,
-              "resourceRestriction": null,
-              "contentTags": [],
-              "__typename": "Video"
-            },
-            "__typename": "VideoEdge"
-          },
-          {
-            "cursor": "209971013|514|2017-12-16T09:11:03Z|100",
-            "node": {
-              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/twitch/215294282/9dfac57b-67f2-4cee-8788-6d007767921f/storyboards/215294282-strip-0.jpg",
-              "game": {
-                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/417752-40x56.jpg",
-                "id": "417752",
-                "slug": "talk-shows-and-podcasts",
-                "displayName": "Talk Shows \u0026 Podcasts",
-                "name": "Talk Shows \u0026 Podcasts",
-                "__typename": "Game"
-              },
-              "id": "215294282",
-              "lengthSeconds": 96,
-              "owner": {
-                "displayName": "Twitch",
-                "id": "12826",
-                "login": "twitch",
-                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/d5e6ebb4-a245-4ebf-bea6-2183e2f39600-profile_image-50x50.png",
-                "primaryColorHex": "5C16C5",
-                "roles": { "isPartner": true, "__typename": "UserRoles" },
-                "__typename": "User"
-              },
-              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/twitch/215294282/9dfac57b-67f2-4cee-8788-6d007767921f/thumb/custom4b1016ebae96541e-320x180.jpeg",
-              "publishedAt": "2018-01-04T18:41:31Z",
-              "self": {
-                "isRestricted": false,
-                "viewingHistory": null,
-                "__typename": "VideoSelfEdge"
-              },
-              "title": "Twitch \u003c3 Creators: NayaraSylvestre",
-              "viewCount": 88,
-              "resourceRestriction": null,
-              "contentTags": [],
-              "__typename": "Video"
-            },
-            "__typename": "VideoEdge"
-          },
-          {
-            "cursor": "209971013|514|2017-12-16T09:11:03Z|100",
-            "node": {
-              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/twitch/215294220/7edae26b-f7a2-416b-a96a-abc0034283a2/storyboards/215294220-strip-0.jpg",
-              "game": {
-                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/417752-40x56.jpg",
-                "id": "417752",
-                "slug": "talk-shows-and-podcasts",
-                "displayName": "Talk Shows \u0026 Podcasts",
-                "name": "Talk Shows \u0026 Podcasts",
-                "__typename": "Game"
-              },
-              "id": "215294220",
-              "lengthSeconds": 105,
-              "owner": {
-                "displayName": "Twitch",
-                "id": "12826",
-                "login": "twitch",
-                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/d5e6ebb4-a245-4ebf-bea6-2183e2f39600-profile_image-50x50.png",
-                "primaryColorHex": "5C16C5",
-                "roles": { "isPartner": true, "__typename": "UserRoles" },
-                "__typename": "User"
-              },
-              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/twitch/215294220/7edae26b-f7a2-416b-a96a-abc0034283a2/thumb/custom1117cf93ef773d56-320x180.png",
-              "publishedAt": "2018-01-04T18:46:18Z",
-              "self": {
-                "isRestricted": false,
-                "viewingHistory": null,
-                "__typename": "VideoSelfEdge"
-              },
-              "title": "Twitch \u003c3 Creators: Tinkerleo",
-              "viewCount": 336,
-              "resourceRestriction": null,
-              "contentTags": [],
-              "__typename": "Video"
-            },
-            "__typename": "VideoEdge"
-          },
-          {
-            "cursor": "209971013|514|2017-12-16T09:11:03Z|100",
-            "node": {
-              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/twitch/211402934/aeac0df0-5839-4be7-ad2f-e6251b3200f8/storyboards/211402934-strip-0.jpg",
-              "game": {
-                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/417752-40x56.jpg",
-                "id": "417752",
-                "slug": "talk-shows-and-podcasts",
-                "displayName": "Talk Shows \u0026 Podcasts",
-                "name": "Talk Shows \u0026 Podcasts",
-                "__typename": "Game"
-              },
-              "id": "211402934",
-              "lengthSeconds": 105,
-              "owner": {
-                "displayName": "Twitch",
-                "id": "12826",
-                "login": "twitch",
-                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/d5e6ebb4-a245-4ebf-bea6-2183e2f39600-profile_image-50x50.png",
-                "primaryColorHex": "5C16C5",
-                "roles": { "isPartner": true, "__typename": "UserRoles" },
-                "__typename": "User"
-              },
-              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/twitch/211402934/aeac0df0-5839-4be7-ad2f-e6251b3200f8/thumb/custom9a5bf6f28318a696-320x180.png",
-              "publishedAt": "2017-12-21T19:20:54Z",
-              "self": {
-                "isRestricted": false,
-                "viewingHistory": null,
-                "__typename": "VideoSelfEdge"
-              },
-              "title": "Twitch \u003c3 Creators: TheMexicanRunner",
-              "viewCount": 289,
-              "resourceRestriction": null,
-              "contentTags": [],
-              "__typename": "Video"
-            },
-            "__typename": "VideoEdge"
-          },
-          {
-            "cursor": "209971013|514|2017-12-16T09:11:03Z|100",
-            "node": {
-              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/twitch/211384557/87443a3f-1134-4543-a4ef-860ab2e82c20/storyboards/211384557-strip-0.jpg",
-              "game": {
-                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/417752-40x56.jpg",
-                "id": "417752",
-                "slug": "talk-shows-and-podcasts",
-                "displayName": "Talk Shows \u0026 Podcasts",
-                "name": "Talk Shows \u0026 Podcasts",
-                "__typename": "Game"
-              },
-              "id": "211384557",
-              "lengthSeconds": 96,
-              "owner": {
-                "displayName": "Twitch",
-                "id": "12826",
-                "login": "twitch",
-                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/d5e6ebb4-a245-4ebf-bea6-2183e2f39600-profile_image-50x50.png",
-                "primaryColorHex": "5C16C5",
-                "roles": { "isPartner": true, "__typename": "UserRoles" },
-                "__typename": "User"
-              },
-              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/twitch/211384557/87443a3f-1134-4543-a4ef-860ab2e82c20/thumb/custom91ce45031645463b-320x180.png",
-              "publishedAt": "2017-12-21T19:20:41Z",
-              "self": {
-                "isRestricted": false,
-                "viewingHistory": null,
-                "__typename": "VideoSelfEdge"
-              },
-              "title": "Twitch \u003c3 Creators: GOOBERS515",
-              "viewCount": 235,
-              "resourceRestriction": null,
-              "contentTags": [],
-              "__typename": "Video"
-            },
-            "__typename": "VideoEdge"
-          },
-          {
-            "cursor": "209971013|514|2017-12-16T09:11:03Z|100",
-            "node": {
-              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/twitch/211090028/91f08737-f77d-4f83-9d4d-c47c66c8ddd1/storyboards/211090028-strip-0.jpg",
-              "game": {
-                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/417752-40x56.jpg",
-                "id": "417752",
-                "slug": "talk-shows-and-podcasts",
-                "displayName": "Talk Shows \u0026 Podcasts",
-                "name": "Talk Shows \u0026 Podcasts",
-                "__typename": "Game"
-              },
-              "id": "211090028",
-              "lengthSeconds": 70,
-              "owner": {
-                "displayName": "Twitch",
-                "id": "12826",
-                "login": "twitch",
-                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/d5e6ebb4-a245-4ebf-bea6-2183e2f39600-profile_image-50x50.png",
-                "primaryColorHex": "5C16C5",
-                "roles": { "isPartner": true, "__typename": "UserRoles" },
-                "__typename": "User"
-              },
-              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/twitch/211090028/91f08737-f77d-4f83-9d4d-c47c66c8ddd1/thumb/custome4a9e360ea8d9541-320x180.png",
-              "publishedAt": "2017-12-20T12:17:01Z",
-              "self": {
-                "isRestricted": false,
-                "viewingHistory": null,
-                "__typename": "VideoSelfEdge"
-              },
-              "title": "Twitch \u003c3 Creators: Misterteamot",
-              "viewCount": 127,
-              "resourceRestriction": null,
-              "contentTags": [],
-              "__typename": "Video"
-            },
-            "__typename": "VideoEdge"
-          },
-          {
-            "cursor": "209971013|514|2017-12-16T09:11:03Z|100",
-            "node": {
-              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/twitch/211087229/136c3826-76b2-4ccb-b1b6-f02b46452fb6/storyboards/211087229-strip-0.jpg",
-              "game": {
-                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/417752-40x56.jpg",
-                "id": "417752",
-                "slug": "talk-shows-and-podcasts",
-                "displayName": "Talk Shows \u0026 Podcasts",
-                "name": "Talk Shows \u0026 Podcasts",
-                "__typename": "Game"
-              },
-              "id": "211087229",
-              "lengthSeconds": 96,
-              "owner": {
-                "displayName": "Twitch",
-                "id": "12826",
-                "login": "twitch",
-                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/d5e6ebb4-a245-4ebf-bea6-2183e2f39600-profile_image-50x50.png",
-                "primaryColorHex": "5C16C5",
-                "roles": { "isPartner": true, "__typename": "UserRoles" },
-                "__typename": "User"
-              },
-              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/twitch/211087229/136c3826-76b2-4ccb-b1b6-f02b46452fb6/thumb/customae1d353cdbba7627-320x180.jpeg",
-              "publishedAt": "2017-12-20T12:11:13Z",
-              "self": {
-                "isRestricted": false,
-                "viewingHistory": null,
-                "__typename": "VideoSelfEdge"
-              },
-              "title": "Twitch \u003c3 Creators: Bennnzz",
-              "viewCount": 23,
-              "resourceRestriction": null,
-              "contentTags": [],
-              "__typename": "Video"
-            },
-            "__typename": "VideoEdge"
-          },
-          {
-            "cursor": "209971013|514|2017-12-16T09:11:03Z|100",
+            "cursor": "140903003|422|2017-05-07T20:22:14Z|27",
             "node": {
               "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/twitch/210641821/dabb7ab2-e01c-4b5c-897d-6039de9b4ddd/storyboards/210641821-strip-0.jpg",
               "game": null,
+              "broadcastIdentifier": {
+                "id": "1",
+                "__typename": "BroadcastIdOnly"
+              },
               "id": "210641821",
               "lengthSeconds": 49,
               "owner": {
                 "displayName": "Twitch",
                 "id": "12826",
                 "login": "twitch",
-                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/d5e6ebb4-a245-4ebf-bea6-2183e2f39600-profile_image-50x50.png",
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-50x50.png",
                 "primaryColorHex": "5C16C5",
                 "roles": { "isPartner": true, "__typename": "UserRoles" },
                 "__typename": "User"
@@ -963,7 +354,7 @@
                 "__typename": "VideoSelfEdge"
               },
               "title": "Stream On Announcement",
-              "viewCount": 7907,
+              "viewCount": 7911,
               "resourceRestriction": null,
               "contentTags": [],
               "__typename": "Video"
@@ -971,9 +362,9 @@
             "__typename": "VideoEdge"
           },
           {
-            "cursor": "209971013|514|2017-12-16T09:11:03Z|100",
+            "cursor": "140903003|422|2017-05-07T20:22:14Z|27",
             "node": {
-              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/twitch/210626590/bc6037a3-a6a4-4e24-a968-3c7418268cc3/storyboards/210626590-strip-0.jpg",
+              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/twitch/209434353/5debb60a-437a-466d-bce0-c99e844258be/storyboards/209434353-strip-0.jpg",
               "game": {
                 "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/417752-40x56.jpg",
                 "id": "417752",
@@ -982,26 +373,72 @@
                 "name": "Talk Shows \u0026 Podcasts",
                 "__typename": "Game"
               },
-              "id": "210626590",
+              "broadcastIdentifier": {
+                "id": "1",
+                "__typename": "BroadcastIdOnly"
+              },
+              "id": "209434353",
+              "lengthSeconds": 59,
+              "owner": {
+                "displayName": "Twitch",
+                "id": "12826",
+                "login": "twitch",
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-50x50.png",
+                "primaryColorHex": "5C16C5",
+                "roles": { "isPartner": true, "__typename": "UserRoles" },
+                "__typename": "User"
+              },
+              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/twitch/209434353/5debb60a-437a-466d-bce0-c99e844258be/thumb/custom555779d32451d542-320x180.png",
+              "publishedAt": "2017-12-15T22:10:32Z",
+              "self": {
+                "isRestricted": false,
+                "viewingHistory": null,
+                "__typename": "VideoSelfEdge"
+              },
+              "title": "Twitch \u003c3 Creators: Trick2g",
+              "viewCount": 62,
+              "resourceRestriction": null,
+              "contentTags": [],
+              "__typename": "Video"
+            },
+            "__typename": "VideoEdge"
+          },
+          {
+            "cursor": "140903003|422|2017-05-07T20:22:14Z|27",
+            "node": {
+              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/twitch/209258414/f873bf7f-ca6d-4219-b210-cce9c0e52a45/storyboards/209258414-strip-0.jpg",
+              "game": {
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/417752-40x56.jpg",
+                "id": "417752",
+                "slug": "talk-shows-and-podcasts",
+                "displayName": "Talk Shows \u0026 Podcasts",
+                "name": "Talk Shows \u0026 Podcasts",
+                "__typename": "Game"
+              },
+              "broadcastIdentifier": {
+                "id": "1",
+                "__typename": "BroadcastIdOnly"
+              },
+              "id": "209258414",
               "lengthSeconds": 89,
               "owner": {
                 "displayName": "Twitch",
                 "id": "12826",
                 "login": "twitch",
-                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/d5e6ebb4-a245-4ebf-bea6-2183e2f39600-profile_image-50x50.png",
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-50x50.png",
                 "primaryColorHex": "5C16C5",
                 "roles": { "isPartner": true, "__typename": "UserRoles" },
                 "__typename": "User"
               },
-              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/twitch/210626590/bc6037a3-a6a4-4e24-a968-3c7418268cc3/thumb/custom0bb56c5e963a9653-320x180.png",
-              "publishedAt": "2017-12-18T22:16:48Z",
+              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/twitch/209258414/f873bf7f-ca6d-4219-b210-cce9c0e52a45/thumb/custom4fd12241672d14f7-320x180.png",
+              "publishedAt": "2017-12-15T22:10:32Z",
               "self": {
                 "isRestricted": false,
                 "viewingHistory": null,
                 "__typename": "VideoSelfEdge"
               },
-              "title": "Twitch \u003c3 Creators: yucco49",
-              "viewCount": 154,
+              "title": "Twitch \u003c3 Creators: LOLITOFDEZ",
+              "viewCount": 13272,
               "resourceRestriction": null,
               "contentTags": [],
               "__typename": "Video"
@@ -1009,9 +446,149 @@
             "__typename": "VideoEdge"
           },
           {
-            "cursor": "209971013|514|2017-12-16T09:11:03Z|100",
+            "cursor": "140903003|422|2017-05-07T20:22:14Z|27",
             "node": {
-              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/twitch/209971013/df85b2d2-e89c-47be-8b4b-32eea19c84e5/storyboards/209971013-strip-0.jpg",
+              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/twitch/184658309/97437d15-68d3-4ec2-9acc-18bf474fae16/storyboards/184658309-strip-0.jpg",
+              "game": null,
+              "broadcastIdentifier": {
+                "id": "1",
+                "__typename": "BroadcastIdOnly"
+              },
+              "id": "184658309",
+              "lengthSeconds": 545,
+              "owner": {
+                "displayName": "Twitch",
+                "id": "12826",
+                "login": "twitch",
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-50x50.png",
+                "primaryColorHex": "5C16C5",
+                "roles": { "isPartner": true, "__typename": "UserRoles" },
+                "__typename": "User"
+              },
+              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/twitch/184658309/97437d15-68d3-4ec2-9acc-18bf474fae16/thumb/custom98f7f338cda0dd2f-320x180.jpeg",
+              "publishedAt": "2017-10-25T04:01:26Z",
+              "self": {
+                "isRestricted": false,
+                "viewingHistory": null,
+                "__typename": "VideoSelfEdge"
+              },
+              "title": "The Year of Everything That Makes You, You - Twitch Yearly Twitchcon 2017 ",
+              "viewCount": 11377,
+              "resourceRestriction": null,
+              "contentTags": [],
+              "__typename": "Video"
+            },
+            "__typename": "VideoEdge"
+          },
+          {
+            "cursor": "140903003|422|2017-05-07T20:22:14Z|27",
+            "node": {
+              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/twitch/179721048/a9190965-7f6d-4aa5-a77b-e1bd0993688e/storyboards/179721048-strip-0.jpg",
+              "game": null,
+              "broadcastIdentifier": {
+                "id": "1",
+                "__typename": "BroadcastIdOnly"
+              },
+              "id": "179721048",
+              "lengthSeconds": 23,
+              "owner": {
+                "displayName": "Twitch",
+                "id": "12826",
+                "login": "twitch",
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-50x50.png",
+                "primaryColorHex": "5C16C5",
+                "roles": { "isPartner": true, "__typename": "UserRoles" },
+                "__typename": "User"
+              },
+              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/twitch/179721048/a9190965-7f6d-4aa5-a77b-e1bd0993688e/thumb/customd2813c3b771757b7-320x180.jpeg",
+              "publishedAt": "2017-10-04T20:26:48Z",
+              "self": {
+                "isRestricted": false,
+                "viewingHistory": null,
+                "__typename": "VideoSelfEdge"
+              },
+              "title": "Twitch apparel now available online through Amazon! ",
+              "viewCount": 4843,
+              "resourceRestriction": null,
+              "contentTags": [],
+              "__typename": "Video"
+            },
+            "__typename": "VideoEdge"
+          },
+          {
+            "cursor": "140903003|422|2017-05-07T20:22:14Z|27",
+            "node": {
+              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/twitch/167194145/282c684f-1bdc-4cb2-bb9d-e710a1e834a1/storyboards/167194145-strip-0.jpg",
+              "game": null,
+              "broadcastIdentifier": {
+                "id": "1",
+                "__typename": "BroadcastIdOnly"
+              },
+              "id": "167194145",
+              "lengthSeconds": 22,
+              "owner": {
+                "displayName": "Twitch",
+                "id": "12826",
+                "login": "twitch",
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-50x50.png",
+                "primaryColorHex": "5C16C5",
+                "roles": { "isPartner": true, "__typename": "UserRoles" },
+                "__typename": "User"
+              },
+              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/twitch/167194145/282c684f-1bdc-4cb2-bb9d-e710a1e834a1/thumb/custom008037cdef36bacc-320x180.png",
+              "publishedAt": "2017-08-15T17:19:51Z",
+              "self": {
+                "isRestricted": false,
+                "viewingHistory": null,
+                "__typename": "VideoSelfEdge"
+              },
+              "title": "Share stream links that automatically show Past Broadcasts",
+              "viewCount": 1479,
+              "resourceRestriction": null,
+              "contentTags": [],
+              "__typename": "Video"
+            },
+            "__typename": "VideoEdge"
+          },
+          {
+            "cursor": "140903003|422|2017-05-07T20:22:14Z|27",
+            "node": {
+              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/twitch/158868861/ab2c88a1-da01-44a4-9a81-1add933fa421/storyboards/158868861-strip-0.jpg",
+              "game": null,
+              "broadcastIdentifier": {
+                "id": "1",
+                "__typename": "BroadcastIdOnly"
+              },
+              "id": "158868861",
+              "lengthSeconds": 30,
+              "owner": {
+                "displayName": "Twitch",
+                "id": "12826",
+                "login": "twitch",
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-50x50.png",
+                "primaryColorHex": "5C16C5",
+                "roles": { "isPartner": true, "__typename": "UserRoles" },
+                "__typename": "User"
+              },
+              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/twitch/158868861/ab2c88a1-da01-44a4-9a81-1add933fa421/thumb/index-0000000000-320x180.jpg",
+              "publishedAt": "2017-07-13T18:35:37Z",
+              "self": {
+                "isRestricted": false,
+                "viewingHistory": null,
+                "__typename": "VideoSelfEdge"
+              },
+              "title": "FreshStock Vote",
+              "viewCount": 365,
+              "resourceRestriction": null,
+              "contentTags": [],
+              "__typename": "Video"
+            },
+            "__typename": "VideoEdge"
+          },
+          {
+            "cursor": "140903003|422|2017-05-07T20:22:14Z|27",
+            "node": {
+              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/twitch/157083342/bf08af77-5024-465b-800a-04f110c44fc5/storyboards/157083342-strip-0.jpg",
               "game": {
                 "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/417752-40x56.jpg",
                 "id": "417752",
@@ -1020,26 +597,541 @@
                 "name": "Talk Shows \u0026 Podcasts",
                 "__typename": "Game"
               },
-              "id": "209971013",
-              "lengthSeconds": 100,
+              "broadcastIdentifier": {
+                "id": "1",
+                "__typename": "BroadcastIdOnly"
+              },
+              "id": "157083342",
+              "lengthSeconds": 30,
               "owner": {
                 "displayName": "Twitch",
                 "id": "12826",
                 "login": "twitch",
-                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/d5e6ebb4-a245-4ebf-bea6-2183e2f39600-profile_image-50x50.png",
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-50x50.png",
                 "primaryColorHex": "5C16C5",
                 "roles": { "isPartner": true, "__typename": "UserRoles" },
                 "__typename": "User"
               },
-              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/twitch/209971013/df85b2d2-e89c-47be-8b4b-32eea19c84e5/thumb/custom9f5c29499e7694e8-320x180.jpeg",
-              "publishedAt": "2017-12-16T09:25:26Z",
+              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/twitch/157083342/bf08af77-5024-465b-800a-04f110c44fc5/thumb/index-0000000000-320x180.jpg",
+              "publishedAt": "2017-07-06T18:49:24Z",
               "self": {
                 "isRestricted": false,
                 "viewingHistory": null,
                 "__typename": "VideoSelfEdge"
               },
-              "title": "Twitch \u003c3 Creators: MarieWatson",
-              "viewCount": 514,
+              "title": "Changing meaning of \"Nerd\" #FreshStock",
+              "viewCount": 488,
+              "resourceRestriction": null,
+              "contentTags": [],
+              "__typename": "Video"
+            },
+            "__typename": "VideoEdge"
+          },
+          {
+            "cursor": "140903003|422|2017-05-07T20:22:14Z|27",
+            "node": {
+              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/twitch/155322654/c3847884-a599-4097-b298-8005bb7e362c/storyboards/155322654-strip-0.jpg",
+              "game": {
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/417752-40x56.jpg",
+                "id": "417752",
+                "slug": "talk-shows-and-podcasts",
+                "displayName": "Talk Shows \u0026 Podcasts",
+                "name": "Talk Shows \u0026 Podcasts",
+                "__typename": "Game"
+              },
+              "broadcastIdentifier": {
+                "id": "1",
+                "__typename": "BroadcastIdOnly"
+              },
+              "id": "155322654",
+              "lengthSeconds": 10,
+              "owner": {
+                "displayName": "Twitch",
+                "id": "12826",
+                "login": "twitch",
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-50x50.png",
+                "primaryColorHex": "5C16C5",
+                "roles": { "isPartner": true, "__typename": "UserRoles" },
+                "__typename": "User"
+              },
+              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/twitch/155322654/c3847884-a599-4097-b298-8005bb7e362c/thumb/index-0000000000-320x180.jpg",
+              "publishedAt": "2017-06-29T18:10:19Z",
+              "self": {
+                "isRestricted": false,
+                "viewingHistory": null,
+                "__typename": "VideoSelfEdge"
+              },
+              "title": "FreshStock 6/29 LIVE!",
+              "viewCount": 710,
+              "resourceRestriction": null,
+              "contentTags": [],
+              "__typename": "Video"
+            },
+            "__typename": "VideoEdge"
+          },
+          {
+            "cursor": "140903003|422|2017-05-07T20:22:14Z|27",
+            "node": {
+              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/twitch/151322657/14312f83-5257-4be0-b168-f06d139e2c1d/storyboards/151322657-strip-0.jpg",
+              "game": null,
+              "broadcastIdentifier": {
+                "id": "1",
+                "__typename": "BroadcastIdOnly"
+              },
+              "id": "151322657",
+              "lengthSeconds": 935,
+              "owner": {
+                "displayName": "Twitch",
+                "id": "12826",
+                "login": "twitch",
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-50x50.png",
+                "primaryColorHex": "5C16C5",
+                "roles": { "isPartner": true, "__typename": "UserRoles" },
+                "__typename": "User"
+              },
+              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/twitch/151322657/14312f83-5257-4be0-b168-f06d139e2c1d/thumb/custom75f4b8d2ce103121-320x180.jpeg",
+              "publishedAt": "2017-06-12T16:48:28Z",
+              "self": {
+                "isRestricted": false,
+                "viewingHistory": null,
+                "__typename": "VideoSelfEdge"
+              },
+              "title": "Devolver Digital E3 2017 Press Conference",
+              "viewCount": 63203,
+              "resourceRestriction": null,
+              "contentTags": [],
+              "__typename": "Video"
+            },
+            "__typename": "VideoEdge"
+          },
+          {
+            "cursor": "140903003|422|2017-05-07T20:22:14Z|27",
+            "node": {
+              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/twitch/150256905/5dc928ba-941f-4894-8957-dfcea9c7d340/storyboards/150256905-strip-0.jpg",
+              "game": null,
+              "broadcastIdentifier": {
+                "id": "1",
+                "__typename": "BroadcastIdOnly"
+              },
+              "id": "150256905",
+              "lengthSeconds": 34,
+              "owner": {
+                "displayName": "Twitch",
+                "id": "12826",
+                "login": "twitch",
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-50x50.png",
+                "primaryColorHex": "5C16C5",
+                "roles": { "isPartner": true, "__typename": "UserRoles" },
+                "__typename": "User"
+              },
+              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/twitch/150256905/5dc928ba-941f-4894-8957-dfcea9c7d340/thumb/index-0000000000-320x180.jpg",
+              "publishedAt": "2017-06-07T22:16:09Z",
+              "self": {
+                "isRestricted": false,
+                "viewingHistory": null,
+                "__typename": "VideoSelfEdge"
+              },
+              "title": "TwitchCon 2017 ",
+              "viewCount": 196615,
+              "resourceRestriction": null,
+              "contentTags": [],
+              "__typename": "Video"
+            },
+            "__typename": "VideoEdge"
+          },
+          {
+            "cursor": "140903003|422|2017-05-07T20:22:14Z|27",
+            "node": {
+              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/twitch/149070489/34ee9d16-eacf-4b3c-bfd7-99b21b3dac20/storyboards/149070489-strip-0.jpg",
+              "game": null,
+              "broadcastIdentifier": {
+                "id": "1",
+                "__typename": "BroadcastIdOnly"
+              },
+              "id": "149070489",
+              "lengthSeconds": 29,
+              "owner": {
+                "displayName": "Twitch",
+                "id": "12826",
+                "login": "twitch",
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-50x50.png",
+                "primaryColorHex": "5C16C5",
+                "roles": { "isPartner": true, "__typename": "UserRoles" },
+                "__typename": "User"
+              },
+              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/twitch/149070489/34ee9d16-eacf-4b3c-bfd7-99b21b3dac20/thumb/custom5f9a3b0ba526a802-320x180.png",
+              "publishedAt": "2017-06-03T00:16:16Z",
+              "self": {
+                "isRestricted": false,
+                "viewingHistory": null,
+                "__typename": "VideoSelfEdge"
+              },
+              "title": "Watch E3 2017 on Twitch - any way you like",
+              "viewCount": 6586,
+              "resourceRestriction": null,
+              "contentTags": [],
+              "__typename": "Video"
+            },
+            "__typename": "VideoEdge"
+          },
+          {
+            "cursor": "140903003|422|2017-05-07T20:22:14Z|27",
+            "node": {
+              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/twitch/147110299/c9e1aafd-c3ba-4040-b294-341294f4d436/storyboards/147110299-strip-0.jpg",
+              "game": {
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/417752-40x56.jpg",
+                "id": "417752",
+                "slug": "talk-shows-and-podcasts",
+                "displayName": "Talk Shows \u0026 Podcasts",
+                "name": "Talk Shows \u0026 Podcasts",
+                "__typename": "Game"
+              },
+              "broadcastIdentifier": {
+                "id": "1",
+                "__typename": "BroadcastIdOnly"
+              },
+              "id": "147110299",
+              "lengthSeconds": 11,
+              "owner": {
+                "displayName": "Twitch",
+                "id": "12826",
+                "login": "twitch",
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-50x50.png",
+                "primaryColorHex": "5C16C5",
+                "roles": { "isPartner": true, "__typename": "UserRoles" },
+                "__typename": "User"
+              },
+              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/twitch/147110299/c9e1aafd-c3ba-4040-b294-341294f4d436/thumb/index-0000000000-320x180.jpg",
+              "publishedAt": "2017-05-25T17:49:38Z",
+              "self": {
+                "isRestricted": false,
+                "viewingHistory": null,
+                "__typename": "VideoSelfEdge"
+              },
+              "title": "FreshStock EP3 Promo ",
+              "viewCount": 325,
+              "resourceRestriction": null,
+              "contentTags": [],
+              "__typename": "Video"
+            },
+            "__typename": "VideoEdge"
+          },
+          {
+            "cursor": "140903003|422|2017-05-07T20:22:14Z|27",
+            "node": {
+              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/twitch/144833649/bd448023-8ec0-4555-9d17-c2da26349726/storyboards/144833649-strip-0.jpg",
+              "game": {
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/417752-40x56.jpg",
+                "id": "417752",
+                "slug": "talk-shows-and-podcasts",
+                "displayName": "Talk Shows \u0026 Podcasts",
+                "name": "Talk Shows \u0026 Podcasts",
+                "__typename": "Game"
+              },
+              "broadcastIdentifier": {
+                "id": "1",
+                "__typename": "BroadcastIdOnly"
+              },
+              "id": "144833649",
+              "lengthSeconds": 11,
+              "owner": {
+                "displayName": "Twitch",
+                "id": "12826",
+                "login": "twitch",
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-50x50.png",
+                "primaryColorHex": "5C16C5",
+                "roles": { "isPartner": true, "__typename": "UserRoles" },
+                "__typename": "User"
+              },
+              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/twitch/144833649/bd448023-8ec0-4555-9d17-c2da26349726/thumb/index-0000000000-320x180.jpg",
+              "publishedAt": "2017-05-18T17:43:51Z",
+              "self": {
+                "isRestricted": false,
+                "viewingHistory": null,
+                "__typename": "VideoSelfEdge"
+              },
+              "title": "FreshStock Episode 2 Teaser",
+              "viewCount": 640,
+              "resourceRestriction": null,
+              "contentTags": [],
+              "__typename": "Video"
+            },
+            "__typename": "VideoEdge"
+          },
+          {
+            "cursor": "140903003|422|2017-05-07T20:22:14Z|27",
+            "node": {
+              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/twitch/144652224/27136a5e-5526-4583-a657-0d85d76b07f7/storyboards/144652224-strip-0.jpg",
+              "game": {
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509672-40x56.jpg",
+                "id": "509672",
+                "slug": "irl",
+                "displayName": "IRL",
+                "name": "IRL",
+                "__typename": "Game"
+              },
+              "broadcastIdentifier": {
+                "id": "1",
+                "__typename": "BroadcastIdOnly"
+              },
+              "id": "144652224",
+              "lengthSeconds": 30,
+              "owner": {
+                "displayName": "Twitch",
+                "id": "12826",
+                "login": "twitch",
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-50x50.png",
+                "primaryColorHex": "5C16C5",
+                "roles": { "isPartner": true, "__typename": "UserRoles" },
+                "__typename": "User"
+              },
+              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/twitch/144652224/27136a5e-5526-4583-a657-0d85d76b07f7/thumb/index-0000000000-320x180.jpg",
+              "publishedAt": "2017-05-17T23:36:31Z",
+              "self": {
+                "isRestricted": false,
+                "viewingHistory": null,
+                "__typename": "VideoSelfEdge"
+              },
+              "title": "Twitch Crates - How To Get Them",
+              "viewCount": 1937,
+              "resourceRestriction": null,
+              "contentTags": [],
+              "__typename": "Video"
+            },
+            "__typename": "VideoEdge"
+          },
+          {
+            "cursor": "140903003|422|2017-05-07T20:22:14Z|27",
+            "node": {
+              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/twitch/142503692/fea84b70-6486-461f-b34b-ef3f6739d7d4/storyboards/142503692-strip-0.jpg",
+              "game": {
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/417752-40x56.jpg",
+                "id": "417752",
+                "slug": "talk-shows-and-podcasts",
+                "displayName": "Talk Shows \u0026 Podcasts",
+                "name": "Talk Shows \u0026 Podcasts",
+                "__typename": "Game"
+              },
+              "broadcastIdentifier": {
+                "id": "1",
+                "__typename": "BroadcastIdOnly"
+              },
+              "id": "142503692",
+              "lengthSeconds": 59,
+              "owner": {
+                "displayName": "Twitch",
+                "id": "12826",
+                "login": "twitch",
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-50x50.png",
+                "primaryColorHex": "5C16C5",
+                "roles": { "isPartner": true, "__typename": "UserRoles" },
+                "__typename": "User"
+              },
+              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/twitch/142503692/fea84b70-6486-461f-b34b-ef3f6739d7d4/thumb/index-0000000000-320x180.jpg",
+              "publishedAt": "2017-05-12T23:23:37Z",
+              "self": {
+                "isRestricted": false,
+                "viewingHistory": null,
+                "__typename": "VideoSelfEdge"
+              },
+              "title": "Twitch Weekly Mr. Rogers Intro",
+              "viewCount": 608,
+              "resourceRestriction": null,
+              "contentTags": [],
+              "__typename": "Video"
+            },
+            "__typename": "VideoEdge"
+          },
+          {
+            "cursor": "140903003|422|2017-05-07T20:22:14Z|27",
+            "node": {
+              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/twitch/142462141/d35c3cd6-376f-46ba-8974-61d589e1f54c/storyboards/142462141-strip-0.jpg",
+              "game": null,
+              "broadcastIdentifier": {
+                "id": "1",
+                "__typename": "BroadcastIdOnly"
+              },
+              "id": "142462141",
+              "lengthSeconds": 56,
+              "owner": {
+                "displayName": "Twitch",
+                "id": "12826",
+                "login": "twitch",
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-50x50.png",
+                "primaryColorHex": "5C16C5",
+                "roles": { "isPartner": true, "__typename": "UserRoles" },
+                "__typename": "User"
+              },
+              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/twitch/142462141/d35c3cd6-376f-46ba-8974-61d589e1f54c/thumb/index-0000000000-320x180.jpg",
+              "publishedAt": "2017-05-12T21:55:53Z",
+              "self": {
+                "isRestricted": false,
+                "viewingHistory": null,
+                "__typename": "VideoSelfEdge"
+              },
+              "title": "Staff Pick - 5/12",
+              "viewCount": 612,
+              "resourceRestriction": null,
+              "contentTags": [],
+              "__typename": "Video"
+            },
+            "__typename": "VideoEdge"
+          },
+          {
+            "cursor": "140903003|422|2017-05-07T20:22:14Z|27",
+            "node": {
+              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/twitch/141802374/71d5a6df-4a59-498c-9611-4ed5fc2ec95e/storyboards/141802374-strip-0.jpg",
+              "game": {
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/417752-40x56.jpg",
+                "id": "417752",
+                "slug": "talk-shows-and-podcasts",
+                "displayName": "Talk Shows \u0026 Podcasts",
+                "name": "Talk Shows \u0026 Podcasts",
+                "__typename": "Game"
+              },
+              "broadcastIdentifier": {
+                "id": "1",
+                "__typename": "BroadcastIdOnly"
+              },
+              "id": "141802374",
+              "lengthSeconds": 17,
+              "owner": {
+                "displayName": "Twitch",
+                "id": "12826",
+                "login": "twitch",
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-50x50.png",
+                "primaryColorHex": "5C16C5",
+                "roles": { "isPartner": true, "__typename": "UserRoles" },
+                "__typename": "User"
+              },
+              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/twitch/141802374/71d5a6df-4a59-498c-9611-4ed5fc2ec95e/thumb/index-0000000000-320x180.jpg",
+              "publishedAt": "2017-05-11T17:42:03Z",
+              "self": {
+                "isRestricted": false,
+                "viewingHistory": null,
+                "__typename": "VideoSelfEdge"
+              },
+              "title": "FreshStock Premiere Teaser",
+              "viewCount": 1030,
+              "resourceRestriction": null,
+              "contentTags": [],
+              "__typename": "Video"
+            },
+            "__typename": "VideoEdge"
+          },
+          {
+            "cursor": "140903003|422|2017-05-07T20:22:14Z|27",
+            "node": {
+              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/twitch/141646114/f55add40-36fa-45d7-81a1-0465f7d1eca4/storyboards/141646114-strip-0.jpg",
+              "game": {
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509672-40x56.jpg",
+                "id": "509672",
+                "slug": "irl",
+                "displayName": "IRL",
+                "name": "IRL",
+                "__typename": "Game"
+              },
+              "broadcastIdentifier": {
+                "id": "1",
+                "__typename": "BroadcastIdOnly"
+              },
+              "id": "141646114",
+              "lengthSeconds": 73,
+              "owner": {
+                "displayName": "Twitch",
+                "id": "12826",
+                "login": "twitch",
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-50x50.png",
+                "primaryColorHex": "5C16C5",
+                "roles": { "isPartner": true, "__typename": "UserRoles" },
+                "__typename": "User"
+              },
+              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/twitch/141646114/f55add40-36fa-45d7-81a1-0465f7d1eca4/thumb/custom356e524fe8050358-320x180.jpeg",
+              "publishedAt": "2017-05-12T16:04:18Z",
+              "self": {
+                "isRestricted": false,
+                "viewingHistory": null,
+                "__typename": "VideoSelfEdge"
+              },
+              "title": "We Are Twitch - #TwitchUnity",
+              "viewCount": 6059,
+              "resourceRestriction": null,
+              "contentTags": [],
+              "__typename": "Video"
+            },
+            "__typename": "VideoEdge"
+          },
+          {
+            "cursor": "140903003|422|2017-05-07T20:22:14Z|27",
+            "node": {
+              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/twitch/141615239/59fe45cf-445d-42a8-a4b3-76ea719a2fec/storyboards/141615239-strip-0.jpg",
+              "game": {
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/515025-40x56.jpg",
+                "id": "515025",
+                "slug": "overwatch-2",
+                "displayName": "Overwatch",
+                "name": "Overwatch",
+                "__typename": "Game"
+              },
+              "broadcastIdentifier": {
+                "id": "1",
+                "__typename": "BroadcastIdOnly"
+              },
+              "id": "141615239",
+              "lengthSeconds": 32,
+              "owner": {
+                "displayName": "Twitch",
+                "id": "12826",
+                "login": "twitch",
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-50x50.png",
+                "primaryColorHex": "5C16C5",
+                "roles": { "isPartner": true, "__typename": "UserRoles" },
+                "__typename": "User"
+              },
+              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/twitch/141615239/59fe45cf-445d-42a8-a4b3-76ea719a2fec/thumb/index-0000000000-320x180.jpg",
+              "publishedAt": "2017-05-10T21:16:56Z",
+              "self": {
+                "isRestricted": false,
+                "viewingHistory": null,
+                "__typename": "VideoSelfEdge"
+              },
+              "title": "Twitch Top 10 Anime Battles: Aimbotcalvin vs Kayuun",
+              "viewCount": 1227,
+              "resourceRestriction": null,
+              "contentTags": [],
+              "__typename": "Video"
+            },
+            "__typename": "VideoEdge"
+          },
+          {
+            "cursor": "140903003|422|2017-05-07T20:22:14Z|27",
+            "node": {
+              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/twitch/140903003/86815fbc-aaab-4df6-9d93-eac6744a6886/storyboards/140903003-strip-0.jpg",
+              "game": null,
+              "broadcastIdentifier": {
+                "id": "1",
+                "__typename": "BroadcastIdOnly"
+              },
+              "id": "140903003",
+              "lengthSeconds": 27,
+              "owner": {
+                "displayName": "Twitch",
+                "id": "12826",
+                "login": "twitch",
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-50x50.png",
+                "primaryColorHex": "5C16C5",
+                "roles": { "isPartner": true, "__typename": "UserRoles" },
+                "__typename": "User"
+              },
+              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/twitch/140903003/86815fbc-aaab-4df6-9d93-eac6744a6886/thumb/index-0000000000-320x180.jpg",
+              "publishedAt": "2017-05-07T20:25:11Z",
+              "self": {
+                "isRestricted": false,
+                "viewingHistory": null,
+                "__typename": "VideoSelfEdge"
+              },
+              "title": "Staff Pick - 5/5/2017 - Cyrus Hall",
+              "viewCount": 422,
               "resourceRestriction": null,
               "contentTags": [],
               "__typename": "Video"
@@ -1054,8 +1146,8 @@
     }
   },
   "extensions": {
-    "durationMilliseconds": 78,
+    "durationMilliseconds": 119,
     "operationName": "FilterableVideoTower_Videos",
-    "requestID": "01JPSM32MWR9BXCM6X6E9WY8GB"
+    "requestID": "01KGYJFMJ0MTSBTM04CAWK4KKM"
   }
 }

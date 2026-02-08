@@ -1,320 +1,45 @@
 {
   "data": {
     "user": {
-      "id": "12826",
+      "id": "26490481",
       "videos": {
         "edges": [
           {
-            "cursor": "40802966|10497|2014-06-10T17:43:57Z|2817",
+            "cursor": null,
             "node": {
-              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/1d78630ac0b899ba4017_twitch_25486950176_661604878/storyboards/151189117-strip-0.jpg",
-              "game": null,
-              "id": "151189117",
-              "lengthSeconds": 6210,
-              "owner": {
-                "displayName": "Twitch",
-                "id": "12826",
-                "login": "twitch",
-                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/d5e6ebb4-a245-4ebf-bea6-2183e2f39600-profile_image-50x50.png",
-                "primaryColorHex": "5C16C5",
-                "roles": { "isPartner": true, "__typename": "UserRoles" },
-                "__typename": "User"
-              },
-              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/1d78630ac0b899ba4017_twitch_25486950176_661604878/thumb/custom76a36e43defc1a4e-320x180.png",
-              "publishedAt": "2017-06-11T23:26:03Z",
-              "self": {
-                "isRestricted": false,
-                "viewingHistory": null,
-                "__typename": "VideoSelfEdge"
-              },
-              "title": "Xbox E3 Briefing ",
-              "viewCount": 114525,
-              "resourceRestriction": null,
-              "contentTags": [],
-              "__typename": "Video"
-            },
-            "__typename": "VideoEdge"
-          },
-          {
-            "cursor": "40802966|10497|2014-06-10T17:43:57Z|2817",
-            "node": {
-              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/1d78630ac0b899ba4017_twitch_25486950176_661604878/storyboards/151426891-strip-0.jpg",
-              "game": null,
-              "id": "151426891",
-              "lengthSeconds": 6114,
-              "owner": {
-                "displayName": "Twitch",
-                "id": "12826",
-                "login": "twitch",
-                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/d5e6ebb4-a245-4ebf-bea6-2183e2f39600-profile_image-50x50.png",
-                "primaryColorHex": "5C16C5",
-                "roles": { "isPartner": true, "__typename": "UserRoles" },
-                "__typename": "User"
-              },
-              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/1d78630ac0b899ba4017_twitch_25486950176_661604878/thumb/custome4041e775b5b52ed-320x180.png",
-              "publishedAt": "2017-06-12T22:20:36Z",
-              "self": {
-                "isRestricted": false,
-                "viewingHistory": null,
-                "__typename": "VideoSelfEdge"
-              },
-              "title": "Ubisoft E3 Press Conference",
-              "viewCount": 91612,
-              "resourceRestriction": null,
-              "contentTags": [],
-              "__typename": "Video"
-            },
-            "__typename": "VideoEdge"
-          },
-          {
-            "cursor": "40802966|10497|2014-06-10T17:43:57Z|2817",
-            "node": {
-              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/1d78630ac0b899ba4017_twitch_25486950176_661604878/storyboards/151368026-strip-0.jpg",
-              "game": null,
-              "id": "151368026",
-              "lengthSeconds": 6348,
-              "owner": {
-                "displayName": "Twitch",
-                "id": "12826",
-                "login": "twitch",
-                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/d5e6ebb4-a245-4ebf-bea6-2183e2f39600-profile_image-50x50.png",
-                "primaryColorHex": "5C16C5",
-                "roles": { "isPartner": true, "__typename": "UserRoles" },
-                "__typename": "User"
-              },
-              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/1d78630ac0b899ba4017_twitch_25486950176_661604878/thumb/customdd7dc0dc190ff8fb-320x180.jpeg",
-              "publishedAt": "2017-06-12T19:00:22Z",
-              "self": {
-                "isRestricted": false,
-                "viewingHistory": null,
-                "__typename": "VideoSelfEdge"
-              },
-              "title": "PC Gaming Show",
-              "viewCount": 89380,
-              "resourceRestriction": null,
-              "contentTags": [],
-              "__typename": "Video"
-            },
-            "__typename": "VideoEdge"
-          },
-          {
-            "cursor": "40802966|10497|2014-06-10T17:43:57Z|2817",
-            "node": {
-              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/1d78630ac0b899ba4017_twitch_25486950176_661604878/storyboards/151470118-strip-0.jpg",
-              "game": null,
-              "id": "151470118",
-              "lengthSeconds": 3681,
-              "owner": {
-                "displayName": "Twitch",
-                "id": "12826",
-                "login": "twitch",
-                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/d5e6ebb4-a245-4ebf-bea6-2183e2f39600-profile_image-50x50.png",
-                "primaryColorHex": "5C16C5",
-                "roles": { "isPartner": true, "__typename": "UserRoles" },
-                "__typename": "User"
-              },
-              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/1d78630ac0b899ba4017_twitch_25486950176_661604878/thumb/custom514381b834729294-320x180.jpeg",
-              "publishedAt": "2017-06-13T02:24:32Z",
-              "self": {
-                "isRestricted": false,
-                "viewingHistory": null,
-                "__typename": "VideoSelfEdge"
-              },
-              "title": "PlayStation E3 Media Showcase",
-              "viewCount": 82894,
-              "resourceRestriction": null,
-              "contentTags": [],
-              "__typename": "Video"
-            },
-            "__typename": "VideoEdge"
-          },
-          {
-            "cursor": "40802966|10497|2014-06-10T17:43:57Z|2817",
-            "node": {
-              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/fde40e78391b86fe1319_twitch_29039486720_883638083/storyboards/271895785-strip-0.jpg",
-              "game": null,
-              "id": "271895785",
-              "lengthSeconds": 1267,
-              "owner": {
-                "displayName": "Twitch",
-                "id": "12826",
-                "login": "twitch",
-                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/d5e6ebb4-a245-4ebf-bea6-2183e2f39600-profile_image-50x50.png",
-                "primaryColorHex": "5C16C5",
-                "roles": { "isPartner": true, "__typename": "UserRoles" },
-                "__typename": "User"
-              },
-              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/fde40e78391b86fe1319_twitch_29039486720_883638083/thumb/custom-446f01cc-c10e-4248-b1e0-b0be33f80c4d-320x180.jpg",
-              "publishedAt": "2018-06-11T03:27:55Z",
-              "self": {
-                "isRestricted": false,
-                "viewingHistory": null,
-                "__typename": "VideoSelfEdge"
-              },
-              "title": "Devolver Digital Press Conference - E3 2018",
-              "viewCount": 69178,
-              "resourceRestriction": null,
-              "contentTags": [],
-              "__typename": "Video"
-            },
-            "__typename": "VideoEdge"
-          },
-          {
-            "cursor": "40802966|10497|2014-06-10T17:43:57Z|2817",
-            "node": {
-              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/1d78630ac0b899ba4017_twitch_25486950176_661604878/storyboards/152179363-strip-0.jpg",
-              "game": null,
-              "id": "152179363",
-              "lengthSeconds": 16288,
-              "owner": {
-                "displayName": "Twitch",
-                "id": "12826",
-                "login": "twitch",
-                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/d5e6ebb4-a245-4ebf-bea6-2183e2f39600-profile_image-50x50.png",
-                "primaryColorHex": "5C16C5",
-                "roles": { "isPartner": true, "__typename": "UserRoles" },
-                "__typename": "User"
-              },
-              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/1d78630ac0b899ba4017_twitch_25486950176_661604878//thumb/thumb152179363-320x180.jpg",
-              "publishedAt": "2017-06-16T03:54:42Z",
-              "self": {
-                "isRestricted": false,
-                "viewingHistory": null,
-                "__typename": "VideoSelfEdge"
-              },
-              "title": "Pre Pre Show 2017 Part 1",
-              "viewCount": 68784,
-              "resourceRestriction": null,
-              "contentTags": [],
-              "__typename": "Video"
-            },
-            "__typename": "VideoEdge"
-          },
-          {
-            "cursor": "40802966|10497|2014-06-10T17:43:57Z|2817",
-            "node": {
-              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/1d78630ac0b899ba4017_twitch_25486950176_661604878/storyboards/152182242-strip-0.jpg",
-              "game": null,
-              "id": "152182242",
-              "lengthSeconds": 14750,
-              "owner": {
-                "displayName": "Twitch",
-                "id": "12826",
-                "login": "twitch",
-                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/d5e6ebb4-a245-4ebf-bea6-2183e2f39600-profile_image-50x50.png",
-                "primaryColorHex": "5C16C5",
-                "roles": { "isPartner": true, "__typename": "UserRoles" },
-                "__typename": "User"
-              },
-              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/1d78630ac0b899ba4017_twitch_25486950176_661604878//thumb/thumb152182242-320x180.jpg",
-              "publishedAt": "2017-06-16T04:13:10Z",
-              "self": {
-                "isRestricted": false,
-                "viewingHistory": null,
-                "__typename": "VideoSelfEdge"
-              },
-              "title": "Pre Pre Show 2017 Part 2",
-              "viewCount": 67549,
-              "resourceRestriction": null,
-              "contentTags": [],
-              "__typename": "Video"
-            },
-            "__typename": "VideoEdge"
-          },
-          {
-            "cursor": "40802966|10497|2014-06-10T17:43:57Z|2817",
-            "node": {
-              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/1d78630ac0b899ba4017_twitch_25486950176_661604878/storyboards/151248867-strip-0.jpg",
-              "game": null,
-              "id": "151248867",
-              "lengthSeconds": 2414,
-              "owner": {
-                "displayName": "Twitch",
-                "id": "12826",
-                "login": "twitch",
-                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/d5e6ebb4-a245-4ebf-bea6-2183e2f39600-profile_image-50x50.png",
-                "primaryColorHex": "5C16C5",
-                "roles": { "isPartner": true, "__typename": "UserRoles" },
-                "__typename": "User"
-              },
-              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/1d78630ac0b899ba4017_twitch_25486950176_661604878/thumb/custom5ab9b301cab24a3c-320x180.jpeg",
-              "publishedAt": "2017-06-12T04:46:03Z",
-              "self": {
-                "isRestricted": false,
-                "viewingHistory": null,
-                "__typename": "VideoSelfEdge"
-              },
-              "title": "Bethesda E3 Showcase",
-              "viewCount": 66439,
-              "resourceRestriction": null,
-              "contentTags": [],
-              "__typename": "Video"
-            },
-            "__typename": "VideoEdge"
-          },
-          {
-            "cursor": "40802966|10497|2014-06-10T17:43:57Z|2817",
-            "node": {
-              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/d90bd29acd81cf555356_twitch_29050483760_884325399/storyboards/272074569-strip-0.jpg",
-              "game": null,
-              "id": "272074569",
-              "lengthSeconds": 1783,
-              "owner": {
-                "displayName": "Twitch",
-                "id": "12826",
-                "login": "twitch",
-                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/d5e6ebb4-a245-4ebf-bea6-2183e2f39600-profile_image-50x50.png",
-                "primaryColorHex": "5C16C5",
-                "roles": { "isPartner": true, "__typename": "UserRoles" },
-                "__typename": "User"
-              },
-              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/d90bd29acd81cf555356_twitch_29050483760_884325399/thumb/custom-f1e72c48-dc38-4050-8112-544a984ee2dd-320x180.jpg",
-              "publishedAt": "2018-06-11T17:35:45Z",
-              "self": {
-                "isRestricted": false,
-                "viewingHistory": null,
-                "__typename": "VideoSelfEdge"
-              },
-              "title": "Square Enix Press Conference - E3 2018",
-              "viewCount": 65903,
-              "resourceRestriction": null,
-              "contentTags": [],
-              "__typename": "Video"
-            },
-            "__typename": "VideoEdge"
-          },
-          {
-            "cursor": "40802966|10497|2014-06-10T17:43:57Z|2817",
-            "node": {
-              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/20ec3823de52c7920165_twitch_30939199936_1002325427/storyboards/327720797-strip-0.jpg",
+              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/49b54242cad0e833d3f8_summit1g_23899930313_3914265499/storyboards/1077123122-strip-0.jpg",
               "game": {
-                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/417752-40x56.jpg",
-                "id": "417752",
-                "slug": "talk-shows-and-podcasts",
-                "displayName": "Talk Shows \u0026 Podcasts",
-                "name": "Talk Shows \u0026 Podcasts",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/21222_IGDB-40x56.jpg",
+                "id": "21222",
+                "slug": "max-payne-3",
+                "displayName": "Max Payne 3",
+                "name": "Max Payne 3",
                 "__typename": "Game"
               },
-              "id": "327720797",
-              "lengthSeconds": 2504,
+              "broadcastIdentifier": {
+                "id": "1",
+                "__typename": "BroadcastIdOnly"
+              },
+              "id": "1077123122",
+              "lengthSeconds": 5354,
               "owner": {
-                "displayName": "Twitch",
-                "id": "12826",
-                "login": "twitch",
-                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/d5e6ebb4-a245-4ebf-bea6-2183e2f39600-profile_image-50x50.png",
-                "primaryColorHex": "5C16C5",
+                "displayName": "summit1g",
+                "id": "26490481",
+                "login": "summit1g",
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/99aa4739-21d6-40af-86ae-4b4d3457fce4-profile_image-50x50.png",
+                "primaryColorHex": "2A292E",
                 "roles": { "isPartner": true, "__typename": "UserRoles" },
                 "__typename": "User"
               },
-              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/20ec3823de52c7920165_twitch_30939199936_1002325427/thumb/custom-e1ac4e11-aecd-41de-a862-8452f724ffa4-320x180.jpg",
-              "publishedAt": "2018-10-26T19:11:00Z",
+              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/49b54242cad0e833d3f8_summit1g_23899930313_3914265499//thumb/thumb1077123122-320x180.jpg",
+              "publishedAt": "2021-07-05T06:21:58Z",
               "self": {
                 "isRestricted": false,
                 "viewingHistory": null,
                 "__typename": "VideoSelfEdge"
               },
-              "title": "TwitchCon 2018 - Keynote",
-              "viewCount": 41367,
+              "title": "mp3 WR exact start/stop",
+              "viewCount": 21707,
               "resourceRestriction": null,
               "contentTags": [],
               "__typename": "Video"
@@ -322,37 +47,41 @@
             "__typename": "VideoEdge"
           },
           {
-            "cursor": "40802966|10497|2014-06-10T17:43:57Z|2817",
+            "cursor": null,
             "node": {
-              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/e4f85c70006b83f0863a_twitch_26172277296_704437522/storyboards/172092350-strip-0.jpg",
+              "animatedPreviewURL": "https://d1m7jfoe9zdc1j.cloudfront.net/649c127a17e08a751580_summit1g_19381422419_1321986253/storyboards/1074150462-strip-0.jpg",
               "game": {
-                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509577-40x56.jpg",
-                "id": "509577",
-                "slug": "dungeons-and-dragons",
-                "displayName": "Dungeons \u0026 Dragons",
-                "name": "Dungeons \u0026 Dragons",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/21222_IGDB-40x56.jpg",
+                "id": "21222",
+                "slug": "max-payne-3",
+                "displayName": "Max Payne 3",
+                "name": "Max Payne 3",
                 "__typename": "Game"
               },
-              "id": "172092350",
-              "lengthSeconds": 738,
+              "broadcastIdentifier": {
+                "id": "1",
+                "__typename": "BroadcastIdOnly"
+              },
+              "id": "1074150462",
+              "lengthSeconds": 5686,
               "owner": {
-                "displayName": "Twitch",
-                "id": "12826",
-                "login": "twitch",
-                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/d5e6ebb4-a245-4ebf-bea6-2183e2f39600-profile_image-50x50.png",
-                "primaryColorHex": "5C16C5",
+                "displayName": "summit1g",
+                "id": "26490481",
+                "login": "summit1g",
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/99aa4739-21d6-40af-86ae-4b4d3457fce4-profile_image-50x50.png",
+                "primaryColorHex": "2A292E",
                 "roles": { "isPartner": true, "__typename": "UserRoles" },
                 "__typename": "User"
               },
-              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/e4f85c70006b83f0863a_twitch_26172277296_704437522//thumb/thumb172092350-320x180.jpg",
-              "publishedAt": "2017-09-04T00:12:41Z",
+              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d1m7jfoe9zdc1j/649c127a17e08a751580_summit1g_19381422419_1321986253//thumb/thumb1074150462-320x180.jpg",
+              "publishedAt": "2021-07-02T04:23:27Z",
               "self": {
                 "isRestricted": false,
                 "viewingHistory": null,
                 "__typename": "VideoSelfEdge"
               },
-              "title": "Secret of Mana | PAX West 2017",
-              "viewCount": 35570,
+              "title": "summit1g - Max Payne 3 Any% Hardcore Glitchless + Cutscene Skip",
+              "viewCount": 7873,
               "resourceRestriction": null,
               "contentTags": [],
               "__typename": "Video"
@@ -360,68 +89,41 @@
             "__typename": "VideoEdge"
           },
           {
-            "cursor": "40802966|10497|2014-06-10T17:43:57Z|2817",
+            "cursor": null,
             "node": {
-              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/d90bd29acd81cf555356_twitch_29050483760_884325399/storyboards/272264144-strip-0.jpg",
-              "game": null,
-              "id": "272264144",
-              "lengthSeconds": 5105,
-              "owner": {
-                "displayName": "Twitch",
-                "id": "12826",
-                "login": "twitch",
-                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/d5e6ebb4-a245-4ebf-bea6-2183e2f39600-profile_image-50x50.png",
-                "primaryColorHex": "5C16C5",
-                "roles": { "isPartner": true, "__typename": "UserRoles" },
-                "__typename": "User"
-              },
-              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/d90bd29acd81cf555356_twitch_29050483760_884325399/thumb/custom-341f88b9-15cb-4978-8e87-0081d2f4a757-320x180.jpg",
-              "publishedAt": "2018-06-12T02:45:08Z",
-              "self": {
-                "isRestricted": false,
-                "viewingHistory": null,
-                "__typename": "VideoSelfEdge"
-              },
-              "title": "Playstation Press Conference - E3 2018",
-              "viewCount": 31809,
-              "resourceRestriction": null,
-              "contentTags": [],
-              "__typename": "Video"
-            },
-            "__typename": "VideoEdge"
-          },
-          {
-            "cursor": "40802966|10497|2014-06-10T17:43:57Z|2817",
-            "node": {
-              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/20ec3823de52c7920165_twitch_30939199936_1002325427/storyboards/327872972-strip-0.jpg",
+              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/f739560e8282b6ea160e_summit1g_15796360839_8495462983/storyboards/1076851977-strip-0.jpg",
               "game": {
-                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/417752-40x56.jpg",
-                "id": "417752",
-                "slug": "talk-shows-and-podcasts",
-                "displayName": "Talk Shows \u0026 Podcasts",
-                "name": "Talk Shows \u0026 Podcasts",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/21222_IGDB-40x56.jpg",
+                "id": "21222",
+                "slug": "max-payne-3",
+                "displayName": "Max Payne 3",
+                "name": "Max Payne 3",
                 "__typename": "Game"
               },
-              "id": "327872972",
-              "lengthSeconds": 3965,
+              "broadcastIdentifier": {
+                "id": "1",
+                "__typename": "BroadcastIdOnly"
+              },
+              "id": "1076851977",
+              "lengthSeconds": 5399,
               "owner": {
-                "displayName": "Twitch",
-                "id": "12826",
-                "login": "twitch",
-                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/d5e6ebb4-a245-4ebf-bea6-2183e2f39600-profile_image-50x50.png",
-                "primaryColorHex": "5C16C5",
+                "displayName": "summit1g",
+                "id": "26490481",
+                "login": "summit1g",
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/99aa4739-21d6-40af-86ae-4b4d3457fce4-profile_image-50x50.png",
+                "primaryColorHex": "2A292E",
                 "roles": { "isPartner": true, "__typename": "UserRoles" },
                 "__typename": "User"
               },
-              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/20ec3823de52c7920165_twitch_30939199936_1002325427//thumb/thumb327872972-320x180.jpg",
-              "publishedAt": "2018-10-27T01:33:27Z",
+              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/f739560e8282b6ea160e_summit1g_15796360839_8495462983//thumb/thumb1076851977-320x180.jpg",
+              "publishedAt": "2021-07-04T22:48:40Z",
               "self": {
                 "isRestricted": false,
                 "viewingHistory": null,
                 "__typename": "VideoSelfEdge"
               },
-              "title": "TwitchCon 2018 - The Roast of TimTheTatman",
-              "viewCount": 30286,
+              "title": "summit1g - MP3 Any% World Record 1:29:15",
+              "viewCount": 7402,
               "resourceRestriction": null,
               "contentTags": [],
               "__typename": "Video"
@@ -429,554 +131,41 @@
             "__typename": "VideoEdge"
           },
           {
-            "cursor": "40802966|10497|2014-06-10T17:43:57Z|2817",
+            "cursor": null,
             "node": {
-              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/d90bd29acd81cf555356_twitch_29050483760_884325399/storyboards/272164842-strip-0.jpg",
-              "game": null,
-              "id": "272164842",
-              "lengthSeconds": 5525,
-              "owner": {
-                "displayName": "Twitch",
-                "id": "12826",
-                "login": "twitch",
-                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/d5e6ebb4-a245-4ebf-bea6-2183e2f39600-profile_image-50x50.png",
-                "primaryColorHex": "5C16C5",
-                "roles": { "isPartner": true, "__typename": "UserRoles" },
-                "__typename": "User"
-              },
-              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/d90bd29acd81cf555356_twitch_29050483760_884325399/thumb/custom-609c6819-88bf-4282-8565-2c42aeb3ff37-320x180.jpg",
-              "publishedAt": "2018-06-11T21:45:39Z",
-              "self": {
-                "isRestricted": false,
-                "viewingHistory": null,
-                "__typename": "VideoSelfEdge"
-              },
-              "title": "Ubisoft Press Conference - E3 2018",
-              "viewCount": 27943,
-              "resourceRestriction": null,
-              "contentTags": [],
-              "__typename": "Video"
-            },
-            "__typename": "VideoEdge"
-          },
-          {
-            "cursor": "40802966|10497|2014-06-10T17:43:57Z|2817",
-            "node": {
-              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/8732093083/twitch_10306246080_10306246080/storyboards/48205920-strip-0.jpg",
-              "game": null,
-              "id": "48205920",
-              "lengthSeconds": 3873,
-              "owner": {
-                "displayName": "Twitch",
-                "id": "12826",
-                "login": "twitch",
-                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/d5e6ebb4-a245-4ebf-bea6-2183e2f39600-profile_image-50x50.png",
-                "primaryColorHex": "5C16C5",
-                "roles": { "isPartner": true, "__typename": "UserRoles" },
-                "__typename": "User"
-              },
-              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/8732093083/twitch_10306246080_10306246080/thumb/thumb0-320x180.jpg",
-              "publishedAt": "2014-07-18T21:16:58.393634Z",
-              "self": {
-                "isRestricted": false,
-                "viewingHistory": null,
-                "__typename": "VideoSelfEdge"
-              },
-              "title": "Twitch Weekly - September 18th, 2014",
-              "viewCount": 27315,
-              "resourceRestriction": null,
-              "contentTags": [],
-              "__typename": "Video"
-            },
-            "__typename": "VideoEdge"
-          },
-          {
-            "cursor": "40802966|10497|2014-06-10T17:43:57Z|2817",
-            "node": {
-              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/918e0bdf5a0c1d8c9469_twitch_60041063391_3545564163/storyboards/803763186-strip-0.jpg",
-              "game": null,
-              "id": "803763186",
-              "lengthSeconds": 6657,
-              "owner": {
-                "displayName": "Twitch",
-                "id": "12826",
-                "login": "twitch",
-                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/d5e6ebb4-a245-4ebf-bea6-2183e2f39600-profile_image-50x50.png",
-                "primaryColorHex": "5C16C5",
-                "roles": { "isPartner": true, "__typename": "UserRoles" },
-                "__typename": "User"
-              },
-              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/918e0bdf5a0c1d8c9469_twitch_60041063391_3545564163//thumb/thumb803763186-320x180.jpg",
-              "publishedAt": "2020-11-15T07:08:45Z",
-              "self": {
-                "isRestricted": false,
-                "viewingHistory": null,
-                "__typename": "VideoSelfEdge"
-              },
-              "title": "GlitchCon Afterparty • Hosted by /TPAIN",
-              "viewCount": 24336,
-              "resourceRestriction": null,
-              "contentTags": [],
-              "__typename": "Video"
-            },
-            "__typename": "VideoEdge"
-          },
-          {
-            "cursor": "40802966|10497|2014-06-10T17:43:57Z|2817",
-            "node": {
-              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/b071a82fc3/twitch_9847901024_9847901024/storyboards/49020774-strip-0.jpg",
+              "animatedPreviewURL": "https://d1m7jfoe9zdc1j.cloudfront.net/2a5db3da750092dabd88_summit1g_68664895744_8464613079/storyboards/2004778962-strip-0.jpg",
               "game": {
-                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/8147_IGDB-40x56.jpg",
-                "id": "8147",
-                "slug": "every-extend-extra",
-                "displayName": "Every Extend Extra",
-                "name": "Every Extend Extra",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509658-40x56.jpg",
+                "id": "509658",
+                "slug": "just-chatting",
+                "displayName": "Just Chatting",
+                "name": "Just Chatting",
                 "__typename": "Game"
               },
-              "id": "49020774",
-              "lengthSeconds": 5413,
+              "broadcastIdentifier": {
+                "id": "1",
+                "__typename": "BroadcastIdOnly"
+              },
+              "id": "2004778962",
+              "lengthSeconds": 3089,
               "owner": {
-                "displayName": "Twitch",
-                "id": "12826",
-                "login": "twitch",
-                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/d5e6ebb4-a245-4ebf-bea6-2183e2f39600-profile_image-50x50.png",
-                "primaryColorHex": "5C16C5",
+                "displayName": "summit1g",
+                "id": "26490481",
+                "login": "summit1g",
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/99aa4739-21d6-40af-86ae-4b4d3457fce4-profile_image-50x50.png",
+                "primaryColorHex": "2A292E",
                 "roles": { "isPartner": true, "__typename": "UserRoles" },
                 "__typename": "User"
               },
-              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/b071a82fc3/twitch_9847901024_9847901024/thumb/thumb0-320x180.jpg",
-              "publishedAt": "2014-06-09T18:49:15.332218Z",
+              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d1m7jfoe9zdc1j/2a5db3da750092dabd88_summit1g_68664895744_8464613079//thumb/thumb2004778962-320x180.jpg",
+              "publishedAt": "2023-12-15T15:35:43Z",
               "self": {
                 "isRestricted": false,
                 "viewingHistory": null,
                 "__typename": "VideoSelfEdge"
               },
-              "title": "Xbox E3 2014 Media Briefing",
-              "viewCount": 24175,
-              "resourceRestriction": null,
-              "contentTags": [],
-              "__typename": "Video"
-            },
-            "__typename": "VideoEdge"
-          },
-          {
-            "cursor": "40802966|10497|2014-06-10T17:43:57Z|2817",
-            "node": {
-              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/c1e091b555/twitch_9850651472_9850651472/storyboards/49017737-strip-0.jpg",
-              "game": {
-                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/8147_IGDB-40x56.jpg",
-                "id": "8147",
-                "slug": "every-extend-extra",
-                "displayName": "Every Extend Extra",
-                "name": "Every Extend Extra",
-                "__typename": "Game"
-              },
-              "id": "49017737",
-              "lengthSeconds": 6389,
-              "owner": {
-                "displayName": "Twitch",
-                "id": "12826",
-                "login": "twitch",
-                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/d5e6ebb4-a245-4ebf-bea6-2183e2f39600-profile_image-50x50.png",
-                "primaryColorHex": "5C16C5",
-                "roles": { "isPartner": true, "__typename": "UserRoles" },
-                "__typename": "User"
-              },
-              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/c1e091b555/twitch_9850651472_9850651472/thumb/thumb0-320x180.jpg",
-              "publishedAt": "2014-06-10T03:43:36.356478Z",
-              "self": {
-                "isRestricted": false,
-                "viewingHistory": null,
-                "__typename": "VideoSelfEdge"
-              },
-              "title": "Sony E3 2014 Media Briefing (Part 1)",
-              "viewCount": 21119,
-              "resourceRestriction": null,
-              "contentTags": [],
-              "__typename": "Video"
-            },
-            "__typename": "VideoEdge"
-          },
-          {
-            "cursor": "40802966|10497|2014-06-10T17:43:57Z|2817",
-            "node": {
-              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/6c0bfa635d_twitch_16635732128_314498262/storyboards/17896961-strip-0.jpg",
-              "game": null,
-              "id": "17896961",
-              "lengthSeconds": 7047,
-              "owner": {
-                "displayName": "Twitch",
-                "id": "12826",
-                "login": "twitch",
-                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/d5e6ebb4-a245-4ebf-bea6-2183e2f39600-profile_image-50x50.png",
-                "primaryColorHex": "5C16C5",
-                "roles": { "isPartner": true, "__typename": "UserRoles" },
-                "__typename": "User"
-              },
-              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/6c0bfa635d_twitch_16635732128_314498262//thumb/thumb17896961-320x180.jpg",
-              "publishedAt": "2015-09-26T17:00:25.073026Z",
-              "self": {
-                "isRestricted": false,
-                "viewingHistory": null,
-                "__typename": "VideoSelfEdge"
-              },
-              "title": "TwitchCon 2015 - H1Z1 Finals",
-              "viewCount": 18672,
-              "resourceRestriction": null,
-              "contentTags": [],
-              "__typename": "Video"
-            },
-            "__typename": "VideoEdge"
-          },
-          {
-            "cursor": "40802966|10497|2014-06-10T17:43:57Z|2817",
-            "node": {
-              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/3724bc67a1fe2240a144_twitch_29062693088_885088481/storyboards/272463784-strip-0.jpg",
-              "game": null,
-              "id": "272463784",
-              "lengthSeconds": 2564,
-              "owner": {
-                "displayName": "Twitch",
-                "id": "12826",
-                "login": "twitch",
-                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/d5e6ebb4-a245-4ebf-bea6-2183e2f39600-profile_image-50x50.png",
-                "primaryColorHex": "5C16C5",
-                "roles": { "isPartner": true, "__typename": "UserRoles" },
-                "__typename": "User"
-              },
-              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/3724bc67a1fe2240a144_twitch_29062693088_885088481/thumb/custom-82620f66-f8e3-44f4-8a09-f4e0cc2cc836-320x180.jpg",
-              "publishedAt": "2018-06-12T17:44:10Z",
-              "self": {
-                "isRestricted": false,
-                "viewingHistory": null,
-                "__typename": "VideoSelfEdge"
-              },
-              "title": "Nintendo Direct - E3 2018",
-              "viewCount": 17444,
-              "resourceRestriction": null,
-              "contentTags": [],
-              "__typename": "Video"
-            },
-            "__typename": "VideoEdge"
-          },
-          {
-            "cursor": "40802966|10497|2014-06-10T17:43:57Z|2817",
-            "node": {
-              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/fde40e78391b86fe1319_twitch_29039486720_883638083/storyboards/271888489-strip-0.jpg",
-              "game": null,
-              "id": "271888489",
-              "lengthSeconds": 5075,
-              "owner": {
-                "displayName": "Twitch",
-                "id": "12826",
-                "login": "twitch",
-                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/d5e6ebb4-a245-4ebf-bea6-2183e2f39600-profile_image-50x50.png",
-                "primaryColorHex": "5C16C5",
-                "roles": { "isPartner": true, "__typename": "UserRoles" },
-                "__typename": "User"
-              },
-              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/fde40e78391b86fe1319_twitch_29039486720_883638083/thumb/custom-0904f5bd-4638-47ea-b480-9b6f0e240a12-320x180.jpg",
-              "publishedAt": "2018-06-11T03:00:55Z",
-              "self": {
-                "isRestricted": false,
-                "viewingHistory": null,
-                "__typename": "VideoSelfEdge"
-              },
-              "title": "Bethesda Press Conference - E3 2018",
-              "viewCount": 16932,
-              "resourceRestriction": null,
-              "contentTags": [],
-              "__typename": "Video"
-            },
-            "__typename": "VideoEdge"
-          },
-          {
-            "cursor": "40802966|10497|2014-06-10T17:43:57Z|2817",
-            "node": {
-              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/01bf592bea_twitch_14883844112_257836691/storyboards/6227641-strip-0.jpg",
-              "game": null,
-              "id": "6227641",
-              "lengthSeconds": 5482,
-              "owner": {
-                "displayName": "Twitch",
-                "id": "12826",
-                "login": "twitch",
-                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/d5e6ebb4-a245-4ebf-bea6-2183e2f39600-profile_image-50x50.png",
-                "primaryColorHex": "5C16C5",
-                "roles": { "isPartner": true, "__typename": "UserRoles" },
-                "__typename": "User"
-              },
-              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/01bf592bea_twitch_14883844112_257836691/thumb/thumb0-320x180.jpg",
-              "publishedAt": "2015-06-15T21:46:22.087082Z",
-              "self": {
-                "isRestricted": false,
-                "viewingHistory": null,
-                "__typename": "VideoSelfEdge"
-              },
-              "title": "E3 2015 Sony Press Conference",
-              "viewCount": 16673,
-              "resourceRestriction": null,
-              "contentTags": [],
-              "__typename": "Video"
-            },
-            "__typename": "VideoEdge"
-          },
-          {
-            "cursor": "40802966|10497|2014-06-10T17:43:57Z|2817",
-            "node": {
-              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/c545ece23fd1a77fb885_twitch_29024967840_882730653/storyboards/271410530-strip-0.jpg",
-              "game": null,
-              "id": "271410530",
-              "lengthSeconds": 4840,
-              "owner": {
-                "displayName": "Twitch",
-                "id": "12826",
-                "login": "twitch",
-                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/d5e6ebb4-a245-4ebf-bea6-2183e2f39600-profile_image-50x50.png",
-                "primaryColorHex": "5C16C5",
-                "roles": { "isPartner": true, "__typename": "UserRoles" },
-                "__typename": "User"
-              },
-              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/c545ece23fd1a77fb885_twitch_29024967840_882730653/thumb/custom-3311f676-2695-4a01-aa76-a44737cffd7a-320x180.jpg",
-              "publishedAt": "2018-06-09T23:06:32Z",
-              "self": {
-                "isRestricted": false,
-                "viewingHistory": null,
-                "__typename": "VideoSelfEdge"
-              },
-              "title": "EA Play - E3 2018",
-              "viewCount": 15834,
-              "resourceRestriction": null,
-              "contentTags": [],
-              "__typename": "Video"
-            },
-            "__typename": "VideoEdge"
-          },
-          {
-            "cursor": "40802966|10497|2014-06-10T17:43:57Z|2817",
-            "node": {
-              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/fde40e78391b86fe1319_twitch_29039486720_883638083/storyboards/271795342-strip-0.jpg",
-              "game": null,
-              "id": "271795342",
-              "lengthSeconds": 6156,
-              "owner": {
-                "displayName": "Twitch",
-                "id": "12826",
-                "login": "twitch",
-                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/d5e6ebb4-a245-4ebf-bea6-2183e2f39600-profile_image-50x50.png",
-                "primaryColorHex": "5C16C5",
-                "roles": { "isPartner": true, "__typename": "UserRoles" },
-                "__typename": "User"
-              },
-              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/fde40e78391b86fe1319_twitch_29039486720_883638083/thumb/custom-0a4cbfc1-33df-4cb0-b306-919c1e98fd46-320x180.jpg",
-              "publishedAt": "2018-06-10T22:01:39Z",
-              "self": {
-                "isRestricted": false,
-                "viewingHistory": null,
-                "__typename": "VideoSelfEdge"
-              },
-              "title": "Xbox Press Conference - E3 2018",
-              "viewCount": 14999,
-              "resourceRestriction": null,
-              "contentTags": [],
-              "__typename": "Video"
-            },
-            "__typename": "VideoEdge"
-          },
-          {
-            "cursor": "40802966|10497|2014-06-10T17:43:57Z|2817",
-            "node": {
-              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/6a7c25a37c_twitch_21819488352_468693760/storyboards/72098876-strip-0.jpg",
-              "game": null,
-              "id": "72098876",
-              "lengthSeconds": 3488,
-              "owner": {
-                "displayName": "Twitch",
-                "id": "12826",
-                "login": "twitch",
-                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/d5e6ebb4-a245-4ebf-bea6-2183e2f39600-profile_image-50x50.png",
-                "primaryColorHex": "5C16C5",
-                "roles": { "isPartner": true, "__typename": "UserRoles" },
-                "__typename": "User"
-              },
-              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/6a7c25a37c_twitch_21819488352_468693760//thumb/thumb72098876-320x180.jpg",
-              "publishedAt": "2016-06-12T21:29:21.217414Z",
-              "self": {
-                "isRestricted": false,
-                "viewingHistory": null,
-                "__typename": "VideoSelfEdge"
-              },
-              "title": "EA Press Conference - E3 2016",
-              "viewCount": 14891,
-              "resourceRestriction": null,
-              "contentTags": [],
-              "__typename": "Video"
-            },
-            "__typename": "VideoEdge"
-          },
-          {
-            "cursor": "40802966|10497|2014-06-10T17:43:57Z|2817",
-            "node": {
-              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/67e69242b638f5069e1d_twitch_25515660944_663399301/storyboards/152148241-strip-0.jpg",
-              "game": null,
-              "id": "152148241",
-              "lengthSeconds": 690,
-              "owner": {
-                "displayName": "Twitch",
-                "id": "12826",
-                "login": "twitch",
-                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/d5e6ebb4-a245-4ebf-bea6-2183e2f39600-profile_image-50x50.png",
-                "primaryColorHex": "5C16C5",
-                "roles": { "isPartner": true, "__typename": "UserRoles" },
-                "__typename": "User"
-              },
-              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/67e69242b638f5069e1d_twitch_25515660944_663399301//thumb/thumb152148241-320x180.jpg",
-              "publishedAt": "2017-06-16T00:59:32Z",
-              "self": {
-                "isRestricted": false,
-                "viewingHistory": null,
-                "__typename": "VideoSelfEdge"
-              },
-              "title": "Crytek's Hunt: Showdown E3 Spotlight",
-              "viewCount": 14789,
-              "resourceRestriction": null,
-              "contentTags": [],
-              "__typename": "Video"
-            },
-            "__typename": "VideoEdge"
-          },
-          {
-            "cursor": "40802966|10497|2014-06-10T17:43:57Z|2817",
-            "node": {
-              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/d9bc64d2d2/twitch_9853142384_9853142384/storyboards/40797078-strip-0.jpg",
-              "game": {
-                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/8147_IGDB-40x56.jpg",
-                "id": "8147",
-                "slug": "every-extend-extra",
-                "displayName": "Every Extend Extra",
-                "name": "Every Extend Extra",
-                "__typename": "Game"
-              },
-              "id": "40797078",
-              "lengthSeconds": 191,
-              "owner": {
-                "displayName": "Twitch",
-                "id": "12826",
-                "login": "twitch",
-                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/d5e6ebb4-a245-4ebf-bea6-2183e2f39600-profile_image-50x50.png",
-                "primaryColorHex": "5C16C5",
-                "roles": { "isPartner": true, "__typename": "UserRoles" },
-                "__typename": "User"
-              },
-              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/d9bc64d2d2/twitch_9853142384_9853142384/thumb/thumb0-320x180.jpg",
-              "publishedAt": "2014-06-10T03:44:19.052891Z",
-              "self": {
-                "isRestricted": false,
-                "viewingHistory": null,
-                "__typename": "VideoSelfEdge"
-              },
-              "title": "Sony E3 2014 Media Briefing (Part 2)",
-              "viewCount": 14726,
-              "resourceRestriction": null,
-              "contentTags": [],
-              "__typename": "Video"
-            },
-            "__typename": "VideoEdge"
-          },
-          {
-            "cursor": "40802966|10497|2014-06-10T17:43:57Z|2817",
-            "node": {
-              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/cfac09749d/twitch_12678541232_12678541232/storyboards/42036415-strip-0.jpg",
-              "game": null,
-              "id": "42036415",
-              "lengthSeconds": 5272,
-              "owner": {
-                "displayName": "Twitch",
-                "id": "12826",
-                "login": "twitch",
-                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/d5e6ebb4-a245-4ebf-bea6-2183e2f39600-profile_image-50x50.png",
-                "primaryColorHex": "5C16C5",
-                "roles": { "isPartner": true, "__typename": "UserRoles" },
-                "__typename": "User"
-              },
-              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/cfac09749d/twitch_12678541232_12678541232/thumb/thumb0-320x180.jpg",
-              "publishedAt": "2015-01-17T00:06:39.169993Z",
-              "self": {
-                "isRestricted": false,
-                "viewingHistory": null,
-                "__typename": "VideoSelfEdge"
-              },
-              "title": "Twitch Weekly - January 16, 2015",
-              "viewCount": 14702,
-              "resourceRestriction": null,
-              "contentTags": [],
-              "__typename": "Video"
-            },
-            "__typename": "VideoEdge"
-          },
-          {
-            "cursor": "40802966|10497|2014-06-10T17:43:57Z|2817",
-            "node": {
-              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/53b11d76376d44a59fb1_twitch_26548267168_727936889/storyboards/184373833-strip-0.jpg",
-              "game": null,
-              "id": "184373833",
-              "lengthSeconds": 3529,
-              "owner": {
-                "displayName": "Twitch",
-                "id": "12826",
-                "login": "twitch",
-                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/d5e6ebb4-a245-4ebf-bea6-2183e2f39600-profile_image-50x50.png",
-                "primaryColorHex": "5C16C5",
-                "roles": { "isPartner": true, "__typename": "UserRoles" },
-                "__typename": "User"
-              },
-              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/53b11d76376d44a59fb1_twitch_26548267168_727936889//thumb/thumb184373833-320x180.jpg",
-              "publishedAt": "2017-10-23T02:10:22Z",
-              "self": {
-                "isRestricted": false,
-                "viewingHistory": null,
-                "__typename": "VideoSelfEdge"
-              },
-              "title": "TwitchCon 2017 - Twitch Yearly",
-              "viewCount": 13664,
-              "resourceRestriction": null,
-              "contentTags": [],
-              "__typename": "Video"
-            },
-            "__typename": "VideoEdge"
-          },
-          {
-            "cursor": "40802966|10497|2014-06-10T17:43:57Z|2817",
-            "node": {
-              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/b06899255d/twitch_9857964992_9857964992/storyboards/40802966-strip-0.jpg",
-              "game": {
-                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/8147_IGDB-40x56.jpg",
-                "id": "8147",
-                "slug": "every-extend-extra",
-                "displayName": "Every Extend Extra",
-                "name": "Every Extend Extra",
-                "__typename": "Game"
-              },
-              "id": "40802966",
-              "lengthSeconds": 2817,
-              "owner": {
-                "displayName": "Twitch",
-                "id": "12826",
-                "login": "twitch",
-                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/d5e6ebb4-a245-4ebf-bea6-2183e2f39600-profile_image-50x50.png",
-                "primaryColorHex": "5C16C5",
-                "roles": { "isPartner": true, "__typename": "UserRoles" },
-                "__typename": "User"
-              },
-              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/b06899255d/twitch_9857964992_9857964992/thumb/thumb0-320x180.jpg",
-              "publishedAt": "2014-06-10T17:43:57.167775Z",
-              "self": {
-                "isRestricted": false,
-                "viewingHistory": null,
-                "__typename": "VideoSelfEdge"
-              },
-              "title": "Nintendo E3 2014 Digital Event",
-              "viewCount": 10497,
+              "title": "Highlight: chillin for a bit - @summit1g",
+              "viewCount": 6778,
               "resourceRestriction": null,
               "contentTags": [],
               "__typename": "Video"
@@ -984,15 +173,15 @@
             "__typename": "VideoEdge"
           }
         ],
-        "pageInfo": { "hasNextPage": true, "__typename": "PageInfo" },
+        "pageInfo": { "hasNextPage": false, "__typename": "PageInfo" },
         "__typename": "VideoConnection"
       },
       "__typename": "User"
     }
   },
   "extensions": {
-    "durationMilliseconds": 107,
+    "durationMilliseconds": 76,
     "operationName": "FilterableVideoTower_Videos",
-    "requestID": "01JPSM29143V8SP5989R2A68DM"
+    "requestID": "01KGYJF7NB3BAA8HSD1SV3MYJF"
   }
 }

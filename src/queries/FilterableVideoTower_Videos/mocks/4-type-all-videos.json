@@ -5,9 +5,51 @@
       "videos": {
         "edges": [
           {
-            "cursor": "2255454897|229657|2024-09-20T00:33:22Z|14424",
+            "cursor": "2563893901|94922|2025-09-11T17:45:17Z|5029",
             "node": {
-              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/4087ab6ee325487ff1cb_twitch_317752962300_1741891679/storyboards/2404782496-strip-0.jpg",
+              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/b09ec3f79b32f2caa581_twitch_315894061815_1770506324/storyboards/2691902974-strip-0.jpg",
+              "game": {
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509663-40x56.jpg",
+                "id": "509663",
+                "slug": "special-events",
+                "displayName": "Special Events",
+                "name": "Special Events",
+                "__typename": "Game"
+              },
+              "broadcastIdentifier": {
+                "id": "315894061815",
+                "__typename": "BroadcastIdOnly"
+              },
+              "id": "2691902974",
+              "lengthSeconds": 4375,
+              "owner": {
+                "displayName": "Twitch",
+                "id": "12826",
+                "login": "twitch",
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-50x50.png",
+                "primaryColorHex": "5C16C5",
+                "roles": { "isPartner": true, "__typename": "UserRoles" },
+                "__typename": "User"
+              },
+              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/b09ec3f79b32f2caa581_twitch_315894061815_1770506324//thumb/thumb0-320x180.jpg",
+              "publishedAt": "2026-02-07T23:18:50Z",
+              "self": {
+                "isRestricted": false,
+                "viewingHistory": null,
+                "__typename": "VideoSelfEdge"
+              },
+              "title": "LIVE: AJ Brown vs. Derrick Henry — Fit Face Off hosted by @plaqueboymax",
+              "viewCount": 490,
+              "resourceRestriction": null,
+              "contentTags": [],
+              "__typename": "Video"
+            },
+            "__typename": "VideoEdge"
+          },
+          {
+            "cursor": "2563893901|94922|2025-09-11T17:45:17Z|5029",
+            "node": {
+              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/23b120fe498bcdaff271_twitch_316330639320_1770407165/storyboards/2690770999-strip-0.jpg",
               "game": {
                 "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509658-40x56.jpg",
                 "id": "509658",
@@ -16,26 +58,30 @@
                 "name": "Just Chatting",
                 "__typename": "Game"
               },
-              "id": "2404782496",
-              "lengthSeconds": 4621,
+              "broadcastIdentifier": {
+                "id": "316330639320",
+                "__typename": "BroadcastIdOnly"
+              },
+              "id": "2690770999",
+              "lengthSeconds": 4618,
               "owner": {
                 "displayName": "Twitch",
                 "id": "12826",
                 "login": "twitch",
-                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/d5e6ebb4-a245-4ebf-bea6-2183e2f39600-profile_image-50x50.png",
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-50x50.png",
                 "primaryColorHex": "5C16C5",
                 "roles": { "isPartner": true, "__typename": "UserRoles" },
                 "__typename": "User"
               },
-              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/4087ab6ee325487ff1cb_twitch_317752962300_1741891679//thumb/thumb0-320x180.jpg",
-              "publishedAt": "2025-03-13T18:48:05Z",
+              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/23b120fe498bcdaff271_twitch_316330639320_1770407165//thumb/thumb0-320x180.jpg",
+              "publishedAt": "2026-02-06T19:46:11Z",
               "self": {
                 "isRestricted": false,
                 "viewingHistory": null,
                 "__typename": "VideoSelfEdge"
               },
-              "title": "Creator Camp LIVE: Streaming Basics with @Snackless \u0026 @KawaiiGuy",
-              "viewCount": 161641,
+              "title": "Twitch Public Access (Feb. 6 2026) | w/ @icharlie ft. @IdiosynAnca @Honey718",
+              "viewCount": 56514,
               "resourceRestriction": null,
               "contentTags": [],
               "__typename": "Video"
@@ -43,123 +89,9 @@
             "__typename": "VideoEdge"
           },
           {
-            "cursor": "2255454897|229657|2024-09-20T00:33:22Z|14424",
+            "cursor": "2563893901|94922|2025-09-11T17:45:17Z|5029",
             "node": {
-              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/e340a84cc6c16e9ea117_twitch_317402153596_1741369893/storyboards/2399583600-strip-0.jpg",
-              "game": {
-                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509658-40x56.jpg",
-                "id": "509658",
-                "slug": "just-chatting",
-                "displayName": "Just Chatting",
-                "name": "Just Chatting",
-                "__typename": "Game"
-              },
-              "id": "2399583600",
-              "lengthSeconds": 6955,
-              "owner": {
-                "displayName": "Twitch",
-                "id": "12826",
-                "login": "twitch",
-                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/d5e6ebb4-a245-4ebf-bea6-2183e2f39600-profile_image-50x50.png",
-                "primaryColorHex": "5C16C5",
-                "roles": { "isPartner": true, "__typename": "UserRoles" },
-                "__typename": "User"
-              },
-              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/e340a84cc6c16e9ea117_twitch_317402153596_1741369893//thumb/thumb0-320x180.jpg",
-              "publishedAt": "2025-03-07T17:51:38Z",
-              "self": {
-                "isRestricted": false,
-                "viewingHistory": null,
-                "__typename": "VideoSelfEdge"
-              },
-              "title": "Make-Up: Set in Stone | International Women's Day on Twitch! w/ @mcroft07, @35p_ramen, @aliyawill, and @nyybeats",
-              "viewCount": 228022,
-              "resourceRestriction": null,
-              "contentTags": [],
-              "__typename": "Video"
-            },
-            "__typename": "VideoEdge"
-          },
-          {
-            "cursor": "2255454897|229657|2024-09-20T00:33:22Z|14424",
-            "node": {
-              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/733d7f7fb06f5829269e_twitch_317302274556_1741203920/storyboards/2397981994-strip-0.jpg",
-              "game": {
-                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509658-40x56.jpg",
-                "id": "509658",
-                "slug": "just-chatting",
-                "displayName": "Just Chatting",
-                "name": "Just Chatting",
-                "__typename": "Game"
-              },
-              "id": "2397981994",
-              "lengthSeconds": 7235,
-              "owner": {
-                "displayName": "Twitch",
-                "id": "12826",
-                "login": "twitch",
-                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/d5e6ebb4-a245-4ebf-bea6-2183e2f39600-profile_image-50x50.png",
-                "primaryColorHex": "5C16C5",
-                "roles": { "isPartner": true, "__typename": "UserRoles" },
-                "__typename": "User"
-              },
-              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/733d7f7fb06f5829269e_twitch_317302274556_1741203920//thumb/thumb0-320x180.jpg",
-              "publishedAt": "2025-03-05T19:45:25Z",
-              "self": {
-                "isRestricted": false,
-                "viewingHistory": null,
-                "__typename": "VideoSelfEdge"
-              },
-              "title": "VAMOS! el show de Twitch en Español con @DJClancy @stardow115 @Pandarina \u0026 @Suzyroxx | Marzo de 2025",
-              "viewCount": 153049,
-              "resourceRestriction": null,
-              "contentTags": [],
-              "__typename": "Video"
-            },
-            "__typename": "VideoEdge"
-          },
-          {
-            "cursor": "2255454897|229657|2024-09-20T00:33:22Z|14424",
-            "node": {
-              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/821f5e93593577037c42_twitch_317247375868_1741118179/storyboards/2397145208-strip-0.jpg",
-              "game": {
-                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509658-40x56.jpg",
-                "id": "509658",
-                "slug": "just-chatting",
-                "displayName": "Just Chatting",
-                "name": "Just Chatting",
-                "__typename": "Game"
-              },
-              "id": "2397145208",
-              "lengthSeconds": 3424,
-              "owner": {
-                "displayName": "Twitch",
-                "id": "12826",
-                "login": "twitch",
-                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/d5e6ebb4-a245-4ebf-bea6-2183e2f39600-profile_image-50x50.png",
-                "primaryColorHex": "5C16C5",
-                "roles": { "isPartner": true, "__typename": "UserRoles" },
-                "__typename": "User"
-              },
-              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/821f5e93593577037c42_twitch_317247375868_1741118179//thumb/thumb0-320x180.jpg",
-              "publishedAt": "2025-03-04T19:56:25Z",
-              "self": {
-                "isRestricted": false,
-                "viewingHistory": null,
-                "__typename": "VideoSelfEdge"
-              },
-              "title": "Let's Chat - March 4 | Dr. @tinytoxictofu joins host @kawaiiguy",
-              "viewCount": 25038,
-              "resourceRestriction": null,
-              "contentTags": [],
-              "__typename": "Video"
-            },
-            "__typename": "VideoEdge"
-          },
-          {
-            "cursor": "2255454897|229657|2024-09-20T00:33:22Z|14424",
-            "node": {
-              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/ab43fccee34072c94c04_twitch_317002662524_1740772228/storyboards/2393595435-strip-0.jpg",
+              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/c3621eddd0e5f4f44148_twitch_316627758039_1770237963/storyboards/2689087726-strip-0.jpg",
               "game": {
                 "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/417752-40x56.jpg",
                 "id": "417752",
@@ -168,26 +100,30 @@
                 "name": "Talk Shows \u0026 Podcasts",
                 "__typename": "Game"
               },
-              "id": "2393595435",
-              "lengthSeconds": 5148,
+              "broadcastIdentifier": {
+                "id": "316627758039",
+                "__typename": "BroadcastIdOnly"
+              },
+              "id": "2689087726",
+              "lengthSeconds": 4150,
               "owner": {
                 "displayName": "Twitch",
                 "id": "12826",
                 "login": "twitch",
-                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/d5e6ebb4-a245-4ebf-bea6-2183e2f39600-profile_image-50x50.png",
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-50x50.png",
                 "primaryColorHex": "5C16C5",
                 "roles": { "isPartner": true, "__typename": "UserRoles" },
                 "__typename": "User"
               },
-              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/ab43fccee34072c94c04_twitch_317002662524_1740772228//thumb/thumb0-320x180.jpg",
-              "publishedAt": "2025-02-28T19:50:34Z",
+              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/c3621eddd0e5f4f44148_twitch_316627758039_1770237963//thumb/thumb0-320x180.jpg",
+              "publishedAt": "2026-02-04T20:46:13Z",
               "self": {
                 "isRestricted": false,
                 "viewingHistory": null,
                 "__typename": "VideoSelfEdge"
               },
-              "title": "Twitch Public Access (Feb 2025) | Black Brilliance! w/ @AshSaidHi  \u0026 @BluSatire ​",
-              "viewCount": 293725,
+              "title": "Let's Chat Podcast EP 1 | Dan Clancy talks to NFL star Cam Skattebo @djclancy @sk4tpack",
+              "viewCount": 208046,
               "resourceRestriction": null,
               "contentTags": [],
               "__typename": "Video"
@@ -195,47 +131,9 @@
             "__typename": "VideoEdge"
           },
           {
-            "cursor": "2255454897|229657|2024-09-20T00:33:22Z|14424",
+            "cursor": "2563893901|94922|2025-09-11T17:45:17Z|5029",
             "node": {
-              "animatedPreviewURL": "https://d1m7jfoe9zdc1j.cloudfront.net/6a7447b543923228eae4_twitch_317312892541_1740175257/storyboards/2387558911-strip-0.jpg",
-              "game": {
-                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/417752-40x56.jpg",
-                "id": "417752",
-                "slug": "talk-shows-and-podcasts",
-                "displayName": "Talk Shows \u0026 Podcasts",
-                "name": "Talk Shows \u0026 Podcasts",
-                "__typename": "Game"
-              },
-              "id": "2387558911",
-              "lengthSeconds": 5175,
-              "owner": {
-                "displayName": "Twitch",
-                "id": "12826",
-                "login": "twitch",
-                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/d5e6ebb4-a245-4ebf-bea6-2183e2f39600-profile_image-50x50.png",
-                "primaryColorHex": "5C16C5",
-                "roles": { "isPartner": true, "__typename": "UserRoles" },
-                "__typename": "User"
-              },
-              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d1m7jfoe9zdc1j/6a7447b543923228eae4_twitch_317312892541_1740175257//thumb/thumb0-320x180.jpg",
-              "publishedAt": "2025-02-21T22:01:03Z",
-              "self": {
-                "isRestricted": false,
-                "viewingHistory": null,
-                "__typename": "VideoSelfEdge"
-              },
-              "title": "Same Brain LIVE | hosts @samebraintv @blackkrystel | feat. @MacktheRapper @BarefootTasha @elix @PearlTeese @MandoDoesStuff @YourBudTevin",
-              "viewCount": 24296,
-              "resourceRestriction": null,
-              "contentTags": [],
-              "__typename": "Video"
-            },
-            "__typename": "VideoEdge"
-          },
-          {
-            "cursor": "2255454897|229657|2024-09-20T00:33:22Z|14424",
-            "node": {
-              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/c50161f80844a4083de0_twitch_316459085820_1739994318/storyboards/2385688091-strip-0.jpg",
+              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/db5348892b8214b05ba7_twitch_316463768535_1769024795/storyboards/2676299402-strip-0.jpg",
               "game": {
                 "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509658-40x56.jpg",
                 "id": "509658",
@@ -244,26 +142,30 @@
                 "name": "Just Chatting",
                 "__typename": "Game"
               },
-              "id": "2385688091",
-              "lengthSeconds": 6255,
+              "broadcastIdentifier": {
+                "id": "316463768535",
+                "__typename": "BroadcastIdOnly"
+              },
+              "id": "2676299402",
+              "lengthSeconds": 6208,
               "owner": {
                 "displayName": "Twitch",
                 "id": "12826",
                 "login": "twitch",
-                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/d5e6ebb4-a245-4ebf-bea6-2183e2f39600-profile_image-50x50.png",
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-50x50.png",
                 "primaryColorHex": "5C16C5",
                 "roles": { "isPartner": true, "__typename": "UserRoles" },
                 "__typename": "User"
               },
-              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/c50161f80844a4083de0_twitch_316459085820_1739994318//thumb/thumb0-320x180.jpg",
-              "publishedAt": "2025-02-19T19:45:24Z",
+              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/db5348892b8214b05ba7_twitch_316463768535_1769024795//thumb/thumb0-320x180.jpg",
+              "publishedAt": "2026-01-21T19:46:40Z",
               "self": {
                 "isRestricted": false,
                 "viewingHistory": null,
                 "__typename": "VideoSelfEdge"
               },
-              "title": "Patch Notes Ep33 (Feb 2025) | Highlighter \u0026 Upload Limit, Clips Updates, and More w/ @merrykish and @djclancy",
-              "viewCount": 271291,
+              "title": "Patch Notes Ep42 (Jan 2026) | Dual Format \u0026 Mobile Updates and more! w/ @merrykish and @djclancy",
+              "viewCount": 275436,
               "resourceRestriction": null,
               "contentTags": [],
               "__typename": "Video"
@@ -271,47 +173,9 @@
             "__typename": "VideoEdge"
           },
           {
-            "cursor": "2255454897|229657|2024-09-20T00:33:22Z|14424",
+            "cursor": "2563893901|94922|2025-09-11T17:45:17Z|5029",
             "node": {
-              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/440b1a85511f3ec600a5_twitch_316141163900_1739559013/storyboards/2381122081-strip-0.jpg",
-              "game": {
-                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509660-40x56.jpg",
-                "id": "509660",
-                "slug": "art",
-                "displayName": "Art",
-                "name": "Art",
-                "__typename": "Game"
-              },
-              "id": "2381122081",
-              "lengthSeconds": 8019,
-              "owner": {
-                "displayName": "Twitch",
-                "id": "12826",
-                "login": "twitch",
-                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/d5e6ebb4-a245-4ebf-bea6-2183e2f39600-profile_image-50x50.png",
-                "primaryColorHex": "5C16C5",
-                "roles": { "isPartner": true, "__typename": "UserRoles" },
-                "__typename": "User"
-              },
-              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/440b1a85511f3ec600a5_twitch_316141163900_1739559013//thumb/thumb0-320x180.jpg",
-              "publishedAt": "2025-02-14T18:50:19Z",
-              "self": {
-                "isRestricted": false,
-                "viewingHistory": null,
-                "__typename": "VideoSelfEdge"
-              },
-              "title": "Valentine's Day on Twitch! - Share the Love with @videogameshay",
-              "viewCount": 110266,
-              "resourceRestriction": null,
-              "contentTags": [],
-              "__typename": "Video"
-            },
-            "__typename": "VideoEdge"
-          },
-          {
-            "cursor": "2255454897|229657|2024-09-20T00:33:22Z|14424",
-            "node": {
-              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/43610fd471560106628e_twitch_314118685307_1738698622/storyboards/2372466257-strip-0.jpg",
+              "animatedPreviewURL": "https://d1m7jfoe9zdc1j.cloudfront.net/18f3acdcff8910635b6c_twitch_317122324058_1768416320/storyboards/2669967923-strip-0.jpg",
               "game": {
                 "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509658-40x56.jpg",
                 "id": "509658",
@@ -320,26 +184,30 @@
                 "name": "Just Chatting",
                 "__typename": "Game"
               },
-              "id": "2372466257",
-              "lengthSeconds": 4007,
+              "broadcastIdentifier": {
+                "id": "317122324058",
+                "__typename": "BroadcastIdOnly"
+              },
+              "id": "2669967923",
+              "lengthSeconds": 5039,
               "owner": {
                 "displayName": "Twitch",
                 "id": "12826",
                 "login": "twitch",
-                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/d5e6ebb4-a245-4ebf-bea6-2183e2f39600-profile_image-50x50.png",
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-50x50.png",
                 "primaryColorHex": "5C16C5",
                 "roles": { "isPartner": true, "__typename": "UserRoles" },
                 "__typename": "User"
               },
-              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/43610fd471560106628e_twitch_314118685307_1738698622//thumb/thumb0-320x180.jpg",
-              "publishedAt": "2025-02-04T19:50:27Z",
+              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d1m7jfoe9zdc1j/18f3acdcff8910635b6c_twitch_317122324058_1768416320//thumb/thumb0-320x180.jpg",
+              "publishedAt": "2026-01-14T18:45:26Z",
               "self": {
                 "isRestricted": false,
                 "viewingHistory": null,
                 "__typename": "VideoSelfEdge"
               },
-              "title": "Let's Chat (Jan 2025) | Building New Worlds w/ @cyberjoules | Host: @kawaiiguy",
-              "viewCount": 27854,
+              "title": "Starting 2026 Off Strong | Creator Camp LIVE with @Snackless \u0026 @OwengeJuiceTV",
+              "viewCount": 101596,
               "resourceRestriction": null,
               "contentTags": [],
               "__typename": "Video"
@@ -347,9 +215,9 @@
             "__typename": "VideoEdge"
           },
           {
-            "cursor": "2255454897|229657|2024-09-20T00:33:22Z|14424",
+            "cursor": "2563893901|94922|2025-09-11T17:45:17Z|5029",
             "node": {
-              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/0d24a593c515e89ae034_twitch_315270067452_1738353317/storyboards/2368826776-strip-0.jpg",
+              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/20b08316bfc51a3f8faf_twitch_316076761687_1766173529/storyboards/2648011269-strip-0.jpg",
               "game": {
                 "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509658-40x56.jpg",
                 "id": "509658",
@@ -358,26 +226,30 @@
                 "name": "Just Chatting",
                 "__typename": "Game"
               },
-              "id": "2368826776",
-              "lengthSeconds": 7082,
+              "broadcastIdentifier": {
+                "id": "316076761687",
+                "__typename": "BroadcastIdOnly"
+              },
+              "id": "2648011269",
+              "lengthSeconds": 9024,
               "owner": {
                 "displayName": "Twitch",
                 "id": "12826",
                 "login": "twitch",
-                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/d5e6ebb4-a245-4ebf-bea6-2183e2f39600-profile_image-50x50.png",
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-50x50.png",
                 "primaryColorHex": "5C16C5",
                 "roles": { "isPartner": true, "__typename": "UserRoles" },
                 "__typename": "User"
               },
-              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/0d24a593c515e89ae034_twitch_315270067452_1738353317//thumb/thumb0-320x180.jpg",
-              "publishedAt": "2025-01-31T19:55:23Z",
+              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/20b08316bfc51a3f8faf_twitch_316076761687_1766173529//thumb/thumb0-320x180.jpg",
+              "publishedAt": "2025-12-19T19:45:36Z",
               "self": {
                 "isRestricted": false,
                 "viewingHistory": null,
                 "__typename": "VideoSelfEdge"
               },
-              "title": "Twitch Public Access (Jan 2025) | We Are So Back! w/ @kiwisnstars @merrykish @espesymone",
-              "viewCount": 634024,
+              "title": "Twitch Public Access (Dec 2025) | End of the year wrap up and spreading holiday cheer w/ @merrykish and @snackless",
+              "viewCount": 59979,
               "resourceRestriction": null,
               "contentTags": [],
               "__typename": "Video"
@@ -385,9 +257,9 @@
             "__typename": "VideoEdge"
           },
           {
-            "cursor": "2255454897|229657|2024-09-20T00:33:22Z|14424",
+            "cursor": "2563893901|94922|2025-09-11T17:45:17Z|5029",
             "node": {
-              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/d76f8623ea476949be81_twitch_314678760572_1737575751/storyboards/2360680564-strip-0.jpg",
+              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/e7467e4cb23d453f1e10_twitch_315909514584_1766000722/storyboards/2646376165-strip-0.jpg",
               "game": {
                 "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509658-40x56.jpg",
                 "id": "509658",
@@ -396,26 +268,30 @@
                 "name": "Just Chatting",
                 "__typename": "Game"
               },
-              "id": "2360680564",
-              "lengthSeconds": 7708,
+              "broadcastIdentifier": {
+                "id": "315909514584",
+                "__typename": "BroadcastIdOnly"
+              },
+              "id": "2646376165",
+              "lengthSeconds": 5809,
               "owner": {
                 "displayName": "Twitch",
                 "id": "12826",
                 "login": "twitch",
-                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/d5e6ebb4-a245-4ebf-bea6-2183e2f39600-profile_image-50x50.png",
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-50x50.png",
                 "primaryColorHex": "5C16C5",
                 "roles": { "isPartner": true, "__typename": "UserRoles" },
                 "__typename": "User"
               },
-              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/d76f8623ea476949be81_twitch_314678760572_1737575751//thumb/thumb0-320x180.jpg",
-              "publishedAt": "2025-01-22T19:55:56Z",
+              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/e7467e4cb23d453f1e10_twitch_315909514584_1766000722//thumb/thumb0-320x180.jpg",
+              "publishedAt": "2025-12-17T19:45:28Z",
               "self": {
                 "isRestricted": false,
                 "viewingHistory": null,
                 "__typename": "VideoSelfEdge"
               },
-              "title": "Patch Notes Ep32 (Jan 2025) | VTuber Updates w/ @merrykish, @djclancy and special guest @geega",
-              "viewCount": 210284,
+              "title": "Patch Notes Ep41 (Dec 2025) | Notification Settings Updates, Reactions on Clips and More! w/ @merrykish and @djclancy",
+              "viewCount": 230520,
               "resourceRestriction": null,
               "contentTags": [],
               "__typename": "Video"
@@ -423,37 +299,41 @@
             "__typename": "VideoEdge"
           },
           {
-            "cursor": "2255454897|229657|2024-09-20T00:33:22Z|14424",
+            "cursor": "2563893901|94922|2025-09-11T17:45:17Z|5029",
             "node": {
-              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/6cc0a031ad2a01c5fe17_twitch_314611532668_1737489667/storyboards/2359777856-strip-0.jpg",
+              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/a0e7676cb3c3c6b14a7e_twitch_315870269912_1765568717/storyboards/2642139347-strip-0.jpg",
               "game": {
-                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509658-40x56.jpg",
-                "id": "509658",
-                "slug": "just-chatting",
-                "displayName": "Just Chatting",
-                "name": "Just Chatting",
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/2082162460-40x56.jpg",
+                "id": "2082162460",
+                "slug": "yule-dogs",
+                "displayName": "Yule Dogs",
+                "name": "Yule Dogs",
                 "__typename": "Game"
               },
-              "id": "2359777856",
-              "lengthSeconds": 4130,
+              "broadcastIdentifier": {
+                "id": "315870269912",
+                "__typename": "BroadcastIdOnly"
+              },
+              "id": "2642139347",
+              "lengthSeconds": 8354,
               "owner": {
                 "displayName": "Twitch",
                 "id": "12826",
                 "login": "twitch",
-                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/d5e6ebb4-a245-4ebf-bea6-2183e2f39600-profile_image-50x50.png",
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-50x50.png",
                 "primaryColorHex": "5C16C5",
                 "roles": { "isPartner": true, "__typename": "UserRoles" },
                 "__typename": "User"
               },
-              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/6cc0a031ad2a01c5fe17_twitch_314611532668_1737489667//thumb/thumb0-320x180.jpg",
-              "publishedAt": "2025-01-21T20:01:12Z",
+              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/a0e7676cb3c3c6b14a7e_twitch_315870269912_1765568717//thumb/thumb0-320x180.jpg",
+              "publishedAt": "2025-12-12T19:45:23Z",
               "self": {
                 "isRestricted": false,
                 "viewingHistory": null,
                 "__typename": "VideoSelfEdge"
               },
-              "title": "CREATOR CAMP | 7 Strategies For Going Live w/ @kawaiiguy \u0026 @snackless",
-              "viewCount": 105783,
+              "title": "Yule Dogs w/ @julien | a festive charity event supporting the ASCPA",
+              "viewCount": 248915,
               "resourceRestriction": null,
               "contentTags": [],
               "__typename": "Video"
@@ -461,9 +341,9 @@
             "__typename": "VideoEdge"
           },
           {
-            "cursor": "2255454897|229657|2024-09-20T00:33:22Z|14424",
+            "cursor": "2563893901|94922|2025-09-11T17:45:17Z|5029",
             "node": {
-              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/7e7ca43f09ad6b701952_twitch_45206101499_1734732233/storyboards/2331864864-strip-0.jpg",
+              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/1fe5fcfc4ed226fe1873_twitch_315967942103_1765335392/storyboards/2639971146-strip-0.jpg",
               "game": {
                 "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509663-40x56.jpg",
                 "id": "509663",
@@ -472,26 +352,30 @@
                 "name": "Special Events",
                 "__typename": "Game"
               },
-              "id": "2331864864",
-              "lengthSeconds": 7290,
+              "broadcastIdentifier": {
+                "id": "315967942103",
+                "__typename": "BroadcastIdOnly"
+              },
+              "id": "2639971146",
+              "lengthSeconds": 7846,
               "owner": {
                 "displayName": "Twitch",
                 "id": "12826",
                 "login": "twitch",
-                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/d5e6ebb4-a245-4ebf-bea6-2183e2f39600-profile_image-50x50.png",
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-50x50.png",
                 "primaryColorHex": "5C16C5",
                 "roles": { "isPartner": true, "__typename": "UserRoles" },
                 "__typename": "User"
               },
-              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/7e7ca43f09ad6b701952_twitch_45206101499_1734732233//thumb/thumb0-320x180.jpg",
-              "publishedAt": "2024-12-20T22:03:58Z",
+              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/1fe5fcfc4ed226fe1873_twitch_315967942103_1765335392//thumb/thumb0-320x180.jpg",
+              "publishedAt": "2025-12-10T02:56:37Z",
               "self": {
                 "isRestricted": false,
                 "viewingHistory": null,
                 "__typename": "VideoSelfEdge"
               },
-              "title": "Meg's Holiday Bonanza! w/ @megkaylee and @friskk",
-              "viewCount": 401906,
+              "title": "Fallout Season 2 Fireside Chat \u0026 More Hosted By @willneff! | ft. Todd Howard \u0026 Geneva Robertson-Dworet!",
+              "viewCount": 197489,
               "resourceRestriction": null,
               "contentTags": [],
               "__typename": "Video"
@@ -499,9 +383,9 @@
             "__typename": "VideoEdge"
           },
           {
-            "cursor": "2255454897|229657|2024-09-20T00:33:22Z|14424",
+            "cursor": "2563893901|94922|2025-09-11T17:45:17Z|5029",
             "node": {
-              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/70ccf4f6b88fc5ea6414_twitch_45205815099_1734728418/storyboards/2331817055-strip-0.jpg",
+              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/31064272d538e1631cf0_twitch_315954902231_1765241150/storyboards/2639048616-strip-0.jpg",
               "game": {
                 "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509663-40x56.jpg",
                 "id": "509663",
@@ -510,26 +394,30 @@
                 "name": "Special Events",
                 "__typename": "Game"
               },
-              "id": "2331817055",
-              "lengthSeconds": 3752,
+              "broadcastIdentifier": {
+                "id": "315954902231",
+                "__typename": "BroadcastIdOnly"
+              },
+              "id": "2639048616",
+              "lengthSeconds": 8430,
               "owner": {
                 "displayName": "Twitch",
                 "id": "12826",
                 "login": "twitch",
-                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/d5e6ebb4-a245-4ebf-bea6-2183e2f39600-profile_image-50x50.png",
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-50x50.png",
                 "primaryColorHex": "5C16C5",
                 "roles": { "isPartner": true, "__typename": "UserRoles" },
                 "__typename": "User"
               },
-              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/70ccf4f6b88fc5ea6414_twitch_45205815099_1734728418//thumb/thumb0-320x180.jpg",
-              "publishedAt": "2024-12-20T21:00:23Z",
+              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/31064272d538e1631cf0_twitch_315954902231_1765241150//thumb/thumb0-320x180.jpg",
+              "publishedAt": "2025-12-09T00:45:55Z",
               "self": {
                 "isRestricted": false,
                 "viewingHistory": null,
                 "__typename": "VideoSelfEdge"
               },
-              "title": "Holiday Hoopla 2024 Recap w/ @djclancy",
-              "viewCount": 266937,
+              "title": "Welcome to IRL Inn Weekend 2: Decorating for the Holiday Spirit! !IRLInn feat. @krystalogy @barefoottasha @ninjayla and @lifeofrio",
+              "viewCount": 300925,
               "resourceRestriction": null,
               "contentTags": [],
               "__typename": "Video"
@@ -537,9 +425,387 @@
             "__typename": "VideoEdge"
           },
           {
-            "cursor": "2255454897|229657|2024-09-20T00:33:22Z|14424",
+            "cursor": "2563893901|94922|2025-09-11T17:45:17Z|5029",
             "node": {
-              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/6d8f6bd9ba1099e6d86b_twitch_45167573115_1734131190/storyboards/2326040666-strip-0.jpg",
+              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/967b6848ea1899ef99d3_twitch_315414048759_1764783911/storyboards/2634434914-strip-0.jpg",
+              "game": {
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509658-40x56.jpg",
+                "id": "509658",
+                "slug": "just-chatting",
+                "displayName": "Just Chatting",
+                "name": "Just Chatting",
+                "__typename": "Game"
+              },
+              "broadcastIdentifier": {
+                "id": "315414048759",
+                "__typename": "BroadcastIdOnly"
+              },
+              "id": "2634434914",
+              "lengthSeconds": 4624,
+              "owner": {
+                "displayName": "Twitch",
+                "id": "12826",
+                "login": "twitch",
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-50x50.png",
+                "primaryColorHex": "5C16C5",
+                "roles": { "isPartner": true, "__typename": "UserRoles" },
+                "__typename": "User"
+              },
+              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/967b6848ea1899ef99d3_twitch_315414048759_1764783911//thumb/thumb0-320x180.jpg",
+              "publishedAt": "2025-12-03T17:45:17Z",
+              "self": {
+                "isRestricted": false,
+                "viewingHistory": null,
+                "__typename": "VideoSelfEdge"
+              },
+              "title": "Auditing Your Channel \u0026 Content | Creator Camp LIVE with @Snackless \u0026 @OwengeJuiceTV",
+              "viewCount": 44536,
+              "resourceRestriction": null,
+              "contentTags": [],
+              "__typename": "Video"
+            },
+            "__typename": "VideoEdge"
+          },
+          {
+            "cursor": "2563893901|94922|2025-09-11T17:45:17Z|5029",
+            "node": {
+              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/7534b2f4c54f31666cee_twitch_315762252631_1763747117/storyboards/2624337398-strip-0.jpg",
+              "game": {
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509658-40x56.jpg",
+                "id": "509658",
+                "slug": "just-chatting",
+                "displayName": "Just Chatting",
+                "name": "Just Chatting",
+                "__typename": "Game"
+              },
+              "broadcastIdentifier": {
+                "id": "315762252631",
+                "__typename": "BroadcastIdOnly"
+              },
+              "id": "2624337398",
+              "lengthSeconds": 6364,
+              "owner": {
+                "displayName": "Twitch",
+                "id": "12826",
+                "login": "twitch",
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-50x50.png",
+                "primaryColorHex": "5C16C5",
+                "roles": { "isPartner": true, "__typename": "UserRoles" },
+                "__typename": "User"
+              },
+              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/7534b2f4c54f31666cee_twitch_315762252631_1763747117/thumb/custom-b88c74bd-4bb7-41ce-917e-0d5f827aec4d-320x180.png",
+              "publishedAt": "2025-11-21T17:45:22Z",
+              "self": {
+                "isRestricted": false,
+                "viewingHistory": null,
+                "__typename": "VideoSelfEdge"
+              },
+              "title": "Twitch Public Access (Nov 21, 2025) | w/ @merrykish @icharlie ft. @tacticalgh0stt @simplyaretha",
+              "viewCount": 59555,
+              "resourceRestriction": null,
+              "contentTags": [],
+              "__typename": "Video"
+            },
+            "__typename": "VideoEdge"
+          },
+          {
+            "cursor": "2563893901|94922|2025-09-11T17:45:17Z|5029",
+            "node": {
+              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/9e8467c6f70d20cecf13_twitch_315692376920_1763588714/storyboards/2622834788-strip-0.jpg",
+              "game": {
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509658-40x56.jpg",
+                "id": "509658",
+                "slug": "just-chatting",
+                "displayName": "Just Chatting",
+                "name": "Just Chatting",
+                "__typename": "Game"
+              },
+              "broadcastIdentifier": {
+                "id": "315692376920",
+                "__typename": "BroadcastIdOnly"
+              },
+              "id": "2622834788",
+              "lengthSeconds": 6427,
+              "owner": {
+                "displayName": "Twitch",
+                "id": "12826",
+                "login": "twitch",
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-50x50.png",
+                "primaryColorHex": "5C16C5",
+                "roles": { "isPartner": true, "__typename": "UserRoles" },
+                "__typename": "User"
+              },
+              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/9e8467c6f70d20cecf13_twitch_315692376920_1763588714//thumb/thumb0-320x180.jpg",
+              "publishedAt": "2025-11-19T21:45:20Z",
+              "self": {
+                "isRestricted": false,
+                "viewingHistory": null,
+                "__typename": "VideoSelfEdge"
+              },
+              "title": "Patch Notes E40 (Nov 2025) | View Count Updates, Emote Guidelines, Notification Settings, and More w/ @merrykish and @djclancy",
+              "viewCount": 268916,
+              "resourceRestriction": null,
+              "contentTags": [],
+              "__typename": "Video"
+            },
+            "__typename": "VideoEdge"
+          },
+          {
+            "cursor": "2563893901|94922|2025-09-11T17:45:17Z|5029",
+            "node": {
+              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/681ceee293121b0251bc_twitch_315678847192_1763428583/storyboards/2621335563-strip-0.jpg",
+              "game": {
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509658-40x56.jpg",
+                "id": "509658",
+                "slug": "just-chatting",
+                "displayName": "Just Chatting",
+                "name": "Just Chatting",
+                "__typename": "Game"
+              },
+              "broadcastIdentifier": {
+                "id": "315678847192",
+                "__typename": "BroadcastIdOnly"
+              },
+              "id": "2621335563",
+              "lengthSeconds": 15340,
+              "owner": {
+                "displayName": "Twitch",
+                "id": "12826",
+                "login": "twitch",
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-50x50.png",
+                "primaryColorHex": "5C16C5",
+                "roles": { "isPartner": true, "__typename": "UserRoles" },
+                "__typename": "User"
+              },
+              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/681ceee293121b0251bc_twitch_315678847192_1763428583//thumb/thumb2-320x180.jpg",
+              "publishedAt": "2025-11-18T01:16:28Z",
+              "self": {
+                "isRestricted": false,
+                "viewingHistory": null,
+                "__typename": "VideoSelfEdge"
+              },
+              "title": "Wicked: Together For Good w/ @QTCinderella⁩ \u0026 @ChelseaBytes⁩",
+              "viewCount": 346784,
+              "resourceRestriction": null,
+              "contentTags": [],
+              "__typename": "Video"
+            },
+            "__typename": "VideoEdge"
+          },
+          {
+            "cursor": "2563893901|94922|2025-09-11T17:45:17Z|5029",
+            "node": {
+              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/5e911a629da8b6a81e57_twitch_315272748279_1762976776/storyboards/2616714613-strip-0.jpg",
+              "game": {
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509658-40x56.jpg",
+                "id": "509658",
+                "slug": "just-chatting",
+                "displayName": "Just Chatting",
+                "name": "Just Chatting",
+                "__typename": "Game"
+              },
+              "broadcastIdentifier": {
+                "id": "315272748279",
+                "__typename": "BroadcastIdOnly"
+              },
+              "id": "2616714613",
+              "lengthSeconds": 4393,
+              "owner": {
+                "displayName": "Twitch",
+                "id": "12826",
+                "login": "twitch",
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-50x50.png",
+                "primaryColorHex": "5C16C5",
+                "roles": { "isPartner": true, "__typename": "UserRoles" },
+                "__typename": "User"
+              },
+              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/5e911a629da8b6a81e57_twitch_315272748279_1762976776//thumb/thumb0-320x180.jpg",
+              "publishedAt": "2025-11-12T19:46:22Z",
+              "self": {
+                "isRestricted": false,
+                "viewingHistory": null,
+                "__typename": "VideoSelfEdge"
+              },
+              "title": "Let's Chat | Host: @kawaiiguy Special Guest: @seum (11/12/25)",
+              "viewCount": 74521,
+              "resourceRestriction": null,
+              "contentTags": [],
+              "__typename": "Video"
+            },
+            "__typename": "VideoEdge"
+          },
+          {
+            "cursor": "2563893901|94922|2025-09-11T17:45:17Z|5029",
+            "node": {
+              "animatedPreviewURL": "https://d1m7jfoe9zdc1j.cloudfront.net/ab6bd99495085b52e224_twitch_315885590234_1762368453/storyboards/2610556251-strip-0.jpg",
+              "game": {
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509658-40x56.jpg",
+                "id": "509658",
+                "slug": "just-chatting",
+                "displayName": "Just Chatting",
+                "name": "Just Chatting",
+                "__typename": "Game"
+              },
+              "broadcastIdentifier": {
+                "id": "315885590234",
+                "__typename": "BroadcastIdOnly"
+              },
+              "id": "2610556251",
+              "lengthSeconds": 4489,
+              "owner": {
+                "displayName": "Twitch",
+                "id": "12826",
+                "login": "twitch",
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-50x50.png",
+                "primaryColorHex": "5C16C5",
+                "roles": { "isPartner": true, "__typename": "UserRoles" },
+                "__typename": "User"
+              },
+              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d1m7jfoe9zdc1j/ab6bd99495085b52e224_twitch_315885590234_1762368453//thumb/thumb0-320x180.jpg",
+              "publishedAt": "2025-11-05T18:47:39Z",
+              "self": {
+                "isRestricted": false,
+                "viewingHistory": null,
+                "__typename": "VideoSelfEdge"
+              },
+              "title": "Evolving as a Creator | Creator Camp LIVE with @Snackless \u0026 @OwengeJuiceTV",
+              "viewCount": 89153,
+              "resourceRestriction": null,
+              "contentTags": [],
+              "__typename": "Video"
+            },
+            "__typename": "VideoEdge"
+          },
+          {
+            "cursor": "2563893901|94922|2025-09-11T17:45:17Z|5029",
+            "node": {
+              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/39b7cf29e5a08fb7b2e2_twitch_315569384792_1762289113/storyboards/2609812731-strip-0.jpg",
+              "game": {
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509658-40x56.jpg",
+                "id": "509658",
+                "slug": "just-chatting",
+                "displayName": "Just Chatting",
+                "name": "Just Chatting",
+                "__typename": "Game"
+              },
+              "broadcastIdentifier": {
+                "id": "315569384792",
+                "__typename": "BroadcastIdOnly"
+              },
+              "id": "2609812731",
+              "lengthSeconds": 6163,
+              "owner": {
+                "displayName": "Twitch",
+                "id": "12826",
+                "login": "twitch",
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-50x50.png",
+                "primaryColorHex": "5C16C5",
+                "roles": { "isPartner": true, "__typename": "UserRoles" },
+                "__typename": "User"
+              },
+              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/39b7cf29e5a08fb7b2e2_twitch_315569384792_1762289113//thumb/thumb0-320x180.jpg",
+              "publishedAt": "2025-11-04T20:45:18Z",
+              "self": {
+                "isRestricted": false,
+                "viewingHistory": null,
+                "__typename": "VideoSelfEdge"
+              },
+              "title": "VAMOS! A live da Twitch em Português com a @malena0202 @brunin e o CEO @djclancy!",
+              "viewCount": 110934,
+              "resourceRestriction": null,
+              "contentTags": [],
+              "__typename": "Video"
+            },
+            "__typename": "VideoEdge"
+          },
+          {
+            "cursor": "2563893901|94922|2025-09-11T17:45:17Z|5029",
+            "node": {
+              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/3593cae5e154926afe83_twitch_315212544247_1762274725/storyboards/2609630931-strip-0.jpg",
+              "game": {
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509658-40x56.jpg",
+                "id": "509658",
+                "slug": "just-chatting",
+                "displayName": "Just Chatting",
+                "name": "Just Chatting",
+                "__typename": "Game"
+              },
+              "broadcastIdentifier": {
+                "id": "315212544247",
+                "__typename": "BroadcastIdOnly"
+              },
+              "id": "2609630931",
+              "lengthSeconds": 6840,
+              "owner": {
+                "displayName": "Twitch",
+                "id": "12826",
+                "login": "twitch",
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-50x50.png",
+                "primaryColorHex": "5C16C5",
+                "roles": { "isPartner": true, "__typename": "UserRoles" },
+                "__typename": "User"
+              },
+              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/3593cae5e154926afe83_twitch_315212544247_1762274725//thumb/thumb0-320x180.jpg",
+              "publishedAt": "2025-11-04T16:45:31Z",
+              "self": {
+                "isRestricted": false,
+                "viewingHistory": null,
+                "__typename": "VideoSelfEdge"
+              },
+              "title": "VAMOS! el show de Twitch en Español con @djclancy @argie @gorilon \u0026 @Suzyroxx |  Noviembre de 2025",
+              "viewCount": 153642,
+              "resourceRestriction": null,
+              "contentTags": [],
+              "__typename": "Video"
+            },
+            "__typename": "VideoEdge"
+          },
+          {
+            "cursor": "2563893901|94922|2025-09-11T17:45:17Z|5029",
+            "node": {
+              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/93437dc8dad456e009d0_twitch_315496913239_1761782401/storyboards/2604792750-strip-0.jpg",
+              "game": {
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/750120111-40x56.jpg",
+                "id": "750120111",
+                "slug": "fright-fest",
+                "displayName": "Fright Fest",
+                "name": "Fright Fest",
+                "__typename": "Game"
+              },
+              "broadcastIdentifier": {
+                "id": "315496913239",
+                "__typename": "BroadcastIdOnly"
+              },
+              "id": "2604792750",
+              "lengthSeconds": 11064,
+              "owner": {
+                "displayName": "Twitch",
+                "id": "12826",
+                "login": "twitch",
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-50x50.png",
+                "primaryColorHex": "5C16C5",
+                "roles": { "isPartner": true, "__typename": "UserRoles" },
+                "__typename": "User"
+              },
+              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/93437dc8dad456e009d0_twitch_315496913239_1761782401//thumb/thumb0-320x180.jpg",
+              "publishedAt": "2025-10-30T00:00:06Z",
+              "self": {
+                "isRestricted": false,
+                "viewingHistory": null,
+                "__typename": "VideoSelfEdge"
+              },
+              "title": "Paranormal Detour with @detune and @nyybeats Exploring the haunted Whittier Museum !frightfest",
+              "viewCount": 131930,
+              "resourceRestriction": null,
+              "contentTags": [],
+              "__typename": "Video"
+            },
+            "__typename": "VideoEdge"
+          },
+          {
+            "cursor": "2563893901|94922|2025-09-11T17:45:17Z|5029",
+            "node": {
+              "animatedPreviewURL": "https://d1m7jfoe9zdc1j.cloudfront.net/36f38fd15a39b94a717c_twitch_315622880091_1760899512/storyboards/2596166652-strip-0.jpg",
               "game": {
                 "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509663-40x56.jpg",
                 "id": "509663",
@@ -548,26 +814,30 @@
                 "name": "Special Events",
                 "__typename": "Game"
               },
-              "id": "2326040666",
-              "lengthSeconds": 5736,
+              "broadcastIdentifier": {
+                "id": "315622880091",
+                "__typename": "BroadcastIdOnly"
+              },
+              "id": "2596166652",
+              "lengthSeconds": 15526,
               "owner": {
                 "displayName": "Twitch",
                 "id": "12826",
                 "login": "twitch",
-                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/d5e6ebb4-a245-4ebf-bea6-2183e2f39600-profile_image-50x50.png",
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-50x50.png",
                 "primaryColorHex": "5C16C5",
                 "roles": { "isPartner": true, "__typename": "UserRoles" },
                 "__typename": "User"
               },
-              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/6d8f6bd9ba1099e6d86b_twitch_45167573115_1734131190//thumb/thumb0-320x180.jpg",
-              "publishedAt": "2024-12-13T23:06:36Z",
+              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d1m7jfoe9zdc1j/36f38fd15a39b94a717c_twitch_315622880091_1760899512//thumb/thumb0-320x180.jpg",
+              "publishedAt": "2025-10-19T18:45:19Z",
               "self": {
                 "isRestricted": false,
                 "viewingHistory": null,
                 "__typename": "VideoSelfEdge"
               },
-              "title": "Twitch Pride Guild Presents Gingerbread Bash | Host @londynbradshaw Guests: @jenisonline @biqtchpuddin @pearlteese @madiduvernay",
-              "viewCount": 76012,
+              "title": "TwitchCon San Diego Day 3 | Roblox Dress to Impress LIVE hosted @mari ft. @swiftor @Lanaraee @iBugou @umoyaefreespirit @APlatypuss and more",
+              "viewCount": 613253,
               "resourceRestriction": null,
               "contentTags": [],
               "__typename": "Video"
@@ -575,9 +845,170 @@
             "__typename": "VideoEdge"
           },
           {
-            "cursor": "2255454897|229657|2024-09-20T00:33:22Z|14424",
+            "cursor": "2563893901|94922|2025-09-11T17:45:17Z|5029",
             "node": {
-              "animatedPreviewURL": "https://d1m7jfoe9zdc1j.cloudfront.net/82ef4729c6011d6072e2_twitch_43295848617_1733849129/storyboards/2323270866-strip-0.jpg",
+              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/910717156f8f2483813a_twitch_315367221591_1760809516/storyboards/2595207868-strip-0.jpg",
+              "game": {
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509663-40x56.jpg",
+                "id": "509663",
+                "slug": "special-events",
+                "displayName": "Special Events",
+                "name": "Special Events",
+                "__typename": "Game"
+              },
+              "broadcastIdentifier": {
+                "id": "315367221591",
+                "__typename": "BroadcastIdOnly"
+              },
+              "id": "2595207868",
+              "lengthSeconds": 27347,
+              "owner": {
+                "displayName": "Twitch",
+                "id": "12826",
+                "login": "twitch",
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-50x50.png",
+                "primaryColorHex": "5C16C5",
+                "roles": { "isPartner": true, "__typename": "UserRoles" },
+                "__typename": "User"
+              },
+              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/910717156f8f2483813a_twitch_315367221591_1760809516//thumb/thumb0-320x180.jpg",
+              "publishedAt": "2025-10-18T17:45:22Z",
+              "self": {
+                "isRestricted": false,
+                "viewingHistory": null,
+                "__typename": "VideoSelfEdge"
+              },
+              "title": "TwitchCon San Diego Day 2 | Guts Or Glory On Jonks Mountain! ft. @EverythingNowShow @cyr @peachjars @bbnogames @willneff and more!",
+              "viewCount": 646178,
+              "resourceRestriction": null,
+              "contentTags": [],
+              "__typename": "Video"
+            },
+            "__typename": "VideoEdge"
+          },
+          {
+            "cursor": "2563893901|94922|2025-09-11T17:45:17Z|5029",
+            "node": {
+              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/63b77961bfbeb660969e_12826_2594660854_1ad1cbcb-9809-4330-8c7f-e95eed0f2b28/storyboards/2594660854-strip-0.jpg",
+              "game": null,
+              "broadcastIdentifier": {
+                "id": "1",
+                "__typename": "BroadcastIdOnly"
+              },
+              "id": "2594660854",
+              "lengthSeconds": 3699,
+              "owner": {
+                "displayName": "Twitch",
+                "id": "12826",
+                "login": "twitch",
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-50x50.png",
+                "primaryColorHex": "5C16C5",
+                "roles": { "isPartner": true, "__typename": "UserRoles" },
+                "__typename": "User"
+              },
+              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/63b77961bfbeb660969e_12826_2594660854_1ad1cbcb-9809-4330-8c7f-e95eed0f2b28/thumb/custom-e431bf7a-fbcb-4c74-9afd-9970039c0e0e-320x180.jpeg",
+              "publishedAt": "2025-10-18T01:30:36Z",
+              "self": {
+                "isRestricted": false,
+                "viewingHistory": null,
+                "__typename": "VideoSelfEdge"
+              },
+              "title": "Opening Ceremony | TwitchCon San Diego 2025",
+              "viewCount": 227,
+              "resourceRestriction": null,
+              "contentTags": [],
+              "__typename": "Video"
+            },
+            "__typename": "VideoEdge"
+          },
+          {
+            "cursor": "2563893901|94922|2025-09-11T17:45:17Z|5029",
+            "node": {
+              "animatedPreviewURL": "https://d1m7jfoe9zdc1j.cloudfront.net/54953538d99aff8e5cc9_twitch_315542915546_1760668478/storyboards/2593846006-strip-0.jpg",
+              "game": {
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509658-40x56.jpg",
+                "id": "509658",
+                "slug": "just-chatting",
+                "displayName": "Just Chatting",
+                "name": "Just Chatting",
+                "__typename": "Game"
+              },
+              "broadcastIdentifier": {
+                "id": "315542915546",
+                "__typename": "BroadcastIdOnly"
+              },
+              "id": "2593846006",
+              "lengthSeconds": 5594,
+              "owner": {
+                "displayName": "Twitch",
+                "id": "12826",
+                "login": "twitch",
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-50x50.png",
+                "primaryColorHex": "5C16C5",
+                "roles": { "isPartner": true, "__typename": "UserRoles" },
+                "__typename": "User"
+              },
+              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d1m7jfoe9zdc1j/54953538d99aff8e5cc9_twitch_315542915546_1760668478//thumb/thumb0-320x180.jpg",
+              "publishedAt": "2025-10-17T02:34:45Z",
+              "self": {
+                "isRestricted": false,
+                "viewingHistory": null,
+                "__typename": "VideoSelfEdge"
+              },
+              "title": "TwitchCon San Diego Partner Party - Join @djclancy \u0026 Special Guests from TwitchCon!",
+              "viewCount": 58078,
+              "resourceRestriction": null,
+              "contentTags": [],
+              "__typename": "Video"
+            },
+            "__typename": "VideoEdge"
+          },
+          {
+            "cursor": "2563893901|94922|2025-09-11T17:45:17Z|5029",
+            "node": {
+              "animatedPreviewURL": "https://d1m7jfoe9zdc1j.cloudfront.net/f61f5d4aaf5355b73163_twitch_315379290202_1759862729/storyboards/2585734295-strip-0.jpg",
+              "game": {
+                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509658-40x56.jpg",
+                "id": "509658",
+                "slug": "just-chatting",
+                "displayName": "Just Chatting",
+                "name": "Just Chatting",
+                "__typename": "Game"
+              },
+              "broadcastIdentifier": {
+                "id": "315379290202",
+                "__typename": "BroadcastIdOnly"
+              },
+              "id": "2585734295",
+              "lengthSeconds": 4612,
+              "owner": {
+                "displayName": "Twitch",
+                "id": "12826",
+                "login": "twitch",
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-50x50.png",
+                "primaryColorHex": "5C16C5",
+                "roles": { "isPartner": true, "__typename": "UserRoles" },
+                "__typename": "User"
+              },
+              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d1m7jfoe9zdc1j/f61f5d4aaf5355b73163_twitch_315379290202_1759862729//thumb/thumb0-320x180.jpg",
+              "publishedAt": "2025-10-07T18:45:35Z",
+              "self": {
+                "isRestricted": false,
+                "viewingHistory": null,
+                "__typename": "VideoSelfEdge"
+              },
+              "title": "Let's Chat (10/7/25) | Host: @kawaiiguy Guest: @thepresidentnoir",
+              "viewCount": 91131,
+              "resourceRestriction": null,
+              "contentTags": [],
+              "__typename": "Video"
+            },
+            "__typename": "VideoEdge"
+          },
+          {
+            "cursor": "2563893901|94922|2025-09-11T17:45:17Z|5029",
+            "node": {
+              "animatedPreviewURL": "https://d1m7jfoe9zdc1j.cloudfront.net/a3ecb8285f3d4cff72f6_twitch_315226703196_1759671361/storyboards/2583908395-strip-0.jpg",
               "game": {
                 "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509672-40x56.jpg",
                 "id": "509672",
@@ -586,26 +1017,30 @@
                 "name": "IRL",
                 "__typename": "Game"
               },
-              "id": "2323270866",
-              "lengthSeconds": 15389,
+              "broadcastIdentifier": {
+                "id": "315226703196",
+                "__typename": "BroadcastIdOnly"
+              },
+              "id": "2583908395",
+              "lengthSeconds": 7282,
               "owner": {
                 "displayName": "Twitch",
                 "id": "12826",
                 "login": "twitch",
-                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/d5e6ebb4-a245-4ebf-bea6-2183e2f39600-profile_image-50x50.png",
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-50x50.png",
                 "primaryColorHex": "5C16C5",
                 "roles": { "isPartner": true, "__typename": "UserRoles" },
                 "__typename": "User"
               },
-              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d1m7jfoe9zdc1j/82ef4729c6011d6072e2_twitch_43295848617_1733849129//thumb/thumb0-320x180.jpg",
-              "publishedAt": "2024-12-10T16:45:35Z",
+              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d1m7jfoe9zdc1j/a3ecb8285f3d4cff72f6_twitch_315226703196_1759671361//thumb/thumb0-320x180.jpg",
+              "publishedAt": "2025-10-05T13:36:07Z",
               "self": {
                 "isRestricted": false,
                 "viewingHistory": null,
                 "__typename": "VideoSelfEdge"
               },
-              "title": "Twitch Recap: 2024 according to Twitch Chat!",
-              "viewCount": 772895,
+              "title": "IRL Streaming at GP Explorer with @djclancy Chec k out @squeezie Channel",
+              "viewCount": 88149,
               "resourceRestriction": null,
               "contentTags": [],
               "__typename": "Video"
@@ -613,9 +1048,9 @@
             "__typename": "VideoEdge"
           },
           {
-            "cursor": "2255454897|229657|2024-09-20T00:33:22Z|14424",
+            "cursor": "2563893901|94922|2025-09-11T17:45:17Z|5029",
             "node": {
-              "animatedPreviewURL": "https://d1m7jfoe9zdc1j.cloudfront.net/b5662e270aebf55ad4c0_twitch_52605018685_1733527307/storyboards/2320124450-strip-0.jpg",
+              "animatedPreviewURL": "https://d1m7jfoe9zdc1j.cloudfront.net/20ecdc55743d10fb9c6f_twitch_315347218267_1759541388/storyboards/2582652492-strip-0.jpg",
               "game": {
                 "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509658-40x56.jpg",
                 "id": "509658",
@@ -624,26 +1059,30 @@
                 "name": "Just Chatting",
                 "__typename": "Game"
               },
-              "id": "2320124450",
-              "lengthSeconds": 6045,
+              "broadcastIdentifier": {
+                "id": "315347218267",
+                "__typename": "BroadcastIdOnly"
+              },
+              "id": "2582652492",
+              "lengthSeconds": 9340,
               "owner": {
                 "displayName": "Twitch",
                 "id": "12826",
                 "login": "twitch",
-                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/d5e6ebb4-a245-4ebf-bea6-2183e2f39600-profile_image-50x50.png",
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-50x50.png",
                 "primaryColorHex": "5C16C5",
                 "roles": { "isPartner": true, "__typename": "UserRoles" },
                 "__typename": "User"
               },
-              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d1m7jfoe9zdc1j/b5662e270aebf55ad4c0_twitch_52605018685_1733527307//thumb/thumb0-320x180.jpg",
-              "publishedAt": "2024-12-06T23:21:53Z",
+              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d1m7jfoe9zdc1j/20ecdc55743d10fb9c6f_twitch_315347218267_1759541388//thumb/thumb0-320x180.jpg",
+              "publishedAt": "2025-10-04T01:29:54Z",
               "self": {
                 "isRestricted": false,
                 "viewingHistory": null,
                 "__typename": "VideoSelfEdge"
               },
-              "title": "Twitch's Holiday Nice List w/ @ashsaidhi and @meadow!",
-              "viewCount": 200666,
+              "title": "Hey Chat, Make Me a Hot Dog",
+              "viewCount": 104663,
               "resourceRestriction": null,
               "contentTags": [],
               "__typename": "Video"
@@ -651,9 +1090,9 @@
             "__typename": "VideoEdge"
           },
           {
-            "cursor": "2255454897|229657|2024-09-20T00:33:22Z|14424",
+            "cursor": "2563893901|94922|2025-09-11T17:45:17Z|5029",
             "node": {
-              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/cfcdd1aeacbc3ae7b445_twitch_45116457179_1733342144/storyboards/2318286035-strip-0.jpg",
+              "animatedPreviewURL": "https://d3vd9lfkzbru3h.cloudfront.net/54b779f9030d1f96ee3f_twitch_314919493363_1758858906/storyboards/2575971930-strip-0.jpg",
               "game": {
                 "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509658-40x56.jpg",
                 "id": "509658",
@@ -662,26 +1101,30 @@
                 "name": "Just Chatting",
                 "__typename": "Game"
               },
-              "id": "2318286035",
-              "lengthSeconds": 6517,
+              "broadcastIdentifier": {
+                "id": "314919493363",
+                "__typename": "BroadcastIdOnly"
+              },
+              "id": "2575971930",
+              "lengthSeconds": 2200,
               "owner": {
                 "displayName": "Twitch",
                 "id": "12826",
                 "login": "twitch",
-                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/d5e6ebb4-a245-4ebf-bea6-2183e2f39600-profile_image-50x50.png",
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-50x50.png",
                 "primaryColorHex": "5C16C5",
                 "roles": { "isPartner": true, "__typename": "UserRoles" },
                 "__typename": "User"
               },
-              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/cfcdd1aeacbc3ae7b445_twitch_45116457179_1733342144//thumb/thumb0-320x180.jpg",
-              "publishedAt": "2024-12-04T19:55:49Z",
+              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d3vd9lfkzbru3h/54b779f9030d1f96ee3f_twitch_314919493363_1758858906//thumb/thumb0-320x180.jpg",
+              "publishedAt": "2025-09-26T03:55:12Z",
               "self": {
                 "isRestricted": false,
                 "viewingHistory": null,
                 "__typename": "VideoSelfEdge"
               },
-              "title": "Patch Notes Ep31 (Dec 2024) hosted by @djclancy and @merrykish",
-              "viewCount": 71813,
+              "title": "Let's Chat : @k4sen \u0026 @fps_shaka w/ @noppo_cs",
+              "viewCount": 22649,
               "resourceRestriction": null,
               "contentTags": [],
               "__typename": "Video"
@@ -689,9 +1132,9 @@
             "__typename": "VideoEdge"
           },
           {
-            "cursor": "2255454897|229657|2024-09-20T00:33:22Z|14424",
+            "cursor": "2563893901|94922|2025-09-11T17:45:17Z|5029",
             "node": {
-              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/cc6218feb0970bdd2b7f_twitch_45111516779_1733256289/storyboards/2317492577-strip-0.jpg",
+              "animatedPreviewURL": "https://d1m7jfoe9zdc1j.cloudfront.net/7807922af8758ea88134_twitch_315169883226_1758833114/storyboards/2575666053-strip-0.jpg",
               "game": {
                 "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509658-40x56.jpg",
                 "id": "509658",
@@ -700,26 +1143,30 @@
                 "name": "Just Chatting",
                 "__typename": "Game"
               },
-              "id": "2317492577",
-              "lengthSeconds": 3659,
+              "broadcastIdentifier": {
+                "id": "315169883226",
+                "__typename": "BroadcastIdOnly"
+              },
+              "id": "2575666053",
+              "lengthSeconds": 8374,
               "owner": {
                 "displayName": "Twitch",
                 "id": "12826",
                 "login": "twitch",
-                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/d5e6ebb4-a245-4ebf-bea6-2183e2f39600-profile_image-50x50.png",
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-50x50.png",
                 "primaryColorHex": "5C16C5",
                 "roles": { "isPartner": true, "__typename": "UserRoles" },
                 "__typename": "User"
               },
-              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/cc6218feb0970bdd2b7f_twitch_45111516779_1733256289//thumb/thumb0-320x180.jpg",
-              "publishedAt": "2024-12-03T20:04:54Z",
+              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d1m7jfoe9zdc1j/7807922af8758ea88134_twitch_315169883226_1758833114//thumb/thumb0-320x180.jpg",
+              "publishedAt": "2025-09-25T20:45:19Z",
               "self": {
                 "isRestricted": false,
                 "viewingHistory": null,
                 "__typename": "VideoSelfEdge"
               },
-              "title": "Let's Chat | @kawaiiguy Guest: @kdotdagawd",
-              "viewCount": 198306,
+              "title": "@jubby's Cooking Misterio! ft. @deadpixelttv @el_jefenix @marisollords and @saelysss",
+              "viewCount": 38346,
               "resourceRestriction": null,
               "contentTags": [],
               "__typename": "Video"
@@ -727,9 +1174,9 @@
             "__typename": "VideoEdge"
           },
           {
-            "cursor": "2255454897|229657|2024-09-20T00:33:22Z|14424",
+            "cursor": "2563893901|94922|2025-09-11T17:45:17Z|5029",
             "node": {
-              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/11b6e4d6172a87065e69_twitch_45054504075_1732305047/storyboards/2308429719-strip-0.jpg",
+              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/04891cab6877cd3dceb0_twitch_314919411191_1758743118/storyboards/2574798976-strip-0.jpg",
               "game": {
                 "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509658-40x56.jpg",
                 "id": "509658",
@@ -738,26 +1185,30 @@
                 "name": "Just Chatting",
                 "__typename": "Game"
               },
-              "id": "2308429719",
-              "lengthSeconds": 5508,
+              "broadcastIdentifier": {
+                "id": "314919411191",
+                "__typename": "BroadcastIdOnly"
+              },
+              "id": "2574798976",
+              "lengthSeconds": 6082,
               "owner": {
                 "displayName": "Twitch",
                 "id": "12826",
                 "login": "twitch",
-                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/d5e6ebb4-a245-4ebf-bea6-2183e2f39600-profile_image-50x50.png",
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-50x50.png",
                 "primaryColorHex": "5C16C5",
                 "roles": { "isPartner": true, "__typename": "UserRoles" },
                 "__typename": "User"
               },
-              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/11b6e4d6172a87065e69_twitch_45054504075_1732305047//thumb/thumb0-320x180.jpg",
-              "publishedAt": "2024-11-22T19:50:53Z",
+              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/04891cab6877cd3dceb0_twitch_314919411191_1758743118//thumb/thumb0-320x180.jpg",
+              "publishedAt": "2025-09-24T19:45:24Z",
               "self": {
                 "isRestricted": false,
                 "viewingHistory": null,
                 "__typename": "VideoSelfEdge"
               },
-              "title": "Twitch Public Access - November 2024 w/ @merrykish, @espesymone, and @sciants_streams",
-              "viewCount": 146464,
+              "title": "Patch Notes Ep39 (Sept. 2025) | Partnership Criteria and Moderation Tools Updates w/ @djclancy",
+              "viewCount": 143675,
               "resourceRestriction": null,
               "contentTags": [],
               "__typename": "Video"
@@ -765,9 +1216,9 @@
             "__typename": "VideoEdge"
           },
           {
-            "cursor": "2255454897|229657|2024-09-20T00:33:22Z|14424",
+            "cursor": "2563893901|94922|2025-09-11T17:45:17Z|5029",
             "node": {
-              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/81890b6c0933bff2f179_twitch_45049220123_1732218346/storyboards/2307608878-strip-0.jpg",
+              "animatedPreviewURL": "https://d1m7jfoe9zdc1j.cloudfront.net/4e12d92949b20025b444_twitch_314946519003_1757612711/storyboards/2563893901-strip-0.jpg",
               "game": {
                 "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509658-40x56.jpg",
                 "id": "509658",
@@ -776,368 +1227,30 @@
                 "name": "Just Chatting",
                 "__typename": "Game"
               },
-              "id": "2307608878",
-              "lengthSeconds": 6369,
+              "broadcastIdentifier": {
+                "id": "314946519003",
+                "__typename": "BroadcastIdOnly"
+              },
+              "id": "2563893901",
+              "lengthSeconds": 5029,
               "owner": {
                 "displayName": "Twitch",
                 "id": "12826",
                 "login": "twitch",
-                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/d5e6ebb4-a245-4ebf-bea6-2183e2f39600-profile_image-50x50.png",
+                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-50x50.png",
                 "primaryColorHex": "5C16C5",
                 "roles": { "isPartner": true, "__typename": "UserRoles" },
                 "__typename": "User"
               },
-              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/81890b6c0933bff2f179_twitch_45049220123_1732218346//thumb/thumb0-320x180.jpg",
-              "publishedAt": "2024-11-21T19:45:52Z",
+              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d1m7jfoe9zdc1j/4e12d92949b20025b444_twitch_314946519003_1757612711//thumb/thumb0-320x180.jpg",
+              "publishedAt": "2025-09-11T17:45:17Z",
               "self": {
                 "isRestricted": false,
                 "viewingHistory": null,
                 "__typename": "VideoSelfEdge"
               },
-              "title": "VAMOS! el show de Twitch en Español con @DJClancy @Argie @polispol1 \u0026 @Suzyroxx | Noviembre de 2024",
-              "viewCount": 114405,
-              "resourceRestriction": null,
-              "contentTags": [],
-              "__typename": "Video"
-            },
-            "__typename": "VideoEdge"
-          },
-          {
-            "cursor": "2255454897|229657|2024-09-20T00:33:22Z|14424",
-            "node": {
-              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/4f7bce53f3fc9f12f038_twitch_45030430411_1731708130/storyboards/2302748739-strip-0.jpg",
-              "game": {
-                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509658-40x56.jpg",
-                "id": "509658",
-                "slug": "just-chatting",
-                "displayName": "Just Chatting",
-                "name": "Just Chatting",
-                "__typename": "Game"
-              },
-              "id": "2302748739",
-              "lengthSeconds": 3633,
-              "owner": {
-                "displayName": "Twitch",
-                "id": "12826",
-                "login": "twitch",
-                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/d5e6ebb4-a245-4ebf-bea6-2183e2f39600-profile_image-50x50.png",
-                "primaryColorHex": "5C16C5",
-                "roles": { "isPartner": true, "__typename": "UserRoles" },
-                "__typename": "User"
-              },
-              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/4f7bce53f3fc9f12f038_twitch_45030430411_1731708130//thumb/thumb0-320x180.jpg",
-              "publishedAt": "2024-11-15T22:02:15Z",
-              "self": {
-                "isRestricted": false,
-                "viewingHistory": null,
-                "__typename": "VideoSelfEdge"
-              },
-              "title": "Let's Chat LIVE from TwitchHQ feat. @AngeeNoel_ @MegKaylee hosted by @kawaiiguy",
-              "viewCount": 172357,
-              "resourceRestriction": null,
-              "contentTags": [],
-              "__typename": "Video"
-            },
-            "__typename": "VideoEdge"
-          },
-          {
-            "cursor": "2255454897|229657|2024-09-20T00:33:22Z|14424",
-            "node": {
-              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/985f951e5b4aa7abe011_twitch_44978273307_1730401055/storyboards/2290210721-strip-0.jpg",
-              "game": {
-                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509658-40x56.jpg",
-                "id": "509658",
-                "slug": "just-chatting",
-                "displayName": "Just Chatting",
-                "name": "Just Chatting",
-                "__typename": "Game"
-              },
-              "id": "2290210721",
-              "lengthSeconds": 6060,
-              "owner": {
-                "displayName": "Twitch",
-                "id": "12826",
-                "login": "twitch",
-                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/d5e6ebb4-a245-4ebf-bea6-2183e2f39600-profile_image-50x50.png",
-                "primaryColorHex": "5C16C5",
-                "roles": { "isPartner": true, "__typename": "UserRoles" },
-                "__typename": "User"
-              },
-              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/985f951e5b4aa7abe011_twitch_44978273307_1730401055//thumb/thumb0-320x180.jpg",
-              "publishedAt": "2024-10-31T18:57:41Z",
-              "self": {
-                "isRestricted": false,
-                "viewingHistory": null,
-                "__typename": "VideoSelfEdge"
-              },
-              "title": "Twitch Public Access - October 2024 featuring guests @Mish @MissLalaVT and hosts @merrykish @EspeSymone",
-              "viewCount": 380400,
-              "resourceRestriction": null,
-              "contentTags": [],
-              "__typename": "Video"
-            },
-            "__typename": "VideoEdge"
-          },
-          {
-            "cursor": "2255454897|229657|2024-09-20T00:33:22Z|14424",
-            "node": {
-              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/14907f3456fe6d612307_twitch_44975054331_1730314797/storyboards/2289385098-strip-0.jpg",
-              "game": {
-                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509663-40x56.jpg",
-                "id": "509663",
-                "slug": "special-events",
-                "displayName": "Special Events",
-                "name": "Special Events",
-                "__typename": "Game"
-              },
-              "id": "2289385098",
-              "lengthSeconds": 7319,
-              "owner": {
-                "displayName": "Twitch",
-                "id": "12826",
-                "login": "twitch",
-                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/d5e6ebb4-a245-4ebf-bea6-2183e2f39600-profile_image-50x50.png",
-                "primaryColorHex": "5C16C5",
-                "roles": { "isPartner": true, "__typename": "UserRoles" },
-                "__typename": "User"
-              },
-              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/14907f3456fe6d612307_twitch_44975054331_1730314797//thumb/thumb0-320x180.jpg",
-              "publishedAt": "2024-10-30T19:00:02Z",
-              "self": {
-                "isRestricted": false,
-                "viewingHistory": null,
-                "__typename": "VideoSelfEdge"
-              },
-              "title": "Twitch presents 'Dead by Daylight' ft. @deere @negaoryx @meeeows @theking @cahlaflour",
-              "viewCount": 35547,
-              "resourceRestriction": null,
-              "contentTags": [],
-              "__typename": "Video"
-            },
-            "__typename": "VideoEdge"
-          },
-          {
-            "cursor": "2255454897|229657|2024-09-20T00:33:22Z|14424",
-            "node": {
-              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/fd4a0cadff2a5e9d8245_twitch_44926723099_1729104620/storyboards/2277670455-strip-0.jpg",
-              "game": {
-                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509658-40x56.jpg",
-                "id": "509658",
-                "slug": "just-chatting",
-                "displayName": "Just Chatting",
-                "name": "Just Chatting",
-                "__typename": "Game"
-              },
-              "id": "2277670455",
-              "lengthSeconds": 4332,
-              "owner": {
-                "displayName": "Twitch",
-                "id": "12826",
-                "login": "twitch",
-                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/d5e6ebb4-a245-4ebf-bea6-2183e2f39600-profile_image-50x50.png",
-                "primaryColorHex": "5C16C5",
-                "roles": { "isPartner": true, "__typename": "UserRoles" },
-                "__typename": "User"
-              },
-              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/fd4a0cadff2a5e9d8245_twitch_44926723099_1729104620//thumb/thumb0-320x180.jpg",
-              "publishedAt": "2024-10-16T18:50:26Z",
-              "self": {
-                "isRestricted": false,
-                "viewingHistory": null,
-                "__typename": "VideoSelfEdge"
-              },
-              "title": "Patch Notes Ep30 (Oct 2024) - Shared Chat, Mobile App Updates and more! w/ @merrykish and @zachariusd",
-              "viewCount": 308249,
-              "resourceRestriction": null,
-              "contentTags": [],
-              "__typename": "Video"
-            },
-            "__typename": "VideoEdge"
-          },
-          {
-            "cursor": "2255454897|229657|2024-09-20T00:33:22Z|14424",
-            "node": {
-              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/da2c35b71153df498176_twitch_44895734523_1728413596/storyboards/2270940898-strip-0.jpg",
-              "game": {
-                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509658-40x56.jpg",
-                "id": "509658",
-                "slug": "just-chatting",
-                "displayName": "Just Chatting",
-                "name": "Just Chatting",
-                "__typename": "Game"
-              },
-              "id": "2270940898",
-              "lengthSeconds": 4257,
-              "owner": {
-                "displayName": "Twitch",
-                "id": "12826",
-                "login": "twitch",
-                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/d5e6ebb4-a245-4ebf-bea6-2183e2f39600-profile_image-50x50.png",
-                "primaryColorHex": "5C16C5",
-                "roles": { "isPartner": true, "__typename": "UserRoles" },
-                "__typename": "User"
-              },
-              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/da2c35b71153df498176_twitch_44895734523_1728413596//thumb/thumb0-320x180.jpg",
-              "publishedAt": "2024-10-08T18:53:22Z",
-              "self": {
-                "isRestricted": false,
-                "viewingHistory": null,
-                "__typename": "VideoSelfEdge"
-              },
-              "title": "Let's Chat | @kawaiiguy @dinomitetwins @chochyplays",
-              "viewCount": 291131,
-              "resourceRestriction": null,
-              "contentTags": [],
-              "__typename": "Video"
-            },
-            "__typename": "VideoEdge"
-          },
-          {
-            "cursor": "2255454897|229657|2024-09-20T00:33:22Z|14424",
-            "node": {
-              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/02fbab74413c109538d7_twitch_44844813067_1727026886/storyboards/2257757253-strip-0.jpg",
-              "game": {
-                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509658-40x56.jpg",
-                "id": "509658",
-                "slug": "just-chatting",
-                "displayName": "Just Chatting",
-                "name": "Just Chatting",
-                "__typename": "Game"
-              },
-              "id": "2257757253",
-              "lengthSeconds": 25306,
-              "owner": {
-                "displayName": "Twitch",
-                "id": "12826",
-                "login": "twitch",
-                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/d5e6ebb4-a245-4ebf-bea6-2183e2f39600-profile_image-50x50.png",
-                "primaryColorHex": "5C16C5",
-                "roles": { "isPartner": true, "__typename": "UserRoles" },
-                "__typename": "User"
-              },
-              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/02fbab74413c109538d7_twitch_44844813067_1727026886//thumb/thumb0-320x180.jpg",
-              "publishedAt": "2024-09-22T17:41:30Z",
-              "self": {
-                "isRestricted": false,
-                "viewingHistory": null,
-                "__typename": "VideoSelfEdge"
-              },
-              "title": "TCSD24 | Day 3 | Monster Hunter 20th Anniversary Creator Showcase",
-              "viewCount": 970307,
-              "resourceRestriction": null,
-              "contentTags": [],
-              "__typename": "Video"
-            },
-            "__typename": "VideoEdge"
-          },
-          {
-            "cursor": "2255454897|229657|2024-09-20T00:33:22Z|14424",
-            "node": {
-              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/1e54721139e38cb8a86f_twitch_44841760667_1726940059/storyboards/2256861557-strip-0.jpg",
-              "game": {
-                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509658-40x56.jpg",
-                "id": "509658",
-                "slug": "just-chatting",
-                "displayName": "Just Chatting",
-                "name": "Just Chatting",
-                "__typename": "Game"
-              },
-              "id": "2256861557",
-              "lengthSeconds": 27605,
-              "owner": {
-                "displayName": "Twitch",
-                "id": "12826",
-                "login": "twitch",
-                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/d5e6ebb4-a245-4ebf-bea6-2183e2f39600-profile_image-50x50.png",
-                "primaryColorHex": "5C16C5",
-                "roles": { "isPartner": true, "__typename": "UserRoles" },
-                "__typename": "User"
-              },
-              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/1e54721139e38cb8a86f_twitch_44841760667_1726940059//thumb/thumb0-320x180.jpg",
-              "publishedAt": "2024-09-21T17:34:23Z",
-              "self": {
-                "isRestricted": false,
-                "viewingHistory": null,
-                "__typename": "VideoSelfEdge"
-              },
-              "title": "TCSD24 | Day 2 | Yes or No Yes w/ @pointcrow, @dougdoug, @carolinekwan, @failboatstream, @tednivison, and @ethannestor",
-              "viewCount": 822931,
-              "resourceRestriction": null,
-              "contentTags": [],
-              "__typename": "Video"
-            },
-            "__typename": "VideoEdge"
-          },
-          {
-            "cursor": "2255454897|229657|2024-09-20T00:33:22Z|14424",
-            "node": {
-              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/9c8e3d718108837db7b7_twitch_44838338187_1726852527/storyboards/2255954672-strip-0.jpg",
-              "game": {
-                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509658-40x56.jpg",
-                "id": "509658",
-                "slug": "just-chatting",
-                "displayName": "Just Chatting",
-                "name": "Just Chatting",
-                "__typename": "Game"
-              },
-              "id": "2255954672",
-              "lengthSeconds": 20396,
-              "owner": {
-                "displayName": "Twitch",
-                "id": "12826",
-                "login": "twitch",
-                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/d5e6ebb4-a245-4ebf-bea6-2183e2f39600-profile_image-50x50.png",
-                "primaryColorHex": "5C16C5",
-                "roles": { "isPartner": true, "__typename": "UserRoles" },
-                "__typename": "User"
-              },
-              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/9c8e3d718108837db7b7_twitch_44838338187_1726852527//thumb/thumb0-320x180.jpg",
-              "publishedAt": "2024-09-20T17:15:31Z",
-              "self": {
-                "isRestricted": false,
-                "viewingHistory": null,
-                "__typename": "VideoSelfEdge"
-              },
-              "title": "TwitchCon San Diego 2024 | Day 1 | Opening Ceremony w/ @djclancy @merrykish @maya @vanessa_lopez_official and more",
-              "viewCount": 591961,
-              "resourceRestriction": null,
-              "contentTags": [],
-              "__typename": "Video"
-            },
-            "__typename": "VideoEdge"
-          },
-          {
-            "cursor": "2255454897|229657|2024-09-20T00:33:22Z|14424",
-            "node": {
-              "animatedPreviewURL": "https://d2nvs31859zcd8.cloudfront.net/6d2eb58efecc9efc66ae_twitch_44836308811_1726792396/storyboards/2255454897-strip-0.jpg",
-              "game": {
-                "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/509658-40x56.jpg",
-                "id": "509658",
-                "slug": "just-chatting",
-                "displayName": "Just Chatting",
-                "name": "Just Chatting",
-                "__typename": "Game"
-              },
-              "id": "2255454897",
-              "lengthSeconds": 14424,
-              "owner": {
-                "displayName": "Twitch",
-                "id": "12826",
-                "login": "twitch",
-                "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/d5e6ebb4-a245-4ebf-bea6-2183e2f39600-profile_image-50x50.png",
-                "primaryColorHex": "5C16C5",
-                "roles": { "isPartner": true, "__typename": "UserRoles" },
-                "__typename": "User"
-              },
-              "previewThumbnailURL": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/6d2eb58efecc9efc66ae_twitch_44836308811_1726792396//thumb/thumb0-320x180.jpg",
-              "publishedAt": "2024-09-20T00:33:22Z",
-              "self": {
-                "isRestricted": false,
-                "viewingHistory": null,
-                "__typename": "VideoSelfEdge"
-              },
-              "title": "Let's Chat | TwitchCon Drop Ins!",
-              "viewCount": 229657,
+              "title": "Earning Money on Twitch | Creator Camp LIVE with @Snackless \u0026 @OwengeJuiceTV",
+              "viewCount": 94922,
               "resourceRestriction": null,
               "contentTags": [],
               "__typename": "Video"
@@ -1152,8 +1265,8 @@
     }
   },
   "extensions": {
-    "durationMilliseconds": 71,
+    "durationMilliseconds": 70,
     "operationName": "FilterableVideoTower_Videos",
-    "requestID": "01JPSM0BG8MWFK2RNKNFDJC4K5"
+    "requestID": "01KGYJG1VRC6B6BXS63CZ4QWT6"
   }
 }

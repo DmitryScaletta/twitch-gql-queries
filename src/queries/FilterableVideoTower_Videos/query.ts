@@ -9,7 +9,7 @@ export const getQueryFilterableVideoTowerVideos = (
     persistedQuery: {
       version: 1,
       sha256Hash:
-        'acea7539a293dfd30f0b0b81a263134bb5d9a7175592e14ac3f7c77b192de416',
+        '67004f7881e65c297936f32c75246470629557a393788fb5a69d6d9a25a8fd5f',
     },
   },
 });

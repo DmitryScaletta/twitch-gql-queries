@@ -16,6 +16,10 @@
                 "name": "Counter-Strike",
                 "__typename": "Game"
               },
+              "broadcastIdentifier": {
+                "id": "317122324058",
+                "__typename": "BroadcastIdOnly"
+              },
               "id": "2397382584",
               "lengthSeconds": 8188,
               "owner": {
