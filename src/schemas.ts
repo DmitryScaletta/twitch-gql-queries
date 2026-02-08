@@ -132,7 +132,7 @@ export const Clip = {
   thumbnailURL: T.Union([T.Literal(''), T.String({ format: 'uri' })]),
   language: T.String({
     minLength: 2,
-    description: 'Possible values: `EN`, `DE`, `ASL`, `ZH_HK`',
+    examples: ['EN', 'DE', 'ASL', 'ZH_HK'],
   }),
   champBadge: T.Null(),
   isFeatured: T.Boolean(),
