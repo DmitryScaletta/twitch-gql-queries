@@ -44,6 +44,29 @@ export const VariablesSchema = strictObject(
 // TODO: find example with watch party
 const WatchPartySchema = T.Union([T.Null()]);
 
+const ChannelObjSchema = strictObject({
+  ...pick(schemas.Channel, ['id']),
+  schedule: T.Union([
+    T.Null(),
+    strictObject({
+      ...pick(schemas.Schedule, ['id']),
+      nextSegment: T.Union([
+        T.Null(),
+        strictObject({
+          ...pick(schemas.ScheduleSegment, [
+            'id',
+            'startAt',
+            'endAt',
+            'title',
+            'hasReminder',
+          ]),
+          categories: T.Array(strictObject(pick(schemas.Game, ['id', 'name']))),
+        }),
+      ]),
+    }),
+  ]),
+});
+
 export const ChannelSchema = strictObject(
   {
     ...pick(schemas.User, [
@@ -53,42 +76,23 @@ export const ChannelSchema = strictObject(
       'profileImageURL',
       'description',
     ]),
-    broadcastSettings: strictObject(
-      pick(schemas.BroadcastSettings, ['id', 'title']),
-    ),
+    broadcastSettings: T.Union([
+      T.Null(),
+      strictObject(pick(schemas.BroadcastSettings, ['id', 'title'])),
+    ]),
     followers: strictObject(pick(schemas.FollowerConnection, ['totalCount'])),
-    lastBroadcast: strictObject(
-      {
-        id: T.Union([T.Null(), T.String({ pattern: '^[0-9]+$' })]),
-        startedAt: T.Union([T.Null(), T.String({ format: 'date-time' })]),
-        __typename: T.Literal('Broadcast'),
-      },
-      { description: 'If never streamed: `{ id: null, startedAt: null }`' },
-    ),
-    channel: strictObject({
-      ...pick(schemas.Channel, ['id']),
-      schedule: T.Union([
-        T.Null(),
-        strictObject({
-          ...pick(schemas.Schedule, ['id']),
-          nextSegment: T.Union([
-            T.Null(),
-            strictObject({
-              ...pick(schemas.ScheduleSegment, [
-                'id',
-                'startAt',
-                'endAt',
-                'title',
-                'hasReminder',
-              ]),
-              categories: T.Array(
-                strictObject(pick(schemas.Game, ['id', 'name'])),
-              ),
-            }),
-          ]),
-        }),
-      ]),
-    }),
+    lastBroadcast: T.Union([
+      T.Null(),
+      strictObject(
+        {
+          id: T.Union([T.Null(), T.String({ pattern: '^[0-9]+$' })]),
+          startedAt: T.Union([T.Null(), T.String({ format: 'date-time' })]),
+          __typename: T.Literal('Broadcast'),
+        },
+        { description: 'If never streamed: `{ id: null, startedAt: null }`' },
+      ),
+    ]),
+    channel: T.Union([T.Null(), ChannelObjSchema]),
     self: T.Union([T.Null()]),
     latestVideo: T.Union([
       T.Null(),

@@ -25,15 +25,18 @@ export const UserSchema = strictObject(
       T.Null(),
       strictObject(pick(schemas.Team, ['id', 'name', 'displayName'])),
     ]),
-    channel: strictObject(pick(schemas.Channel, ['id'])),
-    lastBroadcast: strictObject(
-      {
-        id: T.Union([T.Null(), T.String({ pattern: '^[0-9]+$' })]),
-        title: T.Union([T.Null(), T.String()]),
-        __typename: T.Literal('Broadcast'),
-      },
-      { description: 'If never streamed: `{ id: null, title: null }`' },
-    ),
+    channel: T.Union([T.Null(), strictObject(pick(schemas.Channel, ['id']))]),
+    lastBroadcast: T.Union([
+      T.Null(),
+      strictObject(
+        {
+          id: T.Union([T.Null(), T.String({ pattern: '^[0-9]+$' })]),
+          title: T.Union([T.Null(), T.String()]),
+          __typename: T.Literal('Broadcast'),
+        },
+        { description: 'If never streamed: `{ id: null, title: null }`' },
+      ),
+    ]),
     stream: T.Union([
       T.Null(),
       strictObject({
