@@ -52,7 +52,10 @@ export const ClipSchema = strictObject(
       T.Null(),
       strictObject(pick(schemas.Game, ['id', 'slug', 'name', 'boxArtURL'])),
     ]),
-    broadcastIdentifier: T.Union([T.Null(), schemas.BroadcastIdOnly]),
+    broadcastIdentifier: T.Union([
+      T.Null(),
+      strictObject(schemas.BroadcastIdOnly),
+    ]),
     broadcaster: T.Union([
       T.Null(),
       strictObject({

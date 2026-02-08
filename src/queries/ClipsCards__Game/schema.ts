@@ -89,7 +89,10 @@ export const ClipSchema = strictObject(
         roles: strictObject(pick(schemas.UserRoles, ['isPartner'])),
       }),
     ]),
-    broadcastIdentifier: T.Union([T.Null(), schemas.BroadcastIdOnly]),
+    broadcastIdentifier: T.Union([
+      T.Null(),
+      strictObject(schemas.BroadcastIdOnly),
+    ]),
     guestStarParticipants: T.Union([T.Null(), GuestStarParticipantsSchema]),
     previewThumbnailProperties: strictObject(
       pick(schemas.PreviewThumbnailProperties, ['blurReason']),

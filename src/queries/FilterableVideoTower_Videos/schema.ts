@@ -80,7 +80,10 @@ export const VideoSchema = strictObject(
         pick(schemas.Game, ['boxArtURL', 'id', 'slug', 'displayName', 'name']),
       ),
     ]),
-    broadcastIdentifier: T.Union([T.Null(), schemas.BroadcastIdOnly]),
+    broadcastIdentifier: T.Union([
+      T.Null(),
+      strictObject(schemas.BroadcastIdOnly),
+    ]),
     owner: T.Union([T.Null(), VideoOwnerSchema]),
     self: strictObject(
       pick(schemas.VideoSelfEdge, ['isRestricted', 'viewingHistory']),
