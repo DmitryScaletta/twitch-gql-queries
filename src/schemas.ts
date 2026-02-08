@@ -127,7 +127,8 @@ export const Clip = {
   title: T.String(),
   viewCount: T.Integer({ minimum: 0 }),
   videoOffsetSeconds: T.Union([T.Null(), T.Integer({ minimum: 0 })]),
-  durationSeconds: T.Integer({ minimum: 0 }),
+  duration: T.Number({ minimum: 0, examples: [43.93] }),
+  durationSeconds: T.Integer({ minimum: 0, examples: [43] }),
   thumbnailURL: T.Union([T.Literal(''), T.String({ format: 'uri' })]),
   language: T.String({
     minLength: 2,
@@ -138,6 +139,8 @@ export const Clip = {
   isAutoCurated: T.Boolean(),
   isPublished: T.Boolean(),
   isViewerEditRestricted: T.Boolean(),
+  rawMediaRelativeOffset: T.Number({ minimum: 0 }),
+  rawMediaKey: T.String(),
   createdAt: T.String({ format: 'date-time' }),
   __typename: T.Literal('Clip'),
 } satisfies Properties;
@@ -157,6 +160,7 @@ export const ClipAsset = {
 export const ClipVideoQuality = {
   bitrate: T.Integer({ minimum: 0 }),
   codecs: T.String(),
+  duration: T.Union([T.Null(), T.Number({ minimum: 0 })]),
   height: T.Integer({ minimum: 0 }),
   width: T.Integer({ minimum: 0 }),
   videoCodec: T.Union([

@@ -1,72 +1,76 @@
 {
   "data": {
     "clip": {
-      "id": "3846773990",
-      "slug": "ManlyLittleHabaneroTwitchRaid-FIvuPaqPC4CHIif4",
-      "url": "https://www.twitch.tv/giantwaffle/clip/ManlyLittleHabaneroTwitchRaid-FIvuPaqPC4CHIif4",
-      "embedURL": "https://clips.twitch.tv/embed?clip=ManlyLittleHabaneroTwitchRaid-FIvuPaqPC4CHIif4",
-      "title": "picked up in under 5 mins",
-      "viewCount": 295,
+      "id": "1399001567",
+      "slug": "UnusualEnchantingSproutGivePLZ-o5o0fw_2qOgZvAag",
+      "url": "https://www.twitch.tv/xqc/clip/UnusualEnchantingSproutGivePLZ-o5o0fw_2qOgZvAag",
+      "isAutoCurated": false,
+      "embedURL": "https://clips.twitch.tv/embed?clip=UnusualEnchantingSproutGivePLZ-o5o0fw_2qOgZvAag",
+      "title": "lol",
+      "viewCount": 42402,
       "language": "EN",
       "isFeatured": false,
       "assets": [
         {
-          "id": "c54db84b-e719-4644-890d-6f360c3c08db",
-          "aspectRatio": 1.7777777910232544,
-          "type": "SOURCE",
-          "createdAt": "2025-02-20T18:34:46.257542983Z",
+          "id": "785f4132-fc47-4fe1-a872-4b99af27f08f",
+          "aspectRatio": 1.7777777777777777,
+          "createdAt": "2026-02-04T04:07:37.331683814Z",
           "creationState": "CREATED",
           "curator": {
-            "id": "42736667",
-            "login": "jmm548",
-            "displayName": "jmm548",
-            "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/425fa339-e67f-4e79-8523-698b4b2db974-profile_image-50x50.png",
+            "id": "768198835",
+            "login": "puertoricanporo",
+            "displayName": "puertoricanporo",
+            "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/efc61fe3-285e-487e-a627-212860abe0cb-profile_image-50x50.png",
             "__typename": "User"
           },
-          "thumbnailURL": "https://static-cdn.jtvnw.net/twitch-clips-thumbnails-prod/ManlyLittleHabaneroTwitchRaid-FIvuPaqPC4CHIif4/c54db84b-e719-4644-890d-6f360c3c08db/preview.jpg",
+          "thumbnailURL": "https://static-cdn.jtvnw.net/twitch-clips-thumbnails-prod/UnusualEnchantingSproutGivePLZ-o5o0fw_2qOgZvAag/785f4132-fc47-4fe1-a872-4b99af27f08f/preview.jpg",
           "videoQualities": [
             {
-              "bitrate": 0,
-              "codecs": "",
-              "height": 0,
-              "width": 0,
-              "videoCodec": null,
-              "frameRate": 59.99863815307617,
+              "bitrate": 8004451,
+              "codecs": "avc1.64002A,mp4a.40.2",
+              "duration": null,
+              "height": 1080,
+              "width": 1920,
+              "videoCodec": "AVC",
+              "frameRate": 60,
               "quality": "1080",
-              "sourceURL": "https://production.assets.clips.twitchcdn.net/v2/media/ManlyLittleHabaneroTwitchRaid-FIvuPaqPC4CHIif4/c54db84b-e719-4644-890d-6f360c3c08db/video.mp4",
+              "sourceURL": "https://production.assets.clips.twitchcdn.net/v2/media/UnusualEnchantingSproutGivePLZ-o5o0fw_2qOgZvAag/785f4132-fc47-4fe1-a872-4b99af27f08f/video-1080.mp4",
               "__typename": "ClipVideoQuality"
             },
             {
               "bitrate": 0,
               "codecs": "",
+              "duration": null,
               "height": 0,
               "width": 0,
-              "videoCodec": null,
-              "frameRate": 59.996578216552734,
+              "videoCodec": "AVC",
+              "frameRate": 60.011383056640625,
               "quality": "720",
-              "sourceURL": "https://production.assets.clips.twitchcdn.net/v2/media/ManlyLittleHabaneroTwitchRaid-FIvuPaqPC4CHIif4/c54db84b-e719-4644-890d-6f360c3c08db/video-720.mp4",
+              "sourceURL": "https://production.assets.clips.twitchcdn.net/v2/media/UnusualEnchantingSproutGivePLZ-o5o0fw_2qOgZvAag/785f4132-fc47-4fe1-a872-4b99af27f08f/video-720.mp4",
               "__typename": "ClipVideoQuality"
             },
             {
               "bitrate": 0,
               "codecs": "",
+              "duration": null,
               "height": 0,
               "width": 0,
-              "videoCodec": null,
-              "frameRate": 30.032495498657227,
+              "videoCodec": "AVC",
+              "frameRate": 30.005691528320312,
               "quality": "480",
-              "sourceURL": "https://production.assets.clips.twitchcdn.net/v2/media/ManlyLittleHabaneroTwitchRaid-FIvuPaqPC4CHIif4/c54db84b-e719-4644-890d-6f360c3c08db/video-480.mp4",
+              "sourceURL": "https://production.assets.clips.twitchcdn.net/v2/media/UnusualEnchantingSproutGivePLZ-o5o0fw_2qOgZvAag/785f4132-fc47-4fe1-a872-4b99af27f08f/video-480.mp4",
               "__typename": "ClipVideoQuality"
             },
             {
               "bitrate": 0,
               "codecs": "",
+              "duration": null,
               "height": 0,
               "width": 0,
-              "videoCodec": null,
-              "frameRate": 30.032495498657227,
+              "videoCodec": "AVC",
+              "frameRate": 30.005691528320312,
               "quality": "360",
-              "sourceURL": "https://production.assets.clips.twitchcdn.net/v2/media/ManlyLittleHabaneroTwitchRaid-FIvuPaqPC4CHIif4/c54db84b-e719-4644-890d-6f360c3c08db/video-360.mp4",
+              "sourceURL": "https://production.assets.clips.twitchcdn.net/v2/media/UnusualEnchantingSproutGivePLZ-o5o0fw_2qOgZvAag/785f4132-fc47-4fe1-a872-4b99af27f08f/video-360.mp4",
               "__typename": "ClipVideoQuality"
             }
           ],
@@ -74,37 +78,38 @@
           "__typename": "ClipAsset"
         },
         {
-          "id": "6089ff9c-3264-4804-a0d8-6bb219868c52",
+          "id": "2fca5905-b991-446f-a1a9-4994cc5f0a13",
           "aspectRatio": 0.562,
-          "type": "RECOMPOSED",
-          "createdAt": "2025-02-20T18:34:46.257542983Z",
+          "createdAt": "2026-02-04T04:07:37.331683814Z",
           "creationState": "CREATED",
           "curator": {
-            "id": "42736667",
-            "login": "jmm548",
-            "displayName": "jmm548",
-            "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/425fa339-e67f-4e79-8523-698b4b2db974-profile_image-50x50.png",
+            "id": "768198835",
+            "login": "puertoricanporo",
+            "displayName": "puertoricanporo",
+            "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/efc61fe3-285e-487e-a627-212860abe0cb-profile_image-50x50.png",
             "__typename": "User"
           },
-          "thumbnailURL": "https://static-cdn.jtvnw.net/twitch-clips-thumbnails-prod/ManlyLittleHabaneroTwitchRaid-FIvuPaqPC4CHIif4/6089ff9c-3264-4804-a0d8-6bb219868c52/preview-153x272.jpg",
+          "thumbnailURL": "https://static-cdn.jtvnw.net/twitch-clips-thumbnails-prod/UnusualEnchantingSproutGivePLZ-o5o0fw_2qOgZvAag/2fca5905-b991-446f-a1a9-4994cc5f0a13/preview-153x272.jpg",
           "videoQualities": [
             {
-              "bitrate": 0,
-              "codecs": "",
-              "height": 0,
-              "width": 0,
-              "videoCodec": null,
+              "bitrate": 8004451,
+              "codecs": "avc1.64002A,mp4a.40.2",
+              "duration": null,
+              "height": 1080,
+              "width": 1920,
+              "videoCodec": "AVC",
               "frameRate": 60,
               "quality": "607",
-              "sourceURL": "https://production.assets.clips.twitchcdn.net/v2/media/ManlyLittleHabaneroTwitchRaid-FIvuPaqPC4CHIif4/6089ff9c-3264-4804-a0d8-6bb219868c52/video.mp4",
+              "sourceURL": "https://production.assets.clips.twitchcdn.net/v2/media/UnusualEnchantingSproutGivePLZ-o5o0fw_2qOgZvAag/2fca5905-b991-446f-a1a9-4994cc5f0a13/video-607.mp4",
               "__typename": "ClipVideoQuality"
             },
             {
               "bitrate": 0,
               "codecs": "",
+              "duration": null,
               "height": 0,
               "width": 0,
-              "videoCodec": null,
+              "videoCodec": "AVC",
               "frameRate": 0,
               "quality": "480",
               "sourceURL": "",
@@ -113,9 +118,10 @@
             {
               "bitrate": 0,
               "codecs": "",
+              "duration": null,
               "height": 0,
               "width": 0,
-              "videoCodec": null,
+              "videoCodec": "AVC",
               "frameRate": 0,
               "quality": "360",
               "sourceURL": "",
@@ -147,88 +153,91 @@
         }
       ],
       "curator": {
-        "id": "42736667",
-        "login": "jmm548",
-        "displayName": "jmm548",
-        "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/425fa339-e67f-4e79-8523-698b4b2db974-profile_image-70x70.png",
+        "id": "768198835",
+        "login": "puertoricanporo",
+        "displayName": "puertoricanporo",
+        "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/efc61fe3-285e-487e-a627-212860abe0cb-profile_image-70x70.png",
         "__typename": "User"
       },
       "game": {
-        "id": "543818421",
-        "name": "Breathedge 2",
-        "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/543818421_IGDB-52x72.jpg",
-        "displayName": "Breathedge 2",
-        "slug": "breathedge-2",
+        "id": "23020",
+        "name": "ROBLOX",
+        "boxArtURL": "https://static-cdn.jtvnw.net/ttv-boxart/23020_IGDB-52x72.jpg",
+        "displayName": "ROBLOX",
+        "slug": "roblox",
         "__typename": "Game"
       },
       "broadcast": {
-        "id": "317200615933",
+        "id": "317190764640",
         "title": null,
         "__typename": "Broadcast"
       },
       "broadcaster": {
-        "id": "22552479",
-        "login": "giantwaffle",
-        "displayName": "Giantwaffle",
-        "primaryColorHex": "BABABA",
+        "id": "71092938",
+        "login": "xqc",
+        "displayName": "xQc",
+        "primaryColorHex": "FFBF00",
         "isPartner": true,
-        "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/f03ca1a6-9b96-4296-a50a-c33778238c72-profile_image-70x70.png",
+        "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/xqc-profile_image-9298dca608632101-70x70.jpeg",
         "followers": {
-          "totalCount": 852982,
+          "totalCount": 12281541,
           "__typename": "FollowerConnection"
         },
         "stream": null,
         "lastBroadcast": {
-          "id": "315064975324",
-          "startedAt": "2025-09-22T20:40:36.603898Z",
+          "id": "317179988830",
+          "startedAt": "2026-02-07T08:20:33.772685Z",
           "__typename": "Broadcast"
         },
         "self": null,
         "__typename": "User"
       },
-      "thumbnailURL": "https://static-cdn.jtvnw.net/twitch-clips-thumbnails-prod/ManlyLittleHabaneroTwitchRaid-FIvuPaqPC4CHIif4/c54db84b-e719-4644-890d-6f360c3c08db/preview.jpg",
-      "createdAt": "2025-02-20T18:34:46Z",
+      "thumbnailURL": "https://static-cdn.jtvnw.net/twitch-clips-thumbnails-prod/UnusualEnchantingSproutGivePLZ-o5o0fw_2qOgZvAag/785f4132-fc47-4fe1-a872-4b99af27f08f/preview.jpg",
+      "createdAt": "2026-02-04T04:07:37Z",
       "isPublished": true,
-      "durationSeconds": 29,
+      "duration": 43.93,
+      "durationSeconds": 43,
       "champBadge": null,
       "playbackAccessToken": {
-        "signature": "17909c5711d2a4e211b6f2d46f9f2f4d29535128",
-        "value": "{\"authorization\":{\"forbidden\":false,\"reason\":\"\"},\"clip_uri\":\"\",\"clip_slug\":\"ManlyLittleHabaneroTwitchRaid-FIvuPaqPC4CHIif4\",\"device_id\":null,\"expires\":1758694941,\"user_id\":\"\",\"version\":3}",
+        "signature": "da8884d7b1c8b1a493c291d2b55d28f1d3625932",
+        "value": "{\"authorization\":{\"forbidden\":false,\"reason\":\"\"},\"clip_uri\":\"https://production.assets.clips.twitchcdn.net/v2/media/UnusualEnchantingSproutGivePLZ-o5o0fw_2qOgZvAag/2fca5905-b991-446f-a1a9-4994cc5f0a13/video-607.mp4\",\"clip_slug\":\"UnusualEnchantingSproutGivePLZ-o5o0fw_2qOgZvAag\",\"device_id\":null,\"expires\":1770625717,\"user_id\":\"\",\"version\":3}",
         "__typename": "PlaybackAccessToken"
       },
       "video": {
-        "id": "2386335777",
+        "id": "2688404677",
         "broadcastType": "ARCHIVE",
-        "title": "BEST Day of the Week!",
+        "title": "🙄LIVE🙄DRAMA🙄NEWS🙄CLICK🙄LOCK IN🙄WOW🙄COOL🙄LETS GO 🙄PULL UP🙄",
         "__typename": "Video"
       },
-      "videoOffsetSeconds": 14579,
+      "videoOffsetSeconds": 12062,
       "videoQualities": [
         {
-          "sourceURL": "https://production.assets.clips.twitchcdn.net/v2/media/ManlyLittleHabaneroTwitchRaid-FIvuPaqPC4CHIif4/c54db84b-e719-4644-890d-6f360c3c08db/video.mp4",
+          "sourceURL": "https://production.assets.clips.twitchcdn.net/v2/media/UnusualEnchantingSproutGivePLZ-o5o0fw_2qOgZvAag/785f4132-fc47-4fe1-a872-4b99af27f08f/video-1080.mp4",
           "__typename": "ClipVideoQuality"
         },
         {
-          "sourceURL": "https://production.assets.clips.twitchcdn.net/v2/media/ManlyLittleHabaneroTwitchRaid-FIvuPaqPC4CHIif4/c54db84b-e719-4644-890d-6f360c3c08db/video-720.mp4",
+          "sourceURL": "https://production.assets.clips.twitchcdn.net/v2/media/UnusualEnchantingSproutGivePLZ-o5o0fw_2qOgZvAag/785f4132-fc47-4fe1-a872-4b99af27f08f/video-720.mp4",
           "__typename": "ClipVideoQuality"
         },
         {
-          "sourceURL": "https://production.assets.clips.twitchcdn.net/v2/media/ManlyLittleHabaneroTwitchRaid-FIvuPaqPC4CHIif4/c54db84b-e719-4644-890d-6f360c3c08db/video-480.mp4",
+          "sourceURL": "https://production.assets.clips.twitchcdn.net/v2/media/UnusualEnchantingSproutGivePLZ-o5o0fw_2qOgZvAag/785f4132-fc47-4fe1-a872-4b99af27f08f/video-480.mp4",
           "__typename": "ClipVideoQuality"
         },
         {
-          "sourceURL": "https://production.assets.clips.twitchcdn.net/v2/media/ManlyLittleHabaneroTwitchRaid-FIvuPaqPC4CHIif4/c54db84b-e719-4644-890d-6f360c3c08db/video-360.mp4",
+          "sourceURL": "https://production.assets.clips.twitchcdn.net/v2/media/UnusualEnchantingSproutGivePLZ-o5o0fw_2qOgZvAag/785f4132-fc47-4fe1-a872-4b99af27f08f/video-360.mp4",
           "__typename": "ClipVideoQuality"
         }
       ],
       "isViewerEditRestricted": false,
       "suggestedCropping": null,
+      "rawMediaRelativeOffset": 30.436817169189453,
+      "rawMediaKey": "5V7n_TrusYjbKULZPgs8Og",
       "__typename": "Clip"
     }
   },
   "extensions": {
-    "durationMilliseconds": 84,
+    "durationMilliseconds": 68,
     "operationName": "ShareClipRenderStatus",
-    "requestID": "01K5V1H04B0G0GFCDKFCP4QE0N"
+    "requestID": "01KGYKKCY8Q8YDMZMMG1FQW7BX"
   }
 }

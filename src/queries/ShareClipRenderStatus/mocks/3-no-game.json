@@ -4,6 +4,7 @@
       "id": "468568798",
       "slug": "AstuteEncouragingCroquetteJebaited",
       "url": "https://www.twitch.tv/twitch/clip/AstuteEncouragingCroquetteJebaited",
+      "isAutoCurated": false,
       "embedURL": "https://clips.twitch.tv/embed?clip=AstuteEncouragingCroquetteJebaited",
       "title": "TTFAF Pog",
       "viewCount": 413,
@@ -13,7 +14,6 @@
         {
           "id": "AT-cm|541849220",
           "aspectRatio": 1.7777777777777777,
-          "type": "SOURCE",
           "createdAt": "2019-09-28T02:45:12.649350656Z",
           "creationState": "CREATED",
           "curator": {
@@ -28,9 +28,10 @@
             {
               "bitrate": 0,
               "codecs": "",
+              "duration": null,
               "height": 0,
               "width": 0,
-              "videoCodec": null,
+              "videoCodec": "AVC",
               "frameRate": 59.9499845842897,
               "quality": "1080",
               "sourceURL": "https://production.assets.clips.twitchcdn.net/AT-cm%7C541849220.mp4",
@@ -39,9 +40,10 @@
             {
               "bitrate": 0,
               "codecs": "",
+              "duration": null,
               "height": 0,
               "width": 0,
-              "videoCodec": null,
+              "videoCodec": "AVC",
               "frameRate": 59.9499845842897,
               "quality": "720",
               "sourceURL": "https://production.assets.clips.twitchcdn.net/AT-cm%7C541849220-720.mp4",
@@ -50,9 +52,10 @@
             {
               "bitrate": 0,
               "codecs": "",
+              "duration": null,
               "height": 0,
               "width": 0,
-              "videoCodec": null,
+              "videoCodec": "AVC",
               "frameRate": 29.9821820175439,
               "quality": "480",
               "sourceURL": "https://production.assets.clips.twitchcdn.net/AT-cm%7C541849220-480.mp4",
@@ -61,9 +64,10 @@
             {
               "bitrate": 0,
               "codecs": "",
+              "duration": null,
               "height": 0,
               "width": 0,
-              "videoCodec": null,
+              "videoCodec": "AVC",
               "frameRate": 29.9821820175439,
               "quality": "360",
               "sourceURL": "https://production.assets.clips.twitchcdn.net/AT-cm%7C541849220-360.mp4",
@@ -93,15 +97,15 @@
         "displayName": "Twitch",
         "primaryColorHex": "5C16C5",
         "isPartner": true,
-        "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/d5dc8fed-5b81-4bdd-aead-ab7f8e5fb232-profile_image-70x70.png",
+        "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-70x70.png",
         "followers": {
-          "totalCount": 2392537,
+          "totalCount": 2418037,
           "__typename": "FollowerConnection"
         },
         "stream": null,
         "lastBroadcast": {
-          "id": "314946519003",
-          "startedAt": "2025-09-11T19:09:08.963195Z",
+          "id": "315894061815",
+          "startedAt": "2026-02-08T00:31:48.096215Z",
           "__typename": "Broadcast"
         },
         "self": null,
@@ -110,11 +114,12 @@
       "thumbnailURL": "https://static-cdn.jtvnw.net/twitch-clips/AT-cm%7C541849220-preview-260x147.jpg",
       "createdAt": "2019-09-28T02:45:12Z",
       "isPublished": true,
+      "duration": 58.38,
       "durationSeconds": 58,
       "champBadge": null,
       "playbackAccessToken": {
-        "signature": "ad261faa19e66ceebfd9cf3a541865caed32b80e",
-        "value": "{\"authorization\":{\"forbidden\":false,\"reason\":\"\"},\"clip_uri\":\"https://production.assets.clips.twitchcdn.net/AT-cm%7C541849220.mp4\",\"clip_slug\":\"AstuteEncouragingCroquetteJebaited\",\"device_id\":null,\"expires\":1758695242,\"user_id\":\"\",\"version\":3}",
+        "signature": "7249b9cc288514cd49d32b238a167f262d14c064",
+        "value": "{\"authorization\":{\"forbidden\":false,\"reason\":\"\"},\"clip_uri\":\"https://production.assets.clips.twitchcdn.net/AT-cm%7C541849220.mp4\",\"clip_slug\":\"AstuteEncouragingCroquetteJebaited\",\"device_id\":null,\"expires\":1770625745,\"user_id\":\"\",\"version\":3}",
         "__typename": "PlaybackAccessToken"
       },
       "video": null,
@@ -139,12 +144,14 @@
       ],
       "isViewerEditRestricted": false,
       "suggestedCropping": null,
+      "rawMediaRelativeOffset": 0,
+      "rawMediaKey": "",
       "__typename": "Clip"
     }
   },
   "extensions": {
-    "durationMilliseconds": 104,
+    "durationMilliseconds": 76,
     "operationName": "ShareClipRenderStatus",
-    "requestID": "01K5V1T60TVCDFDGSJC1GC7YSH"
+    "requestID": "01KGYKM7TB6MXE02HEQT7Z3VQE"
   }
 }

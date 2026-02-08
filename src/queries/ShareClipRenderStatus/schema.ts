@@ -61,7 +61,6 @@ export const ClipAssetSchema = strictObject(
     ...pick(schemas.ClipAsset, [
       'id',
       'aspectRatio',
-      'type',
       'createdAt',
       'creationState',
       'thumbnailURL',
@@ -77,6 +76,7 @@ export const ClipAssetSchema = strictObject(
         pick(schemas.ClipVideoQuality, [
           'bitrate',
           'codecs',
+          'duration',
           'height',
           'width',
           'videoCodec',
@@ -108,6 +108,7 @@ export const ClipSchema = strictObject(
       'id',
       'slug',
       'url',
+      'isAutoCurated',
       'embedURL',
       'title',
       'viewCount',
@@ -116,10 +117,13 @@ export const ClipSchema = strictObject(
       'thumbnailURL',
       'createdAt',
       'isPublished',
+      'duration',
       'durationSeconds',
       'champBadge',
       'videoOffsetSeconds',
       'isViewerEditRestricted',
+      'rawMediaRelativeOffset',
+      'rawMediaKey',
     ]),
     assets: T.Array(TRef(ClipAssetSchema)),
     curator: T.Union([

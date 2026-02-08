@@ -4,6 +4,7 @@
       "id": "3666079080",
       "slug": "ShakingBlitheOwlBrokeBack",
       "url": "https://www.twitch.tv/madgaymon/clip/ShakingBlitheOwlBrokeBack",
+      "isAutoCurated": false,
       "embedURL": "https://clips.twitch.tv/embed?clip=ShakingBlitheOwlBrokeBack",
       "title": "затащат ли нам осирис?",
       "viewCount": 140,
@@ -13,7 +14,6 @@
         {
           "id": "22594802816-index-0000006526",
           "aspectRatio": 1.7777777777777777,
-          "type": "SOURCE",
           "createdAt": "2016-07-31T21:49:42.63966464Z",
           "creationState": "CREATED",
           "curator": {
@@ -28,9 +28,10 @@
             {
               "bitrate": 0,
               "codecs": "",
+              "duration": null,
               "height": 0,
               "width": 0,
-              "videoCodec": null,
+              "videoCodec": "AVC",
               "frameRate": 30,
               "quality": "720",
               "sourceURL": "https://production.assets.clips.twitchcdn.net/22594802816-index-0000006526.mp4",
@@ -39,9 +40,10 @@
             {
               "bitrate": 0,
               "codecs": "",
+              "duration": null,
               "height": 0,
               "width": 0,
-              "videoCodec": null,
+              "videoCodec": "AVC",
               "frameRate": 30,
               "quality": "480",
               "sourceURL": "https://production.assets.clips.twitchcdn.net/22594802816-index-0000006526-852x480.mp4",
@@ -50,9 +52,10 @@
             {
               "bitrate": 0,
               "codecs": "",
+              "duration": null,
               "height": 0,
               "width": 0,
-              "videoCodec": null,
+              "videoCodec": "AVC",
               "frameRate": 30,
               "quality": "360",
               "sourceURL": "https://production.assets.clips.twitchcdn.net/22594802816-index-0000006526-640x360.mp4",
@@ -87,11 +90,12 @@
       "thumbnailURL": "https://static-cdn.jtvnw.net/twitch-clips/22594802816-index-0000006526-preview-260x147.jpg",
       "createdAt": "2016-07-31T21:49:42Z",
       "isPublished": true,
+      "duration": 30.79,
       "durationSeconds": 30,
       "champBadge": null,
       "playbackAccessToken": {
-        "signature": "9a045ad78ea3dd1cf5dbba27cf2785ca39fed84a",
-        "value": "{\"authorization\":{\"forbidden\":false,\"reason\":\"\"},\"clip_uri\":\"https://production.assets.clips.twitchcdn.net/22594802816-index-0000006526.mp4\",\"clip_slug\":\"ShakingBlitheOwlBrokeBack\",\"device_id\":null,\"expires\":1758695216,\"user_id\":\"\",\"version\":3}",
+        "signature": "02b5f9fced4467f7216ecddfb3b0c778eeb30cbf",
+        "value": "{\"authorization\":{\"forbidden\":false,\"reason\":\"\"},\"clip_uri\":\"https://production.assets.clips.twitchcdn.net/22594802816-index-0000006526.mp4\",\"clip_slug\":\"ShakingBlitheOwlBrokeBack\",\"device_id\":null,\"expires\":1770625736,\"user_id\":\"\",\"version\":3}",
         "__typename": "PlaybackAccessToken"
       },
       "video": null,
@@ -112,12 +116,14 @@
       ],
       "isViewerEditRestricted": false,
       "suggestedCropping": null,
+      "rawMediaRelativeOffset": 0,
+      "rawMediaKey": "",
       "__typename": "Clip"
     }
   },
   "extensions": {
-    "durationMilliseconds": 97,
+    "durationMilliseconds": 80,
     "operationName": "ShareClipRenderStatus",
-    "requestID": "01K5V1SD1Q8P2WMNZP68FSYK67"
+    "requestID": "01KGYKKZPTCJE9JET8NY9AX2NW"
   }
 }

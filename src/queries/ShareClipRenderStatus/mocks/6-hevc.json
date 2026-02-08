@@ -4,16 +4,16 @@
       "id": "2519210639",
       "slug": "DeliciousCarelessCrowLitty-ccS0mlymOKwRZBjV",
       "url": "https://www.twitch.tv/dakillzor/clip/DeliciousCarelessCrowLitty-ccS0mlymOKwRZBjV",
+      "isAutoCurated": false,
       "embedURL": "https://clips.twitch.tv/embed?clip=DeliciousCarelessCrowLitty-ccS0mlymOKwRZBjV",
       "title": "xd",
-      "viewCount": 11,
+      "viewCount": 27,
       "language": "EN",
       "isFeatured": false,
       "assets": [
         {
           "id": "f8aac34c-36b0-4bd6-9e43-2387e4023b64",
           "aspectRatio": 1.7777777910232544,
-          "type": "SOURCE",
           "createdAt": "2025-09-22T16:51:32.820471891Z",
           "creationState": "CREATED",
           "curator": {
@@ -28,6 +28,7 @@
             {
               "bitrate": 9004135,
               "codecs": "hvc1.1.2.L150.90.0.0.0.0.0,mp4a.40.2",
+              "duration": null,
               "height": 1440,
               "width": 2560,
               "videoCodec": "HEVC",
@@ -39,6 +40,7 @@
             {
               "bitrate": 7503559,
               "codecs": "avc1.64002A,mp4a.40.2",
+              "duration": null,
               "height": 1080,
               "width": 1920,
               "videoCodec": "AVC",
@@ -50,6 +52,7 @@
             {
               "bitrate": 0,
               "codecs": "",
+              "duration": null,
               "height": 0,
               "width": 0,
               "videoCodec": "AVC",
@@ -61,6 +64,7 @@
             {
               "bitrate": 0,
               "codecs": "",
+              "duration": null,
               "height": 0,
               "width": 0,
               "videoCodec": "AVC",
@@ -72,6 +76,7 @@
             {
               "bitrate": 0,
               "codecs": "",
+              "duration": null,
               "height": 0,
               "width": 0,
               "videoCodec": "AVC",
@@ -87,7 +92,6 @@
         {
           "id": "61dbe382-57ad-4d6d-9ac3-36e2205dacad",
           "aspectRatio": 0.5625,
-          "type": "RECOMPOSED",
           "createdAt": "2025-09-22T16:51:32.820471891Z",
           "creationState": "CREATED",
           "curator": {
@@ -102,6 +106,7 @@
             {
               "bitrate": 0,
               "codecs": "avc1.64002A,mp4a.40.2",
+              "duration": null,
               "height": 0,
               "width": 0,
               "videoCodec": "AVC",
@@ -113,6 +118,7 @@
             {
               "bitrate": 0,
               "codecs": "",
+              "duration": null,
               "height": 0,
               "width": 0,
               "videoCodec": "AVC",
@@ -124,6 +130,7 @@
             {
               "bitrate": 0,
               "codecs": "",
+              "duration": null,
               "height": 0,
               "width": 0,
               "videoCodec": "AVC",
@@ -135,6 +142,7 @@
             {
               "bitrate": 0,
               "codecs": "",
+              "duration": null,
               "height": 0,
               "width": 0,
               "videoCodec": "AVC",
@@ -209,17 +217,17 @@
         "isPartner": true,
         "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/ba5e4714-b7dd-43f5-9c62-df0c91647482-profile_image-70x70.png",
         "followers": {
-          "totalCount": 295900,
+          "totalCount": 326766,
           "__typename": "FollowerConnection"
         },
         "stream": {
-          "id": "314437099859",
-          "viewersCount": 2819,
+          "id": "315230831827",
+          "viewersCount": 1332,
           "__typename": "Stream"
         },
         "lastBroadcast": {
-          "id": "314437099859",
-          "startedAt": "2025-09-23T07:56:15.473065Z",
+          "id": "315230831827",
+          "startedAt": "2026-02-08T11:19:45.229776Z",
           "__typename": "Broadcast"
         },
         "self": null,
@@ -228,20 +236,16 @@
       "thumbnailURL": "https://static-cdn.jtvnw.net/twitch-clips-thumbnails-prod/DeliciousCarelessCrowLitty-ccS0mlymOKwRZBjV/f8aac34c-36b0-4bd6-9e43-2387e4023b64/preview.jpg",
       "createdAt": "2025-09-22T16:51:32Z",
       "isPublished": true,
+      "duration": 7.79,
       "durationSeconds": 7,
       "champBadge": null,
       "playbackAccessToken": {
-        "signature": "fe811b7f4429ef9cab4df9455b793fc88c67ed57",
-        "value": "{\"authorization\":{\"forbidden\":false,\"reason\":\"\"},\"clip_uri\":\"\",\"clip_slug\":\"DeliciousCarelessCrowLitty-ccS0mlymOKwRZBjV\",\"device_id\":null,\"expires\":1758695789,\"user_id\":\"\",\"version\":3}",
+        "signature": "8e86ceab18c39ba33b51d93e7a48b38ae3539399",
+        "value": "{\"authorization\":{\"forbidden\":false,\"reason\":\"\"},\"clip_uri\":\"https://production.assets.clips.twitchcdn.net/v2/media/DeliciousCarelessCrowLitty-ccS0mlymOKwRZBjV/61dbe382-57ad-4d6d-9ac3-36e2205dacad/video-918.mp4\",\"clip_slug\":\"DeliciousCarelessCrowLitty-ccS0mlymOKwRZBjV\",\"device_id\":null,\"expires\":1770625771,\"user_id\":\"\",\"version\":3}",
         "__typename": "PlaybackAccessToken"
       },
-      "video": {
-        "id": "2571927466",
-        "broadcastType": "ARCHIVE",
-        "title": "🔥2x !DROPS🔥Night ft @platinumdust | !DAKITHON DAY 20 !fav !T11 | New acc —\u003e !NEW🔥!mods !YT",
-        "__typename": "Video"
-      },
-      "videoOffsetSeconds": 118595,
+      "video": null,
+      "videoOffsetSeconds": null,
       "videoQualities": [
         {
           "sourceURL": "https://production.assets.clips.twitchcdn.net/v2/media/DeliciousCarelessCrowLitty-ccS0mlymOKwRZBjV/f8aac34c-36b0-4bd6-9e43-2387e4023b64/video-1080.mp4",
@@ -262,12 +266,14 @@
       ],
       "isViewerEditRestricted": false,
       "suggestedCropping": null,
+      "rawMediaRelativeOffset": 0,
+      "rawMediaKey": "",
       "__typename": "Clip"
     }
   },
   "extensions": {
-    "durationMilliseconds": 103,
+    "durationMilliseconds": 76,
     "operationName": "ShareClipRenderStatus",
-    "requestID": "01K5V2AWCJY6Z5VY9WEAMQQ5F6"
+    "requestID": "01KGYKN16T2P3ZTC4X56WKTD08"
   }
 }

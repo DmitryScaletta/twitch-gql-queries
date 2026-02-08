@@ -4,16 +4,16 @@
       "id": "1738420918",
       "slug": "TenaciousOriginalMooseNononoCat-AEuwlukHCpsIR0wn",
       "url": "https://www.twitch.tv/pajlada/clip/TenaciousOriginalMooseNononoCat-AEuwlukHCpsIR0wn",
+      "isAutoCurated": false,
       "embedURL": "https://clips.twitch.tv/embed?clip=TenaciousOriginalMooseNononoCat-AEuwlukHCpsIR0wn",
       "title": "LOL",
-      "viewCount": 631,
+      "viewCount": 810,
       "language": "EN",
       "isFeatured": true,
       "assets": [
         {
           "id": "AT-cm|h3uGmgBLsJbpBwqbCEdMJw",
           "aspectRatio": 1.7777777777777777,
-          "type": "SOURCE",
           "createdAt": "2025-03-08T10:41:52.017230458Z",
           "creationState": "CREATED",
           "curator": {
@@ -28,9 +28,10 @@
             {
               "bitrate": 0,
               "codecs": "",
+              "duration": null,
               "height": 0,
               "width": 0,
-              "videoCodec": null,
+              "videoCodec": "AVC",
               "frameRate": 30.2,
               "quality": "1440",
               "sourceURL": "https://production.assets.clips.twitchcdn.net/h3uGmgBLsJbpBwqbCEdMJw/AT-cm%7Ch3uGmgBLsJbpBwqbCEdMJw.mp4",
@@ -39,9 +40,10 @@
             {
               "bitrate": 0,
               "codecs": "",
+              "duration": null,
               "height": 0,
               "width": 0,
-              "videoCodec": null,
+              "videoCodec": "AVC",
               "frameRate": 30.2,
               "quality": "720",
               "sourceURL": "https://production.assets.clips.twitchcdn.net/h3uGmgBLsJbpBwqbCEdMJw/AT-cm%7Ch3uGmgBLsJbpBwqbCEdMJw-720.mp4",
@@ -50,9 +52,10 @@
             {
               "bitrate": 0,
               "codecs": "",
+              "duration": null,
               "height": 0,
               "width": 0,
-              "videoCodec": null,
+              "videoCodec": "AVC",
               "frameRate": 30.2,
               "quality": "480",
               "sourceURL": "https://production.assets.clips.twitchcdn.net/h3uGmgBLsJbpBwqbCEdMJw/AT-cm%7Ch3uGmgBLsJbpBwqbCEdMJw-480.mp4",
@@ -61,9 +64,10 @@
             {
               "bitrate": 0,
               "codecs": "",
+              "duration": null,
               "height": 0,
               "width": 0,
-              "videoCodec": null,
+              "videoCodec": "AVC",
               "frameRate": 30.2,
               "quality": "360",
               "sourceURL": "https://production.assets.clips.twitchcdn.net/h3uGmgBLsJbpBwqbCEdMJw/AT-cm%7Ch3uGmgBLsJbpBwqbCEdMJw-360.mp4",
@@ -102,13 +106,17 @@
         "isPartner": true,
         "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/cbe986e3-06ad-4506-a3aa-eb05466c839c-profile_image-70x70.png",
         "followers": {
-          "totalCount": 44443,
+          "totalCount": 44414,
           "__typename": "FollowerConnection"
         },
-        "stream": null,
+        "stream": {
+          "id": "316079061351",
+          "viewersCount": 62,
+          "__typename": "Stream"
+        },
         "lastBroadcast": {
-          "id": "314896774757",
-          "startedAt": "2025-09-21T14:01:58.65754Z",
+          "id": "316079061351",
+          "startedAt": "2026-02-08T10:00:53.004114Z",
           "__typename": "Broadcast"
         },
         "self": null,
@@ -117,11 +125,12 @@
       "thumbnailURL": "https://static-cdn.jtvnw.net/twitch-clips/h3uGmgBLsJbpBwqbCEdMJw/AT-cm%7Ch3uGmgBLsJbpBwqbCEdMJw-preview-260x147.jpg",
       "createdAt": "2025-03-08T10:41:52Z",
       "isPublished": true,
+      "duration": 5,
       "durationSeconds": 5,
       "champBadge": null,
       "playbackAccessToken": {
-        "signature": "2724336bf639b2835da7809ddbd0dff848b4f857",
-        "value": "{\"authorization\":{\"forbidden\":false,\"reason\":\"\"},\"clip_uri\":\"https://production.assets.clips.twitchcdn.net/h3uGmgBLsJbpBwqbCEdMJw/AT-cm%7Ch3uGmgBLsJbpBwqbCEdMJw.mp4\",\"clip_slug\":\"TenaciousOriginalMooseNononoCat-AEuwlukHCpsIR0wn\",\"device_id\":null,\"expires\":1758695269,\"user_id\":\"\",\"version\":3}",
+        "signature": "25705768db072150460d6f45cf74bfc4fbd529cd",
+        "value": "{\"authorization\":{\"forbidden\":false,\"reason\":\"\"},\"clip_uri\":\"https://production.assets.clips.twitchcdn.net/h3uGmgBLsJbpBwqbCEdMJw/AT-cm%7Ch3uGmgBLsJbpBwqbCEdMJw.mp4\",\"clip_slug\":\"TenaciousOriginalMooseNononoCat-AEuwlukHCpsIR0wn\",\"device_id\":null,\"expires\":1770625762,\"user_id\":\"\",\"version\":3}",
         "__typename": "PlaybackAccessToken"
       },
       "video": null,
@@ -146,12 +155,14 @@
       ],
       "isViewerEditRestricted": true,
       "suggestedCropping": null,
+      "rawMediaRelativeOffset": 0,
+      "rawMediaKey": "",
       "__typename": "Clip"
     }
   },
   "extensions": {
-    "durationMilliseconds": 103,
+    "durationMilliseconds": 99,
     "operationName": "ShareClipRenderStatus",
-    "requestID": "01K5V1V059A8TZCZ87A2DZB1GP"
+    "requestID": "01KGYKMR9MH02FCVY4N69Z89R0"
   }
 }
