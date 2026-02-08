@@ -259,6 +259,7 @@ export interface ChannelVideoShelvesQueryClip {
   createdAt: string;
   durationSeconds: number;
   isFeatured: boolean;
+  isAutoCurated: boolean;
   clipTitle: string;
   clipViewCount: number;
   curator: null | {
@@ -285,6 +286,10 @@ export interface ChannelVideoShelvesQueryClip {
       __typename: 'UserRoles';
     };
     __typename: 'User';
+  };
+  broadcastIdentifier: null | {
+    id: string;
+    __typename: 'BroadcastIdOnly';
   };
   guestStarParticipants: null | {
     guests: (null | {
@@ -317,6 +322,10 @@ export interface ChannelVideoShelvesQueryVideo {
     displayName: string;
     name: string;
     __typename: 'Game';
+  };
+  broadcastIdentifier: null | {
+    id: string;
+    __typename: 'BroadcastIdOnly';
   };
   owner: {
     displayName: string;
@@ -554,9 +563,6 @@ export interface ClipsCardsUserClip {
   embedURL: string;
   title: string;
   viewCount: number;
-  /**
-   * Possible values: `EN`, `DE`, `ASL`, `ZH_HK`
-   */
   language: string;
   thumbnailURL: '' | string & {};
   createdAt: string;
@@ -817,6 +823,10 @@ export interface FilterableVideoTowerVideosVideo {
     name: string;
     __typename: 'Game';
   };
+  broadcastIdentifier: null | {
+    id: string;
+    __typename: 'BroadcastIdOnly';
+  };
   owner: null | {
     displayName: string;
     id: string;
@@ -1073,7 +1083,7 @@ export interface SearchResultsPageChannel {
   login: string;
   profileImageURL: string;
   description: null | string;
-  broadcastSettings: {
+  broadcastSettings: null | {
     id: string;
     title: string;
     __typename: 'BroadcastSettings';
@@ -1082,15 +1092,12 @@ export interface SearchResultsPageChannel {
     totalCount: null | number;
     __typename: 'FollowerConnection';
   };
-  /**
-   * If never streamed: `{ id: null, startedAt: null }`
-   */
-  lastBroadcast: {
+  lastBroadcast: null | {
     id: null | string;
     startedAt: null | string;
     __typename: 'Broadcast';
   };
-  channel: {
+  channel: null | {
     id: string;
     schedule: null | {
       id: string;
@@ -1444,7 +1451,6 @@ export interface ShareClipRenderStatusBroadcaster {
 export interface ShareClipRenderStatusClipAsset {
   id: string;
   aspectRatio: number;
-  type: 'SOURCE' | 'RECOMPOSED';
   createdAt: string;
   creationState: 'CREATED' | 'CREATING';
   /**
@@ -1461,6 +1467,7 @@ export interface ShareClipRenderStatusClipAsset {
   videoQualities: {
     bitrate: number;
     codecs: string;
+    duration: null | number;
     height: number;
     width: number;
     videoCodec: null | 'AVC' | 'HEVC' | string & {};
@@ -1528,21 +1535,22 @@ export interface ShareClipRenderStatusClip {
   id: string;
   slug: string;
   url: string;
+  isAutoCurated: boolean;
   embedURL: string;
   title: string;
   viewCount: number;
-  /**
-   * Possible values: `EN`, `DE`, `ASL`, `ZH_HK`
-   */
   language: string;
   isFeatured: boolean;
   thumbnailURL: '' | string & {};
   createdAt: string;
   isPublished: boolean;
+  duration: number;
   durationSeconds: number;
   champBadge: null;
   videoOffsetSeconds: null | number;
   isViewerEditRestricted: boolean;
+  rawMediaRelativeOffset: number;
+  rawMediaKey: string;
   assets: ShareClipRenderStatusClipAsset[];
   curator: null | {
     id: string;
@@ -1616,14 +1624,11 @@ export interface StreamMetadataUser {
     displayName: string;
     __typename: 'Team';
   };
-  channel: {
+  channel: null | {
     id: string;
     __typename: 'Channel';
   };
-  /**
-   * If never streamed: `{ id: null, title: null }`
-   */
-  lastBroadcast: {
+  lastBroadcast: null | {
     id: null | string;
     title: null | string;
     __typename: 'Broadcast';
