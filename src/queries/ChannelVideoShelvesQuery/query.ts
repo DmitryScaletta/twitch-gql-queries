@@ -9,7 +9,7 @@ export const getQueryChannelVideoShelvesQuery = (
     persistedQuery: {
       version: 1,
       sha256Hash:
-        'eea6c7a6baaa6ee60825f469c943cfda7e7c2415c01c64d7fd1407d172e82a7b',
+        '280f582866d0914749c1666da7adfcdb42739182b060ef4050641aa9324da19b',
     },
   },
 });

@@ -54,7 +54,7 @@ export const ClipSchema = strictObject(
     ]),
     broadcastIdentifier: T.Union([
       T.Null(),
-      strictObject(pick(schemas.BroadcastIdentifier, ['id'])),
+      strictObject(pick(schemas.BroadcastIdOnly, ['id'])),
     ]),
     broadcaster: T.Union([
       T.Null(),

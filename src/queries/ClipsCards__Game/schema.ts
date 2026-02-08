@@ -91,7 +91,7 @@ export const ClipSchema = strictObject(
     ]),
     broadcastIdentifier: T.Union([
       T.Null(),
-      strictObject(pick(schemas.BroadcastIdentifier, ['id'])),
+      strictObject(pick(schemas.BroadcastIdOnly, ['id'])),
     ]),
     guestStarParticipants: T.Union([T.Null(), GuestStarParticipantsSchema]),
     previewThumbnailProperties: strictObject(

@@ -26,6 +26,7 @@ export const ClipSchema = strictObject(
       'createdAt',
       'durationSeconds',
       'isFeatured',
+      'isAutoCurated',
     ]),
     clipTitle: T.String(),
     clipViewCount: T.Integer({ minimum: 0 }),
@@ -47,6 +48,10 @@ export const ClipSchema = strictObject(
       ]),
       roles: strictObject(pick(schemas.UserRoles, ['isPartner'])),
     }),
+    broadcastIdentifier: T.Union([
+      T.Null(),
+      strictObject(pick(schemas.BroadcastIdOnly, ['id'])),
+    ]),
     guestStarParticipants: T.Union([T.Null(), GuestStarParticipantsSchema]),
   },
   { $id: `${displayName}Clip` },
@@ -68,6 +73,10 @@ export const VideoSchema = strictObject(
       strictObject(
         pick(schemas.Game, ['boxArtURL', 'id', 'slug', 'displayName', 'name']),
       ),
+    ]),
+    broadcastIdentifier: T.Union([
+      T.Null(),
+      strictObject(pick(schemas.BroadcastIdOnly, ['id'])),
     ]),
     owner: strictObject({
       ...pick(schemas.User, [

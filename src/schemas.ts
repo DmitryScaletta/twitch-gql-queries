@@ -56,8 +56,8 @@ export const BroadcastSettings = {
   __typename: T.Literal('BroadcastSettings'),
 } satisfies Properties;
 
-export const BroadcastIdentifier = {
-  id: T.String({ pattern: '^-?[0-9]+$' }),
+export const BroadcastIdOnly = {
+  id: Broadcast.id,
   __typename: T.Literal('BroadcastIdOnly'),
 } satisfies Properties;
 
