@@ -35,22 +35,21 @@ export const VariablesSchema = strictObject(
   { $id: `${displayName}Variables` },
 );
 
+const GuestStarParticipantsUserSchema = strictObject(
+  pick(schemas.User, [
+    'id',
+    'login',
+    'displayName',
+    'profileImageURL',
+    'primaryColorHex',
+    'description',
+  ]),
+);
 export const GuestStarParticipantsSchema = strictObject({
-  guests: T.Array(
-    T.Union([
-      T.Null(),
-      strictObject(
-        pick(schemas.User, [
-          'id',
-          'login',
-          'displayName',
-          'profileImageURL',
-          'primaryColorHex',
-          'description',
-        ]),
-      ),
-    ]),
-  ),
+  guests: T.Union([
+    T.Null(),
+    T.Array(T.Union([T.Null(), GuestStarParticipantsUserSchema])),
+  ]),
   sessionIdentifier: T.Union([T.Literal(''), T.String({ minLength: 1 })]),
   __typename: T.Literal('GuestStarParticipants'),
 });
