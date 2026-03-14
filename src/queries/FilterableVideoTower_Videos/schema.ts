@@ -97,26 +97,24 @@ export const VideoSchema = strictObject(
   { $id: `${displayName}Video` },
 );
 
-const UserSchema = strictObject({
-  ...pick(schemas.User, []),
-  id: T.Union([T.Literal(''), schemas.User.id]),
-  videos: T.Union([
-    T.Null(),
+const VideosSchema = strictObject({
+  edges: T.Array(
     strictObject({
-      edges: T.Array(
-        strictObject({
-          ...pick(schemas.VideoEdge, ['cursor']),
-          node: TRef(VideoSchema),
-        }),
-      ),
-      pageInfo: strictObject(pick(schemas.PageInfo, ['hasNextPage'])),
-      __typename: T.Literal('VideoConnection'),
+      ...pick(schemas.VideoEdge, ['cursor']),
+      node: TRef(VideoSchema),
     }),
-  ]),
+  ),
+  pageInfo: strictObject(pick(schemas.PageInfo, ['hasNextPage'])),
+  __typename: T.Literal('VideoConnection'),
+});
+
+const UserSchema = strictObject({
+  ...pick(schemas.User, ['id']),
+  videos: T.Union([T.Null(), VideosSchema]),
 });
 
 export const DataSchema = strictObject(
-  { user: UserSchema },
+  { user: T.Union([T.Null(), UserSchema]) },
   { $id: `${displayName}Data` },
 );
 

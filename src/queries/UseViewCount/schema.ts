@@ -12,8 +12,7 @@ export const VariablesSchema = strictObject(
 );
 
 const UserSchema = strictObject({
-  ...pick(schemas.User, []),
-  id: T.Union([T.Literal(''), schemas.User.id]),
+  ...pick(schemas.User, ['id']),
   stream: T.Union([
     T.Null(),
     strictObject(pick(schemas.Stream, ['id', 'viewersCount'])),
@@ -21,7 +20,7 @@ const UserSchema = strictObject({
 });
 
 export const DataSchema = strictObject(
-  { user: UserSchema },
+  { user: T.Union([T.Null(), UserSchema]) },
   { $id: `${displayName}Data` },
 );
 

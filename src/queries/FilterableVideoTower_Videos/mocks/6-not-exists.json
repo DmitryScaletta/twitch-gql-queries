@@ -1,8 +1,8 @@
 {
-  "data": { "user": { "id": "", "videos": null, "__typename": "User" } },
+  "data": { "user": null },
   "extensions": {
-    "durationMilliseconds": 20,
+    "durationMilliseconds": 19,
     "operationName": "FilterableVideoTower_Videos",
-    "requestID": "01KGYJHYT10Y7ZZ8N988AFQ8M2"
+    "requestID": "01KKNZ3XN65AZ8J5HBJ97T72AC"
   }
 }

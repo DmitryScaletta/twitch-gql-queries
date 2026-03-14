@@ -292,15 +292,17 @@ export interface ChannelVideoShelvesQueryClip {
     __typename: 'BroadcastIdOnly';
   };
   guestStarParticipants: null | {
-    guests: (null | {
-      id: string;
-      login: string;
-      displayName: string;
-      profileImageURL: string;
-      primaryColorHex: null | string;
-      description: null | string;
-      __typename: 'User';
-    })[];
+    guests:
+      | null
+      | (null | {
+          id: string;
+          login: string;
+          displayName: string;
+          profileImageURL: string;
+          primaryColorHex: null | string;
+          description: null | string;
+          __typename: 'User';
+        })[];
     sessionIdentifier: '' | string & {};
     __typename: 'GuestStarParticipants';
   };
@@ -502,15 +504,17 @@ export interface ClipsCardsGameClip {
     __typename: 'BroadcastIdOnly';
   };
   guestStarParticipants: null | {
-    guests: (null | {
-      id: string;
-      login: string;
-      displayName: string;
-      profileImageURL: string;
-      primaryColorHex: null | string;
-      description: null | string;
-      __typename: 'User';
-    })[];
+    guests:
+      | null
+      | (null | {
+          id: string;
+          login: string;
+          displayName: string;
+          profileImageURL: string;
+          primaryColorHex: null | string;
+          description: null | string;
+          __typename: 'User';
+        })[];
     sessionIdentifier: '' | string & {};
     __typename: 'GuestStarParticipants';
   };
@@ -600,15 +604,17 @@ export interface ClipsCardsUserClip {
     __typename: 'User';
   };
   guestStarParticipants: null | {
-    guests: (null | {
-      id: string;
-      login: string;
-      displayName: string;
-      profileImageURL: string;
-      primaryColorHex: null | string;
-      description: null | string;
-      __typename: 'User';
-    })[];
+    guests:
+      | null
+      | (null | {
+          id: string;
+          login: string;
+          displayName: string;
+          profileImageURL: string;
+          primaryColorHex: null | string;
+          description: null | string;
+          __typename: 'User';
+        })[];
     sessionIdentifier: '' | string & {};
     __typename: 'GuestStarParticipants';
   };
@@ -626,8 +632,8 @@ export interface ClipsCardsUserVariables {
 }
 
 export interface ClipsCardsUserData {
-  user: {
-    id: '' | string & {};
+  user: null | {
+    id: string;
     clips: null | {
       pageInfo: {
         hasNextPage: boolean;
@@ -881,8 +887,8 @@ export interface FilterableVideoTowerVideosVariables {
 }
 
 export interface FilterableVideoTowerVideosData {
-  user: {
-    id: '' | string & {};
+  user: null | {
+    id: string;
     videos: null | {
       edges: {
         cursor: null | string;
@@ -1021,8 +1027,8 @@ export interface GetUserIdVariables {
 }
 
 export interface GetUserIdData {
-  user: {
-    id: '' | string & {};
+  user: null | {
+    id: string;
     __typename: 'User';
   };
 }
@@ -1679,8 +1685,8 @@ export interface UseViewCountVariables {
 }
 
 export interface UseViewCountData {
-  user: {
-    id: '' | string & {};
+  user: null | {
+    id: string;
     stream: null | {
       id: string;
       viewersCount: number;
@@ -1783,7 +1789,7 @@ export interface VideoPreviewOverlayVariables {
 }
 
 export interface VideoPreviewOverlayData {
-  user: {
+  user: null | {
     id: '' | string & {};
     stream: null | {
       id: string;

@@ -87,13 +87,12 @@ const ClipsSchema = strictObject({
 });
 
 const UserSchema = strictObject({
-  ...pick(schemas.User, []),
-  id: T.Union([T.Literal(''), schemas.User.id]),
+  ...pick(schemas.User, ['id']),
   clips: T.Union([T.Null(), ClipsSchema]),
 });
 
 export const DataSchema = strictObject(
-  { user: UserSchema },
+  { user: T.Union([T.Null(), UserSchema]) },
   { $id: `${displayName}Data` },
 );
 

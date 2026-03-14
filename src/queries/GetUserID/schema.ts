@@ -17,13 +17,10 @@ export const VariablesSchema = strictObject(
   { $id: `${displayName}Variables` },
 );
 
+const UserSchema = strictObject(pick(schemas.User, ['id']));
+
 export const DataSchema = strictObject(
-  {
-    user: strictObject({
-      ...pick(schemas.User, []),
-      id: T.Union([T.Literal(''), schemas.User.id]),
-    }),
-  },
+  { user: T.Union([T.Null(), UserSchema]) },
   { $id: `${displayName}Data` },
 );
 

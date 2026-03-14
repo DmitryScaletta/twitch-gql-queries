@@ -23,7 +23,7 @@ const UserSchema = strictObject({
 });
 
 export const DataSchema = strictObject(
-  { user: UserSchema },
+  { user: T.Union([T.Null(), UserSchema]) },
   { $id: `${displayName}Data` },
 );
 
