@@ -3,8 +3,8 @@
     "clip": {
       "id": "3942697259",
       "playbackAccessToken": {
-        "signature": "daea9471d8b796bfcc91adb605650bb7da98a76d",
-        "value": "{\"authorization\":{\"forbidden\":false,\"reason\":\"\"},\"clip_uri\":\"https://production.assets.clips.twitchcdn.net/AT-cm%7C961443378.mp4\",\"clip_slug\":\"DeliciousDelightfulPicklesWOOP\",\"device_id\":null,\"expires\":1741758474,\"user_id\":\"\",\"version\":2}",
+        "signature": "034e9e6a81cbd06adf291249190ab049150a5b48",
+        "value": "{\"authorization\":{\"forbidden\":false,\"reason\":\"\"},\"clip_uri\":\"https://production.assets.clips.twitchcdn.net/AT-cm%7C961443378.mp4\",\"clip_slug\":\"DeliciousDelightfulPicklesWOOP\",\"device_id\":null,\"expires\":1773901176,\"user_id\":\"\",\"version\":3}",
         "__typename": "PlaybackAccessToken"
       },
       "videoQualities": [
@@ -33,12 +33,80 @@
           "__typename": "ClipVideoQuality"
         }
       ],
+      "assets": [
+        {
+          "id": "AT-cm|961443378",
+          "aspectRatio": 1.7777777777777777,
+          "createdAt": "2020-12-09T19:18:10.456450048Z",
+          "creationState": "CREATED",
+          "curator": {
+            "id": "61838539",
+            "login": "yasongas",
+            "displayName": "YasOnGas",
+            "profileImageURL": "https://static-cdn.jtvnw.net/jtv_user_pictures/585d16af-c132-4ad0-b32e-42aaf785a46f-profile_image-50x50.png",
+            "__typename": "User"
+          },
+          "thumbnailURL": "https://static-cdn.jtvnw.net/twitch-clips/AT-cm%7C961443378-preview-480x272.jpg",
+          "videoQualities": [
+            {
+              "bitrate": 0,
+              "codecs": "",
+              "duration": null,
+              "height": 0,
+              "width": 0,
+              "videoCodec": "AVC",
+              "frameRate": 60.0133362969549,
+              "quality": "1080",
+              "sourceURL": "https://production.assets.clips.twitchcdn.net/AT-cm%7C961443378.mp4",
+              "__typename": "ClipVideoQuality"
+            },
+            {
+              "bitrate": 0,
+              "codecs": "",
+              "duration": null,
+              "height": 0,
+              "width": 0,
+              "videoCodec": "AVC",
+              "frameRate": 60.0133362969549,
+              "quality": "720",
+              "sourceURL": "https://production.assets.clips.twitchcdn.net/AT-cm%7C961443378-720.mp4",
+              "__typename": "ClipVideoQuality"
+            },
+            {
+              "bitrate": 0,
+              "codecs": "",
+              "duration": null,
+              "height": 0,
+              "width": 0,
+              "videoCodec": "AVC",
+              "frameRate": 30.0066681484774,
+              "quality": "480",
+              "sourceURL": "https://production.assets.clips.twitchcdn.net/AT-cm%7C961443378-480.mp4",
+              "__typename": "ClipVideoQuality"
+            },
+            {
+              "bitrate": 0,
+              "codecs": "",
+              "duration": null,
+              "height": 0,
+              "width": 0,
+              "videoCodec": "AVC",
+              "frameRate": 30.0066681484774,
+              "quality": "360",
+              "sourceURL": "https://production.assets.clips.twitchcdn.net/AT-cm%7C961443378-360.mp4",
+              "__typename": "ClipVideoQuality"
+            }
+          ],
+          "portraitMetadata": null,
+          "__typename": "ClipAsset"
+        }
+      ],
       "__typename": "Clip"
     }
   },
   "extensions": {
-    "durationMilliseconds": 85,
+    "durationMilliseconds": 68,
     "operationName": "VideoAccessToken_Clip",
-    "requestID": "01JP29N21GTT0TVC1E39SCGCY7"
+    "requestID": "01KM07AFEX9EWTM0TC93AMVVJY"
   }
 }

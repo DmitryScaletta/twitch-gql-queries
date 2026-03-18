@@ -9,7 +9,7 @@ export const getQueryVideoAccessTokenClip = (
     persistedQuery: {
       version: 1,
       sha256Hash:
-        '36b89d2507fce29e5ca551df756d27c1cfe079e2609642b4390aa4c35796eb11',
+        '4f35f1ac933d76b1da008c806cd5546a7534dfaff83e033a422a81f24e5991b3',
     },
   },
 });

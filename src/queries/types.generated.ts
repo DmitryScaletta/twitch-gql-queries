@@ -1697,6 +1697,7 @@ export interface UseViewCountData {
 }
 
 export interface VideoAccessTokenClipVariables {
+  platform: 'web' | string & {};
   slug: string;
 }
 
@@ -1717,6 +1718,7 @@ export interface VideoAccessTokenClipData {
       sourceURL: '' | string & {};
       __typename: 'ClipVideoQuality';
     }[];
+    assets: ShareClipRenderStatusClipAsset[];
     __typename: 'Clip';
   };
 }
