@@ -3,6 +3,8 @@
     "target": "esnext",
     "module": "nodenext",
     "strict": true,
+    "lib": ["esnext"],
+    "types": ["node"],
     "allowImportingTsExtensions": true,
     "rewriteRelativeImportExtensions": true,
     "verbatimModuleSyntax": true,
