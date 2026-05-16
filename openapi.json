@@ -42273,7 +42273,7 @@
                     "extensions": {
                       "persistedQuery": {
                         "version": 1,
-                        "sha256Hash": "0a02bb974443b576f5579aab0fef1d4b7f44e58a8a256f0c5adfead0db70640f"
+                        "sha256Hash": "324783ea014524fa10a88739aa507de7a52f9624574dba9739a52b8c97d885cf"
                       }
                     }
                   }
@@ -42287,7 +42287,7 @@
                     "extensions": {
                       "persistedQuery": {
                         "version": 1,
-                        "sha256Hash": "0a02bb974443b576f5579aab0fef1d4b7f44e58a8a256f0c5adfead0db70640f"
+                        "sha256Hash": "324783ea014524fa10a88739aa507de7a52f9624574dba9739a52b8c97d885cf"
                       }
                     }
                   }
@@ -42301,7 +42301,7 @@
                     "extensions": {
                       "persistedQuery": {
                         "version": 1,
-                        "sha256Hash": "0a02bb974443b576f5579aab0fef1d4b7f44e58a8a256f0c5adfead0db70640f"
+                        "sha256Hash": "324783ea014524fa10a88739aa507de7a52f9624574dba9739a52b8c97d885cf"
                       }
                     }
                   }
@@ -42315,7 +42315,7 @@
                     "extensions": {
                       "persistedQuery": {
                         "version": 1,
-                        "sha256Hash": "0a02bb974443b576f5579aab0fef1d4b7f44e58a8a256f0c5adfead0db70640f"
+                        "sha256Hash": "324783ea014524fa10a88739aa507de7a52f9624574dba9739a52b8c97d885cf"
                       }
                     }
                   }
@@ -42329,7 +42329,7 @@
                     "extensions": {
                       "persistedQuery": {
                         "version": 1,
-                        "sha256Hash": "0a02bb974443b576f5579aab0fef1d4b7f44e58a8a256f0c5adfead0db70640f"
+                        "sha256Hash": "324783ea014524fa10a88739aa507de7a52f9624574dba9739a52b8c97d885cf"
                       }
                     }
                   }
@@ -42343,7 +42343,7 @@
                     "extensions": {
                       "persistedQuery": {
                         "version": 1,
-                        "sha256Hash": "0a02bb974443b576f5579aab0fef1d4b7f44e58a8a256f0c5adfead0db70640f"
+                        "sha256Hash": "324783ea014524fa10a88739aa507de7a52f9624574dba9739a52b8c97d885cf"
                       }
                     }
                   }
@@ -56930,6 +56930,7 @@
           "champBadge",
           "videoOffsetSeconds",
           "isViewerEditRestricted",
+          "hasCaptions",
           "rawMediaRelativeOffset",
           "rawMediaKey",
           "assets",
@@ -57030,6 +57031,9 @@
             ]
           },
           "isViewerEditRestricted": {
+            "type": "boolean"
+          },
+          "hasCaptions": {
             "type": "boolean"
           },
           "rawMediaRelativeOffset": {
@@ -57333,7 +57337,7 @@
                   },
                   "sha256Hash": {
                     "type": "string",
-                    "const": "0a02bb974443b576f5579aab0fef1d4b7f44e58a8a256f0c5adfead0db70640f"
+                    "const": "324783ea014524fa10a88739aa507de7a52f9624574dba9739a52b8c97d885cf"
                   }
                 },
                 "additionalProperties": false
