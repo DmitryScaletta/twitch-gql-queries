@@ -122,6 +122,7 @@ export const ClipSchema = strictObject(
       'champBadge',
       'videoOffsetSeconds',
       'isViewerEditRestricted',
+      'hasCaptions',
       'rawMediaRelativeOffset',
       'rawMediaKey',
     ]),

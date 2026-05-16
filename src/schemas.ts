@@ -139,6 +139,7 @@ export const Clip = {
   isAutoCurated: T.Boolean(),
   isPublished: T.Boolean(),
   isViewerEditRestricted: T.Boolean(),
+  hasCaptions: T.Boolean(),
   rawMediaRelativeOffset: T.Number({ minimum: 0 }),
   rawMediaKey: T.String(),
   createdAt: T.String({ format: 'date-time' }),

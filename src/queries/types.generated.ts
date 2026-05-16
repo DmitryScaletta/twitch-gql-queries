@@ -1555,6 +1555,7 @@ export interface ShareClipRenderStatusClip {
   champBadge: null;
   videoOffsetSeconds: null | number;
   isViewerEditRestricted: boolean;
+  hasCaptions: boolean;
   rawMediaRelativeOffset: number;
   rawMediaKey: string;
   assets: ShareClipRenderStatusClipAsset[];
