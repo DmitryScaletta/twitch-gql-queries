@@ -10,5 +10,5 @@
     "verbatimModuleSyntax": true,
     "resolveJsonModule": true
   },
-  "exclude": ["node_modules", "dist"]
+  "exclude": ["node_modules", "dist", "packages/typescript/src/*-all-unstable.generated.ts"]
 }
