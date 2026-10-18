@@ -1,0 +1,30 @@
+import type { QueryVariablesMap } from "./types.generated.ts";
+
+export const sha256Hashes = {
+  BitsConfigContext_Global: "6a265b86f3be1c8d11bdcf32c183e106028c6171e985cc2584d15f7840f5fee6",
+  BrowsePage_AllDirectories: "2f67f71ba89f3c0ed26a141ec00da1defecb2303595f5cda4298169549783d9e",
+  ChannelRoot_AboutPanel: "3b9cd4edd28e8e6f7ba6152a56157bc2b1c1a8f6e81d70808ad1b85250e5288f",
+  ChannelShell: "22a9e108f0a729c3c0f9fbc87bc03891b4f54c7da2aa4a97f228002ba3257e4f",
+  ChannelVideoShelvesQuery: "280f582866d0914749c1666da7adfcdb42739182b060ef4050641aa9324da19b",
+  ChatList_Badges: "838a7e0b47c09cac05f93ff081a9ff4f876b68f7624f0fc465fe30031e372fc2",
+  ClipsCards__Game: "cc14976959c8f31c617e956a7c4c32216c3e04f6b586088b7bf49561c35e841b",
+  ClipsCards__User: "5e28057f6a6bb95f25474447baf2eea1609ba987dc819b1a537fb0f9e08309bd",
+  ClipsDownloadButton: "a8e4ae981e4c350a80dde947df1302c33a32e675506a63d47ef85fd0db1f3314",
+  DirectoryPage_Game: "86bcceb4e8b1a51256ff8eed8bd8aae4acacf80d737efe904f84f3aeadf8cafd",
+  FFZ_RecentBroadcasts: "a92c0ad34fdba9b3f5e6125dce4b0acc9373f2b2c06c74c92187749d12f73d4c",
+  FilterableVideoTower_Videos: "67004f7881e65c297936f32c75246470629557a393788fb5a69d6d9a25a8fd5f",
+  GetPinnedChat: "450320a012e0f1704586e55755307ca3f8a4c611d678687cc3e202471a33e615",
+  GetUserID: "bf6c594605caa0c63522f690156aa04bd434870bf963deb76668c381d16fcaa5",
+  GlobalBadges: "9db27e18d61ee393ccfdec8c7d90f14f9a11266298c2e5eb808550b77d7bcdf6",
+  PlaybackAccessToken: "ed230aa1e33e07eebb8928504583da78a5173989fadfb1ac94be06a04f3cdbe9",
+  SearchResultsPage_SearchResults:
+    "075d5e21955b5be5580afaf7d4bf5a7b6392379d38a40995a86f0d5794ad3e01",
+  SearchTray_SearchSuggestions: "1d2cd6ae289d7baa682ef4437ab010c8ea42749ebb81c052f87a8a857ea93378",
+  ShareClipRenderStatus: "3b8a97585364d461df8cf78982eb343117832a1d6c2920aa07567c95413e6920",
+  StreamMetadata: "8f3c9ee3a77ff7e648268ac5daad6b36f2add690c628ec819e2e26aebc5cb767",
+  UseLive: "639d5f11bfb8bf3053b424d9ef650d04c4ebb7d94711d644afb08fe9a0fad5d9",
+  UseViewCount: "e28de6b91c2ac736882f4960e7de60ca4a4eeebc06affdc45d6408b19318cef7",
+  VideoAccessToken_Clip: "c5ca7c4143e42f257b91b97b37fbb19206460f42f564a02095bb504fd0a31af8",
+  VideoMetadata: "45111672eea2e507f8ba44d101a61862f9c56b11dee09a15634cb75cb9b9084d",
+  VideoPreviewOverlay: "9515480dee68a77e667cb19de634739d33f243572b007e98e67184b1a5d8369f",
+} as const satisfies Record<keyof QueryVariablesMap, string>;

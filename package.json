@@ -1,50 +1,19 @@
 {
-  "name": "twitch-gql-queries",
-  "version": "0.1.25",
-  "description": "Type-safe requests to twitch public GraphQL API",
-  "keywords": [
-    "twitch",
-    "graphql"
-  ],
-  "author": "DmitryScaletta",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/DmitryScaletta/twitch-gql-queries.git"
-  },
-  "bugs": {
-    "url": "https://github.com/DmitryScaletta/twitch-gql-queries/issues"
-  },
-  "types": "dist/index.d.ts",
-  "module": "dist/index.js",
-  "main": "dist/index.cjs",
-  "exports": {
-    "import": "./dist/index.js",
-    "require": "./dist/index.cjs"
-  },
-  "files": [
-    "dist"
-  ],
+  "private": true,
   "type": "module",
   "scripts": {
-    "build": "pnpm gen && pnpm swagger && tsup",
-    "gen": "node --no-warnings=ExperimentalWarning scripts/gen.ts",
-    "add-query": "node --no-warnings=ExperimentalWarning scripts/query.ts add",
-    "remove-query": "node --no-warnings=ExperimentalWarning scripts/query.ts remove",
-    "swagger": "node --no-warnings=ExperimentalWarning scripts/swagger.ts",
+    "fmt": "pnpm oxfmt",
+    "gen:typescript": "node scripts/typescript.ts",
+    "readme": "node scripts/readme.ts",
+    "openapi": "node scripts/openapi.ts --pack",
+    "build": "pnpm gen:typescript && pnpm readme && pnpm openapi && pnpm fmt",
     "deploy": "pnpm swagger && surge docs twitch-gql-swagger.surge.sh",
-    "serve": "pnpx serve docs",
-    "test": "node --no-warnings=ExperimentalWarning --test **/*.test.ts",
-    "test:watch": "node --no-warnings=ExperimentalWarning --test --watch **/*.test.ts",
-    "test:types": "pnpm tsc --noEmit"
+    "serve": "pnpx serve docs"
   },
   "devDependencies": {
     "@types/node": "^25.8.0",
-    "json-schema-to-typescript": "^15.0.4",
-    "prettier": "^3.8.3",
-    "tsup": "8.4.0",
-    "typebox": "^1.1.38",
-    "typescript": "^6.0.3"
+    "oxfmt": "^0.73.0",
+    "typescript": "^7.0.2"
   },
-  "packageManager": "pnpm@11.1.2+sha512.415a1cc25974731e75455c1468371be74c5aa5fb7621b50d4056d222451609f11412f23fd602e6169f1e060466641f798597e1be961a10688836a67b16569499"
+  "packageManager": "pnpm@12.14.0"
 }

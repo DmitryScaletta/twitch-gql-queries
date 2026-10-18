@@ -1,0 +1,30 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - docs/**
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v6
+      - run: node scripts/openapi.ts --unpack
+      - run: rm docs/openapi.br
+      - uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs
+      - run: npm install -g surge
+      - run: surge ./docs ${SURGE_DOMAIN} --token ${SURGE_TOKEN}
+        env:
+          SURGE_TOKEN: ${{ secrets.SURGE_TOKEN }}
+          SURGE_DOMAIN: ${{ vars.SURGE_DOMAIN }}

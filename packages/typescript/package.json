@@ -1,0 +1,38 @@
+{
+  "name": "twitch-gql-queries",
+  "version": "1.0.0",
+  "description": "Type-safe requests to twitch public GraphQL API",
+  "keywords": [
+    "graphql",
+    "twitch"
+  ],
+  "bugs": {
+    "url": "https://github.com/DmitryScaletta/twitch-gql-queries/issues"
+  },
+  "license": "MIT",
+  "author": "DmitryScaletta",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DmitryScaletta/twitch-gql-queries.git"
+  },
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "sideEffects": false,
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
+  "exports": {
+    "types": "./dist/index.d.mts",
+    "import": "./dist/index.mjs"
+  },
+  "scripts": {
+    "build": "tsdown",
+    "fmt": "pnpm oxfmt",
+    "test:types": "pnpm tsc --noEmit"
+  },
+  "devDependencies": {
+    "tsdown": "^0.23.1"
+  }
+}
