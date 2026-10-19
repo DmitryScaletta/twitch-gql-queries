@@ -24,7 +24,7 @@ const prepareAllOpsPkg = async () => {
     );
   }
   await fsp.copyFile(path.join(root, "README.md"), path.join(all, "README.md"));
-  const pkgNew = { ...pkg, name: `${pkg.name}-all`, version: `${pkg.version}-all.${stamp}` };
+  const pkgNew = { ...pkg, name: `${pkg.name}-all`, version: `${pkg.version}-${stamp}` };
   await fsp.writeFile(path.join(all, "package.json"), JSON.stringify(pkgNew, null, 2));
 };
 
