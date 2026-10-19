@@ -2,6 +2,7 @@ import type { QueryResponse } from "./types.ts";
 import { gqlRequest } from "./gqlRequest.ts";
 import { getRawQuery } from "./getRawQuery.ts";
 import type { UseLiveResponse, UseViewCountResponse } from "./generated/types.generated.ts";
+import { UseLiveQuery, UseViewCountQuery } from "./generated/operations.generated.ts";
 import { getQuery } from "./getQuery.ts";
 
 type Equal<X, Y> =
@@ -11,8 +12,8 @@ type Assert<T extends true> = T;
 // tuple
 {
   const [useLiveRes, useViewCountRes] = await gqlRequest([
-    getQuery("UseLive", { channelLogin: "xqc" }),
-    getQuery("UseViewCount", { channelLogin: "xqc" }),
+    getQuery(UseLiveQuery, { channelLogin: "xqc" }),
+    getQuery(UseViewCountQuery, { channelLogin: "xqc" }),
   ]);
 
   type Test1 = Assert<Equal<typeof useLiveRes, UseLiveResponse>>;
@@ -21,7 +22,7 @@ type Assert<T extends true> = T;
 
 // array
 {
-  const queries = [].map(() => getQuery("UseLive", { channelLogin: "xqc" }));
+  const queries = [].map(() => getQuery(UseLiveQuery, { channelLogin: "xqc" }));
   const response = await gqlRequest(queries);
 
   type Test = Assert<Equal<typeof response, UseLiveResponse[]>>;
@@ -46,7 +47,7 @@ type MyRawQueryData = { foo: "bar" };
 // raw query mixed
 {
   const [useLiveRes, getVideoRes] = await gqlRequest([
-    getQuery("UseLive", { channelLogin: "xqc" }),
+    getQuery(UseLiveQuery, { channelLogin: "xqc" }),
     getRawQuery<MyRawQueryData>({ query }),
   ]);
 

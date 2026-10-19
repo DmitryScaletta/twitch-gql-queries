@@ -202,7 +202,7 @@ export type Clip = {
   title: string;
   /**
    * @format int64
-   * @example [0, 957063, 899934, 944919, 773854, 745145]
+   * @example [0, 957063, 957456, 899934, 944919, 773854]
    */
   viewCount: number;
   /** @example ["EN", "RU"] */
@@ -500,7 +500,7 @@ export type ContentClipsManagerClip = {
   title: string;
   /**
    * @format int64
-   * @example [0, 957063, 899934, 944919, 773854, 745145]
+   * @example [0, 957063, 957456, 899934, 944919, 773854]
    */
   viewCount: number;
   /**
@@ -1181,7 +1181,7 @@ export type PreviewCardClip = {
   title: string;
   /**
    * @format int64
-   * @example [0, 957063, 899934, 944919, 773854, 745145]
+   * @example [0, 957063, 957456, 899934, 944919, 773854]
    */
   viewCount: number;
   curator: null | {
@@ -1574,7 +1574,7 @@ export type SearchForFeaturedClipFragment = {
   slug: string;
   /**
    * @format int64
-   * @example [0, 957063, 899934, 944919, 773854, 745145]
+   * @example [0, 957063, 957456, 899934, 944919, 773854]
    */
   viewCount: number;
   /**
@@ -2340,7 +2340,7 @@ export type ShelfPreviewCardClip = {
   clipTitle: string;
   /**
    * @format int64
-   * @example [0, 957063, 899934, 944919, 773854, 745145]
+   * @example [0, 957063, 957456, 899934, 944919, 773854]
    * @aliasFor viewCount
    */
   clipViewCount: number;
@@ -2852,7 +2852,7 @@ export type ChannelShellData = {
     | CoreChannelWithHomePrefsFragment
     | {
         /**
-         * @example ["this_user_doesnt_exist_", "gaechkatm", "EmjayPlayss", "qmaxgaren"]
+         * @example ["gaechkatm", "EmjayPlayss", "qmaxgaren"]
          * @aliasFor key
          */
         userDoesNotExist: string;
@@ -2943,7 +2943,7 @@ export type ChatListBadgesResponse = QueryResponse<ChatListBadgesData, "ChatList
 export type ClipsCardsGameVariables = {
   categorySlug: string;
   /** @format int64 */
-  limit?: null | number;
+  limit: number;
   cursor?: null | Cursor;
   criteria?: null | GameClipsInput;
 };
@@ -2983,7 +2983,7 @@ export type ClipsCardsGameResponse = QueryResponse<ClipsCardsGameData, "ClipsCar
 export type ClipsCardsUserVariables = {
   login: string;
   /** @format int64 */
-  limit?: null | number;
+  limit: number;
   cursor?: null | Cursor;
   criteria?: null | UserClipsInput;
 };
@@ -3035,7 +3035,7 @@ export type ClipsDownloadButtonData = {
     durationSeconds: number;
     /**
      * @format int64
-     * @example [0, 957063, 899934, 944919, 773854, 745145]
+     * @example [0, 957063, 957456, 899934, 944919, 773854]
      */
     viewCount: number;
     broadcaster: null | {
@@ -3140,7 +3140,7 @@ export type FFZRecentBroadcastsVariables = {
   /** @format int64 */
   limit: number;
   cursor?: null | Cursor;
-  type: BroadcastType;
+  type?: null | BroadcastType;
   sort: VideoSort;
   options?: null | VideoConnectionOptionsInput;
 };

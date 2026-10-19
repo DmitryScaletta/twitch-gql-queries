@@ -875,7 +875,7 @@ export type ActivityFeedTokens_ActivityFeedTextFragments = {
     | ActivityFeedEmote
     | ActivityFeedCheermote
     | {
-        /** @example ["this_user_doesnt_exist_", "gaechkatm", "EmjayPlayss", "qmaxgaren"] */
+        /** @example ["gaechkatm", "EmjayPlayss", "qmaxgaren"] */
         key: string;
         __typename: "UserDoesNotExist";
       }
@@ -3024,7 +3024,7 @@ export type AnnualRecapClip = {
   url: string;
   /**
    * @format int64
-   * @example [0, 957063, 899934, 944919, 773854, 745145]
+   * @example [0, 957063, 957456, 899934, 944919, 773854]
    */
   viewCount: number;
   broadcast: {
@@ -3096,7 +3096,7 @@ export type AnnualRecapClip2024 = {
   url: string;
   /**
    * @format int64
-   * @example [0, 957063, 899934, 944919, 773854, 745145]
+   * @example [0, 957063, 957456, 899934, 944919, 773854]
    */
   viewCount: number;
   broadcast: {
@@ -3168,7 +3168,7 @@ export type AnnualRecapClip2025 = {
   url: string;
   /**
    * @format int64
-   * @example [0, 957063, 899934, 944919, 773854, 745145]
+   * @example [0, 957063, 957456, 899934, 944919, 773854]
    */
   viewCount: number;
   broadcast: {
@@ -9206,7 +9206,7 @@ export type ChannelHomeClip = {
   clipTitle: string;
   /**
    * @format int64
-   * @example [0, 957063, 899934, 944919, 773854, 745145]
+   * @example [0, 957063, 957456, 899934, 944919, 773854]
    * @aliasFor viewCount
    */
   clipViewCount: number;
@@ -13613,7 +13613,7 @@ export type Clip = {
   title: string;
   /**
    * @format int64
-   * @example [0, 957063, 899934, 944919, 773854, 745145]
+   * @example [0, 957063, 957456, 899934, 944919, 773854]
    */
   viewCount: number;
   /** @example ["EN", "RU"] */
@@ -14181,7 +14181,7 @@ export type ClipModalFragment = {
   createdAt: string;
   /**
    * @format int64
-   * @example [0, 957063, 899934, 944919, 773854, 745145]
+   * @example [0, 957063, 957456, 899934, 944919, 773854]
    */
   viewCount: number;
   /** @example ["xqc makes the wrong choice", "wow"] */
@@ -16292,7 +16292,7 @@ export type ContentClipsManagerClip = {
   title: string;
   /**
    * @format int64
-   * @example [0, 957063, 899934, 944919, 773854, 745145]
+   * @example [0, 957063, 957456, 899934, 944919, 773854]
    */
   viewCount: number;
   /**
@@ -21358,7 +21358,7 @@ export type DashboardTopClipsConnectionFragment = {
       title: string;
       /**
        * @format int64
-       * @example [0, 957063, 899934, 944919, 773854, 745145]
+       * @example [0, 957063, 957456, 899934, 944919, 773854]
        */
       viewCount: number;
       /**
@@ -21598,7 +21598,7 @@ export type DecoratedTokenFragment = {
         __typename: "Money";
       }
     | {
-        /** @example ["this_user_doesnt_exist_", "gaechkatm", "EmjayPlayss", "qmaxgaren"] */
+        /** @example ["gaechkatm", "EmjayPlayss", "qmaxgaren"] */
         key: string;
         /** @example ["UNKNOWN", "DMCA", "TOS_TEMPORARY", "TOS_INDEFINITE"] */
         reason: string;
@@ -22152,7 +22152,7 @@ export type DemandChannelCreatorSponsorshipHighlights_UserCreatorProfileClips = 
       url: string;
       /**
        * @format int64
-       * @example [0, 957063, 899934, 944919, 773854, 745145]
+       * @example [0, 957063, 957456, 899934, 944919, 773854]
        */
       viewCount: number;
       isPublished: boolean;
@@ -35125,6 +35125,8 @@ export type HostTrainContent_HostTrainStationChannel = {
   id: ID;
   /** ⚠️ Low confidence about: nullable */
   login: null | string;
+  /** ⚠️ Low confidence about: nullable */
+  displayName: null | string;
   __typename: string;
 };
 
@@ -37584,7 +37586,7 @@ export type ModActionText = {
         __typename: "UserError";
       }
     | {
-        /** @example ["this_user_doesnt_exist_", "gaechkatm", "EmjayPlayss", "qmaxgaren"] */
+        /** @example ["gaechkatm", "EmjayPlayss", "qmaxgaren"] */
         key: string;
         __typename: "UserDoesNotExist";
       };
@@ -38350,7 +38352,7 @@ export type MwebChannelClipPageRelatedClipFragment = {
   thumbnailURL: string;
   /**
    * @format int64
-   * @example [0, 957063, 899934, 944919, 773854, 745145]
+   * @example [0, 957063, 957456, 899934, 944919, 773854]
    */
   viewCount: number;
   /**
@@ -38999,7 +39001,7 @@ export type MwebClipCard = {
   clipTitle: string;
   /**
    * @format int64
-   * @example [0, 957063, 899934, 944919, 773854, 745145]
+   * @example [0, 957063, 957456, 899934, 944919, 773854]
    * @aliasFor viewCount
    */
   clipViewCount: number;
@@ -43753,7 +43755,7 @@ export type PreviewCardClip = {
   title: string;
   /**
    * @format int64
-   * @example [0, 957063, 899934, 944919, 773854, 745145]
+   * @example [0, 957063, 957456, 899934, 944919, 773854]
    */
   viewCount: number;
   curator: null | {
@@ -45964,7 +45966,7 @@ export type RecommendedPostplayClip = {
   language: string;
   /**
    * @format int64
-   * @example [0, 957063, 899934, 944919, 773854, 745145]
+   * @example [0, 957063, 957456, 899934, 944919, 773854]
    */
   viewCount: number;
   broadcaster: null | RecommendedPostplayClipBroadcaster;
@@ -48049,7 +48051,7 @@ export type SearchForFeaturedClipFragment = {
   slug: string;
   /**
    * @format int64
-   * @example [0, 957063, 899934, 944919, 773854, 745145]
+   * @example [0, 957063, 957456, 899934, 944919, 773854]
    */
   viewCount: number;
   /**
@@ -50343,6 +50345,17 @@ export type SetOptInState_SetFeatureOptInStateError = {
 };
 
 /** ℹ️ Not real Twitch type name */
+export type SetPinataOptedOut_UpdateHypeTrainConfig = {
+  config: null | {
+    id: ID;
+    /** ⚠️ Low confidence about: nullable */
+    isPinataOptedOut: null | boolean;
+    __typename: "HypeTrainConfig";
+  };
+  __typename: string;
+};
+
+/** ℹ️ Not real Twitch type name */
 export type SetPremiumEventSettings_SetPremiumEventSettings = {
   error: UnknownValue;
   settings:
@@ -51613,7 +51626,7 @@ export type ShelfClip = {
   clipTitle: string;
   /**
    * @format int64
-   * @example [0, 957063, 899934, 944919, 773854, 745145]
+   * @example [0, 957063, 957456, 899934, 944919, 773854]
    * @aliasFor viewCount
    */
   clipViewCount: number;
@@ -51718,7 +51731,7 @@ export type ShelfPreviewCardClip = {
   clipTitle: string;
   /**
    * @format int64
-   * @example [0, 957063, 899934, 944919, 773854, 745145]
+   * @example [0, 957063, 957456, 899934, 944919, 773854]
    * @aliasFor viewCount
    */
   clipViewCount: number;
@@ -51964,7 +51977,7 @@ export type ShoutoutClipFragment = {
   title: string;
   /**
    * @format int64
-   * @example [0, 957063, 899934, 944919, 773854, 745145]
+   * @example [0, 957063, 957456, 899934, 944919, 773854]
    */
   viewCount: number;
   /**
@@ -55567,7 +55580,7 @@ export type StreamSummaryClipFragment = {
   title: string;
   /**
    * @format int64
-   * @example [0, 957063, 899934, 944919, 773854, 745145]
+   * @example [0, 957063, 957456, 899934, 944919, 773854]
    */
   viewCount: number;
   /** @example ["EN", "RU"] */
@@ -74412,7 +74425,7 @@ export type ChannelLayoutData = {
       })
     | {
         /**
-         * @example ["this_user_doesnt_exist_", "gaechkatm", "EmjayPlayss", "qmaxgaren"]
+         * @example ["gaechkatm", "EmjayPlayss", "qmaxgaren"]
          * @aliasFor key
          */
         userDoesNotExist: string;
@@ -75542,7 +75555,7 @@ export type ChannelShellData = {
     | CoreChannelWithHomePrefsFragment
     | {
         /**
-         * @example ["this_user_doesnt_exist_", "gaechkatm", "EmjayPlayss", "qmaxgaren"]
+         * @example ["gaechkatm", "EmjayPlayss", "qmaxgaren"]
          * @aliasFor key
          */
         userDoesNotExist: string;
@@ -78669,7 +78682,7 @@ export type ClipRecapsPlayerResponse = QueryResponse<ClipRecapsPlayerData, "Clip
 export type ClipsCardsGameVariables = {
   categorySlug: string;
   /** @format int64 */
-  limit?: null | number;
+  limit: number;
   cursor?: null | Cursor;
   criteria?: null | GameClipsInput;
 };
@@ -78709,7 +78722,7 @@ export type ClipsCardsGameResponse = QueryResponse<ClipsCardsGameData, "ClipsCar
 export type ClipsCardsUserVariables = {
   login: string;
   /** @format int64 */
-  limit?: null | number;
+  limit: number;
   cursor?: null | Cursor;
   criteria?: null | UserClipsInput;
 };
@@ -78855,7 +78868,7 @@ export type ClipsDownloadButtonData = {
     durationSeconds: number;
     /**
      * @format int64
-     * @example [0, 957063, 899934, 944919, 773854, 745145]
+     * @example [0, 957063, 957456, 899934, 944919, 773854]
      */
     viewCount: number;
     broadcaster: null | {
@@ -80796,7 +80809,7 @@ export type CopyrightClipsData = {
     createdAt: string;
     /**
      * @format int64
-     * @example [0, 957063, 899934, 944919, 773854, 745145]
+     * @example [0, 957063, 957456, 899934, 944919, 773854]
      */
     viewCount: number;
     /** @example ["xqc makes the wrong choice", "wow"] */
@@ -86690,7 +86703,7 @@ export type FeedInteractionHookGetClipBySlugData = {
     title: string;
     /**
      * @format int64
-     * @example [0, 957063, 899934, 944919, 773854, 745145]
+     * @example [0, 957063, 957456, 899934, 944919, 773854]
      */
     viewCount: number;
     /** @example ["EN", "RU"] */
@@ -86945,7 +86958,7 @@ export type FFZRecentBroadcastsVariables = {
   /** @format int64 */
   limit: number;
   cursor?: null | Cursor;
-  type: BroadcastType;
+  type?: null | BroadcastType;
   sort: VideoSort;
   options?: null | VideoConnectionOptionsInput;
 };
@@ -91922,6 +91935,28 @@ export type HostTrainSettingsChannelResponse = QueryResponse<
   "HostTrainSettingsChannel"
 >;
 
+export type HostTrainStationChannelVariables = { channelID: ID };
+
+export type HostTrainStationChannelData = {
+  user: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["12826"]
+     */
+    id: ID;
+    /** @example ["twitch", "xqc", "lirik", "forsen", "yasongas", "shungiteeworks", "nottdarius"] */
+    login: string;
+    /** @example ["Twitch", "ayuuexe", "xQc", "LIRIK", "RSDragonwilds", "S0LAF1D3", "Jinnytty"] */
+    displayName: string;
+    __typename: "User";
+  };
+};
+
+export type HostTrainStationChannelResponse = QueryResponse<
+  HostTrainStationChannelData,
+  "HostTrainStationChannel"
+>;
+
 export type IdentityVerificationRequirementData = {
   identityVerificationRequirement:
     | null
@@ -96762,6 +96797,45 @@ export type PhoneVerificationAudioScanningDisclosureContextQueryResponse = Query
   "PhoneVerificationAudioScanningDisclosureContextQuery"
 >;
 
+export type PinataEnableToggleVariables = { channelID: ID };
+
+export type PinataEnableToggleData = {
+  user: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["12826"]
+     */
+    id: ID;
+    /** @example ["twitch", "xqc", "lirik", "forsen", "yasongas", "shungiteeworks", "nottdarius"] */
+    login: string;
+    channel: {
+      /**
+       * @pattern ^[0-9]+$
+       * @example ["12826"]
+       */
+      id: ID;
+      hypeTrain: {
+        config: null | {
+          id: ID;
+          /** ⚠️ Low confidence about: nullable */
+          isEnabled: null | boolean;
+          /** ⚠️ Low confidence about: nullable */
+          isPinataOptedOut: null | boolean;
+          __typename: "HypeTrainConfig";
+        };
+        __typename: "HypeTrain";
+      };
+      __typename: "Channel";
+    };
+    __typename: "User";
+  };
+};
+
+export type PinataEnableToggleResponse = QueryResponse<
+  PinataEnableToggleData,
+  "PinataEnableToggle"
+>;
+
 export type PinnedChatSettingsVariables = { channelID: ID };
 
 export type PinnedChatSettingsData = {
@@ -97687,7 +97761,7 @@ export type PrimeProductOfferData = {
         __typename: "User";
       }
     | {
-        /** @example ["this_user_doesnt_exist_", "gaechkatm", "EmjayPlayss", "qmaxgaren"] */
+        /** @example ["gaechkatm", "EmjayPlayss", "qmaxgaren"] */
         key: string;
         __typename: "UserDoesNotExist";
       }
@@ -99510,7 +99584,7 @@ export type ReportWizardQueryData = {
         __typename: "User";
       }
     | {
-        /** @example ["this_user_doesnt_exist_", "gaechkatm", "EmjayPlayss", "qmaxgaren"] */
+        /** @example ["gaechkatm", "EmjayPlayss", "qmaxgaren"] */
         key: string;
         __typename: "UserDoesNotExist";
       }
@@ -104663,7 +104737,7 @@ export type SupportPanelCommunityGiftingGiftingOptionsData = {
         __typename: "User";
       }
     | {
-        /** @example ["this_user_doesnt_exist_", "gaechkatm", "EmjayPlayss", "qmaxgaren"] */
+        /** @example ["gaechkatm", "EmjayPlayss", "qmaxgaren"] */
         key: string;
         __typename: "UserDoesNotExist";
       }
@@ -104954,7 +105028,7 @@ export type SupportPanelSubscribeViewFooterData = {
         __typename: "User";
       }
     | {
-        /** @example ["this_user_doesnt_exist_", "gaechkatm", "EmjayPlayss", "qmaxgaren"] */
+        /** @example ["gaechkatm", "EmjayPlayss", "qmaxgaren"] */
         key: string;
         __typename: "UserDoesNotExist";
       }
@@ -105006,7 +105080,7 @@ export type SupportPanelSubscribeViewFooterPrimeData = {
         __typename: "User";
       }
     | {
-        /** @example ["this_user_doesnt_exist_", "gaechkatm", "EmjayPlayss", "qmaxgaren"] */
+        /** @example ["gaechkatm", "EmjayPlayss", "qmaxgaren"] */
         key: string;
         __typename: "UserDoesNotExist";
       }
@@ -110227,7 +110301,7 @@ export type VideoPlayerStreamInfoOverlayClipData = {
     };
     /**
      * @format int64
-     * @example [0, 957063, 899934, 944919, 773854, 745145]
+     * @example [0, 957063, 957456, 899934, 944919, 773854]
      */
     viewCount: number;
     __typename: "Clip";
@@ -118900,6 +118974,17 @@ export type SetOptInStateData = {
 
 export type SetOptInStateResponse = QueryResponse<SetOptInStateData, "SetOptInState">;
 
+export type SetPinataOptedOutVariables = { input: EnumOrInput };
+
+export type SetPinataOptedOutData = {
+  updateHypeTrainConfig:
+    | null
+    | SetPinataOptedOut_UpdateHypeTrainConfig
+    | SetPinataOptedOut_UpdateHypeTrainConfig[];
+};
+
+export type SetPinataOptedOutResponse = QueryResponse<SetPinataOptedOutData, "SetPinataOptedOut">;
+
 export type SetPremiumEventSettingsVariables = { input: EnumOrInput };
 
 export type SetPremiumEventSettingsData = {
@@ -122798,6 +122883,7 @@ export type QueryVariablesMap = {
   HostTrainContent: HostTrainContentVariables;
   HostTrainPoll: HostTrainPollVariables;
   HostTrainSettingsChannel: HostTrainSettingsChannelVariables;
+  HostTrainStationChannel: HostTrainStationChannelVariables;
   IdentityVerificationRequirement: Record<string, never>;
   IdentityVerificationRequirementMoneyBanner: Record<string, never>;
   ImpressionAnalytics: ImpressionAnalyticsVariables;
@@ -122955,6 +123041,7 @@ export type QueryVariablesMap = {
   PersistentGoalFollowButton_User: PersistentGoalFollowButtonUserVariables;
   PhoneNumber_CountryCode: Record<string, never>;
   PhoneVerificationAudioScanningDisclosureContextQuery: PhoneVerificationAudioScanningDisclosureContextQueryVariables;
+  PinataEnableToggle: PinataEnableToggleVariables;
   PinnedChatSettings: PinnedChatSettingsVariables;
   PinnedCheersSettings: PinnedCheersSettingsVariables;
   PlaybackAccessToken: PlaybackAccessTokenVariables;
@@ -124007,6 +124094,7 @@ export type QueryVariablesMap = {
   SetIsBrowserSourceAudioEnabled: SetIsBrowserSourceAudioEnabledVariables;
   SetModSettings: SetModSettingsVariables;
   SetOptInState: SetOptInStateVariables;
+  SetPinataOptedOut: SetPinataOptedOutVariables;
   SetPremiumEventSettings: SetPremiumEventSettingsVariables;
   SetProgressionTrackSelection: SetProgressionTrackSelectionVariables;
   SetReminder: SetReminderVariables;
@@ -125073,6 +125161,7 @@ export type QueryResponseMap = {
   HostTrainContent: HostTrainContentResponse;
   HostTrainPoll: HostTrainPollResponse;
   HostTrainSettingsChannel: HostTrainSettingsChannelResponse;
+  HostTrainStationChannel: HostTrainStationChannelResponse;
   IdentityVerificationRequirement: IdentityVerificationRequirementResponse;
   IdentityVerificationRequirementMoneyBanner: IdentityVerificationRequirementMoneyBannerResponse;
   ImpressionAnalytics: ImpressionAnalyticsResponse;
@@ -125230,6 +125319,7 @@ export type QueryResponseMap = {
   PersistentGoalFollowButton_User: PersistentGoalFollowButtonUserResponse;
   PhoneNumber_CountryCode: PhoneNumberCountryCodeResponse;
   PhoneVerificationAudioScanningDisclosureContextQuery: PhoneVerificationAudioScanningDisclosureContextQueryResponse;
+  PinataEnableToggle: PinataEnableToggleResponse;
   PinnedChatSettings: PinnedChatSettingsResponse;
   PinnedCheersSettings: PinnedCheersSettingsResponse;
   PlaybackAccessToken: PlaybackAccessTokenResponse;
@@ -126282,6 +126372,7 @@ export type QueryResponseMap = {
   SetIsBrowserSourceAudioEnabled: SetIsBrowserSourceAudioEnabledResponse;
   SetModSettings: SetModSettingsResponse;
   SetOptInState: SetOptInStateResponse;
+  SetPinataOptedOut: SetPinataOptedOutResponse;
   SetPremiumEventSettings: SetPremiumEventSettingsResponse;
   SetProgressionTrackSelection: SetProgressionTrackSelectionResponse;
   SetReminder: SetReminderResponse;

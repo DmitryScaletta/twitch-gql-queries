@@ -32,16 +32,27 @@ npm i twitch-gql-queries-all
 ### Usage
 
 ```ts
-import { getQuery, gqlRequest } from "twitch-gql-queries";
+import {
+  ClipsCardsUserQuery,
+  FFZRecentBroadcastsQuery,
+  StreamMetadataQuery,
+  UseViewCountQuery,
+  getQuery,
+  gqlRequest,
+} from "twitch-gql-queries";
 
 const [
   streamMetadataResponse,
   ffzRecentBroadcastsResponse,
   clipsCardsUserResponse,
 ] = await gqlRequest([
-  getQuery("StreamMetadata", { channelLogin: "xqc" }),
-  getQuery("FFZ_RecentBroadcasts", { id: "71092938", sort: "time", limit: 5 }),
-  getQuery("ClipsCards__User", {
+  getQuery(StreamMetadataQuery, { channelLogin: "xqc" }),
+  getQuery(FFZRecentBroadcastsQuery, {
+    id: "71092938",
+    sort: "time",
+    limit: 5,
+  }),
+  getQuery(ClipsCardsUserQuery, {
     login: "xqc",
     limit: 30,
     criteria: { filter: "LAST_MONTH" },
@@ -56,7 +67,7 @@ console.log({
 
 const channels = await gqlRequest(
   ["lirik", "forsen"].map((channelLogin) =>
-    getQuery("UseViewCount", { channelLogin }),
+    getQuery(UseViewCountQuery, { channelLogin }),
   ),
 );
 

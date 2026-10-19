@@ -13,7 +13,8 @@ const PAIRS = [
 
 type Schema = Record<string, unknown>;
 type Nodes = Record<string, Schema>;
-type Document = { paths: Record<string, unknown>; components: { schemas: Nodes } };
+type PathItem = { post: { tags: string[] } };
+type Document = { paths: Record<string, PathItem>; components: { schemas: Nodes } };
 
 const KEYS = {
   args: "x-args",
@@ -305,7 +306,7 @@ const requiredVariablesOf = (variables: Schema): Schema => {
 
 const header = (name: string, from: string) => `import type { ${name} } from "${from}";\n`;
 
-const build = (document: Document, source: string, typesFile: string) => {
+const build = (document: Document) => {
   const nodes = document.components.schemas;
 
   const named = Object.keys(document.paths).map((path) => {
@@ -325,6 +326,7 @@ const build = (document: Document, source: string, typesFile: string) => {
         "properties",
         "sha256Hash",
       ]),
+      kind: document.paths[path]!.post.tags.includes("mutation") ? "Mutation" : "Query",
       operation: constOf(nodes, body, ["properties", "operationName"]),
       // nothing to send says nothing to name a type of
       variables: Object.keys(propsOf(sent)).length === 0 ? undefined : sent,
@@ -347,11 +349,14 @@ const build = (document: Document, source: string, typesFile: string) => {
     types += `\nexport type ${display}Response = QueryResponse<${display}Data, ${literal(operation)}>;\n`;
   }
 
-  let operations = header("QueryVariablesMap", `./${typesFile}`);
-  operations += "\nexport const sha256Hashes = {\n";
-  for (const { operation, hash } of named)
-    operations += `  ${IDENTIFIER.test(operation) ? operation : literal(operation)}: ${literal(hash)},\n`;
-  operations += "} as const satisfies Record<keyof QueryVariablesMap, string>;\n";
+  const names = new Set<string>();
+  let operations = "";
+  for (const { display, operation, hash, kind } of named) {
+    const name = display.endsWith(kind) ? display : `${display}${kind}`;
+    assert(!names.has(name), `duplicate operation name ${name}`);
+    names.add(name);
+    operations += `export const ${name} = [${literal(operation)}, ${literal(hash)}] as const;\n`;
+  }
 
   const mapOf = (name: string, one: (operation: string) => string) => {
     let text = `\nexport type ${name} = {\n`;
@@ -377,7 +382,7 @@ const main = async () => {
   for (const one of PAIRS) {
     const document = JSON.parse(await fsp.readFile(one.openApi, "utf8")) as Document;
     const types = `types${one.suffix}.generated.ts`;
-    const { operations, types: text } = build(document, one.openApi, types);
+    const { operations, types: text } = build(document);
     for (const [name, body] of [
       [types, text],
       [`operations${one.suffix}.generated.ts`, operations],
