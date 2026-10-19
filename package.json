@@ -7,6 +7,8 @@
     "readme": "node scripts/readme.ts",
     "openapi": "node scripts/openapi.ts --pack",
     "build": "pnpm gen:typescript && pnpm readme && pnpm openapi && pnpm fmt",
+    "pub:ts": "pnpm -C packages/typescript build && pnpm -C packages/typescript publish",
+    "pub:ts-all": "pnpm -C packages/typescript build && pnpm -C packages/typescript/all-ops publish",
     "deploy": "pnpm swagger && surge docs twitch-gql-swagger.surge.sh",
     "serve": "pnpx serve docs"
   },
