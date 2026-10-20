@@ -344,7 +344,7 @@ export type ClipAssetFragment = {
      * @example [0, 8042862, 2732768, 945904, 781712, 7159557]
      */
     bitrate: number;
-    /** @example ["", "avc1.64002A,mp4a.40.2", "hvc1.1.6.L123.90", "hvc1.1.6.L120.90", "hvc1.1.6.L90.90", "hvc1.1.6.L63.90", "hvc1.1.6.L150.90", "avc1.4D402A"] */
+    /** @example ["", "avc1.64002A,mp4a.40.2", "hvc1.1.6.L123.90", "hvc1.1.6.L120.90", "hvc1.1.6.L90.90", "hvc1.1.6.L63.90", "hvc1.1.6.L150.90", "avc1.4D001F"] */
     codecs: string;
     duration: null;
     /**
@@ -669,22 +669,24 @@ export type ContentClipsManagerClip = {
   };
   /**
    * @format int64
-   * @example [7897, 11412, 12062]
+   * @example [7897, 11412, 12062, 2238]
    */
   videoOffsetSeconds: null | number;
-  videoQualities: {
-    /** @example ["", "https://d1ndex63qxojbr.cloudfront.net/nauth/ce4b4ef1-4e8d-4391-bff6-2bc4c5506a4d/landscape/avc/1080/index.mp4", "https://d1ndex63qxojbr.cloudfront.net/nauth/ce4b4ef1-4e8d-4391-bff6-2bc4c5506a4d/landscape/avc/720/index.mp4"] */
-    sourceURL: string;
-    __typename: "ClipVideoQuality";
-  }[];
+  videoQualities:
+    | null
+    | {
+        /** @example ["", "https://d1ndex63qxojbr.cloudfront.net/nauth/ce4b4ef1-4e8d-4391-bff6-2bc4c5506a4d/landscape/avc/1080/index.mp4", "https://d1ndex63qxojbr.cloudfront.net/nauth/ce4b4ef1-4e8d-4391-bff6-2bc4c5506a4d/landscape/avc/720/index.mp4"] */
+        sourceURL: string;
+        __typename: "ClipVideoQuality";
+      }[];
   isViewerEditRestricted: boolean;
   suggestedCropping: null | PortraitClipCropping;
   /**
    * @format float
-   * @example [0, 60.00499725341797, 56.01599884033203, 30.436817169189453]
+   * @example [0, 60.00499725341797, 56.01599884033203, 30.436817169189453, 79.97673034667969]
    */
   rawMediaRelativeOffset: number;
-  /** @example ["", "j2_d65zIfMWahzTyTvGUvA", "Ns3-vDOR-6P0ss-aFGmgOw", "5V7n_TrusYjbKULZPgs8Og"] */
+  /** @example ["", "j2_d65zIfMWahzTyTvGUvA", "Ns3-vDOR-6P0ss-aFGmgOw", "5V7n_TrusYjbKULZPgs8Og", "JKuXmAhwpagfsU2LJs367w"] */
   rawMediaKey: string;
   isCatalogDetected: null;
   catalogCheckState: null;
@@ -2523,7 +2525,7 @@ export type VideoAccessTokenClipAsset = {
      * @example [0, 8042862, 2732768, 945904, 781712, 7159557]
      */
     bitrate: number;
-    /** @example ["", "avc1.64002A,mp4a.40.2", "hvc1.1.6.L123.90", "hvc1.1.6.L120.90", "hvc1.1.6.L90.90", "hvc1.1.6.L63.90", "hvc1.1.6.L150.90", "avc1.4D402A"] */
+    /** @example ["", "avc1.64002A,mp4a.40.2", "hvc1.1.6.L123.90", "hvc1.1.6.L120.90", "hvc1.1.6.L90.90", "hvc1.1.6.L63.90", "hvc1.1.6.L150.90", "avc1.4D001F"] */
     codecs: string;
     /**
      * @format float
@@ -3738,7 +3740,7 @@ export type VideoAccessTokenClipData = {
       value: string;
       __typename: "PlaybackAccessToken";
     };
-    videoQualities: VideoAccessTokenClipQuality[];
+    videoQualities: null | VideoAccessTokenClipQuality[];
     assets: VideoAccessTokenClipAsset[];
     __typename: "Clip";
   };

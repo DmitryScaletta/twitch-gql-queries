@@ -866,6 +866,7 @@ export const LoyaltyBadgesCurrentSectionQuery = ["LoyaltyBadgesCurrentSection_Qu
 export const LoyaltyBadgesManageSectionQuery = ["LoyaltyBadgesManageSection_Query", "9283b82e7c17973f91f4a62cea5deee50255d3ab269aa9d6e29cf7339b2fb2e8"] as const;
 export const LoyaltyBadgesPageQuery = ["LoyaltyBadgesPage_Query", "6d8fce48ecf72f8d9214d62a6d4af6481584fbbb7668cb6d885c08b072dacd2f"] as const;
 export const LTVPlayerSourceQuery = ["LTVPlayerSource", "545deccd117f1c698b5451c72ba342680a471c14f14d08f271c2a6bf474cb583"] as const;
+export const LunaGamesCollectionQuery = ["LunaGamesCollection", "2a838573e69b56b0b491865dd75fb829fa9fe76747e3d824827224c0aa690aad"] as const;
 export const ManagePlusGoalPromptQuery = ["ManagePlusGoalPrompt", "ea1a01fd5da4cc8f6fb58cecb820ed41d805eb67753df1f196864209a06685a8"] as const;
 export const MandateDetailsQuery = ["MandateDetails", "64391c1ee73208931e446025f3bbc9318d370c5dc292f5dd4014220087e5c4e6"] as const;
 export const MessageBufferChannelQuery = ["MessageBuffer_Channel", "bfc959904f55b5003ae4674d4bea83ebdcd8867ad76e12f38957d433902d2fcc"] as const;
@@ -1115,7 +1116,7 @@ export const SelfModStatusQuery = ["SelfModStatus", "9495c364dd5561699752f745e10
 export const SelfStoryShelfPreviewQuery = ["SelfStoryShelfPreview", "5fb96887b6434ef8d3a1cd14b4167c3c5f4622b3c09c2080ea71580873d9b5cf"] as const;
 export const SessionInviteLinkQuery = ["SessionInviteLink", "c85d08a1337f1aeb8a994aab8ca77d7a5dfafc389494bc7bab7c31f386c9122e"] as const;
 export const SettingsChannelChatBannedChattersQuery = ["Settings_ChannelChat_BannedChatters", "db52138b35ea1fa2225deee189079b3295d8d1b360420f93f5d80f187b82d537"] as const;
-export const SettingsChannelClipsSettingsQuery = ["Settings_ChannelClipsSettings", "0c7e5679d884da3651053a9b37d6626795af4c11e533aeead68e198ed3540893"] as const;
+export const SettingsChannelClipsSettingsQuery = ["Settings_ChannelClipsSettings", "23278dece9b702d58d4b32ee445731cc5f71fb7a906a3b7aae67062fae85df9b"] as const;
 export const SettingsChannelVODsSettingsQuery = ["Settings_ChannelVODsSettings", "830afcdbc98084b2779664e44574ee0252edd87ef3fa0521593166f7a655c9fd"] as const;
 export const SettingsConnectionsAmazonConnectionQuery = ["Settings_Connections_AmazonConnection", "ba268e2205a9963779379a9fe3dbaa6917be554aea8b2b52b3ccbb558737e1ae"] as const;
 export const SettingsConnectionsAmazonPrimeQuery = ["Settings_Connections_Amazon_Prime", "b13182f8e70ab5838cae602722c02371c1d5b98abe227043b5abf1926b752913"] as const;
@@ -1597,10 +1598,7 @@ export const ChannelPanelsOrderPanelsMutation = ["ChannelPanelsOrderPanels", "c9
 export const ChannelPanelsUpdatePanelMutation = ["ChannelPanelsUpdatePanel", "b70dd645b8a822adbe88cad0f113d988452c61895a93e9275bafaafa8dbf2779"] as const;
 export const ChannelPollContextVoteInPollMutation = ["ChannelPollContext_VoteInPoll", "1280e27b0f3c7ae60b5714bd569771ea50635778473182e6e959e2dcfcc16e3c"] as const;
 export const ChannelPropertiesSettingsPageMutation = ["ChannelPropertiesSettingsPageMutation", "e6f9b2f2009943bfc2fe15048bec00d2dc6defedcc160234522e3eea76348e7d"] as const;
-export const ChannelSubFreeTrialToggleSetChannelSubFreeTrialCreatorMonetizationSettingMutation = [
-  "ChannelSubFreeTrialToggle_SetChannelSubFreeTrialCreatorMonetizationSetting",
-  "c7f8c2c2bee3b4a0a336ba414719b940ddc0bcef4c11c2a28d55c1cc2e85efd8",
-] as const;
+export const ChannelSubFreeTrialToggleSetChannelSubFreeTrialCreatorMonetizationSettingMutation = ["ChannelSubFreeTrialToggle_SetChannelSubFreeTrialCreatorMonetizationSetting", "c7f8c2c2bee3b4a0a336ba414719b940ddc0bcef4c11c2a28d55c1cc2e85efd8"] as const;
 export const ChannelTrailerSettingsSetChannelTrailerMutation = ["ChannelTrailerSettings_SetChannelTrailer", "9b59cc4ee762a65c448b145c558cd9f4b0403d90f940b7a6655ad5c43e34e954"] as const;
 export const ChannelTrailerSetupSetChannelTrailerMutation = ["ChannelTrailerSetup_SetChannelTrailer", "b3514dac9943d24be3963e1df0c6c8dbd141e6b502fd3107754bb38886846873"] as const;
 export const ChannelTrailerSetupUpdateVideoMutation = ["ChannelTrailerSetup_UpdateVideo", "9024f429b6cc160f7fa346415531b287377001031a280115205ff9b5a150800f"] as const;
@@ -2072,10 +2070,7 @@ export const SetUserResidenceMutation = ["SetUserResidenceMutation", "2833969807
 export const SetViewerCardModLogsAccessMutation = ["SetViewerCardModLogsAccessMutation", "b2e572fc01266bf1914d4da52043360ac46f0a21cf53f3a73982b2905fa4f8af"] as const;
 export const SetWhispersOffSettingMutation = ["SetWhispersOffSetting", "7cf274b4a3c5e99a45a75cb9b1bfad4282aa57e8219c97741747ecd15695b703"] as const;
 export const SetWidgetPreferenceMutation = ["SetWidgetPreference", "171d2bf889fa92bacf5a34248cb0c217e61f65e223061edcfceda77b79174dea"] as const;
-export const SharedPromotionsToggleSetSharedPromotionsCreatorMonetizationSettingMutation = [
-  "SharedPromotionsToggle_SetSharedPromotionsCreatorMonetizationSetting",
-  "657f7c7340a9487cfde18dc312421bd707b739706356115eb5717cea3c752d76",
-] as const;
+export const SharedPromotionsToggleSetSharedPromotionsCreatorMonetizationSettingMutation = ["SharedPromotionsToggle_SetSharedPromotionsCreatorMonetizationSetting", "657f7c7340a9487cfde18dc312421bd707b739706356115eb5717cea3c752d76"] as const;
 export const ShareMilestoneMutation = ["ShareMilestone", "25d20e60945d10123e8d466e30f21a1f1f578dfdea52c72095030b118eda9f39"] as const;
 export const ShareSocialSharingBadgeProgressMutation = ["ShareSocialSharingBadgeProgress", "3be86c74d1814b583d0aac4c7fba57630bae23221f4d5198ae310baafd32457c"] as const;
 export const SnoozeAdMutation = ["SnoozeAd", "b48325e0fa05f1d49e0bc4205b90eb0a7c72fdf14c2b950cf355ea80bb3dafb4"] as const;
@@ -2166,7 +2161,7 @@ export const UpdateAutomaticRewardCostMutation = ["UpdateAutomaticRewardCost", "
 export const UpdateAutoRaidSettingsMutation = ["updateAutoRaidSettings", "6035d6715e541fca0fc8a65f2bfd84b7818034e59560545c6bf0da071e98c581"] as const;
 export const UpdateBansSharingSettingsMutation = ["UpdateBansSharingSettings", "ca67d52b1824544474b220f7b5428ae09392c03c9dba11ce794f0eab3f34612a"] as const;
 export const UpdateBitsBadgeTierNotificationMutation = ["UpdateBitsBadgeTierNotification", "ef1c187f7e7fc133ea7752a81828aa6fbf69f7c5fc735775e890cf9217e2203c"] as const;
-export const UpdateChannelClipSettingsMutation = ["UpdateChannelClipSettings", "1d7f8f1a56e385306b4518978c4cd98df847ddd04af465c4d84fa0eb6ceaf73e"] as const;
+export const UpdateChannelClipSettingsMutation = ["UpdateChannelClipSettings", "48963c19445a4ebd8b01d29161d98515fc36183e7e4888b07ea67488868af557"] as const;
 export const UpdateChannelGoalMutation = ["updateChannelGoal", "35ecdd9973e2cb40e284420f68f6fe49fbcb2e8370294d508fd4c631fac16fe7"] as const;
 export const UpdateChannelPointsNameMutation = ["UpdateChannelPointsNameMutation", "8378ff43f1f8c8ced444888e7ab27da8c9ccaa0661c4efb23f36950a2778538b"] as const;
 export const UpdateChannelVodsSettingsMutation = ["UpdateChannelVodsSettings", "c9d41d01bde721b636cf0048e9953033226287253146cb9c0895c6fe4c3e4877"] as const;
