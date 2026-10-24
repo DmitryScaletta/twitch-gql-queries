@@ -552,6 +552,7 @@ export type ActiveSponsorshipInstances_SponsorshipInstances = {
   edges: {
     node: null | {
       id: ID;
+      automodLevelMinimum: UnknownValue;
       activities: null | {
         state: UnknownValue;
         __typename:
@@ -799,6 +800,19 @@ export type ActivityFeedSponsorshipAssists_CampaignInstanceSelf = {
           | ActivityFeedSponsorshipAssists_SponsorshipAlertHighDispute
           | ActivityFeedSponsorshipAssists_SponsorshipAlertHighDispute[];
         __typename: "SponsorshipAlertHigh";
+      }
+    | {
+        id: ID;
+        /**
+         * ⚠️ Low confidence about: nullable
+         * @format date-time
+         */
+        occurredAt: null | string;
+        notification:
+          | null
+          | ActivityFeedSponsorshipAssists_SponsorshipQualityAlertNotification
+          | ActivityFeedSponsorshipAssists_SponsorshipQualityAlertNotification[];
+        __typename: "SponsorshipQualityAlert";
       };
   __typename: string;
 };
@@ -840,6 +854,13 @@ export type ActivityFeedSponsorshipAssists_SponsorshipInstances = {
     };
     __typename: string;
   }[];
+  __typename: string;
+};
+
+/** ℹ️ Not real Twitch type name */
+export type ActivityFeedSponsorshipAssists_SponsorshipQualityAlertNotification = {
+  title: UnknownValue;
+  body: UnknownValue;
   __typename: string;
 };
 
@@ -9973,6 +9994,10 @@ export type ChannelSkins_ChannelSponsorshipsChannelSkin = {
    * @format date-time
    */
   nextDisableAt: null | string;
+  sponsoredShopping:
+    | null
+    | ChannelSkins_ChannelSponsorshipsChannelSkinSponsoredShopping
+    | ChannelSkins_ChannelSponsorshipsChannelSkinSponsoredShopping[];
   campaignInstance:
     | null
     | ChannelSkins_ChannelSponsorshipsChannelSkinCampaignInstance
@@ -10095,6 +10120,22 @@ export type ChannelSkins_ChannelSponsorshipsChannelSkinCampaignInstanceTranspare
     dsaPastActivity: UnknownValue;
     __typename: string;
   };
+
+/** ℹ️ Not real Twitch type name */
+export type ChannelSkins_ChannelSponsorshipsChannelSkinSponsoredShopping = {
+  productsByMarketplace:
+    | null
+    | ChannelSkins_ChannelSponsorshipsChannelSkinSponsoredShoppingProductsByMarketplace
+    | ChannelSkins_ChannelSponsorshipsChannelSkinSponsoredShoppingProductsByMarketplace[];
+  __typename: string;
+};
+
+/** ℹ️ Not real Twitch type name */
+export type ChannelSkins_ChannelSponsorshipsChannelSkinSponsoredShoppingProductsByMarketplace = {
+  marketplace: UnknownValue;
+  asins: UnknownValue;
+  __typename: string;
+};
 
 /** ℹ️ Not real Twitch type name */
 export type ChannelSkins_ChannelSponsorshipsGiftSubMatch = {
@@ -35109,7 +35150,15 @@ export type HostTrainContent_HostTrain = {
    * @format int64
    */
   potentialPassengerCount: null | number;
+  journey: null | HostTrainContent_HostTrainJourney | HostTrainContent_HostTrainJourney[];
   station: null | HostTrainContent_HostTrainStation | HostTrainContent_HostTrainStation[];
+  __typename: string;
+};
+
+/** ℹ️ Not real Twitch type name */
+export type HostTrainContent_HostTrainJourney = {
+  id: ID;
+  seq: UnknownValue;
   __typename: string;
 };
 
@@ -42548,6 +42597,12 @@ export type PayoutOnboardingContainerCurrentUser_PayoutInviteWorkflowRegistratio
 };
 
 /** ℹ️ Not real Twitch type name */
+export type PayoutOnboardingContainerV3IdvRequirement_IdentityVerificationRequirement = {
+  status: UnknownValue;
+  __typename: string;
+};
+
+/** ℹ️ Not real Twitch type name */
 export type PayoutOnboardingContainerV3Query_AccountLimitStatus = {
   status: UnknownValue;
   __typename: string;
@@ -42557,12 +42612,6 @@ export type PayoutOnboardingContainerV3Query_AccountLimitStatus = {
 export type PayoutOnboardingContainerV3Query_CurrentUserOnboardingInvitations = {
   payout: null | OnboardingInvitationFields;
   upgrade: null | OnboardingInvitationFields;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type PayoutOnboardingContainerV3Query_IdentityVerificationRequirement = {
-  status: UnknownValue;
   __typename: string;
 };
 
@@ -52912,6 +52961,7 @@ export type SponsorshipCampaignInstance = {
    * @format int64
    */
   executionWindowDurationSeconds: null | number;
+  automodLevelMinimum: UnknownValue;
   self:
     | null
     | SponsorshipCampaignInstance_CampaignInstanceSelf
@@ -53038,6 +53088,20 @@ export type SponsorshipCampaignInstance_CampaignInstanceSelf = {
           | SponsorshipCampaignInstance_SponsorshipAlertHighDispute
           | SponsorshipCampaignInstance_SponsorshipAlertHighDispute[];
         __typename: "SponsorshipAlertHigh";
+      }
+    | {
+        id: ID;
+        /**
+         * ⚠️ Low confidence about: nullable
+         * @format date-time
+         */
+        occurredAt: null | string;
+        notification:
+          | null
+          | SponsorshipCampaignInstance_SponsorshipQualityAlertNotification
+          | SponsorshipCampaignInstance_SponsorshipQualityAlertNotification[];
+        missedTalkingPoints: UnknownValue;
+        __typename: "SponsorshipQualityAlert";
       };
   lastSeenInstance: null | SponsorshipCampaignLastSeenInstance;
   __typename: string;
@@ -53101,6 +53165,13 @@ export type SponsorshipCampaignInstance_SponsorshipAlertHighNotification = {
 
 /** ℹ️ Not real Twitch type name */
 export type SponsorshipCampaignInstance_SponsorshipAlertLowNotification = {
+  title: UnknownValue;
+  body: UnknownValue;
+  __typename: string;
+};
+
+/** ℹ️ Not real Twitch type name */
+export type SponsorshipCampaignInstance_SponsorshipQualityAlertNotification = {
   title: UnknownValue;
   body: UnknownValue;
   __typename: string;
@@ -53652,6 +53723,20 @@ export type SponsorshipToolsCampaignInstance_CampaignInstanceSelf = {
           | SponsorshipToolsCampaignInstance_SponsorshipAlertHighDispute
           | SponsorshipToolsCampaignInstance_SponsorshipAlertHighDispute[];
         __typename: "SponsorshipAlertHigh";
+      }
+    | {
+        id: ID;
+        /**
+         * ⚠️ Low confidence about: nullable
+         * @format date-time
+         */
+        occurredAt: null | string;
+        notification:
+          | null
+          | SponsorshipToolsCampaignInstance_SponsorshipQualityAlertNotification
+          | SponsorshipToolsCampaignInstance_SponsorshipQualityAlertNotification[];
+        missedTalkingPoints: UnknownValue;
+        __typename: "SponsorshipQualityAlert";
       };
   __typename: string;
 };
@@ -53699,6 +53784,13 @@ export type SponsorshipToolsCampaignInstance_SponsorshipAlertHighNotification = 
 
 /** ℹ️ Not real Twitch type name */
 export type SponsorshipToolsCampaignInstance_SponsorshipAlertLowNotification = {
+  title: UnknownValue;
+  body: UnknownValue;
+  __typename: string;
+};
+
+/** ℹ️ Not real Twitch type name */
+export type SponsorshipToolsCampaignInstance_SponsorshipQualityAlertNotification = {
   title: UnknownValue;
   body: UnknownValue;
   __typename: string;
@@ -96539,6 +96631,18 @@ export type PayoutOnboardingContainerCurrentUserResponse = QueryResponse<
   "PayoutOnboardingContainer_CurrentUser"
 >;
 
+export type PayoutOnboardingContainerV3IdvRequirementData = {
+  identityVerificationRequirement:
+    | null
+    | PayoutOnboardingContainerV3IdvRequirement_IdentityVerificationRequirement
+    | PayoutOnboardingContainerV3IdvRequirement_IdentityVerificationRequirement[];
+};
+
+export type PayoutOnboardingContainerV3IdvRequirementResponse = QueryResponse<
+  PayoutOnboardingContainerV3IdvRequirementData,
+  "PayoutOnboardingContainerV3IdvRequirement"
+>;
+
 export type PayoutOnboardingContainerV3QueryData = {
   currentUser: null | {
     /**
@@ -96572,10 +96676,6 @@ export type PayoutOnboardingContainerV3QueryData = {
     | null
     | PayoutOnboardingContainerV3Query_AccountLimitStatus
     | PayoutOnboardingContainerV3Query_AccountLimitStatus[];
-  identityVerificationRequirement:
-    | null
-    | PayoutOnboardingContainerV3Query_IdentityVerificationRequirement
-    | PayoutOnboardingContainerV3Query_IdentityVerificationRequirement[];
 };
 
 export type PayoutOnboardingContainerV3QueryResponse = QueryResponse<
@@ -102835,6 +102935,24 @@ export type StreamEventsActiveCelebrationCalloutQueryData = {
     };
     __typename: "Channel";
   };
+  user: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["12826"]
+     */
+    id: ID;
+    broadcastSettings: {
+      /**
+       * @pattern ^[0-9]+$
+       * @example ["71092938"]
+       */
+      id: ID;
+      /** @example ["EN"] */
+      language: string;
+      __typename: "BroadcastSettings";
+    };
+    __typename: "User";
+  };
 };
 
 export type StreamEventsActiveCelebrationCalloutQueryResponse = QueryResponse<
@@ -104926,6 +105044,54 @@ export type SupportPanelGiftingSectionChannelLookupData = {
 export type SupportPanelGiftingSectionChannelLookupResponse = QueryResponse<
   SupportPanelGiftingSectionChannelLookupData,
   "SupportPanelGiftingSectionChannelLookup"
+>;
+
+export type SupportPanelPartnerPlusGoalVariables = { channelID: ID };
+
+export type SupportPanelPartnerPlusGoalData = {
+  plusStatus: {
+    partnerPlusProgram: {
+      canShowWidget: boolean;
+      /** @example ["OFF", "LEVEL_2"] */
+      widgetSetting: string;
+      /**
+       * @format int64
+       * @example [100]
+       */
+      l1Threshold: number;
+      /**
+       * @format int64
+       * @example [300]
+       */
+      l2Threshold: number;
+      subPoints: {
+        /**
+         * @format int64
+         * @example [2026, 2025]
+         */
+        year: number;
+        /**
+         * @format int64
+         * @example [6, 5, 4, 3, 2, 1, 12, 11, 10, 9]
+         */
+        month: number;
+        /**
+         * @format int64
+         * @example [774, 3700, 3528, 3619, 3695]
+         */
+        count: number;
+        updatedAt: null;
+        __typename: "YearMonthCategoryBreakdownPublic";
+      }[];
+      __typename: "PartnerPlusProgramPublic";
+    };
+    __typename: "CreatorProgramInfoPublic";
+  };
+};
+
+export type SupportPanelPartnerPlusGoalResponse = QueryResponse<
+  SupportPanelPartnerPlusGoalData,
+  "SupportPanelPartnerPlusGoal"
 >;
 
 export type SupportPanelSingleGiftingGiftingOptionsVariables = {
@@ -123078,6 +123244,7 @@ export type QueryVariablesMap = {
   PayoutMethodModal_CurrentUser: PayoutMethodModalCurrentUserVariables;
   PayoutOnboardingAgreement_CurrentUser: PayoutOnboardingAgreementCurrentUserVariables;
   PayoutOnboardingContainer_CurrentUser: Record<string, never>;
+  PayoutOnboardingContainerV3IdvRequirement: Record<string, never>;
   PayoutOnboardingContainerV3Query: Record<string, never>;
   PayoutOnboardingPage_CurrentUser: Record<string, never>;
   PayoutOnboardingTaxInterview_CurrentUser: Record<string, never>;
@@ -123378,6 +123545,7 @@ export type QueryVariablesMap = {
   SupportPanelFooterPrimeStatus: SupportPanelFooterPrimeStatusVariables;
   SupportPanelGifting_GifterBadgeProgressV2: SupportPanelGiftingGifterBadgeProgressV2Variables;
   SupportPanelGiftingSectionChannelLookup: SupportPanelGiftingSectionChannelLookupVariables;
+  SupportPanelPartnerPlusGoal: SupportPanelPartnerPlusGoalVariables;
   SupportPanelSingleGifting_GiftingOptions: SupportPanelSingleGiftingGiftingOptionsVariables;
   SupportPanelSingleGifting_UserInfo: SupportPanelSingleGiftingUserInfoVariables;
   SupportPanelSubscribeViewFooter: SupportPanelSubscribeViewFooterVariables;
@@ -125357,6 +125525,7 @@ export type QueryResponseMap = {
   PayoutMethodModal_CurrentUser: PayoutMethodModalCurrentUserResponse;
   PayoutOnboardingAgreement_CurrentUser: PayoutOnboardingAgreementCurrentUserResponse;
   PayoutOnboardingContainer_CurrentUser: PayoutOnboardingContainerCurrentUserResponse;
+  PayoutOnboardingContainerV3IdvRequirement: PayoutOnboardingContainerV3IdvRequirementResponse;
   PayoutOnboardingContainerV3Query: PayoutOnboardingContainerV3QueryResponse;
   PayoutOnboardingPage_CurrentUser: PayoutOnboardingPageCurrentUserResponse;
   PayoutOnboardingTaxInterview_CurrentUser: PayoutOnboardingTaxInterviewCurrentUserResponse;
@@ -125657,6 +125826,7 @@ export type QueryResponseMap = {
   SupportPanelFooterPrimeStatus: SupportPanelFooterPrimeStatusResponse;
   SupportPanelGifting_GifterBadgeProgressV2: SupportPanelGiftingGifterBadgeProgressV2Response;
   SupportPanelGiftingSectionChannelLookup: SupportPanelGiftingSectionChannelLookupResponse;
+  SupportPanelPartnerPlusGoal: SupportPanelPartnerPlusGoalResponse;
   SupportPanelSingleGifting_GiftingOptions: SupportPanelSingleGiftingGiftingOptionsResponse;
   SupportPanelSingleGifting_UserInfo: SupportPanelSingleGiftingUserInfoResponse;
   SupportPanelSubscribeViewFooter: SupportPanelSubscribeViewFooterResponse;
