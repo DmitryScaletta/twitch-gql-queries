@@ -135,6 +135,8 @@ dist
 .yarn/install-state.gz
 .pnp.*
 
+.st*
+
 docs/openapi*.json
 tmp/
 
