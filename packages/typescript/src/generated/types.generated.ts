@@ -63,11 +63,19 @@ export type BitsCheermoteCampaign = {
     | null
     | BitsCheermoteCampaign_CheermoteCampaignThresholds
     | BitsCheermoteCampaign_CheermoteCampaignThresholds[];
-  minimumBitsAmount: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  minimumBitsAmount: null | number;
   bitsTotal: UnknownValue;
   bitsUsed: UnknownValue;
   bitsPercentageRemaining: UnknownValue;
-  userLimit: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  userLimit: null | number;
   self:
     | null
     | BitsCheermoteCampaign_CheermoteCampaignSelf
@@ -86,7 +94,11 @@ export type BitsCheermoteCampaign_CheermoteCampaignSelf = {
 /** ℹ️ Not real Twitch type name */
 export type BitsCheermoteCampaign_CheermoteCampaignThresholds = {
   id: ID;
-  minimumBits: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  minimumBits: null | number;
   /**
    * ⚠️ Low confidence about: nullable
    * @format float
@@ -126,7 +138,7 @@ export type BrowsePageGame = {
    */
   avatarURL: string;
   /**
-   * @format int64
+   * @format uint32
    * @example [584353, 2909, 484662, 92801, 444549]
    */
   viewersCount: null | number;
@@ -148,7 +160,7 @@ export type CheerDisplayConfig = {
   backgrounds: string[];
   colors: {
     /**
-     * @format int64
+     * @format int32
      * @example [1, 100, 1000, 5000, 10000]
      */
     bits: number;
@@ -201,7 +213,7 @@ export type Clip = {
   /** @example ["xqc makes the wrong choice", "wow"] */
   title: string;
   /**
-   * @format int64
+   * @format uint32
    * @example [0, 957063, 957456, 899934, 944919, 773854]
    */
   viewCount: number;
@@ -284,7 +296,7 @@ export type Clip = {
    */
   createdAt: string;
   /**
-   * @format int64
+   * @format uint32
    * @example [44, 26, 25, 42, 30, 59, 36, 41, 60, 29]
    */
   durationSeconds: number;
@@ -340,7 +352,7 @@ export type ClipAssetFragment = {
   thumbnailURL: string;
   videoQualities: {
     /**
-     * @format int64
+     * @format uint32
      * @example [0, 8042862, 2732768, 945904, 781712, 7159557]
      */
     bitrate: number;
@@ -348,12 +360,12 @@ export type ClipAssetFragment = {
     codecs: string;
     duration: null;
     /**
-     * @format int64
+     * @format int32
      * @example [0, -1, 1080, 720, 480, 360, 1600]
      */
     height: number;
     /**
-     * @format int64
+     * @format int32
      * @example [0, -1, 1920, 1280, 853, 640, 900, 720, 480, 360, 854, 1170]
      */
     width: number;
@@ -384,7 +396,7 @@ export type ClipAssetFragment = {
 export type ClipCommentsExposure = {
   isCommentsEnabled: boolean;
   /**
-   * @format int64
+   * @format uint32
    * @example [0, 21, 14, 4, 2, 3, 1, 29, 6, 15, 19]
    */
   topLevelCommentCount: number;
@@ -421,7 +433,7 @@ export type ClipsPeriod = "ALL_TIME" | "LAST_MONTH" | "LAST_WEEK";
 
 export type CollectionConnectionFields = {
   /**
-   * @format int64
+   * @format uint32
    * @example [4, 3, 33, 48, 51, 23, 49, 24, 2, 1]
    */
   totalCount: number;
@@ -470,7 +482,7 @@ export type CollectionFields = {
    */
   updatedAt: string;
   /**
-   * @format int64
+   * @format uint32
    * @example [87731, 47380, 166134, 249444, 291563]
    */
   lengthSeconds: number;
@@ -499,12 +511,12 @@ export type ContentClipsManagerClip = {
   /** @example ["xqc makes the wrong choice", "wow"] */
   title: string;
   /**
-   * @format int64
+   * @format uint32
    * @example [0, 957063, 957456, 899934, 944919, 773854]
    */
   viewCount: number;
   /**
-   * @format int64
+   * @format uint32
    * @example [0, 21, 14, 4, 2, 3, 1, 29, 6, 15, 19]
    */
   topLevelCommentCount: number;
@@ -584,7 +596,7 @@ export type ContentClipsManagerClip = {
     profileImageURL: string;
     followers: {
       /**
-       * @format int64
+       * @format uint32
        * @example [0, 2430015, 2459534, 2471025, 2380069, 2380116]
        */
       totalCount: number;
@@ -597,7 +609,7 @@ export type ContentClipsManagerClip = {
        */
       id: ID;
       /**
-       * @format int64
+       * @format uint32
        * @example [0, 46802, 656, 1572, 1518, 1432]
        */
       viewersCount: number;
@@ -640,7 +652,7 @@ export type ContentClipsManagerClip = {
    */
   duration: number;
   /**
-   * @format int64
+   * @format uint32
    * @example [44, 26, 25, 42, 30, 59, 36, 41, 60, 29]
    */
   durationSeconds: number;
@@ -668,7 +680,7 @@ export type ContentClipsManagerClip = {
     __typename: "Video";
   };
   /**
-   * @format int64
+   * @format uint32
    * @example [7897, 11412, 12062, 2238]
    */
   videoOffsetSeconds: null | number;
@@ -804,7 +816,7 @@ export type CoreUserFragment = {
      */
     id: ID;
     /**
-     * @format int64
+     * @format uint32
      * @example [0, 46802, 656, 1572, 1518, 1432]
      */
     viewersCount: number;
@@ -815,7 +827,7 @@ export type CoreUserFragment = {
 
 export type CostreamingDiscoveryDetails = {
   /**
-   * @format int64
+   * @format uint32
    * @example [0, 13, 14, 7, 6, 12, 1, 11]
    */
   costreamersCount: number;
@@ -824,7 +836,7 @@ export type CostreamingDiscoveryDetails = {
   role: string;
   topCostreamers: CostreamingUserWithViewcount[];
   /**
-   * @format int64
+   * @format uint32
    * @example [53318, 665, 54790, 55713, 54158]
    */
   totalViewersCount: number;
@@ -854,7 +866,7 @@ export type CostreamingUserWithViewcount = {
      */
     id: ID;
     /**
-     * @format int64
+     * @format uint32
      * @example [0, 46802, 656, 1572, 1518, 1432]
      */
     viewersCount: number;
@@ -923,7 +935,7 @@ export type DirectoryPageGameStreamWithTagsNode = {
   /** @example ["🔴 G2 0:0 FUT | BO3 | IEM Cologne Major 2026 Stage 2 | @skywhywalker @m3wsu", "[ 20 тестов днк ] | !winline !tg"] */
   title: string;
   /**
-   * @format int64
+   * @format uint32
    * @example [0, 46802, 656, 1572, 1518, 1432]
    */
   viewersCount: number;
@@ -941,12 +953,12 @@ export type DirectoryPageGameStreamWithTagsNode = {
    */
   verticalPreviewImageURL: string;
   /**
-   * @format int64
+   * @format uint32
    * @example [0, 1440, 1080, 720, 768, 936, 1200, 900, 1280, 864, 2160]
    */
   height: number;
   /**
-   * @format int64
+   * @format uint32
    * @example [0, 2560, 1920, 1280, 1360, 1664]
    */
   width: number;
@@ -1116,7 +1128,7 @@ export type NeoCheermote = {
     /** @example ["Charity;1", "Charity;100"] */
     id: ID;
     /**
-     * @format int64
+     * @format int32
      * @example [1, 100, 1000, 5000, 10000]
      */
     bits: number;
@@ -1182,7 +1194,7 @@ export type PreviewCardClip = {
   /** @example ["xqc makes the wrong choice", "wow"] */
   title: string;
   /**
-   * @format int64
+   * @format uint32
    * @example [0, 957063, 957456, 899934, 944919, 773854]
    */
   viewCount: number;
@@ -1263,7 +1275,7 @@ export type PreviewCardClip = {
    */
   createdAt: string;
   /**
-   * @format int64
+   * @format uint32
    * @example [44, 26, 25, 42, 30, 59, 36, 41, 60, 29]
    */
   durationSeconds: number;
@@ -1323,7 +1335,7 @@ export type PreviewCardVideo = {
    */
   id: ID;
   /**
-   * @format int64
+   * @format uint32
    * @example [15389, 4621, 621, 4472, 58]
    */
   lengthSeconds: number;
@@ -1376,7 +1388,7 @@ export type PreviewCardVideo = {
   /** @example ["Twitch Recap: 2024 according to Twitch Chat!", "Creator Camp LIVE: Streaming Basics with @Snackless & @KawaiiGuy"] */
   title: null | string;
   /**
-   * @format int64
+   * @format uint32
    * @example [0, 772963, 171376, 163669, 1911, 684]
    */
   viewCount: number;
@@ -1414,12 +1426,12 @@ export type RecommendationsContext = {
   /** @example [""] */
   referrerDomain?: null | string;
   /**
-   * @format int64
+   * @format uint32
    * @example [720]
    */
   viewportHeight?: null | number;
   /**
-   * @format int64
+   * @format uint32
    * @example [1280]
    */
   viewportWidth?: null | number;
@@ -1436,7 +1448,7 @@ export type RelatedLiveChannelsFragment = {
     __typename: "SearchForEdgeRelatedLiveChannels";
   }[];
   /**
-   * @format int64
+   * @format int32
    * @example [3, 2]
    */
   score: null | number;
@@ -1482,12 +1494,12 @@ export type SearchForChannelsFragment = {
     __typename: "SearchForEdge";
   }[];
   /**
-   * @format int64
+   * @format int32
    * @example [0, 1, 2, 4]
    */
   score: number;
   /**
-   * @format int64
+   * @format uint32
    * @example [0, 2235, 2752, 10834, 19999, 11163]
    */
   totalMatches: number;
@@ -1511,12 +1523,12 @@ export type SearchForChannelsWithTagFragment = {
     __typename: "SearchForEdge";
   }[];
   /**
-   * @format int64
+   * @format int32
    * @example [0, 1, 2, 4]
    */
   score: number;
   /**
-   * @format int64
+   * @format uint32
    * @example [0, 2235, 2752, 10834, 19999, 11163]
    */
   totalMatches: number;
@@ -1552,12 +1564,12 @@ export type SearchForCollectionsFragment = {
     __typename: string;
   }[];
   /**
-   * @format int64
+   * @format int32
    * @example [0]
    */
   score: number;
   /**
-   * @format int64
+   * @format uint32
    * @example [0]
    */
   totalMatches: number;
@@ -1575,12 +1587,12 @@ export type SearchForFeaturedClipFragment = {
   /** @example ["EphemeralEncouragingBulgogiPraiseIt-98gnj_-unqEO0uvs", "CredulousBlightedSquirrelOSkomodo-GdY_nETXjEzIz_gm"] */
   slug: string;
   /**
-   * @format int64
+   * @format uint32
    * @example [0, 957063, 957456, 899934, 944919, 773854]
    */
   viewCount: number;
   /**
-   * @format int64
+   * @format uint32
    * @example [44, 26, 25, 42, 30, 59, 36, 41, 60, 29]
    */
   durationSeconds: number;
@@ -1632,14 +1644,14 @@ export type SearchForFeaturedVideoFragment = {
   /** @example ["RECORDING", "RECORDED"] */
   status: string;
   /**
-   * @format int64
+   * @format uint32
    * @example [15389, 4621, 621, 4472, 58]
    */
   lengthSeconds: number;
   /** @example ["Twitch Recap: 2024 according to Twitch Chat!", "Creator Camp LIVE: Streaming Basics with @Snackless & @KawaiiGuy"] */
   title: null | string;
   /**
-   * @format int64
+   * @format uint32
    * @example [0, 772963, 171376, 163669, 1911, 684]
    */
   viewCount: number;
@@ -1710,7 +1722,7 @@ export type SearchForGameFragment = {
   templateBoxArtURL: string;
   tags: TagFragment[];
   /**
-   * @format int64
+   * @format uint32
    * @example [584353, 2909, 484662, 92801, 444549]
    */
   viewersCount: null | number;
@@ -1734,12 +1746,12 @@ export type SearchForGamesFragment = {
     __typename: "SearchForEdge";
   }[];
   /**
-   * @format int64
+   * @format int32
    * @example [0, 4, 3]
    */
   score: number;
   /**
-   * @format int64
+   * @format uint32
    * @example [0, 6, 10000, 25, 259, 1547]
    */
   totalMatches: number;
@@ -1817,7 +1829,7 @@ export type SearchForUserFragment = {
   displayName: string;
   followers: {
     /**
-     * @format int64
+     * @format uint32
      * @example [0, 2430015, 2459534, 2471025, 2380069, 2380116]
      */
     totalCount: number;
@@ -1938,12 +1950,12 @@ export type SearchForUserFragment = {
      */
     verticalPreviewImageURL: string;
     /**
-     * @format int64
+     * @format uint32
      * @example [0, 1440, 1080, 720, 768, 936, 1200, 900, 1280, 864, 2160]
      */
     height: number;
     /**
-     * @format int64
+     * @format uint32
      * @example [0, 2560, 1920, 1280, 1360, 1664]
      */
     width: number;
@@ -1959,7 +1971,7 @@ export type SearchForUserFragment = {
     /** @example ["live"] */
     type: string;
     /**
-     * @format int64
+     * @format uint32
      * @example [0, 46802, 656, 1572, 1518, 1432]
      */
     viewersCount: number;
@@ -2038,7 +2050,7 @@ export type SearchForVideoFragment = {
     __typename: "Game";
   };
   /**
-   * @format int64
+   * @format uint32
    * @example [15389, 4621, 621, 4472, 58]
    */
   lengthSeconds: number;
@@ -2058,7 +2070,7 @@ export type SearchForVideoFragment = {
   /** @example ["Twitch Recap: 2024 according to Twitch Chat!", "Creator Camp LIVE: Streaming Basics with @Snackless & @KawaiiGuy"] */
   title: null | string;
   /**
-   * @format int64
+   * @format uint32
    * @example [0, 772963, 171376, 163669, 1911, 684]
    */
   viewCount: number;
@@ -2087,12 +2099,12 @@ export type SearchForVideosFragment = {
     __typename: "SearchForEdge";
   }[];
   /**
-   * @format int64
+   * @format int32
    * @example [0, 5]
    */
   score: number;
   /**
-   * @format int64
+   * @format uint32
    * @example [0, 495, 406, 423, 10000, 432]
    */
   totalMatches: number;
@@ -2112,7 +2124,7 @@ export type SearchRelatedLiveChannelFragment = {
      */
     id: ID;
     /**
-     * @format int64
+     * @format uint32
      * @example [0, 46802, 656, 1572, 1518, 1432]
      */
     viewersCount: number;
@@ -2130,12 +2142,12 @@ export type SearchRelatedLiveChannelFragment = {
      */
     verticalPreviewImageURL: string;
     /**
-     * @format int64
+     * @format uint32
      * @example [0, 1440, 1080, 720, 768, 936, 1200, 900, 1280, 864, 2160]
      */
     height: number;
     /**
-     * @format int64
+     * @format uint32
      * @example [0, 2560, 1920, 1280, 1360, 1664]
      */
     width: number;
@@ -2235,7 +2247,7 @@ export type SearchSuggestionNode = {
                */
               id: ID;
               /**
-               * @format int64
+               * @format uint32
                * @example [0, 46802, 656, 1572, 1518, 1432]
                */
               viewersCount: number;
@@ -2304,12 +2316,12 @@ export type SearchSuggestionNode = {
         };
     matchingCharacters: null | {
       /**
-       * @format int64
+       * @format int32
        * @example [0, 6]
        */
       start: number;
       /**
-       * @format int64
+       * @format int32
        * @example [0, 3, 9, 5, 6, 4]
        */
       end: number;
@@ -2341,7 +2353,7 @@ export type ShelfPreviewCardClip = {
    */
   clipTitle: string;
   /**
-   * @format int64
+   * @format uint32
    * @example [0, 957063, 957456, 899934, 944919, 773854]
    * @aliasFor viewCount
    */
@@ -2424,7 +2436,7 @@ export type ShelfPreviewCardClip = {
    */
   createdAt: string;
   /**
-   * @format int64
+   * @format uint32
    * @example [44, 26, 25, 42, 30, 59, 36, 41, 60, 29]
    */
   durationSeconds: number;
@@ -2521,7 +2533,7 @@ export type VideoAccessTokenClipAsset = {
   createdAt: string;
   videoQualities: {
     /**
-     * @format int64
+     * @format uint32
      * @example [0, 8042862, 2732768, 945904, 781712, 7159557]
      */
     bitrate: number;
@@ -2533,7 +2545,7 @@ export type VideoAccessTokenClipAsset = {
      */
     frameRate: number;
     /**
-     * @format int64
+     * @format int32
      * @example [0, -1, 1080, 720, 480, 360, 1600]
      */
     height: number;
@@ -2544,7 +2556,7 @@ export type VideoAccessTokenClipAsset = {
     /** @example ["AVC", "HEVC"] */
     videoCodec: string;
     /**
-     * @format int64
+     * @format int32
      * @example [0, -1, 1920, 1280, 853, 640, 900, 720, 480, 360, 854, 1170]
      */
     width: number;
@@ -2570,7 +2582,7 @@ export type VideoCodec = "AV1" | "AVC" | "HEVC";
 
 export type VideoConnectionOptionsInput = {
   /**
-   * @format int64
+   * @format uint32
    * @example [61]
    */
   maxLengthSeconds?: null | number;
@@ -2618,7 +2630,7 @@ export type VideoMetadataVideo = {
    */
   createdAt: string;
   /**
-   * @format int64
+   * @format uint32
    * @example [0, 772963, 171376, 163669, 1911, 684]
    */
   viewCount: number;
@@ -2628,7 +2640,7 @@ export type VideoMetadataVideo = {
    */
   publishedAt: string;
   /**
-   * @format int64
+   * @format uint32
    * @example [15389, 4621, 621, 4472, 58]
    */
   lengthSeconds: number;
@@ -2701,7 +2713,7 @@ export type BitsConfigContextGlobalResponse = QueryResponse<
 >;
 
 export type BrowsePageAllDirectoriesVariables = {
-  /** @format int64 */
+  /** @format int32 */
   limit: number;
   cursor?: null | Cursor;
   options?: null | GameOptions;
@@ -2763,7 +2775,7 @@ export type ChannelRootAboutPanelData = {
     profileImageURL: string;
     followers: {
       /**
-       * @format int64
+       * @format uint32
        * @example [0, 2430015, 2459534, 2471025, 2380069, 2380116]
        */
       totalCount: number;
@@ -2873,7 +2885,7 @@ export type ChannelShellResponse = QueryResponse<ChannelShellData, "ChannelShell
 
 export type ChannelVideoShelvesQueryVariables = {
   channelLogin: string;
-  /** @format int64 */
+  /** @format int32 */
   first: number;
   cursor?: null | Cursor;
   options?: null | EnumOrInput;
@@ -2944,7 +2956,7 @@ export type ChatListBadgesResponse = QueryResponse<ChatListBadgesData, "ChatList
 
 export type ClipsCardsGameVariables = {
   categorySlug: string;
-  /** @format int64 */
+  /** @format int32 */
   limit: number;
   cursor?: null | Cursor;
   criteria?: null | GameClipsInput;
@@ -2984,7 +2996,7 @@ export type ClipsCardsGameResponse = QueryResponse<ClipsCardsGameData, "ClipsCar
 
 export type ClipsCardsUserVariables = {
   login: string;
-  /** @format int64 */
+  /** @format int32 */
   limit: number;
   cursor?: null | Cursor;
   criteria?: null | UserClipsInput;
@@ -3031,12 +3043,12 @@ export type ClipsDownloadButtonData = {
      */
     createdAt: string;
     /**
-     * @format int64
+     * @format uint32
      * @example [44, 26, 25, 42, 30, 59, 36, 41, 60, 29]
      */
     durationSeconds: number;
     /**
-     * @format int64
+     * @format uint32
      * @example [0, 957063, 957456, 899934, 944919, 773854]
      */
     viewCount: number;
@@ -3096,13 +3108,13 @@ export type ClipsDownloadButtonResponse = QueryResponse<
 
 export type DirectoryPageGameVariables = {
   slug: string;
-  /** @format int64 */
+  /** @format int32 */
   limit: number;
   cursor?: null | Cursor;
   options?: null | GameStreamOptions;
   sortTypeIsRecency: boolean;
   /**
-   * @format int64
+   * @format int32
    * @default 50
    */
   imageWidth?: null | number;
@@ -3139,7 +3151,7 @@ export type DirectoryPageGameResponse = QueryResponse<DirectoryPageGameData, "Di
 export type FFZRecentBroadcastsVariables = {
   id: ID;
   login?: null | string;
-  /** @format int64 */
+  /** @format int32 */
   limit: number;
   cursor?: null | Cursor;
   type?: null | BroadcastType;
@@ -3197,7 +3209,7 @@ export type FFZRecentBroadcastsResponse = QueryResponse<
 
 export type FilterableVideoTowerVideosVariables = {
   channelOwnerLogin: string;
-  /** @format int64 */
+  /** @format int32 */
   limit: number;
   cursor?: null | Cursor;
   broadcastType?: null | BroadcastType;
@@ -3233,7 +3245,7 @@ export type FilterableVideoTowerVideosResponse = QueryResponse<
 
 export type GetPinnedChatVariables = {
   channelID: ID;
-  /** @format int64 */
+  /** @format int32 */
   count: number;
   after?: null | Cursor;
 };
@@ -3287,7 +3299,11 @@ export type GetPinnedChatData = {
                       __typename: "Emote";
                     }
                   | {
-                      bitsAmount: UnknownValue;
+                      /**
+                       * ⚠️ Low confidence about: nullable
+                       * @format uint32
+                       */
+                      bitsAmount: null | number;
                       prefix: UnknownValue;
                       tier: UnknownValue;
                       __typename: "CheermoteToken";
@@ -3694,18 +3710,18 @@ export type UseViewCountData = {
        */
       id: ID;
       /**
-       * @format int64
+       * @format uint32
        * @example [0, 46802, 656, 1572, 1518, 1432]
        */
       viewersCount: number;
       /**
-       * @format int64
+       * @format uint32
        * @example [4617, 7717, 7714, 11, 4557]
        */
       collaborationViewersCount: null | number;
       costreamDetails: null | {
         /**
-         * @format int64
+         * @format uint32
          * @example [53318, 665, 54790, 55713, 54158]
          */
         totalViewersCount: number;
@@ -3795,7 +3811,7 @@ export type VideoMetadataData = {
        */
       id: ID;
       /**
-       * @format int64
+       * @format uint32
        * @example [0, 46802, 656, 1572, 1518, 1432]
        */
       viewersCount: number;
@@ -3803,7 +3819,7 @@ export type VideoMetadataData = {
     };
     followers: {
       /**
-       * @format int64
+       * @format uint32
        * @example [0, 2430015, 2459534, 2471025, 2380069, 2380116]
        */
       totalCount: number;

@@ -234,7 +234,7 @@ export type AccountCheckupSecurityStateQuery_CurrentUserAccountHealth = {
 export type AccountReactivationModal_CurrentUserFollows = {
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   totalCount: null | number;
   edges: {
@@ -273,12 +273,12 @@ export type AccountVerificationOptions = {
   emailVerificationMode: string;
   partialEmailVerificationConfig: {
     /**
-     * @format int64
+     * @format uint32
      * @example [10080, 1440, 267840]
      */
     minimumAccountAgeInMinutes: number;
     /**
-     * @format int64
+     * @format uint32
      * @example [1440, 30, 4320, 10, 133920]
      */
     minimumFollowerAgeInMinutes: number;
@@ -291,12 +291,12 @@ export type AccountVerificationOptions = {
   phoneVerificationMode: string;
   partialPhoneVerificationConfig: {
     /**
-     * @format int64
+     * @format uint32
      * @example [10080, 1440, 267840]
      */
     minimumAccountAgeInMinutes: number;
     /**
-     * @format int64
+     * @format uint32
      * @example [1440, 30, 4320, 10, 133920]
      */
     minimumFollowerAgeInMinutes: number;
@@ -591,7 +591,11 @@ export type ActivityFeedAlertSettings_ActivityFeedAlertSettingsCategories = {
 
 export type ActivityFeedCheermote = {
   prefix: UnknownValue;
-  bitsAmount: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  bitsAmount: null | number;
   tier: UnknownValue;
   __typename: "ActivityFeedCheermote";
 };
@@ -613,7 +617,8 @@ export type ActivityFeedEmote = {
 /** ℹ️ Not real Twitch type name */
 export type ActivityFeedEmote_EmoteModifiers = {
   code: UnknownValue;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   __typename: string;
 };
 
@@ -688,7 +693,11 @@ export type ActivityFeedEventDetailItem = {
       }
     | {
         value: UnknownValue;
-        total: UnknownValue;
+        /**
+         * ⚠️ Low confidence about: nullable
+         * @format uint32
+         */
+        total: null | number;
         __typename: "ActivityFeedEventDetailItemPercentage";
       };
   __typename: "ActivityFeedEventDetailItem";
@@ -745,7 +754,8 @@ export type ActivityFeedIsFollowingV2_UserSelfFollower = {
 
 /** ℹ️ Not real Twitch type name */
 export type ActivityFeedSponsorshipAssists_CampaignInstanceAdvertiser = {
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   imageAsset:
     | null
     | ActivityFeedSponsorshipAssists_CampaignInstanceAdvertiserImageAsset
@@ -825,14 +835,16 @@ export type ActivityFeedSponsorshipAssists_SponsorshipAlertHighDispute = {
 
 /** ℹ️ Not real Twitch type name */
 export type ActivityFeedSponsorshipAssists_SponsorshipAlertHighNotification = {
-  title: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  title: null | string;
   body: UnknownValue;
   __typename: string;
 };
 
 /** ℹ️ Not real Twitch type name */
 export type ActivityFeedSponsorshipAssists_SponsorshipAlertLowNotification = {
-  title: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  title: null | string;
   body: UnknownValue;
   __typename: string;
 };
@@ -859,7 +871,8 @@ export type ActivityFeedSponsorshipAssists_SponsorshipInstances = {
 
 /** ℹ️ Not real Twitch type name */
 export type ActivityFeedSponsorshipAssists_SponsorshipQualityAlertNotification = {
-  title: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  title: null | string;
   body: UnknownValue;
   __typename: string;
 };
@@ -1154,7 +1167,7 @@ export type AdRequestVOD = {
    */
   id: ID;
   /**
-   * @format int64
+   * @format uint32
    * @example [15389, 4621, 621, 4472, 58]
    */
   lengthSeconds: number;
@@ -1191,7 +1204,7 @@ export type AdScheduleSettings_DensityReminder = {
   seconds: UnknownValue;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   maxSeconds: null | number;
   /** ⚠️ Low confidence about: nullable */
@@ -1473,7 +1486,7 @@ export type AddRecommendationFeedback_AddRecommendationFeedbackRecommendationFee
 export type AddViewerToRTJQueue_AddViewerToRTJQueue = {
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   heartbeatIntervalMilliseconds: null | number;
   error:
@@ -1516,12 +1529,12 @@ export type AdsGeneralSettingsPrerollsQuery_AdPropertiesDisablePrerollsAbilityDi
   {
     /**
      * ⚠️ Low confidence about: nullable
-     * @format int64
+     * @format uint32
      */
     midrollLengthSeconds: null | number;
     /**
      * ⚠️ Low confidence about: nullable
-     * @format int64
+     * @format uint32
      */
     prerollFreeTimeSeconds: null | number;
     __typename: string;
@@ -1672,7 +1685,11 @@ export type AdsManagerInstallReminderSetFirstTimeUserExperienceConfig_SetAdManag
 export type AdsManagerSliderTooltipsFields = {
   id: ID;
   targetHoursBroadcast: UnknownValue;
-  rank: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  rank: null | number;
   density: UnknownValue;
   /** ⚠️ Low confidence about: nullable */
   isViewed: null | boolean;
@@ -1755,7 +1772,7 @@ export type AdsSchedulerServiceQueryAdProperties_AdPropertiesDensityAdSchedule =
   runAtTime: UnknownValue;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   durationSeconds: null | number;
   __typename: string;
@@ -1765,7 +1782,7 @@ export type AdsSchedulerServiceQueryAdProperties_AdPropertiesDensityAdSchedule =
 export type AdsSchedulerServiceQueryAdProperties_AdPropertiesDensitySnooze = {
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   durationSeconds: null | number;
   __typename: string;
@@ -1809,7 +1826,8 @@ export type AdvancedSettingsSectionSubsAdFreeUpdateSubscriptionProduct_UpdateSub
   };
 
 export type AdvertiserFragment = {
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   ctaMessage: UnknownValue;
   /**
    * ⚠️ Low confidence about: nullable
@@ -1870,7 +1888,7 @@ export type AggregateReactionsBreakdownByContentKeyFragment = {
   type: UnknownValue;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   totalCount: null | number;
   totalBreakdown:
@@ -1883,7 +1901,11 @@ export type AggregateReactionsBreakdownByContentKeyFragment = {
 /** ℹ️ Not real Twitch type name */
 export type AggregateReactionsBreakdownByContentKeyFragment_AggregateReactionsBreakdownByContentKeyTotalBreakdown =
   {
-    count: UnknownValue;
+    /**
+     * ⚠️ Low confidence about: nullable
+     * @format uint32
+     */
+    count: null | number;
     reaction: null | ReactionAssetMetadataFragment;
     __typename: string;
   };
@@ -1906,8 +1928,13 @@ export type AggregateReactionsBreakdownByContentKeys_AggregateReactionsBreakdown
   };
 
 export type AggregatedReferralsFragment = {
-  count: UnknownValue;
-  name: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  count: null | number;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   __typename: "AggregatedReferrals";
 };
 
@@ -1926,7 +1953,11 @@ export type AlertAssetFragment = {
    */
   url: null | string;
   type: UnknownValue;
-  size: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  size: null | number;
   /**
    * ⚠️ Low confidence about: nullable
    * @format date-time
@@ -1939,25 +1970,41 @@ export type AlertAssetFragment = {
 
 /** ℹ️ Not real Twitch type name */
 export type AlertAssetsSizeLimits_AlertAssetLimit = {
-  size: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  size: null | number;
   __typename: string;
 };
 
 /** ℹ️ Not real Twitch type name */
 export type AlertAssetsSizeLimits_AlertAssets = {
-  totalSize: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  totalSize: null | number;
   __typename: string;
 };
 
 /** ℹ️ Not real Twitch type name */
 export type AlertAssets_AlertAssetLimit = {
-  size: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  size: null | number;
   __typename: string;
 };
 
 /** ℹ️ Not real Twitch type name */
 export type AlertAssets_AlertAssets = {
-  totalSize: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  totalSize: null | number;
   imageAssets: null | AlertAssetFragment;
   videoAssets: null | AlertAssetFragment;
   audioAssets: null | AlertAssetFragment;
@@ -1966,7 +2013,11 @@ export type AlertAssets_AlertAssets = {
 
 export type AlertCheerConditionFragment = {
   operator: UnknownValue;
-  amountCheered: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  amountCheered: null | number;
   featureType: UnknownValue;
   __typename: "AlertCheerCondition";
 };
@@ -2004,7 +2055,11 @@ export type AlertConditionTriggerFragment =
       __typename: "AlertSubscriptionTierCondition";
     }
   | {
-      duration: UnknownValue;
+      /**
+       * ⚠️ Low confidence about: nullable
+       * @format uint32
+       */
+      duration: null | number;
       __typename: "AlertSubscriptionMultiMonthDurationCondition";
     }
   | {
@@ -2015,7 +2070,11 @@ export type AlertConditionTriggerFragment =
   | AlertCheerConditionFragment
   | {
       operator: UnknownValue;
-      raidAmount: UnknownValue;
+      /**
+       * ⚠️ Low confidence about: nullable
+       * @format uint32
+       */
+      raidAmount: null | number;
       __typename: "AlertRaidCondition";
     }
   | {
@@ -2024,7 +2083,11 @@ export type AlertConditionTriggerFragment =
     }
   | {
       operator: UnknownValue;
-      hostSize: UnknownValue;
+      /**
+       * ⚠️ Low confidence about: nullable
+       * @format uint32
+       */
+      hostSize: null | number;
       __typename: "AlertHostCondition";
     }
   | {
@@ -2033,7 +2096,11 @@ export type AlertConditionTriggerFragment =
     }
   | {
       operator: UnknownValue;
-      totalDurationMonths: UnknownValue;
+      /**
+       * ⚠️ Low confidence about: nullable
+       * @format uint32
+       */
+      totalDurationMonths: null | number;
       __typename: "AlertSubscriptionTenureCondition";
     }
   | {
@@ -2105,7 +2172,11 @@ export type AlertEvent =
     }
   | {
       fromUser: null | ActivityFeedUser;
-      bitsAmount: UnknownValue;
+      /**
+       * ⚠️ Low confidence about: nullable
+       * @format uint32
+       */
+      bitsAmount: null | number;
       featureType: UnknownValue;
       featureData: BitsSpendFeatureData & {
         __typename:
@@ -2120,11 +2191,15 @@ export type AlertEvent =
       /** ⚠️ Low confidence about: nullable */
       isAnonymous: null | boolean;
       quantity: UnknownValue;
-      multiMonthDuration: UnknownValue;
+      /**
+       * ⚠️ Low confidence about: nullable
+       * @format uint32
+       */
+      multiMonthDuration: null | number;
       tier: UnknownValue;
       /**
        * ⚠️ Low confidence about: nullable
-       * @format int64
+       * @format uint32
        */
       totalGiftCount: null | number;
       __typename: "ActivityFeedCommunityGiftSubscriptionAlert";
@@ -2143,7 +2218,7 @@ export type AlertEvent =
       host: null | ActivityFeedUser;
       /**
        * ⚠️ Low confidence about: nullable
-       * @format int64
+       * @format uint32
        */
       viewerCount: null | number;
       /** ⚠️ Low confidence about: nullable */
@@ -2155,18 +2230,26 @@ export type AlertEvent =
       recipient: null | ActivityFeedUser;
       /** ⚠️ Low confidence about: nullable */
       isAnonymous: null | boolean;
-      multiMonthDuration: UnknownValue;
+      /**
+       * ⚠️ Low confidence about: nullable
+       * @format uint32
+       */
+      multiMonthDuration: null | number;
       tier: UnknownValue;
       /**
        * ⚠️ Low confidence about: nullable
-       * @format int64
+       * @format uint32
        */
       totalGiftCount: null | number;
       __typename: "ActivityFeedIndividualGiftSubscriptionAlert";
     }
   | {
       subscriber: null | ActivityFeedUser;
-      totalDuration: UnknownValue;
+      /**
+       * ⚠️ Low confidence about: nullable
+       * @format uint32
+       */
+      totalDuration: null | number;
       messageContent: null | AlertMessageContent;
       viewerCustomizationSelection:
         | null
@@ -2180,22 +2263,42 @@ export type AlertEvent =
     }
   | {
       raider: null | ActivityFeedUser;
-      partySize: UnknownValue;
+      /**
+       * ⚠️ Low confidence about: nullable
+       * @format uint32
+       */
+      partySize: null | number;
       __typename: "ActivityFeedRaidAlert";
     }
   | {
       subscriber: null | ActivityFeedUser;
-      multiMonthDuration: UnknownValue;
+      /**
+       * ⚠️ Low confidence about: nullable
+       * @format uint32
+       */
+      multiMonthDuration: null | number;
       tier: UnknownValue;
       __typename: "ActivityFeedSubscriptionAlert";
     }
   | {
       subscriber: null | ActivityFeedUser;
-      multiMonthDuration: UnknownValue;
+      /**
+       * ⚠️ Low confidence about: nullable
+       * @format uint32
+       */
+      multiMonthDuration: null | number;
       /** ⚠️ Low confidence about: nullable */
       isMultiMonthResub: null | boolean;
-      streakDuration: UnknownValue;
-      totalDuration: UnknownValue;
+      /**
+       * ⚠️ Low confidence about: nullable
+       * @format uint32
+       */
+      streakDuration: null | number;
+      /**
+       * ⚠️ Low confidence about: nullable
+       * @format uint32
+       */
+      totalDuration: null | number;
       messageContent: null | AlertMessageContent;
       tier: UnknownValue;
       viewerCustomizationSelection:
@@ -2211,10 +2314,18 @@ export type AlertEvent =
       description: null | string;
       contributions:
         | {
-            /** @aliasFor currentContributions */
-            currentIntegerContributions: UnknownValue;
-            /** @aliasFor targetContributions */
-            targetIntegerContributions: UnknownValue;
+            /**
+             * ⚠️ Low confidence about: nullable
+             * @format uint32
+             * @aliasFor currentContributions
+             */
+            currentIntegerContributions: null | number;
+            /**
+             * ⚠️ Low confidence about: nullable
+             * @format uint32
+             * @aliasFor targetContributions
+             */
+            targetIntegerContributions: null | number;
             __typename: "ChannelGoalIntegerContributions";
           }
         | {
@@ -2243,7 +2354,11 @@ export type AlertEvent =
       __typename: "ActivityFeedCharityDonationAlert";
     }
   | {
-      pointsSpent: UnknownValue;
+      /**
+       * ⚠️ Low confidence about: nullable
+       * @format uint32
+       */
+      pointsSpent: null | number;
       messageContent: null | AlertMessageContent;
       redeemer: null | ActivityFeedUser;
       reward:
@@ -2302,7 +2417,8 @@ export type AlertEvent =
 /** ℹ️ Not real Twitch type name */
 export type AlertEvent_ActivityFeedChannelPointsRedemptionAlertReward = {
   id: ID;
-  title: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  title: null | string;
   __typename: string;
 };
 
@@ -2353,7 +2469,8 @@ export type AlertEvent_ActivityFeedPrimeResubscriptionAlertViewerCustomizationSe
   id: ID;
   /** ⚠️ Low confidence about: nullable */
   isMuted: null | boolean;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   /**
    * ⚠️ Low confidence about: nullable
    * @format uri
@@ -2407,7 +2524,8 @@ export type AlertEvent_ActivityFeedResubscriptionAlertViewerCustomizationSelecti
   isMuted: null | boolean;
   assetType: UnknownValue;
   assetMimeType: UnknownValue;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   __typename: string;
 };
 
@@ -2468,7 +2586,8 @@ export type AlertMessageContent = {
 
 export type AlertSetDisplayFragment = {
   id: ID;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   /** ⚠️ Low confidence about: nullable */
   description: null | string;
   state: UnknownValue;
@@ -2513,7 +2632,8 @@ export type AlertSetWithViewerCustomizationFragment = AlertSetDisplayFragment & 
 /** ℹ️ Not real Twitch type name */
 export type AlertTextToSpeechVoicesQuery_AllAlertTextToSpeechVoices = {
   id: ID;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   language: UnknownValue;
   /** ⚠️ Low confidence about: nullable */
   languageCode: null | string;
@@ -2524,11 +2644,16 @@ export type AlertTextToSpeechVoicesQuery_AllAlertTextToSpeechVoices = {
 
 export type AlertVariationFragment = {
   id: ID;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   state: UnknownValue;
   /** ⚠️ Low confidence about: nullable */
   ownerID: null | ID;
-  duration: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  duration: null | number;
   priority: UnknownValue;
   image:
     | null
@@ -2574,7 +2699,11 @@ export type AlertVariationFragment_AlertVariationCelebration = {
   type: UnknownValue;
   intensityLevel: UnknownValue;
   area: UnknownValue;
-  duration: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  duration: null | number;
   __typename: string;
 };
 
@@ -2754,7 +2883,8 @@ export type AlertViewerSoundFragment = {
   isMuted: null | boolean;
   assetType: UnknownValue;
   assetMimeType: UnknownValue;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   __typename: "AlertViewerSound";
 };
 
@@ -2774,7 +2904,7 @@ export type AlertsChannelPointsReward = {
   title: string;
   isEnabled: boolean;
   /**
-   * @format int64
+   * @format uint32
    * @example [20000000, 100000000, 1000000, 300000, 5000000]
    */
   cost: number;
@@ -2787,17 +2917,17 @@ export type AlertsChannelPointsReward = {
 export type AllAdScheduleFields = {
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   desiredSeconds: null | number;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   minSeconds: null | number;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   maxSeconds: null | number;
   __typename: "AdScheduleConfig";
@@ -2906,7 +3036,7 @@ export type AllCostreamersDiscoveryQuery_CostreamDetailsAllCostreamersEdgesNodeS
   id: ID;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   viewersCount: null | number;
   __typename: string;
@@ -2981,7 +3111,11 @@ export type AnimatedEmotesPayload = {
 /** ℹ️ Not real Twitch type name */
 export type AnimatedEmotesPayload_GenerateAnimatedEmotePayloadAnimatedAssets = {
   id: ID;
-  size: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  size: null | number;
   __typename: string;
 };
 
@@ -3044,7 +3178,7 @@ export type AnnualRecapClip = {
    */
   url: string;
   /**
-   * @format int64
+   * @format uint32
    * @example [0, 957063, 957456, 899934, 944919, 773854]
    */
   viewCount: number;
@@ -3116,7 +3250,7 @@ export type AnnualRecapClip2024 = {
    */
   url: string;
   /**
-   * @format int64
+   * @format uint32
    * @example [0, 957063, 957456, 899934, 944919, 773854]
    */
   viewCount: number;
@@ -3188,7 +3322,7 @@ export type AnnualRecapClip2025 = {
    */
   url: string;
   /**
-   * @format int64
+   * @format uint32
    * @example [0, 957063, 957456, 899934, 944919, 773854]
    */
   viewCount: number;
@@ -3332,10 +3466,26 @@ export type AnnualRecapTopChannel = {
     | null
     | AnnualRecapTopChannel_AnnualRecapChannel2023Channel
     | AnnualRecapTopChannel_AnnualRecapChannel2023Channel[];
-  totalHoursWatched: UnknownValue;
-  totalChatsSent: UnknownValue;
-  totalChannelPointsEarned: UnknownValue;
-  totalChannelPointsSpent: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  totalHoursWatched: null | number;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  totalChatsSent: null | number;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  totalChannelPointsEarned: null | number;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  totalChannelPointsSpent: null | number;
   topFeaturedClip:
     | null
     | (AnnualRecapClip & {
@@ -3354,10 +3504,26 @@ export type AnnualRecapTopChannel2024 = {
     | null
     | AnnualRecapTopChannel2024_AnnualRecapChannel2024Channel
     | AnnualRecapTopChannel2024_AnnualRecapChannel2024Channel[];
-  totalHoursWatched: UnknownValue;
-  totalChatsSent: UnknownValue;
-  totalChannelPointsEarned: UnknownValue;
-  totalChannelPointsSpent: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  totalHoursWatched: null | number;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  totalChatsSent: null | number;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  totalChannelPointsEarned: null | number;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  totalChannelPointsSpent: null | number;
   topEmotes: null | AnnualRecapTopEmote2024;
   __typename: "AnnualRecapChannel2024";
 };
@@ -3393,10 +3559,26 @@ export type AnnualRecapTopChannel2025 = {
     | null
     | AnnualRecapTopChannel2025_AnnualRecapChannel2025Channel
     | AnnualRecapTopChannel2025_AnnualRecapChannel2025Channel[];
-  totalHoursWatched: UnknownValue;
-  totalChatsSent: UnknownValue;
-  totalChannelPointsEarned: UnknownValue;
-  totalChannelPointsSpent: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  totalHoursWatched: null | number;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  totalChatsSent: null | number;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  totalChannelPointsEarned: null | number;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  totalChannelPointsSpent: null | number;
   topEmotes: null | AnnualRecapTopEmote2025;
   __typename: "AnnualRecapChannel2025";
 };
@@ -3454,7 +3636,11 @@ export type AnnualRecapTopChannel_AnnualRecapChannel2023ChannelOwner = {
 };
 
 export type AnnualRecapTopCollaborator2024 = {
-  count: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  count: null | number;
   user:
     | null
     | AnnualRecapTopCollaborator2024_AnnualRecapTopCollaborator2024User
@@ -3479,7 +3665,11 @@ export type AnnualRecapTopCollaborator2024_AnnualRecapTopCollaborator2024User = 
 };
 
 export type AnnualRecapTopCollaborator2025 = {
-  count: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  count: null | number;
   user:
     | null
     | AnnualRecapTopCollaborator2025_AnnualRecapTopCollaborator2025User
@@ -3626,7 +3816,7 @@ export type AnnualRecapVideo2024 = {
   /** @example ["Twitch Recap: 2024 according to Twitch Chat!", "Creator Camp LIVE: Streaming Basics with @Snackless & @KawaiiGuy"] */
   title: null | string;
   /**
-   * @format int64
+   * @format uint32
    * @example [0, 772963, 171376, 163669, 1911, 684]
    */
   viewCount: number;
@@ -3671,7 +3861,7 @@ export type AnnualRecapVideo2025 = {
   /** @example ["Twitch Recap: 2024 according to Twitch Chat!", "Creator Camp LIVE: Streaming Basics with @Snackless & @KawaiiGuy"] */
   title: null | string;
   /**
-   * @format int64
+   * @format uint32
    * @example [0, 772963, 171376, 163669, 1911, 684]
    */
   viewCount: number;
@@ -4191,7 +4381,7 @@ export type AutoBannerEvents_ChannelShieldMode = {
 export type AutoBannerEvents_ChannelShieldModeAutoBanner = {
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   bannedUserCount: null | number;
   events:
@@ -4473,12 +4663,12 @@ export type AutomaticRewardFragment = {
    */
   backgroundColor: null | string;
   /**
-   * @format int64
+   * @format uint32
    * @example [10000, 1000, 5000]
    */
   bitsCost: null | number;
   /**
-   * @format int64
+   * @format uint32
    * @example [320, 480, 5000, 3000, 100]
    */
   cost: null | number;
@@ -4488,12 +4678,12 @@ export type AutomaticRewardFragment = {
    */
   defaultBackgroundColor: string;
   /**
-   * @format int64
+   * @format uint32
    * @example [0, 20, 30, 40, 60, 100, 120, 80]
    */
   defaultBitsCost: number;
   /**
-   * @format int64
+   * @format uint32
    * @example [0, 320, 480, 900, 350, 100, 1250, 700, 640, 450, 750]
    */
   defaultCost: number;
@@ -4505,7 +4695,7 @@ export type AutomaticRewardFragment = {
   isInStock: boolean;
   redemptionsRedeemedCurrentStream: null;
   /**
-   * @format int64
+   * @format uint32
    * @example [0, 80, 10]
    */
   minimumCost: number;
@@ -4526,7 +4716,7 @@ export type AutomaticRewardFragment = {
   maxPerStreamSetting: {
     isEnabled: boolean;
     /**
-     * @format int64
+     * @format uint32
      * @example [0]
      */
     maxPerStream: number;
@@ -4535,7 +4725,7 @@ export type AutomaticRewardFragment = {
   maxPerUserPerStreamSetting: {
     isEnabled: boolean;
     /**
-     * @format int64
+     * @format uint32
      * @example [0]
      */
     maxPerUserPerStream: number;
@@ -4544,7 +4734,7 @@ export type AutomaticRewardFragment = {
   globalCooldownSetting: {
     isEnabled: boolean;
     /**
-     * @format int64
+     * @format uint32
      * @example [0]
      */
     globalCooldownSeconds: number;
@@ -4655,7 +4845,11 @@ export type B2BCheckoutPrice_ProductPurchaseCheckoutPriceSummary = {
   isTaxInclusive: null | boolean;
   price: UnknownValue;
   tax: UnknownValue;
-  total: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  total: null | number;
   wasPriceAdjusted: UnknownValue;
   __typename: string;
 };
@@ -4672,7 +4866,8 @@ export type B2BCheckoutQuery_BusinessContactInfo = {
 
 /** ℹ️ Not real Twitch type name */
 export type B2BCheckoutQuery_BusinessContactInfoBilling = {
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   addressLine1: UnknownValue;
   addressLine2: UnknownValue;
   city: UnknownValue;
@@ -4700,7 +4895,8 @@ export type B2BCheckoutQuery_OfferSelf = {
 /** ℹ️ Not real Twitch type name */
 export type B2BCheckoutQuery_OfferSelfEligiblePaymentMethodsPayload = {
   methods: null | {
-    name: UnknownValue;
+    /** ⚠️ Low confidence about: nullable */
+    name: null | string;
     availabilityStatus: UnknownValue;
     paymentScheme: UnknownValue;
     authorizationAgreement:
@@ -4820,7 +5016,8 @@ export type BadgeCollectionEarnedRewards_EarnedDropRewardCampaign = {
 /** ℹ️ Not real Twitch type name */
 export type BadgeCollectionEarnedRewards_EarnedDropRewardItem = {
   id: ID;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   /**
    * ⚠️ Low confidence about: nullable
    * @format uri
@@ -4904,7 +5101,8 @@ export type BadgeRewardsCreateChannelQuestCampaignsAndRewardGroups_CreateChannel
 export type BadgeRewardsCreateChannelQuestCampaignsAndRewardGroups_CreateChannelQuestCampaignsAndRewardGroupsCampaignsCampaign =
   {
     id: ID;
-    name: UnknownValue;
+    /** ⚠️ Low confidence about: nullable */
+    name: null | string;
     status: UnknownValue;
     /**
      * ⚠️ Low confidence about: nullable
@@ -5007,7 +5205,8 @@ export type BadgeRewardsDeleteQuestCampaign_DeleteQuestCampaignError = {
 
 export type BadgeRewardsGetQuestCampaign_QuestCampaign = {
   id: ID;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   status: UnknownValue;
   /**
    * ⚠️ Low confidence about: nullable
@@ -5032,7 +5231,8 @@ export type BadgeRewardsGetQuestCampaign_QuestCampaign = {
       | BadgeRewardsGetQuestCampaign_QuestRewardGroupUnlockRequirements[];
     rewards: null | {
       id: ID;
-      name: UnknownValue;
+      /** ⚠️ Low confidence about: nullable */
+      name: null | string;
       /**
        * ⚠️ Low confidence about: nullable
        * @format uri
@@ -5062,7 +5262,8 @@ export type BadgeRewardsGetQuestCampaign_QuestCampaignRewardGroupsLeaderboardCon
 /** ℹ️ Not real Twitch type name */
 export type BadgeRewardsGetQuestCampaign_QuestCampaignRewardGroupsLeaderboardConfigReward = {
   id: ID;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   /**
    * ⚠️ Low confidence about: nullable
    * @format uri
@@ -5081,7 +5282,8 @@ export type BadgeRewardsGetQuestCampaign_QuestRewardGroupUnlockRequirements = {
 /** ℹ️ Not real Twitch type name */
 export type BadgeRewardsGetQuestCampaignsByChannel_QuestCampaignsByChannel = {
   id: ID;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   status: UnknownValue;
   /**
    * ⚠️ Low confidence about: nullable
@@ -5122,7 +5324,8 @@ export type BadgeRewardsGetQuestCampaignsByChannel_QuestCampaignsByChannelReward
 /** ℹ️ Not real Twitch type name */
 export type BadgeRewardsGetQuestCampaignsByChannel_QuestCampaignsByChannelRewardGroupsRewards = {
   id: ID;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   /**
    * ⚠️ Low confidence about: nullable
    * @format uri
@@ -5182,7 +5385,8 @@ export type BadgeRewardsUpdateChannelQuestCampaignsAndRewardGroups_UpdateChannel
 export type BadgeRewardsUpdateChannelQuestCampaignsAndRewardGroups_UpdateChannelQuestCampaignsAndRewardGroupsCampaignsCampaign =
   {
     id: ID;
-    name: UnknownValue;
+    /** ⚠️ Low confidence about: nullable */
+    name: null | string;
     status: UnknownValue;
     /**
      * ⚠️ Low confidence about: nullable
@@ -5236,7 +5440,8 @@ export type BadgeRewardsUpdateChannelQuestCampaignsAndRewardGroups_UpdateChannel
 export type BadgeRewardsUpdateChannelQuestCampaignsAndRewardGroups_UpdateChannelQuestCampaignsAndRewardGroupsCampaignsRewardGroupsLeaderboardConfigReward =
   {
     id: ID;
-    name: UnknownValue;
+    /** ⚠️ Low confidence about: nullable */
+    name: null | string;
     /**
      * ⚠️ Low confidence about: nullable
      * @format uri
@@ -5249,7 +5454,8 @@ export type BadgeRewardsUpdateChannelQuestCampaignsAndRewardGroups_UpdateChannel
 export type BadgeRewardsUpdateChannelQuestCampaignsAndRewardGroups_UpdateChannelQuestCampaignsAndRewardGroupsCampaignsRewardGroupsRewards =
   {
     id: ID;
-    name: UnknownValue;
+    /** ⚠️ Low confidence about: nullable */
+    name: null | string;
     /**
      * ⚠️ Low confidence about: nullable
      * @format uri
@@ -5299,7 +5505,8 @@ export type BadgesPageQuery_ChannelCreatorBadgeFlair = {
 
 /** ℹ️ Not real Twitch type name */
 export type BadgesPageQuery_UserEmoticonPrefix = {
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   state: UnknownValue;
   __typename: string;
 };
@@ -5309,7 +5516,11 @@ export type BadgesPageQuery_UserRelationship = {
   /** @aliasFor subscriptionTenure */
   cumulativeTenure: null | {
     daysRemaining: UnknownValue;
-    months: UnknownValue;
+    /**
+     * ⚠️ Low confidence about: nullable
+     * @format uint32
+     */
+    months: null | number;
     __typename: "SubscriptionTenure";
   };
   __typename: string;
@@ -5677,8 +5888,16 @@ export type BitsAdOffer = {
 
 export type BitsBadge = {
   id: ID;
-  totalBits: UnknownValue;
-  nextBits: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  totalBits: null | number;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  nextBits: null | number;
   progress: UnknownValue;
   current: null | Badge;
   next: null | Badge;
@@ -5691,7 +5910,7 @@ export type BitsBadgeTier = {
   threshold: UnknownValue;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   unlockedUsersCount: null | number;
   lastUpdated: UnknownValue;
@@ -5751,14 +5970,19 @@ export type BitsBadgeTierEmoteData_CheerInfoBadgeTierEmotesBitsBadgeTierSummary 
 export type BitsBadgeTierEmoteData_CheerInfoBadgeTierEmotesBitsBadgeTierSummarySelf = {
   /** ⚠️ Low confidence about: nullable */
   isUnlocked: null | boolean;
-  numberOfBitsUntilUnlock: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  numberOfBitsUntilUnlock: null | number;
   __typename: string;
 };
 
 /** ℹ️ Not real Twitch type name */
 export type BitsBadgeTier_BitsBadgeTierBadge = {
   id: ID;
-  title: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  title: null | string;
   /**
    * ⚠️ Low confidence about: nullable
    * @format uri
@@ -5856,11 +6080,19 @@ export type BitsCheermoteCampaign = {
     | null
     | BitsCheermoteCampaign_CheermoteCampaignThresholds
     | BitsCheermoteCampaign_CheermoteCampaignThresholds[];
-  minimumBitsAmount: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  minimumBitsAmount: null | number;
   bitsTotal: UnknownValue;
   bitsUsed: UnknownValue;
   bitsPercentageRemaining: UnknownValue;
-  userLimit: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  userLimit: null | number;
   self:
     | null
     | BitsCheermoteCampaign_CheermoteCampaignSelf
@@ -5879,7 +6111,11 @@ export type BitsCheermoteCampaign_CheermoteCampaignSelf = {
 /** ℹ️ Not real Twitch type name */
 export type BitsCheermoteCampaign_CheermoteCampaignThresholds = {
   id: ID;
-  minimumBits: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  minimumBits: null | number;
   /**
    * ⚠️ Low confidence about: nullable
    * @format float
@@ -5917,7 +6153,11 @@ export type BitsOneClickCheckout_ProductPurchaseCheckoutPriceSummary = {
   price: UnknownValue;
   pricingIdentifier: UnknownValue;
   tax: UnknownValue;
-  total: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  total: null | number;
   discount:
     | null
     | BitsOneClickCheckout_ProductPurchaseCheckoutPriceSummaryDiscount
@@ -5928,7 +6168,11 @@ export type BitsOneClickCheckout_ProductPurchaseCheckoutPriceSummary = {
 /** ℹ️ Not real Twitch type name */
 export type BitsOneClickCheckout_ProductPurchaseCheckoutPriceSummaryDiscount = {
   price: UnknownValue;
-  total: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  total: null | number;
   tax: UnknownValue;
   __typename: string;
 };
@@ -5966,7 +6210,8 @@ export type BitsSpendFeatureData_BitsSpendAutomaticPowerUpDataReward = {
 /** ℹ️ Not real Twitch type name */
 export type BitsSpendFeatureData_BitsSpendCustomPowerUpDataReward = {
   id: ID;
-  title: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  title: null | string;
   __typename: string;
 };
 
@@ -5986,8 +6231,16 @@ export type BitsThresholdSettingsFormGetBitsThresholdSettings_UserSettingsCheer 
 
 /** ℹ️ Not real Twitch type name */
 export type BitsThresholdSettingsFormGetBitsThresholdSettings_UserSettingsCheerChatMessage = {
-  minBitsPerEmote: UnknownValue;
-  minBitsToCheer: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  minBitsPerEmote: null | number;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  minBitsToCheer: null | number;
   __typename: string;
 };
 
@@ -5995,7 +6248,11 @@ export type BitsThresholdSettingsFormGetBitsThresholdSettings_UserSettingsCheerC
 export type BitsThresholdSettingsFormGetBitsThresholdSettings_UserSettingsCheerPinnedCheers = {
   /** ⚠️ Low confidence about: nullable */
   isEnabled: null | boolean;
-  minBits: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  minBits: null | number;
   __typename: string;
 };
 
@@ -6048,7 +6305,11 @@ export type BitsThresholdSettingsFormSetMinBitsPerEmote_UpdateCheerPartnerSettin
 /** ℹ️ Not real Twitch type name */
 export type BitsThresholdSettingsFormSetMinBitsPerEmote_UpdateCheerPartnerSettingsCheerChatMessage =
   {
-    minBitsPerEmote: UnknownValue;
+    /**
+     * ⚠️ Low confidence about: nullable
+     * @format uint32
+     */
+    minBitsPerEmote: null | number;
     __typename: string;
   };
 
@@ -6074,7 +6335,11 @@ export type BitsThresholdSettingsFormSetMinBitsToCheer_UpdateCheerPartnerSetting
 /** ℹ️ Not real Twitch type name */
 export type BitsThresholdSettingsFormSetMinBitsToCheer_UpdateCheerPartnerSettingsCheerChatMessage =
   {
-    minBitsToCheer: UnknownValue;
+    /**
+     * ⚠️ Low confidence about: nullable
+     * @format uint32
+     */
+    minBitsToCheer: null | number;
     __typename: string;
   };
 
@@ -6099,7 +6364,11 @@ export type BitsThresholdSettingsFormSetMinBitsToPin_UpdateCheerPartnerSettingsC
 
 /** ℹ️ Not real Twitch type name */
 export type BitsThresholdSettingsFormSetMinBitsToPin_UpdateCheerPartnerSettingsCheerPinnedCheers = {
-  minBits: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  minBits: null | number;
   __typename: string;
 };
 
@@ -6208,7 +6477,7 @@ export type BlockedTerm = {
   isModEditable: null | boolean;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   hitCount: null | number;
   contentType: UnknownValue;
@@ -6249,7 +6518,11 @@ export type BraintreeCheckoutConfigurationFragment_CheckoutConfigurationBraintre
 /** ℹ️ Not real Twitch type name */
 export type BrandLiftSurvey_BrandLiftSurvey = {
   id: ID;
-  totalQuestions: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  totalQuestions: null | number;
   questions:
     | null
     | BrandLiftSurvey_BrandLiftSurveyQuestions
@@ -6283,7 +6556,11 @@ export type BrandLiftSurvey_BrandLiftSurveyQuestionsChoices = {
 
 /** ℹ️ Not real Twitch type name */
 export type BroadcastFollowSubCounts_UserSubscriberScore = {
-  count: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  count: null | number;
   __typename: string;
 };
 
@@ -6351,7 +6628,7 @@ export type BrowsePageGame = {
    */
   avatarURL: string;
   /**
-   * @format int64
+   * @format uint32
    * @example [584353, 2909, 484662, 92801, 444549]
    */
   viewersCount: null | number;
@@ -6379,7 +6656,7 @@ export type BrowsePagePopularStreamsWithTagsNode = {
   /** @example ["🔴 G2 0:0 FUT | BO3 | IEM Cologne Major 2026 Stage 2 | @skywhywalker @m3wsu", "[ 20 тестов днк ] | !winline !tg"] */
   title: string;
   /**
-   * @format int64
+   * @format uint32
    * @example [0, 46802, 656, 1572, 1518, 1432]
    */
   viewersCount: number;
@@ -6397,12 +6674,12 @@ export type BrowsePagePopularStreamsWithTagsNode = {
    */
   verticalPreviewImageURL: string;
   /**
-   * @format int64
+   * @format uint32
    * @example [0, 1440, 1080, 720, 768, 936, 1200, 900, 1280, 864, 2160]
    */
   height: number;
   /**
-   * @format int64
+   * @format uint32
    * @example [0, 2560, 1920, 1280, 1360, 1664]
    */
   width: number;
@@ -6497,7 +6774,7 @@ export type BrowseVerticalGame = {
   /** @example ["IRL", "Just Chatting", "Special Events", "Cyberpunk 2077", "League of Legends", "You Know The Drill", "RuneScape: Dragonwilds"] */
   name: string;
   /**
-   * @format int64
+   * @format uint32
    * @example [584353, 2909, 484662, 92801, 444549]
    */
   viewersCount: null | number;
@@ -6612,7 +6889,7 @@ export type BrowseVerticalStream = {
   };
   freeformTags: FreeformTagFragment[];
   /**
-   * @format int64
+   * @format uint32
    * @example [0, 46802, 656, 1572, 1518, 1432]
    */
   viewersCount: number;
@@ -6630,12 +6907,12 @@ export type BrowseVerticalStream = {
    */
   verticalPreviewImageURL: string;
   /**
-   * @format int64
+   * @format uint32
    * @example [0, 1440, 1080, 720, 768, 936, 1200, 900, 1280, 864, 2160]
    */
   height: number;
   /**
-   * @format int64
+   * @format uint32
    * @example [0, 2560, 1920, 1280, 1360, 1664]
    */
   width: number;
@@ -6709,7 +6986,11 @@ export type BrowserBackgrounds_BrowserBackgrounds = {
     | null
     | BrowserBackgrounds_BrowserBackgroundsImages
     | BrowserBackgrounds_BrowserBackgroundsImages[];
-  totalSize: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  totalSize: null | number;
   __typename: string;
 };
 
@@ -6721,7 +7002,11 @@ export type BrowserBackgrounds_BrowserBackgroundsImages = {
    * @format uri
    */
   url: null | string;
-  size: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  size: null | number;
   /**
    * ⚠️ Low confidence about: nullable
    * @format date-time
@@ -6785,7 +7070,11 @@ export type BuildACommunityQuest = {
     | null
     | BuildACommunityQuest_BuildACommunityMaxUniqueChatters
     | BuildACommunityQuest_BuildACommunityMaxUniqueChatters[];
-  numberOfVIPs: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  numberOfVIPs: null | number;
   __typename: "BuildACommunity";
 };
 
@@ -7071,7 +7360,8 @@ export type BusinessDetails_BusinessContactInfo = {
 
 /** ℹ️ Not real Twitch type name */
 export type BusinessDetails_BusinessContactInfoBilling = {
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   addressLine1: UnknownValue;
   addressLine2: UnknownValue;
   city: UnknownValue;
@@ -7084,7 +7374,8 @@ export type BusinessDetails_BusinessContactInfoBilling = {
 
 /** ℹ️ Not real Twitch type name */
 export type BusinessDetails_BusinessContactInfoCompany = {
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   registrationNumber: UnknownValue;
   taxIdentificationNumber: UnknownValue;
   addressLine1: UnknownValue;
@@ -7105,7 +7396,8 @@ export type BusinessDetails_BusinessContactInfoCompany = {
 
 /** ℹ️ Not real Twitch type name */
 export type BusinessDetails_BusinessContactInfoUser = {
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   /** ⚠️ Low confidence about: nullable */
   email: null | string;
   phone: UnknownValue;
@@ -7172,7 +7464,8 @@ export type CampaignInProgress = {
    * @format uri
    */
   imageURL: null | string;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   status: UnknownValue;
   self: null | CampaignInProgress_DropCampaignSelf | CampaignInProgress_DropCampaignSelf[];
   game: null | CampaignInProgress_DropCampaignGame | CampaignInProgress_DropCampaignGame[];
@@ -7200,7 +7493,8 @@ export type CampaignInProgress_DropCampaignAllow = {
 /** ℹ️ Not real Twitch type name */
 export type CampaignInProgress_DropCampaignAllowChannels = {
   id: ID;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   /**
    * ⚠️ Low confidence about: nullable
    * @format uri
@@ -7212,7 +7506,8 @@ export type CampaignInProgress_DropCampaignAllowChannels = {
 /** ℹ️ Not real Twitch type name */
 export type CampaignInProgress_DropCampaignEventBasedDrops = {
   id: ID;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   /**
    * ⚠️ Low confidence about: nullable
    * @format date-time
@@ -7244,7 +7539,11 @@ export type CampaignInProgress_DropCampaignEventBasedDropsBenefitEdges = {
     | null
     | CampaignInProgress_DropCampaignEventBasedDropsBenefitEdgesBenefit
     | CampaignInProgress_DropCampaignEventBasedDropsBenefitEdgesBenefit[];
-  entitlementLimit: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  entitlementLimit: null | number;
   __typename: string;
 };
 
@@ -7256,7 +7555,8 @@ export type CampaignInProgress_DropCampaignEventBasedDropsBenefitEdgesBenefit = 
    * @format uri
    */
   imageAssetURL: null | string;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   distributionType: UnknownValue;
   __typename: string;
 };
@@ -7288,7 +7588,8 @@ export type CampaignInProgress_DropCampaignGame = {
   id: ID;
   /** ⚠️ Low confidence about: nullable */
   slug: null | string;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   /**
    * ⚠️ Low confidence about: nullable
    * @format uri
@@ -7309,7 +7610,8 @@ export type CampaignInProgress_DropCampaignSelf = {
 /** ℹ️ Not real Twitch type name */
 export type CampaignInProgress_DropCampaignTimeBasedDrops = {
   id: ID;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   /**
    * ⚠️ Low confidence about: nullable
    * @format date-time
@@ -7352,10 +7654,14 @@ export type CampaignInProgress_DropCampaignTimeBasedDropsBenefitEdges = {
     | null
     | CampaignInProgress_DropCampaignTimeBasedDropsBenefitEdgesBenefit
     | CampaignInProgress_DropCampaignTimeBasedDropsBenefitEdgesBenefit[];
-  entitlementLimit: UnknownValue;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
+   */
+  entitlementLimit: null | number;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
    */
   claimCount: null | number;
   __typename: string;
@@ -7369,7 +7675,8 @@ export type CampaignInProgress_DropCampaignTimeBasedDropsBenefitEdgesBenefit = {
    * @format uri
    */
   imageAssetURL: null | string;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   distributionType: UnknownValue;
   __typename: string;
 };
@@ -7434,7 +7741,11 @@ export type CampaignTopSupporters_ChannelCampaignLeaderboard = {
     | CampaignTopSupporters_ChannelCampaignLeaderboardItems
     | CampaignTopSupporters_ChannelCampaignLeaderboardItems[];
   myPosition: null | ChannelLeaderboardItem;
-  secondsRemaining: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  secondsRemaining: null | number;
   __typename: string;
 };
 
@@ -7455,7 +7766,11 @@ export type CanCreateClip_CanCreateClip = {
   isAllowed: null | boolean;
   /** ⚠️ Low confidence about: nullable */
   errorCode: null | string;
-  requiredFollowingLengthMinutes: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  requiredFollowingLengthMinutes: null | number;
   __typename: string;
 };
 
@@ -7694,7 +8009,11 @@ export type CancelReasonsQuery_CreatorDashboardChannelAnalytics = {
 /** ℹ️ Not real Twitch type name */
 export type CancelReasonsQuery_CreatorDashboardChannelAnalyticsDoNotRenewReasonAggregations = {
   reason: UnknownValue;
-  count: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  count: null | number;
   __typename: string;
 };
 
@@ -7772,7 +8091,7 @@ export type CarouselUser = {
      */
     id: ID;
     /**
-     * @format int64
+     * @format uint32
      * @example [0, 46802, 656, 1572, 1518, 1432]
      */
     viewersCount: number;
@@ -7912,7 +8231,11 @@ export type CategoryRankingFragment = {
   /** ⚠️ Low confidence about: nullable */
   categoryID: null | ID;
   score: UnknownValue;
-  rank: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  rank: null | number;
   category: null | CategoryFragment;
   metadata: null | MetadataFragment;
   __typename: "CategoryRanking";
@@ -8030,7 +8353,8 @@ export type CategoryWidePromotionWarning_CategoryWidePromotionInstancesEdgesNode
 
 /** ℹ️ Not real Twitch type name */
 export type CategoryWidePromotionWarning_CategoryWidePromotionInstancesEdgesNodeAdvertiser = {
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   __typename: string;
 };
 
@@ -8092,7 +8416,8 @@ export type CategoryWidePromotions_CategoryWidePromotionInstancesEdgesNode = {
 
 /** ℹ️ Not real Twitch type name */
 export type CategoryWidePromotions_CategoryWidePromotionInstancesEdgesNodeAdvertiser = {
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   imageAsset:
     | null
     | CategoryWidePromotions_CategoryWidePromotionInstancesEdgesNodeAdvertiserImageAsset
@@ -8590,7 +8915,8 @@ export type ChannelAnalyticsGameOverlapPanel_UserChannelAnalyticsContentOverlapG
     slug: null | string;
     /** ⚠️ Low confidence about: nullable */
     displayName: null | string;
-    name: UnknownValue;
+    /** ⚠️ Low confidence about: nullable */
+    name: null | string;
     __typename: string;
   };
 
@@ -8664,7 +8990,11 @@ export type ChannelAnalyticsMinutesWatchedTimeseriesStats_UserTimeseriesStatsMin
 
 /** ℹ️ Not real Twitch type name */
 export type ChannelAnalyticsNotificationsEngagements_UserGoLiveNotificationsTimeseries = {
-  total: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  total: null | number;
   __typename: string;
 };
 
@@ -8708,7 +9038,7 @@ export type ChannelAnalyticsNotifications_UserGoLiveNotificationConnectionEdgesN
   engagements: UnknownValue;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   followerCount: null | number;
   followersNotified: UnknownValue;
@@ -8787,7 +9117,8 @@ export type ChannelAnalyticsStreamsPanel_UserStreamSessionsByInterval = {
 /** ℹ️ Not real Twitch type name */
 export type ChannelAnalyticsStreamsPanel_UserStreamSessionsByIntervalArchiveVideo = {
   id: ID;
-  title: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  title: null | string;
   /**
    * ⚠️ Low confidence about: nullable
    * @format uri
@@ -9082,7 +9413,11 @@ export type ChannelEmoteUsage = {
     | null
     | ChannelEmoteUsage_EmoteUsageEmoteGroup
     | ChannelEmoteUsage_EmoteUsageEmoteGroup[];
-  totalUsage: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  totalUsage: null | number;
   uniqueUsers: UnknownValue;
   __typename: "EmoteUsage";
 };
@@ -9111,7 +9446,7 @@ export type ChannelFollowers = {
   id: ID;
   followers: {
     /**
-     * @format int64
+     * @format uint32
      * @example [0, 2430015, 2459534, 2471025, 2380069, 2380116]
      */
     totalCount: number;
@@ -9179,12 +9514,12 @@ export type ChannelGoalFragment = {
   /** @example ["ACTIVE"] */
   state: string;
   /**
-   * @format int64
+   * @format uint32
    * @example [0, 2430015, 2459534, 1131904, 143093]
    */
   currentContributions: number;
   /**
-   * @format int64
+   * @format uint32
    * @example [1, 2430000, 2460000, 1140000, 200000]
    */
   targetContributions: number;
@@ -9226,7 +9561,7 @@ export type ChannelHomeClip = {
    */
   clipTitle: string;
   /**
-   * @format int64
+   * @format uint32
    * @example [0, 957063, 957456, 899934, 944919, 773854]
    * @aliasFor viewCount
    */
@@ -9311,7 +9646,7 @@ export type ChannelHomeClip = {
    */
   createdAt: string;
   /**
-   * @format int64
+   * @format uint32
    * @example [44, 26, 25, 42, 30, 59, 36, 41, 60, 29]
    */
   durationSeconds: number;
@@ -9371,7 +9706,7 @@ export type ChannelLeaderboard = {
   };
   myPosition: null | ChannelLeaderboardItem;
   /**
-   * @format int64
+   * @format uint32
    * @example [44012, 43920, 134474, 134412, 1703778]
    */
   secondsRemaining: number;
@@ -9382,12 +9717,12 @@ export type ChannelLeaderboardItem = {
   /** @example ["bits-usage-by-channel-v1-71092938-WEEK-loggedout-909932621", "bits-usage-by-channel-v1-71092938-WEEK-loggedout-685014321"] */
   id: ID;
   /**
-   * @format int64
+   * @format int32
    * @example [50000, 3000, 2000, 1500, 1000]
    */
   score: number;
   /**
-   * @format int64
+   * @format uint32
    * @example [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
    */
   rank: number;
@@ -9420,12 +9755,12 @@ export type ChannelLeaderboardSubscriptionProduct = {
     /** @example ["USD", "BYN"] */
     currency: string;
     /**
-     * @format int64
+     * @format int32
      * @example [2]
      */
     exponent: number;
     /**
-     * @format int64
+     * @format int32
      * @example [599, 699, 1749, 349, 2094, 1047]
      */
     price: number;
@@ -9480,7 +9815,7 @@ export type ChannelName = {
 export type ChannelPageSetSessionStatus_SetSessionStatus = {
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   setAgainInSeconds: null | number;
   __typename: string;
@@ -9675,7 +10010,11 @@ export type ChannelPanels_UserSelf = {
 export type ChannelPanels_UserSelfBanStatus = {
   /** ⚠️ Low confidence about: nullable */
   isPermanent: null | boolean;
-  expiresInMs: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  expiresInMs: null | number;
   __typename: string;
 };
 
@@ -9690,7 +10029,11 @@ export type ChannelPermissionSet_ChannelHasPermissions = {
 /** ℹ️ Not real Twitch type name */
 export type ChannelPointsAutomaticRewards_CommunityPointsChannelSettingsSmartCostsAcknowledgements =
   {
-    lastAcknowledgedCost: UnknownValue;
+    /**
+     * ⚠️ Low confidence about: nullable
+     * @format uint32
+     */
+    lastAcknowledgedCost: null | number;
     rewardType: UnknownValue;
     __typename: string;
   };
@@ -9743,7 +10086,11 @@ export type ChannelPointsContext_UserSelf = {
 
 /** ℹ️ Not real Twitch type name */
 export type ChannelPointsCustomRewards_CommunityPointsChannelSettingsSummarizedRewards = {
-  count: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  count: null | number;
   /** ⚠️ Low confidence about: nullable */
   isCountAtMaximum: null | boolean;
   node: null | CustomRewardItem;
@@ -9868,7 +10215,7 @@ export type ChannelPropertiesSettingsPage_ChannelVideoStreamSettings = {
   isBackupEnabled: null | boolean;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   disconnectSlateDurationSeconds: null | number;
   backupStreamKeys:
@@ -10045,7 +10392,8 @@ export type ChannelSkins_ChannelSponsorshipsChannelSkinCampaignInstance = {
 
 /** ℹ️ Not real Twitch type name */
 export type ChannelSkins_ChannelSponsorshipsChannelSkinCampaignInstanceAdvertiser = {
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   imageAsset:
     | null
     | ChannelSkins_ChannelSponsorshipsChannelSkinCampaignInstanceAdvertiserImageAsset
@@ -10193,7 +10541,8 @@ export type ChannelSkins_ChannelSponsorshipsGiftSubMatchCampaignInstance = {
 
 /** ℹ️ Not real Twitch type name */
 export type ChannelSkins_ChannelSponsorshipsGiftSubMatchCampaignInstanceAdvertiser = {
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   imageAsset:
     | null
     | ChannelSkins_ChannelSponsorshipsGiftSubMatchCampaignInstanceAdvertiserImageAsset
@@ -10315,7 +10664,8 @@ export type ChannelSkins_ChannelSponsorshipsSubsidizedSubscriptionsCampaignInsta
 
 /** ℹ️ Not real Twitch type name */
 export type ChannelSkins_ChannelSponsorshipsSubsidizedSubscriptionsCampaignInstanceAdvertiser = {
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   imageAsset:
     | null
     | ChannelSkins_ChannelSponsorshipsSubsidizedSubscriptionsCampaignInstanceAdvertiserImageAsset
@@ -10446,7 +10796,7 @@ export type ChannelStatus = {
     /** @example ["live"] */
     type: string;
     /**
-     * @format int64
+     * @format uint32
      * @example [0, 46802, 656, 1572, 1518, 1432]
      */
     viewersCount: number;
@@ -10518,7 +10868,8 @@ export type ChannelSubGiftSuccessScreen_SubscriptionProductOwnerSelf = {
 /** ℹ️ Not real Twitch type name */
 export type ChannelSubGiftSuccessScreen_SubscriptionProductOwnerSelfAvailableBadges = {
   id: ID;
-  title: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  title: null | string;
   /**
    * ⚠️ Low confidence about: nullable
    * @format uri
@@ -10533,7 +10884,8 @@ export type ChannelSubGiftSuccessScreen_SubscriptionProductOwnerSelfAvailableBad
 /** ℹ️ Not real Twitch type name */
 export type ChannelSubGiftSuccessScreen_SubscriptionProductOwnerSelfDisplayBadges = {
   id: ID;
-  title: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  title: null | string;
   /**
    * ⚠️ Low confidence about: nullable
    * @format uri
@@ -10577,7 +10929,8 @@ export type ChannelSubSuccessScreen_SubscriptionProductOwnerSelf = {
 /** ℹ️ Not real Twitch type name */
 export type ChannelSubSuccessScreen_SubscriptionProductOwnerSelfAvailableBadges = {
   id: ID;
-  title: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  title: null | string;
   /**
    * ⚠️ Low confidence about: nullable
    * @format uri
@@ -10592,7 +10945,8 @@ export type ChannelSubSuccessScreen_SubscriptionProductOwnerSelfAvailableBadges 
 /** ℹ️ Not real Twitch type name */
 export type ChannelSubSuccessScreen_SubscriptionProductOwnerSelfDisplayBadges = {
   id: ID;
-  title: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  title: null | string;
   /**
    * ⚠️ Low confidence about: nullable
    * @format uri
@@ -10622,7 +10976,8 @@ export type ChannelSubSuccessScreen_SubscriptionProductOwnerSubscriptionProducts
 /** ℹ️ Not real Twitch type name */
 export type ChannelSubSuccessScreen_SubscriptionProductOwnerSubscriptionProductsEmoteModifiers = {
   code: UnknownValue;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   __typename: string;
 };
 
@@ -10753,7 +11108,8 @@ export type ChannelTrailerSetupUpdateVideo_UpdateVideo = {
 /** ℹ️ Not real Twitch type name */
 export type ChannelTrailerSetupUpdateVideo_UpdateVideoVideo = {
   id: ID;
-  title: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  title: null | string;
   language: UnknownValue;
   /**
    * ⚠️ Low confidence about: nullable
@@ -10851,7 +11207,8 @@ export type ChannelsWithRole_CurrentUserChannelsWithRoleEdgesChannel = {
 
 export type Charity = {
   id: ID;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   /** ⚠️ Low confidence about: nullable */
   description: null | string;
   /**
@@ -10867,7 +11224,8 @@ export type CharityCampaign = {
   id: ID;
   charities: null | {
     id: ID;
-    name: UnknownValue;
+    /** ⚠️ Low confidence about: nullable */
+    name: null | string;
     /** ⚠️ Low confidence about: nullable */
     description: null | string;
     offers: null | CharityOffer;
@@ -10894,7 +11252,8 @@ export type CharityCampaignItem = {
   goal: null | CharityCampaignItem_CharityCampaignGoal | CharityCampaignItem_CharityCampaignGoal[];
   charities: null | {
     id: ID;
-    name: UnknownValue;
+    /** ⚠️ Low confidence about: nullable */
+    name: null | string;
     /** ⚠️ Low confidence about: nullable */
     description: null | string;
     /**
@@ -10918,8 +11277,16 @@ export type CharityCampaignItem = {
 /** ℹ️ Not real Twitch type name */
 export type CharityCampaignItem_CharityCampaignGoal = {
   id: ID;
-  currentContributions: UnknownValue;
-  targetContributions: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  currentContributions: null | number;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  targetContributions: null | number;
   __typename: string;
 };
 
@@ -10972,15 +11339,24 @@ export type CharityCampaignParticipationEvents_CharityDonationEventDonator = {
 export type CharityCampaign_CharityCampaignGoal = {
   id: ID;
   contributionType: UnknownValue;
-  targetContributions: UnknownValue;
-  currentContributions: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  targetContributions: null | number;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  currentContributions: null | number;
   state: UnknownValue;
   __typename: string;
 };
 
 export type CharityCard = {
   id: ID;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   /** ⚠️ Low confidence about: nullable */
   description: null | string;
   /**
@@ -11022,7 +11398,7 @@ export type CharityDiscoveryPageSearchCharities_SearchCharities = {
   };
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   totalCount: null | number;
   __typename: string;
@@ -11056,7 +11432,7 @@ export type CharityOffer = {
           /** @example ["USD", "BYN"] */
           currency: string;
           /**
-           * @format int64
+           * @format int32
            * @example [2]
            */
           exponent: number;
@@ -11085,8 +11461,16 @@ export type CharityOffer = {
 
 /** ℹ️ Not real Twitch type name */
 export type CharityOffer_RangedPricingPresetAmounts = {
-  amountList: UnknownValue;
-  defaultAmount: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  amountList: null | number;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  defaultAmount: null | number;
   __typename: string;
 };
 
@@ -11094,7 +11478,11 @@ export type CharityOffer_RangedPricingPresetAmounts = {
 export type CharityPanelQuery_CharityCampaignGoal = {
   id: ID;
   contributionType: UnknownValue;
-  targetContributions: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  targetContributions: null | number;
   state: UnknownValue;
   __typename: string;
 };
@@ -11189,7 +11577,8 @@ export type ChatAdAlertSetChannelAdSchedule_SetChannelAdSchedule = {
 
 /** ℹ️ Not real Twitch type name */
 export type ChatBadgeListGetBadgeTiers_UserEmoticonPrefix = {
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   state: UnknownValue;
   __typename: string;
 };
@@ -11237,7 +11626,7 @@ export type ChatBadgeListItemUpdateBitsBadgeTiers_UpdateBitsBadgeTiersTiers = {
   isEnabled: null | boolean;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   unlockedUsersCount: null | number;
   lastUpdated: UnknownValue;
@@ -11265,7 +11654,8 @@ export type ChatBadgeListItemUpdateBitsBadgeTiers_UpdateBitsBadgeTiersTiers = {
 /** ℹ️ Not real Twitch type name */
 export type ChatBadgeListItemUpdateBitsBadgeTiers_UpdateBitsBadgeTiersTiersBadge = {
   id: ID;
-  title: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  title: null | string;
   /**
    * ⚠️ Low confidence about: nullable
    * @format uri
@@ -11383,7 +11773,7 @@ export type ChatBadgeTiersFormUpdateBadgeTiers_UpdateBitsBadgeTiersTiers = {
   isEnabled: null | boolean;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   unlockedUsersCount: null | number;
   lastUpdated: UnknownValue;
@@ -11407,7 +11797,8 @@ export type ChatBadgeTiersFormUpdateBadgeTiers_UpdateBitsBadgeTiersTiers = {
 /** ℹ️ Not real Twitch type name */
 export type ChatBadgeTiersFormUpdateBadgeTiers_UpdateBitsBadgeTiersTiersBadge = {
   id: ID;
-  title: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  title: null | string;
   /**
    * ⚠️ Low confidence about: nullable
    * @format uri
@@ -11506,12 +11897,12 @@ export type ChatBanUserFromChatRoom_BanUserFromChatRoomError = {
   code: UnknownValue;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   minTimeoutDurationSeconds: null | number;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   maxTimeoutDurationSeconds: null | number;
   __typename: string;
@@ -11661,7 +12052,11 @@ export type ChatHighlightDisplay = {
   chatHighlightDisplayMode: UnknownValue;
   /** ⚠️ Low confidence about: nullable */
   isEnabled: null | boolean;
-  durationMinutes: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  durationMinutes: null | number;
   __typename: "ChatHighlightDisplay";
 };
 
@@ -11884,7 +12279,11 @@ export type ChatInputSendCheer_SendCheerValidationErrorMessageContentFragments =
         __typename: "AutoMod";
       }
     | {
-        bitsAmount: UnknownValue;
+        /**
+         * ⚠️ Low confidence about: nullable
+         * @format uint32
+         */
+        bitsAmount: null | number;
         prefix: UnknownValue;
         tier: UnknownValue;
         __typename: "CheermoteToken";
@@ -11941,7 +12340,11 @@ export type ChatLoginModerationTracking_UserSelf = {
 /** ℹ️ Not real Twitch type name */
 export type ChatMessagesTimeseriesStatsStreamSummary_UserCreatorMetricsByInterval = {
   items: null | {
-    totalChatMessagesString: UnknownValue;
+    /**
+     * ⚠️ Low confidence about: nullable
+     * @format uint32
+     */
+    totalChatMessagesString: null | number;
     __typename: "CreatorMetricsByIntervalItem";
   };
   __typename: string;
@@ -11991,7 +12394,11 @@ export type ChatModeratorStrikeDetails_ChatModeratorStrikeStatusBanDetails = {
 /** ℹ️ Not real Twitch type name */
 export type ChatModeratorStrikeDetails_ChatModeratorStrikeStatusTimeoutDetails = {
   id: ID;
-  expiresInMs: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  expiresInMs: null | number;
   reason: UnknownValue;
   __typename: string;
 };
@@ -12080,7 +12487,11 @@ export type ChatModeratorStrikeStatusPubsub_ChatModeratorStrikeStatusTimeoutDeta
    * @format date-time
    */
   expiresAt: null | string;
-  expiresInMs: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  expiresInMs: null | number;
   reason: UnknownValue;
   __typename: string;
 };
@@ -12202,7 +12613,11 @@ export type ChatModeratorStrikeStatus_ChatModeratorStrikeStatusTimeoutDetails = 
    * @format date-time
    */
   expiresAt: null | string;
-  expiresInMs: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  expiresInMs: null | number;
   reason: UnknownValue;
   __typename: string;
 };
@@ -12253,12 +12668,12 @@ export type ChatOrbisPresetText_PlayStationTitle = {
 
 export type ChatPartialVerification = {
   /**
-   * @format int64
+   * @format uint32
    * @example [10080, 1440, 267840]
    */
   minimumAccountAgeInMinutes: number;
   /**
-   * @format int64
+   * @format uint32
    * @example [1440, 30, 4320, 10, 133920]
    */
   minimumFollowerAgeInMinutes: number;
@@ -12273,7 +12688,7 @@ export type ChatReplies_MessageReplies = {
   nodes: null | ReplyMessage;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   totalCount: null | number;
   __typename: string;
@@ -12369,12 +12784,12 @@ export type ChatSettings = {
   autoModLevel: UnknownValue;
   blockLinks: UnknownValue;
   /**
-   * @format int64
+   * @format uint32
    * @example [0, 6000, 1000]
    */
   chatDelayMs: number;
   /**
-   * @format int64
+   * @format uint32
    * @example [0, 10, 1440]
    */
   followersOnlyDurationMinutes: null | number;
@@ -12383,7 +12798,7 @@ export type ChatSettings = {
   requireVerifiedAccount: boolean;
   isEmoteOnlyModeEnabled: boolean;
   /**
-   * @format int64
+   * @format uint32
    * @example [5]
    */
   slowModeDurationSeconds: null | number;
@@ -12410,7 +12825,11 @@ export type ChatSettingsBadges_UserSelf = {
   selectedChannelAuthorityBadge: null | Badge;
   subscriptionBenefit: null | SubBenefit;
   subscriptionTenure: null | {
-    months: UnknownValue;
+    /**
+     * ⚠️ Low confidence about: nullable
+     * @format uint32
+     */
+    months: null | number;
     __typename: "SubscriptionTenure";
   };
   __typename: string;
@@ -12624,7 +13043,11 @@ export type ChatShareResubCalloutData_UserSelf = {
 
 /** ℹ️ Not real Twitch type name */
 export type ChatShareResubChannelData_SubscriptionBenefitInterval = {
-  duration: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  duration: null | number;
   __typename: string;
 };
 
@@ -12651,7 +13074,11 @@ export type ChatShareResubChannelData_UserSelf = {
 export type ChatShareResubChannelData_UserSelfResubNotification = {
   id: ID;
   cumulativeTenureMonths: UnknownValue;
-  months: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  months: null | number;
   streakTenureMonths: UnknownValue;
   token: UnknownValue;
   /** ⚠️ Low confidence about: nullable */
@@ -12799,7 +13226,11 @@ export type ChatViewers_ChannelChatters = {
   chatbots: null | ChatViewers_ChannelChattersChatbots | ChatViewers_ChannelChattersChatbots[];
   vips: null | ChatViewers_ChannelChattersVips | ChatViewers_ChannelChattersVips[];
   viewers: null | ChatViewers_ChannelChattersViewers | ChatViewers_ChannelChattersViewers[];
-  count: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  count: null | number;
   __typename: string;
 };
 
@@ -13064,7 +13495,11 @@ export type CheckoutFormScreenManager_ProductPurchaseCheckoutPriceSummary = {
   isTaxInclusive: null | boolean;
   price: UnknownValue;
   tax: UnknownValue;
-  total: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  total: null | number;
   wasPriceAdjusted: UnknownValue;
   /** @directive include(if: $withDiscounts) */
   discount?:
@@ -13077,7 +13512,11 @@ export type CheckoutFormScreenManager_ProductPurchaseCheckoutPriceSummary = {
 /** ℹ️ Not real Twitch type name */
 export type CheckoutFormScreenManager_ProductPurchaseCheckoutPriceSummaryDiscount = {
   price: UnknownValue;
-  total: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  total: null | number;
   tax: UnknownValue;
   __typename: string;
 };
@@ -13118,7 +13557,11 @@ export type CheckoutFounderTenure_UserSelf = {
   /** ⚠️ Low confidence about: nullable */
   isFounder: null | boolean;
   subscriptionTenure: null | {
-    months: UnknownValue;
+    /**
+     * ⚠️ Low confidence about: nullable
+     * @format uint32
+     */
+    months: null | number;
     __typename: "SubscriptionTenure";
   };
   __typename: string;
@@ -13143,7 +13586,7 @@ export type CheckoutOfferFragment = OfferEligibilityFragment & {
           /** @example ["USD", "BYN"] */
           currency: string;
           /**
-           * @format int64
+           * @format int32
            * @example [2]
            */
           exponent: number;
@@ -13154,7 +13597,11 @@ export type CheckoutOfferFragment = OfferEligibilityFragment & {
             | {
                 price: UnknownValue;
                 tax: UnknownValue;
-                total: UnknownValue;
+                /**
+                 * ⚠️ Low confidence about: nullable
+                 * @format uint32
+                 */
+                total: null | number;
                 discount:
                   | null
                   | CheckoutOfferFragment_FixedPricingDiscount
@@ -13172,7 +13619,8 @@ export type CheckoutOfferFragment = OfferEligibilityFragment & {
   };
   promotion: null | {
     id: ID;
-    name: UnknownValue;
+    /** ⚠️ Low confidence about: nullable */
+    name: null | string;
     promotionalSKU: UnknownValue;
     googlePromotionReference: UnknownValue;
     promoDisplay:
@@ -13201,12 +13649,12 @@ export type CheckoutOfferFragment = OfferEligibilityFragment & {
   giftType: string;
   quantity: {
     /**
-     * @format int64
+     * @format int32
      * @example [1]
      */
     min: number;
     /**
-     * @format int64
+     * @format int32
      * @example [1]
      */
     max: number;
@@ -13235,7 +13683,11 @@ export type CheckoutOfferFragment_ChargeModelExternalSelf = {
 export type CheckoutOfferFragment_FixedPricingDiscount = {
   price: UnknownValue;
   tax: UnknownValue;
-  total: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  total: null | number;
   __typename: string;
 };
 
@@ -13387,7 +13839,11 @@ export type CheckoutPrice_ProductPurchaseCheckoutPriceSummary = {
   isTaxInclusive: null | boolean;
   price: UnknownValue;
   tax: UnknownValue;
-  total: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  total: null | number;
   wasPriceAdjusted: UnknownValue;
   /** @directive include(if: $withDiscounts) */
   discount?:
@@ -13400,7 +13856,11 @@ export type CheckoutPrice_ProductPurchaseCheckoutPriceSummary = {
 /** ℹ️ Not real Twitch type name */
 export type CheckoutPrice_ProductPurchaseCheckoutPriceSummaryDiscount = {
   price: UnknownValue;
-  total: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  total: null | number;
   tax: UnknownValue;
   __typename: string;
 };
@@ -13437,7 +13897,7 @@ export type CheerDisplayConfig = {
   backgrounds: string[];
   colors: {
     /**
-     * @format int64
+     * @format int32
      * @example [1, 100, 1000, 5000, 10000]
      */
     bits: number;
@@ -13490,7 +13950,11 @@ export type CheerSettingsFormOnboardUser_UpdateCheerPartnerSettingsCheer = {
 };
 
 export type CheermoteFragment = {
-  bitsAmount: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  bitsAmount: null | number;
   prefix: UnknownValue;
   tier: UnknownValue;
   __typename: "CheermoteToken";
@@ -13549,8 +14013,16 @@ export type ClaimCommunityPoints_ClaimCommunityPointsClaim = {
     | null
     | ClaimCommunityPoints_ClaimCommunityPointsClaimMultipliers
     | ClaimCommunityPoints_ClaimCommunityPointsClaimMultipliers[];
-  pointsEarnedBaseline: UnknownValue;
-  pointsEarnedTotal: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  pointsEarnedBaseline: null | number;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  pointsEarnedTotal: null | number;
   __typename: string;
 };
 
@@ -13653,7 +14125,7 @@ export type Clip = {
   /** @example ["xqc makes the wrong choice", "wow"] */
   title: string;
   /**
-   * @format int64
+   * @format uint32
    * @example [0, 957063, 957456, 899934, 944919, 773854]
    */
   viewCount: number;
@@ -13736,7 +14208,7 @@ export type Clip = {
    */
   createdAt: string;
   /**
-   * @format int64
+   * @format uint32
    * @example [44, 26, 25, 42, 30, 59, 36, 41, 60, 29]
    */
   durationSeconds: number;
@@ -13792,7 +14264,7 @@ export type ClipAssetFragment = {
   thumbnailURL: string;
   videoQualities: {
     /**
-     * @format int64
+     * @format uint32
      * @example [0, 8042862, 2732768, 945904, 781712, 7159557]
      */
     bitrate: number;
@@ -13800,12 +14272,12 @@ export type ClipAssetFragment = {
     codecs: string;
     duration: null;
     /**
-     * @format int64
+     * @format int32
      * @example [0, -1, 1080, 720, 480, 360, 1600]
      */
     height: number;
     /**
-     * @format int64
+     * @format int32
      * @example [0, -1, 1920, 1280, 853, 640, 900, 720, 480, 360, 854, 1170]
      */
     width: number;
@@ -13834,7 +14306,11 @@ export type ClipAssetFragment = {
 };
 
 export type ClipCategoryAggregationBucketFragment = {
-  totalClips: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  totalClips: null | number;
   category:
     | null
     | ClipCategoryAggregationBucketFragment_ClipCategoryAggregationBucketCategory
@@ -13845,7 +14321,8 @@ export type ClipCategoryAggregationBucketFragment = {
 /** ℹ️ Not real Twitch type name */
 export type ClipCategoryAggregationBucketFragment_ClipCategoryAggregationBucketCategory = {
   id: ID;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   /**
    * ⚠️ Low confidence about: nullable
    * @format uri
@@ -13893,7 +14370,7 @@ export type ClipCommentFragment = {
    */
   createdAt: string;
   /**
-   * @format int64
+   * @format uint32
    * @example [0, 13, 6, 5, 4, 2, 1]
    */
   likeCount: number;
@@ -13902,7 +14379,7 @@ export type ClipCommentFragment = {
   isHeartedByCreator: boolean;
   isCollapsedByCommunity: boolean;
   /**
-   * @format int64
+   * @format uint32
    * @example [0]
    */
   replyCount: number;
@@ -13912,12 +14389,12 @@ export type ClipCommentFragment = {
     /** @example ["emotesv2_dcd06b30a5c24f6eb871e8f5edbd44f7", "emotesv2_df1b3a19d9fc4bff81429afdfb46fff0"] */
     emoteID: ID;
     /**
-     * @format int64
+     * @format int32
      * @example [0, 10, 20, 30, 12, 24, 11, 22, 15, 40, 3]
      */
     from: number;
     /**
-     * @format int64
+     * @format int32
      * @example [8]
      */
     to: number;
@@ -13988,7 +14465,7 @@ export type ClipCommentReplies_ClipCommentReplies = {
 export type ClipCommentsExposure = {
   isCommentsEnabled: boolean;
   /**
-   * @format int64
+   * @format uint32
    * @example [0, 21, 14, 4, 2, 3, 1, 29, 6, 15, 19]
    */
   topLevelCommentCount: number;
@@ -14093,7 +14570,7 @@ export type ClipLeaderboard = {
   };
   myPosition: null | ClipLeaderboardItem;
   /**
-   * @format int64
+   * @format uint32
    * @example [44012, 2031180, 2031164, 2031149, 43920]
    */
   secondsRemaining: number;
@@ -14144,12 +14621,12 @@ export type ClipLeaderboardItem = {
   /** @example ["FilthyRudeRingDendiFace-PkesanSiI6gwQJIL", "EsteemedInnocentSpindleArsonNoSexy-wSU_-an8q888YxLk"] */
   id: ID;
   /**
-   * @format int64
+   * @format uint32
    * @example [1, 2, 3, 4, 5]
    */
   rank: number;
   /**
-   * @format int64
+   * @format int32
    * @example [24174, 4771, 2921, 1850, 981]
    */
   score: number;
@@ -14221,14 +14698,14 @@ export type ClipModalFragment = {
    */
   createdAt: string;
   /**
-   * @format int64
+   * @format uint32
    * @example [0, 957063, 957456, 899934, 944919, 773854]
    */
   viewCount: number;
   /** @example ["xqc makes the wrong choice", "wow"] */
   title: string;
   /**
-   * @format int64
+   * @format uint32
    * @example [44, 26, 25, 42, 30, 59, 36, 41, 60, 29]
    */
   durationSeconds: number;
@@ -14312,7 +14789,8 @@ export type ClipRecaps_Recaps = {
   edges: {
     node: null | {
       id: ID;
-      title: UnknownValue;
+      /** ⚠️ Low confidence about: nullable */
+      title: null | string;
       /**
        * ⚠️ Low confidence about: nullable
        * @format date-time
@@ -14330,7 +14808,7 @@ export type ClipRecaps_Recaps = {
       postedAt: null | string;
       /**
        * ⚠️ Low confidence about: nullable
-       * @format int64
+       * @format uint32
        */
       viewCount: null | number;
       clips: null | ClipRecaps_RecapClips | ClipRecaps_RecapClips[];
@@ -14347,15 +14825,24 @@ export type ClipRecaps_Recaps = {
 };
 
 export type ClipReferrals = {
-  total: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  total: null | number;
   referrers: null | ClipReferrals_ClipReferralsReferrers | ClipReferrals_ClipReferralsReferrers[];
   __typename: "ClipReferrals";
 };
 
 /** ℹ️ Not real Twitch type name */
 export type ClipReferrals_ClipReferralsReferrers = {
-  name: UnknownValue;
-  total: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  total: null | number;
   referrals:
     | null
     | ClipReferrals_ClipReferralsReferrersReferrals
@@ -14365,13 +14852,21 @@ export type ClipReferrals_ClipReferralsReferrers = {
 
 /** ℹ️ Not real Twitch type name */
 export type ClipReferrals_ClipReferralsReferrersReferrals = {
-  total: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  total: null | number;
   timestamp: UnknownValue;
   __typename: string;
 };
 
 export type ClipUserAggregationBucketFragment = {
-  totalClips: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  totalClips: null | number;
   user:
     | null
     | ClipUserAggregationBucketFragment_ClipUserAggregationBucketUser
@@ -14571,7 +15066,7 @@ export type ClipsTitleEditCommunityMoment_ClipCommunityMoment = {
   id: ID;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   claimCount: null | number;
   /**
@@ -14595,7 +15090,8 @@ export type ClipsTitleEditUpdateClip_UpdateClip = {
 /** ℹ️ Not real Twitch type name */
 export type ClipsTitleEditUpdateClip_UpdateClipClip = {
   id: ID;
-  title: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  title: null | string;
   __typename: string;
 };
 
@@ -14619,7 +15115,11 @@ export type CloseRTJQueue_CloseRTJQueueError = {
 
 /** ℹ️ Not real Twitch type name */
 export type CoPoRewardQueue_CommunityPointsChannelSettingsSummarizedRewards = {
-  count: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  count: null | number;
   /** ⚠️ Low confidence about: nullable */
   isCountAtMaximum: null | boolean;
   node: null | CustomRewardFragment;
@@ -14876,7 +15376,7 @@ export type CollaboratorListQuery_ChannelCollaboration = {
 
 export type CollectionConnectionFields = {
   /**
-   * @format int64
+   * @format uint32
    * @example [4, 3, 33, 48, 51, 23, 49, 24, 2, 1]
    */
   totalCount: number;
@@ -14906,7 +15406,7 @@ export type CollectionCreatorAddCollectionItem_AddCollectionItem = {
      */
     thumbnailURL: null | string;
     /**
-     * @format int64
+     * @format uint32
      * @example [87731, 47380, 166134, 249444, 291563]
      */
     lengthSeconds: number;
@@ -14937,7 +15437,7 @@ export type CollectionEditorFields = {
   /** @example ["KVe_rYFMGxiPsA", "JJ-N82-m4BfH4A"] */
   id: ID;
   /**
-   * @format int64
+   * @format uint32
    * @example [87731, 47380, 166134, 249444, 291563]
    */
   lengthSeconds: number;
@@ -15021,7 +15521,7 @@ export type CollectionEditorVideo = {
   /** ⚠️ Low confidence about: nullable */
   isDeleted: null | boolean;
   /**
-   * @format int64
+   * @format uint32
    * @example [15389, 4621, 621, 4472, 58]
    */
   lengthSeconds: number;
@@ -15040,7 +15540,7 @@ export type CollectionEditorVideo = {
   /** @example ["Twitch Recap: 2024 according to Twitch Chat!", "Creator Camp LIVE: Streaming Basics with @Snackless & @KawaiiGuy"] */
   title: null | string;
   /**
-   * @format int64
+   * @format uint32
    * @example [0, 772963, 171376, 163669, 1911, 684]
    */
   viewCount: number;
@@ -15079,7 +15579,7 @@ export type CollectionFields = {
    */
   updatedAt: string;
   /**
-   * @format int64
+   * @format uint32
    * @example [87731, 47380, 166134, 249444, 291563]
    */
   lengthSeconds: number;
@@ -15098,7 +15598,7 @@ export type CollectionManagerCollection = {
   id: ID;
   items: null | {
     /**
-     * @format int64
+     * @format uint32
      * @example [4, 3, 33, 48, 51, 23, 49, 24, 2, 1]
      */
     totalCount: number;
@@ -15115,7 +15615,7 @@ export type CollectionManagerCollection = {
     __typename: "User";
   };
   /**
-   * @format int64
+   * @format uint32
    * @example [87731, 47380, 166134, 249444, 291563]
    */
   lengthSeconds: number;
@@ -15194,7 +15694,7 @@ export type CollectionsListCollection = {
   id: ID;
   items: null | {
     /**
-     * @format int64
+     * @format uint32
      * @example [4, 3, 33, 48, 51, 23, 49, 24, 2, 1]
      */
     totalCount: number;
@@ -15205,7 +15705,7 @@ export type CollectionsListCollection = {
     __typename: "CollectionConnection";
   };
   /**
-   * @format int64
+   * @format uint32
    * @example [87731, 47380, 166134, 249444, 291563]
    */
   lengthSeconds: number;
@@ -15326,7 +15826,7 @@ export type CommonHooksSearchCategories_SearchCategories = {
       boxArtURL: string;
       tags: TagFragment[];
       /**
-       * @format int64
+       * @format uint32
        * @example [584353, 2909, 484662, 92801, 444549]
        */
       viewersCount: null | number;
@@ -15336,7 +15836,7 @@ export type CommonHooksSearchCategories_SearchCategories = {
   }[];
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   totalCount: null | number;
   pageInfo: null | {
@@ -15352,7 +15852,7 @@ export type CommonHooksSearchStreams_SearchStreamEdgeNode = {
   id: ID;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   viewersCount: null | number;
   /**
@@ -15400,7 +15900,8 @@ export type CommonHooksSearchStreams_SearchStreamEdgeNodeBroadcaster = {
 
 /** ℹ️ Not real Twitch type name */
 export type CommonHooksSearchStreams_SearchStreamEdgeNodeGame = {
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   id: ID;
   __typename: string;
 };
@@ -15418,7 +15919,7 @@ export type CommonHooksSearchStreams_SearchStreams = {
   }[];
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   totalCount: null | number;
   pageInfo: null | {
@@ -15454,7 +15955,7 @@ export type CommonHooksSearchUsers_SearchUsers = {
       displayName: string;
       followers: {
         /**
-         * @format int64
+         * @format uint32
          * @example [0, 2430015, 2459534, 2471025, 2380069, 2380116]
          */
         totalCount: number;
@@ -15492,7 +15993,7 @@ export type CommonHooksSearchUsers_SearchUsers = {
   }[];
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   totalCount: null | number;
   pageInfo: null | {
@@ -15556,7 +16057,7 @@ export type CommonHooksSearchVideos_UserSearchVideos = {
         __typename: "Game";
       };
       /**
-       * @format int64
+       * @format uint32
        * @example [15389, 4621, 621, 4472, 58]
        */
       lengthSeconds: number;
@@ -15569,7 +16070,7 @@ export type CommonHooksSearchVideos_UserSearchVideos = {
       /** @example ["Twitch Recap: 2024 according to Twitch Chat!", "Creator Camp LIVE: Streaming Basics with @Snackless & @KawaiiGuy"] */
       title: null | string;
       /**
-       * @format int64
+       * @format uint32
        * @example [0, 772963, 171376, 163669, 1911, 684]
        */
       viewCount: number;
@@ -15579,7 +16080,7 @@ export type CommonHooksSearchVideos_UserSearchVideos = {
   }[];
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   totalCount: null | number;
   pageInfo: null | {
@@ -15641,7 +16142,7 @@ export type CommunityGiftOfferFields = {
             /** @example ["USD", "BYN"] */
             currency: string;
             /**
-             * @format int64
+             * @format int32
              * @example [2]
              */
             exponent: number;
@@ -15652,7 +16153,11 @@ export type CommunityGiftOfferFields = {
               | {
                   price: UnknownValue;
                   tax: UnknownValue;
-                  total: UnknownValue;
+                  /**
+                   * ⚠️ Low confidence about: nullable
+                   * @format uint32
+                   */
+                  total: null | number;
                   discount:
                     | null
                     | CommunityGiftOfferFields_FixedPricingDiscount
@@ -15673,7 +16178,7 @@ export type CommunityGiftOfferFields = {
           plan: {
             interval: {
               /**
-               * @format int64
+               * @format uint32
                * @example [1, 6, 3]
                */
               duration: number;
@@ -15697,7 +16202,8 @@ export type CommunityGiftOfferFields = {
     };
     promotion: null | {
       id: ID;
-      name: UnknownValue;
+      /** ⚠️ Low confidence about: nullable */
+      name: null | string;
       promoType: UnknownValue;
       promotionalSKU: UnknownValue;
       /**
@@ -15721,12 +16227,12 @@ export type CommunityGiftOfferFields = {
       | CommunityGiftOfferFields_OfferPromotions[];
     quantity: {
       /**
-       * @format int64
+       * @format int32
        * @example [1]
        */
       min: number;
       /**
-       * @format int64
+       * @format int32
        * @example [1]
        */
       max: number;
@@ -15765,7 +16271,11 @@ export type CommunityGiftOfferFields_ChargeModelExternalSelf = {
 export type CommunityGiftOfferFields_FixedPricingDiscount = {
   price: UnknownValue;
   tax: UnknownValue;
-  total: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  total: null | number;
   __typename: string;
 };
 
@@ -15795,7 +16305,8 @@ export type CommunityGiftOfferFields_OfferPromotionPromoDisplay = {
 /** ℹ️ Not real Twitch type name */
 export type CommunityGiftOfferFields_OfferPromotions = {
   id: ID;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   promoType: UnknownValue;
   promoDisplay:
     | null
@@ -15828,8 +16339,16 @@ export type CommunityGiftOfferFields_OfferPromotionsQuantity = {
 
 /** ℹ️ Not real Twitch type name */
 export type CommunityGiftOfferFields_RangedPricingPresetAmounts = {
-  amountList: UnknownValue;
-  defaultAmount: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  amountList: null | number;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  defaultAmount: null | number;
   __typename: string;
 };
 
@@ -15842,7 +16361,7 @@ export type CommunityGoalItem = {
   /** @example ["Water is important, make Jinny drink some water!", "8800"] */
   description: string;
   /**
-   * @format int64
+   * @format uint32
    * @example [7, 2]
    */
   durationDays: number;
@@ -15852,7 +16371,7 @@ export type CommunityGoalItem = {
    */
   endedAt: null | string;
   /**
-   * @format int64
+   * @format uint32
    * @example [500000, 119200]
    */
   amountNeeded: number;
@@ -15865,17 +16384,17 @@ export type CommunityGoalItem = {
   image: null | PointsImageFragment;
   isInStock: boolean;
   /**
-   * @format int64
+   * @format uint32
    * @example [250]
    */
   smallContribution: number;
   /**
-   * @format int64
+   * @format uint32
    * @example [2000]
    */
   perStreamUserMaximumContribution: number;
   /**
-   * @format int64
+   * @format uint32
    * @example [0, 119200]
    */
   pointsContributed: number;
@@ -15992,7 +16511,7 @@ export type CommunitySupportSettings_UserSelfGifterBadgeStatus = {
   isExpired: null | boolean;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   accessDurationRemainingSeconds: null | number;
   accessEnd: UnknownValue;
@@ -16013,7 +16532,11 @@ export type CommunityTab_ChannelChatters = {
   vips: null | CommunityTab_ChannelChattersVips | CommunityTab_ChannelChattersVips[];
   staff: null | CommunityTab_ChannelChattersStaff | CommunityTab_ChannelChattersStaff[];
   viewers: null | CommunityTab_ChannelChattersViewers | CommunityTab_ChannelChattersViewers[];
-  count: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  count: null | number;
   __typename: string;
 };
 
@@ -16067,10 +16590,22 @@ export type CommunityTab_SubscriptionProductSelf = {
 
 export type CommunityTrainDetails = {
   status: UnknownValue;
-  currentRewardAmount: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  currentRewardAmount: null | number;
   rewardLevelThreshold: UnknownValue;
-  previousRewardAmount: UnknownValue;
-  nextRewardAmount: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  previousRewardAmount: null | number;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  nextRewardAmount: null | number;
   maxRewardLevel: UnknownValue;
   __typename: "CommunityTrainDetails";
 };
@@ -16332,12 +16867,12 @@ export type ContentClipsManagerClip = {
   /** @example ["xqc makes the wrong choice", "wow"] */
   title: string;
   /**
-   * @format int64
+   * @format uint32
    * @example [0, 957063, 957456, 899934, 944919, 773854]
    */
   viewCount: number;
   /**
-   * @format int64
+   * @format uint32
    * @example [0, 21, 14, 4, 2, 3, 1, 29, 6, 15, 19]
    */
   topLevelCommentCount: number;
@@ -16417,7 +16952,7 @@ export type ContentClipsManagerClip = {
     profileImageURL: string;
     followers: {
       /**
-       * @format int64
+       * @format uint32
        * @example [0, 2430015, 2459534, 2471025, 2380069, 2380116]
        */
       totalCount: number;
@@ -16430,7 +16965,7 @@ export type ContentClipsManagerClip = {
        */
       id: ID;
       /**
-       * @format int64
+       * @format uint32
        * @example [0, 46802, 656, 1572, 1518, 1432]
        */
       viewersCount: number;
@@ -16473,7 +17008,7 @@ export type ContentClipsManagerClip = {
    */
   duration: number;
   /**
-   * @format int64
+   * @format uint32
    * @example [44, 26, 25, 42, 30, 59, 36, 41, 60, 29]
    */
   durationSeconds: number;
@@ -16501,7 +17036,7 @@ export type ContentClipsManagerClip = {
     __typename: "Video";
   };
   /**
-   * @format int64
+   * @format uint32
    * @example [7897, 11412, 12062, 2238]
    */
   videoOffsetSeconds: null | number;
@@ -16578,7 +17113,8 @@ export type ContentDiscoveryPreferenceFragment = {
 /** ℹ️ Not real Twitch type name */
 export type ContentDiscoveryPreferenceFragment_DiscoveryPreferenceOptions = {
   type: UnknownValue;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   /** ⚠️ Low confidence about: nullable */
   isBlocked: null | boolean;
   __typename: string;
@@ -16586,7 +17122,8 @@ export type ContentDiscoveryPreferenceFragment_DiscoveryPreferenceOptions = {
 
 /** ℹ️ Not real Twitch type name */
 export type ContentDiscoveryPreferenceFragment_DiscoveryPreferencePreviewBlur = {
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   /** ⚠️ Low confidence about: nullable */
   description: null | string;
   /** ⚠️ Low confidence about: nullable */
@@ -16653,7 +17190,11 @@ export type ContentMatchedExtensionInstallationFields = {
   };
   permittedFeatures: null | {
     canSendChat: UnknownValue;
-    canUseBits: UnknownValue;
+    /**
+     * ⚠️ Low confidence about: nullable
+     * @format uint32
+     */
+    canUseBits: null | number;
     canRetrieveSubscriptionStatus: UnknownValue;
     dynamicManagement:
       | null
@@ -16724,7 +17265,7 @@ export type ContentMomentsPage_ChannelCommunityMoments = {
   };
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   totalCount: null | number;
   __typename: string;
@@ -16740,7 +17281,7 @@ export type ContentMomentsPage_ChannelCommunityMomentsEdgesNode = {
   createdAt: null | string;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   claimCount: null | number;
   clip:
@@ -16760,7 +17301,7 @@ export type ContentMomentsPage_ChannelCommunityMomentsEdgesNodeClip = {
   createdAt: null | string;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   durationSeconds: null | number;
   /**
@@ -16770,7 +17311,8 @@ export type ContentMomentsPage_ChannelCommunityMomentsEdgesNodeClip = {
    * @gqlArg `height: Int [147]`
    */
   thumbnailURL: null | string;
-  title: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  title: null | string;
   /** ⚠️ Low confidence about: nullable */
   slug: null | string;
   /** ⚠️ Low confidence about: nullable */
@@ -16929,7 +17471,8 @@ export type CopyrightClaim = {
 
 /** ℹ️ Not real Twitch type name */
 export type CopyrightClaim_CopyrightClaimClaimant = {
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   /** ⚠️ Low confidence about: nullable */
   email: null | string;
   __typename: string;
@@ -17160,7 +17703,7 @@ export type CoreUserFragment = {
      */
     id: ID;
     /**
-     * @format int64
+     * @format uint32
      * @example [0, 46802, 656, 1572, 1518, 1432]
      */
     viewersCount: number;
@@ -17197,7 +17740,11 @@ export type CoreUtilsSetLanguagePreference_SetPreferredLanguageTagUserSettings =
 /** ℹ️ Not real Twitch type name */
 export type CostreamingAllowlistEditor_UserCostreamingSettings = {
   costreamingAllowlist: null | CostreamingAllowlistUser;
-  costreamingAllowlistSize: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  costreamingAllowlistSize: null | number;
   __typename: string;
 };
 
@@ -17222,7 +17769,7 @@ export type CostreamingAllowlistUser = {
 
 export type CostreamingDiscoveryDetails = {
   /**
-   * @format int64
+   * @format uint32
    * @example [0, 13, 14, 7, 6, 12, 1, 11]
    */
   costreamersCount: number;
@@ -17231,7 +17778,7 @@ export type CostreamingDiscoveryDetails = {
   role: string;
   topCostreamers: CostreamingUserWithViewcount[];
   /**
-   * @format int64
+   * @format uint32
    * @example [53318, 665, 54790, 55713, 54158]
    */
   totalViewersCount: number;
@@ -17267,7 +17814,7 @@ export type CostreamingUserWithViewcount = {
      */
     id: ID;
     /**
-     * @format int64
+     * @format uint32
      * @example [0, 46802, 656, 1572, 1518, 1432]
      */
     viewersCount: number;
@@ -17560,7 +18107,7 @@ export type CreateCreatorMessage_CreateCreatorMessage = {
   message: null | CreatorMessageFragment;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   recipientCount: null | number;
   error:
@@ -17949,7 +18496,7 @@ export type CreatePredictionEvent_CreatePredictionEventError = {
   maxOutcomes: UnknownValue;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   maxPredictionWindowSeconds: null | number;
   __typename: string;
@@ -18510,27 +19057,75 @@ export type CreateVideoUpload_CreateVideoUploadOwner = {
 
 export type CreatorAnnualRecap2023 = {
   id: ID;
-  totalHoursWatchedByViewers: UnknownValue;
-  totalStreams: UnknownValue;
-  totalCategories: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  totalHoursWatchedByViewers: null | number;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  totalStreams: null | number;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  totalCategories: null | number;
   topCategoriesStreamed: null | AnnualRecapTopCategory;
   topTags: UnknownValue;
-  totalNewFollowers: UnknownValue;
-  totalNewSubs: UnknownValue;
-  totalSubsGifted: UnknownValue;
-  totalHypeTrains: UnknownValue;
-  totalChannelPoints: UnknownValue;
-  totalClips: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  totalNewFollowers: null | number;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  totalNewSubs: null | number;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  totalSubsGifted: null | number;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  totalHypeTrains: null | number;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  totalChannelPoints: null | number;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  totalClips: null | number;
   /** ⚠️ Low confidence about: nullable */
   isNewAffiliate: null | boolean;
   /** ⚠️ Low confidence about: nullable */
   isNewPartner: null | boolean;
-  totalStreamerGoalsAchieved: UnknownValue;
-  totalAchievementsUnlocked: UnknownValue;
-  totalCharityRaised: UnknownValue;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
+   */
+  totalStreamerGoalsAchieved: null | number;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  totalAchievementsUnlocked: null | number;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  totalCharityRaised: null | number;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
    */
   peakViewerCount: null | number;
   topFeaturedClip:
@@ -18542,11 +19137,31 @@ export type CreatorAnnualRecap2023 = {
          */
         id: ID;
       });
-  totalRaidsSent: UnknownValue;
-  totalRaidsReceived: UnknownValue;
-  totalStreamTogetherStreams: UnknownValue;
-  totalShoutoutsReceived: UnknownValue;
-  totalChatMessages: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  totalRaidsSent: null | number;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  totalRaidsReceived: null | number;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  totalStreamTogetherStreams: null | number;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  totalShoutoutsReceived: null | number;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  totalChatMessages: null | number;
   topChannelEmotes: null | AnnualRecapTopEmoteStat;
   topEngagedUsers:
     | null
@@ -18562,24 +19177,60 @@ export type CreatorAnnualRecap2023 = {
 
 export type CreatorAnnualRecap2024 = {
   id: ID;
-  totalHoursWatchedByViewers: UnknownValue;
-  totalStreams: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  totalHoursWatchedByViewers: null | number;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  totalStreams: null | number;
   topCategoriesStreamed: null | AnnualRecapTopCategory2024;
   topTags: UnknownValue;
-  totalNewFollowers: UnknownValue;
-  totalNewSubs: UnknownValue;
-  totalSubsGifted: UnknownValue;
-  totalHypeTrains: UnknownValue;
-  totalChannelPoints: UnknownValue;
-  totalClips: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  totalNewFollowers: null | number;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  totalNewSubs: null | number;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  totalSubsGifted: null | number;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  totalHypeTrains: null | number;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  totalChannelPoints: null | number;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  totalClips: null | number;
   /** ⚠️ Low confidence about: nullable */
   isNewAffiliate: null | boolean;
   /** ⚠️ Low confidence about: nullable */
   isNewPartner: null | boolean;
-  totalCharityRaised: UnknownValue;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
+   */
+  totalCharityRaised: null | number;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
    */
   peakViewerCount: null | number;
   topStreamClip:
@@ -18610,14 +19261,38 @@ export type CreatorAnnualRecap2024 = {
          */
         id: ID;
       });
-  totalRaidsSent: UnknownValue;
-  totalStreamTogetherStreams: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  totalRaidsSent: null | number;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  totalStreamTogetherStreams: null | number;
   topStreamTogethers: null | AnnualRecapTopCollaborator2024;
-  totalChatMessages: UnknownValue;
-  totalRaidsReceived: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  totalChatMessages: null | number;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  totalRaidsReceived: null | number;
   topChannelEmotes: null | AnnualRecapTopEmoteStat2024;
-  totalHoursStreamed: UnknownValue;
-  totalDaysStreamed: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  totalHoursStreamed: null | number;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  totalDaysStreamed: null | number;
   topEngagedUsers:
     | null
     | (AnnualRecapTopEngagedUser2024 & {
@@ -18631,7 +19306,7 @@ export type CreatorAnnualRecap2024 = {
   topRaided: null | AnnualRecapTopCollaborator2024;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   uniqueClippersCount: null | number;
   /** ⚠️ Low confidence about: nullable */
@@ -18641,24 +19316,60 @@ export type CreatorAnnualRecap2024 = {
 
 export type CreatorAnnualRecap2025 = {
   id: ID;
-  totalHoursWatchedByViewers: UnknownValue;
-  totalStreams: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  totalHoursWatchedByViewers: null | number;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  totalStreams: null | number;
   topCategoriesStreamed: null | AnnualRecapTopCategory2025;
   topTags: UnknownValue;
-  totalNewFollowers: UnknownValue;
-  totalNewSubs: UnknownValue;
-  totalSubsGifted: UnknownValue;
-  totalHypeTrains: UnknownValue;
-  totalChannelPoints: UnknownValue;
-  totalClips: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  totalNewFollowers: null | number;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  totalNewSubs: null | number;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  totalSubsGifted: null | number;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  totalHypeTrains: null | number;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  totalChannelPoints: null | number;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  totalClips: null | number;
   /** ⚠️ Low confidence about: nullable */
   isNewAffiliate: null | boolean;
   /** ⚠️ Low confidence about: nullable */
   isNewPartner: null | boolean;
-  totalCharityRaised: UnknownValue;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
+   */
+  totalCharityRaised: null | number;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
    */
   peakViewerCount: null | number;
   topStreamClip:
@@ -18688,14 +19399,38 @@ export type CreatorAnnualRecap2025 = {
          */
         id: ID;
       });
-  totalRaidsSent: UnknownValue;
-  totalStreamTogetherStreams: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  totalRaidsSent: null | number;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  totalStreamTogetherStreams: null | number;
   topStreamTogethers: null | AnnualRecapTopCollaborator2025;
-  totalChatMessages: UnknownValue;
-  totalRaidsReceived: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  totalChatMessages: null | number;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  totalRaidsReceived: null | number;
   topChannelEmotes: null | AnnualRecapTopEmoteStat2025;
-  totalHoursStreamed: UnknownValue;
-  totalDaysStreamed: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  totalHoursStreamed: null | number;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  totalDaysStreamed: null | number;
   topEngagedUsers:
     | null
     | (AnnualRecapTopEngagedUser2025 & {
@@ -18709,7 +19444,7 @@ export type CreatorAnnualRecap2025 = {
   topRaided: null | AnnualRecapTopCollaborator2025;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   uniqueClippersCount: null | number;
   /** ⚠️ Low confidence about: nullable */
@@ -18736,7 +19471,7 @@ export type CreatorChatSettingsQuery_CreatorChatSettings = {
   activityFeedDirection: UnknownValue;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   leftColumnPercentWidth: null | number;
   __typename: string;
@@ -18894,7 +19629,8 @@ export type CreatorCoachFeedbackHistory_CreatorFeedbackHistoryEdgesNodeNextSteps
 /** ℹ️ Not real Twitch type name */
 export type CreatorCoachFeedbackHistory_CreatorFeedbackHistoryEdgesNodeVideo = {
   id: ID;
-  title: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  title: null | string;
   /**
    * ⚠️ Low confidence about: nullable
    * @format date-time
@@ -18902,7 +19638,7 @@ export type CreatorCoachFeedbackHistory_CreatorFeedbackHistoryEdgesNodeVideo = {
   createdAt: null | string;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   lengthSeconds: null | number;
   /**
@@ -19037,9 +19773,17 @@ export type CreatorCollaborationChannelData_UserRelationship = {
     | CreatorCollaborationChannelData_UserRelationshipSubscriptionBenefit
     | CreatorCollaborationChannelData_UserRelationshipSubscriptionBenefit[];
   subscriptionTenure: null | {
-    months: UnknownValue;
+    /**
+     * ⚠️ Low confidence about: nullable
+     * @format uint32
+     */
+    months: null | number;
     daysRemaining: UnknownValue;
-    elapsedDays: UnknownValue;
+    /**
+     * ⚠️ Low confidence about: nullable
+     * @format uint32
+     */
+    elapsedDays: null | number;
     __typename: "SubscriptionTenure";
   };
   raidHistory:
@@ -19187,7 +19931,8 @@ export type CreatorHomeCardActionFragment = {
 /** ℹ️ Not real Twitch type name */
 export type CreatorHomeCardActionFragment_CreatorHomeCardPageNavigateEventChannel = {
   id: ID;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   __typename: string;
 };
 
@@ -19225,7 +19970,8 @@ export type CreatorHomeCardDecoratorsFragment = {
 
 /** ℹ️ Not real Twitch type name */
 export type CreatorHomeCardDecoratorsFragment_CreatorHomeCardDecoratorsIcon = {
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   colorTheme: UnknownValue;
   __typename: string;
 };
@@ -19233,7 +19979,8 @@ export type CreatorHomeCardDecoratorsFragment_CreatorHomeCardDecoratorsIcon = {
 /** ℹ️ Not real Twitch type name */
 export type CreatorHomeCardDecoratorsFragment_CreatorHomeCardDecoratorsVod = {
   id: ID;
-  title: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  title: null | string;
   __typename: string;
 };
 
@@ -19325,7 +20072,11 @@ export type CreatorHomeCustomContentFragment =
        * @format uri
        */
       url: null | string;
-      size: UnknownValue;
+      /**
+       * ⚠️ Low confidence about: nullable
+       * @format uint32
+       */
+      size: null | number;
       /** ⚠️ Low confidence about: nullable */
       backgroundColor: null | string;
       __typename: "CreatorHomeCustomContentImage";
@@ -19391,13 +20142,15 @@ export type CreatorHomeCustomContentFragment =
 /** ℹ️ Not real Twitch type name */
 export type CreatorHomeCustomContentFragment_CreatorHomeCustomContentSocialMediaLinks = {
   id: ID;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   /**
    * ⚠️ Low confidence about: nullable
    * @format uri
    */
   url: null | string;
-  title: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  title: null | string;
   __typename: string;
 };
 
@@ -19423,7 +20176,8 @@ export type CreatorHomeCustomContentFragment_CreatorHomeCustomContentVODPreviewV
 
 /** ℹ️ Not real Twitch type name */
 export type CreatorHomeGetEmoteData_UserEmoticonPrefix = {
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   __typename: string;
 };
 
@@ -19503,7 +20257,11 @@ export type CreatorHomeTargetProgressRequirementFragment = {
     | null
     | CreatorHomeTargetProgressRequirementFragment_CreatorHomeTargetProgressRequirementIcon
     | CreatorHomeTargetProgressRequirementFragment_CreatorHomeTargetProgressRequirementIcon[];
-  requiredCompletionAmount: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  requiredCompletionAmount: null | number;
   currentProgress: UnknownValue;
   __typename: "CreatorHomeTargetProgressRequirement";
 };
@@ -19511,7 +20269,8 @@ export type CreatorHomeTargetProgressRequirementFragment = {
 /** ℹ️ Not real Twitch type name */
 export type CreatorHomeTargetProgressRequirementFragment_CreatorHomeTargetProgressRequirementIcon =
   {
-    name: UnknownValue;
+    /** ⚠️ Low confidence about: nullable */
+    name: null | string;
     colorTheme: UnknownValue;
     __typename: string;
   };
@@ -19629,10 +20388,11 @@ export type CreatorMessageFragment_CreatorMessageClips = {
   id: ID;
   /** ⚠️ Low confidence about: nullable */
   slug: null | string;
-  title: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  title: null | string;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   viewCount: null | number;
   assets: null | ClipAssetFragment;
@@ -19701,7 +20461,7 @@ export type CreatorMessagesAvailable_CreatorMessagesAvailable = {
   hasReceived: null | boolean;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   unreadCount: null | number;
   /** ⚠️ Low confidence about: nullable */
@@ -19723,7 +20483,7 @@ export type CreatorMessagingCohorts_CreatorMessagingCohortsCohorts = {
   cohortType: UnknownValue;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   viewerCount: null | number;
   canSend: UnknownValue;
@@ -19753,7 +20513,11 @@ export type CreatorMessagingCohorts_CreatorMessagingCohortsCohortsAvailableActio
 
 export type CreatorMetricsByInterval = {
   adBreaksInSecondsString: UnknownValue;
-  adSecondsPerHour: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  adSecondsPerHour: null | number;
   averageViewers: UnknownValue;
   clipViewsString: UnknownValue;
   clipsCreatedString: UnknownValue;
@@ -19768,8 +20532,16 @@ export type CreatorMetricsByInterval = {
   minutesStreamedString: UnknownValue;
   minutesWatchedString: UnknownValue;
   timestamp: UnknownValue;
-  totalChatMessagesString: UnknownValue;
-  totalChattersString: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  totalChatMessagesString: null | number;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  totalChattersString: null | number;
   uniqueViewersString: UnknownValue;
   promotionClickString: UnknownValue;
   promotionDisplayString: UnknownValue;
@@ -19790,9 +20562,17 @@ export type CreatorPromotionActivationFragment = {
 
 export type CreatorPromotionBalanceFragment = {
   remainingHours: UnknownValue;
-  hourLimit: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  hourLimit: null | number;
   remainingActivations: UnknownValue;
-  activationLimit: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  activationLimit: null | number;
   maxHoursBeforeConflict: UnknownValue;
   __typename: "CreatorPromotionBalance";
 };
@@ -19837,12 +20617,12 @@ export type CreatorSentMessageFragment = {
   cohortType: UnknownValue;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   recipientCount: null | number;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   viewCount: null | number;
   clips:
@@ -19857,10 +20637,11 @@ export type CreatorSentMessageFragment_CreatorSentMessageClips = {
   id: ID;
   /** ⚠️ Low confidence about: nullable */
   slug: null | string;
-  title: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  title: null | string;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   viewCount: null | number;
   assets: null | ClipAssetFragment;
@@ -19902,10 +20683,22 @@ export type CreatorSentMessages_CreatorSentMessages = {
 
 /** ℹ️ Not real Twitch type name */
 export type CreatorWalletCheckoutQuery_SpendableBalanceCurrentBalance = {
-  amountUSDCents: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  amountUSDCents: null | number;
   localCurrencyCents: UnknownValue;
-  amountWithRenewalHoldsUSDCents: UnknownValue;
-  amountWithRenewalHoldsInLocalMinorUnits: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  amountWithRenewalHoldsUSDCents: null | number;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  amountWithRenewalHoldsInLocalMinorUnits: null | number;
   rewardsBalanceUSDCents: UnknownValue;
   rewardsBalanceInLocalMinorUnits: UnknownValue;
   fxRate: UnknownValue;
@@ -20048,7 +20841,8 @@ export type CuratedTagFragment = {
 export type CurrentAlertSetFragment = {
   id: ID;
   maxVariants: UnknownValue;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   /**
    * ⚠️ Low confidence about: nullable
    * @format uri
@@ -20188,7 +20982,11 @@ export type CurrentUserBannedStatus_UserSelfBanStatus = {
    * @format date-time
    */
   expiresAt: null | string;
-  expiresInMs: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  expiresInMs: null | number;
   reason: UnknownValue;
   __typename: string;
 };
@@ -20237,7 +21035,11 @@ export type CurrentUserStrikeStatus_ChatModeratorStrikeStatusTimeoutDetails = {
    * @format date-time
    */
   expiresAt: null | string;
-  expiresInMs: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  expiresInMs: null | number;
   reason: UnknownValue;
   __typename: string;
 };
@@ -20292,7 +21094,7 @@ export type CurrentUserWhisperThreadsNode = {
   isArchived: null | boolean;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   unreadMessagesCount: null | number;
   __typename: "WhisperThread";
@@ -20345,13 +21147,13 @@ export type CustomRewardFragment = {
    */
   backgroundColor: null | string;
   /**
-   * @format int64
+   * @format uint32
    * @example [0]
    */
   bitsCost: number;
   cooldownExpiresAt: null;
   /**
-   * @format int64
+   * @format uint32
    * @example [20000000, 100000000, 1000000, 300000, 5000000]
    */
   cost: number;
@@ -20362,7 +21164,7 @@ export type CustomRewardFragment = {
   maxPerStreamSetting: {
     isEnabled: boolean;
     /**
-     * @format int64
+     * @format uint32
      * @example [0, 1, 3, 2]
      */
     maxPerStream: number;
@@ -20371,7 +21173,7 @@ export type CustomRewardFragment = {
   maxPerUserPerStreamSetting: {
     isEnabled: boolean;
     /**
-     * @format int64
+     * @format uint32
      * @example [0, 1, 10]
      */
     maxPerUserPerStream: number;
@@ -20380,7 +21182,7 @@ export type CustomRewardFragment = {
   globalCooldownSetting: {
     isEnabled: boolean;
     /**
-     * @format int64
+     * @format uint32
      * @example [0, 180, 1, 600, 1800]
      */
     globalCooldownSeconds: number;
@@ -20393,7 +21195,7 @@ export type CustomRewardFragment = {
   isUserInputRequired: boolean;
   shouldRedemptionsSkipRequestQueue: boolean;
   /**
-   * @format int64
+   * @format int32
    * @example [0, 2]
    */
   redemptionsRedeemedCurrentStream: null | number;
@@ -20418,12 +21220,12 @@ export type CustomRewardItem = {
   /** @example ["END THE STREAM", "QUEUE SONG", "ADD A NEW EMOTE", "RUN AN AD", "Choose a channel emote", "Hydrate!", "SABOTAGE"] */
   title: string;
   /**
-   * @format int64
+   * @format uint32
    * @example [20000000, 100000000, 1000000, 300000, 5000000]
    */
   cost: number;
   /**
-   * @format int64
+   * @format uint32
    * @example [0]
    */
   bitsCost: number;
@@ -20479,13 +21281,22 @@ export type CustomRewardTemplate = {
   id: ID;
   /** ⚠️ Low confidence about: nullable */
   backgroundColor: null | string;
-  bitsCost: UnknownValue;
-  cost: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  bitsCost: null | number;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  cost: null | number;
   image: null | PointsImageFragment;
   /** ⚠️ Low confidence about: nullable */
   isUserInputRequired: null | boolean;
   prompt: UnknownValue;
-  title: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  title: null | string;
   pricingType: UnknownValue;
   __typename: "CommunityPointsCustomRewardTemplate";
 };
@@ -20712,7 +21523,7 @@ export type DailyViewDropCollection = {
       requirementType: string;
       requirements: {
         /**
-         * @format int64
+         * @format uint32
          * @example [360, 420, 60, 120, 180, 240, 300, 20]
          */
         minutesWatched: number;
@@ -20721,12 +21532,12 @@ export type DailyViewDropCollection = {
       };
       repeatableConfig: null | {
         /**
-         * @format int64
+         * @format int32
          * @example [3]
          */
         repeatableTimes: number;
         /**
-         * @format int64
+         * @format uint32
          * @example [86400]
          */
         resetIntervalSeconds: number;
@@ -20748,7 +21559,8 @@ export type DailyViewDropCollection = {
 /** ℹ️ Not real Twitch type name */
 export type DailyViewDropCollection_DropsCampaignOwner = {
   id: ID;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   __typename: string;
 };
 
@@ -20759,7 +21571,7 @@ export type DailyViewDropCollection_DropsRewardGroupSelf = {
   currentSubs: UnknownValue;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   grantCount: null | number;
   /**
@@ -20798,7 +21610,8 @@ export type DailyViewDropCollection_DropsRewardGroupSelfCurrentWindow = {
 /** ℹ️ Not real Twitch type name */
 export type DailyViewDropCollection_DropsRewardGroupSelfEarnedReward = {
   id: ID;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   /**
    * ⚠️ Low confidence about: nullable
    * @format uri
@@ -20809,8 +21622,16 @@ export type DailyViewDropCollection_DropsRewardGroupSelfEarnedReward = {
 
 /** ℹ️ Not real Twitch type name */
 export type DashboardCensusGetBirthdate_CurrentUserBirthday = {
-  year: UnknownValue;
-  month: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  year: null | number;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  month: null | number;
   day: UnknownValue;
   __typename: string;
 };
@@ -20880,7 +21701,7 @@ export type DashboardCreateVideoBookmark_CreateVideoBookmarkVideoBookmark = {
   id: ID;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   positionSeconds: null | number;
   __typename: string;
@@ -20888,7 +21709,8 @@ export type DashboardCreateVideoBookmark_CreateVideoBookmarkVideoBookmark = {
 
 export type DashboardDropCampaign = {
   id: ID;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   owner: null | DashboardDropCampaign_DropCampaignOwner | DashboardDropCampaign_DropCampaignOwner[];
   game: null | DashboardDropCampaign_DropCampaignGame | DashboardDropCampaign_DropCampaignGame[];
   status: UnknownValue;
@@ -20946,7 +21768,8 @@ export type DashboardDropCampaignDetails_UserDropCampaign = {
    * @format uri
    */
   imageURL: null | string;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   owner:
     | null
     | DashboardDropCampaignDetails_UserDropCampaignOwner
@@ -20981,7 +21804,8 @@ export type DashboardDropCampaignDetails_UserDropCampaignAllowChannels = {
   id: ID;
   /** ⚠️ Low confidence about: nullable */
   displayName: null | string;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   __typename: string;
 };
 
@@ -20994,7 +21818,7 @@ export type DashboardDropCampaignDetails_UserDropCampaignEventBasedDrops = {
     | DashboardDropCampaignDetails_UserDropCampaignEventBasedDropsBenefitEdges[];
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   claimDurationSeconds: null | number;
   conditions:
@@ -21009,7 +21833,8 @@ export type DashboardDropCampaignDetails_UserDropCampaignEventBasedDrops = {
   missionDescription: UnknownValue;
   /** ⚠️ Low confidence about: nullable */
   missionName: null | string;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   /**
    * ⚠️ Low confidence about: nullable
    * @format date-time
@@ -21024,7 +21849,11 @@ export type DashboardDropCampaignDetails_UserDropCampaignEventBasedDropsBenefitE
     | null
     | DashboardDropCampaignDetails_UserDropCampaignEventBasedDropsBenefitEdgesBenefit
     | DashboardDropCampaignDetails_UserDropCampaignEventBasedDropsBenefitEdgesBenefit[];
-  entitlementLimit: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  entitlementLimit: null | number;
   __typename: string;
 };
 
@@ -21036,7 +21865,11 @@ export type DashboardDropCampaignDetails_UserDropCampaignEventBasedDropsBenefitE
    * @format date-time
    */
   createdAt: null | string;
-  entitlementLimit: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  entitlementLimit: null | number;
   game:
     | null
     | DashboardDropCampaignDetails_UserDropCampaignEventBasedDropsBenefitEdgesBenefitGame
@@ -21048,7 +21881,8 @@ export type DashboardDropCampaignDetails_UserDropCampaignEventBasedDropsBenefitE
   imageAssetURL: null | string;
   /** ⚠️ Low confidence about: nullable */
   isIosAvailable: null | boolean;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   ownerOrganization:
     | null
     | DashboardDropCampaignDetails_UserDropCampaignEventBasedDropsBenefitEdgesBenefitOwnerOrganization
@@ -21060,7 +21894,8 @@ export type DashboardDropCampaignDetails_UserDropCampaignEventBasedDropsBenefitE
 /** ℹ️ Not real Twitch type name */
 export type DashboardDropCampaignDetails_UserDropCampaignEventBasedDropsBenefitEdgesBenefitGame = {
   id: ID;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   __typename: string;
 };
 
@@ -21068,7 +21903,8 @@ export type DashboardDropCampaignDetails_UserDropCampaignEventBasedDropsBenefitE
 export type DashboardDropCampaignDetails_UserDropCampaignEventBasedDropsBenefitEdgesBenefitOwnerOrganization =
   {
     id: ID;
-    name: UnknownValue;
+    /** ⚠️ Low confidence about: nullable */
+    name: null | string;
     __typename: string;
   };
 
@@ -21093,7 +21929,8 @@ export type DashboardDropCampaignDetails_UserDropCampaignGame = {
 /** ℹ️ Not real Twitch type name */
 export type DashboardDropCampaignDetails_UserDropCampaignOwner = {
   id: ID;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   __typename: string;
 };
 
@@ -21116,7 +21953,8 @@ export type DashboardDropCampaignDetails_UserDropCampaignTimeBasedDrops = {
    * @format date-time
    */
   endAt: null | string;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   preconditionDrops:
     | null
     | DashboardDropCampaignDetails_UserDropCampaignTimeBasedDropsPreconditionDrops
@@ -21137,7 +21975,11 @@ export type DashboardDropCampaignDetails_UserDropCampaignTimeBasedDropsBenefitEd
     | null
     | DashboardDropCampaignDetails_UserDropCampaignTimeBasedDropsBenefitEdgesBenefit
     | DashboardDropCampaignDetails_UserDropCampaignTimeBasedDropsBenefitEdgesBenefit[];
-  entitlementLimit: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  entitlementLimit: null | number;
   __typename: string;
 };
 
@@ -21149,7 +21991,11 @@ export type DashboardDropCampaignDetails_UserDropCampaignTimeBasedDropsBenefitEd
    * @format date-time
    */
   createdAt: null | string;
-  entitlementLimit: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  entitlementLimit: null | number;
   game:
     | null
     | DashboardDropCampaignDetails_UserDropCampaignTimeBasedDropsBenefitEdgesBenefitGame
@@ -21161,7 +22007,8 @@ export type DashboardDropCampaignDetails_UserDropCampaignTimeBasedDropsBenefitEd
   imageAssetURL: null | string;
   /** ⚠️ Low confidence about: nullable */
   isIosAvailable: null | boolean;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   ownerOrganization:
     | null
     | DashboardDropCampaignDetails_UserDropCampaignTimeBasedDropsBenefitEdgesBenefitOwnerOrganization
@@ -21173,7 +22020,8 @@ export type DashboardDropCampaignDetails_UserDropCampaignTimeBasedDropsBenefitEd
 /** ℹ️ Not real Twitch type name */
 export type DashboardDropCampaignDetails_UserDropCampaignTimeBasedDropsBenefitEdgesBenefitGame = {
   id: ID;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   __typename: string;
 };
 
@@ -21181,7 +22029,8 @@ export type DashboardDropCampaignDetails_UserDropCampaignTimeBasedDropsBenefitEd
 export type DashboardDropCampaignDetails_UserDropCampaignTimeBasedDropsBenefitEdgesBenefitOwnerOrganization =
   {
     id: ID;
-    name: UnknownValue;
+    /** ⚠️ Low confidence about: nullable */
+    name: null | string;
     __typename: string;
   };
 
@@ -21209,7 +22058,8 @@ export type DashboardDropCampaign_DropCampaignGame = {
 /** ℹ️ Not real Twitch type name */
 export type DashboardDropCampaign_DropCampaignOwner = {
   id: ID;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   __typename: string;
 };
 
@@ -21400,7 +22250,7 @@ export type DashboardTopClipsConnectionFragment = {
       /** @example ["xqc makes the wrong choice", "wow"] */
       title: string;
       /**
-       * @format int64
+       * @format uint32
        * @example [0, 957063, 957456, 899934, 944919, 773854]
        */
       viewCount: number;
@@ -21652,7 +22502,8 @@ export type DecoratedTokenFragment = {
         __typename: "UserError";
       }
     | {
-        name: UnknownValue;
+        /** ⚠️ Low confidence about: nullable */
+        name: null | string;
         __typename: "TokenizedMappedIcon";
       }
     | {
@@ -21685,11 +22536,16 @@ export type DefaultAlertVariations_DefaultAlertVariations = {
     | null
     | DefaultAlertVariations_DefaultAlertVariationsStyleSettings
     | DefaultAlertVariations_DefaultAlertVariationsStyleSettings[];
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   state: UnknownValue;
   /** ⚠️ Low confidence about: nullable */
   ownerID: null | ID;
-  duration: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  duration: null | number;
   id: ID;
   condition: null | AlertConditionFragment;
   sound:
@@ -21763,14 +22619,16 @@ export type DefaultAlertVariations_DefaultAlertVariationsStyleSettingsMap = {
 
 /** ℹ️ Not real Twitch type name */
 export type DefaultEmoteCreationQuery_UserEmoticonPrefix = {
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   __typename: string;
 };
 
 /** ℹ️ Not real Twitch type name */
 export type DefaultEmoteLibraryImagesQuery_DefaultEmoteLibraryImages = {
   id: ID;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   tags: UnknownValue;
   __typename: string;
 };
@@ -21873,7 +22731,7 @@ export type DeleteClipComment_DeleteClipCommentClip = {
   id: ID;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   topLevelCommentCount: null | number;
   __typename: string;
@@ -22194,7 +23052,7 @@ export type DemandChannelCreatorSponsorshipHighlights_UserCreatorProfileClips = 
        */
       url: string;
       /**
-       * @format int64
+       * @format uint32
        * @example [0, 957063, 957456, 899934, 944919, 773854]
        */
       viewCount: number;
@@ -22439,7 +23297,8 @@ export type DevExtensionListPageCurrentUser_ExtensionClients = {
 /** ℹ️ Not real Twitch type name */
 export type DevExtensionListPageCurrentUser_ExtensionClientsEdgesNode = {
   id: ID;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   /**
    * ⚠️ Low confidence about: nullable
    * @format date-time
@@ -22666,7 +23525,8 @@ export type DevExtensionVersionsGetManifests_ExtensionManifestsEdgesNodeDevelope
 
 /** ℹ️ Not real Twitch type name */
 export type DevExtensionVersionsGetManifests_ExtensionManifestsEdgesNodeDiscoveryManifest = {
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   __typename: string;
 };
 
@@ -22900,7 +23760,8 @@ export type DevMutationExtensionDeleteImage_DeleteExtensionImageManifestDevelope
 
 /** ℹ️ Not real Twitch type name */
 export type DevMutationExtensionDeleteImage_DeleteExtensionImageManifestDiscoveryManifest = {
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   __typename: string;
 };
 
@@ -22966,7 +23827,7 @@ export type DevOrgMembers_Organization = {
 export type DevOrgMembers_OrganizationInvites = {
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   totalCount: null | number;
   edges: OrgInviteEdge[];
@@ -22981,7 +23842,7 @@ export type DevOrgMembers_OrganizationInvites = {
 export type DevOrgMembers_OrganizationMembers = {
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   totalCount: null | number;
   edges: OrgMemberEdge[];
@@ -23068,7 +23929,8 @@ export type DevQuestCampaignFragment = {
    */
   endsAt: null | string;
   id: ID;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   owner:
     | null
     | DevQuestCampaignFragment_QuestCampaignOwner
@@ -23110,7 +23972,8 @@ export type DevQuestCampaignFragment_QuestCampaignChannelAllowlist = {
 /** ℹ️ Not real Twitch type name */
 export type DevQuestCampaignFragment_QuestCampaignGame = {
   id: ID;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   /**
    * ⚠️ Low confidence about: nullable
    * @format uri
@@ -23122,7 +23985,8 @@ export type DevQuestCampaignFragment_QuestCampaignGame = {
 /** ℹ️ Not real Twitch type name */
 export type DevQuestCampaignFragment_QuestCampaignOwner = {
   id: ID;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   __typename: string;
 };
 
@@ -23146,7 +24010,8 @@ export type DevQuestRewardFragment = {
    * @format uri
    */
   imageAssetURL: null | string;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   owner: null | DevQuestRewardFragment_QuestRewardOwner | DevQuestRewardFragment_QuestRewardOwner[];
   /** ⚠️ Low confidence about: nullable */
   isIosAvailable: null | boolean;
@@ -23156,7 +24021,8 @@ export type DevQuestRewardFragment = {
 /** ℹ️ Not real Twitch type name */
 export type DevQuestRewardFragment_QuestRewardGame = {
   id: ID;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   /**
    * ⚠️ Low confidence about: nullable
    * @format uri
@@ -23173,7 +24039,8 @@ export type DevQuestRewardFragment_QuestRewardOwner = {
 
 export type DevQuestRewardGroupFragment = {
   id: ID;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   unlockRequirements:
     | null
     | DevQuestRewardGroupFragment_QuestRewardGroupUnlockRequirements
@@ -23191,7 +24058,8 @@ export type DevQuestRewardGroupFragment_QuestRewardGroupUnlockRequirements = {
 };
 
 export type DevQuestRewardGroupMetadataFragment = {
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   id: ID;
   unlockRequirements:
     | null
@@ -23260,7 +24128,8 @@ export type DevSiteCurrentUserOauthApps_OauthApps = {
 /** ℹ️ Not real Twitch type name */
 export type DeveloperBadgeDescription_UserPublicOrganizations = {
   id: ID;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   /**
    * ⚠️ Low confidence about: nullable
    * @format uri
@@ -23303,7 +24172,7 @@ export type DirectoryCollectionStream = {
   /** @example ["🔴 G2 0:0 FUT | BO3 | IEM Cologne Major 2026 Stage 2 | @skywhywalker @m3wsu", "[ 20 тестов днк ] | !winline !tg"] */
   title: string;
   /**
-   * @format int64
+   * @format uint32
    * @example [0, 46802, 656, 1572, 1518, 1432]
    */
   viewersCount: number;
@@ -23321,12 +24190,12 @@ export type DirectoryCollectionStream = {
    */
   verticalPreviewImageURL: string;
   /**
-   * @format int64
+   * @format uint32
    * @example [0, 1440, 1080, 720, 768, 936, 1200, 900, 1280, 864, 2160]
    */
   height: number;
   /**
-   * @format int64
+   * @format uint32
    * @example [0, 2560, 1920, 1280, 1360, 1664]
    */
   width: number;
@@ -23431,7 +24300,7 @@ export type DirectoryEventCuratedBanner_CuratedTag = {
    */
   boxartURL: string;
   /**
-   * @format int64
+   * @format uint32
    * @example [21191, 298, 25701, 43238, 160]
    */
   viewersCount: null | number;
@@ -23501,7 +24370,7 @@ export type DirectoryPageGameStreamWithTagsNode = {
   /** @example ["🔴 G2 0:0 FUT | BO3 | IEM Cologne Major 2026 Stage 2 | @skywhywalker @m3wsu", "[ 20 тестов днк ] | !winline !tg"] */
   title: string;
   /**
-   * @format int64
+   * @format uint32
    * @example [0, 46802, 656, 1572, 1518, 1432]
    */
   viewersCount: number;
@@ -23519,12 +24388,12 @@ export type DirectoryPageGameStreamWithTagsNode = {
    */
   verticalPreviewImageURL: string;
   /**
-   * @format int64
+   * @format uint32
    * @example [0, 1440, 1080, 720, 768, 936, 1200, 900, 1280, 864, 2160]
    */
   height: number;
   /**
-   * @format int64
+   * @format uint32
    * @example [0, 2560, 1920, 1280, 1360, 1664]
    */
   width: number;
@@ -23743,7 +24612,11 @@ export type DismissUserModiversaryCallout_DismissUserModiversaryCalloutModiversa
   /** ⚠️ Low confidence about: nullable */
   hasMilestoneAlert: null | boolean;
   canSendUserNotice: UnknownValue;
-  months: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  months: null | number;
   __typename: string;
 };
 
@@ -23790,7 +24663,8 @@ export type DisputeSponsorshipAssistEvent_DisputeSponsorshipAssistEventEventDisp
 
 export type DjCatalogBlockedArtistFragment = {
   id: ID;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   blocklistState: UnknownValue;
   alternateNames: UnknownValue;
   __typename: "DJCatalogArtist";
@@ -23798,7 +24672,8 @@ export type DjCatalogBlockedArtistFragment = {
 
 export type DjCatalogSearchArtistFragment = {
   id: ID;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   blocklistState: UnknownValue;
   alternateNames: UnknownValue;
   __typename: "DJCatalogArtist";
@@ -23806,7 +24681,8 @@ export type DjCatalogSearchArtistFragment = {
 
 export type DjCatalogSearchSongFragment = {
   id: ID;
-  title: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  title: null | string;
   artists: null | DjCatalogSearchArtistFragment;
   featuredArtists: null | DjCatalogSearchArtistFragment;
   labels: UnknownValue;
@@ -23816,7 +24692,11 @@ export type DjCatalogSearchSongFragment = {
    */
   isBlockedTrack: null | boolean;
   genres: UnknownValue;
-  duration: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  duration: null | number;
   popularityIndex: UnknownValue;
   __typename: "DJCatalogTrack";
 };
@@ -23865,7 +24745,8 @@ export type DownvoteClipComment_DownvoteClipCommentComment = {
 
 export type DropCampaign = {
   id: ID;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   owner: null | DropCampaign_DropCampaignOwner | DropCampaign_DropCampaignOwner[];
   game: null | DropCampaign_DropCampaignGame | DropCampaign_DropCampaignGame[];
   status: UnknownValue;
@@ -23938,7 +24819,8 @@ export type DropCampaignDetails_UserDropCampaign = {
    * @format uri
    */
   imageURL: null | string;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   owner:
     | null
     | DropCampaignDetails_UserDropCampaignOwner
@@ -23972,7 +24854,8 @@ export type DropCampaignDetails_UserDropCampaignAllowChannels = {
   id: ID;
   /** ⚠️ Low confidence about: nullable */
   displayName: null | string;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   __typename: string;
 };
 
@@ -23985,7 +24868,7 @@ export type DropCampaignDetails_UserDropCampaignEventBasedDrops = {
     | DropCampaignDetails_UserDropCampaignEventBasedDropsBenefitEdges[];
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   claimDurationSeconds: null | number;
   conditions:
@@ -24000,7 +24883,8 @@ export type DropCampaignDetails_UserDropCampaignEventBasedDrops = {
   missionDescription: UnknownValue;
   /** ⚠️ Low confidence about: nullable */
   missionName: null | string;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   /**
    * ⚠️ Low confidence about: nullable
    * @format date-time
@@ -24015,7 +24899,11 @@ export type DropCampaignDetails_UserDropCampaignEventBasedDropsBenefitEdges = {
     | null
     | DropCampaignDetails_UserDropCampaignEventBasedDropsBenefitEdgesBenefit
     | DropCampaignDetails_UserDropCampaignEventBasedDropsBenefitEdgesBenefit[];
-  entitlementLimit: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  entitlementLimit: null | number;
   __typename: string;
 };
 
@@ -24027,7 +24915,11 @@ export type DropCampaignDetails_UserDropCampaignEventBasedDropsBenefitEdgesBenef
    * @format date-time
    */
   createdAt: null | string;
-  entitlementLimit: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  entitlementLimit: null | number;
   game:
     | null
     | DropCampaignDetails_UserDropCampaignEventBasedDropsBenefitEdgesBenefitGame
@@ -24039,7 +24931,8 @@ export type DropCampaignDetails_UserDropCampaignEventBasedDropsBenefitEdgesBenef
   imageAssetURL: null | string;
   /** ⚠️ Low confidence about: nullable */
   isIosAvailable: null | boolean;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   ownerOrganization:
     | null
     | DropCampaignDetails_UserDropCampaignEventBasedDropsBenefitEdgesBenefitOwnerOrganization
@@ -24051,7 +24944,8 @@ export type DropCampaignDetails_UserDropCampaignEventBasedDropsBenefitEdgesBenef
 /** ℹ️ Not real Twitch type name */
 export type DropCampaignDetails_UserDropCampaignEventBasedDropsBenefitEdgesBenefitGame = {
   id: ID;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   __typename: string;
 };
 
@@ -24059,7 +24953,8 @@ export type DropCampaignDetails_UserDropCampaignEventBasedDropsBenefitEdgesBenef
 export type DropCampaignDetails_UserDropCampaignEventBasedDropsBenefitEdgesBenefitOwnerOrganization =
   {
     id: ID;
-    name: UnknownValue;
+    /** ⚠️ Low confidence about: nullable */
+    name: null | string;
     __typename: string;
   };
 
@@ -24084,7 +24979,8 @@ export type DropCampaignDetails_UserDropCampaignGame = {
 /** ℹ️ Not real Twitch type name */
 export type DropCampaignDetails_UserDropCampaignOwner = {
   id: ID;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   __typename: string;
 };
 
@@ -24109,7 +25005,8 @@ export type DropCampaignDetails_UserDropCampaignTimeBasedDrops = {
    * @format date-time
    */
   endAt: null | string;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   preconditionDrops:
     | null
     | DropCampaignDetails_UserDropCampaignTimeBasedDropsPreconditionDrops
@@ -24129,7 +25026,11 @@ export type DropCampaignDetails_UserDropCampaignTimeBasedDropsBenefitEdges = {
     | null
     | DropCampaignDetails_UserDropCampaignTimeBasedDropsBenefitEdgesBenefit
     | DropCampaignDetails_UserDropCampaignTimeBasedDropsBenefitEdgesBenefit[];
-  entitlementLimit: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  entitlementLimit: null | number;
   __typename: string;
 };
 
@@ -24141,7 +25042,11 @@ export type DropCampaignDetails_UserDropCampaignTimeBasedDropsBenefitEdgesBenefi
    * @format date-time
    */
   createdAt: null | string;
-  entitlementLimit: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  entitlementLimit: null | number;
   game:
     | null
     | DropCampaignDetails_UserDropCampaignTimeBasedDropsBenefitEdgesBenefitGame
@@ -24153,7 +25058,8 @@ export type DropCampaignDetails_UserDropCampaignTimeBasedDropsBenefitEdgesBenefi
   imageAssetURL: null | string;
   /** ⚠️ Low confidence about: nullable */
   isIosAvailable: null | boolean;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   ownerOrganization:
     | null
     | DropCampaignDetails_UserDropCampaignTimeBasedDropsBenefitEdgesBenefitOwnerOrganization
@@ -24165,7 +25071,8 @@ export type DropCampaignDetails_UserDropCampaignTimeBasedDropsBenefitEdgesBenefi
 /** ℹ️ Not real Twitch type name */
 export type DropCampaignDetails_UserDropCampaignTimeBasedDropsBenefitEdgesBenefitGame = {
   id: ID;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   __typename: string;
 };
 
@@ -24173,7 +25080,8 @@ export type DropCampaignDetails_UserDropCampaignTimeBasedDropsBenefitEdgesBenefi
 export type DropCampaignDetails_UserDropCampaignTimeBasedDropsBenefitEdgesBenefitOwnerOrganization =
   {
     id: ID;
-    name: UnknownValue;
+    /** ⚠️ Low confidence about: nullable */
+    name: null | string;
     __typename: string;
   };
 
@@ -24201,7 +25109,8 @@ export type DropCampaign_DropCampaignGame = {
 /** ℹ️ Not real Twitch type name */
 export type DropCampaign_DropCampaignOwner = {
   id: ID;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   __typename: string;
 };
 
@@ -24236,7 +25145,8 @@ export type DropChannelCampaignsProgress_ChannelDropCampaignsProgressRewardGroup
 export type DropChannelCampaignsProgress_ChannelDropCampaignsProgressRewardGroupsLeaderboardConfigReward =
   {
     id: ID;
-    name: UnknownValue;
+    /** ⚠️ Low confidence about: nullable */
+    name: null | string;
     /**
      * ⚠️ Low confidence about: nullable
      * @format uri
@@ -24259,7 +25169,7 @@ export type DropChannelCampaignsProgress_DropsRewardGroupSelf = {
   currentSubs: UnknownValue;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   grantCount: null | number;
   /**
@@ -24303,7 +25213,8 @@ export type DropChannelCampaignsProgress_DropsRewardPool = {
 /** ℹ️ Not real Twitch type name */
 export type DropChannelCampaignsProgress_DropsRewardPoolRewards = {
   id: ID;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   /**
    * ⚠️ Low confidence about: nullable
    * @format uri
@@ -24487,7 +25398,8 @@ export type DropsPrivateCalloutClaim_ClaimDropRewardsRewards = {
    * @format uri
    */
   accountLinkURL: null | string;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   __typename: string;
 };
 
@@ -24495,7 +25407,8 @@ export type DropsPrivateCalloutClaim_ClaimDropRewardsRewards = {
 export type DropsPrivateCallout_DropEligibility = {
   dropType: null | {
     id: ID;
-    name: UnknownValue;
+    /** ⚠️ Low confidence about: nullable */
+    name: null | string;
     campaign:
       | null
       | DropsPrivateCallout_TimeBasedDropCampaign
@@ -24632,7 +25545,8 @@ export type EarnedDropReward_EarnedDropRewardCampaign = {
 export type EarnedDropReward_EarnedDropRewardItem = {
   id: ID;
   distributionType: UnknownValue;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   /**
    * ⚠️ Low confidence about: nullable
    * @format uri
@@ -24651,43 +25565,43 @@ export type EarningSettingsFragment = {
   /** @example ["Y29wb0NoYW5uZWxFYXJuaW5nU2V0dGluZ3M6NzEwOTI5Mzg=", "Y29wb0NoYW5uZWxFYXJuaW5nU2V0dGluZ3M6MTI4MjY="] */
   id: ID;
   /**
-   * @format int64
+   * @format uint32
    * @example [220]
    */
   averagePointsPerHour: number;
   /**
-   * @format int64
+   * @format int32
    * @example [350]
    */
   cheerPoints: number;
   /**
-   * @format int64
+   * @format int32
    * @example [50]
    */
   claimPoints: number;
   /**
-   * @format int64
+   * @format int32
    * @example [300]
    */
   followPoints: number;
   /**
-   * @format int64
+   * @format int32
    * @example [10]
    */
   passiveWatchPoints: number;
   /**
-   * @format int64
+   * @format int32
    * @example [250]
    */
   raidPoints: number;
   /**
-   * @format int64
+   * @format int32
    * @example [500]
    */
   subscriptionGiftPoints: number;
   watchStreakPoints: {
     /**
-     * @format int64
+     * @format uint32
      * @example [300, 350, 400, 450]
      */
     points: number;
@@ -24719,12 +25633,12 @@ export type EditBroadcastCategoryDropdownSearch_SearchCategories = {
       /** @example ["IRL", "Just Chatting", "Special Events", "Cyberpunk 2077", "League of Legends", "You Know The Drill", "RuneScape: Dragonwilds"] */
       name: string;
       /**
-       * @format int64
+       * @format uint32
        * @example [584353, 2909, 484662, 92801, 444549]
        */
       viewersCount: null | number;
       /**
-       * @format int64
+       * @format uint32
        * @example [52803600, 53204320, 53261452, 53270364]
        */
       followersCount: number;
@@ -24782,7 +25696,8 @@ export type EditBroadcastContextBroadcastSettingsMutation_UpdateBroadcastSetting
       | null
       | EditBroadcastContextBroadcastSettingsMutation_UpdateBroadcastSettingsBroadcastSettingsLiveUpNotificationInfo
       | EditBroadcastContextBroadcastSettingsMutation_UpdateBroadcastSettingsBroadcastSettingsLiveUpNotificationInfo[];
-    title: UnknownValue;
+    /** ⚠️ Low confidence about: nullable */
+    title: null | string;
     __typename: string;
   };
 
@@ -24790,7 +25705,8 @@ export type EditBroadcastContextBroadcastSettingsMutation_UpdateBroadcastSetting
 export type EditBroadcastContextBroadcastSettingsMutation_UpdateBroadcastSettingsBroadcastSettingsGame =
   {
     id: ID;
-    name: UnknownValue;
+    /** ⚠️ Low confidence about: nullable */
+    name: null | string;
     /** ⚠️ Low confidence about: nullable */
     displayName: null | string;
     tags: null | BroadcastTagFragment;
@@ -24925,7 +25841,11 @@ export type EditBroadcastContextQuery_ChannelRestriction = {
 export type EditBroadcastContextQuery_UserCostreamingSettings = {
   /** ⚠️ Low confidence about: nullable */
   isEnabled: null | boolean;
-  costreamingAllowlistSize: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  costreamingAllowlistSize: null | number;
   scope: UnknownValue;
   __typename: string;
 };
@@ -25077,7 +25997,8 @@ export type EditVideoPropertiesModalUpdateVideo_UpdateVideo = {
 /** ℹ️ Not real Twitch type name */
 export type EditVideoPropertiesModalUpdateVideo_UpdateVideoVideo = {
   id: ID;
-  title: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  title: null | string;
   /** ⚠️ Low confidence about: nullable */
   description: null | string;
   /**
@@ -25096,7 +26017,8 @@ export type EditVideoPropertiesModalUpdateVideo_UpdateVideoVideo = {
 /** ℹ️ Not real Twitch type name */
 export type EditVideoPropertiesModalUpdateVideo_UpdateVideoVideoGame = {
   id: ID;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   __typename: string;
 };
 
@@ -25124,7 +26046,7 @@ export type EditVideoPropertiesModalVideo = {
   language: string;
   game: null | EditVideoPropertiesModalGame;
   /**
-   * @format int64
+   * @format uint32
    * @example [15389, 4621, 621, 4472, 58]
    */
   lengthSeconds: number;
@@ -25132,12 +26054,12 @@ export type EditVideoPropertiesModalVideo = {
     mutedSegmentConnection: null | {
       nodes: {
         /**
-         * @format int64
+         * @format uint32
          * @example [180, 182, 184, 181]
          */
         duration: number;
         /**
-         * @format int64
+         * @format int32
          * @example [0, 4322, 4682, 5764, 10264, 15304]
          */
         offset: number;
@@ -25184,7 +26106,7 @@ export type EditVideoPropertiesModalVideo = {
   /** @example ["Twitch Recap: 2024 according to Twitch Chat!", "Creator Camp LIVE: Streaming Basics with @Snackless & @KawaiiGuy"] */
   title: null | string;
   /**
-   * @format int64
+   * @format uint32
    * @example [0, 772963, 171376, 163669, 1911, 684]
    */
   viewCount: number;
@@ -25200,12 +26122,12 @@ export type EditVideoPropertiesModalVideo = {
 export type EditVideoPropertiesModalVideo_VideoRenditionFormats = {
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   width: null | number;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   height: null | number;
   fps: UnknownValue;
@@ -25261,7 +26183,8 @@ export type EditableChannelsPage_UserEditableChannelsEdgesNode = {
 };
 
 export type EligiblePaymentMethodFragment = {
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   availabilityStatus: UnknownValue;
   __typename: "EligiblePaymentMethod";
 };
@@ -25290,7 +26213,8 @@ export type EmoteByIdQuery_Emote = {
 /** ℹ️ Not real Twitch type name */
 export type EmoteByIdQuery_EmoteModifiers = {
   code: UnknownValue;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   __typename: string;
 };
 
@@ -25336,7 +26260,11 @@ export type EmoteCard_EmoteBitsBadgeTierSummary = {
 export type EmoteCard_EmoteBitsBadgeTierSummarySelf = {
   /** ⚠️ Low confidence about: nullable */
   isUnlocked: null | boolean;
-  numberOfBitsUntilUnlock: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  numberOfBitsUntilUnlock: null | number;
   __typename: string;
 };
 
@@ -25424,7 +26352,8 @@ export type EmoteCard_EmoteOwnerSubscriptionProducts = {
   /** ⚠️ Low confidence about: nullable */
   displayName: null | string;
   tier: UnknownValue;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   /**
    * ⚠️ Low confidence about: nullable
    * @format uri
@@ -25493,7 +26422,11 @@ export type EmotePickerEmotePickerUserSubscriptionProducts_UserSelf = {
     | EmotePickerEmotePickerUserSubscriptionProducts_UserSelfFollower[];
   /** @aliasFor subscriptionTenure */
   cumulativeTenure: null | {
-    months: UnknownValue;
+    /**
+     * ⚠️ Low confidence about: nullable
+     * @format uint32
+     */
+    months: null | number;
     __typename: "SubscriptionTenure";
   };
   subscriptionBenefit: null | {
@@ -25565,7 +26498,8 @@ export type EmotePrefixSubmitEmotePrefix_SubmitEmotePrefix = {
 
 /** ℹ️ Not real Twitch type name */
 export type EmotePrefixSubmitEmotePrefix_SubmitEmotePrefixPrefix = {
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   state: UnknownValue;
   /** ⚠️ Low confidence about: nullable */
   isEditable: null | boolean;
@@ -25620,7 +26554,8 @@ export type EmoteSetsEdgeFragment_EmoteSetsEdgeNodeEmotes = {
 /** ℹ️ Not real Twitch type name */
 export type EmoteSetsEdgeFragment_EmoteSetsEdgeNodeEmotesModifiers = {
   code: UnknownValue;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   __typename: string;
 };
 
@@ -25686,14 +26621,23 @@ export type EmotesLibraryCreateArchivedEmote_CreateArchivedEmoteError = {
 
 /** ℹ️ Not real Twitch type name */
 export type EmotesLibraryUploaderQuery_UserEmoticonPrefix = {
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   __typename: string;
 };
 
 export type EmotesSettingsAdditionalEmoteLimit = {
   id: ID;
-  animatedEmoteLimit: UnknownValue;
-  staticEmoteLimit: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  animatedEmoteLimit: null | number;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  staticEmoteLimit: null | number;
   /** ⚠️ Low confidence about: nullable */
   isUnlocked: null | boolean;
   source: UnknownValue;
@@ -25704,7 +26648,7 @@ export type EmotesSettingsBitsBadgeTier = {
   threshold: UnknownValue;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   unlockedUsersCount: null | number;
   emoticons: null | EmotesSettingsEmote;
@@ -25730,7 +26674,7 @@ export type EmotesSettingsCheermoteTier = {
   /** @example ["Charity;1", "Charity;100"] */
   id: ID;
   /**
-   * @format int64
+   * @format int32
    * @example [1, 100, 1000, 5000, 10000]
    */
   bits: number;
@@ -25740,7 +26684,8 @@ export type EmotesSettingsCheermoteTier = {
 
 /** ℹ️ Not real Twitch type name */
 export type EmotesSettingsDashboardQuery_UserEmoticonPrefix = {
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   state: UnknownValue;
   /** ⚠️ Low confidence about: nullable */
   isEditable: null | boolean;
@@ -25799,7 +26744,7 @@ export type EmotesSettingsEmote = {
    */
   createdAt: null | string;
   /**
-   * @format int64
+   * @format int32
    * @example [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
    */
   order: number;
@@ -25947,7 +26892,11 @@ export type EmotesSettingsSubscriptionProduct = {
    * @example ["1000", "2000", "3000"]
    */
   tier: string;
-  animatedEmoteLimit: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  animatedEmoteLimit: null | number;
   /**
    * @pattern ^[0-9]+$
    * @example ["1707631"]
@@ -25955,7 +26904,11 @@ export type EmotesSettingsSubscriptionProduct = {
   emoteSetID: ID;
   emoteModifiers: null | SubscriptionProductEmoteModifier[];
   emoteGroups: EmotesSettingsEmoteGroup[];
-  emoteLimit: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  emoteLimit: null | number;
   additionalEmoteLimits: null | EmotesSettingsAdditionalEmoteLimit;
   __typename: "SubscriptionProduct";
 };
@@ -26039,10 +26992,26 @@ export type EmotesSettings_UserSettingsCheerCustomPrefix = {
 export type EmotesSettings_UserSubscriberScore = {
   current: UnknownValue;
   next: UnknownValue;
-  currentEmoteLimit: UnknownValue;
-  currentAnimatedEmoteLimit: UnknownValue;
-  nextEmoteLimit: UnknownValue;
-  nextAnimatedEmoteLimit: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  currentEmoteLimit: null | number;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  currentAnimatedEmoteLimit: null | number;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  nextEmoteLimit: null | number;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  nextAnimatedEmoteLimit: null | number;
   __typename: string;
 };
 
@@ -26465,11 +27434,19 @@ export type ExpiredSubscription_ExpiredSubscriptionChannelOwnerRoles = {
 
 /** ℹ️ Not real Twitch type name */
 export type ExpiredSubscription_ExpiredSubscriptionTenure = {
-  elapsedDays: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  elapsedDays: null | number;
   daysRemaining: UnknownValue;
   start: UnknownValue;
   end: UnknownValue;
-  months: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  months: null | number;
   __typename: string;
 };
 
@@ -26689,7 +27666,8 @@ export type ExtensionCategoryPage_ExtensionCategory = {
   id: ID;
   /** ⚠️ Low confidence about: nullable */
   description: null | string;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   extensions:
     | null
     | ExtensionCategoryPage_ExtensionCategoryExtensions
@@ -26789,7 +27767,11 @@ export type ExtensionConfigureModalApplyExtensionActivations_ApplyExtensionActiv
     permittedFeatures: null | {
       canSendChat: UnknownValue;
       canRetrieveSubscriptionStatus: UnknownValue;
-      canUseBits: UnknownValue;
+      /**
+       * ⚠️ Low confidence about: nullable
+       * @format uint32
+       */
+      canUseBits: null | number;
       dynamicManagement:
         | null
         | ExtensionConfigureModalApplyExtensionActivations_ExtensionInstallationFeatureFlagsDynamicManagement
@@ -26894,7 +27876,7 @@ export type ExtensionDashboardNav_ExtensionCategory = {
 export type ExtensionDashboardNav_ExtensionCategoryExtensions = {
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   totalCount: null | number;
   __typename: string;
@@ -27019,7 +28001,8 @@ export type ExtensionDetailsPage_Extension = {
 /** ℹ️ Not real Twitch type name */
 export type ExtensionDetailsPage_ExtensionCategories = {
   id: ID;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   __typename: string;
 };
 
@@ -27056,7 +28039,8 @@ export type ExtensionDiscoveryManifest = {
     | null
     | ExtensionDiscoveryManifest_ExtensionDiscoveryManifestIconURLs
     | ExtensionDiscoveryManifest_ExtensionDiscoveryManifestIconURLs[];
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   /**
    * ⚠️ Low confidence about: nullable
    * @format uri
@@ -27080,14 +28064,16 @@ export type ExtensionDiscoveryManifest = {
 /** ℹ️ Not real Twitch type name */
 export type ExtensionDiscoveryManifest_ExtensionDiscoveryManifestCategories = {
   id: ID;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   __typename: string;
 };
 
 /** ℹ️ Not real Twitch type name */
 export type ExtensionDiscoveryManifest_ExtensionDiscoveryManifestGames = {
   id: ID;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   /** ⚠️ Low confidence about: nullable */
   displayName: null | string;
   __typename: string;
@@ -27138,12 +28124,12 @@ export type ExtensionInstallationSelfEdge = {
       /** @example ["ACTIVE"] */
       state: string;
       /**
-       * @format int64
+       * @format int32
        * @example [0]
        */
       x: null | number;
       /**
-       * @format int64
+       * @format int32
        * @example [0]
        */
       y: null | number;
@@ -27259,7 +28245,11 @@ export type ExtensionManagementPageApplyExtensionActivations_ApplyExtensionActiv
     permittedFeatures: null | {
       canSendChat: UnknownValue;
       canRetrieveSubscriptionStatus: UnknownValue;
-      canUseBits: UnknownValue;
+      /**
+       * ⚠️ Low confidence about: nullable
+       * @format uint32
+       */
+      canUseBits: null | number;
       dynamicManagement:
         | null
         | ExtensionManagementPageApplyExtensionActivations_ExtensionInstallationFeatureFlagsDynamicManagement
@@ -27425,7 +28415,11 @@ export type ExtensionManagementPageExtensionInstallation_ExtensionViewsHidden = 
 export type ExtensionManagementPageFeatureFlagsFragment = {
   canSendChat: UnknownValue;
   canRetrieveSubscriptionStatus: UnknownValue;
-  canUseBits: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  canUseBits: null | number;
   dynamicManagement:
     | null
     | ExtensionManagementPageFeatureFlagsFragment_ExtensionInstallationFeatureFlagsDynamicManagement
@@ -27491,7 +28485,11 @@ export type ExtensionManifest_ExtensionManifestAssetManifest = {
   assetHash: UnknownValue;
   /** ⚠️ Low confidence about: nullable */
   fileName: null | string;
-  fileSize: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  fileSize: null | number;
   baseURI: UnknownValue;
   /**
    * ⚠️ Low confidence about: nullable
@@ -27580,7 +28578,8 @@ export type ExtensionManifest_ExtensionManifestDiscoveryManifest = {
     | null
     | ExtensionManifest_ExtensionManifestDiscoveryManifestIconURLs
     | ExtensionManifest_ExtensionManifestDiscoveryManifestIconURLs[];
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   /**
    * ⚠️ Low confidence about: nullable
    * @format uri
@@ -27604,14 +28603,16 @@ export type ExtensionManifest_ExtensionManifestDiscoveryManifest = {
 /** ℹ️ Not real Twitch type name */
 export type ExtensionManifest_ExtensionManifestDiscoveryManifestCategories = {
   id: ID;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   __typename: string;
 };
 
 /** ℹ️ Not real Twitch type name */
 export type ExtensionManifest_ExtensionManifestDiscoveryManifestGames = {
   id: ID;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   /** ⚠️ Low confidence about: nullable */
   displayName: null | string;
   __typename: string;
@@ -27664,7 +28665,7 @@ export type ExtensionManifest_ExtensionManifestViewsComponent = {
   scalePixels: UnknownValue;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   targetHeight: null | number;
   /** ⚠️ Low confidence about: nullable */
@@ -27720,7 +28721,7 @@ export type ExtensionManifest_ExtensionManifestViewsPanel = {
   canLinkExternalContent: UnknownValue;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   height: null | number;
   /**
@@ -27864,14 +28865,19 @@ export type ExtensionPanelConditionsBitsBalance_Extension = {
 /** ℹ️ Not real Twitch type name */
 export type ExtensionPanelConditionsBitsBalance_ExtensionChallengeCondition = {
   id: ID;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   __typename: string;
 };
 
 export type ExtensionPermissionsPageFeatureFlagsFragment = {
   canSendChat: UnknownValue;
   canRetrieveSubscriptionStatus: UnknownValue;
-  canUseBits: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  canUseBits: null | number;
   dynamicManagement:
     | null
     | ExtensionPermissionsPageFeatureFlagsFragment_ExtensionInstallationFeatureFlagsDynamicManagement
@@ -27923,7 +28929,11 @@ export type ExtensionPermissionsPageSetFeatureFlags_SetExtensionFeatureFlagsInst
 export type ExtensionPermissionsPageSetFeatureFlags_SetExtensionFeatureFlagsInstalledExtensionPermittedFeatures =
   {
     canSendChat: UnknownValue;
-    canUseBits: UnknownValue;
+    /**
+     * ⚠️ Low confidence about: nullable
+     * @format uint32
+     */
+    canUseBits: null | number;
     dynamicManagement:
       | null
       | ExtensionPermissionsPageSetFeatureFlags_SetExtensionFeatureFlagsInstalledExtensionPermittedFeaturesDynamicManagement
@@ -28181,23 +29191,23 @@ export type ExtensionViews = {
     viewerURL: string;
     canLinkExternalContent: boolean;
     /**
-     * @format int64
+     * @format int32
      * @example [40000, 32000]
      */
     aspectRatioX: number;
     /**
-     * @format int64
+     * @format int32
      * @example [58500, 49500]
      */
     aspectRatioY: number;
     /**
-     * @format int64
+     * @format uint32
      * @example [9200, 9000]
      */
     targetHeight: number;
     hasAutoscale: boolean;
     /**
-     * @format int64
+     * @format int32
      * @example [340, 330]
      */
     scalePixels: number;
@@ -28233,7 +29243,7 @@ export type ExtensionViews = {
   panel: null | {
     canLinkExternalContent: boolean;
     /**
-     * @format int64
+     * @format uint32
      * @example [325, 496, 500]
      */
     height: number;
@@ -28377,7 +29387,11 @@ export type ExtensionsDiscoveryPageInstallExtension_InstallExtension = {
     permittedFeatures: null | {
       canSendChat: UnknownValue;
       canRetrieveSubscriptionStatus: UnknownValue;
-      canUseBits: UnknownValue;
+      /**
+       * ⚠️ Low confidence about: nullable
+       * @format uint32
+       */
+      canUseBits: null | number;
       dynamicManagement:
         | null
         | ExtensionsDiscoveryPageInstallExtension_ExtensionInstallationFeatureFlagsDynamicManagement
@@ -28417,7 +29431,8 @@ export type ExtensionsDiscoveryPage_ExtensionCategoriesEdgesNode = {
     | null
     | ExtensionsDiscoveryPage_ExtensionCategoriesEdgesNodeExtensions
     | ExtensionsDiscoveryPage_ExtensionCategoriesEdgesNodeExtensions[];
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   type: UnknownValue;
   __typename: string;
 };
@@ -28441,7 +29456,8 @@ export type ExtensionsDiscoveryPage_ExtensionCategory = {
     | null
     | ExtensionsDiscoveryPage_ExtensionCategoryExtensions
     | ExtensionsDiscoveryPage_ExtensionCategoryExtensions[];
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   __typename: string;
 };
 
@@ -28478,7 +29494,11 @@ export type ExtensionsOverlay_UserSelf = {
 export type ExtensionsOverlay_UserSelfBanStatus = {
   /** ⚠️ Low confidence about: nullable */
   isPermanent: null | boolean;
-  expiresInMs: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  expiresInMs: null | number;
   __typename: string;
 };
 
@@ -28494,7 +29514,8 @@ export type ExternallyConfiguredSponsorshipCampaign_ExternallyConfiguredSponsors
   brandColor: null | string;
   /** ⚠️ Low confidence about: nullable */
   brandName: null | string;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   /** ⚠️ Low confidence about: nullable */
   description: null | string;
   /**
@@ -28572,7 +29593,7 @@ export type ExternallyConfiguredSponsorshipCampaign_ExternallyConfiguredSponsors
     platform: UnknownValue;
     /**
      * ⚠️ Low confidence about: nullable
-     * @format int64
+     * @format uint32
      */
     availableCount: null | number;
     __typename: string;
@@ -28784,7 +29805,8 @@ export type FFZCreatePoll_CreatePollPoll = {
 /** ℹ️ Not real Twitch type name */
 export type FFZCreatePoll_CreatePollPollChoices = {
   id: ID;
-  title: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  title: null | string;
   __typename: string;
 };
 
@@ -28833,11 +29855,12 @@ export type FFZDeleteChatMessage_DeleteChatMessageMessageSender = {
 export type FFZFetchPoll_Poll = {
   id: ID;
   status: UnknownValue;
-  title: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  title: null | string;
   ownedBy: null | FFZFetchPoll_PollOwnedBy | FFZFetchPoll_PollOwnedBy[];
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   durationSeconds: null | number;
   /**
@@ -28850,15 +29873,24 @@ export type FFZFetchPoll_Poll = {
    * @format date-time
    */
   startedAt: null | string;
-  totalVoters: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  totalVoters: null | number;
   choices: null | {
     id: ID;
-    title: UnknownValue;
+    /** ⚠️ Low confidence about: nullable */
+    title: null | string;
     votes: null | {
       id: ID;
       base: UnknownValue;
       bits: UnknownValue;
-      total: UnknownValue;
+      /**
+       * ⚠️ Low confidence about: nullable
+       * @format uint32
+       */
+      total: null | number;
       __typename: "PollVoteBreakdown";
     };
     __typename: "PollChoice";
@@ -28904,7 +29936,8 @@ export type FFZFollowUser_FollowUserFollow = {
 export type FFZGetDrops_CurrentUserInventory = {
   dropCampaignsInProgress: null | {
     id: ID;
-    name: UnknownValue;
+    /** ⚠️ Low confidence about: nullable */
+    name: null | string;
     status: UnknownValue;
     timeBasedDrops:
       | null
@@ -28918,7 +29951,8 @@ export type FFZGetDrops_CurrentUserInventory = {
 /** ℹ️ Not real Twitch type name */
 export type FFZGetDrops_DropCampaignTimeBasedDrops = {
   id: ID;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   requiredMinutesWatched: UnknownValue;
   self:
     | null
@@ -28943,7 +29977,7 @@ export type FFZGetDrops_DropCampaignTimeBasedDropsSelf = {
 export type FFZSearchCategory_SearchCategories = {
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   totalCount: null | number;
   pageInfo: null | {
@@ -28980,7 +30014,7 @@ export type FFZSearchCategory_SearchCategories = {
 export type FFZSearchUser_SearchUsers = {
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   totalCount: null | number;
   pageInfo: null | {
@@ -29144,7 +30178,11 @@ export type FamilyCenterGetMyScreenTime_CurrentUserDailyUsage = {
 
 /** ℹ️ Not real Twitch type name */
 export type FamilyCenterGetMyScreenTime_UserDailyUsageLimit = {
-  allocatedMinutes: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  allocatedMinutes: null | number;
   error:
     | null
     | FamilyCenterGetMyScreenTime_UserDailyUsageLimitError
@@ -29368,7 +30406,7 @@ export type FeaturedUpcomingStreams_FeaturedUpcomingStreamsNodes = {
   id: ID;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   reminderCount: null | number;
   segment:
@@ -29381,12 +30419,13 @@ export type FeaturedUpcomingStreams_FeaturedUpcomingStreamsNodes = {
 /** ℹ️ Not real Twitch type name */
 export type FeaturedUpcomingStreams_FeaturedUpcomingStreamsNodesSegment = {
   id: ID;
-  title: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  title: null | string;
   /** ⚠️ Low confidence about: nullable */
   baseSegmentID: null | ID;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   repeatEndsAfterCount: null | number;
   channel:
@@ -29413,7 +30452,8 @@ export type FeaturedUpcomingStreams_FeaturedUpcomingStreamsNodesSegment = {
 /** ℹ️ Not real Twitch type name */
 export type FeaturedUpcomingStreams_FeaturedUpcomingStreamsNodesSegmentChannel = {
   id: ID;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   owner:
     | null
     | FeaturedUpcomingStreams_FeaturedUpcomingStreamsNodesSegmentChannelOwner
@@ -29488,7 +30528,7 @@ export type FeaturedUpcomingStreams_FeaturedUpcomingStreamsNodesSegmentChannelSt
   id: ID;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   viewersCount: null | number;
   __typename: string;
@@ -29517,7 +30557,7 @@ export type FeedClipFragment_FeedClipContent = {
   createdAt: null | string;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   durationSeconds: null | number;
   game: null | FeedClipFragment_FeedClipContentGame | FeedClipFragment_FeedClipContentGame[];
@@ -29527,10 +30567,11 @@ export type FeedClipFragment_FeedClipContent = {
     | FeedClipFragment_FeedClipContentBroadcastIdentifier[];
   /** ⚠️ Low confidence about: nullable */
   slug: null | string;
-  title: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  title: null | string;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   viewCount: null | number;
   /** ⚠️ Low confidence about: nullable */
@@ -29541,7 +30582,7 @@ export type FeedClipFragment_FeedClipContent = {
   isCommentsEnabled: null | boolean;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   topLevelCommentCount: null | number;
   guestStarParticipants:
@@ -29578,16 +30619,20 @@ export type FeedClipFragment_FeedClipContentAssets = {
 
 /** ℹ️ Not real Twitch type name */
 export type FeedClipFragment_FeedClipContentAssetsVideoQualities = {
-  bitrate: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  bitrate: null | number;
   codecs: UnknownValue;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   height: null | number;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   width: null | number;
   videoCodec: UnknownValue;
@@ -29689,7 +30734,7 @@ export type FeedClipFragment_FeedClipContentBroadcasterStream = {
   id: ID;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   viewersCount: null | number;
   codec: UnknownValue;
@@ -29697,12 +30742,12 @@ export type FeedClipFragment_FeedClipContentBroadcasterStream = {
   isDualFormat: null | boolean;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   height: null | number;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   width: null | number;
   __typename: string;
@@ -29725,7 +30770,8 @@ export type FeedClipFragment_FeedClipContentGame = {
   slug: null | string;
   /** ⚠️ Low confidence about: nullable */
   displayName: null | string;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   __typename: string;
 };
 
@@ -29759,7 +30805,7 @@ export type FeedClipGuestStarUserFragment = {
      */
     id: ID;
     /**
-     * @format int64
+     * @format uint32
      * @example [0, 46802, 656, 1572, 1518, 1432]
      */
     viewersCount: number;
@@ -29811,7 +30857,7 @@ export type FeedCollaboratorUserFragment = {
      */
     id: ID;
     /**
-     * @format int64
+     * @format uint32
      * @example [0, 46802, 656, 1572, 1518, 1432]
      */
     viewersCount: number;
@@ -29863,10 +30909,11 @@ export type FeedContentFragmentPostPlay_FeedClipContent = {
    * @format uri
    */
   url: null | string;
-  title: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  title: null | string;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   viewCount: null | number;
   language: UnknownValue;
@@ -29896,7 +30943,7 @@ export type FeedContentFragmentPostPlay_FeedClipContent = {
   createdAt: null | string;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   durationSeconds: null | number;
   previewThumbnailProperties:
@@ -29929,7 +30976,8 @@ export type FeedContentFragmentPostPlay_FeedClipContentCurator = {
 /** ℹ️ Not real Twitch type name */
 export type FeedContentFragmentPostPlay_FeedClipContentGame = {
   id: ID;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   /** ⚠️ Low confidence about: nullable */
   displayName: null | string;
   /**
@@ -29956,10 +31004,11 @@ export type FeedContentFragment_FeedClipContent = {
    * @format uri
    */
   url: null | string;
-  title: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  title: null | string;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   viewCount: null | number;
   language: UnknownValue;
@@ -29988,7 +31037,7 @@ export type FeedContentFragment_FeedClipContent = {
   createdAt: null | string;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   durationSeconds: null | number;
   previewThumbnailProperties:
@@ -30040,7 +31089,8 @@ export type FeedContentFragment_FeedClipContentCurator = {
 /** ℹ️ Not real Twitch type name */
 export type FeedContentFragment_FeedClipContentGame = {
   id: ID;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   /**
    * ⚠️ Low confidence about: nullable
    * @aliasFor slug
@@ -30065,7 +31115,7 @@ export type FeedItemsInput = {
   feedLocation?: null | FeedItemsInputFeedLocation;
   feedLocationAttributes?: null | { categorySlugAllowlist?: null | string[] };
   ingress?: null | FeedItemsInputIngress;
-  /** @format int64 */
+  /** @format uint32 */
   limit?: null | number;
   requestID?: null | ID;
   sessionID?: null | ID;
@@ -30087,12 +31137,12 @@ export type FeedStreamFragment_FeedStreamContent = {
   id: ID;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   viewersCount: null | number;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   collaborationViewersCount: null | number;
   costreamDetails:
@@ -30122,12 +31172,12 @@ export type FeedStreamFragment_FeedStreamContent = {
   codec: UnknownValue;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   height: null | number;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   width: null | number;
   type: UnknownValue;
@@ -30199,7 +31249,8 @@ export type FeedStreamFragment_FeedStreamContentBroadcaster = {
 /** ℹ️ Not real Twitch type name */
 export type FeedStreamFragment_FeedStreamContentBroadcasterBroadcastSettings = {
   id: ID;
-  title: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  title: null | string;
   __typename: string;
 };
 
@@ -30308,7 +31359,7 @@ export type FeedStreamFragment_FeedStreamContentCostreamDetails = {
   role: UnknownValue;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   totalViewersCount: null | number;
   organizer:
@@ -30337,14 +31388,16 @@ export type FeedStreamFragment_FeedStreamContentCostreamDetailsOrganizerStream =
 /** ℹ️ Not real Twitch type name */
 export type FeedStreamFragment_FeedStreamContentFreeformTags = {
   id: ID;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   __typename: string;
 };
 
 /** ℹ️ Not real Twitch type name */
 export type FeedStreamFragment_FeedStreamContentGame = {
   id: ID;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   /** ⚠️ Low confidence about: nullable */
   displayName: null | string;
   /** ⚠️ Low confidence about: nullable */
@@ -30414,12 +31467,12 @@ export type FetchAdsServiceFetchAds_FetchedDisplayAdAds = {
   programIdentifier: UnknownValue;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   height: null | number;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   width: null | number;
   /** ⚠️ Low confidence about: nullable */
@@ -30446,7 +31499,8 @@ export type FetchAdsServiceFetchAds_FetchedDisplayAdAds = {
 
 /** ℹ️ Not real Twitch type name */
 export type FetchAdsServiceFetchAds_FetchedDisplayAdAdsAdFeedbackInfo = {
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   type: UnknownValue;
   page: UnknownValue;
   __typename: string;
@@ -30454,7 +31508,8 @@ export type FetchAdsServiceFetchAds_FetchedDisplayAdAdsAdFeedbackInfo = {
 
 /** ℹ️ Not real Twitch type name */
 export type FetchAdsServiceFetchAds_FetchedDisplayAdAdsAppMetadata = {
-  title: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  title: null | string;
   /** ⚠️ Low confidence about: nullable */
   description: null | string;
   /**
@@ -30576,11 +31631,12 @@ export type FlaggedTrack = {
   id: ID;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   muteDurationSeconds: null | number;
   performer: UnknownValue;
-  title: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  title: null | string;
   __typename: "FlaggedTrack";
 };
 
@@ -30609,7 +31665,11 @@ export type FollowAccountVerificationSettings_FollowAccountVerificationSettings 
 /** ℹ️ Not real Twitch type name */
 export type FollowAccountVerificationSettings_FollowAccountVerificationSettingsPartialEmailVerificationConfig =
   {
-    minimumAccountAgeInMinutes: UnknownValue;
+    /**
+     * ⚠️ Low confidence about: nullable
+     * @format uint32
+     */
+    minimumAccountAgeInMinutes: null | number;
     /** ⚠️ Low confidence about: nullable */
     shouldRestrictBasedOnAccountAge: null | boolean;
     __typename: string;
@@ -30618,7 +31678,11 @@ export type FollowAccountVerificationSettings_FollowAccountVerificationSettingsP
 /** ℹ️ Not real Twitch type name */
 export type FollowAccountVerificationSettings_FollowAccountVerificationSettingsPartialPhoneVerificationConfig =
   {
-    minimumAccountAgeInMinutes: UnknownValue;
+    /**
+     * ⚠️ Low confidence about: nullable
+     * @format uint32
+     */
+    minimumAccountAgeInMinutes: null | number;
     /** ⚠️ Low confidence about: nullable */
     shouldRestrictBasedOnAccountAge: null | boolean;
     __typename: string;
@@ -30942,7 +32006,11 @@ export type FollowVerificationSettings = {
 /** ℹ️ Not real Twitch type name */
 export type FollowVerificationSettings_FollowAccountVerificationSettingsPartialEmailVerificationConfig =
   {
-    minimumAccountAgeInMinutes: UnknownValue;
+    /**
+     * ⚠️ Low confidence about: nullable
+     * @format uint32
+     */
+    minimumAccountAgeInMinutes: null | number;
     /** ⚠️ Low confidence about: nullable */
     shouldRestrictBasedOnAccountAge: null | boolean;
     __typename: string;
@@ -30951,7 +32019,11 @@ export type FollowVerificationSettings_FollowAccountVerificationSettingsPartialE
 /** ℹ️ Not real Twitch type name */
 export type FollowVerificationSettings_FollowAccountVerificationSettingsPartialPhoneVerificationConfig =
   {
-    minimumAccountAgeInMinutes: UnknownValue;
+    /**
+     * ⚠️ Low confidence about: nullable
+     * @format uint32
+     */
+    minimumAccountAgeInMinutes: null | number;
     /** ⚠️ Low confidence about: nullable */
     shouldRestrictBasedOnAccountAge: null | boolean;
     __typename: string;
@@ -31008,7 +32080,7 @@ export type FollowedChannelsWidgetUser = {
      */
     id: ID;
     /**
-     * @format int64
+     * @format uint32
      * @example [0, 46802, 656, 1572, 1518, 1432]
      */
     viewersCount: number;
@@ -31052,7 +32124,7 @@ export type FollowedChannelsWidget_CurrentUserFollows = {
 export type FollowedIndexFollowCount_CurrentUserFollows = {
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   totalCount: null | number;
   __typename: string;
@@ -31079,7 +32151,8 @@ export type FollowedStreams_FollowedUpcomingStreams = {
 /** ℹ️ Not real Twitch type name */
 export type FollowedStreams_FollowedUpcomingStreamsEdgesNode = {
   id: ID;
-  title: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  title: null | string;
   /**
    * ⚠️ Low confidence about: nullable
    * @format date-time
@@ -31095,7 +32168,7 @@ export type FollowedStreams_FollowedUpcomingStreamsEdgesNode = {
   baseSegmentID: null | ID;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   repeatEndsAfterCount: null | number;
   channel:
@@ -31203,7 +32276,7 @@ export type FollowedVideosCurrentUser_CurrentUserFollowedVideos = {
 export type FollowedVideosCurrentUser_CurrentUserFollows = {
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   totalCount: null | number;
   __typename: string;
@@ -31245,7 +32318,7 @@ export type FollowingGamesCurrentUser_UserFollowedGames = {
      */
     boxArtURL: string;
     /**
-     * @format int64
+     * @format uint32
      * @example [584353, 2909, 484662, 92801, 444549]
      */
     viewersCount: null | number;
@@ -31276,7 +32349,7 @@ export type FollowingLiveCurrentUser_CurrentUserFollowedLiveUsers = {
 export type FollowingLiveCurrentUser_CurrentUserFollows = {
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   totalCount: null | number;
   __typename: string;
@@ -31410,7 +32483,7 @@ export type Game = {
   /** @example ["IRL", "Just Chatting", "Special Events", "Cyberpunk 2077", "League of Legends", "You Know The Drill", "RuneScape: Dragonwilds"] */
   name: string;
   /**
-   * @format int64
+   * @format uint32
    * @example [584353, 2909, 484662, 92801, 444549]
    */
   viewersCount: null | number;
@@ -31747,7 +32820,7 @@ export type GetActiveRocketBoostOpportunity_ChannelActiveRocketBoostOpportunity 
   expiresAt: null | string;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   remainingSeconds: null | number;
   boostUnitsContributed: UnknownValue;
@@ -31827,7 +32900,11 @@ export type GetBadgeProgress_SocialSharingBadgeProgress = {
 export type GetBadgeProgress_SocialSharingBadgeProgressEdgesNode = {
   currentBadgeLevel: UnknownValue;
   previousViewCountGoal: UnknownValue;
-  totalViewCounts: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  totalViewCounts: null | number;
   nextViewCountGoal: UnknownValue;
   broadcaster:
     | null
@@ -31880,7 +32957,11 @@ export type GetBrowserBackgroundUploadConfiguration_GetBrowserBackgroundUploadCo
    * @format uri
    */
   url: null | string;
-  size: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  size: null | number;
   /**
    * ⚠️ Low confidence about: nullable
    * @format date-time
@@ -31912,7 +32993,8 @@ export type GetChangelogEntries_ChangelogEntries = {
    * @format date-time
    */
   publishedAt: null | string;
-  title: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  title: null | string;
   /**
    * ⚠️ Low confidence about: nullable
    * @format uri
@@ -31994,10 +33076,11 @@ export type GetExternalContent_SocialSharingBadgeExternalContentEdgesNode = {
    * @format uri
    */
   url: null | string;
-  title: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  title: null | string;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   viewCount: null | number;
   platform: UnknownValue;
@@ -32046,7 +33129,11 @@ export type GetGuardianSettings_UserBroadcastingOffSettingError = {
 
 /** ℹ️ Not real Twitch type name */
 export type GetGuardianSettings_UserDailyUsageLimit = {
-  allocatedMinutes: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  allocatedMinutes: null | number;
   error:
     | null
     | GetGuardianSettings_UserDailyUsageLimitError
@@ -32186,7 +33273,7 @@ export type GetGuestStarSessionQuery_GuestStarSettings = {
   viewOnlyToken: UnknownValue;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   slotCount: null | number;
   __typename: string;
@@ -32207,17 +33294,33 @@ export type GetGuestStarSessionSettingsQuery_GuestStarSessionSettings = {
 /** ℹ️ Not real Twitch type name */
 export type GetHostQueueInfo_RequestToJoinHostQueueInfo = {
   id: ID;
-  size: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  size: null | number;
   status: UnknownValue;
-  maximumSize: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  maximumSize: null | number;
   /** ⚠️ Low confidence about: nullable */
   isSubsEnabled: null | boolean;
   /** ⚠️ Low confidence about: nullable */
   isAudioOnlyEnabled: null | boolean;
   /** ⚠️ Low confidence about: nullable */
   isfollowersEnabled: null | boolean;
-  minFollowingLength: UnknownValue;
-  minSubscriptionLength: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  minFollowingLength: null | number;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  minSubscriptionLength: null | number;
   __typename: string;
 };
 
@@ -32228,7 +33331,7 @@ export type GetHostSettings_GuestStarSessionHostSettings = {
   isBrowserSourceAudioEnabled: null | boolean;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   slotCount: null | number;
   guestScreensharePermission: UnknownValue;
@@ -32349,7 +33452,8 @@ export type GetHourlyViewersReportQuery_HourlyViewersReportReportRecentCategorie
     id: ID;
     /** ⚠️ Low confidence about: nullable */
     displayName: null | string;
-    name: UnknownValue;
+    /** ⚠️ Low confidence about: nullable */
+    name: null | string;
     originalReleaseDate: UnknownValue;
     /** ⚠️ Low confidence about: nullable */
     slug: null | string;
@@ -32440,14 +33544,46 @@ export type GetModAnalyticsSnapshotSummary_ModActionStreamSummaryCountByTypeStre
       node:
         | null
         | {
-            totalModeratorActions: UnknownValue;
-            totalSettingsChangesActions: UnknownValue;
-            totalDeleteMessageActions: UnknownValue;
-            totalAddBlockedTermActions: UnknownValue;
-            totalAddPermittedTermActions: UnknownValue;
-            totalModeratedUsers: UnknownValue;
-            totalBannedUsers: UnknownValue;
-            totalActiveModerators: UnknownValue;
+            /**
+             * ⚠️ Low confidence about: nullable
+             * @format uint32
+             */
+            totalModeratorActions: null | number;
+            /**
+             * ⚠️ Low confidence about: nullable
+             * @format uint32
+             */
+            totalSettingsChangesActions: null | number;
+            /**
+             * ⚠️ Low confidence about: nullable
+             * @format uint32
+             */
+            totalDeleteMessageActions: null | number;
+            /**
+             * ⚠️ Low confidence about: nullable
+             * @format uint32
+             */
+            totalAddBlockedTermActions: null | number;
+            /**
+             * ⚠️ Low confidence about: nullable
+             * @format uint32
+             */
+            totalAddPermittedTermActions: null | number;
+            /**
+             * ⚠️ Low confidence about: nullable
+             * @format uint32
+             */
+            totalModeratedUsers: null | number;
+            /**
+             * ⚠️ Low confidence about: nullable
+             * @format uint32
+             */
+            totalBannedUsers: null | number;
+            /**
+             * ⚠️ Low confidence about: nullable
+             * @format uint32
+             */
+            totalActiveModerators: null | number;
             __typename: "ChannelModActionStreamSummary";
           }
         | { __typename: "ChatterModActionStreamSummary" }
@@ -32485,7 +33621,11 @@ export type GetMusicChartsQuery_ExperimentMusicCharts = {
 export type GetMusicChartsQuery_ExperimentMusicChartsItems = {
   id: ID;
   value: UnknownValue;
-  previousRank: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  previousRank: null | number;
   chartData: null | {
     /**
      * @pattern ^[0-9]+$
@@ -32601,7 +33741,8 @@ export type GetQuestCampaignWithRewardGroups_QuestCampaign = {
    */
   endsAt: null | string;
   id: ID;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   owner:
     | null
     | GetQuestCampaignWithRewardGroups_QuestCampaignOwner
@@ -32644,7 +33785,8 @@ export type GetQuestCampaignWithRewardGroups_QuestCampaignChannelAllowlist = {
 /** ℹ️ Not real Twitch type name */
 export type GetQuestCampaignWithRewardGroups_QuestCampaignGame = {
   id: ID;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   /**
    * ⚠️ Low confidence about: nullable
    * @format uri
@@ -32656,7 +33798,8 @@ export type GetQuestCampaignWithRewardGroups_QuestCampaignGame = {
 /** ℹ️ Not real Twitch type name */
 export type GetQuestCampaignWithRewardGroups_QuestCampaignOwner = {
   id: ID;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   __typename: string;
 };
 
@@ -32723,7 +33866,11 @@ export type GetRequestToJoinQueue_RequestToJoinQueue = {
     | GetRequestToJoinQueue_RequestToJoinQueueHost
     | GetRequestToJoinQueue_RequestToJoinQueueHost[];
   status: UnknownValue;
-  size: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  size: null | number;
   requestToJoinGuests:
     | null
     | GetRequestToJoinQueue_RequestToJoinQueueRequestToJoinGuests
@@ -32756,7 +33903,7 @@ export type GetRequestToJoinQueue_RequestToJoinQueueRequestToJoinGuests = {
   };
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   totalCount: null | number;
   __typename: string;
@@ -32825,7 +33972,11 @@ export type GetSingleGiftPricing_OfferPromotionPromoDisplay = {
 /** ℹ️ Not real Twitch type name */
 export type GetSingleGiftPricing_PriceInfoDiscount = {
   price: UnknownValue;
-  total: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  total: null | number;
   __typename: string;
 };
 
@@ -32928,14 +34079,14 @@ export type GetStreamCampaign_GameLiftStreamCampaign = {
   description: null | string;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   gamePlayTimeSeconds: null | number;
   /** ⚠️ Low confidence about: nullable */
   isMature: null | boolean;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   loadingDurationSeconds: null | number;
   stage: UnknownValue;
@@ -32945,7 +34096,8 @@ export type GetStreamCampaign_GameLiftStreamCampaign = {
    */
   storeURL: null | string;
   storeType: UnknownValue;
-  title: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  title: null | string;
   priceCents: UnknownValue;
   error: UnknownValue;
   __typename: string;
@@ -32953,7 +34105,11 @@ export type GetStreamCampaign_GameLiftStreamCampaign = {
 
 /** ℹ️ Not real Twitch type name */
 export type GetSubscriberFollowersCount_UserSubscriberScore = {
-  count: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  count: null | number;
   __typename: string;
 };
 
@@ -32989,7 +34145,11 @@ export type GetSubscriptionPricing_UserSelf = {
   /** @aliasFor subscriptionTenure */
   cumulativeTenure: null | {
     daysRemaining: UnknownValue;
-    months: UnknownValue;
+    /**
+     * ⚠️ Low confidence about: nullable
+     * @format uint32
+     */
+    months: null | number;
     __typename: "SubscriptionTenure";
   };
   __typename: string;
@@ -33101,9 +34261,17 @@ export type GetUserPasskeys_GetUserPasskeysPasskeys = {
 /** ℹ️ Not real Twitch type name */
 export type GetViewerQueueInfo_RequestToJoinViewerQueueInfo = {
   id: ID;
-  size: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  size: null | number;
   status: UnknownValue;
-  maximumSize: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  maximumSize: null | number;
   /** ⚠️ Low confidence about: nullable */
   isSubsEnabled: null | boolean;
   /** ⚠️ Low confidence about: nullable */
@@ -33114,8 +34282,16 @@ export type GetViewerQueueInfo_RequestToJoinViewerQueueInfo = {
     | null
     | GetViewerQueueInfo_RequestToJoinViewerQueueInfoSelf
     | GetViewerQueueInfo_RequestToJoinViewerQueueInfoSelf[];
-  minSubscriptionLength: UnknownValue;
-  minFollowingLength: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  minSubscriptionLength: null | number;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  minFollowingLength: null | number;
   __typename: string;
 };
 
@@ -33288,7 +34464,7 @@ export type GiftHeroSlotNudge_HeroSlotNudgeBadgeProgression = {
 export type GiftHeroSlotNudge_HeroSlotNudgeGiftEmAll = {
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   followerCount: null | number;
   __typename: string;
@@ -33298,7 +34474,7 @@ export type GiftHeroSlotNudge_HeroSlotNudgeGiftEmAll = {
 export type GiftHeroSlotNudge_HeroSlotNudgeHypeTrain = {
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   giftBombThresholdCount: null | number;
   __typename: string;
@@ -33308,7 +34484,11 @@ export type GiftHeroSlotNudge_HeroSlotNudgeHypeTrain = {
 export type GiftHeroSlotNudge_HeroSlotNudgeLeaderboard = {
   /** ⚠️ Low confidence about: nullable */
   rivalName: null | string;
-  targetRank: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  targetRank: null | number;
   __typename: string;
 };
 
@@ -33343,7 +34523,7 @@ export type GiftRecipientSearchBarSearchUsers_SearchUsers = {
   };
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   totalCount: null | number;
   __typename: string;
@@ -33366,7 +34546,8 @@ export type GiftRecipientUserSubscriptionProduct = {
 };
 
 export type GiftSubMatchAdvertiserFragment = {
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   ctaMessage: UnknownValue;
   /**
    * ⚠️ Low confidence about: nullable
@@ -33846,7 +35027,11 @@ export type GuestStarNameplateSettings_GuestStarSettings = {
 
 /** ℹ️ Not real Twitch type name */
 export type GuestStarNameplateSettings_GuestStarSettingsHostSettingsBrowserSourceSettings = {
-  nameplateSize: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  nameplateSize: null | number;
   nameplateLocation: UnknownValue;
   __typename: string;
 };
@@ -34335,7 +35520,7 @@ export type GuestStarUserSettings_GuestStarSettings = {
   id: ID;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   slotCount: null | number;
   canModeratorsSendSlotsLive: UnknownValue;
@@ -34359,12 +35544,12 @@ export type GuestStarUserWithViewcount = DropinUserFragment & {
   description: null | string;
   stream: null | {
     /**
-     * @format int64
+     * @format uint32
      * @example [4617, 7717, 7714, 11, 4557]
      */
     collaborationViewersCount: null | number;
     /**
-     * @format int64
+     * @format uint32
      * @example [0, 46802, 656, 1572, 1518, 1432]
      */
     viewersCount: number;
@@ -34477,7 +35662,8 @@ export type HearthstoneDetails = {
 export type HearthstoneDetails_HearthstoneMomentDetailsBroadcasterHero = {
   id: ID;
   class: UnknownValue;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   __typename: string;
 };
 
@@ -34492,7 +35678,8 @@ export type HearthstoneDetails_HearthstoneMomentDetailsGameMode = {
 export type HearthstoneDetails_HearthstoneMomentDetailsOpponentHero = {
   id: ID;
   class: UnknownValue;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   __typename: string;
 };
 
@@ -34569,7 +35756,7 @@ export type HighlighterClipEdge = {
       __typename: "User";
     };
     /**
-     * @format int64
+     * @format uint32
      * @example [7897, 11412, 12062, 2238]
      */
     videoOffsetSeconds: null | number;
@@ -34621,12 +35808,12 @@ export type HighlighterEditors_UserEditors = {
 export type HighlighterGetUserQuota_UserVideoStorageQuota = {
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   limitInSeconds: null | number;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   usageInSeconds: null | number;
   __typename: string;
@@ -34647,7 +35834,7 @@ export type HighlighterMarkersBookmarkEdge_VideoBookmarkEdgeNode = {
   id: ID;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   positionSeconds: null | number;
   user:
@@ -34688,11 +35875,12 @@ export type HighlighterStitchHighlights_CreateMultiVideoHighlight = {
 
 /** ℹ️ Not real Twitch type name */
 export type HighlighterStitchHighlights_CreateMultiVideoHighlightHighlight = {
-  title: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  title: null | string;
   id: ID;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   lengthSeconds: null | number;
   __typename: string;
@@ -34710,7 +35898,7 @@ export type HighlighterVODSelectorSearchCreatorVideos_UserSearchVideos = {
        */
       id: ID;
       /**
-       * @format int64
+       * @format uint32
        * @example [15389, 4621, 621, 4472, 58]
        */
       lengthSeconds: number;
@@ -34892,7 +36080,7 @@ export type HomeShelfGame = {
   /** @example ["IRL", "Just Chatting", "Special Events", "Cyberpunk 2077", "League of Legends", "You Know The Drill", "RuneScape: Dragonwilds"] */
   name: string;
   /**
-   * @format int64
+   * @format uint32
    * @example [584353, 2909, 484662, 92801, 444549]
    */
   viewersCount: null | number;
@@ -34927,7 +36115,7 @@ export type HomeShelfUser = {
      */
     id: ID;
     /**
-     * @format int64
+     * @format uint32
      * @example [0, 46802, 656, 1572, 1518, 1432]
      */
     viewersCount: number;
@@ -34956,12 +36144,12 @@ export type HomeShelfVideosVideo = {
    */
   publishedAt: string;
   /**
-   * @format int64
+   * @format uint32
    * @example [0, 772963, 171376, 163669, 1911, 684]
    */
   viewCount: number;
   /**
-   * @format int64
+   * @format uint32
    * @example [15389, 4621, 621, 4472, 58]
    */
   lengthSeconds: number;
@@ -35109,7 +36297,7 @@ export type HostRecommendationsFragment = {
      */
     id: ID;
     /**
-     * @format int64
+     * @format uint32
      * @example [0, 46802, 656, 1572, 1518, 1432]
      */
     viewersCount: number;
@@ -35142,12 +36330,12 @@ export type HostTrainContent_HostTrain = {
   isAboard: null | boolean;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   passengerCount: null | number;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   potentialPassengerCount: null | number;
   journey: null | HostTrainContent_HostTrainJourney | HostTrainContent_HostTrainJourney[];
@@ -35227,7 +36415,11 @@ export type HypeTrainApproaching = {
 
 export type HypeTrainApproachingEventsRemaining = {
   events: UnknownValue;
-  secondsRemaining: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  secondsRemaining: null | number;
   __typename: "HypeTrainApproachingEventsRemaining";
 };
 
@@ -35271,7 +36463,11 @@ export type HypeTrainCompleted = {
     | HypeTrainCompleted_HypeTrainCompletedLevel[];
   goal: UnknownValue;
   progression: UnknownValue;
-  total: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  total: null | number;
   __typename: "HypeTrainCompleted";
 };
 
@@ -35360,7 +36556,11 @@ export type HypeTrainDashboardConfig = {
     | null
     | HypeTrainDashboardConfig_HypeTrainConfigKickoff
     | HypeTrainDashboardConfig_HypeTrainConfigKickoff[];
-  cooldownPeriodMinutes: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  cooldownPeriodMinutes: null | number;
   difficulty: UnknownValue;
   difficultySettings:
     | null
@@ -35387,7 +36587,7 @@ export type HypeTrainDashboardConfig_HypeTrainConfigKickoff = {
   eventsThreshold: UnknownValue;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   periodSeconds: null | number;
   minPoints: UnknownValue;
@@ -35511,7 +36711,11 @@ export type HypeTrainProgress = {
   level: null | HypeTrainLevel;
   goal: UnknownValue;
   progression: UnknownValue;
-  total: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  total: null | number;
   allTimeHighState: UnknownValue;
   __typename: "HypeTrainProgress";
 };
@@ -35527,7 +36731,8 @@ export type HypeTrainReward =
 
 export type IabInformation = {
   id: ID;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   /** ⚠️ Low confidence about: nullable */
   description: null | string;
   illustrations: UnknownValue;
@@ -35559,8 +36764,13 @@ export type ImpressionAnalytics_ImpressionAnalytics = {
 
 /** ℹ️ Not real Twitch type name */
 export type ImpressionAnalytics_ImpressionAnalyticsItems = {
-  count: UnknownValue;
-  name: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  count: null | number;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   __typename: string;
 };
 
@@ -35572,8 +36782,16 @@ export type IncomingAdAlertSnoozeAd_SnoozeAd = {
 
 /** ℹ️ Not real Twitch type name */
 export type IncomingAdAlertSnoozeConfig_AdPropertiesDensitySnooze = {
-  currentAmount: UnknownValue;
-  maxAmount: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  currentAmount: null | number;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  maxAmount: null | number;
   __typename: string;
 };
 
@@ -35590,7 +36808,7 @@ export type IncomingRequests_ChannelBansSharingRelationships = {
 export type IncomingRequests_ChannelBansSharingRelationshipsIncomingRequests = {
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   totalCount: null | number;
   pageInfo: null | {
@@ -35763,7 +36981,7 @@ export type InsightsUserFragment = {
   isPartner: boolean;
   followers: {
     /**
-     * @format int64
+     * @format uint32
      * @example [0, 2430015, 2459534, 2471025, 2380069, 2380116]
      */
     totalCount: number;
@@ -35842,11 +37060,12 @@ export type InventoryUserDropReward = {
    * @format date-time
    */
   lastAwardedAt: null | string;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   requiredAccountLink: UnknownValue;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   totalCount: null | number;
   __typename: "UserDropReward";
@@ -35862,7 +37081,8 @@ export type InventoryUserDropReward_UserDropRewardBenefit = {
 /** ℹ️ Not real Twitch type name */
 export type InventoryUserDropReward_UserDropRewardGame = {
   id: ID;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   /** ⚠️ Low confidence about: nullable */
   slug: null | string;
   __typename: string;
@@ -36131,7 +37351,7 @@ export type ItBeginsQuest = {
 export type ItemConnection = {
   items: null | {
     /**
-     * @format int64
+     * @format uint32
      * @example [4, 3, 33, 48, 51, 23, 49, 24, 2, 1]
      */
     totalCount: number;
@@ -36222,7 +37442,7 @@ export type JoinHostTrain_JoinHostTrainTrain = {
   isAboard: null | boolean;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   potentialPassengerCount: null | number;
   __typename: string;
@@ -36421,7 +37641,7 @@ export type LeaveHostTrain_LeaveHostTrainTrain = {
   isAboard: null | boolean;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   passengerCount: null | number;
   __typename: string;
@@ -36473,7 +37693,7 @@ export type LikeClipComment_LikeClipCommentComment = {
   id: ID;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   likeCount: null | number;
   /** ⚠️ Low confidence about: nullable */
@@ -36546,7 +37766,7 @@ export type LiveChannelFragment = {
       __typename: "Game";
     };
     /**
-     * @format int64
+     * @format uint32
      * @example [0, 46802, 656, 1572, 1518, 1432]
      */
     viewersCount: number;
@@ -36568,12 +37788,12 @@ export type LiveChannelFragment = {
      */
     verticalPreviewImageURL: string;
     /**
-     * @format int64
+     * @format uint32
      * @example [0, 1440, 1080, 720, 768, 936, 1200, 900, 1280, 864, 2160]
      */
     height: number;
     /**
-     * @format int64
+     * @format uint32
      * @example [0, 2560, 1920, 1280, 1360, 1664]
      */
     width: number;
@@ -36737,7 +37957,8 @@ export type LiveShoppingProductDetails_LiveShoppingProductDetailsProductDetails 
   sellerName: null | string;
   /** ⚠️ Low confidence about: nullable */
   shipperName: null | string;
-  title: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  title: null | string;
   variationDimensions:
     | null
     | LiveShoppingProductDetails_LiveShoppingProductDetailsProductDetailsVariationDimensions
@@ -36753,7 +37974,7 @@ export type LiveShoppingProductDetails_LiveShoppingProductDetailsProductDetails 
 export type LiveShoppingProductDetails_LiveShoppingProductDetailsProductDetailsImageList = {
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   height: null | number;
   /**
@@ -36763,7 +37984,7 @@ export type LiveShoppingProductDetails_LiveShoppingProductDetailsProductDetailsI
   url: null | string;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   width: null | number;
   __typename: string;
@@ -36772,7 +37993,8 @@ export type LiveShoppingProductDetails_LiveShoppingProductDetailsProductDetailsI
 /** ℹ️ Not real Twitch type name */
 export type LiveShoppingProductDetails_LiveShoppingProductDetailsProductDetailsVariationDimensions =
   {
-    name: UnknownValue;
+    /** ⚠️ Low confidence about: nullable */
+    name: null | string;
     values: UnknownValue;
     __typename: string;
   };
@@ -36829,7 +38051,8 @@ export type LiveShoppingProductSummaries_LiveShoppingProductSummariesProductSumm
    * @format uri
    */
   productDetailPageURL: null | string;
-  title: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  title: null | string;
   __typename: string;
 };
 
@@ -36837,7 +38060,7 @@ export type LiveShoppingProductSummaries_LiveShoppingProductSummariesProductSumm
 export type LiveShoppingProductSummaries_LiveShoppingProductSummariesProductSummariesImageList = {
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   height: null | number;
   /**
@@ -36847,7 +38070,7 @@ export type LiveShoppingProductSummaries_LiveShoppingProductSummariesProductSumm
   url: null | string;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   width: null | number;
   __typename: string;
@@ -37005,7 +38228,8 @@ export type LoyaltyBadge = {
    * @format uri
    */
   image4xURL: null | string;
-  title: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  title: null | string;
   __typename: "LoyaltyBadge";
 };
 
@@ -37063,7 +38287,11 @@ export type LoyaltyBadgesCurrentSectionQuery_UserRelationship = {
   /** @aliasFor subscriptionTenure */
   cumulativeTenure: null | {
     daysRemaining: UnknownValue;
-    months: UnknownValue;
+    /**
+     * ⚠️ Low confidence about: nullable
+     * @format uint32
+     */
+    months: null | number;
     __typename: "SubscriptionTenure";
   };
   __typename: string;
@@ -37080,7 +38308,11 @@ export type LoyaltyBadgesManageSectionQuery_UserRelationship = {
   /** @aliasFor subscriptionTenure */
   cumulativeTenure: null | {
     daysRemaining: UnknownValue;
-    months: UnknownValue;
+    /**
+     * ⚠️ Low confidence about: nullable
+     * @format uint32
+     */
+    months: null | number;
     __typename: "SubscriptionTenure";
   };
   __typename: string;
@@ -37128,7 +38360,8 @@ export type LunaGamesCollection_LunaCollection = {
 /** ℹ️ Not real Twitch type name */
 export type LunaGamesCollection_LunaCollectionTiles = {
   id: ID;
-  title: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  title: null | string;
   /**
    * ⚠️ Low confidence about: nullable
    * @format uri
@@ -37238,7 +38471,11 @@ export type MWebBitsBuyCardOffers_CurrentUserBitsProductsOffersListingChargeMode
       __typename: "FixedPricing";
       price: UnknownValue;
       tax: UnknownValue;
-      total: UnknownValue;
+      /**
+       * ⚠️ Low confidence about: nullable
+       * @format uint32
+       */
+      total: null | number;
       discount:
         | null
         | MWebBitsBuyCardOffers_FixedPricingDiscount
@@ -37257,7 +38494,11 @@ export type MWebBitsBuyCardOffers_CurrentUserBitsProductsPromo = {
 export type MWebBitsBuyCardOffers_FixedPricingDiscount = {
   price: UnknownValue;
   tax: UnknownValue;
-  total: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  total: null | number;
   __typename: string;
 };
 
@@ -37352,7 +38593,11 @@ export type MWebViewerCardModLogsCount_ViewerCardModLogs = {
   messages:
     | null
     | {
-        count: UnknownValue;
+        /**
+         * ⚠️ Low confidence about: nullable
+         * @format uint32
+         */
+        count: null | number;
         __typename: "ViewerCardModLogsMessagesConnection";
       }
     | { __typename: "ViewerCardModLogsMessagesError" };
@@ -37360,7 +38605,11 @@ export type MWebViewerCardModLogsCount_ViewerCardModLogs = {
   bans:
     | null
     | {
-        count: UnknownValue;
+        /**
+         * ⚠️ Low confidence about: nullable
+         * @format uint32
+         */
+        count: null | number;
         __typename: "ModLogsTargetedActionsConnection";
       }
     | { __typename: "ModLogsTargetedActionsError" };
@@ -37368,7 +38617,11 @@ export type MWebViewerCardModLogsCount_ViewerCardModLogs = {
   timeouts:
     | null
     | {
-        count: UnknownValue;
+        /**
+         * ⚠️ Low confidence about: nullable
+         * @format uint32
+         */
+        count: null | number;
         __typename: "ModLogsTargetedActionsConnection";
       }
     | { __typename: "ModLogsTargetedActionsError" };
@@ -37376,7 +38629,11 @@ export type MWebViewerCardModLogsCount_ViewerCardModLogs = {
   warnings:
     | null
     | {
-        count: UnknownValue;
+        /**
+         * ⚠️ Low confidence about: nullable
+         * @format uint32
+         */
+        count: null | number;
         __typename: "ModLogsTargetedActionsConnection";
       }
     | { __typename: "ModLogsTargetedActionsError" };
@@ -37507,10 +38764,22 @@ export type MessageSender = {
 };
 
 export type MetadataFragment = {
-  totalMinutesBroadcast: UnknownValue;
-  totalMinutesWatched: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  totalMinutesBroadcast: null | number;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  totalMinutesWatched: null | number;
   uniqueCreators: UnknownValue;
-  totalDaysBroadcastForWeek: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  totalDaysBroadcastForWeek: null | number;
   ratio: UnknownValue;
   currentViewers: UnknownValue;
   currentStreamers: UnknownValue;
@@ -37623,10 +38892,26 @@ export type ModActionStreamSummaryCountByType_ModActionStreamSummaryCountByTypeS
               | null
               | ModActionStreamSummaryCountByType_ChatterModActionStreamSummaryChatter
               | ModActionStreamSummaryCountByType_ChatterModActionStreamSummaryChatter[];
-            totalBans: UnknownValue;
-            totalTimeouts: UnknownValue;
-            totalWarnings: UnknownValue;
-            totalDeletedMessages: UnknownValue;
+            /**
+             * ⚠️ Low confidence about: nullable
+             * @format uint32
+             */
+            totalBans: null | number;
+            /**
+             * ⚠️ Low confidence about: nullable
+             * @format uint32
+             */
+            totalTimeouts: null | number;
+            /**
+             * ⚠️ Low confidence about: nullable
+             * @format uint32
+             */
+            totalWarnings: null | number;
+            /**
+             * ⚠️ Low confidence about: nullable
+             * @format uint32
+             */
+            totalDeletedMessages: null | number;
             __typename: "ChatterModActionStreamSummary";
           }
         | { __typename: "ChannelModActionStreamSummary" }
@@ -37771,7 +39056,11 @@ export type ModLogsTargetedActionsResultFragment =
       __typename: "ModLogsTargetedActionsError";
     }
   | {
-      count: UnknownValue;
+      /**
+       * ⚠️ Low confidence about: nullable
+       * @format uint32
+       */
+      count: null | number;
       pageInfo: null | {
         hasNextPage: boolean;
         __typename: "PageInfo";
@@ -37858,7 +39147,8 @@ export type ModViewWhatsNewEntries_ModViewNewsfeedEntries = {
    * @format date-time
    */
   publishedAt: null | string;
-  title: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  title: null | string;
   /**
    * ⚠️ Low confidence about: nullable
    * @format uri
@@ -37911,7 +39201,7 @@ export type ModeratedChannel = {
      */
     id: ID;
     /**
-     * @format int64
+     * @format uint32
      * @example [0, 46802, 656, 1572, 1518, 1432]
      */
     viewersCount: number;
@@ -37941,7 +39231,11 @@ export type ModeratedChannels_ModeratedChannels = {
 
 /** ℹ️ Not real Twitch type name */
 export type ModerationToolsRewardsQueueLink_CommunityPointsChannelSettingsSummarizedRewards = {
-  count: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  count: null | number;
   /** ⚠️ Low confidence about: nullable */
   isCountAtMaximum: null | boolean;
   __typename: string;
@@ -38004,10 +39298,26 @@ export type ModeratorModActionStreamSummaryCountByType_ModActionStreamSummaryCou
               | null
               | ModeratorModActionStreamSummaryCountByType_ModeratorModActionStreamSummaryModerator
               | ModeratorModActionStreamSummaryCountByType_ModeratorModActionStreamSummaryModerator[];
-            totalBanActions: UnknownValue;
-            totalTimeoutActions: UnknownValue;
-            totalWarnActions: UnknownValue;
-            totalDeleteMessageActions: UnknownValue;
+            /**
+             * ⚠️ Low confidence about: nullable
+             * @format uint32
+             */
+            totalBanActions: null | number;
+            /**
+             * ⚠️ Low confidence about: nullable
+             * @format uint32
+             */
+            totalTimeoutActions: null | number;
+            /**
+             * ⚠️ Low confidence about: nullable
+             * @format uint32
+             */
+            totalWarnActions: null | number;
+            /**
+             * ⚠️ Low confidence about: nullable
+             * @format uint32
+             */
+            totalDeleteMessageActions: null | number;
             __typename: "ModeratorModActionStreamSummary";
           }
         | { __typename: "ChannelModActionStreamSummary" }
@@ -38061,7 +39371,8 @@ export type ModifyEmoteOwnedEmotes_CurrentUserEmoteSetsEmotes = {
 /** ℹ️ Not real Twitch type name */
 export type ModifyEmoteOwnedEmotes_CurrentUserEmoteSetsEmotesModifiers = {
   code: UnknownValue;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   __typename: string;
 };
 
@@ -38077,7 +39388,11 @@ export type ModiversaryStatusQuery_UserModiversary = {
   /** ⚠️ Low confidence about: nullable */
   hasMilestoneAlert: null | boolean;
   canSendUserNotice: UnknownValue;
-  months: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  months: null | number;
   __typename: string;
 };
 
@@ -38154,8 +39469,16 @@ export type MonetizationSetupStepEmailQuery_PayoutInviteWorkflowRegistration = {
 
 /** ℹ️ Not real Twitch type name */
 export type MonetizationSetupStepQuery_CurrentUserBirthday = {
-  year: UnknownValue;
-  month: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  year: null | number;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  month: null | number;
   day: UnknownValue;
   __typename: string;
 };
@@ -38276,12 +39599,12 @@ export type MwebChanneLiveStreamInfoFragment = LegacyMWebSubscribeButtonFragment
      */
     id: ID;
     /**
-     * @format int64
+     * @format uint32
      * @example [0, 46802, 656, 1572, 1518, 1432]
      */
     viewersCount: number;
     /**
-     * @format int64
+     * @format uint32
      * @example [4617, 7717, 7714, 11, 4557]
      */
     collaborationViewersCount: null | number;
@@ -38289,7 +39612,7 @@ export type MwebChanneLiveStreamInfoFragment = LegacyMWebSubscribeButtonFragment
       /** @example ["ORGANIZER", "COSTREAMER"] */
       role: string;
       /**
-       * @format int64
+       * @format uint32
        * @example [53318, 665, 54790, 55713, 54158]
        */
       totalViewersCount: number;
@@ -38430,12 +39753,12 @@ export type MwebChannelClipPageRelatedClipFragment = {
    */
   thumbnailURL: string;
   /**
-   * @format int64
+   * @format uint32
    * @example [0, 957063, 957456, 899934, 944919, 773854]
    */
   viewCount: number;
   /**
-   * @format int64
+   * @format uint32
    * @example [44, 26, 25, 42, 30, 59, 36, 41, 60, 29]
    */
   durationSeconds: number;
@@ -38559,7 +39882,7 @@ export type MwebChannelFeaturedCardVideoFragment = {
   /** @example ["Twitch Recap: 2024 according to Twitch Chat!", "Creator Camp LIVE: Streaming Basics with @Snackless & @KawaiiGuy"] */
   title: null | string;
   /**
-   * @format int64
+   * @format uint32
    * @example [0, 772963, 171376, 163669, 1911, 684]
    */
   viewCount: number;
@@ -38875,12 +40198,12 @@ export type MwebChannelVODPageRelatedVODFragment = {
    */
   previewThumbnailURL: string;
   /**
-   * @format int64
+   * @format uint32
    * @example [0, 772963, 171376, 163669, 1911, 684]
    */
   viewCount: number;
   /**
-   * @format int64
+   * @format uint32
    * @example [15389, 4621, 621, 4472, 58]
    */
   lengthSeconds: number;
@@ -39047,7 +40370,7 @@ export type MwebClipCard = {
    */
   createdAt: string;
   /**
-   * @format int64
+   * @format uint32
    * @example [44, 26, 25, 42, 30, 59, 36, 41, 60, 29]
    */
   durationSeconds: number;
@@ -39079,7 +40402,7 @@ export type MwebClipCard = {
    */
   clipTitle: string;
   /**
-   * @format int64
+   * @format uint32
    * @example [0, 957063, 957456, 899934, 944919, 773854]
    * @aliasFor viewCount
    */
@@ -39112,7 +40435,7 @@ export type MwebCollaborationDiscoveryUserFragment = {
      */
     id: ID;
     /**
-     * @format int64
+     * @format uint32
      * @example [0, 46802, 656, 1572, 1518, 1432]
      */
     viewersCount: number;
@@ -39442,7 +40765,7 @@ export type MwebGameCard = {
   /** @example ["irl", "just-chatting", "special-events", "cyberpunk-2077", "grand-theft-auto-v", "overwatch-2", "counter-strike"] */
   slug: string;
   /**
-   * @format int64
+   * @format uint32
    * @example [584353, 2909, 484662, 92801, 444549]
    */
   viewersCount: null | number;
@@ -39488,7 +40811,7 @@ export type MwebStreamCard = {
    */
   id: ID;
   /**
-   * @format int64
+   * @format uint32
    * @example [0, 46802, 656, 1572, 1518, 1432]
    */
   viewersCount: number;
@@ -39506,12 +40829,12 @@ export type MwebStreamCard = {
    */
   verticalPreviewImageURL: string;
   /**
-   * @format int64
+   * @format uint32
    * @example [0, 1440, 1080, 720, 768, 936, 1200, 900, 1280, 864, 2160]
    */
   height: number;
   /**
-   * @format int64
+   * @format uint32
    * @example [0, 2560, 1920, 1280, 1360, 1664]
    */
   width: number;
@@ -39579,7 +40902,7 @@ export type MwebStreamCardHorizontalFragment = {
    */
   id: ID;
   /**
-   * @format int64
+   * @format uint32
    * @example [0, 46802, 656, 1572, 1518, 1432]
    */
   viewersCount: number;
@@ -39597,12 +40920,12 @@ export type MwebStreamCardHorizontalFragment = {
    */
   verticalPreviewImageURL: string;
   /**
-   * @format int64
+   * @format uint32
    * @example [0, 1440, 1080, 720, 768, 936, 1200, 900, 1280, 864, 2160]
    */
   height: number;
   /**
-   * @format int64
+   * @format uint32
    * @example [0, 2560, 1920, 1280, 1360, 1664]
    */
   width: number;
@@ -39703,7 +41026,8 @@ export type MwebStreamCardHorizontalFragment_ChannelCollaboration = {
 
 export type MwebSubfeedByIdQuery_Subfeed = {
   id: ID;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   feedLocation: UnknownValue;
   locationAttributes:
     | null
@@ -39731,7 +41055,8 @@ export type MwebSubfeedsQuery_Subfeeds = {
 /** ℹ️ Not real Twitch type name */
 export type MwebSubfeedsQuery_SubfeedsEdgesNode = {
   id: ID;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   feedLocation: UnknownValue;
   locationAttributes:
     | null
@@ -39764,7 +41089,7 @@ export type MwebUserCardFragment = {
      */
     id: ID;
     /**
-     * @format int64
+     * @format uint32
      * @example [0, 46802, 656, 1572, 1518, 1432]
      */
     viewersCount: number;
@@ -39788,12 +41113,12 @@ export type MwebUserCardFragment = {
 export type MwebVerticalFeedItemsQuery_BreakpointsWatchInteractionIntervals = {
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   intervalSeconds: null | number;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   durationSeconds: null | number;
   __typename: string;
@@ -39806,7 +41131,11 @@ export type MwebVerticalFeedItemsQuery_FeedItems = {
     | MwebVerticalFeedItemsQuery_FeedItemsSession
     | MwebVerticalFeedItemsQuery_FeedItemsSession[];
   id: ID;
-  recommendedLimit: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  recommendedLimit: null | number;
   fallbackCursor: UnknownValue;
   /** ⚠️ Low confidence about: nullable */
   isEndOfContent: null | boolean;
@@ -39852,7 +41181,7 @@ export type MwebVerticalFeedItemsQuery_FeedItemsSession = {
 export type MwebVerticalFeedItemsQuery_FeedItemsWatchBehavior = {
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   maxStreamWatchSeconds: null | number;
   watchFireBehavior: null | {
@@ -39912,12 +41241,12 @@ export type MwebVideoCard = {
    */
   videoTitle: null | string;
   /**
-   * @format int64
+   * @format uint32
    * @example [15389, 4621, 621, 4472, 58]
    */
   lengthSeconds: number;
   /**
-   * @format int64
+   * @format uint32
    * @example [0, 772963, 171376, 163669, 1911, 684]
    * @aliasFor viewCount
    */
@@ -39990,7 +41319,7 @@ export type MwebVodHorizontalCardFragment = {
     __typename: "Game";
   };
   /**
-   * @format int64
+   * @format uint32
    * @example [15389, 4621, 621, 4472, 58]
    */
   lengthSeconds: number;
@@ -40163,12 +41492,12 @@ export type NativeChannelLiveStreamInfoFragment = LegacyMWebSubscribeButtonFragm
      */
     id: ID;
     /**
-     * @format int64
+     * @format uint32
      * @example [0, 46802, 656, 1572, 1518, 1432]
      */
     viewersCount: number;
     /**
-     * @format int64
+     * @format uint32
      * @example [4617, 7717, 7714, 11, 4557]
      */
     collaborationViewersCount: null | number;
@@ -40223,7 +41552,7 @@ export type NeoCheermote = {
     /** @example ["Charity;1", "Charity;100"] */
     id: ID;
     /**
-     * @format int64
+     * @format int32
      * @example [1, 100, 1000, 5000, 10000]
      */
     bits: number;
@@ -40336,7 +41665,8 @@ export type NielsenContentMetadataVideo = {
 };
 
 export type NonTCFVendorStatus = {
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   consentStatus: UnknownValue;
   /** ⚠️ Low confidence about: nullable */
   hasUserSetConsent: null | boolean;
@@ -40399,7 +41729,7 @@ export type NotificationSettingsFollowEdge = {
     login: string;
     followers: {
       /**
-       * @format int64
+       * @format uint32
        * @example [0, 2430015, 2459534, 2471025, 2380069, 2380116]
        */
       totalCount: number;
@@ -40431,7 +41761,8 @@ export type NotifyGuestStarFollowers_NotifyGuestStarFollowersError = {
 
 export type OauthFields = {
   id: ID;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   /**
    * ⚠️ Low confidence about: nullable
    * @format date-time
@@ -40485,7 +41816,8 @@ export type OfferPlatform = "WEB";
 
 export type OfferPromotionFragment = {
   id: ID;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   promoDisplay:
     | null
     | OfferPromotionFragment_OfferPromotionPromoDisplay
@@ -40568,8 +41900,13 @@ export type OnDemandReferrals = {
     | null
     | OnDemandReferrals_OnDemandReferralsItemReferrals
     | OnDemandReferrals_OnDemandReferralsItemReferrals[];
-  name: UnknownValue;
-  total: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  total: null | number;
   __typename: "OnDemandReferralsItem";
 };
 
@@ -40585,13 +41922,21 @@ export type OnDemandReferralsByDimension_CreatorDashboard = {
 /** ℹ️ Not real Twitch type name */
 export type OnDemandReferralsByDimension_CreatorDashboardOnDemandReferrals = {
   referrers: null | OnDemandReferrals;
-  total: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  total: null | number;
   __typename: string;
 };
 
 /** ℹ️ Not real Twitch type name */
 export type OnDemandReferrals_OnDemandReferralsItemReferrals = {
-  total: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  total: null | number;
   timestamp: UnknownValue;
   __typename: string;
 };
@@ -40606,7 +41951,7 @@ export type OnboardingChannelFragment = {
   displayName: string;
   followers: {
     /**
-     * @format int64
+     * @format uint32
      * @example [0, 2430015, 2459534, 2471025, 2380069, 2380116]
      */
     totalCount: number;
@@ -40677,7 +42022,7 @@ export type OnboardingGameFragment = {
    */
   boxArtURL: string;
   /**
-   * @format int64
+   * @format uint32
    * @example [584353, 2909, 484662, 92801, 444549]
    */
   viewersCount: null | number;
@@ -41129,7 +42474,11 @@ export type OneClickCheckoutCustomGiftingCheckoutPrice_ProductPurchaseCheckoutPr
   isTaxInclusive: null | boolean;
   price: UnknownValue;
   tax: UnknownValue;
-  total: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  total: null | number;
   discount:
     | null
     | OneClickCheckoutCustomGiftingCheckoutPrice_ProductPurchaseCheckoutPriceSummaryDiscount
@@ -41141,7 +42490,11 @@ export type OneClickCheckoutCustomGiftingCheckoutPrice_ProductPurchaseCheckoutPr
 export type OneClickCheckoutCustomGiftingCheckoutPrice_ProductPurchaseCheckoutPriceSummaryDiscount =
   {
     price: UnknownValue;
-    total: UnknownValue;
+    /**
+     * ⚠️ Low confidence about: nullable
+     * @format uint32
+     */
+    total: null | number;
     tax: UnknownValue;
     __typename: string;
   };
@@ -41170,7 +42523,11 @@ export type OneClickEligibility_CurrentUserWalletBalancesAllBalances = {
 
 /** ℹ️ Not real Twitch type name */
 export type OneClickEligibility_SpendableBalanceCurrentBalance = {
-  amountUSDCents: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  amountUSDCents: null | number;
   __typename: string;
 };
 
@@ -41430,7 +42787,11 @@ export type OnsiteNotificationsReadNotifications_ReadNotifications = {
     | null
     | OnsiteNotificationsReadNotifications_ReadNotificationsNotifications
     | OnsiteNotificationsReadNotifications_ReadNotificationsNotifications[];
-  count: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  count: null | number;
   __typename: string;
 };
 
@@ -41455,7 +42816,7 @@ export type OnsiteNotificationsSummary_CurrentUserNotifications = {
 export type OnsiteNotificationsSummary_CurrentUserNotificationsSummary = {
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   unseenCount: null | number;
   /**
@@ -41482,7 +42843,7 @@ export type OnsiteNotificationsSummary_CurrentUserNotificationsSummary = {
 export type OnsiteNotificationsSummary_CurrentUserNotificationsSummaryCreatorUnreadSummary = {
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   unreadCount: null | number;
   __typename: string;
@@ -41492,7 +42853,7 @@ export type OnsiteNotificationsSummary_CurrentUserNotificationsSummaryCreatorUnr
 export type OnsiteNotificationsSummary_CurrentUserNotificationsSummarySafetyUnreadSummary = {
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   unreadCount: null | number;
   __typename: string;
@@ -41502,7 +42863,7 @@ export type OnsiteNotificationsSummary_CurrentUserNotificationsSummarySafetyUnre
 export type OnsiteNotificationsSummary_CurrentUserNotificationsSummaryViewerUnreadSummary = {
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   unreadCount: null | number;
   /**
@@ -41545,7 +42906,7 @@ export type OnsiteNotificationsView_ViewedNotificationsUserNotifications = {
 export type OnsiteNotificationsView_ViewedNotificationsUserNotificationsSummary = {
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   unseenCount: null | number;
   /**
@@ -41598,12 +42959,12 @@ export type OpenCallingCallerInfo_ChannelGuestStarSessionCall = {
              */
             id: ID;
             /**
-             * @format int64
+             * @format uint32
              * @example [0, 46802, 656, 1572, 1518, 1432]
              */
             viewersCount: number;
             /**
-             * @format int64
+             * @format uint32
              * @example [4617, 7717, 7714, 11, 4557]
              */
             collaborationViewersCount: null | number;
@@ -41717,7 +43078,8 @@ export type OrgMemberEdge = {
     /** ⚠️ Low confidence about: nullable */
     lastName: null | string;
     role: UnknownValue;
-    title: UnknownValue;
+    /** ⚠️ Low confidence about: nullable */
+    title: null | string;
     /** ⚠️ Low confidence about: nullable */
     email: null | string;
     user: null | OrgMemberEdge_OrganizationMemberUser | OrgMemberEdge_OrganizationMemberUser[];
@@ -41829,9 +43191,21 @@ export type PartnerPlusQuery_PartnerPlusProgramPublicQualification = {
 
 /** ℹ️ Not real Twitch type name */
 export type PartnerPlusQuery_PartnerPlusProgramPublicQualificationProgress = {
-  year: UnknownValue;
-  month: UnknownValue;
-  count: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  year: null | number;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  month: null | number;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  count: null | number;
   qualifiedLevel: UnknownValue;
   __typename: string;
 };
@@ -42093,7 +43467,8 @@ export type PaymentMethodsTabUserPaymentMethods_CurrentUserEligiblePaymentMethod
 
 /** ℹ️ Not real Twitch type name */
 export type PaymentMethodsTabUserPaymentMethods_CurrentUserEligiblePaymentMethodsPayloadMethods = {
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   availabilityStatus: UnknownValue;
   __typename: string;
 };
@@ -42242,7 +43617,11 @@ export type PaymentTransaction = {
     | null
     | PaymentTransaction_PaymentTransactionProduct
     | PaymentTransaction_PaymentTransactionProduct[];
-  grossAmount: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  grossAmount: null | number;
   grossAmountDivisor: UnknownValue;
   currency: UnknownValue;
   quantity: UnknownValue;
@@ -42272,9 +43651,14 @@ export type PaymentTransaction_PaymentTransactionPaymentMethod = {
 /** ℹ️ Not real Twitch type name */
 export type PaymentTransaction_PaymentTransactionProduct = {
   type: UnknownValue;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   tier: UnknownValue;
-  bundleSize: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  bundleSize: null | number;
   owner:
     | null
     | PaymentTransaction_PaymentTransactionProductOwner
@@ -42528,8 +43912,16 @@ export type PayoutOnboardingContainerCurrentUser_AccountLimitStatus = {
 
 /** ℹ️ Not real Twitch type name */
 export type PayoutOnboardingContainerCurrentUser_CurrentUserBirthday = {
-  year: UnknownValue;
-  month: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  year: null | number;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  month: null | number;
   day: UnknownValue;
   __typename: string;
 };
@@ -42813,21 +44205,33 @@ export type PayoutThresholdV2_PayoutThreshold = {
 
 /** ℹ️ Not real Twitch type name */
 export type PayoutThresholdV2_PayoutThresholdCurrentMonthEarnings = {
-  month: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  month: null | number;
   earnedAmount: null | PayoutChannelRevenueMoney;
   __typename: string;
 };
 
 /** ℹ️ Not real Twitch type name */
 export type PayoutThresholdV2_PayoutThresholdPreviousMonthAccrual = {
-  month: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  month: null | number;
   earnedAmount: null | PayoutChannelRevenueMoney;
   __typename: string;
 };
 
 /** ℹ️ Not real Twitch type name */
 export type PayoutThresholdV2_SpendableBalanceCurrentBalance = {
-  amountUSDCents: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  amountUSDCents: null | number;
   __typename: string;
 };
 
@@ -42982,7 +44386,11 @@ export type PinnedChatMessage = {
   /** @example ["MOD"] */
   type: string;
   paidLevel: UnknownValue;
-  bitsAmount: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  bitsAmount: null | number;
   __typename: "PinnedChatMessage";
 };
 
@@ -43001,17 +44409,17 @@ export type PinnedCheerLevels = {
   /** @example ["FOUR", "FIVE", "SIX", "SEVEN", "EIGHT"] */
   name: string;
   /**
-   * @format int64
+   * @format uint32
    * @example [1000, 2000, 5000, 10000, 100000]
    */
   minBits: number;
   /**
-   * @format int64
+   * @format uint32
    * @example [1999, 4999, 9999, 99999, 250000]
    */
   maxBits: number;
   /**
-   * @format int64
+   * @format uint32
    * @example [600, 1200, 3600, 7200, 18000]
    */
   durationSeconds: number;
@@ -43169,9 +44577,21 @@ export type PlusProgramPanelQuery_PartnerPlusProgramPublicQualification = {
 /** ℹ️ Not real Twitch type name */
 export type PlusProgramPanelQuery_PartnerPlusProgramPublicQualificationProgress = {
   qualifiedLevel: UnknownValue;
-  count: UnknownValue;
-  year: UnknownValue;
-  month: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  count: null | number;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  year: null | number;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  month: null | number;
   __typename: string;
 };
 
@@ -43265,7 +44685,8 @@ export type PokemonCampaignRewards_DropsRewardPool = {
 /** ℹ️ Not real Twitch type name */
 export type PokemonCampaignRewards_DropsRewardPoolRewards = {
   id: ID;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   /**
    * ⚠️ Low confidence about: nullable
    * @format uri
@@ -43346,7 +44767,7 @@ export type PokemonCampaignSection = {
       requirementType: string;
       requirements: {
         /**
-         * @format int64
+         * @format uint32
          * @example [360, 420, 60, 120, 180, 240, 300, 20]
          */
         minutesWatched: number;
@@ -43354,7 +44775,7 @@ export type PokemonCampaignSection = {
       };
       repeatableConfig: null | {
         /**
-         * @format int64
+         * @format int32
          * @example [3]
          */
         repeatableTimes: number;
@@ -43371,7 +44792,8 @@ export type PokemonCampaignSection = {
 /** ℹ️ Not real Twitch type name */
 export type PokemonCampaignSection_DropsCampaignOwner = {
   id: ID;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   __typename: string;
 };
 
@@ -43414,7 +44836,7 @@ export type Poll = {
   choices: null | PollChoice;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   durationSeconds: null | number;
   /**
@@ -43428,16 +44850,21 @@ export type Poll = {
    */
   endedAt: null | string;
   status: UnknownValue;
-  title: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  title: null | string;
   ownedBy: null | Poll_PollOwnedBy | Poll_PollOwnedBy[];
   createdBy: null | Poll_PollCreatedBy | Poll_PollCreatedBy[];
   tokens: null | PollTokenBreakdown;
-  totalVoters: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  totalVoters: null | number;
   votes: null | PollVoteBreakdown;
   settings: null | PollSettings;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   remainingDurationMilliseconds: null | number;
   topCommunityPointsContributor: null | PollTopCommunityPointsContributor;
@@ -43446,9 +44873,14 @@ export type Poll = {
 
 export type PollChoice = {
   id: ID;
-  title: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  title: null | string;
   tokens: null | PollTokenBreakdown;
-  totalVoters: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  totalVoters: null | number;
   votes: null | PollVoteBreakdown;
   __typename: "PollChoice";
 };
@@ -43461,7 +44893,11 @@ export type PollSettings = {
 };
 
 export type PollSettingsCommunityPointsVotes = {
-  cost: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  cost: null | number;
   /** ⚠️ Low confidence about: nullable */
   isEnabled: null | boolean;
   __typename: "PollSettingsCommunityPointsVotes";
@@ -43480,7 +44916,11 @@ export type PollTokenBreakdown = {
 };
 
 export type PollTopCommunityPointsContributor = {
-  communityPointsAmount: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  communityPointsAmount: null | number;
   user:
     | null
     | PollTopCommunityPointsContributor_PollTopCommunityPointsContributorUser
@@ -43497,7 +44937,11 @@ export type PollTopCommunityPointsContributor_PollTopCommunityPointsContributorU
 };
 
 export type PollVoteBreakdown = {
-  total: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  total: null | number;
   communityPoints: UnknownValue;
   base: UnknownValue;
   id: ID;
@@ -43691,7 +45135,7 @@ export type PredictionEventFragment = {
   lockedAt: string;
   outcomes: PredictionOutcomeFragment[];
   /**
-   * @format int64
+   * @format uint32
    * @example [120, 30, 300, 1200, 600]
    */
   predictionWindowSeconds: number;
@@ -43714,12 +45158,12 @@ export type PredictionOutcomeFragment = {
   /** @example ["1 - 15 mins", "16-30 mins", "31 - 45 mins", "46 - 60 mins", "61+ mins", "YES", "NO"] */
   title: string;
   /**
-   * @format int64
+   * @format uint32
    * @example [0, 170374, 914189, 63530, 20000, 2760]
    */
   totalPoints: number;
   /**
-   * @format int64
+   * @format uint32
    * @example [0, 6, 34, 12, 3, 2, 670, 1169, 49, 1, 31]
    */
   totalUsers: number;
@@ -43727,7 +45171,7 @@ export type PredictionOutcomeFragment = {
     /** @example ["14ce313dcdaacde6e5056df04b75d784a5b92f6e5ddbdf796551721cb443cea7", "227e9e26358fa2fa8cd597c34f702341ff537c67ab85145fdc01f04e24947e0a"] */
     id: ID;
     /**
-     * @format int64
+     * @format uint32
      * @example [100000, 50000, 11010, 5000, 3564]
      */
     points: number;
@@ -43833,7 +45277,7 @@ export type PreviewCardClip = {
   /** @example ["xqc makes the wrong choice", "wow"] */
   title: string;
   /**
-   * @format int64
+   * @format uint32
    * @example [0, 957063, 957456, 899934, 944919, 773854]
    */
   viewCount: number;
@@ -43914,7 +45358,7 @@ export type PreviewCardClip = {
    */
   createdAt: string;
   /**
-   * @format int64
+   * @format uint32
    * @example [44, 26, 25, 42, 30, 59, 36, 41, 60, 29]
    */
   durationSeconds: number;
@@ -43974,7 +45418,7 @@ export type PreviewCardVideo = {
    */
   id: ID;
   /**
-   * @format int64
+   * @format uint32
    * @example [15389, 4621, 621, 4472, 58]
    */
   lengthSeconds: number;
@@ -44027,7 +45471,7 @@ export type PreviewCardVideo = {
   /** @example ["Twitch Recap: 2024 according to Twitch Chat!", "Creator Camp LIVE: Streaming Basics with @Snackless & @KawaiiGuy"] */
   title: null | string;
   /**
-   * @format int64
+   * @format uint32
    * @example [0, 772963, 171376, 163669, 1911, 684]
    */
   viewCount: number;
@@ -44135,7 +45579,8 @@ export type PreviewLiveShoppingOrdersFragment_PreviewLiveShoppingOrdersPayloadRe
   asin: UnknownValue;
   estimatedArrivalDate: UnknownValue;
   quantity: UnknownValue;
-  title: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  title: null | string;
   estimatedArrivalDisplay: UnknownValue;
   __typename: string;
 };
@@ -44159,22 +45604,46 @@ export type PrimeEarningsStatement_UserPrimePayoutHistory = {
     | null
     | PrimeEarningsStatement_UserPrimePayoutHistoryDeferredPrimePayout
     | PrimeEarningsStatement_UserPrimePayoutHistoryDeferredPrimePayout[];
-  month: UnknownValue;
-  year: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  month: null | number;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  year: null | number;
   __typename: string;
 };
 
 /** ℹ️ Not real Twitch type name */
 export type PrimeEarningsStatement_UserPrimePayoutHistoryCurrentPrimePayout = {
-  pastCyclePayoutAmount: UnknownValue;
-  thisCyclePayoutAmount: UnknownValue;
-  totalPayoutAmount: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  pastCyclePayoutAmount: null | number;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  thisCyclePayoutAmount: null | number;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  totalPayoutAmount: null | number;
   __typename: string;
 };
 
 /** ℹ️ Not real Twitch type name */
 export type PrimeEarningsStatement_UserPrimePayoutHistoryDeferredPrimePayout = {
-  totalPayoutAmount: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  totalPayoutAmount: null | number;
   __typename: string;
 };
 
@@ -44201,7 +45670,8 @@ export type PrimePrimeOfferListPrimeOffersEligibility_PrimeOffersWithEligibility
   id: ID;
   /** ⚠️ Low confidence about: nullable */
   catalogOfferID: null | ID;
-  title: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  title: null | string;
   gameTitle: UnknownValue;
   /**
    * ⚠️ Low confidence about: nullable
@@ -44296,17 +45766,17 @@ export type PrimeSubProductOfferFragment = {
           /** @example ["USD", "BYN"] */
           currency: string;
           /**
-           * @format int64
+           * @format int32
            * @example [2]
            */
           exponent: number;
           /**
-           * @format int64
+           * @format int32
            * @example [599, 699, 1749, 349, 2094, 1047]
            */
           price: number;
           /**
-           * @format int64
+           * @format uint32
            * @example [349, 2094, 1047, 699, 1749]
            */
           total: number;
@@ -44319,7 +45789,7 @@ export type PrimeSubProductOfferFragment = {
         plan: {
           interval: {
             /**
-             * @format int64
+             * @format uint32
              * @example [1, 6, 3]
              */
             duration: number;
@@ -44343,7 +45813,8 @@ export type PrimeSubProductOfferFragment = {
   };
   promotion: null | {
     id: ID;
-    name: UnknownValue;
+    /** ⚠️ Low confidence about: nullable */
+    name: null | string;
     promoDisplay:
       | null
       | PrimeSubProductOfferFragment_OfferPromotionPromoDisplay
@@ -44363,12 +45834,12 @@ export type PrimeSubProductOfferFragment = {
   };
   quantity: {
     /**
-     * @format int64
+     * @format int32
      * @example [1]
      */
     min: number;
     /**
-     * @format int64
+     * @format int32
      * @example [1]
      */
     max: number;
@@ -44410,7 +45881,11 @@ export type PrimeSubProductOfferFragment_OfferPromotionPromoDisplay = {
 /** ℹ️ Not real Twitch type name */
 export type PrimeSubProductOfferFragment_PriceInfoDiscount = {
   price: UnknownValue;
-  total: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  total: null | number;
   __typename: string;
 };
 
@@ -44541,7 +46016,8 @@ export type ProductOfferCheckoutPrice = {
   };
   promotion: null | {
     id: ID;
-    name: UnknownValue;
+    /** ⚠️ Low confidence about: nullable */
+    name: null | string;
     promoDisplay:
       | null
       | ProductOfferCheckoutPrice_OfferPromotionPromoDisplay
@@ -44560,12 +46036,12 @@ export type ProductOfferCheckoutPrice = {
   };
   quantity: {
     /**
-     * @format int64
+     * @format int32
      * @example [1]
      */
     min: number;
     /**
-     * @format int64
+     * @format int32
      * @example [1]
      */
     max: number;
@@ -44596,7 +46072,11 @@ export type ProductOfferCheckoutPriceDetails_ProductPurchaseCheckoutPriceSummary
   isTaxInclusive: null | boolean;
   price: UnknownValue;
   tax: UnknownValue;
-  total: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  total: null | number;
   discount:
     | null
     | ProductOfferCheckoutPriceDetails_ProductPurchaseCheckoutPriceSummaryDiscount
@@ -44607,7 +46087,11 @@ export type ProductOfferCheckoutPriceDetails_ProductPurchaseCheckoutPriceSummary
 /** ℹ️ Not real Twitch type name */
 export type ProductOfferCheckoutPriceDetails_ProductPurchaseCheckoutPriceSummaryDiscount = {
   price: UnknownValue;
-  total: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  total: null | number;
   tax: UnknownValue;
   __typename: string;
 };
@@ -44691,7 +46175,11 @@ export type ProductOfferCheckoutPrice_ProductPurchaseCheckoutPriceSummary = {
   isTaxInclusive: null | boolean;
   price: UnknownValue;
   tax: UnknownValue;
-  total: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  total: null | number;
   discount:
     | null
     | ProductOfferCheckoutPrice_ProductPurchaseCheckoutPriceSummaryDiscount
@@ -44702,7 +46190,11 @@ export type ProductOfferCheckoutPrice_ProductPurchaseCheckoutPriceSummary = {
 /** ℹ️ Not real Twitch type name */
 export type ProductOfferCheckoutPrice_ProductPurchaseCheckoutPriceSummaryDiscount = {
   price: UnknownValue;
-  total: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  total: null | number;
   tax: UnknownValue;
   __typename: string;
 };
@@ -44726,7 +46218,8 @@ export type ProductOfferCheckoutPrices = {
   };
   promotion: null | {
     id: ID;
-    name: UnknownValue;
+    /** ⚠️ Low confidence about: nullable */
+    name: null | string;
     promoDisplay:
       | null
       | ProductOfferCheckoutPrices_OfferPromotionPromoDisplay
@@ -44749,12 +46242,12 @@ export type ProductOfferCheckoutPrices = {
     | ProductOfferCheckoutPrices_OfferPromotions[];
   quantity: {
     /**
-     * @format int64
+     * @format int32
      * @example [1]
      */
     min: number;
     /**
-     * @format int64
+     * @format int32
      * @example [1]
      */
     max: number;
@@ -44807,7 +46300,8 @@ export type ProductOfferCheckoutPrices_OfferPromotionPromoDisplay = {
 /** ℹ️ Not real Twitch type name */
 export type ProductOfferCheckoutPrices_OfferPromotions = {
   id: ID;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   promoDisplay:
     | null
     | ProductOfferCheckoutPrices_OfferPromotionsPromoDisplay
@@ -44928,12 +46422,12 @@ export type PromoteViewerFromRTJQueue_PromoteViewerFromRTJQueueError = {
 export type PubgDetails = {
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   maxPlayerCount: null | number;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   minPlayerCount: null | number;
   __typename: "PUBGMomentDetails";
@@ -45083,7 +46577,7 @@ export type QuickActionCreateStreamMarker_CreateVideoBookmarkVideoBookmark = {
   id: ID;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   positionSeconds: null | number;
   __typename: string;
@@ -45092,7 +46586,11 @@ export type QuickActionCreateStreamMarker_CreateVideoBookmarkVideoBookmark = {
 /** ℹ️ Not real Twitch type name */
 export type QuickActionManageGoals_UserSubscriberScore = {
   current: UnknownValue;
-  count: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  count: null | number;
   breakdown:
     | null
     | QuickActionManageGoals_UserSubscriberScoreBreakdown
@@ -45175,7 +46673,8 @@ export type QuickActionsCreateMomentClip_CreateClip = {
 /** ℹ️ Not real Twitch type name */
 export type QuickActionsCreateMomentClip_CreateClipClip = {
   id: ID;
-  title: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  title: null | string;
   /**
    * ⚠️ Low confidence about: nullable
    * @format uri
@@ -45206,7 +46705,7 @@ export type QuickActionsCreateStreamMarkerTitle_CreateVideoBookmarkVideoBookmark
   id: ID;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   positionSeconds: null | number;
   __typename: string;
@@ -45226,7 +46725,7 @@ export type QuickActionsCreateStreamMarker_CreateVideoBookmarkVideoBookmark = {
   id: ID;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   positionSeconds: null | number;
   __typename: string;
@@ -45293,7 +46792,7 @@ export type RaidChannelSearch_SearchUsers = {
          */
         id: ID;
         /**
-         * @format int64
+         * @format uint32
          * @example [0, 46802, 656, 1572, 1518, 1432]
          */
         viewersCount: number;
@@ -45375,12 +46874,12 @@ export type RaidRecommendations_UserRaidRecommendations = {
        */
       verticalPreviewImageURL: string;
       /**
-       * @format int64
+       * @format uint32
        * @example [0, 1440, 1080, 720, 768, 936, 1200, 900, 1280, 864, 2160]
        */
       height: number;
       /**
-       * @format int64
+       * @format uint32
        * @example [0, 2560, 1920, 1280, 1360, 1664]
        */
       width: number;
@@ -45409,7 +46908,11 @@ export type RaidRecommendations_UserRaidRecommendations = {
     };
     __typename: "User";
   };
-  defaultRank: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  defaultRank: null | number;
   score: UnknownValue;
   sourceRaidHistory:
     | null
@@ -45440,7 +46943,8 @@ export type RaidRecommendations_UserRaidRecommendations = {
 /** ℹ️ Not real Twitch type name */
 export type RaidRecommendations_UserRaidRecommendationsCategory = {
   id: ID;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   /**
    * ⚠️ Low confidence about: nullable
    * @format uri
@@ -45490,7 +46994,11 @@ export type RaidSettingsV2 = {
   __typename: "RaidSettings";
   /** ⚠️ Low confidence about: nullable */
   isAllowingRaids: null | boolean;
-  minAccountAgeDays: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  minAccountAgeDays: null | number;
   minViewers: UnknownValue;
   maxViewers: UnknownValue;
   pausedUntil: UnknownValue;
@@ -45560,17 +47068,25 @@ export type RawMedia_RawMediaAssets = {
 
 /** ℹ️ Not real Twitch type name */
 export type RawMedia_RawMediaAssetsRenditions = {
-  bitrate: UnknownValue;
-  codecs: UnknownValue;
-  duration: UnknownValue;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
+   */
+  bitrate: null | number;
+  codecs: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  duration: null | number;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
    */
   height: null | number;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   width: null | number;
   videoCodec: UnknownValue;
@@ -45688,7 +47204,8 @@ export type RecapClips_RecapClips = {
 
 export type RecapsPlayerRecapFields = {
   id: ID;
-  title: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  title: null | string;
   /**
    * ⚠️ Low confidence about: nullable
    * @format date-time
@@ -45706,7 +47223,7 @@ export type RecapsPlayerRecapFields = {
   postedAt: null | string;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   viewCount: null | number;
   clips: null | RecapsPlayerRecapFields_RecapClips | RecapsPlayerRecapFields_RecapClips[];
@@ -45717,7 +47234,7 @@ export type RecapsPlayerRecapFields = {
 export type RecapsPlayerRecapFields_RecapClips = {
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   streamOffsetSeconds: null | number;
   clip: null | RecapsPlayerRecapFields_RecapClipsClip | RecapsPlayerRecapFields_RecapClipsClip[];
@@ -45729,17 +47246,18 @@ export type RecapsPlayerRecapFields_RecapClipsClip = {
   id: ID;
   /** ⚠️ Low confidence about: nullable */
   slug: null | string;
-  title: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  title: null | string;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   durationSeconds: null | number;
   /** ⚠️ Low confidence about: nullable */
   isCommentsEnabled: null | boolean;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   topLevelCommentCount: null | number;
   curator:
@@ -45803,11 +47321,15 @@ export type RecentPredictionFragment = {
     | RecentPredictionFragment_PredictionOutcome
     | RecentPredictionFragment_PredictionOutcome[];
   /**
-   * @format int64
+   * @format uint32
    * @example [100000, 50000, 11010, 5000, 3564]
    */
   points: number;
-  pointsWon: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  pointsWon: null | number;
   /**
    * ⚠️ Low confidence about: nullable
    * @format date-time
@@ -45926,12 +47448,12 @@ export type RecommendationsContext = {
   /** @example [""] */
   referrerDomain?: null | string;
   /**
-   * @format int64
+   * @format uint32
    * @example [720]
    */
   viewportHeight?: null | number;
   /**
-   * @format int64
+   * @format uint32
    * @example [1280]
    */
   viewportWidth?: null | number;
@@ -45970,7 +47492,8 @@ export type RecommendedExtension_Extension = {
 /** ℹ️ Not real Twitch type name */
 export type RecommendedExtension_ExtensionContentMatchedGames = {
   id: ID;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   /** ⚠️ Low confidence about: nullable */
   displayName: null | string;
   __typename: string;
@@ -46027,7 +47550,7 @@ export type RecommendedPostplayClip = {
    */
   id: ID;
   /**
-   * @format int64
+   * @format uint32
    * @example [44, 26, 25, 42, 30, 59, 36, 41, 60, 29]
    */
   durationSeconds: number;
@@ -46044,7 +47567,7 @@ export type RecommendedPostplayClip = {
   /** @example ["EN", "RU"] */
   language: string;
   /**
-   * @format int64
+   * @format uint32
    * @example [0, 957063, 957456, 899934, 944919, 773854]
    */
   viewCount: number;
@@ -46095,7 +47618,7 @@ export type RecommendedPostplayVideo = {
   id: ID;
   game: null | RecommendedPostplayGame;
   /**
-   * @format int64
+   * @format uint32
    * @example [15389, 4621, 621, 4472, 58]
    */
   lengthSeconds: number;
@@ -46305,7 +47828,11 @@ export type RedeemSubTokenMutation_PurchaseOffer = {
 
 /** ℹ️ Not real Twitch type name */
 export type RedemptionQueueFooter_CommunityPointsChannelSettingsSummarizedRewards = {
-  count: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  count: null | number;
   /** ⚠️ Low confidence about: nullable */
   isCountAtMaximum: null | boolean;
   node: null | {
@@ -46366,7 +47893,8 @@ export type RedemptionsByRewardIDPaginated_ChannelCommunityPointsRedemptionQueue
 /** ℹ️ Not real Twitch type name */
 export type RedemptionsByRewardIDPaginated_ChannelCommunityPointsRedemptionQueueEdgesNodeReward = {
   id: ID;
-  title: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  title: null | string;
   __typename: string;
 };
 
@@ -46386,7 +47914,8 @@ export type ReferralTimeseriesFragment = {
 
 /** ℹ️ Not real Twitch type name */
 export type ReferralTimeseriesFragment_VideoPlayReferralsTimeseriesReferrers = {
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   items:
     | null
     | ReferralTimeseriesFragment_VideoPlayReferralsTimeseriesReferrersItems
@@ -46396,7 +47925,11 @@ export type ReferralTimeseriesFragment_VideoPlayReferralsTimeseriesReferrers = {
 
 /** ℹ️ Not real Twitch type name */
 export type ReferralTimeseriesFragment_VideoPlayReferralsTimeseriesReferrersItems = {
-  count: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  count: null | number;
   timestamp: UnknownValue;
   __typename: string;
 };
@@ -46500,7 +48033,7 @@ export type RelatedLiveChannelsFragment = {
     __typename: "SearchForEdgeRelatedLiveChannels";
   }[];
   /**
-   * @format int64
+   * @format int32
    * @example [3, 2]
    */
   score: null | number;
@@ -46664,7 +48197,7 @@ export type RemoveClipFromRecap_RemoveClipFromRecapRecap = {
 export type RemoveClipFromRecap_RemoveClipFromRecapRecapClips = {
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   streamOffsetSeconds: null | number;
   clip:
@@ -46965,7 +48498,8 @@ export type ReportUserModalReportWizardData_ReportWizardReasonsToSAndCountryReas
 export type ReportUserModalReportWizardData_ReportWizardReasonsToSAndCountryReasonsDetailedReasons =
   {
     id: ID;
-    title: UnknownValue;
+    /** ⚠️ Low confidence about: nullable */
+    title: null | string;
     deadEndType: UnknownValue;
     /** ⚠️ Low confidence about: nullable */
     description: null | string;
@@ -47044,7 +48578,7 @@ export type ReportableTarget = {
     | {
         /**
          * ⚠️ Low confidence about: nullable
-         * @format int64
+         * @format uint32
          */
         durationSeconds: null | number;
         timedOutBy: null | ReportableTargetUser;
@@ -47119,7 +48653,11 @@ export type RequestToJoinViewerRequirementsQuery_UserSelf = {
     __typename: "SubscriptionBenefit";
   };
   subscriptionTenure: null | {
-    months: UnknownValue;
+    /**
+     * ⚠️ Low confidence about: nullable
+     * @format uint32
+     */
+    months: null | number;
     __typename: "SubscriptionTenure";
   };
   __typename: string;
@@ -47306,7 +48844,11 @@ export type RetentionRecentlyCalculatedStreamQuery_RetentionRecentlyCalculatedSt
       | null
       | RetentionRecentlyCalculatedStreamQuery_RetentionRecentlyCalculatedStreamsMostRecentCalculatedRetentionStreamsStreamTimes
       | RetentionRecentlyCalculatedStreamQuery_RetentionRecentlyCalculatedStreamsMostRecentCalculatedRetentionStreamsStreamTimes[];
-    totalNewViewers: UnknownValue;
+    /**
+     * ⚠️ Low confidence about: nullable
+     * @format uint32
+     */
+    totalNewViewers: null | number;
     returningNewViewers: UnknownValue;
     categories:
       | null
@@ -47319,7 +48861,8 @@ export type RetentionRecentlyCalculatedStreamQuery_RetentionRecentlyCalculatedSt
 export type RetentionRecentlyCalculatedStreamQuery_RetentionRecentlyCalculatedStreamsMostRecentCalculatedRetentionStreamsCategories =
   {
     id: ID;
-    name: UnknownValue;
+    /** ⚠️ Low confidence about: nullable */
+    name: null | string;
     __typename: string;
   };
 
@@ -47414,7 +48957,8 @@ export type RevokeCommunityRole_RevokeCommunityRoleRevokee = {
 
 export type RewardCampaign = {
   id: ID;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   brand: UnknownValue;
   /**
    * ⚠️ Low confidence about: nullable
@@ -47556,7 +49100,8 @@ export type RewardCampaignPreview_RewardPreviewProgressSnapshots = {
 /** ℹ️ Not real Twitch type name */
 export type RewardCampaignPreview_RewardPreviewReward = {
   id: ID;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   offerText: UnknownValue;
   thumbnailImage:
     | null
@@ -47624,7 +49169,8 @@ export type RewardCampaign_RewardCampaignRewardGroups = {
 /** ℹ️ Not real Twitch type name */
 export type RewardCampaign_RewardCampaignRewardGroupsRewards = {
   id: ID;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   bannerImage:
     | null
     | RewardCampaign_RewardCampaignRewardGroupsRewardsBannerImage
@@ -47675,7 +49221,8 @@ export type RewardCampaign_RewardCampaignRewardGroupsUnlockRequirements = {
 /** ℹ️ Not real Twitch type name */
 export type RewardCampaign_RewardCampaignRewards = {
   id: ID;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   bannerImage:
     | null
     | RewardCampaign_RewardCampaignRewardsBannerImage
@@ -47750,7 +49297,11 @@ export type RewardQueueProgressFragment = {
   newStatus: UnknownValue;
   /** ⚠️ Low confidence about: nullable */
   rewardID: null | ID;
-  total: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  total: null | number;
   processed: UnknownValue;
   __typename: "CommunityPointsUpdateCustomRewardRedemptionStatusesProgress";
 };
@@ -47829,16 +49380,17 @@ export type ScheduleEditor_ScheduleSegments = {
    * @format date-time
    */
   startAt: null | string;
-  title: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  title: null | string;
   cancelledUntil: UnknownValue;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   reminderCount: null | number;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   repeatEndsAfterCount: null | number;
   firstOccurrenceDate: UnknownValue;
@@ -47857,7 +49409,8 @@ export type ScheduleEditor_ScheduleSegmentsCategories = {
   boxArtURL: null | string;
   /** ⚠️ Low confidence about: nullable */
   displayName: null | string;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   __typename: string;
 };
 
@@ -47901,16 +49454,17 @@ export type ScheduleFragment_ScheduleSegments = {
    * @format date-time
    */
   startAt: null | string;
-  title: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  title: null | string;
   cancelledUntil: UnknownValue;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   reminderCount: null | number;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   repeatEndsAfterCount: null | number;
   firstOccurrenceDate: UnknownValue;
@@ -47929,7 +49483,8 @@ export type ScheduleFragment_ScheduleSegmentsCategories = {
   boxArtURL: null | string;
   /** ⚠️ Low confidence about: nullable */
   displayName: null | string;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   __typename: string;
 };
 
@@ -47955,7 +49510,7 @@ export type SearchCardVideo = {
    */
   id: ID;
   /**
-   * @format int64
+   * @format uint32
    * @example [15389, 4621, 621, 4472, 58]
    */
   lengthSeconds: number;
@@ -48036,12 +49591,12 @@ export type SearchForChannelsFragment = {
     __typename: "SearchForEdge";
   }[];
   /**
-   * @format int64
+   * @format int32
    * @example [0, 1, 2, 4]
    */
   score: number;
   /**
-   * @format int64
+   * @format uint32
    * @example [0, 2235, 2752, 10834, 19999, 11163]
    */
   totalMatches: number;
@@ -48065,12 +49620,12 @@ export type SearchForChannelsWithTagFragment = {
     __typename: "SearchForEdge";
   }[];
   /**
-   * @format int64
+   * @format int32
    * @example [0, 1, 2, 4]
    */
   score: number;
   /**
-   * @format int64
+   * @format uint32
    * @example [0, 2235, 2752, 10834, 19999, 11163]
    */
   totalMatches: number;
@@ -48106,12 +49661,12 @@ export type SearchForCollectionsFragment = {
     __typename: string;
   }[];
   /**
-   * @format int64
+   * @format int32
    * @example [0]
    */
   score: number;
   /**
-   * @format int64
+   * @format uint32
    * @example [0]
    */
   totalMatches: number;
@@ -48129,12 +49684,12 @@ export type SearchForFeaturedClipFragment = {
   /** @example ["EphemeralEncouragingBulgogiPraiseIt-98gnj_-unqEO0uvs", "CredulousBlightedSquirrelOSkomodo-GdY_nETXjEzIz_gm"] */
   slug: string;
   /**
-   * @format int64
+   * @format uint32
    * @example [0, 957063, 957456, 899934, 944919, 773854]
    */
   viewCount: number;
   /**
-   * @format int64
+   * @format uint32
    * @example [44, 26, 25, 42, 30, 59, 36, 41, 60, 29]
    */
   durationSeconds: number;
@@ -48186,14 +49741,14 @@ export type SearchForFeaturedVideoFragment = {
   /** @example ["RECORDING", "RECORDED"] */
   status: string;
   /**
-   * @format int64
+   * @format uint32
    * @example [15389, 4621, 621, 4472, 58]
    */
   lengthSeconds: number;
   /** @example ["Twitch Recap: 2024 according to Twitch Chat!", "Creator Camp LIVE: Streaming Basics with @Snackless & @KawaiiGuy"] */
   title: null | string;
   /**
-   * @format int64
+   * @format uint32
    * @example [0, 772963, 171376, 163669, 1911, 684]
    */
   viewCount: number;
@@ -48264,7 +49819,7 @@ export type SearchForGameFragment = {
   templateBoxArtURL: string;
   tags: TagFragment[];
   /**
-   * @format int64
+   * @format uint32
    * @example [584353, 2909, 484662, 92801, 444549]
    */
   viewersCount: null | number;
@@ -48288,12 +49843,12 @@ export type SearchForGamesFragment = {
     __typename: "SearchForEdge";
   }[];
   /**
-   * @format int64
+   * @format int32
    * @example [0, 4, 3]
    */
   score: number;
   /**
-   * @format int64
+   * @format uint32
    * @example [0, 6, 10000, 25, 259, 1547]
    */
   totalMatches: number;
@@ -48371,7 +49926,7 @@ export type SearchForUserFragment = {
   displayName: string;
   followers: {
     /**
-     * @format int64
+     * @format uint32
      * @example [0, 2430015, 2459534, 2471025, 2380069, 2380116]
      */
     totalCount: number;
@@ -48492,12 +50047,12 @@ export type SearchForUserFragment = {
      */
     verticalPreviewImageURL: string;
     /**
-     * @format int64
+     * @format uint32
      * @example [0, 1440, 1080, 720, 768, 936, 1200, 900, 1280, 864, 2160]
      */
     height: number;
     /**
-     * @format int64
+     * @format uint32
      * @example [0, 2560, 1920, 1280, 1360, 1664]
      */
     width: number;
@@ -48513,7 +50068,7 @@ export type SearchForUserFragment = {
     /** @example ["live"] */
     type: string;
     /**
-     * @format int64
+     * @format uint32
      * @example [0, 46802, 656, 1572, 1518, 1432]
      */
     viewersCount: number;
@@ -48592,7 +50147,7 @@ export type SearchForVideoFragment = {
     __typename: "Game";
   };
   /**
-   * @format int64
+   * @format uint32
    * @example [15389, 4621, 621, 4472, 58]
    */
   lengthSeconds: number;
@@ -48612,7 +50167,7 @@ export type SearchForVideoFragment = {
   /** @example ["Twitch Recap: 2024 according to Twitch Chat!", "Creator Camp LIVE: Streaming Basics with @Snackless & @KawaiiGuy"] */
   title: null | string;
   /**
-   * @format int64
+   * @format uint32
    * @example [0, 772963, 171376, 163669, 1911, 684]
    */
   viewCount: number;
@@ -48641,12 +50196,12 @@ export type SearchForVideosFragment = {
     __typename: "SearchForEdge";
   }[];
   /**
-   * @format int64
+   * @format int32
    * @example [0, 5]
    */
   score: number;
   /**
-   * @format int64
+   * @format uint32
    * @example [0, 495, 406, 423, 10000, 432]
    */
   totalMatches: number;
@@ -48666,7 +50221,7 @@ export type SearchRelatedLiveChannelFragment = {
      */
     id: ID;
     /**
-     * @format int64
+     * @format uint32
      * @example [0, 46802, 656, 1572, 1518, 1432]
      */
     viewersCount: number;
@@ -48684,12 +50239,12 @@ export type SearchRelatedLiveChannelFragment = {
      */
     verticalPreviewImageURL: string;
     /**
-     * @format int64
+     * @format uint32
      * @example [0, 1440, 1080, 720, 768, 936, 1200, 900, 1280, 864, 2160]
      */
     height: number;
     /**
-     * @format int64
+     * @format uint32
      * @example [0, 2560, 1920, 1280, 1360, 1664]
      */
     width: number;
@@ -48771,7 +50326,7 @@ export type SearchSponsorshipCampaigns_SearchSponsorshipCampaigns = {
   };
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   totalCount: null | number;
   __typename: string;
@@ -48787,7 +50342,8 @@ export type SearchSponsorshipCampaigns_SearchSponsorshipCampaignsEdgesNode = {
   brandLogoURL: null | string;
   /** ⚠️ Low confidence about: nullable */
   brandColor: null | string;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   /** ⚠️ Low confidence about: nullable */
   description: null | string;
   configurationState: UnknownValue;
@@ -48875,7 +50431,8 @@ export type SearchSponsorshipCampaigns_SearchSponsorshipCampaignsEdgesNodeCreato
 /** ℹ️ Not real Twitch type name */
 export type SearchSponsorshipCampaigns_SearchSponsorshipCampaignsEdgesNodePackageDefinition = {
   id: ID;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   __typename: string;
 };
 
@@ -48956,7 +50513,11 @@ export type SearchSponsorshipsCreators_SearchSponsorshipsCreators = {
     endCursor: null;
     __typename: "PageInfo";
   };
-  totalItems: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  totalItems: null | number;
   poolCostTotal:
     | null
     | SearchSponsorshipsCreators_SearchSponsorshipsCreatorsPoolCostTotal
@@ -49016,12 +50577,12 @@ export type SearchSponsorshipsCreators_SearchSponsorshipsCreatorsEdgesNode = {
   topStreamTags: UnknownValue;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   broadcastDayCount: null | number;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   completedCampaignsCount: null | number;
   audienceEngagement: UnknownValue;
@@ -49107,7 +50668,7 @@ export type SearchStreamEdgeFragment_SearchStreamEdgeNode = {
     | SearchStreamEdgeFragment_SearchStreamEdgeNodeBroadcaster[];
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   viewersCount: null | number;
   /**
@@ -49139,7 +50700,8 @@ export type SearchStreamEdgeFragment_SearchStreamEdgeNodeBroadcaster = {
 /** ℹ️ Not real Twitch type name */
 export type SearchStreamEdgeFragment_SearchStreamEdgeNodeGame = {
   id: ID;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   __typename: string;
 };
 
@@ -49161,7 +50723,7 @@ export type SearchStreamerResult = {
   profileImageURL: string;
   followers: {
     /**
-     * @format int64
+     * @format uint32
      * @example [0, 2430015, 2459534, 2471025, 2380069, 2380116]
      */
     totalCount: number;
@@ -49210,7 +50772,7 @@ export type SearchSuggestionNode = {
                */
               id: ID;
               /**
-               * @format int64
+               * @format uint32
                * @example [0, 46802, 656, 1572, 1518, 1432]
                */
               viewersCount: number;
@@ -49279,12 +50841,12 @@ export type SearchSuggestionNode = {
         };
     matchingCharacters: null | {
       /**
-       * @format int64
+       * @format int32
        * @example [0, 6]
        */
       start: number;
       /**
-       * @format int64
+       * @format int32
        * @example [0, 3, 9, 5, 6, 4]
        */
       end: number;
@@ -49393,7 +50955,7 @@ export type SecurityPageUserSessions_CurrentUserSettingsUserSignedInDevices = {
   }[];
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   totalCount: null | number;
   __typename: string;
@@ -49499,7 +51061,11 @@ export type SendEmailVerification_SendEmailVerificationError = {
 /** ℹ️ Not real Twitch type name */
 export type SendGifMessage_SendGifMessage = {
   error: UnknownValue;
-  secondsUntilCanSend: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  secondsUntilCanSend: null | number;
   message: null | SendGifMessage_SendGifMessageMessage | SendGifMessage_SendGifMessageMessage[];
   __typename: string;
 };
@@ -49642,7 +51208,11 @@ export type SendUserModiversaryNotice_SendUserModiversaryNoticeModiversary = {
   /** ⚠️ Low confidence about: nullable */
   hasMilestoneAlert: null | boolean;
   canSendUserNotice: UnknownValue;
-  months: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  months: null | number;
   __typename: string;
 };
 
@@ -50045,7 +51615,11 @@ export type SetDailyUsageLimit_SetDailyUsageLimitUser = {
 
 /** ℹ️ Not real Twitch type name */
 export type SetDailyUsageLimit_SetDailyUsageLimitUserDailyUsageLimit = {
-  allocatedMinutes: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  allocatedMinutes: null | number;
   __typename: string;
 };
 
@@ -50120,7 +51694,7 @@ export type SetFavoriteManagementStatus_SetFavoriteManagementStatusError = {
 export type SetFollowersOnlyModeSetting_UpdateChatSettings = {
   chatSettings: null | {
     /**
-     * @format int64
+     * @format uint32
      * @example [0, 10, 1440]
      */
     followersOnlyDurationMinutes: null | number;
@@ -50550,7 +52124,7 @@ export type SetResourceRestrictionMutation_SetResourceRestrictionVideoResourceRe
 export type SetSlowModeSetting_UpdateChatSettings = {
   chatSettings: null | {
     /**
-     * @format int64
+     * @format uint32
      * @example [5]
      */
     slowModeDurationSeconds: null | number;
@@ -50615,7 +52189,11 @@ export type SetUnbanRequestsSettings_SetUnbanRequestsSettingsError = {
 export type SetUnbanRequestsSettings_SetUnbanRequestsSettingsSettings = {
   /** ⚠️ Low confidence about: nullable */
   isEnabled: null | boolean;
-  cooldownMinutes: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  cooldownMinutes: null | number;
   __typename: string;
 };
 
@@ -50799,7 +52377,8 @@ export type SettingsChannelChatBannedChatters_ChannelBannedUsers = {
 /** ℹ️ Not real Twitch type name */
 export type SettingsChannelClipsSettings_ChannelClipsSettingsCategoryBlocklist = {
   id: ID;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   /** ⚠️ Low confidence about: nullable */
   displayName: null | string;
   /**
@@ -50814,7 +52393,11 @@ export type SettingsChannelClipsSettings_ChannelClipsSettingsCategoryBlocklist =
 
 /** ℹ️ Not real Twitch type name */
 export type SettingsChannelClipsSettings_ChannelClipsSettingsCommentSettings = {
-  followersOnlyDurationMinutes: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  followersOnlyDurationMinutes: null | number;
   /** ⚠️ Low confidence about: nullable */
   isSubscribersOnlyEnabled: null | boolean;
   emailVerificationMode: UnknownValue;
@@ -50843,10 +52426,18 @@ export type SettingsChannelClipsSettings_ChannelClipsSettingsCommentSettingsPart
     shouldRestrictFirstTimeCommenters: null | boolean;
     /** ⚠️ Low confidence about: nullable */
     shouldRestrictBasedOnAccountAge: null | boolean;
-    minimumAccountAgeInMinutes: UnknownValue;
+    /**
+     * ⚠️ Low confidence about: nullable
+     * @format uint32
+     */
+    minimumAccountAgeInMinutes: null | number;
     /** ⚠️ Low confidence about: nullable */
     shouldRestrictBasedOnFollowerAge: null | boolean;
-    minimumFollowerAgeInMinutes: UnknownValue;
+    /**
+     * ⚠️ Low confidence about: nullable
+     * @format uint32
+     */
+    minimumFollowerAgeInMinutes: null | number;
     __typename: string;
   };
 
@@ -50857,10 +52448,18 @@ export type SettingsChannelClipsSettings_ChannelClipsSettingsCommentSettingsPart
     shouldRestrictFirstTimeCommenters: null | boolean;
     /** ⚠️ Low confidence about: nullable */
     shouldRestrictBasedOnAccountAge: null | boolean;
-    minimumAccountAgeInMinutes: UnknownValue;
+    /**
+     * ⚠️ Low confidence about: nullable
+     * @format uint32
+     */
+    minimumAccountAgeInMinutes: null | number;
     /** ⚠️ Low confidence about: nullable */
     shouldRestrictBasedOnFollowerAge: null | boolean;
-    minimumFollowerAgeInMinutes: UnknownValue;
+    /**
+     * ⚠️ Low confidence about: nullable
+     * @format uint32
+     */
+    minimumFollowerAgeInMinutes: null | number;
     __typename: string;
   };
 
@@ -50875,7 +52474,11 @@ export type SettingsChannelClipsSettings_ChannelClipsSettingsCreationRestrictedT
 
 /** ℹ️ Not real Twitch type name */
 export type SettingsChannelClipsSettings_ChannelClipsSettingsCreationRestrictionOptions = {
-  followingLengthMinutes: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  followingLengthMinutes: null | number;
   __typename: string;
 };
 
@@ -50902,7 +52505,8 @@ export type SettingsChannelVODsSettings_CurrentUserChannelVodSettings = {
 /** ℹ️ Not real Twitch type name */
 export type SettingsChannelVODsSettings_CurrentUserChannelVodSettingsCategoryBlocklist = {
   id: ID;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   /** ⚠️ Low confidence about: nullable */
   displayName: null | string;
   /**
@@ -51113,7 +52717,8 @@ export type SettingsConnectionsExtensionConnectionsList_CurrentUserLinkedExtensi
     | SettingsConnectionsExtensionConnectionsList_CurrentUserLinkedExtensionsIconURLs
     | SettingsConnectionsExtensionConnectionsList_CurrentUserLinkedExtensionsIconURLs[];
   id: ID;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   /** ⚠️ Low confidence about: nullable */
   summary: null | string;
   __typename: string;
@@ -51295,7 +52900,7 @@ export type SettingsCopyrightAudioDetectionSettings_CurrentUserChannelVodSetting
 export type SettingsNotificationsPageUserPortal_CurrentUserNotificationEnrollmentFollows = {
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   totalCount: null | number;
   edges: NotificationSettingsFollowEdge[];
@@ -51311,7 +52916,7 @@ export type SettingsNotificationsPageUserPortal_CurrentUserNotificationEnrollmen
 export type SettingsNotificationsPageUser_CurrentUserFollows = {
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   totalCount: null | number;
   edges: {
@@ -51391,7 +52996,11 @@ export type SettingsSecurityPageContactSettings_CurrentUserVerificationRequest =
 
 /** ℹ️ Not real Twitch type name */
 export type SetupToolsSectionPayoutMethod_SpendableBalanceCurrentBalance = {
-  amountUSDCents: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  amountUSDCents: null | number;
   __typename: string;
 };
 
@@ -51619,7 +53228,11 @@ export type SharedHypeTrainDetails_SharedHypeTrainDetailsSharedProgress = {
 
 export type SharedHypeTrainProgress = {
   id: ID;
-  total: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  total: null | number;
   allTimeHighState: UnknownValue;
   __typename: "HypeTrainProgress";
 };
@@ -51704,7 +53317,7 @@ export type ShelfClip = {
    */
   clipTitle: string;
   /**
-   * @format int64
+   * @format uint32
    * @example [0, 957063, 957456, 899934, 944919, 773854]
    * @aliasFor viewCount
    */
@@ -51725,7 +53338,7 @@ export type ShelfClip = {
    */
   clipCreatedAt: string;
   /**
-   * @format int64
+   * @format uint32
    * @example [44, 26, 25, 42, 30, 59, 36, 41, 60, 29]
    */
   durationSeconds: number;
@@ -51809,7 +53422,7 @@ export type ShelfPreviewCardClip = {
    */
   clipTitle: string;
   /**
-   * @format int64
+   * @format uint32
    * @example [0, 957063, 957456, 899934, 944919, 773854]
    * @aliasFor viewCount
    */
@@ -51892,7 +53505,7 @@ export type ShelfPreviewCardClip = {
    */
   createdAt: string;
   /**
-   * @format int64
+   * @format uint32
    * @example [44, 26, 25, 42, 30, 59, 36, 41, 60, 29]
    */
   durationSeconds: number;
@@ -51962,19 +53575,23 @@ export type ShieldModeSettings = {
   isRestrictFirstTimeChattersEnabled: null | boolean;
   /** ⚠️ Low confidence about: nullable */
   isFollowersOnlyModeEnabled: null | boolean;
-  followersOnlyDurationMinutes: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  followersOnlyDurationMinutes: null | number;
   /** ⚠️ Low confidence about: nullable */
   isSlowModeEnabled: null | boolean;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   slowModeDurationSeconds: null | number;
   /** ⚠️ Low confidence about: nullable */
   isChatDelayEnabled: null | boolean;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   chatDelayDurationSeconds: null | number;
   /** ⚠️ Low confidence about: nullable */
@@ -52055,7 +53672,7 @@ export type ShoutoutClipFragment = {
   /** @example ["xqc makes the wrong choice", "wow"] */
   title: string;
   /**
-   * @format int64
+   * @format uint32
    * @example [0, 957063, 957456, 899934, 944919, 773854]
    */
   viewCount: number;
@@ -52190,7 +53807,7 @@ export type ShoutsMetrics_ShoutsMetrics = {
 export type ShoutsMetrics_ShoutsMetricsPlatformMetrics = {
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   shoutCount: null | number;
   __typename: string;
@@ -52214,7 +53831,7 @@ export type SideNavCategory = {
    */
   avatarURL: string;
   /**
-   * @format int64
+   * @format uint32
    * @example [584353, 2909, 484662, 92801, 444549]
    */
   viewersCount: null | number;
@@ -52328,12 +53945,12 @@ export type SideNavInput = {
     /** @example ["", "www.twitch.tv"] */
     referrerDomain: string;
     /**
-     * @format int64
+     * @format uint32
      * @example [720]
      */
     viewportHeight: number;
     /**
-     * @format int64
+     * @format uint32
      * @example [1280]
      */
     viewportWidth: number;
@@ -52396,12 +54013,12 @@ export type SideNavStream = {
   id: ID;
   broadcaster: null | SideNavUser;
   /**
-   * @format int64
+   * @format uint32
    * @example [4617, 7717, 7714, 11, 4557]
    */
   collaborationViewersCount: null | number;
   /**
-   * @format int64
+   * @format uint32
    * @example [0, 46802, 656, 1572, 1518, 1432]
    */
   viewersCount: number;
@@ -52426,7 +54043,7 @@ export type SideNavStream = {
   freeformTags?: FreeformTagFragment[];
   costreamDetails: null | {
     /**
-     * @format int64
+     * @format uint32
      * @example [0, 13, 14, 7, 6, 12, 1, 11]
      */
     costreamersCount: number;
@@ -52435,7 +54052,7 @@ export type SideNavStream = {
     role: string;
     topCostreamers: CostreamingUserWithViewcount[];
     /**
-     * @format int64
+     * @format uint32
      * @example [53318, 665, 54790, 55713, 54158]
      */
     totalViewersCount: number;
@@ -52548,7 +54165,7 @@ export type SnackbarAdProperties_AdPropertiesDensityAdSchedule = {
   runAtTime: UnknownValue;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   durationSeconds: null | number;
   __typename: string;
@@ -52556,8 +54173,16 @@ export type SnackbarAdProperties_AdPropertiesDensityAdSchedule = {
 
 /** ℹ️ Not real Twitch type name */
 export type SnackbarAdProperties_AdPropertiesDensitySnooze = {
-  currentAmount: UnknownValue;
-  maxAmount: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  currentAmount: null | number;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  maxAmount: null | number;
   /**
    * ⚠️ Low confidence about: nullable
    * @format date-time
@@ -52565,7 +54190,7 @@ export type SnackbarAdProperties_AdPropertiesDensitySnooze = {
   refreshAt: null | string;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   durationSeconds: null | number;
   __typename: string;
@@ -52595,8 +54220,16 @@ export type SnoozeAdsQuickActionAdProperties_AdPropertiesDensityAdSchedule = {
 
 /** ℹ️ Not real Twitch type name */
 export type SnoozeAdsQuickActionAdProperties_AdPropertiesDensitySnooze = {
-  currentAmount: UnknownValue;
-  maxAmount: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  currentAmount: null | number;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  maxAmount: null | number;
   /**
    * ⚠️ Low confidence about: nullable
    * @format date-time
@@ -52604,7 +54237,7 @@ export type SnoozeAdsQuickActionAdProperties_AdPropertiesDensitySnooze = {
   refreshAt: null | string;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   durationSeconds: null | number;
   __typename: string;
@@ -52778,8 +54411,16 @@ export type SpendableBalanceHistoryEntry = {
   eventTime: UnknownValue;
   amount: null | PayoutMoney;
   remainingBalance: null | PayoutMoney;
-  year: UnknownValue;
-  month: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  year: null | number;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  month: null | number;
   paymentTransaction: null | PaymentTransaction;
   localAmount: null | PayoutMoney;
   __typename: "SpendableBalanceHistoryEntry";
@@ -52800,7 +54441,11 @@ export type SpendableBalanceOptStateQuery_SpendableBalanceStatus = {
 
 /** ℹ️ Not real Twitch type name */
 export type SpendableBalance_SpendableBalanceCurrentBalance = {
-  amountUSDCents: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  amountUSDCents: null | number;
   __typename: string;
 };
 
@@ -52884,7 +54529,8 @@ export type SponsorshipActivityBase = {
 /** ℹ️ Not real Twitch type name */
 export type SponsorshipAdvertiserProfile_SponsorshipAdvertiserProfile = {
   id: ID;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   /** ⚠️ Low confidence about: nullable */
   isTwitchDemandChannelEligible: null | boolean;
   /** ⚠️ Low confidence about: nullable */
@@ -52958,7 +54604,7 @@ export type SponsorshipCampaignInstance = {
   guidelinesDont: UnknownValue;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   executionWindowDurationSeconds: null | number;
   automodLevelMinimum: UnknownValue;
@@ -53002,7 +54648,8 @@ export type SponsorshipCampaignInstancePacing_SponsorshipCampaignInstancePacingA
 
 /** ℹ️ Not real Twitch type name */
 export type SponsorshipCampaignInstance_CampaignInstanceAdvertiser = {
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   imageAsset:
     | null
     | SponsorshipCampaignInstance_CampaignInstanceAdvertiserImageAsset
@@ -53139,7 +54786,8 @@ export type SponsorshipCampaignInstance_SponsorshipAlertHighAlerts = {
 
 /** ℹ️ Not real Twitch type name */
 export type SponsorshipCampaignInstance_SponsorshipAlertHighAlertsNotification = {
-  title: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  title: null | string;
   body: UnknownValue;
   __typename: string;
 };
@@ -53158,21 +54806,24 @@ export type SponsorshipCampaignInstance_SponsorshipAlertHighDispute = {
 
 /** ℹ️ Not real Twitch type name */
 export type SponsorshipCampaignInstance_SponsorshipAlertHighNotification = {
-  title: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  title: null | string;
   body: UnknownValue;
   __typename: string;
 };
 
 /** ℹ️ Not real Twitch type name */
 export type SponsorshipCampaignInstance_SponsorshipAlertLowNotification = {
-  title: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  title: null | string;
   body: UnknownValue;
   __typename: string;
 };
 
 /** ℹ️ Not real Twitch type name */
 export type SponsorshipCampaignInstance_SponsorshipQualityAlertNotification = {
-  title: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  title: null | string;
   body: UnknownValue;
   __typename: string;
 };
@@ -53190,7 +54841,7 @@ export type SponsorshipCampaignInstances_SponsorshipInstances = {
   };
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   totalCount: null | number;
   __typename: string;
@@ -53240,7 +54891,8 @@ export type SponsorshipCampaignLastSeenInstance = {
 
 /** ℹ️ Not real Twitch type name */
 export type SponsorshipCampaignLastSeenInstance_CampaignInstanceAdvertiser = {
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   imageAsset:
     | null
     | SponsorshipCampaignLastSeenInstance_CampaignInstanceAdvertiserImageAsset
@@ -53301,7 +54953,8 @@ export type SponsorshipChannelSkin =
   | SponsorshipActivityBase
   | {
       advertiser: null | {
-        name: UnknownValue;
+        /** ⚠️ Low confidence about: nullable */
+        name: null | string;
         imageAsset:
           | null
           | SponsorshipChannelSkin_AdvertiserImageAsset
@@ -53348,7 +55001,8 @@ export type SponsorshipChannelSkin_ChannelSkinPlacements = {
 export type SponsorshipContract = {
   body: UnknownValue;
   id: ID;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   /**
    * ⚠️ Low confidence about: nullable
    * @format date-time
@@ -53400,7 +55054,7 @@ export type SponsorshipGame = {
    */
   avatarURL: string;
   /**
-   * @format int64
+   * @format uint32
    * @example [584353, 2909, 484662, 92801, 444549]
    */
   viewersCount: null | number;
@@ -53412,7 +55066,8 @@ export type SponsorshipGiftSubMatch =
   | SponsorshipActivityBase
   | {
       advertiser: null | {
-        name: UnknownValue;
+        /** ⚠️ Low confidence about: nullable */
+        name: null | string;
         imageAsset:
           | null
           | SponsorshipGiftSubMatch_GiftSubMatchAdvertiserImageAsset
@@ -53483,7 +55138,8 @@ export type SponsorshipSubSub =
   | SponsorshipActivityBase
   | {
       advertiser: null | {
-        name: UnknownValue;
+        /** ⚠️ Low confidence about: nullable */
+        name: null | string;
         imageAsset:
           | null
           | SponsorshipSubSub_SubsidizedSubscriptionsAdvertiserImageAsset
@@ -53618,7 +55274,8 @@ export type SponsorshipToolsCampaignInstance = {
 
 /** ℹ️ Not real Twitch type name */
 export type SponsorshipToolsCampaignInstance_CampaignInstanceAdvertiser = {
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   /** ⚠️ Low confidence about: nullable */
   colorHexCode: null | string;
   imageAsset:
@@ -53758,7 +55415,8 @@ export type SponsorshipToolsCampaignInstance_SponsorshipAlertHighAlerts = {
 
 /** ℹ️ Not real Twitch type name */
 export type SponsorshipToolsCampaignInstance_SponsorshipAlertHighAlertsNotification = {
-  title: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  title: null | string;
   body: UnknownValue;
   __typename: string;
 };
@@ -53777,21 +55435,24 @@ export type SponsorshipToolsCampaignInstance_SponsorshipAlertHighDispute = {
 
 /** ℹ️ Not real Twitch type name */
 export type SponsorshipToolsCampaignInstance_SponsorshipAlertHighNotification = {
-  title: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  title: null | string;
   body: UnknownValue;
   __typename: string;
 };
 
 /** ℹ️ Not real Twitch type name */
 export type SponsorshipToolsCampaignInstance_SponsorshipAlertLowNotification = {
-  title: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  title: null | string;
   body: UnknownValue;
   __typename: string;
 };
 
 /** ℹ️ Not real Twitch type name */
 export type SponsorshipToolsCampaignInstance_SponsorshipQualityAlertNotification = {
-  title: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  title: null | string;
   body: UnknownValue;
   __typename: string;
 };
@@ -53828,7 +55489,7 @@ export type SponsorshipToolsManualTrigger = {
   };
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   disableDelaySeconds: null | number;
   __typename: "SponsorshipManualTrigger";
@@ -53922,7 +55583,11 @@ export type SponsorshipsCreatorProfileFields = {
   isOptedIntoAlcohol: null | boolean;
   /** ⚠️ Low confidence about: nullable */
   isOptedIntoGambling: null | boolean;
-  maxAgreementDuration: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  maxAgreementDuration: null | number;
   pastBrands: UnknownValue;
   /** ⚠️ Low confidence about: nullable */
   hasCustomProfileImage: null | boolean;
@@ -53981,7 +55646,8 @@ export type SponsorshipsExtrasSearchCategories_SearchCategories = {
 /** ℹ️ Not real Twitch type name */
 export type SponsorshipsPackageDefinitions_SponsorshipPackageDefinitions = {
   id: ID;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   version: UnknownValue;
   /** ⚠️ Low confidence about: nullable */
   isCurrentVersion: null | boolean;
@@ -54043,7 +55709,7 @@ export type StartAd_StartAd = {
 export type StartAd_StartAdAdSession = {
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   lengthSeconds: null | number;
   id: ID;
@@ -54055,7 +55721,7 @@ export type StartAd_StartAdError = {
   code: UnknownValue;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   retryAfterSeconds: null | number;
   __typename: string;
@@ -54348,7 +56014,7 @@ export type StartStreamSession_StartGameLiftStreamSession = {
   sessionArn: UnknownValue;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   loadingDurationSeconds: null | number;
   __typename: string;
@@ -54373,7 +56039,11 @@ export type StatsWidget_UserSubscriberScore = {
 
 /** ℹ️ Not real Twitch type name */
 export type StatsWidget_UserSubscriberScoreCountBreakdown = {
-  count: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  count: null | number;
   __typename: string;
 };
 
@@ -54459,7 +56129,7 @@ export type StoryBaseLayerDataBlockFragment_StoryClipBlockClip = {
   isCommentsEnabled: null | boolean;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   topLevelCommentCount: null | number;
   broadcastIdentifier:
@@ -54611,12 +56281,12 @@ export type StoryContentFragment_StoryContentFlattenedAssetRenditions = {
   url: null | string;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   width: null | number;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   height: null | number;
   __typename: string;
@@ -54681,7 +56351,8 @@ export type StoryFragment_StoryCreator = {
 /** ℹ️ Not real Twitch type name */
 export type StoryFragment_StoryCreatorBroadcastSettings = {
   id: ID;
-  title: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  title: null | string;
   __typename: string;
 };
 
@@ -54729,7 +56400,7 @@ export type StoryFragment_StoryCreatorStream = {
   id: ID;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   viewersCount: null | number;
   game: null | StoryFragment_StoryCreatorStreamGame | StoryFragment_StoryCreatorStreamGame[];
@@ -54784,12 +56455,12 @@ export type StoryLayerPlacementFragment = {
   zIndex: UnknownValue;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   relativeHeight: null | number;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   relativeWidth: null | number;
   __typename: "StoryLayerPlacement";
@@ -54817,12 +56488,12 @@ export type StoryMentionStickerBlockFragment = {
 export type StoryMentionStickerBlockFragment_StoryMentionStickerBlockInteractiveArea = {
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   width: null | number;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   height: null | number;
   __typename: string;
@@ -54852,7 +56523,8 @@ export type StoryPreviewFragment = {
 /** ℹ️ Not real Twitch type name */
 export type StoryPreviewFragment_StoryPreviewAdditionalClips = {
   id: ID;
-  title: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  title: null | string;
   game:
     | null
     | StoryPreviewFragment_StoryPreviewAdditionalClipsGame
@@ -54874,7 +56546,7 @@ export type StoryPreviewFragment_StoryPreviewAdditionalClipsGame = {
 export type StoryPreviewFragment_StoryPreviewRecap = {
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   clipCount: null | number;
   /**
@@ -54981,7 +56653,7 @@ export type StoryTextBlockFragment = {
       });
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   textBoxWidth: null | number;
   style:
@@ -55038,7 +56710,7 @@ export type Stream = {
   freeformTags: FreeformTagFragment[];
   curatedTags: null | CuratedTagFragment[];
   /**
-   * @format int64
+   * @format uint32
    * @example [0, 46802, 656, 1572, 1518, 1432]
    */
   viewersCount: number;
@@ -55056,12 +56728,12 @@ export type Stream = {
    */
   verticalPreviewImageURL: string;
   /**
-   * @format int64
+   * @format uint32
    * @example [0, 1440, 1080, 720, 768, 936, 1200, 900, 1280, 864, 2160]
    */
   height: number;
   /**
-   * @format int64
+   * @format uint32
    * @example [0, 2560, 1920, 1280, 1360, 1664]
    */
   width: number;
@@ -55197,7 +56869,7 @@ export type StreamDelayWidgetMutation_UpdateVideoStreamSettingsChannel = {
 export type StreamDelayWidgetMutation_UpdateVideoStreamSettingsChannelVideoStreamSettings = {
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   delaySeconds: null | number;
   __typename: string;
@@ -55209,7 +56881,7 @@ export type StreamDelayWidget_ChannelVideoStreamSettings = {
   isDelayEnabled: null | boolean;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   delaySeconds: null | number;
   __typename: string;
@@ -55344,7 +57016,7 @@ export type StreamHealthStarvationEvent = {
   startedAt: null | string;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   durationSeconds: null | number;
   __typename: "IngestStarvationEvent";
@@ -55366,7 +57038,8 @@ export type StreamInfoExtensionRecommendation_GameExtensionRecommendationsExtens
   authorName: null | string;
   /** ⚠️ Low confidence about: nullable */
   clientID: null | ID;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   /** ⚠️ Low confidence about: nullable */
   summary: null | string;
   version: UnknownValue;
@@ -55547,12 +57220,12 @@ export type StreamPageSignupCurrentUser_UserAccountConnectionsYoutube = {
 export type StreamQualityBroadcastStateQuery_StreamVideoRenditions = {
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   width: null | number;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   height: null | number;
   __typename: string;
@@ -55602,7 +57275,7 @@ export type StreamScheduleAssetFragment = {
   firstOccurrenceDate: UnknownValue;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   repeatEndsAfterCount: null | number;
   categories: {
@@ -55626,7 +57299,7 @@ export type StreamScheduleAssetFragment = {
   cancelledUntil: UnknownValue;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   reminderCount: null | number;
   __typename: "ScheduleSegment";
@@ -55637,7 +57310,8 @@ export type StreamSchedule_ScheduleSegments = {
   id: ID;
   /** ⚠️ Low confidence about: nullable */
   baseSegmentID: null | ID;
-  title: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  title: null | string;
   /**
    * ⚠️ Low confidence about: nullable
    * @format date-time
@@ -55655,7 +57329,7 @@ export type StreamSchedule_ScheduleSegments = {
   hasReminder: null | boolean;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   repeatEndsAfterCount: null | number;
   categories:
@@ -55670,7 +57344,8 @@ export type StreamSchedule_ScheduleSegmentsCategories = {
   id: ID;
   /** ⚠️ Low confidence about: nullable */
   slug: null | string;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   /**
    * ⚠️ Low confidence about: nullable
    * @format uri
@@ -55703,7 +57378,7 @@ export type StreamSummaryClipFragment = {
   /** @example ["xqc makes the wrong choice", "wow"] */
   title: string;
   /**
-   * @format int64
+   * @format uint32
    * @example [0, 957063, 957456, 899934, 944919, 773854]
    */
   viewCount: number;
@@ -55783,7 +57458,7 @@ export type StreamSummaryClipFragment = {
     profileImageURL: string;
     followers: {
       /**
-       * @format int64
+       * @format uint32
        * @example [0, 2430015, 2459534, 2471025, 2380069, 2380116]
        */
       totalCount: number;
@@ -55796,7 +57471,7 @@ export type StreamSummaryClipFragment = {
        */
       id: ID;
       /**
-       * @format int64
+       * @format uint32
        * @example [0, 46802, 656, 1572, 1518, 1432]
        */
       viewersCount: number;
@@ -55831,7 +57506,7 @@ export type StreamSummaryClipFragment = {
   createdAt: string;
   isPublished: boolean;
   /**
-   * @format int64
+   * @format uint32
    * @example [44, 26, 25, 42, 30, 59, 36, 41, 60, 29]
    */
   durationSeconds: number;
@@ -55859,7 +57534,7 @@ export type StreamSummaryClipFragment = {
     __typename: "Video";
   };
   /**
-   * @format int64
+   * @format uint32
    * @example [7897, 11412, 12062, 2238]
    */
   videoOffsetSeconds: null | number;
@@ -56033,10 +57708,11 @@ export type StreamSummaryPageGetStreamSummaryMetrics_UserStreamSummaries = {
 
 /** ℹ️ Not real Twitch type name */
 export type StreamSummaryPageGetStreamSummaryMetrics_UserStreamSummariesArchiveVideos = {
-  title: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  title: null | string;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   viewCount: null | number;
   /**
@@ -56054,7 +57730,7 @@ export type StreamSummaryPageGetStreamSummaryMetrics_UserStreamSummariesArchiveV
   recordedAt: null | string;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   lengthSeconds: null | number;
   owner:
@@ -56075,10 +57751,18 @@ export type StreamSummaryPageGetStreamSummaryMetrics_UserStreamSummariesCostream
   id: ID;
   /** ⚠️ Low confidence about: nullable */
   isAvailable: null | boolean;
-  totalUniqueViewership: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  totalUniqueViewership: null | number;
   peakSharedCCV: UnknownValue;
   averageSharedCCV: UnknownValue;
-  minutesWatched: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  minutesWatched: null | number;
   uniqueChatters: UnknownValue;
   activeCostreamers:
     | null
@@ -56109,7 +57793,7 @@ export type StreamSummaryPageGetStreamSummaryMetrics_UserStreamSummariesCostream
     cursor: null | Cursor;
     /**
      * ⚠️ Low confidence about: nullable
-     * @format int64
+     * @format uint32
      */
     totalCount: null | number;
     __typename: string;
@@ -56150,7 +57834,7 @@ export type StreamSummaryPageGetStreamSummaryMetrics_UserStreamSummariesGoLiveNo
   engagements: UnknownValue;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   followerCount: null | number;
   followersNotified: UnknownValue;
@@ -56177,7 +57861,8 @@ export type StreamSummaryPageGetStreamSummaryMetrics_UserStreamSummariesStreamRe
 /** ℹ️ Not real Twitch type name */
 export type StreamSummaryPageGetStreamSummaryMetrics_UserStreamSummariesStreamRecapRecap = {
   id: ID;
-  title: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  title: null | string;
   /**
    * ⚠️ Low confidence about: nullable
    * @format date-time
@@ -56185,7 +57870,7 @@ export type StreamSummaryPageGetStreamSummaryMetrics_UserStreamSummariesStreamRe
   postedAt: null | string;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   viewCount: null | number;
   clips:
@@ -56261,7 +57946,7 @@ export type StreamerAdsManagerQueryAdProperties_AdPropertiesDensityAdSchedule = 
   runAtTime: UnknownValue;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   durationSeconds: null | number;
   __typename: string;
@@ -56269,8 +57954,16 @@ export type StreamerAdsManagerQueryAdProperties_AdPropertiesDensityAdSchedule = 
 
 /** ℹ️ Not real Twitch type name */
 export type StreamerAdsManagerQueryAdProperties_AdPropertiesDensitySnooze = {
-  currentAmount: UnknownValue;
-  maxAmount: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  currentAmount: null | number;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  maxAmount: null | number;
   /**
    * ⚠️ Low confidence about: nullable
    * @format date-time
@@ -56278,7 +57971,7 @@ export type StreamerAdsManagerQueryAdProperties_AdPropertiesDensitySnooze = {
   refreshAt: null | string;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   durationSeconds: null | number;
   __typename: string;
@@ -56393,7 +58086,11 @@ export type SubBenefit_SubscriptionBenefitGiftGifter = {
 /** ℹ️ Not real Twitch type name */
 export type SubBenefit_SubscriptionBenefitInterval = {
   unit: UnknownValue;
-  duration: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  duration: null | number;
   __typename: string;
 };
 
@@ -56422,7 +58119,8 @@ export type SubEmoteFragment = {
 /** ℹ️ Not real Twitch type name */
 export type SubEmoteFragment_EmoteModifiers = {
   code: UnknownValue;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   __typename: string;
 };
 
@@ -56468,17 +58166,17 @@ export type SubProductGiftOfferFragment = {
           /** @example ["USD", "BYN"] */
           currency: string;
           /**
-           * @format int64
+           * @format int32
            * @example [2]
            */
           exponent: number;
           /**
-           * @format int64
+           * @format int32
            * @example [599, 699, 1749, 349, 2094, 1047]
            */
           price: number;
           /**
-           * @format int64
+           * @format uint32
            * @example [349, 2094, 1047, 699, 1749]
            */
           total: number;
@@ -56491,7 +58189,7 @@ export type SubProductGiftOfferFragment = {
         plan: {
           interval: {
             /**
-             * @format int64
+             * @format uint32
              * @example [1, 6, 3]
              */
             duration: number;
@@ -56511,7 +58209,8 @@ export type SubProductGiftOfferFragment = {
   };
   promotion: null | {
     id: ID;
-    name: UnknownValue;
+    /** ⚠️ Low confidence about: nullable */
+    name: null | string;
     promoDisplay:
       | null
       | SubProductGiftOfferFragment_OfferPromotionPromoDisplay
@@ -56531,12 +58230,12 @@ export type SubProductGiftOfferFragment = {
   };
   quantity: {
     /**
-     * @format int64
+     * @format int32
      * @example [1]
      */
     min: number;
     /**
-     * @format int64
+     * @format int32
      * @example [1]
      */
     max: number;
@@ -56565,7 +58264,11 @@ export type SubProductGiftOfferFragment_OfferPromotionPromoDisplay = {
 /** ℹ️ Not real Twitch type name */
 export type SubProductGiftOfferFragment_PriceInfoDiscount = {
   price: UnknownValue;
-  total: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  total: null | number;
   __typename: string;
 };
 
@@ -56606,17 +58309,17 @@ export type SubProductOfferFragment = {
           /** @example ["USD", "BYN"] */
           currency: string;
           /**
-           * @format int64
+           * @format int32
            * @example [2]
            */
           exponent: number;
           /**
-           * @format int64
+           * @format int32
            * @example [599, 699, 1749, 349, 2094, 1047]
            */
           price: number;
           /**
-           * @format int64
+           * @format uint32
            * @example [349, 2094, 1047, 699, 1749]
            */
           total: number;
@@ -56629,7 +58332,7 @@ export type SubProductOfferFragment = {
         plan: {
           interval: {
             /**
-             * @format int64
+             * @format uint32
              * @example [1, 6, 3]
              */
             duration: number;
@@ -56649,7 +58352,8 @@ export type SubProductOfferFragment = {
   };
   promotion: null | {
     id: ID;
-    name: UnknownValue;
+    /** ⚠️ Low confidence about: nullable */
+    name: null | string;
     promoDisplay:
       | null
       | SubProductOfferFragment_OfferPromotionPromoDisplay
@@ -56669,12 +58373,12 @@ export type SubProductOfferFragment = {
   };
   quantity: {
     /**
-     * @format int64
+     * @format int32
      * @example [1]
      */
     min: number;
     /**
-     * @format int64
+     * @format int32
      * @example [1]
      */
     max: number;
@@ -56709,7 +58413,11 @@ export type SubProductOfferFragment_OfferPromotionPromoDisplay = {
 /** ℹ️ Not real Twitch type name */
 export type SubProductOfferFragment_PriceInfoDiscount = {
   price: UnknownValue;
-  total: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  total: null | number;
   __typename: string;
 };
 
@@ -56750,17 +58458,17 @@ export type SubProductOfferWithPromotions = {
           /** @example ["USD", "BYN"] */
           currency: string;
           /**
-           * @format int64
+           * @format int32
            * @example [2]
            */
           exponent: number;
           /**
-           * @format int64
+           * @format int32
            * @example [599, 699, 1749, 349, 2094, 1047]
            */
           price: number;
           /**
-           * @format int64
+           * @format uint32
            * @example [349, 2094, 1047, 699, 1749]
            */
           total: number;
@@ -56773,7 +58481,7 @@ export type SubProductOfferWithPromotions = {
         plan: {
           interval: {
             /**
-             * @format int64
+             * @format uint32
              * @example [1, 6, 3]
              */
             duration: number;
@@ -56793,7 +58501,8 @@ export type SubProductOfferWithPromotions = {
   };
   promotion: null | {
     id: ID;
-    name: UnknownValue;
+    /** ⚠️ Low confidence about: nullable */
+    name: null | string;
     promoDisplay:
       | null
       | SubProductOfferWithPromotions_OfferPromotionPromoDisplay
@@ -56817,12 +58526,12 @@ export type SubProductOfferWithPromotions = {
     | SubProductOfferWithPromotions_OfferPromotions[];
   quantity: {
     /**
-     * @format int64
+     * @format int32
      * @example [1]
      */
     min: number;
     /**
-     * @format int64
+     * @format int32
      * @example [1]
      */
     max: number;
@@ -56858,7 +58567,8 @@ export type SubProductOfferWithPromotions_OfferPromotionPromoDisplay = {
 /** ℹ️ Not real Twitch type name */
 export type SubProductOfferWithPromotions_OfferPromotions = {
   id: ID;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   promoDisplay:
     | null
     | SubProductOfferWithPromotions_OfferPromotionsPromoDisplay
@@ -56909,7 +58619,11 @@ export type SubProductOfferWithPromotions_OfferPromotionsQuantity = {
 /** ℹ️ Not real Twitch type name */
 export type SubProductOfferWithPromotions_PriceInfoDiscount = {
   price: UnknownValue;
-  total: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  total: null | number;
   __typename: string;
 };
 
@@ -56923,7 +58637,8 @@ export type SubStandardGiftingFragment = {
 };
 
 export type SubSubAdvertiserFragment = {
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   ctaMessage: UnknownValue;
   /**
    * ⚠️ Low confidence about: nullable
@@ -56956,7 +58671,8 @@ export type SubSubAdvertiserFragment_SubsidizedSubscriptionsAdvertiserImageAsset
 
 export type SubSummary = {
   id: ID;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   emotes: null | SubSummary_SubscriptionSummaryEmotes | SubSummary_SubscriptionSummaryEmotes[];
   /**
    * ⚠️ Low confidence about: nullable
@@ -56983,7 +58699,8 @@ export type SubSummary_SubscriptionSummaryEmotes = {
 /** ℹ️ Not real Twitch type name */
 export type SubSummary_SubscriptionSummaryModifiers = {
   code: UnknownValue;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   subscriptionTier: UnknownValue;
   __typename: string;
 };
@@ -57109,7 +58826,11 @@ export type SubsCancellationAppeal_UserSelf = {
     __typename: "Badge";
   };
   subscriptionTenure: null | {
-    months: UnknownValue;
+    /**
+     * ⚠️ Low confidence about: nullable
+     * @format uint32
+     */
+    months: null | number;
     __typename: "SubscriptionTenure";
   };
   recap: null | SubsCancellationAppeal_UserSelfRecap | SubsCancellationAppeal_UserSelfRecap[];
@@ -57118,7 +58839,11 @@ export type SubsCancellationAppeal_UserSelf = {
 
 /** ℹ️ Not real Twitch type name */
 export type SubsCancellationAppeal_UserSelfRecap = {
-  minutesWatched: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  minutesWatched: null | number;
   __typename: string;
 };
 
@@ -57290,7 +59015,11 @@ export type SubsTileQuery_UserSubscriberScore = {
 
 /** ℹ️ Not real Twitch type name */
 export type SubsTileQuery_UserSubscriberScoreCountBreakdown = {
-  count: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  count: null | number;
   __typename: string;
 };
 
@@ -57342,7 +59071,11 @@ export type SubscribersPanelQuery_UserSubscriberScoreBreakdown = {
 
 /** ℹ️ Not real Twitch type name */
 export type SubscribersPanelQuery_UserSubscriberScoreCountBreakdown = {
-  count: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  count: null | number;
   tier: UnknownValue;
   __typename: string;
 };
@@ -57538,7 +59271,8 @@ export type SubscriptionBenefit_SubscriptionBenefitUserSubscriptionProducts = {
 /** ℹ️ Not real Twitch type name */
 export type SubscriptionBenefit_SubscriptionBenefitUserSubscriptionProductsEmoteModifiers = {
   code: UnknownValue;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   __typename: string;
 };
 
@@ -57562,7 +59296,11 @@ export type SubscriptionCounts_SubscriptionCounts = {
 /** ℹ️ Not real Twitch type name */
 export type SubscriptionCounts_SubscriptionCountsSubscriptionCounts = {
   key: UnknownValue;
-  count: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  count: null | number;
   timestamp: UnknownValue;
   __typename: string;
 };
@@ -57602,7 +59340,7 @@ export type SubscriptionOfferFields = {
           /** @example ["USD", "BYN"] */
           currency: string;
           /**
-           * @format int64
+           * @format int32
            * @example [2]
            */
           exponent: number;
@@ -57613,7 +59351,11 @@ export type SubscriptionOfferFields = {
             | {
                 price: UnknownValue;
                 tax: UnknownValue;
-                total: UnknownValue;
+                /**
+                 * ⚠️ Low confidence about: nullable
+                 * @format uint32
+                 */
+                total: null | number;
                 discount:
                   | null
                   | SubscriptionOfferFields_FixedPricingDiscount
@@ -57634,7 +59376,7 @@ export type SubscriptionOfferFields = {
         plan: {
           interval: {
             /**
-             * @format int64
+             * @format uint32
              * @example [1, 6, 3]
              */
             duration: number;
@@ -57662,7 +59404,8 @@ export type SubscriptionOfferFields = {
   };
   promotion: null | {
     id: ID;
-    name: UnknownValue;
+    /** ⚠️ Low confidence about: nullable */
+    name: null | string;
     /**
      * ⚠️ Low confidence about: nullable
      * @format date-time
@@ -57682,12 +59425,12 @@ export type SubscriptionOfferFields = {
   };
   quantity: {
     /**
-     * @format int64
+     * @format int32
      * @example [1]
      */
     min: number;
     /**
-     * @format int64
+     * @format int32
      * @example [1]
      */
     max: number;
@@ -57730,7 +59473,11 @@ export type SubscriptionOfferFields_ChargeModelExternalSelf = {
 export type SubscriptionOfferFields_FixedPricingDiscount = {
   price: UnknownValue;
   tax: UnknownValue;
-  total: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  total: null | number;
   __typename: string;
 };
 
@@ -57759,8 +59506,16 @@ export type SubscriptionOfferFields_OfferPromotionPromoDisplay = {
 
 /** ℹ️ Not real Twitch type name */
 export type SubscriptionOfferFields_RangedPricingPresetAmounts = {
-  amountList: UnknownValue;
-  defaultAmount: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  amountList: null | number;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  defaultAmount: null | number;
   __typename: string;
 };
 
@@ -58132,7 +59887,7 @@ export type SupportPanelCommunityGiftingGifterBadgeProgress_CurrentUserSubscript
 export type SupportPanelCommunityGiftingGifterBadgeProgress_UserSelf = {
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   subscriptionGiftCount: null | number;
   __typename: string;
@@ -58187,7 +59942,7 @@ export type SupportPanelGiftingGifterBadgeProgressV2_UserSelfGifterBadgeStatus =
   isExpired: null | boolean;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   accessDurationRemainingSeconds: null | number;
   accessEnd: UnknownValue;
@@ -58198,7 +59953,7 @@ export type SupportPanelGiftingGifterBadgeProgressV2_UserSelfGifterBadgeStatus =
 export type SupportPanelGiftingGifterBadgeProgressV2_UserSelfSubscriptionGiftRewardProgress = {
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   giftCount: null | number;
   milestones:
@@ -58274,7 +60029,11 @@ export type SupportPanelSubscriptionDetails_UserSelf = {
   };
   /** @aliasFor subscriptionTenure */
   streakTenure: null | {
-    months: UnknownValue;
+    /**
+     * ⚠️ Low confidence about: nullable
+     * @format uint32
+     */
+    months: null | number;
     __typename: "SubscriptionTenure";
   };
   resubNotification:
@@ -58342,7 +60101,11 @@ export type SwitcherClipsCardsGamerecs_FeedItems = {
     node: null | FeedContentFragment | { __typename: "FeedAd" } | { __typename: "FeedStream" };
     __typename: string;
   }[];
-  recommendedLimit: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  recommendedLimit: null | number;
   /** ⚠️ Low confidence about: nullable */
   isEndOfContent: null | boolean;
   __typename: string;
@@ -58788,7 +60551,8 @@ export type TcData_TCDataVendor = {
 };
 
 export type TcfVendorStatus = {
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   consentStatus: UnknownValue;
   /** ⚠️ Low confidence about: nullable */
   hasUserSetConsent: null | boolean;
@@ -58807,7 +60571,7 @@ export type TcfVendorStatus = {
   policyURL: null | string;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   cookieMaxAgeSeconds: null | number;
   __typename: "TCFCookieVendor";
@@ -58856,7 +60620,7 @@ export type TeamLandingMemberList_TeamLiveMembersEdgesNodeStream = {
   id: ID;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   viewersCount: null | number;
   __typename: string;
@@ -58912,7 +60676,11 @@ export type TeamsDashboardAdBreaksInSeconds_TeamCreatorTimeseriesMetricsAdBreaks
     | null
     | TeamsDashboardAdBreaksInSeconds_TeamCreatorTimeseriesMetricsAdBreaksInSecondsItems
     | TeamsDashboardAdBreaksInSeconds_TeamCreatorTimeseriesMetricsAdBreaksInSecondsItems[];
-  total: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  total: null | number;
   __typename: string;
 };
 
@@ -58939,7 +60707,11 @@ export type TeamsDashboardAdTimePerHour_TeamCreatorTimeseriesMetricsAdTimePerHou
     | null
     | TeamsDashboardAdTimePerHour_TeamCreatorTimeseriesMetricsAdTimePerHourItems
     | TeamsDashboardAdTimePerHour_TeamCreatorTimeseriesMetricsAdTimePerHourItems[];
-  total: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  total: null | number;
   __typename: string;
 };
 
@@ -58966,7 +60738,11 @@ export type TeamsDashboardAverageViewers_TeamCreatorTimeseriesMetricsAverageView
     | null
     | TeamsDashboardAverageViewers_TeamCreatorTimeseriesMetricsAverageViewersItems
     | TeamsDashboardAverageViewers_TeamCreatorTimeseriesMetricsAverageViewersItems[];
-  total: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  total: null | number;
   __typename: string;
 };
 
@@ -58993,7 +60769,11 @@ export type TeamsDashboardChatMessages_TeamCreatorTimeseriesMetricsChatMessages 
     | null
     | TeamsDashboardChatMessages_TeamCreatorTimeseriesMetricsChatMessagesItems
     | TeamsDashboardChatMessages_TeamCreatorTimeseriesMetricsChatMessagesItems[];
-  total: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  total: null | number;
   __typename: string;
 };
 
@@ -59269,7 +61049,11 @@ export type TeamsDashboardFollows_TeamCreatorTimeseriesMetricsFollows = {
     | null
     | TeamsDashboardFollows_TeamCreatorTimeseriesMetricsFollowsItems
     | TeamsDashboardFollows_TeamCreatorTimeseriesMetricsFollowsItems[];
-  total: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  total: null | number;
   __typename: string;
 };
 
@@ -59421,7 +61205,11 @@ export type TeamsDashboardMinutesWatched_TeamCreatorTimeseriesMetricsMinutesWatc
     | null
     | TeamsDashboardMinutesWatched_TeamCreatorTimeseriesMetricsMinutesWatchedItems
     | TeamsDashboardMinutesWatched_TeamCreatorTimeseriesMetricsMinutesWatchedItems[];
-  total: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  total: null | number;
   __typename: string;
 };
 
@@ -59670,7 +61458,11 @@ export type TeamsDashboardTimeStreamed_TeamCreatorTimeseriesMetricsTimeStreamed 
     | null
     | TeamsDashboardTimeStreamed_TeamCreatorTimeseriesMetricsTimeStreamedItems
     | TeamsDashboardTimeStreamed_TeamCreatorTimeseriesMetricsTimeStreamedItems[];
-  total: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  total: null | number;
   __typename: string;
 };
 
@@ -59697,7 +61489,11 @@ export type TeamsDashboardUniqueChatters_TeamCreatorTimeseriesMetricsUniqueChatt
     | null
     | TeamsDashboardUniqueChatters_TeamCreatorTimeseriesMetricsUniqueChattersItems
     | TeamsDashboardUniqueChatters_TeamCreatorTimeseriesMetricsUniqueChattersItems[];
-  total: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  total: null | number;
   __typename: string;
 };
 
@@ -59717,7 +61513,8 @@ export type TeamsDashboardUpdateTeam_UpdateTeam = {
 /** ℹ️ Not real Twitch type name */
 export type TeamsDashboardUpdateTeam_UpdateTeamTeam = {
   id: ID;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   /** ⚠️ Low confidence about: nullable */
   displayName: null | string;
   /** ⚠️ Low confidence about: nullable */
@@ -59752,14 +61549,23 @@ export type TeamsDashboardVideoPlayReferrals_TeamVideoPlayReferrals = {
     | null
     | TeamsDashboardVideoPlayReferrals_TeamVideoPlayReferralsItems
     | TeamsDashboardVideoPlayReferrals_TeamVideoPlayReferralsItems[];
-  total: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  total: null | number;
   __typename: string;
 };
 
 /** ℹ️ Not real Twitch type name */
 export type TeamsDashboardVideoPlayReferrals_TeamVideoPlayReferralsItems = {
-  count: UnknownValue;
-  name: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  count: null | number;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   __typename: string;
 };
 
@@ -59833,7 +61639,11 @@ export type TeamsLandingBodyPlayerUser_TeamOwner = {
 
 export type Tenure = {
   daysRemaining: UnknownValue;
-  months: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  months: null | number;
   __typename: "SubscriptionTenure";
 };
 
@@ -59987,7 +61797,7 @@ export type ThreadData = {
   __typename: "WhisperThread";
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   unreadMessagesCount: null | number;
 };
@@ -60087,7 +61897,8 @@ export type ThreadData_WhisperThreadParticipants = {
 /** ℹ️ Not real Twitch type name */
 export type ThreadData_WhisperThreadParticipantsDisplayBadges = {
   id: ID;
-  title: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  title: null | string;
   /**
    * ⚠️ Low confidence about: nullable
    * @format uri
@@ -60215,7 +62026,11 @@ export type ThreadUnarchiveThread_UpdateWhisperThreadThread = {
 
 /** ℹ️ Not real Twitch type name */
 export type ThreadsMarkAllWhispersAsRead_UpdateAllWhisperThreads = {
-  count: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  count: null | number;
   __typename: string;
 };
 
@@ -60476,7 +62291,8 @@ export type ToggleCustomReward_UpdateCommunityPointsCustomRewardError = {
 
 export type TokenizedCustomElementFragment = {
   nodes: null | DecoratedTokenFragment;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   identifier: UnknownValue;
   __typename: "TokenizedCustomElement";
 };
@@ -60565,7 +62381,7 @@ export type TrailerSetupVideo = {
    */
   createdAt: string;
   /**
-   * @format int64
+   * @format uint32
    * @example [15389, 4621, 621, 4472, 58]
    */
   lengthSeconds: number;
@@ -60583,7 +62399,7 @@ export type TrailerSetupVideo = {
 export type TrailerSetupVideos = {
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   totalCount: null | number;
   edges: {
@@ -60601,7 +62417,7 @@ export type TrailerVideo = {
    */
   previewThumbnailURL: string;
   /**
-   * @format int64
+   * @format uint32
    * @example [15389, 4621, 621, 4472, 58]
    */
   lengthSeconds: number;
@@ -60628,7 +62444,7 @@ export type TransactionHistoryTabUserPaymentTransactions_CurrentUserPaymentTrans
   };
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   totalCount: null | number;
   /**
@@ -60667,7 +62483,11 @@ export type TransactionHistoryTabUserPaymentTransactions_CurrentUserPaymentTrans
     | null
     | TransactionHistoryTabUserPaymentTransactions_CurrentUserPaymentTransactionsEdgesNodeProduct
     | TransactionHistoryTabUserPaymentTransactions_CurrentUserPaymentTransactionsEdgesNodeProduct[];
-  grossAmount: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  grossAmount: null | number;
   grossAmountDivisor: UnknownValue;
   currency: UnknownValue;
   quantity: UnknownValue;
@@ -60699,9 +62519,14 @@ export type TransactionHistoryTabUserPaymentTransactions_CurrentUserPaymentTrans
 export type TransactionHistoryTabUserPaymentTransactions_CurrentUserPaymentTransactionsEdgesNodeProduct =
   {
     type: UnknownValue;
-    name: UnknownValue;
+    /** ⚠️ Low confidence about: nullable */
+    name: null | string;
     tier: UnknownValue;
-    bundleSize: UnknownValue;
+    /**
+     * ⚠️ Low confidence about: nullable
+     * @format uint32
+     */
+    bundleSize: null | number;
     owner:
       | null
       | TransactionHistoryTabUserPaymentTransactions_CurrentUserPaymentTransactionsEdgesNodeProductOwner
@@ -60865,12 +62690,12 @@ export type TurboProductOfferFragment = {
           /** @example ["USD", "BYN"] */
           currency: string;
           /**
-           * @format int64
+           * @format int32
            * @example [2]
            */
           exponent: number;
           /**
-           * @format int64
+           * @format uint32
            * @example [349, 2094, 1047, 699, 1749]
            */
           total: number;
@@ -60888,7 +62713,8 @@ export type TurboProductOfferFragment = {
   };
   promotion: null | {
     id: ID;
-    name: UnknownValue;
+    /** ⚠️ Low confidence about: nullable */
+    name: null | string;
     promoDisplay:
       | null
       | TurboProductOfferFragment_OfferPromotionPromoDisplay
@@ -60943,13 +62769,21 @@ export type TurboProductOfferFragment_OfferPromotionPromoDisplay = {
 
 /** ℹ️ Not real Twitch type name */
 export type TurboProductOfferFragment_PriceInfoDiscount = {
-  total: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  total: null | number;
   __typename: string;
 };
 
 /** ℹ️ Not real Twitch type name */
 export type TurboSubscriptionProduct_PriceInfoDiscount = {
-  total: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  total: null | number;
   __typename: string;
 };
 
@@ -61006,7 +62840,11 @@ export type TurboSubscriptionProduct_SubscriptionProductSelfBenefitStates = {
 
 /** ℹ️ Not real Twitch type name */
 export type TurboUpsellButton_FixedPricingDiscount = {
-  total: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  total: null | number;
   __typename: string;
 };
 
@@ -61237,7 +63075,11 @@ export type UnbanRequestChatMessage_ViewerCardModLogsChatMessageContentFragments
         __typename: "Emote";
       }
     | {
-        bitsAmount: UnknownValue;
+        /**
+         * ⚠️ Low confidence about: nullable
+         * @format uint32
+         */
+        bitsAmount: null | number;
         prefix: UnknownValue;
         tier: UnknownValue;
         __typename: "CheermoteToken";
@@ -61367,7 +63209,8 @@ export type UnbanRequestModal_UserSelfBanStatus = {
 /** ℹ️ Not real Twitch type name */
 export type UnbanRequestPage_UnbanRequestChannel = {
   id: ID;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   owner:
     | null
     | UnbanRequestPage_UnbanRequestChannelOwner
@@ -61426,7 +63269,11 @@ export type UnbanRequestsItemHeaderTabs_ViewerCardModLogs = {
       }
     | {
         __typename: "ModLogsTargetedActionsConnection";
-        count: UnknownValue;
+        /**
+         * ⚠️ Low confidence about: nullable
+         * @format uint32
+         */
+        count: null | number;
         pageInfo: null | {
           hasNextPage: boolean;
           __typename: "PageInfo";
@@ -61451,7 +63298,11 @@ export type UnbanRequestsItemHeaderTabs_ViewerCardModLogs = {
       }
     | {
         __typename: "ModLogsTargetedActionsConnection";
-        count: UnknownValue;
+        /**
+         * ⚠️ Low confidence about: nullable
+         * @format uint32
+         */
+        count: null | number;
         pageInfo: null | {
           hasNextPage: boolean;
           __typename: "PageInfo";
@@ -61474,7 +63325,7 @@ export type UnbanRequestsListCtx_ChannelUnbanRequests = {
   };
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    * @gqlArg `status: UnbanRequestStatus`
    */
   totalCount: null | number;
@@ -61562,7 +63413,7 @@ export type UnlikeClipComment_UnlikeClipCommentComment = {
   id: ID;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   likeCount: null | number;
   /** ⚠️ Low confidence about: nullable */
@@ -61999,7 +63850,11 @@ export type UnsubscribePage_SubscriptionProductSelfBenefit = {
 
 /** ℹ️ Not real Twitch type name */
 export type UnsubscribePage_SubscriptionProductSelfBenefitInterval = {
-  duration: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  duration: null | number;
   unit: UnknownValue;
   __typename: string;
 };
@@ -62036,7 +63891,11 @@ export type UnsubscribePage_SubscriptionProductSelfBenefitUserSelf = {
 
 /** ℹ️ Not real Twitch type name */
 export type UnsubscribePage_SubscriptionProductSelfBenefitUserSelfSubscriptionTenure = {
-  months: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  months: null | number;
   __typename: string;
 };
 
@@ -62054,7 +63913,7 @@ export type UpcomingSchedule_FeaturedUpcomingStreamsNodes = {
   id: ID;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   reminderCount: null | number;
   segment:
@@ -62067,12 +63926,13 @@ export type UpcomingSchedule_FeaturedUpcomingStreamsNodes = {
 /** ℹ️ Not real Twitch type name */
 export type UpcomingSchedule_FeaturedUpcomingStreamsNodesSegment = {
   id: ID;
-  title: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  title: null | string;
   /** ⚠️ Low confidence about: nullable */
   baseSegmentID: null | ID;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   repeatEndsAfterCount: null | number;
   channel:
@@ -62099,7 +63959,8 @@ export type UpcomingSchedule_FeaturedUpcomingStreamsNodesSegment = {
 /** ℹ️ Not real Twitch type name */
 export type UpcomingSchedule_FeaturedUpcomingStreamsNodesSegmentChannel = {
   id: ID;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   owner:
     | null
     | UpcomingSchedule_FeaturedUpcomingStreamsNodesSegmentChannelOwner
@@ -62174,7 +64035,7 @@ export type UpcomingSchedule_FeaturedUpcomingStreamsNodesSegmentChannelStream = 
   id: ID;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   viewersCount: null | number;
   __typename: string;
@@ -62188,12 +64049,12 @@ export type UpdateAdsManagerSettings_SetChannelAdSchedule = {
   isAdScheduleEnabled: null | boolean;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   intervalSeconds: null | number;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   durationSeconds: null | number;
   /** ⚠️ Low confidence about: nullable */
@@ -62208,12 +64069,12 @@ export type UpdateAdsManagerSettings_SetChannelAdSchedule = {
   isModChatReminderEnabled: null | boolean;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   adReminderTimeSeconds: null | number;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   startDelaySeconds: null | number;
   __typename: string;
@@ -62435,7 +64296,8 @@ export type UpdateChannelClipSettings_UpdateChannelClipsSettingChannelClipsSetti
 export type UpdateChannelClipSettings_UpdateChannelClipsSettingChannelClipsSettingsCategoryBlocklist =
   {
     id: ID;
-    name: UnknownValue;
+    /** ⚠️ Low confidence about: nullable */
+    name: null | string;
     /** ⚠️ Low confidence about: nullable */
     displayName: null | string;
     /**
@@ -62451,7 +64313,11 @@ export type UpdateChannelClipSettings_UpdateChannelClipsSettingChannelClipsSetti
 /** ℹ️ Not real Twitch type name */
 export type UpdateChannelClipSettings_UpdateChannelClipsSettingChannelClipsSettingsCommentSettings =
   {
-    followersOnlyDurationMinutes: UnknownValue;
+    /**
+     * ⚠️ Low confidence about: nullable
+     * @format uint32
+     */
+    followersOnlyDurationMinutes: null | number;
     /** ⚠️ Low confidence about: nullable */
     isSubscribersOnlyEnabled: null | boolean;
     emailVerificationMode: UnknownValue;
@@ -62480,10 +64346,18 @@ export type UpdateChannelClipSettings_UpdateChannelClipsSettingChannelClipsSetti
     shouldRestrictFirstTimeCommenters: null | boolean;
     /** ⚠️ Low confidence about: nullable */
     shouldRestrictBasedOnAccountAge: null | boolean;
-    minimumAccountAgeInMinutes: UnknownValue;
+    /**
+     * ⚠️ Low confidence about: nullable
+     * @format uint32
+     */
+    minimumAccountAgeInMinutes: null | number;
     /** ⚠️ Low confidence about: nullable */
     shouldRestrictBasedOnFollowerAge: null | boolean;
-    minimumFollowerAgeInMinutes: UnknownValue;
+    /**
+     * ⚠️ Low confidence about: nullable
+     * @format uint32
+     */
+    minimumFollowerAgeInMinutes: null | number;
     __typename: string;
   };
 
@@ -62494,10 +64368,18 @@ export type UpdateChannelClipSettings_UpdateChannelClipsSettingChannelClipsSetti
     shouldRestrictFirstTimeCommenters: null | boolean;
     /** ⚠️ Low confidence about: nullable */
     shouldRestrictBasedOnAccountAge: null | boolean;
-    minimumAccountAgeInMinutes: UnknownValue;
+    /**
+     * ⚠️ Low confidence about: nullable
+     * @format uint32
+     */
+    minimumAccountAgeInMinutes: null | number;
     /** ⚠️ Low confidence about: nullable */
     shouldRestrictBasedOnFollowerAge: null | boolean;
-    minimumFollowerAgeInMinutes: UnknownValue;
+    /**
+     * ⚠️ Low confidence about: nullable
+     * @format uint32
+     */
+    minimumFollowerAgeInMinutes: null | number;
     __typename: string;
   };
 
@@ -62514,7 +64396,11 @@ export type UpdateChannelClipSettings_UpdateChannelClipsSettingChannelClipsSetti
 /** ℹ️ Not real Twitch type name */
 export type UpdateChannelClipSettings_UpdateChannelClipsSettingChannelClipsSettingsCreationRestrictionOptions =
   {
-    followingLengthMinutes: UnknownValue;
+    /**
+     * ⚠️ Low confidence about: nullable
+     * @format uint32
+     */
+    followingLengthMinutes: null | number;
     __typename: string;
   };
 
@@ -62569,7 +64455,8 @@ export type UpdateChannelPointsNameMutation_UpdateCommunityPointsChannelSettings
 /** ℹ️ Not real Twitch type name */
 export type UpdateChannelPointsNameMutation_UpdateCommunityPointsChannelSettingsChannelCommunityPointsSettings =
   {
-    name: UnknownValue;
+    /** ⚠️ Low confidence about: nullable */
+    name: null | string;
     __typename: string;
   };
 
@@ -62615,7 +64502,8 @@ export type UpdateChannelVodsSettings_UpdateChannelVODSettingsChannelVodSettings
 export type UpdateChannelVodsSettings_UpdateChannelVODSettingsChannelVodSettingsCategoryBlocklist =
   {
     id: ID;
-    name: UnknownValue;
+    /** ⚠️ Low confidence about: nullable */
+    name: null | string;
     /** ⚠️ Low confidence about: nullable */
     displayName: null | string;
     /**
@@ -62719,7 +64607,11 @@ export type UpdateChatHighlightSettings_UpdateChatHighlightSettingsChatHighlight
     chatHighlightDisplayMode: UnknownValue;
     /** ⚠️ Low confidence about: nullable */
     isEnabled: null | boolean;
-    durationMinutes: UnknownValue;
+    /**
+     * ⚠️ Low confidence about: nullable
+     * @format uint32
+     */
+    durationMinutes: null | number;
     __typename: string;
   };
 
@@ -62739,7 +64631,11 @@ export type UpdateChatHighlightSettings_UpdateChatHighlightSettingsChatHighlight
     chatHighlightDisplayMode: UnknownValue;
     /** ⚠️ Low confidence about: nullable */
     isEnabled: null | boolean;
-    durationMinutes: UnknownValue;
+    /**
+     * ⚠️ Low confidence about: nullable
+     * @format uint32
+     */
+    durationMinutes: null | number;
     __typename: string;
   };
 
@@ -62759,7 +64655,11 @@ export type UpdateChatHighlightSettings_UpdateChatHighlightSettingsChatHighlight
     chatHighlightDisplayMode: UnknownValue;
     /** ⚠️ Low confidence about: nullable */
     isEnabled: null | boolean;
-    durationMinutes: UnknownValue;
+    /**
+     * ⚠️ Low confidence about: nullable
+     * @format uint32
+     */
+    durationMinutes: null | number;
     __typename: string;
   };
 
@@ -62779,7 +64679,11 @@ export type UpdateChatHighlightSettings_UpdateChatHighlightSettingsChatHighlight
     chatHighlightDisplayMode: UnknownValue;
     /** ⚠️ Low confidence about: nullable */
     isEnabled: null | boolean;
-    durationMinutes: UnknownValue;
+    /**
+     * ⚠️ Low confidence about: nullable
+     * @format uint32
+     */
+    durationMinutes: null | number;
     __typename: string;
   };
 
@@ -62800,7 +64704,11 @@ export type UpdateChatHighlightSettings_UpdateChatHighlightSettingsChatHighlight
     chatHighlightDisplayMode: UnknownValue;
     /** ⚠️ Low confidence about: nullable */
     isEnabled: null | boolean;
-    durationMinutes: UnknownValue;
+    /**
+     * ⚠️ Low confidence about: nullable
+     * @format uint32
+     */
+    durationMinutes: null | number;
     __typename: string;
   };
 
@@ -62821,7 +64729,11 @@ export type UpdateChatHighlightSettings_UpdateChatHighlightSettingsChatHighlight
     chatHighlightDisplayMode: UnknownValue;
     /** ⚠️ Low confidence about: nullable */
     isEnabled: null | boolean;
-    durationMinutes: UnknownValue;
+    /**
+     * ⚠️ Low confidence about: nullable
+     * @format uint32
+     */
+    durationMinutes: null | number;
     __typename: string;
   };
 
@@ -62842,7 +64754,11 @@ export type UpdateChatHighlightSettings_UpdateChatHighlightSettingsChatHighlight
     chatHighlightDisplayMode: UnknownValue;
     /** ⚠️ Low confidence about: nullable */
     isEnabled: null | boolean;
-    durationMinutes: UnknownValue;
+    /**
+     * ⚠️ Low confidence about: nullable
+     * @format uint32
+     */
+    durationMinutes: null | number;
     __typename: string;
   };
 
@@ -62862,7 +64778,11 @@ export type UpdateChatHighlightSettings_UpdateChatHighlightSettingsChatHighlight
     chatHighlightDisplayMode: UnknownValue;
     /** ⚠️ Low confidence about: nullable */
     isEnabled: null | boolean;
-    durationMinutes: UnknownValue;
+    /**
+     * ⚠️ Low confidence about: nullable
+     * @format uint32
+     */
+    durationMinutes: null | number;
     __typename: string;
   };
 
@@ -63000,7 +64920,8 @@ export type UpdateConsentMutation_UpdateConsentConsent = {
 
 /** ℹ️ Not real Twitch type name */
 export type UpdateConsentMutation_UpdateConsentConsentVendorStatus = {
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   consentStatus: UnknownValue;
   /** ⚠️ Low confidence about: nullable */
   hasUserSetConsent: null | boolean;
@@ -63058,7 +64979,11 @@ export type UpdateCostreamingAllowlist_UpdateCostreamingSettings = {
 /** ℹ️ Not real Twitch type name */
 export type UpdateCostreamingAllowlist_UpdateCostreamingSettingsCostreamingSettings = {
   scope: UnknownValue;
-  costreamingAllowlistSize: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  costreamingAllowlistSize: null | number;
   costreamingAllowlist: null | CostreamingAllowlistUser;
   __typename: string;
 };
@@ -63075,7 +65000,11 @@ export type UpdateCostreamingSettings_UpdateCostreamingSettings = {
 
 /** ℹ️ Not real Twitch type name */
 export type UpdateCostreamingSettings_UpdateCostreamingSettingsCostreamingSettings = {
-  costreamingAllowlistSize: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  costreamingAllowlistSize: null | number;
   /** ⚠️ Low confidence about: nullable */
   isEnabled: null | boolean;
   scope: UnknownValue;
@@ -63350,7 +65279,11 @@ export type UpdateFollowAcccountVerificationSettings_UpdateFollowAccountVerifica
   {
     /** ⚠️ Low confidence about: nullable */
     shouldRestrictBasedOnAccountAge: null | boolean;
-    minimumAccountAgeInMinutes: UnknownValue;
+    /**
+     * ⚠️ Low confidence about: nullable
+     * @format uint32
+     */
+    minimumAccountAgeInMinutes: null | number;
     __typename: string;
   };
 
@@ -63359,7 +65292,11 @@ export type UpdateFollowAcccountVerificationSettings_UpdateFollowAccountVerifica
   {
     /** ⚠️ Low confidence about: nullable */
     shouldRestrictBasedOnAccountAge: null | boolean;
-    minimumAccountAgeInMinutes: UnknownValue;
+    /**
+     * ⚠️ Low confidence about: nullable
+     * @format uint32
+     */
+    minimumAccountAgeInMinutes: null | number;
     __typename: string;
   };
 
@@ -63640,7 +65577,8 @@ export type UpdatePaymentMethodForm_CurrentUserEligiblePaymentMethodsPayload = {
 
 /** ℹ️ Not real Twitch type name */
 export type UpdatePaymentMethodForm_CurrentUserEligiblePaymentMethodsPayloadMethods = {
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   availabilityStatus: UnknownValue;
   __typename: string;
 };
@@ -63939,7 +65877,7 @@ export type UpdateQuestReward_UpdateQuestRewardError = {
 export type UpdateRTJHeartbeat_UpdateRTJHeartbeat = {
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   heartbeatIntervalMilliseconds: null | number;
   error:
@@ -64027,7 +65965,8 @@ export type UpdateRecapTitle_UpdateRecap = {
 /** ℹ️ Not real Twitch type name */
 export type UpdateRecapTitle_UpdateRecapRecap = {
   id: ID;
-  title: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  title: null | string;
   __typename: string;
 };
 
@@ -64127,12 +66066,12 @@ export type UpdateRoomModes_UpdateRoomModesError = {
   code: UnknownValue;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   minimumSlowModeDurationSeconds: null | number;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   maximumSlowModeDurationSeconds: null | number;
   __typename: string;
@@ -64152,7 +66091,7 @@ export type UpdateRoomModes_UpdateRoomModesRoom = {
 export type UpdateRoomModes_UpdateRoomModesRoomModes = {
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   slowModeDurationSeconds: null | number;
   /** ⚠️ Low confidence about: nullable */
@@ -64276,7 +66215,11 @@ export type UpdateSmartCostsAcknowledgement_UpdateCommunityPointsSmartCostsAckno
 /** ℹ️ Not real Twitch type name */
 export type UpdateSmartCostsAcknowledgement_UpdateCommunityPointsSmartCostsAcknowledgementsAcknowledgements =
   {
-    lastAcknowledgedCost: UnknownValue;
+    /**
+     * ⚠️ Low confidence about: nullable
+     * @format uint32
+     */
+    lastAcknowledgedCost: null | number;
     rewardType: UnknownValue;
     __typename: string;
   };
@@ -64721,7 +66664,7 @@ export type UpdatedShelf = {
     id: ID;
     items: null | {
       /**
-       * @format int64
+       * @format uint32
        * @example [4, 3, 33, 48, 51, 23, 49, 24, 2, 1]
        */
       totalCount: number;
@@ -64859,7 +66802,7 @@ export type UploadCodesForSponsorshipCampaign_UploadCodesForSponsorshipCampaignE
 export type UploadCodesForSponsorshipCampaign_UploadCodesForSponsorshipCampaignResults = {
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   uploadedCount: null | number;
   platform: UnknownValue;
@@ -64893,7 +66836,11 @@ export type UploadConfigs_GetEmoteUploadConfigPayloadUploadConfigs = {
     | null
     | UploadConfigs_GetEmoteUploadConfigPayloadUploadConfigsImages
     | UploadConfigs_GetEmoteUploadConfigPayloadUploadConfigsImages[];
-  size: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  size: null | number;
   __typename: string;
 };
 
@@ -64901,7 +66848,11 @@ export type UploadConfigs_GetEmoteUploadConfigPayloadUploadConfigs = {
 export type UploadConfigs_GetEmoteUploadConfigPayloadUploadConfigsImages = {
   /** ⚠️ Low confidence about: nullable */
   ID: null | ID;
-  Size: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  Size: null | number;
   assetType: UnknownValue;
   __typename: string;
 };
@@ -64926,14 +66877,16 @@ export type UseDragAndDropLayoutsQuery_ChannelDashboardView = {
     | {
         data: UnknownValue;
         id: ID;
-        name: UnknownValue;
+        /** ⚠️ Low confidence about: nullable */
+        name: null | string;
         version: UnknownValue;
         __typename: "StreamManagerMosaicLayout";
       }
     | {
         data: UnknownValue;
         id: ID;
-        name: UnknownValue;
+        /** ⚠️ Low confidence about: nullable */
+        name: null | string;
         version: UnknownValue;
         __typename: "TwitchStudioMosaicLayout";
       };
@@ -65204,7 +67157,8 @@ export type UserEmotes_CurrentUserEmoteSetsEmotes = {
 /** ℹ️ Not real Twitch type name */
 export type UserEmotes_CurrentUserEmoteSetsEmotesModifiers = {
   code: UnknownValue;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   __typename: string;
 };
 
@@ -65226,7 +67180,8 @@ export type UserEmotes_CurrentUserEmoteSetsOwner = {
 
 /** ℹ️ Not real Twitch type name */
 export type UserEmoticonPrefixQuery_UserEmoticonPrefix = {
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   state: UnknownValue;
   /** ⚠️ Low confidence about: nullable */
   isEditable: null | boolean;
@@ -65420,7 +67375,7 @@ export type UserRolesCacheQuery_ChannelUsersWithRole = {
   };
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   totalCount: null | number;
   __typename: string;
@@ -65630,7 +67585,11 @@ export type VIPArtistStatusQuery_ChannelCommunityRolesSettings = {
 
 /** ℹ️ Not real Twitch type name */
 export type VIPArtistStatusQuery_ChannelCommunityRolesSettingsRoleSettings = {
-  limit: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  limit: null | number;
   role: UnknownValue;
   __typename: string;
 };
@@ -65685,12 +67644,12 @@ export type VODMidrollManagerAdProperties = {
   /** @example ["inserted"] */
   vodArchiveMidrolls: string;
   /**
-   * @format int64
+   * @format uint32
    * @example [90]
    */
   vodArchiveMidrollsBreakLength: number;
   /**
-   * @format int64
+   * @format uint32
    * @example [30, 10]
    */
   vodArchiveMidrollsFrequency: number;
@@ -65907,7 +67866,7 @@ export type VerticalsUpcomingSchedules_FeaturedUpcomingStreamsNodes = {
   id: ID;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   reminderCount: null | number;
   segment:
@@ -65920,12 +67879,13 @@ export type VerticalsUpcomingSchedules_FeaturedUpcomingStreamsNodes = {
 /** ℹ️ Not real Twitch type name */
 export type VerticalsUpcomingSchedules_FeaturedUpcomingStreamsNodesSegment = {
   id: ID;
-  title: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  title: null | string;
   /** ⚠️ Low confidence about: nullable */
   baseSegmentID: null | ID;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   repeatEndsAfterCount: null | number;
   channel:
@@ -65952,7 +67912,8 @@ export type VerticalsUpcomingSchedules_FeaturedUpcomingStreamsNodesSegment = {
 /** ℹ️ Not real Twitch type name */
 export type VerticalsUpcomingSchedules_FeaturedUpcomingStreamsNodesSegmentChannel = {
   id: ID;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   owner:
     | null
     | VerticalsUpcomingSchedules_FeaturedUpcomingStreamsNodesSegmentChannelOwner
@@ -66028,7 +67989,7 @@ export type VerticalsUpcomingSchedules_FeaturedUpcomingStreamsNodesSegmentChanne
   id: ID;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   viewersCount: null | number;
   __typename: string;
@@ -66042,7 +68003,7 @@ export type Video = {
   id: ID;
   game: null | Game;
   /**
-   * @format int64
+   * @format uint32
    * @example [15389, 4621, 621, 4472, 58]
    */
   lengthSeconds: number;
@@ -66061,7 +68022,7 @@ export type Video = {
   /** @example ["Twitch Recap: 2024 according to Twitch Chat!", "Creator Camp LIVE: Streaming Basics with @Snackless & @KawaiiGuy"] */
   title: null | string;
   /**
-   * @format int64
+   * @format uint32
    * @example [0, 772963, 171376, 163669, 1911, 684]
    */
   viewCount: number;
@@ -66084,7 +68045,7 @@ export type VideoAccessTokenClipAsset = {
   createdAt: string;
   videoQualities: {
     /**
-     * @format int64
+     * @format uint32
      * @example [0, 8042862, 2732768, 945904, 781712, 7159557]
      */
     bitrate: number;
@@ -66096,7 +68057,7 @@ export type VideoAccessTokenClipAsset = {
      */
     frameRate: number;
     /**
-     * @format int64
+     * @format int32
      * @example [0, -1, 1080, 720, 480, 360, 1600]
      */
     height: number;
@@ -66107,7 +68068,7 @@ export type VideoAccessTokenClipAsset = {
     /** @example ["AVC", "HEVC"] */
     videoCodec: string;
     /**
-     * @format int64
+     * @format int32
      * @example [0, -1, 1920, 1280, 853, 640, 900, 720, 480, 360, 854, 1170]
      */
     width: number;
@@ -66176,12 +68137,12 @@ export type VideoChapter = MomentDetails & {
   /** @example ["537d53b6647d10002e05b2b25c756d2a", "eda22ff95fe71aa7cf66548dcae78e19"] */
   id: ID;
   /**
-   * @format int64
+   * @format uint32
    * @example [1844000, 43887000, 31000, 5489000, 16316000]
    */
   durationMilliseconds: number;
   /**
-   * @format int64
+   * @format uint32
    * @example [0, 1844000, 45731000, 5489000, 4725000, 3034000]
    */
   positionMilliseconds: number;
@@ -66198,7 +68159,7 @@ export type VideoChapter = MomentDetails & {
      */
     id: ID;
     /**
-     * @format int64
+     * @format uint32
      * @example [15389, 4621, 621, 4472, 58]
      */
     lengthSeconds: number;
@@ -66223,7 +68184,7 @@ export type VideoComments_UserSelf = {
 
 export type VideoConnectionOptionsInput = {
   /**
-   * @format int64
+   * @format uint32
    * @example [61]
    */
   maxLengthSeconds?: null | number;
@@ -66431,7 +68392,8 @@ export type VideoManagerActionsUpdateVideo_UpdateVideo = {
 export type VideoManagerActionsUpdateVideo_UpdateVideoVideo = {
   id: ID;
   scope: UnknownValue;
-  title: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  title: null | string;
   /** ⚠️ Low confidence about: nullable */
   description: null | string;
   /**
@@ -66450,7 +68412,8 @@ export type VideoManagerActionsUpdateVideo_UpdateVideoVideo = {
 /** ℹ️ Not real Twitch type name */
 export type VideoManagerActionsUpdateVideo_UpdateVideoVideoGame = {
   id: ID;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   __typename: string;
 };
 
@@ -66549,12 +68512,12 @@ export type VideoManagerCurrentUserFragment_ChannelVideoStreamSettings = {
 export type VideoManagerQueryStorageQuota_UserVideoStorageQuota = {
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   usageInSeconds: null | number;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   limitInSeconds: null | number;
   __typename: string;
@@ -66656,7 +68619,7 @@ export type VideoManagerVideo = {
   /** @example ["en"] */
   language: string;
   /**
-   * @format int64
+   * @format uint32
    * @example [15389, 4621, 621, 4472, 58]
    */
   lengthSeconds: number;
@@ -66664,12 +68627,12 @@ export type VideoManagerVideo = {
     mutedSegmentConnection: null | {
       nodes: {
         /**
-         * @format int64
+         * @format uint32
          * @example [180, 182, 184, 181]
          */
         duration: number;
         /**
-         * @format int64
+         * @format int32
          * @example [0, 4322, 4682, 5764, 10264, 15304]
          */
         offset: number;
@@ -66704,7 +68667,7 @@ export type VideoManagerVideo = {
    */
   viewableAt: null | string;
   /**
-   * @format int64
+   * @format uint32
    * @example [0, 772963, 171376, 163669, 1911, 684]
    */
   viewCount: number;
@@ -66756,12 +68719,12 @@ export type VideoManagerVideoRenditions = {
 export type VideoManagerVideoRenditions_VideoRenditionFormats = {
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   width: null | number;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   height: null | number;
   fps: UnknownValue;
@@ -66817,7 +68780,7 @@ export type VideoMetadataVideo = {
    */
   createdAt: string;
   /**
-   * @format int64
+   * @format uint32
    * @example [0, 772963, 171376, 163669, 1911, 684]
    */
   viewCount: number;
@@ -66827,7 +68790,7 @@ export type VideoMetadataVideo = {
    */
   publishedAt: string;
   /**
-   * @format int64
+   * @format uint32
    * @example [15389, 4621, 621, 4472, 58]
    */
   lengthSeconds: number;
@@ -66877,12 +68840,12 @@ export type VideoMomentEdge = {
 
 export type VideoMutedSegment = {
   /**
-   * @format int64
+   * @format uint32
    * @example [180, 182, 184, 181]
    */
   duration: number;
   /**
-   * @format int64
+   * @format int32
    * @example [0, 4322, 4682, 5764, 10264, 15304]
    */
   offset: number;
@@ -66898,7 +68861,11 @@ export type VideoOptionsUser_UserSelf = {
 
 export type VideoPlayReferralsFragment = {
   items: null | AggregatedReferralsFragment;
-  total: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  total: null | number;
   __typename: "VideoPlayReferrals";
 };
 
@@ -66916,7 +68883,11 @@ export type VideoPlayerClipPostplayRecommendationsOverlayRecs_FeedItems = {
       | { __typename: "FeedStream" };
     __typename: string;
   }[];
-  recommendedLimit: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  recommendedLimit: null | number;
   /** ⚠️ Low confidence about: nullable */
   isEndOfContent: null | boolean;
   __typename: string;
@@ -67091,7 +69062,7 @@ export type VideoPlayerVODPostplayRecommendationsVideo = {
    */
   createdAt: string;
   /**
-   * @format int64
+   * @format uint32
    * @example [15389, 4621, 621, 4472, 58]
    */
   lengthSeconds: number;
@@ -67133,12 +69104,12 @@ export type VideoPlayerVideoMoment = {
   /** @example ["537d53b6647d10002e05b2b25c756d2a", "eda22ff95fe71aa7cf66548dcae78e19"] */
   id: ID;
   /**
-   * @format int64
+   * @format uint32
    * @example [1844000, 43887000, 31000, 5489000, 16316000]
    */
   durationMilliseconds: number;
   /**
-   * @format int64
+   * @format uint32
    * @example [0, 1844000, 45731000, 5489000, 4725000, 3034000]
    */
   positionMilliseconds: number;
@@ -67163,7 +69134,7 @@ export type VideoPlayerVideoMoment = {
      */
     id: ID;
     /**
-     * @format int64
+     * @format uint32
      * @example [15389, 4621, 621, 4472, 58]
      */
     lengthSeconds: number;
@@ -67304,29 +69275,53 @@ export type ViewTermsPageCurrentUser_UserPayoutPlans = {
 export type ViewerAnnualRecap2023 = {
   id: ID;
   distinctDaysWatched: UnknownValue;
-  totalHoursWatched: UnknownValue;
-  totalChatsSent: UnknownValue;
-  topCategoriesWatched: null | AnnualRecapTopCategory;
-  topEmotes: null | AnnualRecapTopEmoteStat;
-  totalHypeTrainsContributed: UnknownValue;
-  totalSubsGifted: UnknownValue;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
+   */
+  totalHoursWatched: null | number;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  totalChatsSent: null | number;
+  topCategoriesWatched: null | AnnualRecapTopCategory;
+  topEmotes: null | AnnualRecapTopEmoteStat;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  totalHypeTrainsContributed: null | number;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  totalSubsGifted: null | number;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
    */
   totalChannelModCount: null | number;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   totalChannelModChatCount: null | number;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   totalChannelModActionsCount: null | number;
-  totalArtistEmotesCreated: UnknownValue;
-  totalArtistEmotesUsage: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  totalArtistEmotesCreated: null | number;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  totalArtistEmotesUsage: null | number;
   topViewedChannels: null | AnnualRecapTopChannel;
   bonuses: UnknownValue;
   /** ⚠️ Low confidence about: nullable */
@@ -67337,28 +69332,56 @@ export type ViewerAnnualRecap2023 = {
 export type ViewerAnnualRecap2024 = {
   id: ID;
   distinctDaysWatched: UnknownValue;
-  totalHoursWatched: UnknownValue;
-  totalChatsSent: UnknownValue;
-  topCategoriesWatched: null | AnnualRecapTopCategory2024;
-  topEmotes: null | AnnualRecapTopEmoteStat2024;
-  totalHypeTrainsContributed: UnknownValue;
-  totalSubsGifted: UnknownValue;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
+   */
+  totalHoursWatched: null | number;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  totalChatsSent: null | number;
+  topCategoriesWatched: null | AnnualRecapTopCategory2024;
+  topEmotes: null | AnnualRecapTopEmoteStat2024;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  totalHypeTrainsContributed: null | number;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  totalSubsGifted: null | number;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
    */
   totalChannelModCount: null | number;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   totalChannelModChatCount: null | number;
-  totalArtistEmotesCreated: UnknownValue;
-  totalArtistEmotesUsage: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  totalArtistEmotesCreated: null | number;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  totalArtistEmotesUsage: null | number;
   topViewedChannels: null | AnnualRecapTopChannel2024;
   /** ⚠️ Low confidence about: nullable */
   hasChatBadge: null | boolean;
-  totalClipsCreated: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  totalClipsCreated: null | number;
   topClipCreated: null | AnnualRecapClip2024;
   topCategoryTag: UnknownValue;
   __typename: "ViewerRecap2024";
@@ -67367,28 +69390,56 @@ export type ViewerAnnualRecap2024 = {
 export type ViewerAnnualRecap2025 = {
   id: ID;
   distinctDaysWatched: UnknownValue;
-  totalHoursWatched: UnknownValue;
-  totalChatsSent: UnknownValue;
-  topCategoriesWatched: null | AnnualRecapTopCategory2025;
-  topEmotes: null | AnnualRecapTopEmoteStat2025;
-  totalHypeTrainsContributed: UnknownValue;
-  totalSubsGifted: UnknownValue;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
+   */
+  totalHoursWatched: null | number;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  totalChatsSent: null | number;
+  topCategoriesWatched: null | AnnualRecapTopCategory2025;
+  topEmotes: null | AnnualRecapTopEmoteStat2025;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  totalHypeTrainsContributed: null | number;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  totalSubsGifted: null | number;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
    */
   totalChannelModCount: null | number;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   totalChannelModChatCount: null | number;
-  totalArtistEmotesCreated: UnknownValue;
-  totalArtistEmotesUsage: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  totalArtistEmotesCreated: null | number;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  totalArtistEmotesUsage: null | number;
   topViewedChannels: null | AnnualRecapTopChannel2025;
   /** ⚠️ Low confidence about: nullable */
   hasChatBadge: null | boolean;
-  totalClipsCreated: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  totalClipsCreated: null | number;
   topClipCreated: null | AnnualRecapClip2025;
   __typename: "ViewerRecap2025";
 };
@@ -67406,7 +69457,7 @@ export type ViewerCardCommunityMoments_ChannelViewerEarnedCommunityMoments = {
   }[];
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   totalCount: null | number;
   pageInfo: null | {
@@ -67421,7 +69472,7 @@ export type ViewerCardCommunityMoments_ChannelViewerEarnedCommunityMomentsEdgesN
   id: ID;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   claimCount: null | number;
   /**
@@ -67439,7 +69490,8 @@ export type ViewerCardCommunityMoments_ChannelViewerEarnedCommunityMomentsEdgesN
 /** ℹ️ Not real Twitch type name */
 export type ViewerCardCommunityMoments_ChannelViewerEarnedCommunityMomentsEdgesNodeClip = {
   id: ID;
-  title: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  title: null | string;
   /**
    * ⚠️ Low confidence about: nullable
    * @format uri
@@ -67589,7 +69641,11 @@ export type ViewerCardModLogsCaughtMessageFragment_ViewerCardModLogsCaughtMessag
           __typename: "Emote";
         }
       | {
-          bitsAmount: UnknownValue;
+          /**
+           * ⚠️ Low confidence about: nullable
+           * @format uint32
+           */
+          bitsAmount: null | number;
           prefix: UnknownValue;
           tier: UnknownValue;
           __typename: "CheermoteToken";
@@ -67699,7 +69755,11 @@ export type ViewerCardModLogsChatMessageFragment_ViewerCardModLogsChatMessageCon
         __typename: "Emote";
       }
     | {
-        bitsAmount: UnknownValue;
+        /**
+         * ⚠️ Low confidence about: nullable
+         * @format uint32
+         */
+        bitsAmount: null | number;
         prefix: UnknownValue;
         tier: UnknownValue;
         __typename: "CheermoteToken";
@@ -67865,7 +69925,11 @@ export type ViewerCardModLogs_ViewerCardModLogs = {
           hasNextPage: boolean;
           __typename: "PageInfo";
         };
-        count: UnknownValue;
+        /**
+         * ⚠️ Low confidence about: nullable
+         * @format uint32
+         */
+        count: null | number;
         __typename: "ViewerCardModLogsMessagesConnection";
       };
   /** @aliasFor targetedActions */
@@ -68203,7 +70267,8 @@ export type WatchStreakMissedStreamFragment_WatchStreakMissedStreamChannel = {
   id: ID;
   /** ⚠️ Low confidence about: nullable */
   displayName: null | string;
-  name: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
   __typename: string;
 };
 
@@ -68255,7 +70320,8 @@ export type WebShareMetadataQuery_UrlMetadata = {
 
 /** ℹ️ Not real Twitch type name */
 export type WebShareMetadataQuery_UrlMetadataShare = {
-  title: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  title: null | string;
   /**
    * ⚠️ Low confidence about: nullable
    * @format uri
@@ -68509,7 +70575,7 @@ export type WhispersMarkThreadMessageRead_UpdateWhisperThreadThread = {
   id: ID;
   /**
    * ⚠️ Low confidence about: nullable
-   * @format int64
+   * @format uint32
    */
   unreadMessagesCount: null | number;
   __typename: string;
@@ -68680,7 +70746,7 @@ export type YourCommunityGameFragment = {
    */
   boxArtURL: string;
   /**
-   * @format int64
+   * @format uint32
    * @example [584353, 2909, 484662, 92801, 444549]
    */
   viewersCount: null | number;
@@ -68707,7 +70773,7 @@ export type YourCommunityUserFragment = {
   profileImageURL: string;
   followers: {
     /**
-     * @format int64
+     * @format uint32
      * @example [0, 2430015, 2459534, 2471025, 2380069, 2380116]
      */
     totalCount: number;
@@ -68855,7 +70921,7 @@ export type AccessIsAdsPreRollEnabledQueryData = {
     id: ID;
     /**
      * ⚠️ Low confidence about: nullable
-     * @format int64
+     * @format uint32
      */
     prerollFreeTimeSeconds: null | number;
     adProperties: null | {
@@ -69281,7 +71347,11 @@ export type AccessMaxAdBreakLengthQueryData = {
      */
     id: ID;
     adProperties: null | {
-      maxAdBreakLength: UnknownValue;
+      /**
+       * ⚠️ Low confidence about: nullable
+       * @format uint32
+       */
+      maxAdBreakLength: null | number;
       __typename: "AdProperties";
     };
     __typename: "User";
@@ -69647,7 +71717,7 @@ export type ActivityFilterContextQueryResponse = QueryResponse<
 
 export type ActivityListContextV2QueryVariables = {
   channelID: ID;
-  /** @format int64 */
+  /** @format int32 */
   limit: number;
   cursor?: null | Cursor;
 };
@@ -69791,7 +71861,7 @@ export type AdContextChannelIDQueryResponse = QueryResponse<
 
 export type AddShelfLayoutQueryVariables = {
   channelLogin: string;
-  /** @format int64 */
+  /** @format int32 */
   first: number;
   cursor?: null | Cursor;
   /** @default false */
@@ -70600,12 +72670,12 @@ export type AlertWidgetGetAlertFiltersQueryResponse = QueryResponse<
 
 export type AllChannelsInternationalSectionVariables = {
   platformType?: null | PlatformType;
-  /** @format int64 */
+  /** @format int32 */
   limit?: null | number;
   options?: null | StreamOptions;
   sortTypeIsRecency: boolean;
   /**
-   * @format int64
+   * @format int32
    * @default 50
    */
   imageWidth?: null | number;
@@ -70644,7 +72714,7 @@ export type AllCostreamersAnalyticsQueryResponse = QueryResponse<
 export type AllCostreamersDiscoveryQueryVariables = {
   channelLogin: string;
   /**
-   * @format int64
+   * @format int32
    * @default 10
    */
   first?: null | number;
@@ -71095,7 +73165,7 @@ export type AnnualRecapStreamer2024Response = QueryResponse<
 >;
 
 export type ArtistAttributionChannelsVariables = {
-  /** @format int64 */
+  /** @format int32 */
   limit: number;
   cursor?: null | Cursor;
 };
@@ -71168,7 +73238,7 @@ export type AutoBannerEventsVariables = {
   channelID: ID;
   sort?: null | EnumOrInput;
   /**
-   * @format int64
+   * @format int32
    * @default 25
    */
   limit?: null | number;
@@ -71411,7 +73481,7 @@ export type AutoRaidSettingsResponse = QueryResponse<AutoRaidSettingsData, "Auto
 export type AvailableEmotesForChannelPaginatedVariables = {
   channelID: ID;
   withOwner: boolean;
-  /** @format int64 */
+  /** @format int32 */
   pageLimit: number;
   cursor?: null | Cursor;
 };
@@ -71463,7 +73533,7 @@ export type AvailableReactionsByContentTypeResponse = QueryResponse<
 
 export type B2BCheckoutPriceVariables = {
   params: EnumOrInput;
-  /** @format int64 */
+  /** @format int32 */
   quantity: number;
   inputAmount?: null | UnknownValue;
   singleStepPaymentMethodDetails?: null | UnknownValue;
@@ -71890,7 +73960,7 @@ export type BitsBuyCardOffersData = {
          */
         id: ID;
         /**
-         * @format int64
+         * @format uint32
          * @example [200, 1, 300, 69]
          */
         cheerMinimumBits: number;
@@ -71967,12 +74037,12 @@ export type BitsCardMainCardData = {
          */
         id: ID;
         /**
-         * @format int64
+         * @format uint32
          * @example [1, 300, 69]
          */
         emoteMinimumBits: number;
         /**
-         * @format int64
+         * @format uint32
          * @example [200, 1, 300, 69]
          */
         cheerMinimumBits: number;
@@ -71983,7 +74053,7 @@ export type BitsCardMainCardData = {
          */
         isCheerBombEventEnabled?: null | boolean;
         /**
-         * @format int64
+         * @format uint32
          * @example [1000]
          */
         minBitsToPin: number;
@@ -72075,12 +74145,12 @@ export type BitsConfigContextChannelData = {
          */
         id: ID;
         /**
-         * @format int64
+         * @format uint32
          * @example [200, 1, 300, 69]
          */
         cheerMinimumBits: number;
         /**
-         * @format int64
+         * @format uint32
          * @example [1, 300, 69]
          */
         emoteMinimumBits: number;
@@ -72174,7 +74244,7 @@ export type BitsLandingPageResponse = QueryResponse<BitsLandingPageData, "BitsLa
 export type BitsOneClickCheckoutVariables = {
   params: EnumOrInput;
   /**
-   * @format int64
+   * @format int32
    * @default 1
    */
   quantity?: null | number;
@@ -72396,7 +74466,7 @@ export type BonusBitsChannelBannerEligibleRewardsData = {
           /** @example ["POINTS"] */
           pricingType: string;
           /**
-           * @format int64
+           * @format uint32
            * @example [0]
            */
           bitsCost: number;
@@ -72452,7 +74522,7 @@ export type BroadcastFollowSubCountsData = {
     id: ID;
     followers: {
       /**
-       * @format int64
+       * @format uint32
        * @example [0, 2430015, 2459534, 2471025, 2380069, 2380116]
        */
       totalCount: number;
@@ -72584,7 +74654,7 @@ export type BroadcastStreamStatsData = {
        */
       id: ID;
       /**
-       * @format int64
+       * @format uint32
        * @example [0, 46802, 656, 1572, 1518, 1432]
        */
       viewersCount: number;
@@ -72600,7 +74670,7 @@ export type BroadcastStreamStatsResponse = QueryResponse<
 >;
 
 export type BrowsePageAllDirectoriesVariables = {
-  /** @format int64 */
+  /** @format int32 */
   limit: number;
   cursor?: null | Cursor;
   options?: null | GameOptions;
@@ -72624,14 +74694,14 @@ export type BrowsePageAllDirectoriesResponse = QueryResponse<
 >;
 
 export type BrowsePagePopularVariables = {
-  /** @format int64 */
+  /** @format int32 */
   limit: number;
   cursor?: null | Cursor;
   platformType: PlatformType;
   options: StreamOptions;
   sortTypeIsRecency: boolean;
   /**
-   * @format int64
+   * @format int32
    * @default 50
    */
   imageWidth?: null | number;
@@ -72665,7 +74735,7 @@ export type BrowsePagePromotedEventCardsData = {
      */
     boxartURL: string;
     /**
-     * @format int64
+     * @format uint32
      * @example [21191, 298, 25701, 43238, 160]
      */
     viewersCount: null | number;
@@ -72747,12 +74817,12 @@ export type BrowserStreamingPellyTargetedListChecksResponse = QueryResponse<
 export type BrowseVerticalDirectoryVariables = {
   id: ID;
   recommendationsContext: RecommendationsContext;
-  /** @format int64 */
+  /** @format int32 */
   contentMin: number;
-  /** @format int64 */
+  /** @format int32 */
   contentMax: number;
   /**
-   * @format int64
+   * @format int32
    * @default 50
    */
   imageWidth?: null | number;
@@ -72786,7 +74856,7 @@ export type BulkActiveHypeTrainStatusesQueryData = {
       __typename: "Channel";
     };
     /**
-     * @format int64
+     * @format int32
      * @example [7]
      */
     level: number;
@@ -72887,7 +74957,7 @@ export type CampaignTopSupportersVariables = {
   channelID: ID;
   campaignID: ID;
   /**
-   * @format int64
+   * @format int32
    * @default 10
    */
   first?: null | number;
@@ -73008,12 +75078,12 @@ export type CanViewersExportQueryResponse = QueryResponse<
 
 export type CategoryChannelsInternationalSectionVariables = {
   slug: string;
-  /** @format int64 */
+  /** @format int32 */
   limit?: null | number;
   options?: null | GameStreamOptions;
   sortTypeIsRecency: boolean;
   /**
-   * @format int64
+   * @format int32
    * @default 50
    */
   imageWidth?: null | number;
@@ -73069,12 +75139,12 @@ export type CategoryDetailsData = {
      */
     boxArtURL: string;
     /**
-     * @format int64
+     * @format uint32
      * @example [584353, 2909, 484662, 92801, 444549]
      */
     viewersCount: null | number;
     /**
-     * @format int64
+     * @format uint32
      * @example [52803600, 53204320, 53261452, 53270364]
      */
     followersCount: number;
@@ -73168,7 +75238,7 @@ export type CategoryTimeseriesMetricsResponse = QueryResponse<
 
 export type CategoryWidePromotionsVariables = {
   creatorID: ID;
-  /** @format int64 */
+  /** @format int32 */
   first?: null | number;
 };
 
@@ -73187,7 +75257,7 @@ export type CategoryWidePromotionsResponse = QueryResponse<
 export type CategoryWidePromotionWarningVariables = {
   creatorID: ID;
   query?: null | EnumOrInput;
-  /** @format int64 */
+  /** @format int32 */
   first?: null | number;
 };
 
@@ -73325,7 +75395,8 @@ export type ChannelActiveCharityCampaignData = {
          * @format uri
          */
         logoURL: null | string;
-        name: UnknownValue;
+        /** ⚠️ Low confidence about: nullable */
+        name: null | string;
         __typename: "Charity";
       };
       /** ⚠️ Low confidence about: nullable */
@@ -73571,7 +75642,7 @@ export type ChannelAnalyticsCreatorMetricsVariables = {
   startAt: string;
   /** @format time */
   endAt: string;
-  /** @format int64 */
+  /** @format int32 */
   numberOfIntervals: number;
 };
 
@@ -73820,7 +75891,7 @@ export type ChannelAnalyticsNotificationsVariables = {
   startAt: string;
   /** @format time */
   endAt: string;
-  /** @format int64 */
+  /** @format int32 */
   first: number;
   after?: null | Cursor;
 };
@@ -73852,7 +75923,7 @@ export type ChannelAnalyticsNotificationsEngagementsVariables = {
   /** @format time */
   endAt: string;
   granularity: EnumOrInput;
-  /** @format int64 */
+  /** @format int32 */
   numberOfIntervals: number;
   timeZone: string;
 };
@@ -73884,7 +75955,7 @@ export type ChannelAnalyticsNotificationsTimeseriesVariables = {
   /** @format time */
   endAt: string;
   granularity: EnumOrInput;
-  /** @format int64 */
+  /** @format int32 */
   numberOfIntervals: number;
   timeZone: string;
 };
@@ -74122,7 +76193,7 @@ export type ChannelAnalyticsViewerOverlapPanelResponse = QueryResponse<
 export type ChannelAuditVariables = {
   channelLogin: ID;
   /**
-   * @format int64
+   * @format int32
    * @default 25
    */
   first?: null | number;
@@ -74166,7 +76237,7 @@ export type ChannelAvatarData = {
     id: ID;
     followers: {
       /**
-       * @format int64
+       * @format uint32
        * @example [0, 2430015, 2459534, 2471025, 2380069, 2380116]
        */
       totalCount: number;
@@ -74219,7 +76290,7 @@ export type ChannelClipCoreData = {
      */
     id: ID;
     /**
-     * @format int64
+     * @format uint32
      * @example [7897, 11412, 12062, 2238]
      */
     videoOffsetSeconds: null | number;
@@ -74295,7 +76366,7 @@ export type ChannelCollectionCoreResponse = QueryResponse<
 
 export type ChannelCollectionsContentVariables = {
   ownerLogin: string;
-  /** @format int64 */
+  /** @format int32 */
   limit: number;
   cursor?: null | Cursor;
   /** @default false */
@@ -74392,7 +76463,7 @@ export type ChannelDropsCampaignsData = {
             requirementType: string;
             requirements: {
               /**
-               * @format int64
+               * @format uint32
                * @example [360, 420, 60, 120, 180, 240, 300, 20]
                */
               minutesWatched: number;
@@ -74404,12 +76475,12 @@ export type ChannelDropsCampaignsData = {
             isAutoProgressable: boolean;
             repeatableConfig: null | {
               /**
-               * @format int64
+               * @format int32
                * @example [3]
                */
               repeatableTimes: number;
               /**
-               * @format int64
+               * @format uint32
                * @example [86400]
                */
               resetIntervalSeconds: number;
@@ -74483,7 +76554,7 @@ export type ChannelEditButtonResponse = QueryResponse<ChannelEditButtonData, "Ch
 
 export type ChannelFollowsVariables = {
   login?: null | string;
-  /** @format int64 */
+  /** @format int32 */
   limit?: null | number;
   cursor?: null | Cursor;
   order?: null | SortOrder;
@@ -74573,11 +76644,11 @@ export type ChannelLayoutResponse = QueryResponse<ChannelLayoutData, "ChannelLay
 export type ChannelLeaderboardsVariables = {
   channelID: ID;
   /**
-   * @format int64
+   * @format int32
    * @default 10
    */
   first?: null | number;
-  /** @format int64 */
+  /** @format int32 */
   rankContextSize: number;
 };
 
@@ -74621,7 +76692,7 @@ export type ChannelLeaderboardsData = {
          */
         id: ID;
         /**
-         * @format int64
+         * @format uint32
          * @example [200, 1, 300, 69]
          */
         cheerMinimumBits: number;
@@ -74680,7 +76751,7 @@ export type ChannelPageChannelInfoBarUserData = {
     };
     followers: {
       /**
-       * @format int64
+       * @format uint32
        * @example [0, 2430015, 2459534, 2471025, 2380069, 2380116]
        */
       totalCount: number;
@@ -74700,7 +76771,7 @@ export type ChannelPageChannelInfoBarUserData = {
     };
     /**
      * ⚠️ Low confidence about: nullable
-     * @format int64
+     * @format uint32
      */
     profileViewCount: null | number;
     stream: null | {
@@ -74710,7 +76781,7 @@ export type ChannelPageChannelInfoBarUserData = {
        */
       id: ID;
       /**
-       * @format int64
+       * @format uint32
        * @example [0, 46802, 656, 1572, 1518, 1432]
        */
       viewersCount: number;
@@ -74761,7 +76832,7 @@ export type ChannelPageChannelViewersCountData = {
        */
       id: ID;
       /**
-       * @format int64
+       * @format uint32
        * @example [0, 46802, 656, 1572, 1518, 1432]
        */
       viewersCount: number;
@@ -75031,8 +77102,16 @@ export type ChannelPointsCommunityGoalsData = {
        */
       id: ID;
       communityPointsSettings: {
-        communityGoalSmallContribution: UnknownValue;
-        communityGoalMaxContributionPerStream: UnknownValue;
+        /**
+         * ⚠️ Low confidence about: nullable
+         * @format uint32
+         */
+        communityGoalSmallContribution: null | number;
+        /**
+         * ⚠️ Low confidence about: nullable
+         * @format uint32
+         */
+        communityGoalMaxContributionPerStream: null | number;
         goals: CommunityGoalItem[];
         __typename: "CommunityPointsChannelSettings";
       };
@@ -75082,7 +77161,7 @@ export type ChannelPointsContextData = {
             communityPointsSettings: {
               isEnabled: boolean;
               /**
-               * @format int64
+               * @format uint32
                * @example [250]
                */
               raidPointAmount: number;
@@ -75199,7 +77278,7 @@ export type ChannelPointsGlobalContextResponse = QueryResponse<
 export type ChannelPointsPredictionContextVariables = {
   channelLogin: string;
   /**
-   * @format int64
+   * @format int32
    * @default 1
    */
   count?: null | number;
@@ -75517,7 +77596,7 @@ export type ChannelRootAboutPanelData = {
     profileImageURL: string;
     followers: {
       /**
-       * @format int64
+       * @format uint32
        * @example [0, 2430015, 2459534, 2471025, 2380069, 2380116]
        */
       totalCount: number;
@@ -76033,7 +78112,7 @@ export type ChannelTrailerReviewResponse = QueryResponse<
 
 export type ChannelTrailerSelectVariables = {
   channelLogin: string;
-  /** @format int64 */
+  /** @format int32 */
   limit: number;
   cursor?: null | Cursor;
 };
@@ -76159,7 +78238,7 @@ export type ChannelVideosContentGameResponse = QueryResponse<
 
 export type ChannelVideoShelvesQueryVariables = {
   channelLogin: string;
-  /** @format int64 */
+  /** @format int32 */
   first: number;
   cursor?: null | Cursor;
   options?: null | EnumOrInput;
@@ -76284,7 +78363,7 @@ export type CharityDiscoveryPageResponse = QueryResponse<
 >;
 
 export type CharityDiscoveryPageSearchCharitiesVariables = {
-  /** @format int64 */
+  /** @format int32 */
   first?: null | number;
   after?: null | Cursor;
   search: EnumOrInput;
@@ -76395,7 +78474,7 @@ export type CharityPanelQueryResponse = QueryResponse<CharityPanelQueryData, "Ch
 export type CharityParticipationPageQueryVariables = {
   channelName: string;
   charityID: ID;
-  /** @format int64 */
+  /** @format int32 */
   first: number;
   after?: null | Cursor;
 };
@@ -76599,17 +78678,17 @@ export type ChatClipData = {
      */
     id: ID;
     /**
-     * @format int64
+     * @format uint32
      * @example [7897, 11412, 12062, 2238]
      */
     videoOffsetSeconds: null | number;
     /**
-     * @format int64
+     * @format uint32
      * @example [44, 26, 25, 42, 30, 59, 36, 41, 60, 29]
      */
     durationSeconds: number;
     /**
-     * @format int64
+     * @format uint32
      * @example [0, 21, 14, 4, 2, 3, 1, 29, 6, 15, 19]
      */
     topLevelCommentCount: number;
@@ -76840,12 +78919,12 @@ export type ChatInputData = {
          */
         id: ID;
         /**
-         * @format int64
+         * @format uint32
          * @example [1, 300, 69]
          */
         emoteMinimumBits: number;
         /**
-         * @format int64
+         * @format uint32
          * @example [200, 1, 300, 69]
          */
         cheerMinimumBits: number;
@@ -77223,12 +79302,12 @@ export type ChatRoomStateData = {
     chatSettings: null | {
       isEmoteOnlyModeEnabled: boolean;
       /**
-       * @format int64
+       * @format uint32
        * @example [0, 10, 1440]
        */
       followersOnlyDurationMinutes: null | number;
       /**
-       * @format int64
+       * @format uint32
        * @example [5]
        */
       slowModeDurationSeconds: null | number;
@@ -77441,7 +79520,7 @@ export type ChatSettingsFollowersOnlySettingData = {
     id: ID;
     chatSettings: null | {
       /**
-       * @format int64
+       * @format uint32
        * @example [0, 10, 1440]
        */
       followersOnlyDurationMinutes: null | number;
@@ -77467,7 +79546,7 @@ export type ChatSettingsSlowModeSettingData = {
     id: ID;
     chatSettings: null | {
       /**
-       * @format int64
+       * @format uint32
        * @example [5]
        */
       slowModeDurationSeconds: null | number;
@@ -77774,12 +79853,12 @@ export type CheckoutCreatorSubGoalData = {
           /** @example ["NEW_SUBS", "FOLLOWERS"] */
           contributionType: string;
           /**
-           * @format int64
+           * @format uint32
            * @example [0, 2430015, 2459534, 1131904, 143093]
            */
           currentContributions: number;
           /**
-           * @format int64
+           * @format uint32
            * @example [1, 2430000, 2460000, 1140000, 200000]
            */
           targetContributions: number;
@@ -77832,7 +79911,7 @@ export type CheckoutFormScreenManagerVariables = {
   params: EnumOrInput;
   tagBindings: UnknownValue[];
   giftRecipientIDs: ID[];
-  /** @format int64 */
+  /** @format int32 */
   quantity: number;
   paymentSession: UnknownValue;
   /** @default false */
@@ -77861,7 +79940,7 @@ export type CheckoutFormScreenManagerData = {
             renewalPolicy: string;
             interval: {
               /**
-               * @format int64
+               * @format uint32
                * @example [1, 6, 3]
                */
               duration: number;
@@ -77875,7 +79954,7 @@ export type CheckoutFormScreenManagerData = {
             /** @example ["USD", "BYN"] */
             currency: string;
             /**
-             * @format int64
+             * @format int32
              * @example [2]
              */
             exponent: number;
@@ -77887,7 +79966,7 @@ export type CheckoutFormScreenManagerData = {
             /** ⚠️ Low confidence about: nullable */
             isTaxInclusive: null | boolean;
             /**
-             * @format int64
+             * @format int32
              * @example [599, 699, 1749, 349, 2094, 1047]
              */
             price: number;
@@ -77924,12 +80003,12 @@ export type CheckoutFormScreenManagerData = {
     id: ID;
     quantity: {
       /**
-       * @format int64
+       * @format int32
        * @example [1]
        */
       min: number;
       /**
-       * @format int64
+       * @format int32
        * @example [1]
        */
       max: number;
@@ -78065,7 +80144,7 @@ export type CheckoutFounderTenureData = {
        */
       id: ID;
       /**
-       * @format int64
+       * @format int32
        * @example [0]
        */
       founderBadgeAvailability: number;
@@ -78126,7 +80205,7 @@ export type CheckoutGiftCreatorBenefitsResponse = QueryResponse<
 export type CheckoutGiftLeaderboardVariables = {
   channelID: ID;
   /**
-   * @format int64
+   * @format int32
    * @default 10
    */
   first?: null | number;
@@ -78185,28 +80264,28 @@ export type CheckoutPartnerPlusGoalData = {
       /** @example ["OFF", "LEVEL_2"] */
       widgetSetting: string;
       /**
-       * @format int64
+       * @format int32
        * @example [100]
        */
       l1Threshold: number;
       /**
-       * @format int64
+       * @format int32
        * @example [300]
        */
       l2Threshold: number;
       subPoints: {
         /**
-         * @format int64
+         * @format uint32
          * @example [2026, 2025]
          */
         year: number;
         /**
-         * @format int64
+         * @format uint32
          * @example [6, 5, 4, 3, 2, 1, 12, 11, 10, 9]
          */
         month: number;
         /**
-         * @format int64
+         * @format uint32
          * @example [774, 3700, 3528, 3619, 3695]
          */
         count: number;
@@ -78279,7 +80358,7 @@ export type CheckoutPersonalizationPreviewQueryResponse = QueryResponse<
 
 export type CheckoutPriceVariables = {
   params: EnumOrInput;
-  /** @format int64 */
+  /** @format int32 */
   quantity: number;
   paymentProvider: UnknownValue;
   inputAmount?: null | UnknownValue;
@@ -78529,7 +80608,7 @@ export type ClipCommentEligibilityResponse = QueryResponse<
 export type ClipCommentRepliesVariables = {
   clipSlug: ID;
   commentID: ID;
-  /** @format int64 */
+  /** @format int32 */
   first?: null | number;
   after?: null | Cursor;
 };
@@ -78553,7 +80632,7 @@ export type ClipCommentRepliesResponse = QueryResponse<
 
 export type ClipCommentsVariables = {
   slug: ID;
-  /** @format int64 */
+  /** @format int32 */
   first: number;
   after?: null | Cursor;
 };
@@ -78569,7 +80648,7 @@ export type ClipCommentsData = {
     slug: string;
     isCommentsEnabled: boolean;
     /**
-     * @format int64
+     * @format uint32
      * @example [0, 21, 14, 4, 2, 3, 1, 29, 6, 15, 19]
      */
     topLevelCommentCount: number;
@@ -78778,10 +80857,10 @@ export type ClipMetadataVodInfoQueryResponse = QueryResponse<
 export type ClipRecapsVariables = {
   filter: EnumOrInput;
   sort: EnumOrInput;
-  /** @format int64 */
+  /** @format int32 */
   first: number;
   after?: null | Cursor;
-  /** @format int64 */
+  /** @format int32 */
   thumbnailHeight: number;
   /** @default ["AVC"] */
   supportedCodecs: VideoCodec[];
@@ -78794,10 +80873,10 @@ export type ClipRecapsResponse = QueryResponse<ClipRecapsData, "ClipRecaps">;
 export type ClipRecapsPlayerVariables = {
   filter: EnumOrInput;
   sort: EnumOrInput;
-  /** @format int64 */
+  /** @format int32 */
   first: number;
   after?: null | Cursor;
-  /** @format int64 */
+  /** @format int32 */
   thumbnailHeight: number;
 };
 
@@ -78809,7 +80888,7 @@ export type ClipRecapsPlayerResponse = QueryResponse<ClipRecapsPlayerData, "Clip
 
 export type ClipsCardsGameVariables = {
   categorySlug: string;
-  /** @format int64 */
+  /** @format int32 */
   limit: number;
   cursor?: null | Cursor;
   criteria?: null | GameClipsInput;
@@ -78849,7 +80928,7 @@ export type ClipsCardsGameResponse = QueryResponse<ClipsCardsGameData, "ClipsCar
 
 export type ClipsCardsUserVariables = {
   login: string;
-  /** @format int64 */
+  /** @format int32 */
   limit: number;
   cursor?: null | Cursor;
   criteria?: null | UserClipsInput;
@@ -78990,12 +81069,12 @@ export type ClipsDownloadButtonData = {
      */
     createdAt: string;
     /**
-     * @format int64
+     * @format uint32
      * @example [44, 26, 25, 42, 30, 59, 36, 41, 60, 29]
      */
     durationSeconds: number;
     /**
-     * @format int64
+     * @format uint32
      * @example [0, 957063, 957456, 899934, 944919, 773854]
      */
     viewCount: number;
@@ -79384,7 +81463,7 @@ export type CollabViewCountStreamManagerData = {
        */
       id: ID;
       /**
-       * @format int64
+       * @format uint32
        * @example [4617, 7717, 7714, 11, 4557]
        */
       collaborationViewersCount: null | number;
@@ -79401,7 +81480,7 @@ export type CollabViewCountStreamManagerResponse = QueryResponse<
 
 export type CollectionCarouselQueryVariables = {
   collectionID: ID;
-  /** @format int64 */
+  /** @format int32 */
   first: number;
   cursor?: null | Cursor;
   /** @default false */
@@ -79655,7 +81734,7 @@ export type CollectionSideBarData = {
     /** @example ["TwitchCon San Diego 2024", "TwitchCon Europe 2024", "Patch Notes", "Twitch Public Access", "Let's Chat", "Subathon Highlights", "yt vids"] */
     title: string;
     /**
-     * @format int64
+     * @format uint32
      * @example [87731, 47380, 166134, 249444, 291563]
      */
     lengthSeconds: number;
@@ -79678,7 +81757,7 @@ export type CollectionSideBarData = {
     };
     items: null | {
       /**
-       * @format int64
+       * @format uint32
        * @example [4, 3, 33, 48, 51, 23, 49, 24, 2, 1]
        */
       totalCount: number;
@@ -79693,7 +81772,7 @@ export type CollectionSideBarData = {
           /** @example ["Twitch Recap: 2024 according to Twitch Chat!", "Creator Camp LIVE: Streaming Basics with @Snackless & @KawaiiGuy"] */
           title: null | string;
           /**
-           * @format int64
+           * @format uint32
            * @example [15389, 4621, 621, 4472, 58]
            */
           lengthSeconds: number;
@@ -79724,7 +81803,7 @@ export type CollectionTopBarData = {
     title: string;
     items: null | {
       /**
-       * @format int64
+       * @format uint32
        * @example [4, 3, 33, 48, 51, 23, 49, 24, 2, 1]
        */
       totalCount: number;
@@ -79815,7 +81894,7 @@ export type CommonHooksBlockedUsersWithDetailsResponse = QueryResponse<
 
 export type CommonHooksSearchCategoriesVariables = {
   query: string;
-  /** @format int64 */
+  /** @format int32 */
   count?: null | number;
   cursor?: null | Cursor;
 };
@@ -79834,7 +81913,7 @@ export type CommonHooksSearchCategoriesResponse = QueryResponse<
 
 export type CommonHooksSearchCategoryTagsVariables = {
   query: string;
-  /** @format int64 */
+  /** @format int32 */
   count?: null | number;
 };
 
@@ -79847,7 +81926,7 @@ export type CommonHooksSearchCategoryTagsResponse = QueryResponse<
 
 export type CommonHooksSearchLiveTagsVariables = {
   query: string;
-  /** @format int64 */
+  /** @format int32 */
   count?: null | number;
   categoryID?: null | ID;
 };
@@ -79861,7 +81940,7 @@ export type CommonHooksSearchLiveTagsResponse = QueryResponse<
 
 export type CommonHooksSearchStreamsVariables = {
   query: string;
-  /** @format int64 */
+  /** @format int32 */
   count?: null | number;
   cursor?: null | Cursor;
 };
@@ -79880,7 +81959,7 @@ export type CommonHooksSearchStreamsResponse = QueryResponse<
 
 export type CommonHooksSearchUsersVariables = {
   query: string;
-  /** @format int64 */
+  /** @format int32 */
   count?: null | number;
   cursor?: null | Cursor;
   hasSubscriptionProductsOnly?: null | boolean;
@@ -79897,7 +81976,7 @@ export type CommonHooksSearchUsersResponse = QueryResponse<
 
 export type CommonHooksSearchVideosVariables = {
   search?: null | EnumOrInput;
-  /** @format int64 */
+  /** @format int32 */
   count?: null | number;
   cursor?: null | Cursor;
   creatorID?: null | ID;
@@ -80245,7 +82324,7 @@ export type ComscoreStreamingQueryData = {
       __typename: "Game";
     };
     /**
-     * @format int64
+     * @format uint32
      * @example [15389, 4621, 621, 4472, 58]
      */
     lengthSeconds: number;
@@ -80286,7 +82365,7 @@ export type ComscoreStreamingQueryData = {
      */
     createdAt: string;
     /**
-     * @format int64
+     * @format uint32
      * @example [44, 26, 25, 42, 30, 59, 36, 41, 60, 29]
      */
     durationSeconds: number;
@@ -80562,7 +82641,7 @@ export type ContentClipsManagerPollingClipResponse = QueryResponse<
 
 export type ContentClipsManagerUserVariables = {
   login: string;
-  /** @format int64 */
+  /** @format int32 */
   limit?: null | number;
   cursor?: null | Cursor;
   criteria?: null | UserClipsInput;
@@ -80622,7 +82701,7 @@ export type ContentClipsManagerUserResponse = QueryResponse<
 
 export type ContentCopyrightClaimsPageVariables = {
   channelID: ID;
-  /** @format int64 */
+  /** @format int32 */
   first?: null | number;
   cursor?: null | Cursor;
 };
@@ -80640,7 +82719,7 @@ export type ContentCopyrightClaimsPageData = {
     id: ID;
     /**
      * ⚠️ Low confidence about: nullable
-     * @format int64
+     * @format uint32
      */
     dmcaViolationCount: null | number;
     __typename: "User";
@@ -80772,7 +82851,7 @@ export type ContentMatchedExtensionConfigureResponse = QueryResponse<
 
 export type ContentMomentsPageVariables = {
   channelID: ID;
-  /** @format int64 */
+  /** @format int32 */
   first?: null | number;
   cursor?: null | Cursor;
 };
@@ -80839,8 +82918,16 @@ export type CopoGoalSnackbarActiveChallengesQueryData = {
        */
       id: ID;
       communityPointsSettings: {
-        communityGoalSmallContribution: UnknownValue;
-        communityGoalMaxContributionPerStream: UnknownValue;
+        /**
+         * ⚠️ Low confidence about: nullable
+         * @format uint32
+         */
+        communityGoalSmallContribution: null | number;
+        /**
+         * ⚠️ Low confidence about: nullable
+         * @format uint32
+         */
+        communityGoalMaxContributionPerStream: null | number;
         goals: {
           /**
            * @format uuid
@@ -80920,7 +83007,7 @@ export type CopyrightClipsData = {
      */
     url: string;
     /**
-     * @format int64
+     * @format uint32
      * @example [44, 26, 25, 42, 30, 59, 36, 41, 60, 29]
      */
     durationSeconds: number;
@@ -80936,7 +83023,7 @@ export type CopyrightClipsData = {
      */
     createdAt: string;
     /**
-     * @format int64
+     * @format uint32
      * @example [0, 957063, 957456, 899934, 944919, 773854]
      */
     viewCount: number;
@@ -80974,7 +83061,7 @@ export type CopyrightLiveStreamData = {
        */
       createdAt: string;
       /**
-       * @format int64
+       * @format uint32
        * @example [0, 46802, 656, 1572, 1518, 1432]
        */
       viewersCount: number;
@@ -81059,7 +83146,7 @@ export type CopyrightVideoData = {
     /** @example ["The legendary TwitchCon Drag Showcase is back! Check out all the amazing performers right here!", "Now you know when our show happen! Nice."] */
     description: null | string;
     /**
-     * @format int64
+     * @format uint32
      * @example [15389, 4621, 621, 4472, 58]
      */
     lengthSeconds: number;
@@ -81087,7 +83174,7 @@ export type CopyrightVideoData = {
      */
     publishedAt: string;
     /**
-     * @format int64
+     * @format uint32
      * @example [0, 772963, 171376, 163669, 1911, 684]
      */
     viewCount: number;
@@ -81304,7 +83391,7 @@ export type CostreamersTileQueryData = {
       id: ID;
       costreamDetails: null | {
         /**
-         * @format int64
+         * @format uint32
          * @example [0, 13, 14, 7, 6, 12, 1, 11]
          */
         costreamersCount: number;
@@ -81313,7 +83400,7 @@ export type CostreamersTileQueryData = {
         role: string;
         topCostreamers: CostreamingUserWithViewcount[];
         /**
-         * @format int64
+         * @format uint32
          * @example [53318, 665, 54790, 55713, 54158]
          */
         totalViewersCount: number;
@@ -81466,7 +83553,7 @@ export type CostreamingViewersTileQueryData = {
       id: ID;
       costreamDetails: null | {
         /**
-         * @format int64
+         * @format uint32
          * @example [53318, 665, 54790, 55713, 54158]
          */
         totalViewersCount: number;
@@ -81616,7 +83703,7 @@ export type CreatorChatSettingsQueryResponse = QueryResponse<
 
 export type CreatorCoachFeedbackHistoryVariables = {
   channelID: ID;
-  /** @format int64 */
+  /** @format int32 */
   first?: null | number;
   categories: ID[];
   languages: string[];
@@ -81785,7 +83872,7 @@ export type CreatorCollaborationChannelDataData = {
         __typename: "FreeformTag";
       }[];
       /**
-       * @format int64
+       * @format uint32
        * @example [0, 46802, 656, 1572, 1518, 1432]
        */
       viewersCount: number;
@@ -81809,9 +83896,17 @@ export type CreatorCollaborationChannelDataData = {
             | CreatorCollaborationChannelData_UserRelationshipSubscriptionBenefit
             | CreatorCollaborationChannelData_UserRelationshipSubscriptionBenefit[];
           subscriptionTenure: null | {
-            months: UnknownValue;
+            /**
+             * ⚠️ Low confidence about: nullable
+             * @format uint32
+             */
+            months: null | number;
             daysRemaining: UnknownValue;
-            elapsedDays: UnknownValue;
+            /**
+             * ⚠️ Low confidence about: nullable
+             * @format uint32
+             */
+            elapsedDays: null | number;
             __typename: "SubscriptionTenure";
           };
           __typename: string;
@@ -81822,9 +83917,17 @@ export type CreatorCollaborationChannelDataData = {
             | CreatorCollaborationChannelData_UserRelationshipSubscriptionBenefit
             | CreatorCollaborationChannelData_UserRelationshipSubscriptionBenefit[];
           subscriptionTenure: null | {
-            months: UnknownValue;
+            /**
+             * ⚠️ Low confidence about: nullable
+             * @format uint32
+             */
+            months: null | number;
             daysRemaining: UnknownValue;
-            elapsedDays: UnknownValue;
+            /**
+             * ⚠️ Low confidence about: nullable
+             * @format uint32
+             */
+            elapsedDays: null | number;
             __typename: "SubscriptionTenure";
           };
           __typename: string;
@@ -81874,7 +83977,7 @@ export type CreatorCollaborationInitialChannelDataData = {
         __typename: "Game";
       };
       /**
-       * @format int64
+       * @format uint32
        * @example [0, 46802, 656, 1572, 1518, 1432]
        */
       viewersCount: number;
@@ -82071,7 +84174,7 @@ export type CreatorMessageData = { creatorMessage: null | CreatorMessageFragment
 export type CreatorMessageResponse = QueryResponse<CreatorMessageData, "CreatorMessage">;
 
 export type CreatorMessageFeedVariables = {
-  /** @format int64 */
+  /** @format int32 */
   first?: null | number;
   after?: null | Cursor;
 };
@@ -82182,7 +84285,7 @@ export type CreatorRewardCampaignsDashboardResponse = QueryResponse<
 >;
 
 export type CreatorSentMessagesVariables = {
-  /** @format int64 */
+  /** @format int32 */
   first?: null | number;
   after?: null | Cursor;
 };
@@ -82728,7 +84831,7 @@ export type DashboardDMCAHintData = {
     id: ID;
     /**
      * ⚠️ Low confidence about: nullable
-     * @format int64
+     * @format uint32
      */
     dmcaViolationCount: null | number;
     __typename: "User";
@@ -82782,7 +84885,7 @@ export type DashboardInsightsAbbreviatedVideoPlayReferralsVariables = {
   start: string;
   /** @format time */
   end: string;
-  /** @format int64 */
+  /** @format int32 */
   first: number;
 };
 
@@ -82815,7 +84918,7 @@ export type DashboardInsightsAllVideoPlayReferralsVariables = {
   start: string;
   /** @format time */
   end: string;
-  /** @format int64 */
+  /** @format int32 */
   first: number;
 };
 
@@ -83083,7 +85186,7 @@ export type DashboardSettingsUserColorResponse = QueryResponse<
 
 export type DashboardTopClipsVariables = {
   login: string;
-  /** @format int64 */
+  /** @format int32 */
   limit?: null | number;
   criteria?: null | UserClipsInput;
 };
@@ -83482,7 +85585,7 @@ export type DevExtensionVersionStatusPageResponse = QueryResponse<
 
 export type DevGamesSearchAutocompleteVariables = {
   query: string;
-  /** @format int64 */
+  /** @format int32 */
   first: number;
 };
 
@@ -83563,7 +85666,7 @@ export type DevOnlyChildGQLData = {
 export type DevOnlyChildGQLResponse = QueryResponse<DevOnlyChildGQLData, "DevOnlyChildGQL">;
 
 export type DevOnlyEngineTest1Variables = {
-  /** @format int64 */
+  /** @format int32 */
   first?: null | number;
 };
 
@@ -83585,7 +85688,7 @@ export type DevOnlyEngineTest1Data = {
          */
         boxArtURL: string;
         /**
-         * @format int64
+         * @format uint32
          * @example [584353, 2909, 484662, 92801, 444549]
          */
         viewersCount: null | number;
@@ -83603,7 +85706,7 @@ export type DevOnlyEngineTest1Response = QueryResponse<
 >;
 
 export type DevOnlyEngineTest2Variables = {
-  /** @format int64 */
+  /** @format int32 */
   first?: null | number;
 };
 
@@ -83638,7 +85741,7 @@ export type DevOnlyEngineTest2Response = QueryResponse<
 >;
 
 export type DevOnlyEngineTest3Variables = {
-  /** @format int64 */
+  /** @format int32 */
   first?: null | number;
 };
 
@@ -83724,7 +85827,7 @@ export type DevOnlyLoadableParentResponse = QueryResponse<
 >;
 
 export type DevOnlySuspenseQuery1Variables = {
-  /** @format int64 */
+  /** @format int32 */
   first?: null | number;
 };
 
@@ -83746,7 +85849,7 @@ export type DevOnlySuspenseQuery1Data = {
          */
         boxArtURL: string;
         /**
-         * @format int64
+         * @format uint32
          * @example [584353, 2909, 484662, 92801, 444549]
          */
         viewersCount: null | number;
@@ -83764,7 +85867,7 @@ export type DevOnlySuspenseQuery1Response = QueryResponse<
 >;
 
 export type DevOnlySuspenseQuery2Variables = {
-  /** @format int64 */
+  /** @format int32 */
   first?: null | number;
 };
 
@@ -83823,10 +85926,10 @@ export type DevOrganizationPanelGamesDropsResponse = QueryResponse<
 
 export type DevOrgMembersVariables = {
   orgId: ID;
-  /** @format int64 */
+  /** @format int32 */
   membFirst?: null | number;
   membAfter?: null | Cursor;
-  /** @format int64 */
+  /** @format int32 */
   inviteFirst?: null | number;
   inviteAfter?: null | Cursor;
 };
@@ -83940,13 +86043,13 @@ export type DirectoryCollectionBrowsableCollectionVariables = {
   slug: string;
   cursor?: null | Cursor;
   /**
-   * @format int64
+   * @format int32
    * @default 10
    */
   limit?: null | number;
   options?: null | EnumOrInput;
   /**
-   * @format int64
+   * @format int32
    * @default 50
    */
   imageWidth?: null | number;
@@ -83992,12 +86095,12 @@ export type DirectoryDirectoryBannerData = {
     avatarURL: string;
     description: null;
     /**
-     * @format int64
+     * @format uint32
      * @example [584353, 2909, 484662, 92801, 444549]
      */
     viewersCount: null | number;
     /**
-     * @format int64
+     * @format uint32
      * @example [52803600, 53204320, 53261452, 53270364]
      */
     followersCount: number;
@@ -84065,12 +86168,12 @@ export type DirectoryEventCuratedBannerResponse = QueryResponse<
 export type DirectoryEventVerticalVariables = {
   id: ID;
   recommendationsContext: RecommendationsContext;
-  /** @format int64 */
+  /** @format int32 */
   contentMin: number;
-  /** @format int64 */
+  /** @format int32 */
   contentMax: number;
   /**
-   * @format int64
+   * @format int32
    * @default 50
    */
   imageWidth?: null | number;
@@ -84128,13 +86231,13 @@ export type DirectoryGameRedirectResponse = QueryResponse<
 
 export type DirectoryPageGameVariables = {
   slug: string;
-  /** @format int64 */
+  /** @format int32 */
   limit: number;
   cursor?: null | Cursor;
   options?: null | GameStreamOptions;
   sortTypeIsRecency: boolean;
   /**
-   * @format int64
+   * @format int32
    * @default 50
    */
   imageWidth?: null | number;
@@ -84216,7 +86319,7 @@ export type DirectoryUpcomingPageResponse = QueryResponse<
 
 export type DirectoryVideosGameVariables = {
   slug: string;
-  /** @format int64 */
+  /** @format int32 */
   videoLimit: number;
   followedCursor?: null | Cursor;
   videoSort: VideoSort;
@@ -84457,7 +86560,7 @@ export type DMCAViolationCountBannerData = {
     login: string;
     /**
      * ⚠️ Low confidence about: nullable
-     * @format int64
+     * @format uint32
      */
     dmcaViolationCount: null | number;
     __typename: "User";
@@ -84586,7 +86689,7 @@ export type DropChannelCampaignsProgressData = {
         requirementType: string;
         requirements: {
           /**
-           * @format int64
+           * @format uint32
            * @example [360, 420, 60, 120, 180, 240, 300, 20]
            */
           minutesWatched: number;
@@ -84598,12 +86701,12 @@ export type DropChannelCampaignsProgressData = {
         isAutoProgressable: boolean;
         repeatableConfig: null | {
           /**
-           * @format int64
+           * @format int32
            * @example [3]
            */
           repeatableTimes: number;
           /**
-           * @format int64
+           * @format uint32
            * @example [86400]
            */
           resetIntervalSeconds: number;
@@ -85799,7 +87902,11 @@ export type ExtensionConfigureData = {
       permittedFeatures: null | {
         canSendChat: UnknownValue;
         canRetrieveSubscriptionStatus: UnknownValue;
-        canUseBits: UnknownValue;
+        /**
+         * ⚠️ Low confidence about: nullable
+         * @format uint32
+         */
+        canUseBits: null | number;
         dynamicManagement:
           | null
           | ExtensionConfigure_ExtensionInstallationFeatureFlagsDynamicManagement
@@ -86243,7 +88350,7 @@ export type ExtensionRecommendationsResponse = QueryResponse<
 >;
 
 export type ExtensionsDiscoveryPageVariables = {
-  /** @format int64 */
+  /** @format int32 */
   first: number;
   afterCursor?: null | Cursor;
   skipCurrentUser: boolean;
@@ -86641,7 +88748,7 @@ export type FeaturedClipsShelfCoverData = {
         /** @example ["ANIMATED", "STATIC"] */
         assetType: string;
         /**
-         * @format int64
+         * @format int32
          * @example [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
          */
         order: number;
@@ -86664,7 +88771,7 @@ export type FeaturedClipsShelfCoverResponse = QueryResponse<
 
 export type FeaturedContentCarouselStreamsVariables = {
   language: string;
-  /** @format int64 */
+  /** @format int32 */
   first: number;
   acceptedMature: boolean;
 };
@@ -86679,7 +88786,7 @@ export type FeaturedContentCarouselStreamsData = {
     isScheduled: boolean;
     isSponsored: boolean;
     /**
-     * @format int64
+     * @format uint32
      * @example [0, 5, 6, 4]
      */
     priorityLevel: number;
@@ -86728,7 +88835,7 @@ export type FeaturedContentCarouselStreamsData = {
       /** @example ["live"] */
       type: string;
       /**
-       * @format int64
+       * @format uint32
        * @example [0, 46802, 656, 1572, 1518, 1432]
        */
       viewersCount: number;
@@ -86746,12 +88853,12 @@ export type FeaturedContentCarouselStreamsData = {
        */
       verticalPreviewImageURL: string;
       /**
-       * @format int64
+       * @format uint32
        * @example [0, 1440, 1080, 720, 768, 936, 1200, 900, 1280, 864, 2160]
        */
       height: number;
       /**
-       * @format int64
+       * @format uint32
        * @example [0, 2560, 1920, 1280, 1360, 1664]
        */
       width: number;
@@ -86762,7 +88869,7 @@ export type FeaturedContentCarouselStreamsData = {
     /** @example [""] */
     title: string;
     /**
-     * @format int64
+     * @format int32
      * @example [2]
      */
     version: number;
@@ -86794,7 +88901,7 @@ export type FeaturedUpcomingStreamsResponse = QueryResponse<
 
 export type FeedbackItemListVariables = {
   type: string;
-  /** @format int64 */
+  /** @format int32 */
   limit?: null | number;
   after?: null | Cursor;
 };
@@ -86830,14 +88937,14 @@ export type FeedInteractionHookGetClipBySlugData = {
     /** @example ["xqc makes the wrong choice", "wow"] */
     title: string;
     /**
-     * @format int64
+     * @format uint32
      * @example [0, 957063, 957456, 899934, 944919, 773854]
      */
     viewCount: number;
     /** @example ["EN", "RU"] */
     language: string;
     /**
-     * @format int64
+     * @format uint32
      * @example [44, 26, 25, 42, 30, 59, 36, 41, 60, 29]
      */
     durationSeconds: number;
@@ -86928,7 +89035,7 @@ export type FFZFetchUserData = {
     profileImageURL: string;
     /**
      * ⚠️ Low confidence about: nullable
-     * @format int64
+     * @format uint32
      */
     profileViewCount: null | number;
     /**
@@ -86980,7 +89087,7 @@ export type FFZFetchUserData = {
     };
     followers: {
       /**
-       * @format int64
+       * @format uint32
        * @example [0, 2430015, 2459534, 2471025, 2380069, 2380116]
        */
       totalCount: number;
@@ -87083,7 +89190,7 @@ export type FFZGlobalBadgesResponse = QueryResponse<FFZGlobalBadgesData, "FFZ_Gl
 export type FFZRecentBroadcastsVariables = {
   id: ID;
   login?: null | string;
-  /** @format int64 */
+  /** @format int32 */
   limit: number;
   cursor?: null | Cursor;
   type?: null | BroadcastType;
@@ -87141,7 +89248,7 @@ export type FFZRecentBroadcastsResponse = QueryResponse<
 
 export type FFZSearchCategoryVariables = {
   query: string;
-  /** @format int64 */
+  /** @format int32 */
   first?: null | number;
   after?: null | Cursor;
 };
@@ -87157,7 +89264,7 @@ export type FFZSearchCategoryResponse = QueryResponse<FFZSearchCategoryData, "FF
 
 export type FFZSearchTagsVariables = {
   query: string;
-  /** @format int64 */
+  /** @format int32 */
   first?: null | number;
 };
 
@@ -87179,7 +89286,7 @@ export type FFZSearchTagsResponse = QueryResponse<FFZSearchTagsData, "FFZ_Search
 
 export type FFZSearchUserVariables = {
   query: string;
-  /** @format int64 */
+  /** @format int32 */
   first?: null | number;
   after?: null | Cursor;
 };
@@ -87430,7 +89537,7 @@ export type FFZUserSelfResponse = QueryResponse<FFZUserSelfData, "FFZ_UserSelf">
 
 export type FilterableVideoTowerVideosVariables = {
   channelOwnerLogin: string;
-  /** @format int64 */
+  /** @format int32 */
   limit: number;
   cursor?: null | Cursor;
   broadcastType?: null | BroadcastType;
@@ -87590,7 +89697,7 @@ export type FollowedIndexFollowCountResponse = QueryResponse<
 
 export type FollowedStreamsVariables = {
   userID: ID;
-  /** @format int64 */
+  /** @format int32 */
   limit: number;
 };
 
@@ -87604,7 +89711,7 @@ export type FollowedStreamsData = {
 export type FollowedStreamsResponse = QueryResponse<FollowedStreamsData, "FollowedStreams">;
 
 export type FollowedStreamsContinueWatchingVariables = {
-  /** @format int64 */
+  /** @format int32 */
   limit?: null | number;
   /** @default false */
   includePreviewBlur?: null | boolean;
@@ -87631,7 +89738,7 @@ export type FollowedStreamsContinueWatchingResponse = QueryResponse<
 >;
 
 export type FollowedVideosCurrentUserVariables = {
-  /** @format int64 */
+  /** @format int32 */
   limit?: null | number;
   cursor?: null | Cursor;
   types: BroadcastType[];
@@ -87674,7 +89781,7 @@ export type FollowerCountData = {
     id: ID;
     followers: {
       /**
-       * @format int64
+       * @format uint32
        * @example [0, 2430015, 2459534, 2471025, 2380069, 2380116]
        */
       totalCount: number;
@@ -87688,7 +89795,7 @@ export type FollowerCountResponse = QueryResponse<FollowerCountData, "FollowerCo
 
 export type FollowersVariables = {
   login?: null | string;
-  /** @format int64 */
+  /** @format int32 */
   limit?: null | number;
   cursor?: null | Cursor;
   order?: null | SortOrder;
@@ -87740,7 +89847,7 @@ export type FollowersTileQueryData = {
     id: ID;
     followers: {
       /**
-       * @format int64
+       * @format uint32
        * @example [0, 2430015, 2459534, 2471025, 2380069, 2380116]
        */
       totalCount: number;
@@ -87785,7 +89892,7 @@ export type FollowGameButtonGameResponse = QueryResponse<
 >;
 
 export type FollowGamesModalGamesVariables = {
-  /** @format int64 */
+  /** @format int32 */
   limit?: null | number;
 };
 
@@ -87822,7 +89929,7 @@ export type FollowGamesModalGamesResponse = QueryResponse<
 >;
 
 export type FollowingCurrentUserVariables = {
-  /** @format int64 */
+  /** @format int32 */
   limit?: null | number;
   cursor?: null | Cursor;
 };
@@ -87850,7 +89957,7 @@ export type FollowingCurrentUserResponse = QueryResponse<
 >;
 
 export type FollowingGamesCurrentUserVariables = {
-  /** @format int64 */
+  /** @format int32 */
   limit?: null | number;
   type?: null | EnumOrInput;
 };
@@ -87876,11 +89983,11 @@ export type FollowingGamesCurrentUserResponse = QueryResponse<
 >;
 
 export type FollowingLiveCurrentUserVariables = {
-  /** @format int64 */
+  /** @format int32 */
   limit?: null | number;
   cursor?: null | Cursor;
   /**
-   * @format int64
+   * @format int32
    * @default 50
    */
   imageWidth?: null | number;
@@ -87912,14 +90019,14 @@ export type FollowingLiveCurrentUserResponse = QueryResponse<
 >;
 
 export type FollowingPageRecommendedChannelsVariables = {
-  /** @format int64 */
+  /** @format int32 */
   first?: null | number;
   recRequestID: string;
   language: string;
   location?: null | string;
   context?: null | RecommendationsContext;
   /**
-   * @format int64
+   * @format int32
    * @default 50
    */
   imageWidth?: null | number;
@@ -88047,7 +90154,7 @@ export type FollowUserData = {
     };
     followers: {
       /**
-       * @format int64
+       * @format uint32
        * @example [0, 2430015, 2459534, 2471025, 2380069, 2380116]
        */
       totalCount: number;
@@ -88083,7 +90190,7 @@ export type FoundersBadgePanelQueryResponse = QueryResponse<
 >;
 
 export type FrontPageNewUserVariables = {
-  /** @format int64 */
+  /** @format int32 */
   limit: number;
 };
 
@@ -88142,7 +90249,7 @@ export type FundraiserSetupPageData = {
               /** @example ["USD", "BYN"] */
               currency: string;
               /**
-               * @format int64
+               * @format int32
                * @example [2]
                */
               exponent: number;
@@ -88167,7 +90274,7 @@ export type FundraiserSetupPageResponse = QueryResponse<
 
 export type FundraisersManagementPageVariables = {
   channelName: string;
-  /** @format int64 */
+  /** @format int32 */
   first: number;
   after?: null | Cursor;
 };
@@ -88358,7 +90465,7 @@ export type GetBannedUsersVariables = {
   startTime?: null | string;
   /** @format time */
   endTime?: null | string;
-  /** @format int64 */
+  /** @format int32 */
   first?: null | number;
 };
 
@@ -88845,7 +90952,7 @@ export type GetGuestStarBrowserSourceListVariables = {
   sessionID: ID;
   userID?: null | ID;
   /**
-   * @format int64
+   * @format int32
    * @default 10
    */
   limit?: null | number;
@@ -89423,7 +91530,7 @@ export type GetPermittedTermsActionResponse = QueryResponse<
 
 export type GetPinnedChatVariables = {
   channelID: ID;
-  /** @format int64 */
+  /** @format int32 */
   count: number;
   after?: null | Cursor;
 };
@@ -89477,7 +91584,11 @@ export type GetPinnedChatData = {
                       __typename: "Emote";
                     }
                   | {
-                      bitsAmount: UnknownValue;
+                      /**
+                       * ⚠️ Low confidence about: nullable
+                       * @format uint32
+                       */
+                      bitsAmount: null | number;
                       prefix: UnknownValue;
                       tier: UnknownValue;
                       __typename: "CheermoteToken";
@@ -89812,17 +91923,17 @@ export type GetSingleGiftPricingData = {
                     /** @example ["USD", "BYN"] */
                     currency: string;
                     /**
-                     * @format int64
+                     * @format int32
                      * @example [2]
                      */
                     exponent: number;
                     /**
-                     * @format int64
+                     * @format int32
                      * @example [599, 699, 1749, 349, 2094, 1047]
                      */
                     price: number;
                     /**
-                     * @format int64
+                     * @format uint32
                      * @example [349, 2094, 1047, 699, 1749]
                      */
                     total: number;
@@ -89835,7 +91946,7 @@ export type GetSingleGiftPricingData = {
                   plan: {
                     interval: {
                       /**
-                       * @format int64
+                       * @format uint32
                        * @example [1, 6, 3]
                        */
                       duration: number;
@@ -89859,7 +91970,8 @@ export type GetSingleGiftPricingData = {
             };
             promotion: null | {
               id: ID;
-              name: UnknownValue;
+              /** ⚠️ Low confidence about: nullable */
+              name: null | string;
               promotionalSKU: UnknownValue;
               /**
                * ⚠️ Low confidence about: nullable
@@ -90027,7 +92139,7 @@ export type GetSponsorshipsCreatorProfilePreviewData = {
     displayName: string;
     followers: {
       /**
-       * @format int64
+       * @format uint32
        * @example [0, 2430015, 2459534, 2471025, 2380069, 2380116]
        */
       totalCount: number;
@@ -90077,7 +92189,7 @@ export type GetSponsorshipsCreatorProfileSettingsData = {
     profileImageURL: string;
     followers: {
       /**
-       * @format int64
+       * @format uint32
        * @example [0, 2430015, 2459534, 2471025, 2380069, 2380116]
        */
       totalCount: number;
@@ -90126,7 +92238,7 @@ export type GetSubscriberFollowersCountData = {
       | GetSubscriberFollowersCount_UserSubscriberScore[];
     followers: {
       /**
-       * @format int64
+       * @format uint32
        * @example [0, 2430015, 2459534, 2471025, 2380069, 2380116]
        */
       totalCount: number;
@@ -90324,7 +92436,7 @@ export type GetTikTokVideoDefaultsResponse = QueryResponse<
 >;
 
 export type GetTopBroadcastersVariables = {
-  /** @format int64 */
+  /** @format int32 */
   limit?: null | number;
 };
 
@@ -90638,9 +92750,9 @@ export type GiftSubscribeButtonGiftEligibilityResponse = QueryResponse<
 
 export type GiftSubscriptionRewardPreviewsVariables = {
   channelID: ID;
-  /** @format int64 */
+  /** @format int32 */
   quantity: number;
-  /** @format int64 */
+  /** @format int32 */
   tier: number;
   isAnonymous: boolean;
 };
@@ -90668,7 +92780,7 @@ export type GiftToLiveFollowersLiveFollowerCountData = {
         id: ID;
         /**
          * ⚠️ Low confidence about: nullable
-         * @format int64
+         * @format uint32
          */
         liveFollowerGiftRecipientsCount: null | number;
         __typename: "User";
@@ -90891,7 +93003,7 @@ export type GuestStarFavoriteGuestsVariables = {
   channelID: ID;
   channelLogin?: null | string;
   after?: null | Cursor;
-  /** @format int64 */
+  /** @format int32 */
   first?: null | number;
 };
 
@@ -90917,7 +93029,7 @@ export type GuestStarFLCResponse = QueryResponse<GuestStarFLCData, "GuestStarFLC
 
 export type GuestStarFollowersVariables = {
   login?: null | string;
-  /** @format int64 */
+  /** @format int32 */
   limit?: null | number;
   cursor?: null | Cursor;
   order?: null | SortOrder;
@@ -91038,7 +93150,7 @@ export type GuestStarModListResponse = QueryResponse<GuestStarModListData, "Gues
 
 export type GuestStarModsVariables = {
   channelID: ID;
-  /** @format int64 */
+  /** @format int32 */
   first?: null | number;
   after?: null | Cursor;
 };
@@ -91097,7 +93209,7 @@ export type GuestStarRecentsVariables = {
   channelID?: null | ID;
   channelLogin?: null | string;
   after?: null | Cursor;
-  /** @format int64 */
+  /** @format int32 */
   first?: null | number;
 };
 
@@ -91231,10 +93343,10 @@ export type GuestStarStreamInfoResponse = QueryResponse<
 
 export type GuestStarSubscribersVariables = {
   channelID?: null | ID;
-  /** @format int64 */
+  /** @format int32 */
   limit?: null | number;
   cursor?: null | string;
-  /** @format int64 */
+  /** @format int32 */
   order?: null | number;
 };
 
@@ -91288,7 +93400,7 @@ export type GuestStarSwapRequestModalUserQueryResponse = QueryResponse<
 
 export type GuestStarTeamVariables = {
   login?: null | string;
-  /** @format int64 */
+  /** @format int32 */
   first?: null | number;
   after?: null | Cursor;
 };
@@ -91383,7 +93495,7 @@ export type GuestStarViewerFollowingResponse = QueryResponse<
 
 export type GuestStarVipsVariables = {
   login?: null | string;
-  /** @format int64 */
+  /** @format int32 */
   first?: null | number;
   after?: null | Cursor;
 };
@@ -91610,7 +93722,7 @@ export type HighlighterPageVideoData = {
         /** @example ["ARCHIVE", "HIGHLIGHT", "UPLOAD"] */
         broadcastType: string;
         /**
-         * @format int64
+         * @format uint32
          * @example [15389, 4621, 621, 4472, 58]
          */
         lengthSeconds: number;
@@ -91638,7 +93750,7 @@ export type HighlighterPageVideoData = {
          */
         publishedAt: string;
         /**
-         * @format int64
+         * @format uint32
          * @example [0, 772963, 171376, 163669, 1911, 684]
          */
         viewCount: number;
@@ -91937,7 +94049,7 @@ export type HomeShelfUsersResponse = QueryResponse<HomeShelfUsersData, "HomeShel
 
 export type HomeShelfVideosVariables = {
   channelLogin: string;
-  /** @format int64 */
+  /** @format int32 */
   first: number;
 };
 
@@ -92029,10 +94141,15 @@ export type HostTrainPollData = {
       status: UnknownValue;
       choices: null | {
         id: ID;
-        title: UnknownValue;
+        /** ⚠️ Low confidence about: nullable */
+        title: null | string;
         votes: null | {
           id: ID;
-          total: UnknownValue;
+          /**
+           * ⚠️ Low confidence about: nullable
+           * @format uint32
+           */
+          total: null | number;
           __typename: "PollVoteBreakdown";
         };
         __typename: "PollChoice";
@@ -92134,7 +94251,7 @@ export type ImpressionAnalyticsVariables = {
   filter?: null | ImpressionAnalyticsFilter;
   dimension: EnumOrInput;
   /**
-   * @format int64
+   * @format int32
    * @default 15
    */
   first?: null | number;
@@ -92184,7 +94301,7 @@ export type IncomingAdAlertSnoozeConfigResponse = QueryResponse<
 
 export type IncomingRequestsVariables = {
   channelID: ID;
-  /** @format int64 */
+  /** @format int32 */
   first: number;
   after?: null | Cursor;
   order?: null | EnumOrInput;
@@ -92539,7 +94656,7 @@ export type LegacyViewsTileQueryData = {
     id: ID;
     /**
      * ⚠️ Low confidence about: nullable
-     * @format int64
+     * @format uint32
      */
     profileViewCount: null | number;
     __typename: "User";
@@ -92583,7 +94700,7 @@ export type LiveShoppingProductSummariesVariables = {
   isPreview?: null | boolean;
   liveShoppingSessionID: ID;
   cursor?: null | string;
-  /** @format int64 */
+  /** @format int32 */
   limit?: null | number;
 };
 
@@ -92928,12 +95045,12 @@ export type ManagePlusGoalPromptData = {
   plusStatus: {
     partnerPlusProgram: {
       /**
-       * @format int64
+       * @format int32
        * @example [100]
        */
       l1Threshold: number;
       /**
-       * @format int64
+       * @format int32
        * @example [300]
        */
       l2Threshold: number;
@@ -92984,7 +95101,7 @@ export type MessageBufferChannelData = {
     id: ID;
     chatSettings: null | {
       /**
-       * @format int64
+       * @format uint32
        * @example [0, 6000, 1000]
        */
       chatDelayMs: number;
@@ -93574,7 +95691,7 @@ export type ModViewUserDetailsSubscriptionProductsResponse = QueryResponse<
 
 export type ModViewWhatsNewEntriesVariables = {
   /**
-   * @format int64
+   * @format int32
    * @default 50
    */
   first?: null | number;
@@ -93669,7 +95786,7 @@ export type MonetizationSetupStepQueryResponse = QueryResponse<
 
 export type MoreRowsPopularClipsVariables = {
   channelLogin: string;
-  /** @format int64 */
+  /** @format int32 */
   first: number;
   shouldFilterByDiscoverySetting: boolean;
 };
@@ -93716,7 +95833,7 @@ export type MoreRowsPopularClipsResponse = QueryResponse<
 
 export type MoreRowsRecentBroadcastsVariables = {
   channelLogin: string;
-  /** @format int64 */
+  /** @format int32 */
   first: number;
 };
 
@@ -93744,7 +95861,7 @@ export type MoreRowsRecentBroadcastsResponse = QueryResponse<
 >;
 
 export type MWebActiveSubscriptionsQueryVariables = {
-  /** @format int64 */
+  /** @format int32 */
   limit?: null | number;
   cursor?: null | Cursor;
   filter?: null | EnumOrInput;
@@ -93861,7 +95978,7 @@ export type MwebChannelClipsPageQueryVariables = {
   login: string;
   featured?: null | boolean;
   period: ClipsPeriod;
-  /** @format int64 */
+  /** @format int32 */
   limit: number;
   cursor?: null | Cursor;
 };
@@ -93934,22 +96051,22 @@ export type MwebChannelLiveQueryData = {
            */
           id: ID;
           /**
-           * @format int64
+           * @format uint32
            * @example [0, 1440, 1080, 720, 768, 936, 1200, 900, 1280, 864, 2160]
            */
           height: number;
           /**
-           * @format int64
+           * @format uint32
            * @example [0, 2560, 1920, 1280, 1360, 1664]
            */
           width: number;
           /**
-           * @format int64
+           * @format uint32
            * @example [0, 46802, 656, 1572, 1518, 1432]
            */
           viewersCount: number;
           /**
-           * @format int64
+           * @format uint32
            * @example [4617, 7717, 7714, 11, 4557]
            */
           collaborationViewersCount: null | number;
@@ -93957,7 +96074,7 @@ export type MwebChannelLiveQueryData = {
             /** @example ["ORGANIZER", "COSTREAMER"] */
             role: string;
             /**
-             * @format int64
+             * @format uint32
              * @example [53318, 665, 54790, 55713, 54158]
              */
             totalViewersCount: number;
@@ -94079,7 +96196,7 @@ export type MwebChannelSchedulePageQueryResponse = QueryResponse<
 
 export type MwebChannelVideoPageQueryVariables = {
   login: string;
-  /** @format int64 */
+  /** @format int32 */
   archiveLimit: number;
   archiveCursor?: null | Cursor;
   archiveType?: null | BroadcastType;
@@ -94106,7 +96223,7 @@ export type MwebChannelVODPageQueryResponse = QueryResponse<
 >;
 
 export type MwebDirectoryAllQueryVariables = {
-  /** @format int64 */
+  /** @format int32 */
   limit?: null | number;
   cursor?: null | Cursor;
   options?: null | StreamOptions;
@@ -94137,7 +96254,7 @@ export type MwebDirectoryCategoryInfoQueryData = {
     | (MwebGameCard & {
         description: null;
         /**
-         * @format int64
+         * @format uint32
          * @example [52803600, 53204320, 53261452, 53270364]
          */
         followersCount: number;
@@ -94151,7 +96268,7 @@ export type MwebDirectoryCategoryInfoQueryResponse = QueryResponse<
 
 export type MwebDirectoryCategoryQueryVariables = {
   slug: string;
-  /** @format int64 */
+  /** @format int32 */
   limit?: null | number;
   cursor?: null | Cursor;
   options?: null | GameStreamOptions;
@@ -94188,7 +96305,7 @@ export type MwebDirectoryCollectionQueryVariables = {
   slug: string;
   cursor?: null | Cursor;
   /**
-   * @format int64
+   * @format int32
    * @default 10
    */
   limit?: null | number;
@@ -94262,7 +96379,7 @@ export type MwebDiscoveryCollaboratorsQueryResponse = QueryResponse<
 >;
 
 export type MWebExpiredSubscriptionsQueryVariables = {
-  /** @format int64 */
+  /** @format int32 */
   limit?: null | number;
   cursor?: null | Cursor;
 };
@@ -94334,7 +96451,7 @@ export type MwebFeedStreamEndedOverlayResponse = QueryResponse<
 >;
 
 export type MwebFollowedOfflineChannelsQueryVariables = {
-  /** @format int64 */
+  /** @format int32 */
   first: number;
   after?: null | Cursor;
 };
@@ -94403,9 +96520,9 @@ export type MwebFollowingPageQueryResponse = QueryResponse<
 export type MwebFrontPageQueryVariables = {
   requestID: string;
   platform: string;
-  /** @format int64 */
+  /** @format int32 */
   itemsPerRow: number;
-  /** @format int64 */
+  /** @format int32 */
   first: number;
   after?: null | Cursor;
 };
@@ -94495,7 +96612,7 @@ export type MwebFrontPageQueryResponse = QueryResponse<
 >;
 
 export type MwebGamesDirectoryQueryVariables = {
-  /** @format int64 */
+  /** @format int32 */
   limit?: null | number;
   cursor?: null | Cursor;
   options?: null | GameOptions;
@@ -94806,7 +96923,7 @@ export type MwebVideoPlayerViewCountData = {
        */
       id: ID;
       /**
-       * @format int64
+       * @format uint32
        * @example [0, 46802, 656, 1572, 1518, 1432]
        */
       viewersCount: number;
@@ -94874,10 +96991,10 @@ export type MyCollaborationsShelfVariables = {
   collabShelfGroup?: null | EnumOrInput;
   requestID: string;
   platform: string;
-  /** @format int64 */
+  /** @format int32 */
   first: number;
   /**
-   * @format int64
+   * @format int32
    * @default 50
    */
   imageWidth?: null | number;
@@ -94980,22 +97097,22 @@ export type NativeChannelLiveQueryData = {
            */
           createdAt: string;
           /**
-           * @format int64
+           * @format uint32
            * @example [0, 1440, 1080, 720, 768, 936, 1200, 900, 1280, 864, 2160]
            */
           height: number;
           /**
-           * @format int64
+           * @format uint32
            * @example [0, 2560, 1920, 1280, 1360, 1664]
            */
           width: number;
           /**
-           * @format int64
+           * @format uint32
            * @example [0, 46802, 656, 1572, 1518, 1432]
            */
           viewersCount: number;
           /**
-           * @format int64
+           * @format uint32
            * @example [4617, 7717, 7714, 11, 4557]
            */
           collaborationViewersCount: null | number;
@@ -95051,7 +97168,7 @@ export type NewPollModalQueryData = {
       id: ID;
       /**
        * ⚠️ Low confidence about: nullable
-       * @format int64
+       * @format uint32
        */
       durationSeconds: null | number;
       settings: null | PollSettings;
@@ -95527,9 +97644,9 @@ export type OnboardingGamesSearchResponse = QueryResponse<
 >;
 
 export type OnboardingModalRecommendationsVariables = {
-  /** @format int64 */
+  /** @format int32 */
   gamesLimit?: null | number;
-  /** @format int64 */
+  /** @format int32 */
   streamsLimit?: null | number;
   recRequestID: ID;
   location: string;
@@ -95605,14 +97722,14 @@ export type OnboardingSectionCurrentUserResponse = QueryResponse<
 >;
 
 export type OnboardingV2RecommendedCategoriesVariables = {
-  /** @format int64 */
+  /** @format int32 */
   gamesLimit?: null | number;
   recRequestID: ID;
   location: string;
   context: RecommendationsContext;
-  /** @format int64 */
+  /** @format int32 */
   width: number;
-  /** @format int64 */
+  /** @format int32 */
   height: number;
 };
 
@@ -95630,9 +97747,9 @@ export type OnboardingV2RecommendedCategoriesResponse = QueryResponse<
 
 export type OnboardingV2SearchCategoriesVariables = {
   query: string;
-  /** @format int64 */
+  /** @format int32 */
   width: number;
-  /** @format int64 */
+  /** @format int32 */
   height: number;
 };
 
@@ -95657,7 +97774,7 @@ export type OnDemandReferralsByDimensionVariables = {
   channel: string;
   contentType: EnumOrInput;
   dimension: EnumOrInput;
-  /** @format int64 */
+  /** @format int32 */
   first: number;
   timeZone: string;
 };
@@ -95677,7 +97794,7 @@ export type OnDemandReferralsByDimensionResponse = QueryResponse<
 export type OneClickCheckoutCustomGiftingCheckoutPriceVariables = {
   baseParams: EnumOrInput;
   discountedParams: EnumOrInput;
-  /** @format int64 */
+  /** @format int32 */
   quantity: number;
 };
 
@@ -95696,7 +97813,7 @@ export type OneClickCheckoutCustomGiftingCheckoutPriceData = {
           plan: {
             interval: {
               /**
-               * @format int64
+               * @format uint32
                * @example [1, 6, 3]
                */
               duration: number;
@@ -95712,7 +97829,8 @@ export type OneClickCheckoutCustomGiftingCheckoutPriceData = {
     };
     promotion: null | {
       id: ID;
-      name: UnknownValue;
+      /** ⚠️ Low confidence about: nullable */
+      name: null | string;
       promoDisplay:
         | null
         | OneClickCheckoutCustomGiftingCheckoutPrice_OfferPromotionPromoDisplay
@@ -95731,12 +97849,12 @@ export type OneClickCheckoutCustomGiftingCheckoutPriceData = {
     };
     quantity: {
       /**
-       * @format int64
+       * @format int32
        * @example [1]
        */
       min: number;
       /**
-       * @format int64
+       * @format int32
        * @example [1]
        */
       max: number;
@@ -95758,7 +97876,7 @@ export type OneClickCheckoutCustomGiftingCheckoutPriceData = {
           plan: {
             interval: {
               /**
-               * @format int64
+               * @format uint32
                * @example [1, 6, 3]
                */
               duration: number;
@@ -95774,7 +97892,8 @@ export type OneClickCheckoutCustomGiftingCheckoutPriceData = {
     };
     promotion: null | {
       id: ID;
-      name: UnknownValue;
+      /** ⚠️ Low confidence about: nullable */
+      name: null | string;
       promoDisplay:
         | null
         | OneClickCheckoutCustomGiftingCheckoutPrice_OfferPromotionPromoDisplay
@@ -95793,12 +97912,12 @@ export type OneClickCheckoutCustomGiftingCheckoutPriceData = {
     };
     quantity: {
       /**
-       * @format int64
+       * @format int32
        * @example [1]
        */
       min: number;
       /**
-       * @format int64
+       * @format int32
        * @example [1]
        */
       max: number;
@@ -95866,7 +97985,7 @@ export type OneClickEligibilityResponse = QueryResponse<
 >;
 
 export type OnsiteNotificationsListNotificationsVariables = {
-  /** @format int64 */
+  /** @format int32 */
   limit?: null | number;
   cursor?: null | Cursor;
   language?: null | string;
@@ -95961,12 +98080,12 @@ export type OpenCallingCallerInfoData = {
        */
       id: ID;
       /**
-       * @format int64
+       * @format uint32
        * @example [4617, 7717, 7714, 11, 4557]
        */
       collaborationViewersCount: null | number;
       /**
-       * @format int64
+       * @format uint32
        * @example [0, 46802, 656, 1572, 1518, 1432]
        */
       viewersCount: number;
@@ -96005,7 +98124,7 @@ export type OpenCallingCallerInfoResponse = QueryResponse<
 
 export type PaidPinnedChatVariables = {
   channelID: ID;
-  /** @format int64 */
+  /** @format int32 */
   count: number;
   messageType: PinnedChatMessageType;
   after?: null | Cursor;
@@ -96110,12 +98229,12 @@ export type PartnerPlusPublicQueryData = {
   plusStatus: {
     partnerPlusProgram: {
       /**
-       * @format int64
+       * @format int32
        * @example [100]
        */
       l1Threshold: number;
       /**
-       * @format int64
+       * @format int32
        * @example [300]
        */
       l2Threshold: number;
@@ -96124,17 +98243,17 @@ export type PartnerPlusPublicQueryData = {
       canShowWidget: boolean;
       subPoints: {
         /**
-         * @format int64
+         * @format uint32
          * @example [2026, 2025]
          */
         year: number;
         /**
-         * @format int64
+         * @format uint32
          * @example [6, 5, 4, 3, 2, 1, 12, 11, 10, 9]
          */
         month: number;
         /**
-         * @format int64
+         * @format uint32
          * @example [774, 3700, 3528, 3619, 3695]
          */
         count: number;
@@ -96167,12 +98286,12 @@ export type PartnerPlusQueryData = {
       /** @example ["LEVEL_2", "LEVEL_1"] */
       level: string;
       /**
-       * @format int64
+       * @format int32
        * @example [100]
        */
       l1Threshold: number;
       /**
-       * @format int64
+       * @format int32
        * @example [300]
        */
       l2Threshold: number;
@@ -97201,7 +99320,7 @@ export type PlayerTrackingContextQueryData = {
     id: ID;
     isCommentsEnabled: boolean;
     /**
-     * @format int64
+     * @format uint32
      * @example [0, 21, 14, 4, 2, 3, 1, 29, 6, 15, 19]
      */
     topLevelCommentCount: number;
@@ -97233,12 +99352,12 @@ export type PlusProgramPanelQueryData = {
       /** ⚠️ Low confidence about: nullable */
       hasMetCriteria: null | boolean;
       /**
-       * @format int64
+       * @format int32
        * @example [100]
        */
       l1Threshold: number;
       /**
-       * @format int64
+       * @format int32
        * @example [300]
        */
       l2Threshold: number;
@@ -97491,7 +99610,7 @@ export type PostSubscriptionsToggleResponse = QueryResponse<
 
 export type PredictionsQueryVariables = {
   login: string;
-  /** @format int64 */
+  /** @format int32 */
   count?: null | number;
 };
 
@@ -97643,7 +99762,7 @@ export type PrerollFreeTileQueryData = {
     id: ID;
     /**
      * ⚠️ Low confidence about: nullable
-     * @format int64
+     * @format uint32
      */
     prerollFreeTimeSeconds: null | number;
     adProperties: null | {
@@ -98305,7 +100424,7 @@ export type QuickActionManageGoalsData = {
       | QuickActionManageGoals_UserSubscriberScore[];
     followers: {
       /**
-       * @format int64
+       * @format uint32
        * @example [0, 2430015, 2459534, 2471025, 2380069, 2380116]
        */
       totalCount: number;
@@ -98369,17 +100488,17 @@ export type QuickActionManagePartnerPlusData = {
     partnerPlusProgram: {
       subPoints: {
         /**
-         * @format int64
+         * @format uint32
          * @example [2026, 2025]
          */
         year: number;
         /**
-         * @format int64
+         * @format uint32
          * @example [6, 5, 4, 3, 2, 1, 12, 11, 10, 9]
          */
         month: number;
         /**
-         * @format int64
+         * @format uint32
          * @example [774, 3700, 3528, 3619, 3695]
          */
         count: number;
@@ -98388,12 +100507,12 @@ export type QuickActionManagePartnerPlusData = {
       /** @example ["OFF", "LEVEL_2"] */
       widgetSetting: string;
       /**
-       * @format int64
+       * @format int32
        * @example [100]
        */
       l1Threshold: number;
       /**
-       * @format int64
+       * @format int32
        * @example [300]
        */
       l2Threshold: number;
@@ -98542,7 +100661,7 @@ export type QuickActionsFollowerOnlyChatQueryData = {
     id: ID;
     chatSettings: null | {
       /**
-       * @format int64
+       * @format uint32
        * @example [0, 10, 1440]
        */
       followersOnlyDurationMinutes: null | number;
@@ -98790,7 +100909,7 @@ export type RaidRecommendationsData = {
        */
       id: ID;
       /**
-       * @format int64
+       * @format uint32
        * @example [0, 46802, 656, 1572, 1518, 1432]
        */
       viewersCount: number;
@@ -98890,7 +101009,7 @@ export type RecapClipPlaybackData = {
         /** @example ["", "avc1.64002A,mp4a.40.2", "hvc1.1.6.L123.90", "hvc1.1.6.L120.90", "hvc1.1.6.L90.90", "hvc1.1.6.L63.90", "hvc1.1.6.L150.90", "avc1.4D001F"] */
         codecs: string;
         /**
-         * @format int64
+         * @format int32
          * @example [0, -1, 1080, 720, 480, 360, 1600]
          */
         height: number;
@@ -98956,7 +101075,8 @@ export type RecapClipsVariables = { recapID: ID };
 export type RecapClipsData = {
   recapsByIDs: null | {
     id: ID;
-    title: UnknownValue;
+    /** ⚠️ Low confidence about: nullable */
+    title: null | string;
     clips: null | RecapClips_RecapClips | RecapClips_RecapClips[];
     __typename: "Recap";
   };
@@ -98994,7 +101114,7 @@ export type RecapsChannelQueryData = {
        */
       id: ID;
       /**
-       * @format int64
+       * @format uint32
        * @example [0, 46802, 656, 1572, 1518, 1432]
        */
       viewersCount: number;
@@ -99034,7 +101154,7 @@ export type RecapsChannelQueryResponse = QueryResponse<
 
 export type RecapsPlayerByIDVariables = {
   recapID: ID;
-  /** @format int64 */
+  /** @format int32 */
   thumbnailHeight: number;
 };
 
@@ -99187,7 +101307,11 @@ export type RecommendedExtensionData = {
       permittedFeatures: null | {
         canSendChat: UnknownValue;
         canRetrieveSubscriptionStatus: UnknownValue;
-        canUseBits: UnknownValue;
+        /**
+         * ⚠️ Low confidence about: nullable
+         * @format uint32
+         */
+        canUseBits: null | number;
         dynamicManagement:
           | null
           | RecommendedExtension_ExtensionInstallationFeatureFlagsDynamicManagement
@@ -99276,7 +101400,7 @@ export type RecommendedFollowNudgeEmoteResponse = QueryResponse<
 
 export type RecoveryVODsByChannelVariables = {
   logins: string[];
-  /** @format int64 */
+  /** @format int32 */
   limit: number;
 };
 
@@ -99298,7 +101422,7 @@ export type RecoveryVODsByChannelData = {
            */
           id: ID;
           /**
-           * @format int64
+           * @format uint32
            * @example [15389, 4621, 621, 4472, 58]
            */
           lengthSeconds: number;
@@ -99437,7 +101561,7 @@ export type RedemptionsByRewardIDPaginatedVariables = {
   id?: null | ID;
   cursor?: null | Cursor;
   order?: null | EnumOrInput;
-  /** @format int64 */
+  /** @format int32 */
   count?: null | number;
 };
 
@@ -99486,7 +101610,7 @@ export type ReferralAnalyticsCollectionsCategoriesVariables = {
   start: string;
   /** @format time */
   end: string;
-  /** @format int64 */
+  /** @format int32 */
   first: number;
   dimension: ReferralsDimension;
   filter: ReferralsFilter;
@@ -99503,8 +101627,13 @@ export type ReferralAnalyticsCollectionsCategoriesData = {
     /** @aliasFor videoPlayReferrals */
     referrals: null | {
       items: null | {
-        count: UnknownValue;
-        name: UnknownValue;
+        /**
+         * ⚠️ Low confidence about: nullable
+         * @format uint32
+         */
+        count: null | number;
+        /** ⚠️ Low confidence about: nullable */
+        name: null | string;
         __typename: "AggregatedReferrals";
       };
       __typename: "VideoPlayReferrals";
@@ -100063,7 +102192,7 @@ export type RolesPageQueryResponse = QueryResponse<RolesPageQueryData, "RolesPag
 export type ScheduleEditorVariables = {
   channelLogin: string;
   startingWeekday?: null | string;
-  /** @format int64 */
+  /** @format int32 */
   utcOffsetMinutes?: null | number;
 };
 
@@ -100156,7 +102285,7 @@ export type SDAUpsellCurrentUserResponse = QueryResponse<
 
 export type SearchCategoryTagsVariables = {
   userQuery: string;
-  /** @format int64 */
+  /** @format int32 */
   limit: number;
 };
 
@@ -100179,7 +102308,7 @@ export type SearchCollectionCardQueryData = {
     slug: string;
     /**
      * ⚠️ Low confidence about: nullable
-     * @format int64
+     * @format uint32
      */
     viewersCount: null | number;
     __typename: "BrowsableCollection";
@@ -100201,7 +102330,7 @@ export type SearchDisplaynameResponse = QueryResponse<SearchDisplaynameData, "Se
 
 export type SearchFreeformTagsVariables = {
   userQuery: string;
-  /** @format int64 */
+  /** @format int32 */
   first: number;
 };
 
@@ -100364,7 +102493,7 @@ export type SecurityPageConnectionsResponse = QueryResponse<
 >;
 
 export type SecurityPageUserSessionsVariables = {
-  /** @format int64 */
+  /** @format int32 */
   limit: number;
   cursor?: null | Cursor;
   persistentCookie: string;
@@ -100972,7 +103101,7 @@ export type SettingsNotificationsPageUserResponse = QueryResponse<
 >;
 
 export type SettingsNotificationsPageUserPortalVariables = {
-  /** @format int64 */
+  /** @format int32 */
   limit: number;
   cursor?: null | Cursor;
   followedFilters: EnumOrInput[];
@@ -101329,14 +103458,14 @@ export type ShelvesVariables = {
   requestID: string;
   platform: string;
   langWeightedCCU: boolean;
-  /** @format int64 */
+  /** @format int32 */
   limit: number;
   after?: null | Cursor;
-  /** @format int64 */
+  /** @format int32 */
   itemsPerRow: number;
   context: RecommendationsContext;
   /**
-   * @format int64
+   * @format int32
    * @default 50
    */
   imageWidth?: null | number;
@@ -101558,7 +103687,7 @@ export type ShoutoutHighlightServiceQueryResponse = QueryResponse<
 
 export type ShoutoutStreamSummaryVariables = {
   login: string;
-  /** @format int64 */
+  /** @format int32 */
   first: number;
 };
 
@@ -101856,7 +103985,7 @@ export type SpendableBalanceHistoryVariables = {
   startTime: string;
   /** @format time */
   endTime: string;
-  /** @format int64 */
+  /** @format int32 */
   first?: null | number;
   after?: null | Cursor;
 };
@@ -102026,7 +104155,7 @@ export type SponsorshipCampaignInstancePacingsResponse = QueryResponse<
 export type SponsorshipCampaignInstancesVariables = {
   creatorID: ID;
   query?: null | SponsorshipInstanceQuery;
-  /** @format int64 */
+  /** @format int32 */
   first?: null | number;
   after?: null | Cursor;
 };
@@ -102080,7 +104209,7 @@ export type SponsorshipsCreatorProfileCommunityStatsVariables = {
   start: string;
   /** @format time */
   end: string;
-  /** @format int64 */
+  /** @format int32 */
   first: number;
   granularityMinutesWatched: EnumOrInput;
   granularityAvgViewers: EnumOrInput;
@@ -102313,11 +104442,11 @@ export type StatsWidgetData = {
       id: ID;
       /**
        * ⚠️ Low confidence about: nullable
-       * @format int64
+       * @format uint32
        */
       clipCount: null | number;
       /**
-       * @format int64
+       * @format uint32
        * @example [0, 46802, 656, 1572, 1518, 1432]
        */
       viewersCount: number;
@@ -102330,12 +104459,12 @@ export type StatsWidgetData = {
     };
     /**
      * ⚠️ Low confidence about: nullable
-     * @format int64
+     * @format uint32
      */
     profileViewCount: null | number;
     followers: {
       /**
-       * @format int64
+       * @format uint32
        * @example [0, 2430015, 2459534, 2471025, 2380069, 2380116]
        */
       totalCount: number;
@@ -102384,7 +104513,7 @@ export type StoriesCreationAccessResponse = QueryResponse<
 >;
 
 export type StoriesForCreatorsVariables = {
-  /** @format int64 */
+  /** @format int32 */
   first?: null | number;
   after?: null | Cursor;
   capabilities: StoryFeatureCapability[];
@@ -102399,7 +104528,7 @@ export type StoriesForCreatorsResponse = QueryResponse<
 
 export type StoriesForViewersVariables = {
   channelID: ID;
-  /** @format int64 */
+  /** @format int32 */
   first: number;
   after: Cursor;
   capabilities: StoryFeatureCapability[];
@@ -102706,7 +104835,7 @@ export type StreamerAdsManagerQueryAdPropertiesData = {
         interval: null | {
           /**
            * ⚠️ Low confidence about: nullable
-           * @format int64
+           * @format uint32
            */
           desiredSeconds: null | number;
           __typename: "AdScheduleConfig";
@@ -102714,7 +104843,7 @@ export type StreamerAdsManagerQueryAdPropertiesData = {
         duration: null | {
           /**
            * ⚠️ Low confidence about: nullable
-           * @format int64
+           * @format uint32
            */
           desiredSeconds: null | number;
           __typename: "AdScheduleConfig";
@@ -102722,7 +104851,7 @@ export type StreamerAdsManagerQueryAdPropertiesData = {
         startDelay: null | {
           /**
            * ⚠️ Low confidence about: nullable
-           * @format int64
+           * @format uint32
            */
           desiredSeconds: null | number;
           __typename: "AdScheduleConfig";
@@ -102786,7 +104915,7 @@ export type StreamerCardData = {
        */
       id: ID;
       /**
-       * @format int64
+       * @format uint32
        * @example [0, 46802, 656, 1572, 1518, 1432]
        */
       viewersCount: number;
@@ -102804,7 +104933,7 @@ export type StreamerCardData = {
     };
     followers: {
       /**
-       * @format int64
+       * @format uint32
        * @example [0, 2430015, 2459534, 2471025, 2380069, 2380116]
        */
       totalCount: number;
@@ -103246,9 +105375,9 @@ export type StreamPageSignupCurrentUserResponse = QueryResponse<
 
 export type StreamPreviewStreamQueryVariables = {
   login: string;
-  /** @format int64 */
+  /** @format int32 */
   width: number;
-  /** @format int64 */
+  /** @format int32 */
   height: number;
   multiformatEnabled: boolean;
 };
@@ -103298,12 +105427,12 @@ export type StreamPreviewStreamQueryData = {
        */
       id: ID;
       /**
-       * @format int64
+       * @format uint32
        * @example [0, 1440, 1080, 720, 768, 936, 1200, 900, 1280, 864, 2160]
        */
       height: number;
       /**
-       * @format int64
+       * @format uint32
        * @example [0, 2560, 1920, 1280, 1360, 1664]
        */
       width: number;
@@ -103335,12 +105464,12 @@ export type StreamQualityBroadcastStateQueryData = {
        */
       id: ID;
       /**
-       * @format int64
+       * @format uint32
        * @example [0, 1440, 1080, 720, 768, 936, 1200, 900, 1280, 864, 2160]
        */
       height: number;
       /**
-       * @format int64
+       * @format uint32
        * @example [0, 2560, 1920, 1280, 1360, 1664]
        */
       width: number;
@@ -103451,7 +105580,7 @@ export type StreamScheduleVariables = {
   /** @format time */
   endAt: string;
   startingWeekday: string;
-  /** @format int64 */
+  /** @format int32 */
   utcOffsetMinutes: number;
 };
 
@@ -103512,7 +105641,7 @@ export type StreamScheduleData = {
        */
       createdAt: string;
       /**
-       * @format int64
+       * @format uint32
        * @example [0, 46802, 656, 1572, 1518, 1432]
        */
       viewersCount: number;
@@ -103530,12 +105659,12 @@ export type StreamScheduleData = {
        */
       verticalPreviewImageURL: string;
       /**
-       * @format int64
+       * @format uint32
        * @example [0, 1440, 1080, 720, 768, 936, 1200, 900, 1280, 864, 2160]
        */
       height: number;
       /**
-       * @format int64
+       * @format uint32
        * @example [0, 2560, 1920, 1280, 1360, 1664]
        */
       width: number;
@@ -103570,12 +105699,12 @@ export type StreamScheduleData = {
            */
           createdAt: string;
           /**
-           * @format int64
+           * @format uint32
            * @example [15389, 4621, 621, 4472, 58]
            */
           lengthSeconds: number;
           /**
-           * @format int64
+           * @format uint32
            * @example [0, 772963, 171376, 163669, 1911, 684]
            */
           viewCount: number;
@@ -103690,7 +105819,7 @@ export type StreamSummaryPageGetRecapCandidatesVariables = {
   channelID: ID;
   /** @format time */
   lastStartedAt?: null | string;
-  /** @format int64 */
+  /** @format int32 */
   first?: null | number;
   curatorRoles: EnumOrInput[];
   /** @default RECOMMENDED */
@@ -103771,7 +105900,7 @@ export type StreamSummaryPageGetStreamSummaryMetricsVariables = {
   /** @format time */
   lastStartedAt?: null | string;
   isCostreamingEnabled: boolean;
-  /** @format int64 */
+  /** @format int32 */
   clipLimit?: null | number;
   curatorRoles: EnumOrInput[];
   after?: null | Cursor;
@@ -104131,7 +106260,7 @@ export type SubscribersPanelQueryData = {
          */
         id: ID;
         /**
-         * @format int64
+         * @format int32
          * @example [599, 699, 1749, 349, 2094, 1047]
          */
         price: number;
@@ -104172,9 +106301,9 @@ export type SubscriptionCountsResponse = QueryResponse<
 
 export type SubscriptionRewardPreviewsVariables = {
   channelID: ID;
-  /** @format int64 */
+  /** @format int32 */
   months: number;
-  /** @format int64 */
+  /** @format int32 */
   tier: number;
 };
 
@@ -104189,7 +106318,7 @@ export type SubscriptionRewardPreviewsResponse = QueryResponse<
 >;
 
 export type SubscriptionsManagementExpiredSubscriptionsVariables = {
-  /** @format int64 */
+  /** @format int32 */
   limit?: null | number;
   cursor?: null | Cursor;
 };
@@ -104216,7 +106345,7 @@ export type SubscriptionsManagementExpiredSubscriptionsResponse = QueryResponse<
 >;
 
 export type SubscriptionsManagementSubscriptionBenefitsVariables = {
-  /** @format int64 */
+  /** @format int32 */
   limit?: null | number;
   cursor?: null | Cursor;
   filter?: null | EnumOrInput;
@@ -104686,7 +106815,7 @@ export type SupportPanelBenefitsSectionBadgesData = {
        */
       id: ID;
       /**
-       * @format int64
+       * @format int32
        * @example [0]
        */
       founderBadgeAvailability: number;
@@ -104868,7 +106997,7 @@ export type SupportPanelCommunityGiftingGiftingOptionsData = {
         id: ID;
         /**
          * ⚠️ Low confidence about: nullable
-         * @format int64
+         * @format uint32
          */
         liveFollowerGiftRecipientsCount: null | number;
         stream: null | {
@@ -104878,7 +107007,7 @@ export type SupportPanelCommunityGiftingGiftingOptionsData = {
            */
           id: ID;
           /**
-           * @format int64
+           * @format uint32
            * @example [0, 46802, 656, 1572, 1518, 1432]
            */
           viewersCount: number;
@@ -104948,7 +107077,7 @@ export type SupportPanelCommunityGiftingTenureBadgeProgressData = {
       /** ⚠️ Low confidence about: nullable */
       displayName: null | string;
       /**
-       * @format int64
+       * @format int32
        * @example [0]
        */
       founderBadgeAvailability: number;
@@ -105055,28 +107184,28 @@ export type SupportPanelPartnerPlusGoalData = {
       /** @example ["OFF", "LEVEL_2"] */
       widgetSetting: string;
       /**
-       * @format int64
+       * @format int32
        * @example [100]
        */
       l1Threshold: number;
       /**
-       * @format int64
+       * @format int32
        * @example [300]
        */
       l2Threshold: number;
       subPoints: {
         /**
-         * @format int64
+         * @format uint32
          * @example [2026, 2025]
          */
         year: number;
         /**
-         * @format int64
+         * @format uint32
          * @example [6, 5, 4, 3, 2, 1, 12, 11, 10, 9]
          */
         month: number;
         /**
-         * @format int64
+         * @format uint32
          * @example [774, 3700, 3528, 3619, 3695]
          */
         count: number;
@@ -105432,7 +107561,7 @@ export type SupportPanelSubTokenOffersResponse = QueryResponse<
 export type SupportPanelTitleSectionAvatarVariables = {
   login: string;
   /**
-   * @format int64
+   * @format int32
    * @default 150
    */
   avatarSize?: null | number;
@@ -105558,7 +107687,7 @@ export type SupportPanelTrackingServiceData = {
        */
       id: ID;
       /**
-       * @format int64
+       * @format int32
        * @example [0]
        */
       founderBadgeAvailability: number;
@@ -105658,12 +107787,12 @@ export type SwitcherCategoryInfoData = {
     avatarURL: string;
     description: null;
     /**
-     * @format int64
+     * @format uint32
      * @example [584353, 2909, 484662, 92801, 444549]
      */
     viewersCount: null | number;
     /**
-     * @format int64
+     * @format uint32
      * @example [52803600, 53204320, 53261452, 53270364]
      */
     followersCount: number;
@@ -105680,7 +107809,7 @@ export type SwitcherCategoryInfoResponse = QueryResponse<
 
 export type SwitcherClipsCardsGamerecsVariables = {
   categorySlug: string;
-  /** @format int64 */
+  /** @format int32 */
   limit?: null | number;
   requestID: ID;
   sessionID: ID;
@@ -106187,7 +108316,7 @@ export type TeamLandingMemberListData = {
       | {
           /**
            * ⚠️ Low confidence about: nullable
-           * @format int64
+           * @format uint32
            */
           totalCount: null | number;
           __typename: string;
@@ -106195,7 +108324,7 @@ export type TeamLandingMemberListData = {
       | {
           /**
            * ⚠️ Low confidence about: nullable
-           * @format int64
+           * @format uint32
            */
           totalCount: null | number;
           __typename: string;
@@ -106424,7 +108553,7 @@ export type TeamsDashboardMembersWithRevenueVariables = {
   teamName: string;
   cursor?: null | Cursor;
   /**
-   * @format int64
+   * @format int32
    * @default 100
    */
   limit?: null | number;
@@ -106638,7 +108767,7 @@ export type TeamsDashboardTeamInvitationsVariables = {
   teamName: string;
   cursor?: null | Cursor;
   /**
-   * @format int64
+   * @format int32
    * @default 10
    */
   limit?: null | number;
@@ -106668,7 +108797,7 @@ export type TeamsDashboardTeamMembersVariables = {
   teamName: string;
   cursor?: null | Cursor;
   /**
-   * @format int64
+   * @format int32
    * @default 10
    */
   limit?: null | number;
@@ -106789,7 +108918,7 @@ export type TeamsDashboardVideoPlayReferralsVariables = {
   start: string;
   /** @format time */
   end: string;
-  /** @format int64 */
+  /** @format int32 */
   first: number;
 };
 
@@ -106902,7 +109031,7 @@ export type TestMessageEnforcementRolesQueryResponse = QueryResponse<
 
 export type ThirdPartySponsorshipOffersVariables = {
   creatorID: ID;
-  /** @format int64 */
+  /** @format int32 */
   first?: null | number;
   after?: null | Cursor;
 };
@@ -106938,7 +109067,7 @@ export type TicketDescriptionData = {
       /** @example ["USD", "BYN"] */
       currency: string;
       /**
-       * @format int64
+       * @format int32
        * @example [2]
        */
       exponent: number;
@@ -106950,13 +109079,13 @@ export type TicketDescriptionData = {
       /** ⚠️ Low confidence about: nullable */
       isTaxInclusive: null | boolean;
       /**
-       * @format int64
+       * @format int32
        * @example [599, 699, 1749, 349, 2094, 1047]
        */
       price: number;
       tax: UnknownValue;
       /**
-       * @format int64
+       * @format uint32
        * @example [349, 2094, 1047, 699, 1749]
        */
       total: number;
@@ -107183,7 +109312,7 @@ export type TrackingManagerRequestInfoResponse = QueryResponse<
 >;
 
 export type TransactionHistoryTabUserPaymentTransactionsVariables = {
-  /** @format int64 */
+  /** @format int32 */
   first?: null | number;
   after?: null | Cursor;
   filters: EnumOrInput;
@@ -107357,12 +109486,12 @@ export type TurboSubscriptionProductData = {
               /** @example ["USD", "BYN"] */
               currency: string;
               /**
-               * @format int64
+               * @format int32
                * @example [2]
                */
               exponent: number;
               /**
-               * @format int64
+               * @format uint32
                * @example [349, 2094, 1047, 699, 1749]
                */
               total: number;
@@ -107425,7 +109554,11 @@ export type TurboUpsellButtonData = {
               productPricing:
                 | null
                 | {
-                    total: UnknownValue;
+                    /**
+                     * ⚠️ Low confidence about: nullable
+                     * @format uint32
+                     */
+                    total: null | number;
                     discount:
                       | null
                       | TurboUpsellButton_FixedPricingDiscount
@@ -107651,7 +109784,7 @@ export type UnbanRequestsItemHeaderTabsResponse = QueryResponse<
 export type UnbanRequestsListCtxVariables = {
   channelLogin: string;
   /**
-   * @format int64
+   * @format int32
    * @default 20
    */
   limit?: null | number;
@@ -107677,7 +109810,7 @@ export type UnbanRequestsListCtxData = {
     unbanRequestsSettings: {
       isEnabled: boolean;
       /**
-       * @format int64
+       * @format uint32
        * @example [2880, 15]
        */
       cooldownMinutes: number;
@@ -107737,7 +109870,7 @@ export type UnbanRequestsSettingsData = {
     unbanRequestsSettings: {
       isEnabled: boolean;
       /**
-       * @format int64
+       * @format uint32
        * @example [2880, 15]
        */
       cooldownMinutes: number;
@@ -108302,7 +110435,7 @@ export type UserChallengeCurrentUserPhoneResponse = QueryResponse<
 export type UserClipsAggregationQueryVariables = {
   criteria: EnumOrInput;
   login: string;
-  /** @format int64 */
+  /** @format int32 */
   first?: null | number;
 };
 
@@ -108787,7 +110920,7 @@ export type UserRolesCacheQueryData = {
           };
           /**
            * ⚠️ Low confidence about: nullable
-           * @format int64
+           * @format uint32
            */
           totalCount: null | number;
           __typename: string;
@@ -108827,7 +110960,7 @@ export type UserRolesCacheQueryData = {
           };
           /**
            * ⚠️ Low confidence about: nullable
-           * @format int64
+           * @format uint32
            */
           totalCount: null | number;
           __typename: string;
@@ -108881,7 +111014,7 @@ export type UserUnbanRequestVariables = {
   channelID: ID;
   userID?: null | ID;
   /**
-   * @format int64
+   * @format int32
    * @default 1
    */
   limit?: null | number;
@@ -108936,7 +111069,7 @@ export type UserWithBadgesResponse = QueryResponse<UserWithBadgesData, "UserWith
 
 export type UseStreamHealthQueryVariables = {
   channelID: ID;
-  /** @format int64 */
+  /** @format int32 */
   secondsAgo: number;
   includeDetails: boolean;
 };
@@ -108974,18 +111107,18 @@ export type UseViewCountData = {
        */
       id: ID;
       /**
-       * @format int64
+       * @format uint32
        * @example [0, 46802, 656, 1572, 1518, 1432]
        */
       viewersCount: number;
       /**
-       * @format int64
+       * @format uint32
        * @example [4617, 7717, 7714, 11, 4557]
        */
       collaborationViewersCount: null | number;
       costreamDetails: null | {
         /**
-         * @format int64
+         * @format uint32
          * @example [53318, 665, 54790, 55713, 54158]
          */
         totalViewersCount: number;
@@ -109095,7 +111228,7 @@ export type VerticalCollectionCardQueryData = {
     slug: string;
     /**
      * ⚠️ Low confidence about: nullable
-     * @format int64
+     * @format uint32
      */
     viewersCount: null | number;
     __typename: "BrowsableCollection";
@@ -109303,7 +111436,7 @@ export type VideoCommentsData = GlobalCheerInfo & {
     /** @example ["ARCHIVE", "HIGHLIGHT", "UPLOAD"] */
     broadcastType: string;
     /**
-     * @format int64
+     * @format uint32
      * @example [15389, 4621, 621, 4472, 58]
      */
     lengthSeconds: number;
@@ -109333,7 +111466,7 @@ export type VideoCommentsResponse = QueryResponse<VideoCommentsData, "VideoComme
 
 export type VideoCommentsByOffsetOrCursorVariables = {
   videoID: ID;
-  /** @format int64 */
+  /** @format int32 */
   contentOffsetSeconds: number;
   cursor?: null | Cursor;
 };
@@ -109384,7 +111517,7 @@ export type VideoCommentsByOffsetOrCursorData = {
             __typename: "User";
           };
           /**
-           * @format int64
+           * @format uint32
            * @example [37, 43, 44, 45, 46, 47, 48, 49, 50, 51]
            */
           contentOffsetSeconds: number;
@@ -109401,7 +111534,7 @@ export type VideoCommentsByOffsetOrCursorData = {
                 /** @example ["emotesv2_dcd06b30a5c24f6eb871e8f5edbd44f7", "emotesv2_df1b3a19d9fc4bff81429afdfb46fff0"] */
                 emoteID: ID;
                 /**
-                 * @format int64
+                 * @format int32
                  * @example [0, 10, 20, 30, 12, 24, 11, 22, 15, 40, 3]
                  */
                 from: number;
@@ -109593,7 +111726,7 @@ export type VideoManagerQueryChannelVideosV2Variables = {
   types: BroadcastType[];
   /** @default TIME */
   sort?: null | VideoSort;
-  /** @format int64 */
+  /** @format int32 */
   limit?: null | number;
   options?: null | VideoConnectionOptionsInput;
 };
@@ -109610,7 +111743,7 @@ export type VideoManagerQueryChannelVideosV2Data = {
     videos: null | {
       /**
        * ⚠️ Low confidence about: nullable
-       * @format int64
+       * @format uint32
        */
       totalCount: null | number;
       edges: {
@@ -109792,7 +111925,7 @@ export type VideoMetadataData = {
        */
       id: ID;
       /**
-       * @format int64
+       * @format uint32
        * @example [0, 46802, 656, 1572, 1518, 1432]
        */
       viewersCount: number;
@@ -109800,7 +111933,7 @@ export type VideoMetadataData = {
     };
     followers: {
       /**
-       * @format int64
+       * @format uint32
        * @example [0, 2430015, 2459534, 2471025, 2380069, 2380116]
        */
       totalCount: number;
@@ -109850,7 +111983,7 @@ export type VideoPlayerAgeGateOverlayBroadcasterData = {
     login: string;
     adProperties: null | {
       /**
-       * @format int64
+       * @format uint32
        * @example [0]
        */
       requiredAge: number;
@@ -109901,14 +112034,14 @@ export type VideoPlayerClipPostplayRecommendationsOverlayData = {
      */
     id: ID;
     /**
-     * @format int64
+     * @format uint32
      * @example [44, 26, 25, 42, 30, 59, 36, 41, 60, 29]
      */
     durationSeconds: number;
     /** @example ["EphemeralEncouragingBulgogiPraiseIt-98gnj_-unqEO0uvs", "CredulousBlightedSquirrelOSkomodo-GdY_nETXjEzIz_gm"] */
     slug: string;
     /**
-     * @format int64
+     * @format uint32
      * @example [7897, 11412, 12062, 2238]
      */
     videoOffsetSeconds: null | number;
@@ -109926,7 +112059,7 @@ export type VideoPlayerClipPostplayRecommendationsOverlayResponse = QueryRespons
 >;
 
 export type VideoPlayerClipPostplayRecommendationsOverlayRecsVariables = {
-  /** @format int64 */
+  /** @format int32 */
   limit?: null | number;
   requestID: ID;
   sessionID: ID;
@@ -110161,12 +112294,12 @@ export type VideoPlayerMutedSegmentsAlertOverlayData = {
       mutedSegmentConnection: null | {
         nodes: {
           /**
-           * @format int64
+           * @format uint32
            * @example [180, 182, 184, 181]
            */
           duration: number;
           /**
-           * @format int64
+           * @format int32
            * @example [0, 4322, 4682, 5764, 10264, 15304]
            */
           offset: number;
@@ -110240,7 +112373,7 @@ export type VideoPlayerPixelAnalyticsUrlsData = {
             url: null | string;
             /**
              * ⚠️ Low confidence about: nullable
-             * @format int64
+             * @format uint32
              */
             timeOffsetSeconds: null | number;
             __typename: string;
@@ -110433,7 +112566,7 @@ export type VideoPlayerStreamInfoOverlayChannelData = {
        */
       id: ID;
       /**
-       * @format int64
+       * @format uint32
        * @example [0, 46802, 656, 1572, 1518, 1432]
        */
       viewersCount: number;
@@ -110515,7 +112648,7 @@ export type VideoPlayerStreamInfoOverlayClipData = {
       __typename: "Game";
     };
     /**
-     * @format int64
+     * @format uint32
      * @example [0, 957063, 957456, 899934, 944919, 773854]
      */
     viewCount: number;
@@ -110681,7 +112814,7 @@ export type VideoPlayerViewCountData = {
        */
       id: ID;
       /**
-       * @format int64
+       * @format uint32
        * @example [0, 46802, 656, 1572, 1518, 1432]
        */
       viewersCount: number;
@@ -110745,7 +112878,7 @@ export type VideoPlayerVODSeekbarData = {
      */
     id: ID;
     /**
-     * @format int64
+     * @format uint32
      * @example [15389, 4621, 621, 4472, 58]
      */
     lengthSeconds: number;
@@ -111115,7 +113248,7 @@ export type ViewerCardCommunityMomentCarouselMomentBadgeResponse = QueryResponse
 export type ViewerCardCommunityMomentsVariables = {
   userLogin: string;
   channelLogin: string;
-  /** @format int64 */
+  /** @format int32 */
   first: number;
   cursor?: null | Cursor;
 };
@@ -111376,7 +113509,7 @@ export type ViewerDiscoveryFreeformTagsImpressionsVariables = {
   end: string;
   sortBy?: null | EnumOrInput;
   sortOrder?: null | SortOrder;
-  /** @format int64 */
+  /** @format int32 */
   limit?: null | number;
 };
 
@@ -111398,7 +113531,7 @@ export type ViewerDiscoveryNewVsReturningVariables = {
   startAt: string;
   /** @format time */
   endAt: string;
-  /** @format int64 */
+  /** @format int32 */
   numberOfIntervals: number;
 };
 
@@ -111432,7 +113565,7 @@ export type ViewerDiscoveryReferralsTimeseriesVariables = {
   granularity: EnumOrInput;
   dimension: ReferralsDimension;
   filter: ReferralsFilter;
-  /** @format int64 */
+  /** @format int32 */
   first: number;
 };
 
@@ -111507,7 +113640,7 @@ export type ViewersTileQueryData = {
        */
       id: ID;
       /**
-       * @format int64
+       * @format uint32
        * @example [0, 46802, 656, 1572, 1518, 1432]
        */
       viewersCount: number;
@@ -111515,7 +113648,7 @@ export type ViewersTileQueryData = {
         /** @example ["ORGANIZER", "COSTREAMER"] */
         role: string;
         /**
-         * @format int64
+         * @format uint32
          * @example [53318, 665, 54790, 55713, 54158]
          */
         totalViewersCount: number;
@@ -111623,7 +113756,11 @@ export type VIPArtistStatusQueryData = {
      * @example ["12826"]
      */
     id: ID;
-    numberOfVIPsAllowed: UnknownValue;
+    /**
+     * ⚠️ Low confidence about: nullable
+     * @format uint32
+     */
+    numberOfVIPsAllowed: null | number;
     __typename: "Channel";
   };
   /** @directive include(if: $isArtistAlleyFeatureEnabled) */
@@ -112100,7 +114237,7 @@ export type WhisperThreadData = {
       | WhisperThread_WhisperThreadUserLastMessageRead[];
     /**
      * ⚠️ Low confidence about: nullable
-     * @format int64
+     * @format uint32
      */
     unreadMessagesCount: null | number;
     messages: null | WhisperThread_WhisperThreadMessages | WhisperThread_WhisperThreadMessages[];
@@ -112482,7 +114619,7 @@ export type AddChannelToSharedChatSessionResponse = QueryResponse<
 export type AddClipToRecapVariables = {
   channelID: ID;
   clipSlug: string;
-  /** @format int64 */
+  /** @format int32 */
   thumbnailHeight: number;
 };
 
