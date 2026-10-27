@@ -8352,6 +8352,100 @@ export type CategoryRatingFragment = {
 };
 
 /** ℹ️ Not real Twitch type name */
+export type CategoryRecaps_RecapClips = {
+  clip: null | CategoryRecaps_RecapClipsClip | CategoryRecaps_RecapClipsClip[];
+  __typename: string;
+};
+
+/** ℹ️ Not real Twitch type name */
+export type CategoryRecaps_RecapClipsClip = {
+  id: ID;
+  playbackAccessToken: {
+    value: UnknownValue;
+    signature: UnknownValue;
+    __typename: string;
+  };
+  assets: null | CategoryRecaps_RecapClipsClipAssets | CategoryRecaps_RecapClipsClipAssets[];
+  __typename: string;
+};
+
+/** ℹ️ Not real Twitch type name */
+export type CategoryRecaps_RecapClipsClipAssets = {
+  id: ID;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format float
+   */
+  aspectRatio: null | number;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format date-time
+   */
+  createdAt: null | string;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uri
+   * @gqlArg `height: Int`
+   */
+  thumbnailURL: null | string;
+  videoQualities: {
+    sourceURL: UnknownValue;
+    codecs: UnknownValue;
+    height: UnknownValue;
+    videoCodec: UnknownValue;
+    __typename: string;
+  };
+  __typename: string;
+};
+
+/** ℹ️ Not real Twitch type name */
+export type CategoryRecaps_Recaps = {
+  edges: {
+    node: null | {
+      id: ID;
+      /** ⚠️ Low confidence about: nullable */
+      title: null | string;
+      /**
+       * ⚠️ Low confidence about: nullable
+       * @format date-time
+       */
+      streamStartAt: null | string;
+      /**
+       * ⚠️ Low confidence about: nullable
+       * @format date-time
+       */
+      streamEndAt: null | string;
+      /**
+       * ⚠️ Low confidence about: nullable
+       * @format date-time
+       */
+      postedAt: null | string;
+      /**
+       * ⚠️ Low confidence about: nullable
+       * @format uint32
+       */
+      viewCount: null | number;
+      channel:
+        | null
+        | CategoryRecaps_RecapsEdgesNodeChannel
+        | CategoryRecaps_RecapsEdgesNodeChannel[];
+      clips: null | CategoryRecaps_RecapClips | CategoryRecaps_RecapClips[];
+      __typename: "Recap";
+    };
+    __typename: string;
+  }[];
+  __typename: string;
+};
+
+/** ℹ️ Not real Twitch type name */
+export type CategoryRecaps_RecapsEdgesNodeChannel = {
+  id: ID;
+  /** ⚠️ Low confidence about: nullable */
+  login: null | string;
+  __typename: string;
+};
+
+/** ℹ️ Not real Twitch type name */
 export type CategoryReportQuery_CategoryReport = {
   filteredTags: null | CategoryTagFragment;
   rating: null | CategoryRatingFragment;
@@ -45611,7 +45705,7 @@ export type PortraitCropMetadata = {
     xPercentage: number;
     /**
      * @format float
-     * @example [0, 3.490000009536743, 100, 96.51000213623047, 5.909999847412109, 0.699999988079071]
+     * @example [0, 3.490000009536743, 100, 96.51000213623047, 56.779998779296875, 5.909999847412109]
      */
     yPercentage: number;
     __typename: "PortraitCropCoordinates";
@@ -45624,7 +45718,7 @@ export type PortraitCropMetadata = {
     xPercentage: number;
     /**
      * @format float
-     * @example [0, 3.490000009536743, 100, 96.51000213623047, 5.909999847412109, 0.699999988079071]
+     * @example [0, 3.490000009536743, 100, 96.51000213623047, 56.779998779296875, 5.909999847412109]
      */
     yPercentage: number;
     __typename: "PortraitCropCoordinates";
@@ -76223,6 +76317,21 @@ export type CategoryRankingQueryResponse = QueryResponse<
   "CategoryRankingQuery"
 >;
 
+export type CategoryRecapsVariables = {
+  filter: EnumOrInput;
+  sort: EnumOrInput;
+  /** @format int32 */
+  first: number;
+  /** @format int32 */
+  thumbnailHeight: number;
+  /** @default ["AVC"] */
+  supportedCodecs: VideoCodec[];
+};
+
+export type CategoryRecapsData = { recaps: null | CategoryRecaps_Recaps | CategoryRecaps_Recaps[] };
+
+export type CategoryRecapsResponse = QueryResponse<CategoryRecapsData, "CategoryRecaps">;
+
 export type CategoryReportQueryVariables = {
   channelID: ID;
   languageTag?: null | string;
@@ -103738,6 +103847,7 @@ export type SettingsChannelClipsSettingsData = {
     id: ID;
     roles: null | {
       isParticipatingDJ: boolean;
+      isPartner: boolean;
       __typename: "UserRoles";
     };
     channel: {
@@ -125703,6 +125813,7 @@ export type QueryVariablesMap = {
   CategoryDetails: CategoryDetailsVariables;
   CategoryFilterDropdownSearch: CategoryFilterDropdownSearchVariables;
   CategoryRankingQuery: CategoryRankingQueryVariables;
+  CategoryRecaps: CategoryRecapsVariables;
   CategoryReportQuery: CategoryReportQueryVariables;
   CategoryTimeseriesMetrics: CategoryTimeseriesMetricsVariables;
   CategoryWidePromotions: CategoryWidePromotionsVariables;
@@ -127989,6 +128100,7 @@ export type QueryResponseMap = {
   CategoryDetails: CategoryDetailsResponse;
   CategoryFilterDropdownSearch: CategoryFilterDropdownSearchResponse;
   CategoryRankingQuery: CategoryRankingQueryResponse;
+  CategoryRecaps: CategoryRecapsResponse;
   CategoryReportQuery: CategoryReportQueryResponse;
   CategoryTimeseriesMetrics: CategoryTimeseriesMetricsResponse;
   CategoryWidePromotions: CategoryWidePromotionsResponse;

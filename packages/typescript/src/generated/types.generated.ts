@@ -1164,7 +1164,7 @@ export type PortraitCropMetadata = {
     xPercentage: number;
     /**
      * @format float
-     * @example [0, 3.490000009536743, 100, 96.51000213623047, 5.909999847412109, 0.699999988079071]
+     * @example [0, 3.490000009536743, 100, 96.51000213623047, 56.779998779296875, 5.909999847412109]
      */
     yPercentage: number;
     __typename: "PortraitCropCoordinates";
@@ -1177,7 +1177,7 @@ export type PortraitCropMetadata = {
     xPercentage: number;
     /**
      * @format float
-     * @example [0, 3.490000009536743, 100, 96.51000213623047, 5.909999847412109, 0.699999988079071]
+     * @example [0, 3.490000009536743, 100, 96.51000213623047, 56.779998779296875, 5.909999847412109]
      */
     yPercentage: number;
     __typename: "PortraitCropCoordinates";
