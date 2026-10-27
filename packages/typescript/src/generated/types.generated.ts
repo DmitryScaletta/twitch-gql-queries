@@ -87,7 +87,8 @@ export type BitsCheermoteCampaign = {
 export type BitsCheermoteCampaign_CheermoteCampaignSelf = {
   id: ID;
   bitsUsed: UnknownValue;
-  canBeSponsored: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  canBeSponsored: null | boolean;
   __typename: string;
 };
 
@@ -358,7 +359,8 @@ export type ClipAssetFragment = {
     bitrate: number;
     /** @example ["", "avc1.64002A,mp4a.40.2", "hvc1.1.6.L123.90", "hvc1.1.6.L120.90", "hvc1.1.6.L90.90", "hvc1.1.6.L63.90", "hvc1.1.6.L150.90", "avc1.4D001F"] */
     codecs: string;
-    duration: null;
+    /** @format uint32 */
+    duration: null | number;
     /**
      * @format int32
      * @example [0, -1, 1080, 720, 480, 360, 1600]
@@ -700,7 +702,7 @@ export type ContentClipsManagerClip = {
   rawMediaRelativeOffset: number;
   /** @example ["", "j2_d65zIfMWahzTyTvGUvA", "Ns3-vDOR-6P0ss-aFGmgOw", "5V7n_TrusYjbKULZPgs8Og", "JKuXmAhwpagfsU2LJs367w"] */
   rawMediaKey: string;
-  isCatalogDetected: null;
+  isCatalogDetected: null | boolean;
   catalogCheckState: null;
   __typename: "Clip";
 };
@@ -1994,7 +1996,8 @@ export type SearchForUserFragment = {
 
 /** ℹ️ Not real Twitch type name */
 export type SearchForUserFragment_UserSelf = {
-  canFollow: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  canFollow: null | boolean;
   follower:
     | null
     | SearchForUserFragment_UserSelfFollower
