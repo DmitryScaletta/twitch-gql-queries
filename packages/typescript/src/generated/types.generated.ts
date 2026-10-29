@@ -11,38 +11,38 @@ export type EnumOrInput = Record<string, unknown> | PrimitiveValue;
 export type UnknownValue = null | PrimitiveValue | PrimitiveValue[];
 
 export type Badge = {
-  /** @example ["cHJlZGljdGlvbnM7Ymx1ZS0xOw==", "cHJlZGljdGlvbnM7Ymx1ZS0yOw=="] */
+  /** @example ["Yml0czsxOw==", "cHJlZGljdGlvbnM7Ymx1ZS0xOw=="] */
   id: ID;
-  /** @example ["", "predictions", "bits"] */
+  /** @example ["", "bits", "predictions"] */
   setID: ID;
-  /** @example ["", "blue-1", "blue-2", "blue-3", "blue-4", "blue-5", "pink-2", "100"] */
+  /** @example ["", "1", "blue-1", "blue-2", "blue-3", "blue-4", "blue-5", "pink-2"] */
   version: string;
-  /** @example ["Predicted Blue (1)", "Predicted Blue (2)"] */
+  /** @example ["cheer 1", "Predicted Blue (1)"] */
   title: string;
   /**
    * @format uri
-   * @example ["https://static-cdn.jtvnw.net/badges/v1/e33d8b46-f63b-4e67-996d-4a7dcec0ad33/1", "https://static-cdn.jtvnw.net/badges/v1/ffdda3fe-8012-4db3-981e-7a131402b057/1"]
+   * @example ["https://static-cdn.jtvnw.net/badges/v1/73b5c3fb-24f9-4a82-a852-2f475b59411c/1", "https://static-cdn.jtvnw.net/badges/v1/73b5c3fb-24f9-4a82-a852-2f475b59411c/2"]
    * @aliasFor imageURL
    * @gqlArg `size: BadgeImageURLSize`
    */
   image1x: string;
   /**
    * @format uri
-   * @example ["https://static-cdn.jtvnw.net/badges/v1/e33d8b46-f63b-4e67-996d-4a7dcec0ad33/1", "https://static-cdn.jtvnw.net/badges/v1/ffdda3fe-8012-4db3-981e-7a131402b057/1"]
+   * @example ["https://static-cdn.jtvnw.net/badges/v1/73b5c3fb-24f9-4a82-a852-2f475b59411c/1", "https://static-cdn.jtvnw.net/badges/v1/73b5c3fb-24f9-4a82-a852-2f475b59411c/2"]
    * @aliasFor imageURL
    * @gqlArg `size: BadgeImageURLSize`
    */
   image2x: string;
   /**
    * @format uri
-   * @example ["https://static-cdn.jtvnw.net/badges/v1/e33d8b46-f63b-4e67-996d-4a7dcec0ad33/1", "https://static-cdn.jtvnw.net/badges/v1/ffdda3fe-8012-4db3-981e-7a131402b057/1"]
+   * @example ["https://static-cdn.jtvnw.net/badges/v1/73b5c3fb-24f9-4a82-a852-2f475b59411c/1", "https://static-cdn.jtvnw.net/badges/v1/73b5c3fb-24f9-4a82-a852-2f475b59411c/2"]
    * @aliasFor imageURL
    * @gqlArg `size: BadgeImageURLSize`
    */
   image4x: string;
   /** @example ["VISIT_URL", "SUBSCRIBE", "GET_TURBO"] */
   clickAction: null | string;
-  /** @example ["https://www.twitch.tv/directory/category/destiny-2\t", "https://help.twitch.tv/s/article/guide-to-cheering-with-bits", "https://www.twitch.tv/directory/game/1979%20Revolution/details"] */
+  /** @example ["https://www.twitch.tv/directory/category/destiny-2\t", "https://bits.twitch.tv", "https://help.twitch.tv/s/article/guide-to-cheering-with-bits"] */
   clickURL: null | string;
   __typename: "Badge";
 };
@@ -111,9 +111,7 @@ export type BitsCheermoteCampaign_CheermoteCampaignThresholds = {
 export type BroadcastType = "ARCHIVE" | "HIGHLIGHT" | "PAST_PREMIERE" | "UPLOAD";
 
 export type BrowsePageDirectoriesWithTagsEdge = {
-  /** @example ["eyJvZmYiOjEsImJsayI6MCwic3ViIjp7IjEiOnsib2ZmIjoxLCJ0b3QiOjEwMH0sIjIiOnsib2ZmIjowLCJ0b3QiOjE4MH0sIjMiOnsib2ZmIjowLCJ0b3QiOjB9fX0="] */
   cursor: Cursor;
-  /** @example ["d1c58c2a-8003-49f3-9952-a6252feb90af:4b9a285b-3156-4789-8c8d-e88c5ef3b4cd:MF|COLDSTART_TF2_CATEGORY_002:RF|UNK:CG|UNK:CR|UNK:BL|UNK:FC|UNK:RK|0:CRK|0", "d1c58c2a-8003-49f3-9952-a6252feb90af:18210e19-e010-4bd4-a812-3489274681a0:MF|COLDSTART_TF2_CATEGORY_002:RF|UNK:CG|UNK:CR|UNK:BL|UNK:FC|UNK:RK|1:CRK|1", "d1c58c2a-8003-49f3-9952-a6252feb90af:820be96b-f59a-437d-8426-41b2e6cf9543:MF|COLDSTART_TF2_CATEGORY_002:RF|UNK:CG|UNK:CR|UNK:BL|UNK:FC|UNK:RK|2:CRK|2"] */
   trackingID: null | ID;
   node: null | BrowsePageGame;
   __typename: "GameEdge";
@@ -125,15 +123,15 @@ export type BrowsePageGame = {
    * @example ["509672"]
    */
   id: ID;
-  /** @example ["irl", "just-chatting", "special-events", "cyberpunk-2077", "grand-theft-auto-v", "overwatch-2", "counter-strike"] */
+  /** @example ["irl", "cyberpunk-2077", "just-chatting", "special-events", "grand-theft-auto-v", "overwatch-2", "counter-strike"] */
   slug: string;
-  /** @example ["IRL", "Just Chatting", "Special Events", "Talk Shows & Podcasts", "Grand Theft Auto V", "Poker", "Halloween: The Game"] */
+  /** @example ["IRL", "Cyberpunk 2077", "Just Chatting", "Special Events", "Gwent: The Witcher Card Game", "Grand Theft Auto V", "DayZ"] */
   displayName: string;
-  /** @example ["IRL", "Just Chatting", "Special Events", "Cyberpunk 2077", "League of Legends", "You Know The Drill", "RuneScape: Dragonwilds"] */
+  /** @example ["IRL", "Cyberpunk 2077", "Just Chatting", "Special Events", "League of Legends", "You Know The Drill", "RuneScape: Dragonwilds"] */
   name: string;
   /**
    * @format uri
-   * @example ["https://static-cdn.jtvnw.net/ttv-boxart/509658-144x192.jpg", "https://static-cdn.jtvnw.net/ttv-boxart/509658-285x380.jpg"]
+   * @example ["https://static-cdn.jtvnw.net/ttv-boxart/509658-144x192.jpg", "https://static-cdn.jtvnw.net/ttv-boxart/26936-144x192.jpg"]
    * @gqlArg `width: Int [600, 144, 30, 285, 38]`
    * @gqlArg `height: Int [800, 192, 42, 380, 51]`
    */
@@ -144,16 +142,9 @@ export type BrowsePageGame = {
    */
   viewersCount: null | number;
   tags: TagFragment[];
-  /** @example ["0001-01-01 00:00:00 +0000 UTC", "2012-08-21T00:00:00Z", "2013-07-09T00:00:00Z", "2024-12-06T00:00:00Z", "2026-06-05T00:00:00Z", "2004-11-23T00:00:00Z", "2026-09-10T00:00:00Z", "2026-10-08T00:00:00Z"] */
+  /** @example ["0001-01-01 00:00:00 +0000 UTC", "2007-09-16T00:00:00Z", "2016-03-24T00:00:00Z", "2018-10-23T00:00:00Z", "2019-06-18T00:00:00Z", "2017-12-20T00:00:00Z", "2022-04-01T00:00:00Z", "2020-08-14T00:00:00Z"] */
   originalReleaseDate: null | string;
   __typename: "Game";
-};
-
-/** ℹ️ Not real Twitch type name */
-export type ChatListBadges_UserSelf = {
-  selectedBadge: null | Badge;
-  displayBadges: null | Badge;
-  __typename: string;
 };
 
 export type CheerDisplayConfig = {
@@ -174,7 +165,7 @@ export type CheerDisplayConfig = {
   }[];
   /** @example ["SPONSORED", "DEFAULT", "CUSTOM", "CHARITY", "FIRST_PARTY", "THIRD_PARTY", "ANONYMOUS", "DISPLAY_ONLY"] */
   order: string[];
-  /** @example ["1.5", "1", "2", "3", "4"] */
+  /** @example ["1", "1.5", "2", "3", "4"] */
   scales: string[];
   types: {
     /** @example ["static", "animated"] */
@@ -215,20 +206,20 @@ export type Clip = {
   title: string;
   /**
    * @format uint32
-   * @example [0, 957063, 957456, 899934, 944919, 773854]
+   * @example [957063, 957456, 899934, 944919, 773854]
    */
   viewCount: number;
-  /** @example ["EN", "RU"] */
+  /** @example ["EN", "ES", "RU"] */
   language: string;
   curator: null | {
     /**
      * @pattern ^[0-9]+$
-     * @example ["12826"]
+     * @example ["23161357"]
      */
     id: ID;
-    /** @example ["twitch", "xqc", "lirik", "forsen", "yasongas", "shungiteeworks", "nottdarius"] */
+    /** @example ["lirik", "twitch", "cdprojektred", "forsen", "tickett_", "st1mgreeen", "lipton_18"] */
     login: string;
-    /** @example ["Twitch", "ayuuexe", "xQc", "LIRIK", "RSDragonwilds", "S0LAF1D3", "Jinnytty"] */
+    /** @example ["Twitch", "CD PROJEKT RED", "LIRIK", "forsen", "ayuuexe", "xQc", "RSDragonwilds"] */
     displayName: string;
     __typename: "User";
   };
@@ -238,14 +229,14 @@ export type Clip = {
      * @example ["509672"]
      */
     id: ID;
-    /** @example ["irl", "just-chatting", "special-events", "cyberpunk-2077", "grand-theft-auto-v", "overwatch-2", "counter-strike"] */
+    /** @example ["irl", "cyberpunk-2077", "just-chatting", "special-events", "grand-theft-auto-v", "overwatch-2", "counter-strike"] */
     slug: string;
-    /** @example ["IRL", "Just Chatting", "Special Events", "Cyberpunk 2077", "League of Legends", "You Know The Drill", "RuneScape: Dragonwilds"] */
+    /** @example ["IRL", "Cyberpunk 2077", "Just Chatting", "Special Events", "League of Legends", "You Know The Drill", "RuneScape: Dragonwilds"] */
     name: string;
     /**
-     * @example ["https://static-cdn.jtvnw.net/ttv-boxart/509672-{width}x{height}.jpg", "https://static-cdn.jtvnw.net/ttv-boxart/509658-{width}x{height}.jpg"]
-     * @gqlArg `width: Int [52, 144, 40, 285, 250, 188, 90, 85, 200, 600]`
-     * @gqlArg `height: Int [72, 192, 56, 380, 300, 250, 55, 120, 113, 53]`
+     * @example ["https://static-cdn.jtvnw.net/ttv-boxart/509672-{width}x{height}.jpg", "https://static-cdn.jtvnw.net/ttv-boxart/65876-{width}x{height}.jpg"]
+     * @gqlArg `width: Int [52, 144, 40, 285, 250, 188, 90, 85, 200, 120]`
+     * @gqlArg `height: Int [72, 192, 56, 380, 300, 250, 55, 120, 113, 160]`
      */
     boxArtURL: string;
     __typename: "Game";
@@ -253,7 +244,7 @@ export type Clip = {
   broadcastIdentifier: null | {
     /**
      * @pattern ^[0-9]+$
-     * @example ["40884298782"]
+     * @example ["319108158181"]
      */
     id: ID;
     __typename: "BroadcastIdOnly";
@@ -261,22 +252,22 @@ export type Clip = {
   broadcaster: null | {
     /**
      * @pattern ^[0-9]+$
-     * @example ["12826"]
+     * @example ["23161357"]
      */
     id: ID;
-    /** @example ["twitch", "xqc", "lirik", "forsen", "yasongas", "shungiteeworks", "nottdarius"] */
+    /** @example ["lirik", "twitch", "cdprojektred", "forsen", "tickett_", "st1mgreeen", "lipton_18"] */
     login: string;
-    /** @example ["Twitch", "ayuuexe", "xQc", "LIRIK", "RSDragonwilds", "S0LAF1D3", "Jinnytty"] */
+    /** @example ["Twitch", "CD PROJEKT RED", "LIRIK", "forsen", "ayuuexe", "xQc", "RSDragonwilds"] */
     displayName: string;
     /**
      * @format uri
-     * @example ["https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-70x70.png", "https://static-cdn.jtvnw.net/jtv_user_pictures/d5e6ebb4-a245-4ebf-bea6-2183e2f39600-profile_image-70x70.png"]
+     * @example ["https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-70x70.png", "https://static-cdn.jtvnw.net/jtv_user_pictures/3c3366d7-728a-4204-bfdd-7c823858e4d9-profile_image-70x70.png"]
      * @gqlArg `width: Int [50, 70, 300, 28, 150]`
      */
     profileImageURL: string;
     /**
      * @pattern ^[0-9a-fA-F]{6}$
-     * @example ["5C16C5", "FFBF00", "9146FF", "FF9AFC", "FA1ED2", "7959B4", "15C2ED"]
+     * @example ["5C16C5", "DC0D15", "F1E9A4", "FAB3FF", "FFD37A", "FFBF00", "2D2628"]
      */
     primaryColorHex: null | string;
     roles: null | {
@@ -306,7 +297,7 @@ export type Clip = {
   isAutoCurated: boolean;
   guestStarParticipants: null | {
     guests: null | (null | GuestStarUser)[];
-    /** @example ["", "3CEyMILAYQr4KUGLBuhHP8asnMl", "2zt9iFeTrg9NYlEqDpS08hN1ceK", "3DagLgmipaavhol4IwR6Guj2bXp", "36l4VxQ8rIvWizU3zAYBN5nSYaR", "35cwby7kRuiegmBTvrmSGvhDqrq", "34FWSU9wT8Tu0M0faXMkFglhg8J", "2xuGcZE7CjcTv4GeUJGui6j6gEj"] */
+    /** @example ["", "3CEyMILAYQr4KUGLBuhHP8asnMl", "32HA4PL6HGtf4FWDX3Cbod00Idh", "3DeMaAqtXekrwIBpoceXQs37eLH", "2zt9iFeTrg9NYlEqDpS08hN1ceK", "3DagLgmipaavhol4IwR6Guj2bXp", "36l4VxQ8rIvWizU3zAYBN5nSYaR", "35cwby7kRuiegmBTvrmSGvhDqrq"] */
     sessionIdentifier: string;
     __typename: "GuestStarParticipants";
   };
@@ -318,7 +309,7 @@ export type ClipAssetFragment = {
   id: ID;
   /**
    * @format float
-   * @example [1.7777777777777777, 0.5625, 0.5627198124267292, 1.7770833333333333, 1.775]
+   * @example [1.7777777777777777, 0.5625, 0.5660377358490566, 0.5627198124267292, 1.7770833333333333]
    */
   aspectRatio: number;
   /**
@@ -331,23 +322,23 @@ export type ClipAssetFragment = {
   curator: null | {
     /**
      * @pattern ^[0-9]+$
-     * @example ["12826"]
+     * @example ["23161357"]
      */
     id: ID;
-    /** @example ["twitch", "xqc", "lirik", "forsen", "yasongas", "shungiteeworks", "nottdarius"] */
+    /** @example ["lirik", "twitch", "cdprojektred", "forsen", "tickett_", "st1mgreeen", "lipton_18"] */
     login: string;
-    /** @example ["Twitch", "ayuuexe", "xQc", "LIRIK", "RSDragonwilds", "S0LAF1D3", "Jinnytty"] */
+    /** @example ["Twitch", "CD PROJEKT RED", "LIRIK", "forsen", "ayuuexe", "xQc", "RSDragonwilds"] */
     displayName: string;
     /**
      * @format uri
-     * @example ["https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-70x70.png", "https://static-cdn.jtvnw.net/jtv_user_pictures/d5e6ebb4-a245-4ebf-bea6-2183e2f39600-profile_image-70x70.png"]
+     * @example ["https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-70x70.png", "https://static-cdn.jtvnw.net/jtv_user_pictures/3c3366d7-728a-4204-bfdd-7c823858e4d9-profile_image-70x70.png"]
      * @gqlArg `width: Int [50, 70, 300, 28, 150]`
      */
     profileImageURL: string;
     __typename: "User";
   };
   /**
-   * @example ["", "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/2a9a8981-8b21-4c99-8418-6713e95ff16b/landscape/thumb/thumb-0000000000-1920x1080.jpg", "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/2a9a8981-8b21-4c99-8418-6713e95ff16b/portrait/thumb/thumb-0000000000-83x147.jpg"]
+   * @example ["", "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/55f1a604-d371-497f-b360-50eb536a0527/landscape/thumb/thumb-0000000000-1920x1080.jpg", "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/2a9a8981-8b21-4c99-8418-6713e95ff16b/landscape/thumb/thumb-0000000000-1920x1080.jpg"]
    * @gqlArg `height: Int [272, 480, 147]`
    */
   thumbnailURL: string;
@@ -357,7 +348,7 @@ export type ClipAssetFragment = {
      * @example [0, 8042862, 2732768, 945904, 781712, 7159557]
      */
     bitrate: number;
-    /** @example ["", "avc1.64002A,mp4a.40.2", "hvc1.1.6.L123.90", "hvc1.1.6.L120.90", "hvc1.1.6.L90.90", "hvc1.1.6.L63.90", "hvc1.1.6.L150.90", "avc1.4D001F"] */
+    /** @example ["", "avc1.64002A,mp4a.40.2", "hvc1.1.6.L123.90", "hvc1.1.6.L120.90", "hvc1.1.6.L90.90", "hvc1.1.6.L63.90", "hvc1.1.6.L150.90", "avc1.640028,mp4a.40.2"] */
     codecs: string;
     /** @format uint32 */
     duration: null | number;
@@ -378,14 +369,14 @@ export type ClipAssetFragment = {
      * @example [0, 60, 30.03076934814453, 60.01000213623047, 30.005001068115234, 60.0133362969549]
      */
     frameRate: number;
-    /** @example ["-1", "1080", "720", "480", "360", "900", "1170", "756"] */
+    /** @example ["-1", "1080", "720", "480", "360", "900", "1170", "608"] */
     quality: string;
     /** @example ["", "https://d1ndex63qxojbr.cloudfront.net/nauth/ce4b4ef1-4e8d-4391-bff6-2bc4c5506a4d/landscape/avc/1080/index.mp4", "https://d1ndex63qxojbr.cloudfront.net/nauth/ce4b4ef1-4e8d-4391-bff6-2bc4c5506a4d/landscape/avc/720/index.mp4"] */
     sourceURL: string;
     __typename: "ClipVideoQuality";
   }[];
   downloadQualities: {
-    /** @example ["-1", "1080", "720", "480", "360", "900", "1170", "756"] */
+    /** @example ["-1", "1080", "720", "480", "360", "900", "1170", "608"] */
     quality: string;
     /** @example ["", "https://d1ndex63qxojbr.cloudfront.net/nauth/ce4b4ef1-4e8d-4391-bff6-2bc4c5506a4d/landscape/avc/1080/index.mp4", "https://d1ndex63qxojbr.cloudfront.net/nauth/ce4b4ef1-4e8d-4391-bff6-2bc4c5506a4d/landscape/avc/720/index.mp4"] */
     sourceURL: string;
@@ -405,13 +396,13 @@ export type ClipCommentsExposure = {
   broadcaster: null | {
     /**
      * @pattern ^[0-9]+$
-     * @example ["12826"]
+     * @example ["23161357"]
      */
     id: ID;
     channel: {
       /**
        * @pattern ^[0-9]+$
-       * @example ["12826"]
+       * @example ["26490481"]
        */
       id: ID;
       clipsSettings: {
@@ -440,7 +431,6 @@ export type CollectionConnectionFields = {
    */
   totalCount: number;
   edges: {
-    /** @example ["MQ=="] */
     cursor: Cursor;
     node: null | PreviewCardVideo;
     __typename: "CollectionItemEdge";
@@ -460,10 +450,10 @@ export type CollectionFields = {
   owner: null | {
     /**
      * @pattern ^[0-9]+$
-     * @example ["12826"]
+     * @example ["23161357"]
      */
     id: ID;
-    /** @example ["twitch", "xqc", "lirik", "forsen", "yasongas", "shungiteeworks", "nottdarius"] */
+    /** @example ["lirik", "twitch", "cdprojektred", "forsen", "tickett_", "st1mgreeen", "lipton_18"] */
     login: string;
     __typename: "User";
   };
@@ -514,7 +504,7 @@ export type ContentClipsManagerClip = {
   title: string;
   /**
    * @format uint32
-   * @example [0, 957063, 957456, 899934, 944919, 773854]
+   * @example [957063, 957456, 899934, 944919, 773854]
    */
   viewCount: number;
   /**
@@ -523,22 +513,22 @@ export type ContentClipsManagerClip = {
    */
   topLevelCommentCount: number;
   isCommentsEnabled: boolean;
-  /** @example ["EN", "RU"] */
+  /** @example ["EN", "ES", "RU"] */
   language: string;
   assets: ClipAssetFragment[];
   curator: null | {
     /**
      * @pattern ^[0-9]+$
-     * @example ["12826"]
+     * @example ["23161357"]
      */
     id: ID;
-    /** @example ["twitch", "xqc", "lirik", "forsen", "yasongas", "shungiteeworks", "nottdarius"] */
+    /** @example ["lirik", "twitch", "cdprojektred", "forsen", "tickett_", "st1mgreeen", "lipton_18"] */
     login: string;
-    /** @example ["Twitch", "ayuuexe", "xQc", "LIRIK", "RSDragonwilds", "S0LAF1D3", "Jinnytty"] */
+    /** @example ["Twitch", "CD PROJEKT RED", "LIRIK", "forsen", "ayuuexe", "xQc", "RSDragonwilds"] */
     displayName: string;
     /**
      * @format uri
-     * @example ["https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-70x70.png", "https://static-cdn.jtvnw.net/jtv_user_pictures/d5e6ebb4-a245-4ebf-bea6-2183e2f39600-profile_image-70x70.png"]
+     * @example ["https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-70x70.png", "https://static-cdn.jtvnw.net/jtv_user_pictures/3c3366d7-728a-4204-bfdd-7c823858e4d9-profile_image-70x70.png"]
      * @gqlArg `width: Int [50, 70, 300, 28, 150]`
      */
     profileImageURL: string;
@@ -550,17 +540,17 @@ export type ContentClipsManagerClip = {
      * @example ["509672"]
      */
     id: ID;
-    /** @example ["IRL", "Just Chatting", "Special Events", "Cyberpunk 2077", "League of Legends", "You Know The Drill", "RuneScape: Dragonwilds"] */
+    /** @example ["IRL", "Cyberpunk 2077", "Just Chatting", "Special Events", "League of Legends", "You Know The Drill", "RuneScape: Dragonwilds"] */
     name: string;
     /**
-     * @example ["https://static-cdn.jtvnw.net/ttv-boxart/509672-{width}x{height}.jpg", "https://static-cdn.jtvnw.net/ttv-boxart/509658-{width}x{height}.jpg"]
-     * @gqlArg `width: Int [52, 144, 40, 285, 250, 188, 90, 85, 200, 600]`
-     * @gqlArg `height: Int [72, 192, 56, 380, 300, 250, 55, 120, 113, 53]`
+     * @example ["https://static-cdn.jtvnw.net/ttv-boxart/509672-{width}x{height}.jpg", "https://static-cdn.jtvnw.net/ttv-boxart/65876-{width}x{height}.jpg"]
+     * @gqlArg `width: Int [52, 144, 40, 285, 250, 188, 90, 85, 200, 120]`
+     * @gqlArg `height: Int [72, 192, 56, 380, 300, 250, 55, 120, 113, 160]`
      */
     boxArtURL: string;
-    /** @example ["IRL", "Just Chatting", "Special Events", "Talk Shows & Podcasts", "Grand Theft Auto V", "Poker", "Halloween: The Game"] */
+    /** @example ["IRL", "Cyberpunk 2077", "Just Chatting", "Special Events", "Gwent: The Witcher Card Game", "Grand Theft Auto V", "DayZ"] */
     displayName: string;
-    /** @example ["irl", "just-chatting", "special-events", "cyberpunk-2077", "grand-theft-auto-v", "overwatch-2", "counter-strike"] */
+    /** @example ["irl", "cyberpunk-2077", "just-chatting", "special-events", "grand-theft-auto-v", "overwatch-2", "counter-strike"] */
     slug: string;
     __typename: "Game";
   };
@@ -577,29 +567,29 @@ export type ContentClipsManagerClip = {
   broadcaster: null | {
     /**
      * @pattern ^[0-9]+$
-     * @example ["12826"]
+     * @example ["23161357"]
      */
     id: ID;
-    /** @example ["twitch", "xqc", "lirik", "forsen", "yasongas", "shungiteeworks", "nottdarius"] */
+    /** @example ["lirik", "twitch", "cdprojektred", "forsen", "tickett_", "st1mgreeen", "lipton_18"] */
     login: string;
-    /** @example ["Twitch", "ayuuexe", "xQc", "LIRIK", "RSDragonwilds", "S0LAF1D3", "Jinnytty"] */
+    /** @example ["Twitch", "CD PROJEKT RED", "LIRIK", "forsen", "ayuuexe", "xQc", "RSDragonwilds"] */
     displayName: string;
     /**
      * @pattern ^[0-9a-fA-F]{6}$
-     * @example ["5C16C5", "FFBF00", "9146FF", "FF9AFC", "FA1ED2", "7959B4", "15C2ED"]
+     * @example ["5C16C5", "DC0D15", "F1E9A4", "FAB3FF", "FFD37A", "FFBF00", "2D2628"]
      */
     primaryColorHex: null | string;
     isPartner: boolean;
     /**
      * @format uri
-     * @example ["https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-70x70.png", "https://static-cdn.jtvnw.net/jtv_user_pictures/d5e6ebb4-a245-4ebf-bea6-2183e2f39600-profile_image-70x70.png"]
+     * @example ["https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-70x70.png", "https://static-cdn.jtvnw.net/jtv_user_pictures/3c3366d7-728a-4204-bfdd-7c823858e4d9-profile_image-70x70.png"]
      * @gqlArg `width: Int [50, 70, 300, 28, 150]`
      */
     profileImageURL: string;
     followers: {
       /**
        * @format uint32
-       * @example [0, 2430015, 2459534, 2471025, 2380069, 2380116]
+       * @example [0, 2430015, 2459534, 522430, 2471025, 2380069]
        */
       totalCount: number;
       __typename: "FollowerConnection";
@@ -612,7 +602,7 @@ export type ContentClipsManagerClip = {
       id: ID;
       /**
        * @format uint32
-       * @example [0, 46802, 656, 1572, 1518, 1432]
+       * @example [0, 129, 131, 322, 29438, 11854]
        */
       viewersCount: number;
       __typename: "Stream";
@@ -630,7 +620,10 @@ export type ContentClipsManagerClip = {
       startedAt: string;
       __typename: "Broadcast";
     };
-    self: null | ContentClipsManagerClip_UserSelf | ContentClipsManagerClip_UserSelf[];
+    self: null | {
+      isEditor: boolean;
+      __typename: "UserSelfConnection";
+    };
     __typename: "User";
   };
   /**
@@ -650,7 +643,7 @@ export type ContentClipsManagerClip = {
   isPublished: boolean;
   /**
    * @format float
-   * @example [16.21, 30.02, 43.93, 30.8, 58.38]
+   * @example [24.97, 60.01, 20.9, 30, 60]
    */
   duration: number;
   /**
@@ -677,13 +670,13 @@ export type ContentClipsManagerClip = {
     id: ID;
     /** @example ["ARCHIVE", "HIGHLIGHT", "UPLOAD"] */
     broadcastType: string;
-    /** @example ["Twitch Recap: 2024 according to Twitch Chat!", "Creator Camp LIVE: Streaming Basics with @Snackless & @KawaiiGuy"] */
+    /** @example ["Twitch Recap: 2024 according to Twitch Chat!", "REDstreams — Cyberpunk 2077: Edgerunners 2 Update (2.5) | Overview"] */
     title: null | string;
     __typename: "Video";
   };
   /**
    * @format uint32
-   * @example [7897, 11412, 12062, 2238]
+   * @example [2694, 7644, 7897, 11412, 12062]
    */
   videoOffsetSeconds: null | number;
   videoQualities:
@@ -697,10 +690,10 @@ export type ContentClipsManagerClip = {
   suggestedCropping: null | PortraitClipCropping;
   /**
    * @format float
-   * @example [0, 60.00499725341797, 56.01599884033203, 30.436817169189453, 79.97673034667969]
+   * @example [0, 26.00533676147461, 69.0931167602539, 59.99955368041992, 27.999664306640625, 57.999664306640625]
    */
   rawMediaRelativeOffset: number;
-  /** @example ["", "j2_d65zIfMWahzTyTvGUvA", "Ns3-vDOR-6P0ss-aFGmgOw", "5V7n_TrusYjbKULZPgs8Og", "JKuXmAhwpagfsU2LJs367w"] */
+  /** @example ["", "eeAgyb4gAol17uiUTwj3Pg", "U72tR3s8eZsbbSDJl_rXPw", "ex73m3w-qqIlYs3m6L_k1Q", "X5AWQgz7Cer05i0-Lsla3g", "pb7x6sEVqt-Ft5rsWMu30A", "kbG1Iz25XHHgjY45U9Qdvw", "0dxhjlxYvMnAyOl46Y7f_Q"] */
   rawMediaKey: string;
   isCatalogDetected: null | boolean;
   catalogCheckState: null;
@@ -710,13 +703,6 @@ export type ContentClipsManagerClip = {
 /** ℹ️ Not real Twitch type name */
 export type ContentClipsManagerClip_ClipChampBadge = {
   id: ID;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type ContentClipsManagerClip_UserSelf = {
-  /** ⚠️ Low confidence about: nullable */
-  isEditor: null | boolean;
   __typename: string;
 };
 
@@ -731,19 +717,19 @@ export type CoreChannelWithHomePrefsFragment = CoreUserFragment & {
   };
   /**
    * @format uri
-   * @example ["https://static-cdn.jtvnw.net/jtv_user_pictures/657b6efd-e507-4df6-9cc5-25c3d1a67a3f-profile_banner-480.jpeg", "https://static-cdn.jtvnw.net/jtv_user_pictures/c51fdef0-593a-4cae-a308-2e8e7ce39e51-profile_banner-480.png"]
+   * @example ["https://static-cdn.jtvnw.net/jtv_user_pictures/bb24bd0e-2af0-46eb-bfec-502f12c8056c-profile_banner-480.jpeg", "https://static-cdn.jtvnw.net/jtv_user_pictures/2a0ecdaa-ada8-487c-86ca-fee8c095fe55-profile_banner-480.png"]
    */
   bannerImageURL: null | string;
   channel: {
     /**
      * @pattern ^[0-9]+$
-     * @example ["12826"]
+     * @example ["26490481"]
      */
     id: ID;
     self: {
       /**
        * @pattern ^[0-9]+$
-       * @example ["159498717"]
+       * @example ["71092938"]
        */
       id: ID;
       isAuthorized: boolean;
@@ -758,10 +744,14 @@ export type CoreChannelWithHomePrefsFragment = CoreUserFragment & {
          */
         id: ID;
         self: {
-          viewingHistory:
-            | null
-            | CoreChannelWithHomePrefsFragment_VideoSelfEdgeViewingHistory
-            | CoreChannelWithHomePrefsFragment_VideoSelfEdgeViewingHistory[];
+          viewingHistory: null | {
+            /**
+             * @format date-time
+             * @example ["2026-10-28T01:59:25Z", "2026-10-28T01:58:29Z"]
+             */
+            updatedAt: null | string;
+            __typename: "VideoViewingHistory";
+          };
           __typename: "VideoSelfEdge";
         };
         __typename: "Video";
@@ -780,34 +770,24 @@ export type CoreChannelWithHomePrefsFragment = CoreUserFragment & {
   };
 };
 
-/** ℹ️ Not real Twitch type name */
-export type CoreChannelWithHomePrefsFragment_VideoSelfEdgeViewingHistory = {
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format date-time
-   */
-  updatedAt: null | string;
-  __typename: string;
-};
-
 export type CoreUserFragment = {
   /**
    * @pattern ^[0-9]+$
-   * @example ["12826"]
+   * @example ["23161357"]
    */
   id: ID;
-  /** @example ["twitch", "xqc", "lirik", "forsen", "yasongas", "shungiteeworks", "nottdarius"] */
+  /** @example ["lirik", "twitch", "cdprojektred", "forsen", "tickett_", "st1mgreeen", "lipton_18"] */
   login: string;
-  /** @example ["Twitch", "ayuuexe", "xQc", "LIRIK", "RSDragonwilds", "S0LAF1D3", "Jinnytty"] */
+  /** @example ["Twitch", "CD PROJEKT RED", "LIRIK", "forsen", "ayuuexe", "xQc", "RSDragonwilds"] */
   displayName: string;
   /**
    * @pattern ^[0-9a-fA-F]{6}$
-   * @example ["5C16C5", "FFBF00", "9146FF", "FF9AFC", "FA1ED2", "7959B4", "15C2ED"]
+   * @example ["5C16C5", "DC0D15", "F1E9A4", "FAB3FF", "FFD37A", "FFBF00", "2D2628"]
    */
   primaryColorHex: null | string;
   /**
    * @format uri
-   * @example ["https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-70x70.png", "https://static-cdn.jtvnw.net/jtv_user_pictures/d5e6ebb4-a245-4ebf-bea6-2183e2f39600-profile_image-70x70.png"]
+   * @example ["https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-70x70.png", "https://static-cdn.jtvnw.net/jtv_user_pictures/3c3366d7-728a-4204-bfdd-7c823858e4d9-profile_image-70x70.png"]
    * @gqlArg `width: Int [50, 70, 300, 28, 150]`
    */
   profileImageURL: string;
@@ -819,7 +799,7 @@ export type CoreUserFragment = {
     id: ID;
     /**
      * @format uint32
-     * @example [0, 46802, 656, 1572, 1518, 1432]
+     * @example [0, 129, 131, 322, 29438, 11854]
      */
     viewersCount: number;
     __typename: "Stream";
@@ -848,18 +828,18 @@ export type CostreamingDiscoveryDetails = {
 export type CostreamingUserWithViewcount = {
   /**
    * @pattern ^[0-9]+$
-   * @example ["12826"]
+   * @example ["23161357"]
    */
   id: ID;
   /**
    * @format uri
-   * @example ["https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-70x70.png", "https://static-cdn.jtvnw.net/jtv_user_pictures/d5e6ebb4-a245-4ebf-bea6-2183e2f39600-profile_image-70x70.png"]
+   * @example ["https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-70x70.png", "https://static-cdn.jtvnw.net/jtv_user_pictures/3c3366d7-728a-4204-bfdd-7c823858e4d9-profile_image-70x70.png"]
    * @gqlArg `width: Int [50, 70, 300, 28, 150]`
    */
   profileImageURL: string;
-  /** @example ["twitch", "xqc", "lirik", "forsen", "yasongas", "shungiteeworks", "nottdarius"] */
+  /** @example ["lirik", "twitch", "cdprojektred", "forsen", "tickett_", "st1mgreeen", "lipton_18"] */
   login: string;
-  /** @example ["Twitch", "ayuuexe", "xQc", "LIRIK", "RSDragonwilds", "S0LAF1D3", "Jinnytty"] */
+  /** @example ["Twitch", "CD PROJEKT RED", "LIRIK", "forsen", "ayuuexe", "xQc", "RSDragonwilds"] */
   displayName: string;
   stream: null | {
     /**
@@ -869,7 +849,7 @@ export type CostreamingUserWithViewcount = {
     id: ID;
     /**
      * @format uint32
-     * @example [0, 46802, 656, 1572, 1518, 1432]
+     * @example [0, 129, 131, 322, 29438, 11854]
      */
     viewersCount: number;
     game: null | {
@@ -878,7 +858,7 @@ export type CostreamingUserWithViewcount = {
        * @example ["509672"]
        */
       id: ID;
-      /** @example ["IRL", "Just Chatting", "Special Events", "Talk Shows & Podcasts", "Grand Theft Auto V", "Poker", "Halloween: The Game"] */
+      /** @example ["IRL", "Cyberpunk 2077", "Just Chatting", "Special Events", "Gwent: The Witcher Card Game", "Grand Theft Auto V", "DayZ"] */
       displayName: string;
       __typename: "Game";
     };
@@ -890,7 +870,7 @@ export type CostreamingUserWithViewcount = {
      * @example ["71092938"]
      */
     id: ID;
-    /** @example ["", "Blind playthrough of Terraria! Permadeath and Expert mode!", "YUNARA COSPLAY 🔥 HARDSTUCKING PLAT 🔥 !discord"] */
+    /** @example ["", "Blind playthrough of Terraria! Permadeath and Expert mode!", "BOO! DRUM AND BASS! gogo yubari/killbill 🩸 (˵◝ ⩊  ◜˵マ !discord"] */
     title: string;
     __typename: "BroadcastSettings";
   };
@@ -920,10 +900,8 @@ export type CuratedTagFragment = {
 };
 
 export type DirectoryPageGameStreamWithTagsEdge = {
-  /** @example ["eyJvZmYiOjEsImJsayI6OCwic3ViIjp7IjEiOnsib2ZmIjoxLCJ0b3QiOjk5fSwiMiI6eyJvZmYiOjAsInRvdCI6MTgwfSwiMyI6eyJvZmYiOjAsInRvdCI6MH19fQ=="] */
   cursor: Cursor;
   node: null | DirectoryPageGameStreamWithTagsNode;
-  /** @example ["abe58e00-047f-4208-9b5e-ea34ad741f4b:b38e858e-ce1b-484d-b6f5-49bfcc493531:MF|COLDSTART_TF2_006:RF|UNK:CG|UNK:CR|UNK:BL|UNK:FC|UNK:RK|0:CRK|0", "abe58e00-047f-4208-9b5e-ea34ad741f4b:49cf42ab-e007-41e6-b70c-b74be622093e:MF|COLDSTART_TF2_006:RF|UNK:CG|UNK:CR|UNK:BL|UNK:FC|UNK:RK|1:CRK|1"] */
   trackingID: null | ID;
   __typename: "StreamEdge";
 };
@@ -934,11 +912,11 @@ export type DirectoryPageGameStreamWithTagsNode = {
    * @example ["316180784725"]
    */
   id: ID;
-  /** @example ["🔴 G2 0:0 FUT | BO3 | IEM Cologne Major 2026 Stage 2 | @skywhywalker @m3wsu", "[ 20 тестов днк ] | !winline !tg"] */
+  /** @example ["", "🌎LIVE🌎CLICK🌎GTA V🌎NOPIXEL V🌎LOCKED IN🌎MEGA ULTRA DAY🌎UPGRADE UNLOCK TODAY🌎PALETO PROGRESS COPE?🌎COME FIND OUT🌎9393938399🌎", "dayz chillin - !starforge @StarforgeSystems"] */
   title: string;
   /**
    * @format uint32
-   * @example [0, 46802, 656, 1572, 1518, 1432]
+   * @example [0, 129, 131, 322, 29438, 11854]
    */
   viewersCount: number;
   /**
@@ -956,30 +934,30 @@ export type DirectoryPageGameStreamWithTagsNode = {
   verticalPreviewImageURL: string;
   /**
    * @format uint32
-   * @example [0, 1440, 1080, 720, 768, 936, 1200, 900, 1280, 864, 2160]
+   * @example [0, 1080, 1440, 720, 864, 936, 900, 540, 532, 810, 576]
    */
   height: number;
   /**
    * @format uint32
-   * @example [0, 2560, 1920, 1280, 1360, 1664]
+   * @example [0, 1920, 2560, 1280, 1536, 1724]
    */
   width: number;
   isDualFormat: boolean;
   /**
    * @format date-time
-   * @example ["2026-06-07T17:11:20Z", "2026-06-07T16:57:23Z"]
+   * @example ["2026-10-28T00:12:25Z", "2026-06-07T17:11:20Z"]
    * @directive include(if: $sortTypeIsRecency)
    */
   createdAt?: string;
   broadcaster: null | {
     /**
      * @pattern ^[0-9]+$
-     * @example ["12826"]
+     * @example ["23161357"]
      */
     id: ID;
-    /** @example ["twitch", "xqc", "lirik", "forsen", "yasongas", "shungiteeworks", "nottdarius"] */
+    /** @example ["lirik", "twitch", "cdprojektred", "forsen", "tickett_", "st1mgreeen", "lipton_18"] */
     login: string;
-    /** @example ["Twitch", "ayuuexe", "xQc", "LIRIK", "RSDragonwilds", "S0LAF1D3", "Jinnytty"] */
+    /** @example ["Twitch", "CD PROJEKT RED", "LIRIK", "forsen", "ayuuexe", "xQc", "RSDragonwilds"] */
     displayName: string;
     roles: null | {
       isPartner: boolean;
@@ -988,13 +966,13 @@ export type DirectoryPageGameStreamWithTagsNode = {
     };
     /**
      * @format uri
-     * @example ["https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-70x70.png", "https://static-cdn.jtvnw.net/jtv_user_pictures/d5e6ebb4-a245-4ebf-bea6-2183e2f39600-profile_image-70x70.png"]
+     * @example ["https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-70x70.png", "https://static-cdn.jtvnw.net/jtv_user_pictures/3c3366d7-728a-4204-bfdd-7c823858e4d9-profile_image-70x70.png"]
      * @gqlArg `width: Int [50, 70, 300, 28, 150]`
      */
     profileImageURL: string;
     /**
      * @pattern ^[0-9a-fA-F]{6}$
-     * @example ["5C16C5", "FFBF00", "9146FF", "FF9AFC", "FA1ED2", "7959B4", "15C2ED"]
+     * @example ["5C16C5", "DC0D15", "F1E9A4", "FAB3FF", "FFD37A", "FFBF00", "2D2628"]
      */
     primaryColorHex: null | string;
     __typename: "User";
@@ -1010,21 +988,21 @@ export type DirectoryPageGameStreamWithTagsNode = {
      */
     id: ID;
     /**
-     * @example ["https://static-cdn.jtvnw.net/ttv-boxart/509672-{width}x{height}.jpg", "https://static-cdn.jtvnw.net/ttv-boxart/509658-{width}x{height}.jpg"]
-     * @gqlArg `width: Int [52, 144, 40, 285, 250, 188, 90, 85, 200, 600]`
-     * @gqlArg `height: Int [72, 192, 56, 380, 300, 250, 55, 120, 113, 53]`
+     * @example ["https://static-cdn.jtvnw.net/ttv-boxart/509672-{width}x{height}.jpg", "https://static-cdn.jtvnw.net/ttv-boxart/65876-{width}x{height}.jpg"]
+     * @gqlArg `width: Int [52, 144, 40, 285, 250, 188, 90, 85, 200, 120]`
+     * @gqlArg `height: Int [72, 192, 56, 380, 300, 250, 55, 120, 113, 160]`
      */
     boxArtURL: string;
-    /** @example ["IRL", "Just Chatting", "Special Events", "Cyberpunk 2077", "League of Legends", "You Know The Drill", "RuneScape: Dragonwilds"] */
+    /** @example ["IRL", "Cyberpunk 2077", "Just Chatting", "Special Events", "League of Legends", "You Know The Drill", "RuneScape: Dragonwilds"] */
     name: string;
-    /** @example ["IRL", "Just Chatting", "Special Events", "Talk Shows & Podcasts", "Grand Theft Auto V", "Poker", "Halloween: The Game"] */
+    /** @example ["IRL", "Cyberpunk 2077", "Just Chatting", "Special Events", "Gwent: The Witcher Card Game", "Grand Theft Auto V", "DayZ"] */
     displayName: string;
-    /** @example ["irl", "just-chatting", "special-events", "cyberpunk-2077", "grand-theft-auto-v", "overwatch-2", "counter-strike"] */
+    /** @example ["irl", "cyberpunk-2077", "just-chatting", "special-events", "grand-theft-auto-v", "overwatch-2", "counter-strike"] */
     slug: string;
     __typename: "Game";
   };
   previewThumbnailProperties: {
-    /** @example ["BLUR_NOT_REQUIRED"] */
+    /** @example ["BLUR_NOT_REQUIRED", "BLUR_REASON_TYPE_SEXUAL_THEMES"] */
     blurReason: string;
     __typename: "PreviewThumbnailProperties";
   };
@@ -1041,9 +1019,9 @@ export type DirectoryPageGameStreamWithTagsNode = {
 };
 
 export type FreeformTagFragment = {
-  /** @example ["fft:CHANNEL:67708794:0", "fft:CHANNEL:233741947:0"] */
+  /** @example ["fft:CHANNEL:71092938:0", "fft:CHANNEL:71092938:1"] */
   id: ID;
-  /** @example ["Русский", "English", "Major", "ESL", "IEM", "Major2026", "НаградыДляЗрителей"] */
+  /** @example ["English", "femboy", "Speedrun", "Русский", "Уют", "Образование", "Женщина"] */
   name: string;
   __typename: "FreeformTag";
 };
@@ -1051,9 +1029,10 @@ export type FreeformTagFragment = {
 export type GameClipsInput = {
   /** @format time */
   endAt?: null | string;
-  /** @example ["LAST_WEEK"] */
+  /** @example ["LAST_WEEK", "LAST_DAY", "LAST_MONTH", "ALL_TIME"] */
   filter?: null | string;
-  languages?: null | UnknownValue[];
+  /** @example ["EN"] */
+  languages?: null | string[];
   period?: null | ClipsPeriod;
   shouldFilterByDiscoverySetting?: null | boolean;
   /** @format time */
@@ -1073,12 +1052,14 @@ export type GameOptions = {
 export type GameStreamOptions = {
   /** @example ["EN", "ID", "CA", "DA", "DE", "ES", "FR", "IT", "HU", "NL", "NO", "PL", "PT", "RO", "SK", "FI", "SV", "TL", "VI", "TR", "CS", "EL", "BG", "RU", "UK", "AR", "MS", "HI", "TH", "ZH", "JA", "KO", "ASL", "OTHER"] */
   broadcasterLanguages?: null | string[];
-  /** @example ["DropsEnabeled", "AskMeAnything", "GTARP"] */
+  /** @example ["DropsEnabeled", "AskMeAnything", "DropsEnabled", "GTARP"] */
   freeformTags?: null | string[];
+  /** @example ["SUB_ONLY_LIVE"] */
+  includeRestricted?: null | string[];
   recommendationsContext?: null | RecommendationsContext;
   /** @example ["JIRA-VXP-2397"] */
   requestID?: null | ID;
-  /** @example ["RELEVANCE", "VIEWER_COUNT"] */
+  /** @example ["RELEVANCE", "VIEWER_COUNT", "VIEWER_COUNT_ASC", "RECENT"] */
   sort?: null | string;
   systemFilters?: null | UnknownValue[];
   tags?: null | UnknownValue[];
@@ -1095,22 +1076,22 @@ export type GlobalCheerInfo = {
 export type GuestStarUser = {
   /**
    * @pattern ^[0-9]+$
-   * @example ["12826"]
+   * @example ["23161357"]
    */
   id: ID;
-  /** @example ["twitch", "xqc", "lirik", "forsen", "yasongas", "shungiteeworks", "nottdarius"] */
+  /** @example ["lirik", "twitch", "cdprojektred", "forsen", "tickett_", "st1mgreeen", "lipton_18"] */
   login: string;
-  /** @example ["Twitch", "ayuuexe", "xQc", "LIRIK", "RSDragonwilds", "S0LAF1D3", "Jinnytty"] */
+  /** @example ["Twitch", "CD PROJEKT RED", "LIRIK", "forsen", "ayuuexe", "xQc", "RSDragonwilds"] */
   displayName: string;
   /**
    * @format uri
-   * @example ["https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-70x70.png", "https://static-cdn.jtvnw.net/jtv_user_pictures/d5e6ebb4-a245-4ebf-bea6-2183e2f39600-profile_image-70x70.png"]
+   * @example ["https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-70x70.png", "https://static-cdn.jtvnw.net/jtv_user_pictures/3c3366d7-728a-4204-bfdd-7c823858e4d9-profile_image-70x70.png"]
    * @gqlArg `width: Int [50, 70, 300, 28, 150]`
    */
   profileImageURL: string;
   /**
    * @pattern ^[0-9a-fA-F]{6}$
-   * @example ["5C16C5", "FFBF00", "9146FF", "FF9AFC", "FA1ED2", "7959B4", "15C2ED"]
+   * @example ["5C16C5", "DC0D15", "F1E9A4", "FAB3FF", "FFD37A", "FFBF00", "2D2628"]
    */
   primaryColorHex: null | string;
   /** @example ["", "Twitch is where thousands of communities come together for whatever, every day. "] */
@@ -1121,7 +1102,7 @@ export type GuestStarUser = {
 export type NeoCheermote = {
   /** @example ["Charity", "lirikCheer"] */
   id: ID;
-  /** @example ["Charity", "lirikCheer", "Cheer", "cheerwhal", "Corgo", "Scoops", "uni"] */
+  /** @example ["Charity", "lirikCheer", "emiruCheer", "Cheer", "cheerwhal", "Corgo", "Scoops"] */
   prefix: string;
   /** @example ["DISPLAY_ONLY", "CUSTOM", "DEFAULT", "FIRST_PARTY", "THIRD_PARTY"] */
   type: string;
@@ -1141,7 +1122,7 @@ export type NeoCheermote = {
 };
 
 export type PortraitClipCropping = {
-  /** @example ["STACKED", "FULL"] */
+  /** @example ["FULL", "STACKED"] */
   portraitClipLayout: string;
   fullTemplateMetadata: null | {
     mainFrame: null | PortraitCropMetadata;
@@ -1159,12 +1140,12 @@ export type PortraitCropMetadata = {
   topLeft: {
     /**
      * @format float
-     * @example [0, 34.199440002441406, 21.875, 35.34000015258789, 29.809999465942383, 21.90999984741211]
+     * @example [0, 21.875, 78.125, 34.199440002441406, 35.34000015258789, 34.1796875]
      */
     xPercentage: number;
     /**
      * @format float
-     * @example [0, 3.490000009536743, 100, 96.51000213623047, 56.779998779296875, 5.909999847412109]
+     * @example [0, 100, 3.490000009536743, 96.51000213623047, 88.01000213623047, 56.779998779296875]
      */
     yPercentage: number;
     __typename: "PortraitCropCoordinates";
@@ -1172,12 +1153,12 @@ export type PortraitCropMetadata = {
   bottomRight: {
     /**
      * @format float
-     * @example [0, 34.199440002441406, 21.875, 35.34000015258789, 29.809999465942383, 21.90999984741211]
+     * @example [0, 21.875, 78.125, 34.199440002441406, 35.34000015258789, 34.1796875]
      */
     xPercentage: number;
     /**
      * @format float
-     * @example [0, 3.490000009536743, 100, 96.51000213623047, 56.779998779296875, 5.909999847412109]
+     * @example [0, 100, 3.490000009536743, 96.51000213623047, 88.01000213623047, 56.779998779296875]
      */
     yPercentage: number;
     __typename: "PortraitCropCoordinates";
@@ -1197,18 +1178,18 @@ export type PreviewCardClip = {
   title: string;
   /**
    * @format uint32
-   * @example [0, 957063, 957456, 899934, 944919, 773854]
+   * @example [957063, 957456, 899934, 944919, 773854]
    */
   viewCount: number;
   curator: null | {
     /**
      * @pattern ^[0-9]+$
-     * @example ["12826"]
+     * @example ["23161357"]
      */
     id: ID;
-    /** @example ["twitch", "xqc", "lirik", "forsen", "yasongas", "shungiteeworks", "nottdarius"] */
+    /** @example ["lirik", "twitch", "cdprojektred", "forsen", "tickett_", "st1mgreeen", "lipton_18"] */
     login: string;
-    /** @example ["Twitch", "ayuuexe", "xQc", "LIRIK", "RSDragonwilds", "S0LAF1D3", "Jinnytty"] */
+    /** @example ["Twitch", "CD PROJEKT RED", "LIRIK", "forsen", "ayuuexe", "xQc", "RSDragonwilds"] */
     displayName: string;
     __typename: "User";
   };
@@ -1218,14 +1199,14 @@ export type PreviewCardClip = {
      * @example ["509672"]
      */
     id: ID;
-    /** @example ["irl", "just-chatting", "special-events", "cyberpunk-2077", "grand-theft-auto-v", "overwatch-2", "counter-strike"] */
+    /** @example ["irl", "cyberpunk-2077", "just-chatting", "special-events", "grand-theft-auto-v", "overwatch-2", "counter-strike"] */
     slug: string;
-    /** @example ["IRL", "Just Chatting", "Special Events", "Cyberpunk 2077", "League of Legends", "You Know The Drill", "RuneScape: Dragonwilds"] */
+    /** @example ["IRL", "Cyberpunk 2077", "Just Chatting", "Special Events", "League of Legends", "You Know The Drill", "RuneScape: Dragonwilds"] */
     name: string;
     /**
-     * @example ["https://static-cdn.jtvnw.net/ttv-boxart/509672-{width}x{height}.jpg", "https://static-cdn.jtvnw.net/ttv-boxart/509658-{width}x{height}.jpg"]
-     * @gqlArg `width: Int [52, 144, 40, 285, 250, 188, 90, 85, 200, 600]`
-     * @gqlArg `height: Int [72, 192, 56, 380, 300, 250, 55, 120, 113, 53]`
+     * @example ["https://static-cdn.jtvnw.net/ttv-boxart/509672-{width}x{height}.jpg", "https://static-cdn.jtvnw.net/ttv-boxart/65876-{width}x{height}.jpg"]
+     * @gqlArg `width: Int [52, 144, 40, 285, 250, 188, 90, 85, 200, 120]`
+     * @gqlArg `height: Int [72, 192, 56, 380, 300, 250, 55, 120, 113, 160]`
      */
     boxArtURL: string;
     __typename: "Game";
@@ -1233,22 +1214,22 @@ export type PreviewCardClip = {
   broadcaster: null | {
     /**
      * @pattern ^[0-9]+$
-     * @example ["12826"]
+     * @example ["23161357"]
      */
     id: ID;
-    /** @example ["twitch", "xqc", "lirik", "forsen", "yasongas", "shungiteeworks", "nottdarius"] */
+    /** @example ["lirik", "twitch", "cdprojektred", "forsen", "tickett_", "st1mgreeen", "lipton_18"] */
     login: string;
-    /** @example ["Twitch", "ayuuexe", "xQc", "LIRIK", "RSDragonwilds", "S0LAF1D3", "Jinnytty"] */
+    /** @example ["Twitch", "CD PROJEKT RED", "LIRIK", "forsen", "ayuuexe", "xQc", "RSDragonwilds"] */
     displayName: string;
     /**
      * @format uri
-     * @example ["https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-70x70.png", "https://static-cdn.jtvnw.net/jtv_user_pictures/d5e6ebb4-a245-4ebf-bea6-2183e2f39600-profile_image-70x70.png"]
+     * @example ["https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-70x70.png", "https://static-cdn.jtvnw.net/jtv_user_pictures/3c3366d7-728a-4204-bfdd-7c823858e4d9-profile_image-70x70.png"]
      * @gqlArg `width: Int [50, 70, 300, 28, 150]`
      */
     profileImageURL: string;
     /**
      * @pattern ^[0-9a-fA-F]{6}$
-     * @example ["5C16C5", "FFBF00", "9146FF", "FF9AFC", "FA1ED2", "7959B4", "15C2ED"]
+     * @example ["5C16C5", "DC0D15", "F1E9A4", "FAB3FF", "FFD37A", "FFBF00", "2D2628"]
      */
     primaryColorHex: null | string;
     roles: null | {
@@ -1260,7 +1241,7 @@ export type PreviewCardClip = {
   broadcastIdentifier: null | {
     /**
      * @pattern ^[0-9]+$
-     * @example ["40884298782"]
+     * @example ["319108158181"]
      */
     id: ID;
     __typename: "BroadcastIdOnly";
@@ -1285,12 +1266,12 @@ export type PreviewCardClip = {
   isAutoCurated: boolean;
   guestStarParticipants: null | {
     guests: null | (null | GuestStarUser)[];
-    /** @example ["", "3CEyMILAYQr4KUGLBuhHP8asnMl", "2zt9iFeTrg9NYlEqDpS08hN1ceK", "3DagLgmipaavhol4IwR6Guj2bXp", "36l4VxQ8rIvWizU3zAYBN5nSYaR", "35cwby7kRuiegmBTvrmSGvhDqrq", "34FWSU9wT8Tu0M0faXMkFglhg8J", "2xuGcZE7CjcTv4GeUJGui6j6gEj"] */
+    /** @example ["", "3CEyMILAYQr4KUGLBuhHP8asnMl", "32HA4PL6HGtf4FWDX3Cbod00Idh", "3DeMaAqtXekrwIBpoceXQs37eLH", "2zt9iFeTrg9NYlEqDpS08hN1ceK", "3DagLgmipaavhol4IwR6Guj2bXp", "36l4VxQ8rIvWizU3zAYBN5nSYaR", "35cwby7kRuiegmBTvrmSGvhDqrq"] */
     sessionIdentifier: string;
     __typename: "GuestStarParticipants";
   };
   previewThumbnailProperties: {
-    /** @example ["BLUR_NOT_REQUIRED"] */
+    /** @example ["BLUR_NOT_REQUIRED", "BLUR_REASON_TYPE_SEXUAL_THEMES"] */
     blurReason: string;
     __typename: "PreviewThumbnailProperties";
   };
@@ -1305,9 +1286,9 @@ export type PreviewCardVideo = {
   animatedPreviewURL: string;
   game: null | {
     /**
-     * @example ["https://static-cdn.jtvnw.net/ttv-boxart/509672-{width}x{height}.jpg", "https://static-cdn.jtvnw.net/ttv-boxart/509658-{width}x{height}.jpg"]
-     * @gqlArg `width: Int [52, 144, 40, 285, 250, 188, 90, 85, 200, 600]`
-     * @gqlArg `height: Int [72, 192, 56, 380, 300, 250, 55, 120, 113, 53]`
+     * @example ["https://static-cdn.jtvnw.net/ttv-boxart/509672-{width}x{height}.jpg", "https://static-cdn.jtvnw.net/ttv-boxart/65876-{width}x{height}.jpg"]
+     * @gqlArg `width: Int [52, 144, 40, 285, 250, 188, 90, 85, 200, 120]`
+     * @gqlArg `height: Int [72, 192, 56, 380, 300, 250, 55, 120, 113, 160]`
      */
     boxArtURL: string;
     /**
@@ -1315,18 +1296,18 @@ export type PreviewCardVideo = {
      * @example ["509672"]
      */
     id: ID;
-    /** @example ["irl", "just-chatting", "special-events", "cyberpunk-2077", "grand-theft-auto-v", "overwatch-2", "counter-strike"] */
+    /** @example ["irl", "cyberpunk-2077", "just-chatting", "special-events", "grand-theft-auto-v", "overwatch-2", "counter-strike"] */
     slug: string;
-    /** @example ["IRL", "Just Chatting", "Special Events", "Talk Shows & Podcasts", "Grand Theft Auto V", "Poker", "Halloween: The Game"] */
+    /** @example ["IRL", "Cyberpunk 2077", "Just Chatting", "Special Events", "Gwent: The Witcher Card Game", "Grand Theft Auto V", "DayZ"] */
     displayName: string;
-    /** @example ["IRL", "Just Chatting", "Special Events", "Cyberpunk 2077", "League of Legends", "You Know The Drill", "RuneScape: Dragonwilds"] */
+    /** @example ["IRL", "Cyberpunk 2077", "Just Chatting", "Special Events", "League of Legends", "You Know The Drill", "RuneScape: Dragonwilds"] */
     name: string;
     __typename: "Game";
   };
-  broadcastIdentifier: null | {
+  broadcastIdentifier: {
     /**
      * @pattern ^[0-9]+$
-     * @example ["40884298782"]
+     * @example ["319108158181"]
      */
     id: ID;
     __typename: "BroadcastIdOnly";
@@ -1338,28 +1319,28 @@ export type PreviewCardVideo = {
   id: ID;
   /**
    * @format uint32
-   * @example [15389, 4621, 621, 4472, 58]
+   * @example [15389, 4359, 4621, 621, 4472]
    */
   lengthSeconds: number;
   owner: null | {
-    /** @example ["Twitch", "ayuuexe", "xQc", "LIRIK", "RSDragonwilds", "S0LAF1D3", "Jinnytty"] */
+    /** @example ["Twitch", "CD PROJEKT RED", "LIRIK", "forsen", "ayuuexe", "xQc", "RSDragonwilds"] */
     displayName: string;
     /**
      * @pattern ^[0-9]+$
-     * @example ["12826"]
+     * @example ["23161357"]
      */
     id: ID;
-    /** @example ["twitch", "xqc", "lirik", "forsen", "yasongas", "shungiteeworks", "nottdarius"] */
+    /** @example ["lirik", "twitch", "cdprojektred", "forsen", "tickett_", "st1mgreeen", "lipton_18"] */
     login: string;
     /**
      * @format uri
-     * @example ["https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-70x70.png", "https://static-cdn.jtvnw.net/jtv_user_pictures/d5e6ebb4-a245-4ebf-bea6-2183e2f39600-profile_image-70x70.png"]
+     * @example ["https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-70x70.png", "https://static-cdn.jtvnw.net/jtv_user_pictures/3c3366d7-728a-4204-bfdd-7c823858e4d9-profile_image-70x70.png"]
      * @gqlArg `width: Int [50, 70, 300, 28, 150]`
      */
     profileImageURL: string;
     /**
      * @pattern ^[0-9a-fA-F]{6}$
-     * @example ["5C16C5", "FFBF00", "9146FF", "FF9AFC", "FA1ED2", "7959B4", "15C2ED"]
+     * @example ["5C16C5", "DC0D15", "F1E9A4", "FAB3FF", "FFD37A", "FFBF00", "2D2628"]
      */
     primaryColorHex: null | string;
     roles: null | {
@@ -1369,51 +1350,49 @@ export type PreviewCardVideo = {
     __typename: "User";
   };
   /**
-   * @example ["https://static-cdn.jtvnw.net/cf_vods/d1m7jfoe9zdc1j/82ef4729c6011d6072e2_twitch_43295848617_1733849129//thumb/thumb0-90x60.jpg", "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/4087ab6ee325487ff1cb_twitch_317752962300_1741891679//thumb/thumb0-90x60.jpg"]
+   * @example ["https://static-cdn.jtvnw.net/cf_vods/d1m7jfoe9zdc1j/82ef4729c6011d6072e2_twitch_43295848617_1733849129//thumb/thumb0-90x60.jpg", "https://static-cdn.jtvnw.net/cf_vods/d3fi1amfgojobc/7fbc776f6b7a4659c4e4_cdprojektred_319108158181_1793115910//thumb/thumb0-90x60.jpg"]
    * @gqlArg `width: Int [320, 90, 640, 240, 400, 1280, 80, 160, 214]`
    * @gqlArg `height: Int [180, 60, 360, 135, 225, 480, 720, 51, 45, 90]`
    */
   previewThumbnailURL: string;
   /**
    * @format date-time
-   * @example ["2024-12-10T16:45:35Z", "2025-03-13T18:48:05Z"]
+   * @example ["2024-12-10T16:45:35Z", "2026-10-27T15:45:17Z"]
    */
   publishedAt: string;
   self: {
     isRestricted: boolean;
-    viewingHistory:
-      | null
-      | PreviewCardVideo_VideoSelfEdgeViewingHistory
-      | PreviewCardVideo_VideoSelfEdgeViewingHistory[];
+    viewingHistory: null | {
+      /**
+       * @format int32
+       * @example [0, 1288, 16000, 17587, 16626, 3544]
+       */
+      position: null | number;
+      /**
+       * @format date-time
+       * @example ["2026-10-28T01:59:25Z", "2026-10-28T01:58:29Z"]
+       */
+      updatedAt: null | string;
+      __typename: "VideoViewingHistory";
+    };
     __typename: "VideoSelfEdge";
   };
-  /** @example ["Twitch Recap: 2024 according to Twitch Chat!", "Creator Camp LIVE: Streaming Basics with @Snackless & @KawaiiGuy"] */
+  /** @example ["Twitch Recap: 2024 according to Twitch Chat!", "REDstreams — Cyberpunk 2077: Edgerunners 2 Update (2.5) | Overview"] */
   title: null | string;
   /**
    * @format uint32
-   * @example [0, 772963, 171376, 163669, 1911, 684]
+   * @example [0, 772963, 277364, 171376, 163669, 1911]
    */
   viewCount: number;
   resourceRestriction: null | ResourceRestriction;
   contentTags: null | TagFragment[];
   /** @directive include(if: $includePreviewBlur) */
   previewThumbnailProperties?: {
-    /** @example ["BLUR_NOT_REQUIRED"] */
+    /** @example ["BLUR_NOT_REQUIRED", "BLUR_REASON_TYPE_SEXUAL_THEMES"] */
     blurReason: string;
     __typename: "PreviewThumbnailProperties";
   };
   __typename: "Video";
-};
-
-/** ℹ️ Not real Twitch type name */
-export type PreviewCardVideo_VideoSelfEdgeViewingHistory = {
-  position: UnknownValue;
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format date-time
-   */
-  updatedAt: null | string;
-  __typename: string;
 };
 
 export type PreviewCollection = CollectionFields & { items: null | CollectionConnectionFields };
@@ -1425,7 +1404,7 @@ export type RecommendationsContext = {
   location?: null | string;
   /** @example ["web"] */
   platform?: null | string;
-  /** @example [""] */
+  /** @example ["", "dashboard.twitch.tv"] */
   referrerDomain?: null | string;
   /**
    * @format uint32
@@ -1441,10 +1420,7 @@ export type RecommendationsContext = {
 
 export type RelatedLiveChannelsFragment = {
   edges: {
-    /**
-     * @format uuid
-     * @example ["02275919-7bab-4b51-ae55-1653ac535f5c"]
-     */
+    /** @format uuid */
     trackingID: ID;
     item: SearchRelatedLiveChannelFragment;
     __typename: "SearchForEdgeRelatedLiveChannels";
@@ -1480,13 +1456,9 @@ export type ResourceRestriction = {
 };
 
 export type SearchForChannelsFragment = {
-  /** @example ["", "MTA="] */
   cursor: Cursor;
   edges: {
-    /**
-     * @format uuid
-     * @example ["1b7a69f0-721d-4467-a4f9-eb1e2f7646e7"]
-     */
+    /** @format uuid */
     trackingID: ID;
     item:
       | SearchForUserFragment
@@ -1501,21 +1473,17 @@ export type SearchForChannelsFragment = {
    */
   score: number;
   /**
-   * @format uint32
-   * @example [0, 2235, 2752, 10834, 19999, 11163]
+   * @format int32
+   * @example [0, 2235, 2752, 10834, 540, 15337]
    */
   totalMatches: number;
   __typename: "SearchForResultUsers";
 };
 
 export type SearchForChannelsWithTagFragment = {
-  /** @example ["", "MTA="] */
   cursor: Cursor;
   edges: {
-    /**
-     * @format uuid
-     * @example ["1b7a69f0-721d-4467-a4f9-eb1e2f7646e7"]
-     */
+    /** @format uuid */
     trackingID: ID;
     item:
       | SearchForUserFragment
@@ -1530,29 +1498,28 @@ export type SearchForChannelsWithTagFragment = {
    */
   score: number;
   /**
-   * @format uint32
-   * @example [0, 2235, 2752, 10834, 19999, 11163]
+   * @format int32
+   * @example [0, 2235, 2752, 10834, 540, 15337]
    */
   totalMatches: number;
   __typename: "SearchForResultUsers";
 };
 
 export type SearchForCollectionFragment = {
-  /** @example ["collection-just-chatting-irl-streams"] */
+  /** @example ["collection-just-chatting-irl-streams", "collection-stream-o-ween"] */
   id: ID;
   /** @aliasFor name */
   collectionName: null | {
-    /** @example ["Just Chatting & IRL"] */
-    fallbackLocalizedTitle: string;
+    /** @example ["Just Chatting & IRL", "Stream-o-Ween"] */
+    fallbackLocalizedTitle: null | string;
     __typename: "BrowsableCollectionTitle";
   };
-  /** @example ["just-chatting-irl-streams"] */
+  /** @example ["just-chatting-irl-streams", "stream-o-ween", "moba-games", "drops-enabled", "hype-train", "speedrun-challenge-run", "music-dj-streams"] */
   slug: string;
   __typename: "BrowsableCollection";
 };
 
 export type SearchForCollectionsFragment = {
-  /** @example [""] */
   cursor: Cursor;
   edges: {
     /** ⚠️ Low confidence about: nullable */
@@ -1571,7 +1538,7 @@ export type SearchForCollectionsFragment = {
    */
   score: number;
   /**
-   * @format uint32
+   * @format int32
    * @example [0]
    */
   totalMatches: number;
@@ -1590,7 +1557,7 @@ export type SearchForFeaturedClipFragment = {
   slug: string;
   /**
    * @format uint32
-   * @example [0, 957063, 957456, 899934, 944919, 773854]
+   * @example [957063, 957456, 899934, 944919, 773854]
    */
   viewCount: number;
   /**
@@ -1608,12 +1575,12 @@ export type SearchForFeaturedClipFragment = {
   broadcaster: null | {
     /**
      * @pattern ^[0-9]+$
-     * @example ["12826"]
+     * @example ["23161357"]
      */
     id: ID;
-    /** @example ["twitch", "xqc", "lirik", "forsen", "yasongas", "shungiteeworks", "nottdarius"] */
+    /** @example ["lirik", "twitch", "cdprojektred", "forsen", "tickett_", "st1mgreeen", "lipton_18"] */
     login: string;
-    /** @example ["Twitch", "ayuuexe", "xQc", "LIRIK", "RSDragonwilds", "S0LAF1D3", "Jinnytty"] */
+    /** @example ["Twitch", "CD PROJEKT RED", "LIRIK", "forsen", "ayuuexe", "xQc", "RSDragonwilds"] */
     displayName: string;
     __typename: "User";
   };
@@ -1623,14 +1590,14 @@ export type SearchForFeaturedClipFragment = {
      * @example ["509672"]
      */
     id: ID;
-    /** @example ["irl", "just-chatting", "special-events", "cyberpunk-2077", "grand-theft-auto-v", "overwatch-2", "counter-strike"] */
+    /** @example ["irl", "cyberpunk-2077", "just-chatting", "special-events", "grand-theft-auto-v", "overwatch-2", "counter-strike"] */
     slug: string;
-    /** @example ["IRL", "Just Chatting", "Special Events", "Cyberpunk 2077", "League of Legends", "You Know The Drill", "RuneScape: Dragonwilds"] */
+    /** @example ["IRL", "Cyberpunk 2077", "Just Chatting", "Special Events", "League of Legends", "You Know The Drill", "RuneScape: Dragonwilds"] */
     name: string;
     __typename: "Game";
   };
   previewThumbnailProperties: {
-    /** @example ["BLUR_NOT_REQUIRED"] */
+    /** @example ["BLUR_NOT_REQUIRED", "BLUR_REASON_TYPE_SEXUAL_THEMES"] */
     blurReason: string;
     __typename: "PreviewThumbnailProperties";
   };
@@ -1647,19 +1614,19 @@ export type SearchForFeaturedVideoFragment = {
   status: string;
   /**
    * @format uint32
-   * @example [15389, 4621, 621, 4472, 58]
+   * @example [15389, 4359, 4621, 621, 4472]
    */
   lengthSeconds: number;
-  /** @example ["Twitch Recap: 2024 according to Twitch Chat!", "Creator Camp LIVE: Streaming Basics with @Snackless & @KawaiiGuy"] */
+  /** @example ["Twitch Recap: 2024 according to Twitch Chat!", "REDstreams — Cyberpunk 2077: Edgerunners 2 Update (2.5) | Overview"] */
   title: null | string;
   /**
    * @format uint32
-   * @example [0, 772963, 171376, 163669, 1911, 684]
+   * @example [0, 772963, 277364, 171376, 163669, 1911]
    */
   viewCount: number;
   /**
    * @format date-time
-   * @example ["2024-12-10T16:45:35Z", "2025-03-13T18:48:05Z"]
+   * @example ["2024-12-10T16:45:35Z", "2026-10-27T15:45:17Z"]
    */
   createdAt: string;
   game: null | {
@@ -1668,29 +1635,29 @@ export type SearchForFeaturedVideoFragment = {
      * @example ["509672"]
      */
     id: ID;
-    /** @example ["irl", "just-chatting", "special-events", "cyberpunk-2077", "grand-theft-auto-v", "overwatch-2", "counter-strike"] */
+    /** @example ["irl", "cyberpunk-2077", "just-chatting", "special-events", "grand-theft-auto-v", "overwatch-2", "counter-strike"] */
     slug: string;
-    /** @example ["IRL", "Just Chatting", "Special Events", "Cyberpunk 2077", "League of Legends", "You Know The Drill", "RuneScape: Dragonwilds"] */
+    /** @example ["IRL", "Cyberpunk 2077", "Just Chatting", "Special Events", "League of Legends", "You Know The Drill", "RuneScape: Dragonwilds"] */
     name: string;
-    /** @example ["IRL", "Just Chatting", "Special Events", "Talk Shows & Podcasts", "Grand Theft Auto V", "Poker", "Halloween: The Game"] */
+    /** @example ["IRL", "Cyberpunk 2077", "Just Chatting", "Special Events", "Gwent: The Witcher Card Game", "Grand Theft Auto V", "DayZ"] */
     displayName: string;
     __typename: "Game";
   };
   /**
-   * @example ["https://static-cdn.jtvnw.net/cf_vods/d1m7jfoe9zdc1j/82ef4729c6011d6072e2_twitch_43295848617_1733849129//thumb/thumb0-90x60.jpg", "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/4087ab6ee325487ff1cb_twitch_317752962300_1741891679//thumb/thumb0-90x60.jpg"]
+   * @example ["https://static-cdn.jtvnw.net/cf_vods/d1m7jfoe9zdc1j/82ef4729c6011d6072e2_twitch_43295848617_1733849129//thumb/thumb0-90x60.jpg", "https://static-cdn.jtvnw.net/cf_vods/d3fi1amfgojobc/7fbc776f6b7a4659c4e4_cdprojektred_319108158181_1793115910//thumb/thumb0-90x60.jpg"]
    * @gqlArg `width: Int [320, 90, 640, 240, 400, 1280, 80, 160, 214]`
    * @gqlArg `height: Int [180, 60, 360, 135, 225, 480, 720, 51, 45, 90]`
    */
   previewThumbnailURL: string;
   /**
-   * @example ["https://static-cdn.jtvnw.net/cf_vods/d1m7jfoe9zdc1j/82ef4729c6011d6072e2_twitch_43295848617_1733849129//thumb/thumb0-90x60.jpg", "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/4087ab6ee325487ff1cb_twitch_317752962300_1741891679//thumb/thumb0-90x60.jpg"]
+   * @example ["https://static-cdn.jtvnw.net/cf_vods/d1m7jfoe9zdc1j/82ef4729c6011d6072e2_twitch_43295848617_1733849129//thumb/thumb0-90x60.jpg", "https://static-cdn.jtvnw.net/cf_vods/d3fi1amfgojobc/7fbc776f6b7a4659c4e4_cdprojektred_319108158181_1793115910//thumb/thumb0-90x60.jpg"]
    * @aliasFor previewThumbnailURL
    * @gqlArg `width: Int [320, 90, 640, 240, 400, 1280, 80, 160, 214]`
    * @gqlArg `height: Int [180, 60, 360, 135, 225, 480, 720, 51, 45, 90]`
    */
   templatePreviewThumbnailURL: string;
   previewThumbnailProperties: {
-    /** @example ["BLUR_NOT_REQUIRED"] */
+    /** @example ["BLUR_NOT_REQUIRED", "BLUR_REASON_TYPE_SEXUAL_THEMES"] */
     blurReason: string;
     __typename: "PreviewThumbnailProperties";
   };
@@ -1703,23 +1670,23 @@ export type SearchForGameFragment = {
    * @example ["509672"]
    */
   id: ID;
-  /** @example ["irl", "just-chatting", "special-events", "cyberpunk-2077", "grand-theft-auto-v", "overwatch-2", "counter-strike"] */
+  /** @example ["irl", "cyberpunk-2077", "just-chatting", "special-events", "grand-theft-auto-v", "overwatch-2", "counter-strike"] */
   slug: string;
-  /** @example ["IRL", "Just Chatting", "Special Events", "Cyberpunk 2077", "League of Legends", "You Know The Drill", "RuneScape: Dragonwilds"] */
+  /** @example ["IRL", "Cyberpunk 2077", "Just Chatting", "Special Events", "League of Legends", "You Know The Drill", "RuneScape: Dragonwilds"] */
   name: string;
-  /** @example ["IRL", "Just Chatting", "Special Events", "Talk Shows & Podcasts", "Grand Theft Auto V", "Poker", "Halloween: The Game"] */
+  /** @example ["IRL", "Cyberpunk 2077", "Just Chatting", "Special Events", "Gwent: The Witcher Card Game", "Grand Theft Auto V", "DayZ"] */
   displayName: string;
   /**
-   * @example ["https://static-cdn.jtvnw.net/ttv-boxart/509672-{width}x{height}.jpg", "https://static-cdn.jtvnw.net/ttv-boxart/509658-{width}x{height}.jpg"]
-   * @gqlArg `width: Int [52, 144, 40, 285, 250, 188, 90, 85, 200, 600]`
-   * @gqlArg `height: Int [72, 192, 56, 380, 300, 250, 55, 120, 113, 53]`
+   * @example ["https://static-cdn.jtvnw.net/ttv-boxart/509672-{width}x{height}.jpg", "https://static-cdn.jtvnw.net/ttv-boxart/65876-{width}x{height}.jpg"]
+   * @gqlArg `width: Int [52, 144, 40, 285, 250, 188, 90, 85, 200, 120]`
+   * @gqlArg `height: Int [72, 192, 56, 380, 300, 250, 55, 120, 113, 160]`
    */
   boxArtURL: string;
   /**
-   * @example ["https://static-cdn.jtvnw.net/ttv-boxart/509672-{width}x{height}.jpg", "https://static-cdn.jtvnw.net/ttv-boxart/509658-{width}x{height}.jpg"]
+   * @example ["https://static-cdn.jtvnw.net/ttv-boxart/509672-{width}x{height}.jpg", "https://static-cdn.jtvnw.net/ttv-boxart/65876-{width}x{height}.jpg"]
    * @aliasFor boxArtURL
-   * @gqlArg `width: Int [52, 144, 40, 285, 250, 188, 90, 85, 200, 600]`
-   * @gqlArg `height: Int [72, 192, 56, 380, 300, 250, 55, 120, 113, 53]`
+   * @gqlArg `width: Int [52, 144, 40, 285, 250, 188, 90, 85, 200, 120]`
+   * @gqlArg `height: Int [72, 192, 56, 380, 300, 250, 55, 120, 113, 160]`
    */
   templateBoxArtURL: string;
   tags: TagFragment[];
@@ -1732,13 +1699,9 @@ export type SearchForGameFragment = {
 };
 
 export type SearchForGamesFragment = {
-  /** @example ["", "MTA="] */
   cursor: Cursor;
   edges: {
-    /**
-     * @format uuid
-     * @example ["1b7a69f0-721d-4467-a4f9-eb1e2f7646e7"]
-     */
+    /** @format uuid */
     trackingID: ID;
     item:
       | SearchForGameFragment
@@ -1753,8 +1716,8 @@ export type SearchForGamesFragment = {
    */
   score: number;
   /**
-   * @format uint32
-   * @example [0, 6, 10000, 25, 259, 1547]
+   * @format int32
+   * @example [0, 6, 310, 10000, 25, 259]
    */
   totalMatches: number;
   __typename: "SearchForResultGames";
@@ -1763,7 +1726,8 @@ export type SearchForGamesFragment = {
 export type SearchForOptions = {
   shouldSkipDiscoveryControl: boolean;
   targets: {
-    /** @example ["CHANNEL", "CHANNEL_WITH_TAG", "GAME", "VOD"] */
+    cursor: Cursor;
+    /** @example ["CHANNEL", "VOD", "CHANNEL_WITH_TAG", "GAME"] */
     index: string;
   }[];
 };
@@ -1771,14 +1735,14 @@ export type SearchForOptions = {
 export type SearchForQuerySubstitutionFragment = {
   edges: {
     item: null | {
-      /** @example ["collection-just-chatting-irl-streams"] */
+      /** @example ["collection-just-chatting-irl-streams", "collection-stream-o-ween"] */
       id: ID;
       name: null | {
-        /** @example ["Just Chatting & IRL"] */
-        fallbackLocalizedTitle: string;
+        /** @example ["Just Chatting & IRL", "Stream-o-Ween"] */
+        fallbackLocalizedTitle: null | string;
         __typename: "BrowsableCollectionTitle";
       };
-      /** @example ["just-chatting-irl-streams"] */
+      /** @example ["just-chatting-irl-streams", "stream-o-ween", "moba-games", "drops-enabled", "hype-train", "speedrun-challenge-run", "music-dj-streams"] */
       slug: string;
       __typename: "BrowsableCollection";
     };
@@ -1788,19 +1752,19 @@ export type SearchForQuerySubstitutionFragment = {
 };
 
 export type SearchForScheduleSegmentFragment = {
-  /** @example ["eyJzZWdtZW50SUQiOiJiNzU0MDEzZC1iOTRlLTRlNmEtYWFmYi03YmM0NmMzNDEzODciLCJpc29ZZWFyIjoyMDI2LCJpc29XZWVrIjozOH0=", "eyJzZWdtZW50SUQiOiIxMTc3MDkxYi1hNzEzLTQ4YjMtOTdlOS1lM2RmMjFlOThlN2QiLCJpc29ZZWFyIjoyMDI2LCJpc29XZWVrIjoyNH0="] */
+  /** @example ["eyJzZWdtZW50SUQiOiJiNzU0MDEzZC1iOTRlLTRlNmEtYWFmYi03YmM0NmMzNDEzODciLCJpc29ZZWFyIjoyMDI2LCJpc29XZWVrIjozOH0=", "eyJzZWdtZW50SUQiOiI1ZDhiZjNmYi1mN2I0LTRlYTMtOTZhNC1lZTI2MDBlNDNkNzEiLCJpc29ZZWFyIjoyMDI2LCJpc29XZWVrIjo0NH0="] */
   id: ID;
   /**
    * @format date-time
-   * @example ["2026-09-20T16:00:00Z", "2026-06-09T13:00:00Z"]
+   * @example ["2026-09-20T16:00:00Z", "2026-10-28T01:00:00Z"]
    */
   startAt: string;
   /**
    * @format date-time
-   * @example ["2026-06-09T19:00:00Z", "2026-06-08T23:00:00Z"]
+   * @example ["2026-10-28T04:00:00Z", "2026-10-29T18:30:00Z"]
    */
   endAt: null | string;
-  /** @example ["", "PC STREAM ", "🍕 Games and Dank Shit!"] */
+  /** @example ["", "Piano music is good for the soul ♥️", "Harpy Thursday - singer/songwriter indie harp stream!"] */
   title: string;
   hasReminder: boolean;
   categories: {
@@ -1809,7 +1773,7 @@ export type SearchForScheduleSegmentFragment = {
      * @example ["509672"]
      */
     id: ID;
-    /** @example ["IRL", "Just Chatting", "Special Events", "Cyberpunk 2077", "League of Legends", "You Know The Drill", "RuneScape: Dragonwilds"] */
+    /** @example ["IRL", "Cyberpunk 2077", "Just Chatting", "Special Events", "League of Legends", "You Know The Drill", "RuneScape: Dragonwilds"] */
     name: string;
     __typename: "Game";
   }[];
@@ -1823,23 +1787,23 @@ export type SearchForUserFragment = {
      * @example ["71092938"]
      */
     id: ID;
-    /** @example ["", "Blind playthrough of Terraria! Permadeath and Expert mode!", "YUNARA COSPLAY 🔥 HARDSTUCKING PLAT 🔥 !discord"] */
+    /** @example ["", "Blind playthrough of Terraria! Permadeath and Expert mode!", "BOO! DRUM AND BASS! gogo yubari/killbill 🩸 (˵◝ ⩊  ◜˵マ !discord"] */
     title: string;
     __typename: "BroadcastSettings";
   };
-  /** @example ["Twitch", "ayuuexe", "xQc", "LIRIK", "RSDragonwilds", "S0LAF1D3", "Jinnytty"] */
+  /** @example ["Twitch", "CD PROJEKT RED", "LIRIK", "forsen", "ayuuexe", "xQc", "RSDragonwilds"] */
   displayName: string;
   followers: {
     /**
      * @format uint32
-     * @example [0, 2430015, 2459534, 2471025, 2380069, 2380116]
+     * @example [0, 2430015, 2459534, 522430, 2471025, 2380069]
      */
     totalCount: number;
     __typename: "FollowerConnection";
   };
   /**
    * @pattern ^[0-9]+$
-   * @example ["12826"]
+   * @example ["23161357"]
    */
   id: ID;
   lastBroadcast: null | {
@@ -1855,16 +1819,16 @@ export type SearchForUserFragment = {
     startedAt: string;
     __typename: "Broadcast";
   };
-  /** @example ["twitch", "xqc", "lirik", "forsen", "yasongas", "shungiteeworks", "nottdarius"] */
+  /** @example ["lirik", "twitch", "cdprojektred", "forsen", "tickett_", "st1mgreeen", "lipton_18"] */
   login: string;
   /**
    * @pattern ^[0-9a-fA-F]{6}$
-   * @example ["5C16C5", "FFBF00", "9146FF", "FF9AFC", "FA1ED2", "7959B4", "15C2ED"]
+   * @example ["5C16C5", "DC0D15", "F1E9A4", "FAB3FF", "FFD37A", "FFBF00", "2D2628"]
    */
   primaryColorHex: null | string;
   /**
    * @format uri
-   * @example ["https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-70x70.png", "https://static-cdn.jtvnw.net/jtv_user_pictures/d5e6ebb4-a245-4ebf-bea6-2183e2f39600-profile_image-70x70.png"]
+   * @example ["https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-70x70.png", "https://static-cdn.jtvnw.net/jtv_user_pictures/3c3366d7-728a-4204-bfdd-7c823858e4d9-profile_image-70x70.png"]
    * @gqlArg `width: Int [50, 70, 300, 28, 150]`
    */
   profileImageURL: string;
@@ -1873,7 +1837,7 @@ export type SearchForUserFragment = {
   channel: {
     /**
      * @pattern ^[0-9]+$
-     * @example ["12826"]
+     * @example ["26490481"]
      */
     id: ID;
     schedule: null | {
@@ -1889,7 +1853,14 @@ export type SearchForUserFragment = {
     }[];
     __typename: "Channel";
   };
-  self: null | SearchForUserFragment_UserSelf | SearchForUserFragment_UserSelf[];
+  self: null | {
+    canFollow: boolean;
+    follower: null | {
+      disableNotifications: boolean;
+      __typename: "FollowerEdge";
+    };
+    __typename: "UserSelfConnection";
+  };
   /** @aliasFor videos */
   latestVideo: null | {
     edges: {
@@ -1918,11 +1889,11 @@ export type SearchForUserFragment = {
        * @example ["509672"]
        */
       id: ID;
-      /** @example ["irl", "just-chatting", "special-events", "cyberpunk-2077", "grand-theft-auto-v", "overwatch-2", "counter-strike"] */
+      /** @example ["irl", "cyberpunk-2077", "just-chatting", "special-events", "grand-theft-auto-v", "overwatch-2", "counter-strike"] */
       slug: string;
-      /** @example ["IRL", "Just Chatting", "Special Events", "Cyberpunk 2077", "League of Legends", "You Know The Drill", "RuneScape: Dragonwilds"] */
+      /** @example ["IRL", "Cyberpunk 2077", "Just Chatting", "Special Events", "League of Legends", "You Know The Drill", "RuneScape: Dragonwilds"] */
       name: string;
-      /** @example ["IRL", "Just Chatting", "Special Events", "Talk Shows & Podcasts", "Grand Theft Auto V", "Poker", "Halloween: The Game"] */
+      /** @example ["IRL", "Cyberpunk 2077", "Just Chatting", "Special Events", "Gwent: The Witcher Card Game", "Grand Theft Auto V", "DayZ"] */
       displayName: string;
       __typename: "Game";
     };
@@ -1953,12 +1924,12 @@ export type SearchForUserFragment = {
     verticalPreviewImageURL: string;
     /**
      * @format uint32
-     * @example [0, 1440, 1080, 720, 768, 936, 1200, 900, 1280, 864, 2160]
+     * @example [0, 1080, 1440, 720, 864, 936, 900, 540, 532, 810, 576]
      */
     height: number;
     /**
      * @format uint32
-     * @example [0, 2560, 1920, 1280, 1360, 1664]
+     * @example [0, 1920, 2560, 1280, 1536, 1724]
      */
     width: number;
     isDualFormat: boolean;
@@ -1974,7 +1945,7 @@ export type SearchForUserFragment = {
     type: string;
     /**
      * @format uint32
-     * @example [0, 46802, 656, 1572, 1518, 1432]
+     * @example [0, 129, 131, 322, 29438, 11854]
      */
     viewersCount: number;
     contentClassificationLabels:
@@ -1985,7 +1956,7 @@ export type SearchForUserFragment = {
           __typename: "ContentClassificationLabel";
         }[];
     previewThumbnailProperties: {
-      /** @example ["BLUR_NOT_REQUIRED"] */
+      /** @example ["BLUR_NOT_REQUIRED", "BLUR_REASON_TYPE_SEXUAL_THEMES"] */
       blurReason: string;
       __typename: "PreviewThumbnailProperties";
     };
@@ -1994,38 +1965,21 @@ export type SearchForUserFragment = {
   __typename: "User";
 };
 
-/** ℹ️ Not real Twitch type name */
-export type SearchForUserFragment_UserSelf = {
-  /** ⚠️ Low confidence about: nullable */
-  canFollow: null | boolean;
-  follower:
-    | null
-    | SearchForUserFragment_UserSelfFollower
-    | SearchForUserFragment_UserSelfFollower[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type SearchForUserFragment_UserSelfFollower = {
-  disableNotifications: UnknownValue;
-  __typename: string;
-};
-
 export type SearchForVideoFragment = {
   /**
    * @format date-time
-   * @example ["2024-12-10T16:45:35Z", "2025-03-13T18:48:05Z"]
+   * @example ["2024-12-10T16:45:35Z", "2026-10-27T15:45:17Z"]
    */
   createdAt: string;
   owner: null | {
     /**
      * @pattern ^[0-9]+$
-     * @example ["12826"]
+     * @example ["23161357"]
      */
     id: ID;
-    /** @example ["Twitch", "ayuuexe", "xQc", "LIRIK", "RSDragonwilds", "S0LAF1D3", "Jinnytty"] */
+    /** @example ["Twitch", "CD PROJEKT RED", "LIRIK", "forsen", "ayuuexe", "xQc", "RSDragonwilds"] */
     displayName: string;
-    /** @example ["twitch", "xqc", "lirik", "forsen", "yasongas", "shungiteeworks", "nottdarius"] */
+    /** @example ["lirik", "twitch", "cdprojektred", "forsen", "tickett_", "st1mgreeen", "lipton_18"] */
     login: string;
     roles: null | {
       isPartner: boolean;
@@ -2044,41 +1998,41 @@ export type SearchForVideoFragment = {
      * @example ["509672"]
      */
     id: ID;
-    /** @example ["irl", "just-chatting", "special-events", "cyberpunk-2077", "grand-theft-auto-v", "overwatch-2", "counter-strike"] */
+    /** @example ["irl", "cyberpunk-2077", "just-chatting", "special-events", "grand-theft-auto-v", "overwatch-2", "counter-strike"] */
     slug: string;
-    /** @example ["IRL", "Just Chatting", "Special Events", "Cyberpunk 2077", "League of Legends", "You Know The Drill", "RuneScape: Dragonwilds"] */
+    /** @example ["IRL", "Cyberpunk 2077", "Just Chatting", "Special Events", "League of Legends", "You Know The Drill", "RuneScape: Dragonwilds"] */
     name: string;
-    /** @example ["IRL", "Just Chatting", "Special Events", "Talk Shows & Podcasts", "Grand Theft Auto V", "Poker", "Halloween: The Game"] */
+    /** @example ["IRL", "Cyberpunk 2077", "Just Chatting", "Special Events", "Gwent: The Witcher Card Game", "Grand Theft Auto V", "DayZ"] */
     displayName: string;
     __typename: "Game";
   };
   /**
    * @format uint32
-   * @example [15389, 4621, 621, 4472, 58]
+   * @example [15389, 4359, 4621, 621, 4472]
    */
   lengthSeconds: number;
   /**
-   * @example ["https://static-cdn.jtvnw.net/cf_vods/d1m7jfoe9zdc1j/82ef4729c6011d6072e2_twitch_43295848617_1733849129//thumb/thumb0-90x60.jpg", "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/4087ab6ee325487ff1cb_twitch_317752962300_1741891679//thumb/thumb0-90x60.jpg"]
+   * @example ["https://static-cdn.jtvnw.net/cf_vods/d1m7jfoe9zdc1j/82ef4729c6011d6072e2_twitch_43295848617_1733849129//thumb/thumb0-90x60.jpg", "https://static-cdn.jtvnw.net/cf_vods/d3fi1amfgojobc/7fbc776f6b7a4659c4e4_cdprojektred_319108158181_1793115910//thumb/thumb0-90x60.jpg"]
    * @gqlArg `width: Int [320, 90, 640, 240, 400, 1280, 80, 160, 214]`
    * @gqlArg `height: Int [180, 60, 360, 135, 225, 480, 720, 51, 45, 90]`
    */
   previewThumbnailURL: string;
   /**
-   * @example ["https://static-cdn.jtvnw.net/cf_vods/d1m7jfoe9zdc1j/82ef4729c6011d6072e2_twitch_43295848617_1733849129//thumb/thumb0-90x60.jpg", "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/4087ab6ee325487ff1cb_twitch_317752962300_1741891679//thumb/thumb0-90x60.jpg"]
+   * @example ["https://static-cdn.jtvnw.net/cf_vods/d1m7jfoe9zdc1j/82ef4729c6011d6072e2_twitch_43295848617_1733849129//thumb/thumb0-90x60.jpg", "https://static-cdn.jtvnw.net/cf_vods/d3fi1amfgojobc/7fbc776f6b7a4659c4e4_cdprojektred_319108158181_1793115910//thumb/thumb0-90x60.jpg"]
    * @aliasFor previewThumbnailURL
    * @gqlArg `width: Int [320, 90, 640, 240, 400, 1280, 80, 160, 214]`
    * @gqlArg `height: Int [180, 60, 360, 135, 225, 480, 720, 51, 45, 90]`
    */
   templatePreviewThumbnailURL: string;
-  /** @example ["Twitch Recap: 2024 according to Twitch Chat!", "Creator Camp LIVE: Streaming Basics with @Snackless & @KawaiiGuy"] */
+  /** @example ["Twitch Recap: 2024 according to Twitch Chat!", "REDstreams — Cyberpunk 2077: Edgerunners 2 Update (2.5) | Overview"] */
   title: null | string;
   /**
    * @format uint32
-   * @example [0, 772963, 171376, 163669, 1911, 684]
+   * @example [0, 772963, 277364, 171376, 163669, 1911]
    */
   viewCount: number;
   previewThumbnailProperties: {
-    /** @example ["BLUR_NOT_REQUIRED"] */
+    /** @example ["BLUR_NOT_REQUIRED", "BLUR_REASON_TYPE_SEXUAL_THEMES"] */
     blurReason: string;
     __typename: "PreviewThumbnailProperties";
   };
@@ -2086,13 +2040,9 @@ export type SearchForVideoFragment = {
 };
 
 export type SearchForVideosFragment = {
-  /** @example ["", "MTA="] */
   cursor: Cursor;
   edges: {
-    /**
-     * @format uuid
-     * @example ["1b7a69f0-721d-4467-a4f9-eb1e2f7646e7"]
-     */
+    /** @format uuid */
     trackingID: ID;
     item:
       | SearchForVideoFragment
@@ -2107,8 +2057,8 @@ export type SearchForVideosFragment = {
    */
   score: number;
   /**
-   * @format uint32
-   * @example [0, 495, 406, 423, 10000, 432]
+   * @format int32
+   * @example [0, 495, 406, 423, 253, 10000]
    */
   totalMatches: number;
   __typename: "SearchForResultVideos";
@@ -2117,7 +2067,7 @@ export type SearchForVideosFragment = {
 export type SearchRelatedLiveChannelFragment = {
   /**
    * @pattern ^[0-9]+$
-   * @example ["12826"]
+   * @example ["23161357"]
    */
   id: ID;
   stream: null | {
@@ -2128,7 +2078,7 @@ export type SearchRelatedLiveChannelFragment = {
     id: ID;
     /**
      * @format uint32
-     * @example [0, 46802, 656, 1572, 1518, 1432]
+     * @example [0, 129, 131, 322, 29438, 11854]
      */
     viewersCount: number;
     /**
@@ -2146,12 +2096,12 @@ export type SearchRelatedLiveChannelFragment = {
     verticalPreviewImageURL: string;
     /**
      * @format uint32
-     * @example [0, 1440, 1080, 720, 768, 936, 1200, 900, 1280, 864, 2160]
+     * @example [0, 1080, 1440, 720, 864, 936, 900, 540, 532, 810, 576]
      */
     height: number;
     /**
      * @format uint32
-     * @example [0, 2560, 1920, 1280, 1360, 1664]
+     * @example [0, 1920, 2560, 1280, 1536, 1724]
      */
     width: number;
     isDualFormat: boolean;
@@ -2163,31 +2113,31 @@ export type SearchRelatedLiveChannelFragment = {
      */
     templatePreviewImageURL: string;
     game: null | {
-      /** @example ["IRL", "Just Chatting", "Special Events", "Cyberpunk 2077", "League of Legends", "You Know The Drill", "RuneScape: Dragonwilds"] */
+      /** @example ["IRL", "Cyberpunk 2077", "Just Chatting", "Special Events", "League of Legends", "You Know The Drill", "RuneScape: Dragonwilds"] */
       name: string;
       /**
        * @pattern ^[0-9]+$
        * @example ["509672"]
        */
       id: ID;
-      /** @example ["irl", "just-chatting", "special-events", "cyberpunk-2077", "grand-theft-auto-v", "overwatch-2", "counter-strike"] */
+      /** @example ["irl", "cyberpunk-2077", "just-chatting", "special-events", "grand-theft-auto-v", "overwatch-2", "counter-strike"] */
       slug: string;
       __typename: "Game";
     };
     broadcaster: null | {
       /**
        * @pattern ^[0-9]+$
-       * @example ["12826"]
+       * @example ["23161357"]
        */
       id: ID;
       /**
        * @pattern ^[0-9a-fA-F]{6}$
-       * @example ["5C16C5", "FFBF00", "9146FF", "FF9AFC", "FA1ED2", "7959B4", "15C2ED"]
+       * @example ["5C16C5", "DC0D15", "F1E9A4", "FAB3FF", "FFD37A", "FFBF00", "2D2628"]
        */
       primaryColorHex: null | string;
-      /** @example ["twitch", "xqc", "lirik", "forsen", "yasongas", "shungiteeworks", "nottdarius"] */
+      /** @example ["lirik", "twitch", "cdprojektred", "forsen", "tickett_", "st1mgreeen", "lipton_18"] */
       login: string;
-      /** @example ["Twitch", "ayuuexe", "xQc", "LIRIK", "RSDragonwilds", "S0LAF1D3", "Jinnytty"] */
+      /** @example ["Twitch", "CD PROJEKT RED", "LIRIK", "forsen", "ayuuexe", "xQc", "RSDragonwilds"] */
       displayName: string;
       broadcastSettings: {
         /**
@@ -2195,7 +2145,7 @@ export type SearchRelatedLiveChannelFragment = {
          * @example ["71092938"]
          */
         id: ID;
-        /** @example ["", "Blind playthrough of Terraria! Permadeath and Expert mode!", "YUNARA COSPLAY 🔥 HARDSTUCKING PLAT 🔥 !discord"] */
+        /** @example ["", "Blind playthrough of Terraria! Permadeath and Expert mode!", "BOO! DRUM AND BASS! gogo yubari/killbill 🩸 (˵◝ ⩊  ◜˵マ !discord"] */
         title: string;
         __typename: "BroadcastSettings";
       };
@@ -2207,7 +2157,7 @@ export type SearchRelatedLiveChannelFragment = {
       __typename: "User";
     };
     previewThumbnailProperties: {
-      /** @example ["BLUR_NOT_REQUIRED"] */
+      /** @example ["BLUR_NOT_REQUIRED", "BLUR_REASON_TYPE_SEXUAL_THEMES"] */
       blurReason: string;
       __typename: "PreviewThumbnailProperties";
     };
@@ -2221,7 +2171,10 @@ export type SearchSuggestionNode = {
     content:
       | null
       | {
-          /** @example ["collection-forsaken-roblox", "33214"] */
+          /**
+           * @pattern ^[0-9]+$
+           * @example ["38019007"]
+           */
           id: ID;
           isLive: boolean;
           isVerified: boolean;
@@ -2236,7 +2189,7 @@ export type SearchSuggestionNode = {
           user: {
             /**
              * @pattern ^[0-9]+$
-             * @example ["12826"]
+             * @example ["23161357"]
              */
             id: ID;
             roles: null | {
@@ -2251,7 +2204,7 @@ export type SearchSuggestionNode = {
               id: ID;
               /**
                * @format uint32
-               * @example [0, 46802, 656, 1572, 1518, 1432]
+               * @example [0, 129, 131, 322, 29438, 11854]
                */
               viewersCount: number;
               game: null | {
@@ -2260,14 +2213,14 @@ export type SearchSuggestionNode = {
                  * @example ["509672"]
                  */
                 id: ID;
-                /** @example ["IRL", "Just Chatting", "Special Events", "Talk Shows & Podcasts", "Grand Theft Auto V", "Poker", "Halloween: The Game"] */
+                /** @example ["IRL", "Cyberpunk 2077", "Just Chatting", "Special Events", "Gwent: The Witcher Card Game", "Grand Theft Auto V", "DayZ"] */
                 displayName: string;
                 __typename: "Game";
               };
               broadcaster: null | {
                 /**
                  * @pattern ^[0-9]+$
-                 * @example ["12826"]
+                 * @example ["23161357"]
                  */
                 id: ID;
                 broadcastSettings: {
@@ -2276,7 +2229,7 @@ export type SearchSuggestionNode = {
                    * @example ["71092938"]
                    */
                   id: ID;
-                  /** @example ["", "Blind playthrough of Terraria! Permadeath and Expert mode!", "YUNARA COSPLAY 🔥 HARDSTUCKING PLAT 🔥 !discord"] */
+                  /** @example ["", "Blind playthrough of Terraria! Permadeath and Expert mode!", "BOO! DRUM AND BASS! gogo yubari/killbill 🩸 (˵◝ ⩊  ◜˵マ !discord"] */
                   title: string;
                   __typename: "BroadcastSettings";
                 };
@@ -2289,7 +2242,10 @@ export type SearchSuggestionNode = {
           __typename: "SearchSuggestionChannel";
         }
       | {
-          /** @example ["collection-forsaken-roblox", "33214"] */
+          /**
+           * @pattern ^[0-9]+$
+           * @example ["33214"]
+           */
           id: ID;
           /**
            * @format uri
@@ -2304,14 +2260,14 @@ export type SearchSuggestionNode = {
              * @example ["509672"]
              */
             id: ID;
-            /** @example ["irl", "just-chatting", "special-events", "cyberpunk-2077", "grand-theft-auto-v", "overwatch-2", "counter-strike"] */
+            /** @example ["irl", "cyberpunk-2077", "just-chatting", "special-events", "grand-theft-auto-v", "overwatch-2", "counter-strike"] */
             slug: string;
             __typename: "Game";
           };
           __typename: "SearchSuggestionCategory";
         }
       | {
-          /** @example ["collection-forsaken-roblox", "33214"] */
+          /** @example ["collection-forsaken-roblox"] */
           id: ID;
           /** @example ["forsaken-roblox"] */
           slug: string;
@@ -2325,7 +2281,7 @@ export type SearchSuggestionNode = {
       start: number;
       /**
        * @format int32
-       * @example [0, 3, 9, 5, 6, 4]
+       * @example [0, 3, 9, 5, 6, 1, 2, 4]
        */
       end: number;
       __typename: "SearchSuggestionHighlight";
@@ -2357,19 +2313,19 @@ export type ShelfPreviewCardClip = {
   clipTitle: string;
   /**
    * @format uint32
-   * @example [0, 957063, 957456, 899934, 944919, 773854]
+   * @example [957063, 957456, 899934, 944919, 773854]
    * @aliasFor viewCount
    */
   clipViewCount: number;
   curator: null | {
     /**
      * @pattern ^[0-9]+$
-     * @example ["12826"]
+     * @example ["23161357"]
      */
     id: ID;
-    /** @example ["twitch", "xqc", "lirik", "forsen", "yasongas", "shungiteeworks", "nottdarius"] */
+    /** @example ["lirik", "twitch", "cdprojektred", "forsen", "tickett_", "st1mgreeen", "lipton_18"] */
     login: string;
-    /** @example ["Twitch", "ayuuexe", "xQc", "LIRIK", "RSDragonwilds", "S0LAF1D3", "Jinnytty"] */
+    /** @example ["Twitch", "CD PROJEKT RED", "LIRIK", "forsen", "ayuuexe", "xQc", "RSDragonwilds"] */
     displayName: string;
     __typename: "User";
   };
@@ -2380,14 +2336,14 @@ export type ShelfPreviewCardClip = {
      * @example ["509672"]
      */
     id: ID;
-    /** @example ["irl", "just-chatting", "special-events", "cyberpunk-2077", "grand-theft-auto-v", "overwatch-2", "counter-strike"] */
+    /** @example ["irl", "cyberpunk-2077", "just-chatting", "special-events", "grand-theft-auto-v", "overwatch-2", "counter-strike"] */
     slug: string;
-    /** @example ["IRL", "Just Chatting", "Special Events", "Cyberpunk 2077", "League of Legends", "You Know The Drill", "RuneScape: Dragonwilds"] */
+    /** @example ["IRL", "Cyberpunk 2077", "Just Chatting", "Special Events", "League of Legends", "You Know The Drill", "RuneScape: Dragonwilds"] */
     name: string;
     /**
-     * @example ["https://static-cdn.jtvnw.net/ttv-boxart/509672-{width}x{height}.jpg", "https://static-cdn.jtvnw.net/ttv-boxart/509658-{width}x{height}.jpg"]
-     * @gqlArg `width: Int [52, 144, 40, 285, 250, 188, 90, 85, 200, 600]`
-     * @gqlArg `height: Int [72, 192, 56, 380, 300, 250, 55, 120, 113, 53]`
+     * @example ["https://static-cdn.jtvnw.net/ttv-boxart/509672-{width}x{height}.jpg", "https://static-cdn.jtvnw.net/ttv-boxart/65876-{width}x{height}.jpg"]
+     * @gqlArg `width: Int [52, 144, 40, 285, 250, 188, 90, 85, 200, 120]`
+     * @gqlArg `height: Int [72, 192, 56, 380, 300, 250, 55, 120, 113, 160]`
      */
     boxArtURL: string;
     __typename: "Game";
@@ -2395,22 +2351,22 @@ export type ShelfPreviewCardClip = {
   broadcaster: null | {
     /**
      * @pattern ^[0-9]+$
-     * @example ["12826"]
+     * @example ["23161357"]
      */
     id: ID;
-    /** @example ["twitch", "xqc", "lirik", "forsen", "yasongas", "shungiteeworks", "nottdarius"] */
+    /** @example ["lirik", "twitch", "cdprojektred", "forsen", "tickett_", "st1mgreeen", "lipton_18"] */
     login: string;
-    /** @example ["Twitch", "ayuuexe", "xQc", "LIRIK", "RSDragonwilds", "S0LAF1D3", "Jinnytty"] */
+    /** @example ["Twitch", "CD PROJEKT RED", "LIRIK", "forsen", "ayuuexe", "xQc", "RSDragonwilds"] */
     displayName: string;
     /**
      * @format uri
-     * @example ["https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-70x70.png", "https://static-cdn.jtvnw.net/jtv_user_pictures/d5e6ebb4-a245-4ebf-bea6-2183e2f39600-profile_image-70x70.png"]
+     * @example ["https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-70x70.png", "https://static-cdn.jtvnw.net/jtv_user_pictures/3c3366d7-728a-4204-bfdd-7c823858e4d9-profile_image-70x70.png"]
      * @gqlArg `width: Int [50, 70, 300, 28, 150]`
      */
     profileImageURL: string;
     /**
      * @pattern ^[0-9a-fA-F]{6}$
-     * @example ["5C16C5", "FFBF00", "9146FF", "FF9AFC", "FA1ED2", "7959B4", "15C2ED"]
+     * @example ["5C16C5", "DC0D15", "F1E9A4", "FAB3FF", "FFD37A", "FFBF00", "2D2628"]
      */
     primaryColorHex: null | string;
     roles: null | {
@@ -2422,7 +2378,7 @@ export type ShelfPreviewCardClip = {
   broadcastIdentifier: null | {
     /**
      * @pattern ^[0-9]+$
-     * @example ["40884298782"]
+     * @example ["319108158181"]
      */
     id: ID;
     __typename: "BroadcastIdOnly";
@@ -2447,7 +2403,7 @@ export type ShelfPreviewCardClip = {
   isAutoCurated: boolean;
   guestStarParticipants: null | {
     guests: null | (null | GuestStarUser)[];
-    /** @example ["", "3CEyMILAYQr4KUGLBuhHP8asnMl", "2zt9iFeTrg9NYlEqDpS08hN1ceK", "3DagLgmipaavhol4IwR6Guj2bXp", "36l4VxQ8rIvWizU3zAYBN5nSYaR", "35cwby7kRuiegmBTvrmSGvhDqrq", "34FWSU9wT8Tu0M0faXMkFglhg8J", "2xuGcZE7CjcTv4GeUJGui6j6gEj"] */
+    /** @example ["", "3CEyMILAYQr4KUGLBuhHP8asnMl", "32HA4PL6HGtf4FWDX3Cbod00Idh", "3DeMaAqtXekrwIBpoceXQs37eLH", "2zt9iFeTrg9NYlEqDpS08hN1ceK", "3DagLgmipaavhol4IwR6Guj2bXp", "36l4VxQ8rIvWizU3zAYBN5nSYaR", "35cwby7kRuiegmBTvrmSGvhDqrq"] */
     sessionIdentifier: string;
     __typename: "GuestStarParticipants";
   };
@@ -2464,7 +2420,7 @@ export type SocialMedia = {
   name: string;
   /** @example ["Twitter", "Instagram", "TikTok", "YouTube", "Discord", "reddit", "youtube"] */
   title: string;
-  /** @example ["https://www.tiktok.com/@staryuukiii ", "https://twitter.com/twitch", "https://www.instagram.com/twitch/", "https://www.tiktok.com/@twitch", "https://www.youtube.com/twitch", "https://twitter.com/xQc", "https://discord.com/invite/xqcow", "https://www.reddit.com/r/xqcow/"] */
+  /** @example ["https://www.tiktok.com/@staryuukiii ", "https://twitter.com/twitch", "https://www.instagram.com/twitch/"] */
   url: string;
   __typename: "SocialMedia";
 };
@@ -2472,13 +2428,13 @@ export type SocialMedia = {
 export type TagFragment = {
   /**
    * @format uuid
-   * @example ["80427d95-bb46-42d3-bf4d-408e9bdca49a"]
+   * @example ["c8bb9d08-8202-42f8-b028-c59ac1aafe76"]
    */
   id: ID;
   isLanguageTag: boolean;
-  /** @example ["Adventure Game", "MMO", "IRL", "FPS", "Shooter", "Action", "Strategy"] */
+  /** @example ["Rhythm & Music Game", "Indie Game", "Arcade", "Action", "RPG", "Adventure Game", "Strategy"] */
   localizedName: string;
-  /** @example ["Adventure Game", "MMO", "IRL", "FPS", "Shooter", "Action", "Strategy"] */
+  /** @example ["Rhythm & Music Game", "Indie Game", "Arcade", "Action", "RPG", "Adventure Game", "Strategy"] */
   tagName: string;
   __typename: "Tag";
 };
@@ -2496,7 +2452,7 @@ export type UserBioVideo = {
        * @example ["509672"]
        */
       id: ID;
-      /** @example ["IRL", "Just Chatting", "Special Events", "Talk Shows & Podcasts", "Grand Theft Auto V", "Poker", "Halloween: The Game"] */
+      /** @example ["IRL", "Cyberpunk 2077", "Just Chatting", "Special Events", "Gwent: The Witcher Card Game", "Grand Theft Auto V", "DayZ"] */
       displayName: string;
       __typename: "Game";
     };
@@ -2508,15 +2464,35 @@ export type UserBioVideo = {
 };
 
 /** ℹ️ Not real Twitch type name */
-export type UserClipsCriteriaSort = "VIEWS_DESC";
+export type UserClipsCriteriaSort = "CREATED_AT_DESC" | "VIEWS_DESC";
 
 export type UserClipsInput = {
-  /** @example ["ALL_TIME", "LAST_WEEK", "LAST_DAY"] */
+  broadcasterIDs?: null | (null | ID)[];
+  curatorIDs?: null | (null | ID)[];
+  /**
+   * @format date-time
+   * @example ["2026-10-28T20:59:59.999Z"]
+   */
+  endAt?: null | string;
+  /** @example ["ALL_TIME", "LAST_WEEK", "LAST_DAY", "LAST_MONTH"] */
   filter?: null | string;
+  /** ⚠️ Low confidence about: nullable */
+  freeText?: null | string;
+  gameIDs?: null | (null | ID)[];
+  gameNames?: null | UnknownValue[];
   isFeatured?: null | boolean;
+  /** @example ["ALL_TIME"] */
   period?: null | ClipsPeriod;
+  /** @example ["BROADCASTER", "CURATOR"] */
+  role?: null | string;
   shouldFilterByDiscoverySetting?: null | boolean;
+  /** @example ["CREATED_AT_DESC", "VIEWS_DESC"] */
   sort?: null | UserClipsCriteriaSort;
+  /**
+   * @format date-time
+   * @example ["2026-09-28T21:00:00.000Z"]
+   */
+  startAt?: null | string;
 };
 
 export type UserLookupType = "ACTIVE" | "ALL";
@@ -2526,7 +2502,7 @@ export type VideoAccessTokenClipAsset = {
   id: ID;
   /**
    * @format float
-   * @example [1.7777777777777777, 0.5625, 0.5627198124267292, 1.7770833333333333, 1.775]
+   * @example [1.7777777777777777, 0.5625, 0.5660377358490566, 0.5627198124267292, 1.7770833333333333]
    */
   aspectRatio: number;
   /**
@@ -2540,7 +2516,7 @@ export type VideoAccessTokenClipAsset = {
      * @example [0, 8042862, 2732768, 945904, 781712, 7159557]
      */
     bitrate: number;
-    /** @example ["", "avc1.64002A,mp4a.40.2", "hvc1.1.6.L123.90", "hvc1.1.6.L120.90", "hvc1.1.6.L90.90", "hvc1.1.6.L63.90", "hvc1.1.6.L150.90", "avc1.4D001F"] */
+    /** @example ["", "avc1.64002A,mp4a.40.2", "hvc1.1.6.L123.90", "hvc1.1.6.L120.90", "hvc1.1.6.L90.90", "hvc1.1.6.L63.90", "hvc1.1.6.L150.90", "avc1.640028,mp4a.40.2"] */
     codecs: string;
     /**
      * @format float
@@ -2552,7 +2528,7 @@ export type VideoAccessTokenClipAsset = {
      * @example [0, -1, 1080, 720, 480, 360, 1600]
      */
     height: number;
-    /** @example ["-1", "1080", "720", "480", "360", "900", "1170", "756"] */
+    /** @example ["-1", "1080", "720", "480", "360", "900", "1170", "608"] */
     quality: string;
     /** @example ["", "https://d1ndex63qxojbr.cloudfront.net/nauth/ce4b4ef1-4e8d-4391-bff6-2bc4c5506a4d/landscape/avc/1080/index.mp4", "https://d1ndex63qxojbr.cloudfront.net/nauth/ce4b4ef1-4e8d-4391-bff6-2bc4c5506a4d/landscape/avc/720/index.mp4"] */
     sourceURL: string;
@@ -2574,7 +2550,7 @@ export type VideoAccessTokenClipQuality = {
    * @example [0, 60, 30.03076934814453, 60.01000213623047, 30.005001068115234, 60.0133362969549]
    */
   frameRate: number;
-  /** @example ["-1", "1080", "720", "480", "360", "900", "1170", "756"] */
+  /** @example ["-1", "1080", "720", "480", "360", "900", "1170", "608"] */
   quality: string;
   /** @example ["", "https://d1ndex63qxojbr.cloudfront.net/nauth/ce4b4ef1-4e8d-4391-bff6-2bc4c5506a4d/landscape/avc/1080/index.mp4", "https://d1ndex63qxojbr.cloudfront.net/nauth/ce4b4ef1-4e8d-4391-bff6-2bc4c5506a4d/landscape/avc/720/index.mp4"] */
   sourceURL: string;
@@ -2584,6 +2560,7 @@ export type VideoAccessTokenClipQuality = {
 export type VideoCodec = "AV1" | "AVC" | "HEVC";
 
 export type VideoConnectionOptionsInput = {
+  includePrivate?: null | boolean;
   /**
    * @format uint32
    * @example [61]
@@ -2596,7 +2573,6 @@ export type VideoConnectionOptionsInput = {
 };
 
 export type VideoEdge = {
-  /** @example ["2901708053|816756|2026-10-15T20:49:51Z|40181"] */
   cursor: null | Cursor;
   node: null | PreviewCardVideo;
   __typename: "VideoEdge";
@@ -2605,7 +2581,7 @@ export type VideoEdge = {
 export type VideoMetadataUser = {
   /**
    * @pattern ^[0-9]+$
-   * @example ["12826"]
+   * @example ["23161357"]
    */
   id: ID;
   __typename: "User";
@@ -2617,34 +2593,34 @@ export type VideoMetadataVideo = {
    * @example ["2323270866"]
    */
   id: ID;
-  /** @example ["Twitch Recap: 2024 according to Twitch Chat!", "Creator Camp LIVE: Streaming Basics with @Snackless & @KawaiiGuy"] */
+  /** @example ["Twitch Recap: 2024 according to Twitch Chat!", "REDstreams — Cyberpunk 2077: Edgerunners 2 Update (2.5) | Overview"] */
   title: null | string;
   /** @example ["The legendary TwitchCon Drag Showcase is back! Check out all the amazing performers right here!", "Now you know when our show happen! Nice."] */
   description: null | string;
   /**
-   * @example ["https://static-cdn.jtvnw.net/cf_vods/d1m7jfoe9zdc1j/82ef4729c6011d6072e2_twitch_43295848617_1733849129//thumb/thumb0-90x60.jpg", "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/4087ab6ee325487ff1cb_twitch_317752962300_1741891679//thumb/thumb0-90x60.jpg"]
+   * @example ["https://static-cdn.jtvnw.net/cf_vods/d1m7jfoe9zdc1j/82ef4729c6011d6072e2_twitch_43295848617_1733849129//thumb/thumb0-90x60.jpg", "https://static-cdn.jtvnw.net/cf_vods/d3fi1amfgojobc/7fbc776f6b7a4659c4e4_cdprojektred_319108158181_1793115910//thumb/thumb0-90x60.jpg"]
    * @gqlArg `width: Int [320, 90, 640, 240, 400, 1280, 80, 160, 214]`
    * @gqlArg `height: Int [180, 60, 360, 135, 225, 480, 720, 51, 45, 90]`
    */
   previewThumbnailURL: string;
   /**
    * @format date-time
-   * @example ["2024-12-10T16:45:35Z", "2025-03-13T18:48:05Z"]
+   * @example ["2024-12-10T16:45:35Z", "2026-10-27T15:45:17Z"]
    */
   createdAt: string;
   /**
    * @format uint32
-   * @example [0, 772963, 171376, 163669, 1911, 684]
+   * @example [0, 772963, 277364, 171376, 163669, 1911]
    */
   viewCount: number;
   /**
    * @format date-time
-   * @example ["2024-12-10T16:45:35Z", "2025-03-13T18:48:05Z"]
+   * @example ["2024-12-10T16:45:35Z", "2026-10-27T15:45:17Z"]
    */
   publishedAt: string;
   /**
    * @format uint32
-   * @example [15389, 4621, 621, 4472, 58]
+   * @example [15389, 4359, 4621, 621, 4472]
    */
   lengthSeconds: number;
   /** @example ["ARCHIVE", "HIGHLIGHT", "UPLOAD"] */
@@ -2652,12 +2628,12 @@ export type VideoMetadataVideo = {
   owner: null | {
     /**
      * @pattern ^[0-9]+$
-     * @example ["12826"]
+     * @example ["23161357"]
      */
     id: ID;
-    /** @example ["twitch", "xqc", "lirik", "forsen", "yasongas", "shungiteeworks", "nottdarius"] */
+    /** @example ["lirik", "twitch", "cdprojektred", "forsen", "tickett_", "st1mgreeen", "lipton_18"] */
     login: string;
-    /** @example ["Twitch", "ayuuexe", "xQc", "LIRIK", "RSDragonwilds", "S0LAF1D3", "Jinnytty"] */
+    /** @example ["Twitch", "CD PROJEKT RED", "LIRIK", "forsen", "ayuuexe", "xQc", "RSDragonwilds"] */
     displayName: string;
     __typename: "User";
   };
@@ -2667,17 +2643,17 @@ export type VideoMetadataVideo = {
      * @example ["509672"]
      */
     id: ID;
-    /** @example ["irl", "just-chatting", "special-events", "cyberpunk-2077", "grand-theft-auto-v", "overwatch-2", "counter-strike"] */
+    /** @example ["irl", "cyberpunk-2077", "just-chatting", "special-events", "grand-theft-auto-v", "overwatch-2", "counter-strike"] */
     slug: string;
     /**
-     * @example ["https://static-cdn.jtvnw.net/ttv-boxart/509672-{width}x{height}.jpg", "https://static-cdn.jtvnw.net/ttv-boxart/509658-{width}x{height}.jpg"]
-     * @gqlArg `width: Int [52, 144, 40, 285, 250, 188, 90, 85, 200, 600]`
-     * @gqlArg `height: Int [72, 192, 56, 380, 300, 250, 55, 120, 113, 53]`
+     * @example ["https://static-cdn.jtvnw.net/ttv-boxart/509672-{width}x{height}.jpg", "https://static-cdn.jtvnw.net/ttv-boxart/65876-{width}x{height}.jpg"]
+     * @gqlArg `width: Int [52, 144, 40, 285, 250, 188, 90, 85, 200, 120]`
+     * @gqlArg `height: Int [72, 192, 56, 380, 300, 250, 55, 120, 113, 160]`
      */
     boxArtURL: string;
-    /** @example ["IRL", "Just Chatting", "Special Events", "Cyberpunk 2077", "League of Legends", "You Know The Drill", "RuneScape: Dragonwilds"] */
+    /** @example ["IRL", "Cyberpunk 2077", "Just Chatting", "Special Events", "League of Legends", "You Know The Drill", "RuneScape: Dragonwilds"] */
     name: string;
-    /** @example ["IRL", "Just Chatting", "Special Events", "Talk Shows & Podcasts", "Grand Theft Auto V", "Poker", "Halloween: The Game"] */
+    /** @example ["IRL", "Cyberpunk 2077", "Just Chatting", "Special Events", "Gwent: The Witcher Card Game", "Grand Theft Auto V", "DayZ"] */
     displayName: string;
     __typename: "Game";
   };
@@ -2685,10 +2661,7 @@ export type VideoMetadataVideo = {
 };
 
 export type VideoShelfEdge = {
-  /**
-   * @pattern ^[0-9]+$
-   * @example ["0"]
-   */
+  /** @pattern ^[0-9]+$ */
   cursor: Cursor;
   node: {
     /** @example ["KVe_rYFMGxiPsA", "6e8b060e-b329-45e4-8e7a-ded5177ee78a", "5ef0dc73-e8a1-4789-96ef-0d43bff28ec8"] */
@@ -2748,38 +2721,38 @@ export type ChannelRootAboutPanelData = {
   currentUser: null | {
     /**
      * @pattern ^[0-9]+$
-     * @example ["12826"]
+     * @example ["23161357"]
      */
     id: ID;
-    /** @example ["twitch", "xqc", "lirik", "forsen", "yasongas", "shungiteeworks", "nottdarius"] */
+    /** @example ["lirik", "twitch", "cdprojektred", "forsen", "tickett_", "st1mgreeen", "lipton_18"] */
     login: string;
     __typename: "User";
   };
   user: null | {
     /**
      * @pattern ^[0-9]+$
-     * @example ["12826"]
+     * @example ["23161357"]
      */
     id: ID;
     /** @example ["", "Twitch is where thousands of communities come together for whatever, every day. "] */
     description: null | string;
-    /** @example ["Twitch", "ayuuexe", "xQc", "LIRIK", "RSDragonwilds", "S0LAF1D3", "Jinnytty"] */
+    /** @example ["Twitch", "CD PROJEKT RED", "LIRIK", "forsen", "ayuuexe", "xQc", "RSDragonwilds"] */
     displayName: string;
     /**
      * @pattern ^[0-9a-fA-F]{6}$
-     * @example ["5C16C5", "FFBF00", "9146FF", "FF9AFC", "FA1ED2", "7959B4", "15C2ED"]
+     * @example ["5C16C5", "DC0D15", "F1E9A4", "FAB3FF", "FFD37A", "FFBF00", "2D2628"]
      */
     primaryColorHex: null | string;
     /**
      * @format uri
-     * @example ["https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-70x70.png", "https://static-cdn.jtvnw.net/jtv_user_pictures/d5e6ebb4-a245-4ebf-bea6-2183e2f39600-profile_image-70x70.png"]
+     * @example ["https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-70x70.png", "https://static-cdn.jtvnw.net/jtv_user_pictures/3c3366d7-728a-4204-bfdd-7c823858e4d9-profile_image-70x70.png"]
      * @gqlArg `width: Int [50, 70, 300, 28, 150]`
      */
     profileImageURL: string;
     followers: {
       /**
        * @format uint32
-       * @example [0, 2430015, 2459534, 2471025, 2380069, 2380116]
+       * @example [0, 2430015, 2459534, 522430, 2471025, 2380069]
        */
       totalCount: number;
       __typename: "FollowerConnection";
@@ -2794,7 +2767,7 @@ export type ChannelRootAboutPanelData = {
     channel: {
       /**
        * @pattern ^[0-9]+$
-       * @example ["12826"]
+       * @example ["26490481"]
        */
       id: ID;
       socialMedias: null | SocialMedia[];
@@ -2803,11 +2776,11 @@ export type ChannelRootAboutPanelData = {
         /** @example ["schedule-12826", "schedule-23161357"] */
         id: ID;
         nextSegment: null | {
-          /** @example ["eyJzZWdtZW50SUQiOiJiNzU0MDEzZC1iOTRlLTRlNmEtYWFmYi03YmM0NmMzNDEzODciLCJpc29ZZWFyIjoyMDI2LCJpc29XZWVrIjozOH0=", "eyJzZWdtZW50SUQiOiIxMTc3MDkxYi1hNzEzLTQ4YjMtOTdlOS1lM2RmMjFlOThlN2QiLCJpc29ZZWFyIjoyMDI2LCJpc29XZWVrIjoyNH0="] */
+          /** @example ["eyJzZWdtZW50SUQiOiJiNzU0MDEzZC1iOTRlLTRlNmEtYWFmYi03YmM0NmMzNDEzODciLCJpc29ZZWFyIjoyMDI2LCJpc29XZWVrIjozOH0=", "eyJzZWdtZW50SUQiOiI1ZDhiZjNmYi1mN2I0LTRlYTMtOTZhNC1lZTI2MDBlNDNkNzEiLCJpc29ZZWFyIjoyMDI2LCJpc29XZWVrIjo0NH0="] */
           id: ID;
           /**
            * @format date-time
-           * @example ["2026-09-20T16:00:00Z", "2026-06-09T13:00:00Z"]
+           * @example ["2026-09-20T16:00:00Z", "2026-10-28T01:00:00Z"]
            */
           startAt: string;
           hasReminder: boolean;
@@ -2829,7 +2802,7 @@ export type ChannelRootAboutPanelData = {
          * @example ["509672"]
          */
         id: ID;
-        /** @example ["IRL", "Just Chatting", "Special Events", "Talk Shows & Podcasts", "Grand Theft Auto V", "Poker", "Halloween: The Game"] */
+        /** @example ["IRL", "Cyberpunk 2077", "Just Chatting", "Special Events", "Gwent: The Witcher Card Game", "Grand Theft Auto V", "DayZ"] */
         displayName: string;
         __typename: "Game";
       };
@@ -2841,9 +2814,9 @@ export type ChannelRootAboutPanelData = {
        * @example ["2351"]
        */
       id: ID;
-      /** @example ["twitchcon", "ggtalentgroup", "tsm", "ths", "loadedllc", "pubgpartners"] */
+      /** @example ["twitchcon", "ggtalentgroup", "gentlemates", "skybass", "tsm", "1gsquad", "streamdatabase"] */
       name: string;
-      /** @example ["TwitchCon Europe 2026", "GG Talent Group", "TSM", "The Hammer Squad", "Loaded", "PUBG Partners"] */
+      /** @example ["TwitchCon Europe 2026", "GG Talent Group", "Gentle Mates", "Team SKY BASS", "TSM", "1G SQUAD", "Stream Database"] */
       displayName: string;
       __typename: "Team";
     };
@@ -2900,7 +2873,7 @@ export type ChannelVideoShelvesQueryData = {
   currentUser: null | {
     /**
      * @pattern ^[0-9]+$
-     * @example ["12826"]
+     * @example ["23161357"]
      */
     id: ID;
     __typename: "User";
@@ -2908,14 +2881,14 @@ export type ChannelVideoShelvesQueryData = {
   user: null | {
     /**
      * @pattern ^[0-9]+$
-     * @example ["12826"]
+     * @example ["23161357"]
      */
     id: ID;
-    /** @example ["Twitch", "ayuuexe", "xQc", "LIRIK", "RSDragonwilds", "S0LAF1D3", "Jinnytty"] */
+    /** @example ["Twitch", "CD PROJEKT RED", "LIRIK", "forsen", "ayuuexe", "xQc", "RSDragonwilds"] */
     displayName: string;
     /**
      * @pattern ^[0-9a-fA-F]{6}$
-     * @example ["5C16C5", "FFBF00", "9146FF", "FF9AFC", "FA1ED2", "7959B4", "15C2ED"]
+     * @example ["5C16C5", "DC0D15", "F1E9A4", "FAB3FF", "FFD37A", "FFBF00", "2D2628"]
      */
     primaryColorHex: null | string;
     videoShelves: {
@@ -2941,16 +2914,20 @@ export type ChatListBadgesData = {
   user: null | {
     /**
      * @pattern ^[0-9]+$
-     * @example ["12826"]
+     * @example ["23161357"]
      */
     id: ID;
     /**
      * @pattern ^[0-9a-fA-F]{6}$
-     * @example ["5C16C5", "FFBF00", "9146FF", "FF9AFC", "FA1ED2", "7959B4", "15C2ED"]
+     * @example ["5C16C5", "DC0D15", "F1E9A4", "FAB3FF", "FFD37A", "FFBF00", "2D2628"]
      */
     primaryColorHex: null | string;
     broadcastBadges: Badge[];
-    self: null | ChatListBadges_UserSelf | ChatListBadges_UserSelf[];
+    self: null | {
+      selectedBadge: null | Badge;
+      displayBadges: Badge[];
+      __typename: "UserSelfConnection";
+    };
     __typename: "User";
   };
 };
@@ -2972,9 +2949,9 @@ export type ClipsCardsGameData = {
      * @example ["509672"]
      */
     id: ID;
-    /** @example ["IRL", "Just Chatting", "Special Events", "Cyberpunk 2077", "League of Legends", "You Know The Drill", "RuneScape: Dragonwilds"] */
+    /** @example ["IRL", "Cyberpunk 2077", "Just Chatting", "Special Events", "League of Legends", "You Know The Drill", "RuneScape: Dragonwilds"] */
     name: string;
-    /** @example ["IRL", "Just Chatting", "Special Events", "Talk Shows & Podcasts", "Grand Theft Auto V", "Poker", "Halloween: The Game"] */
+    /** @example ["IRL", "Cyberpunk 2077", "Just Chatting", "Special Events", "Gwent: The Witcher Card Game", "Grand Theft Auto V", "DayZ"] */
     displayName: string;
     clips: null | {
       /** @example ["MAY_CONTAIN_MATURE_CONTENT"] */
@@ -2984,7 +2961,6 @@ export type ClipsCardsGameData = {
         __typename: "PageInfo";
       };
       edges: {
-        /** @example ["MjA="] */
         cursor: null | Cursor;
         node: null | PreviewCardClip;
         __typename: "ClipEdge";
@@ -3009,7 +2985,7 @@ export type ClipsCardsUserData = {
   user: null | {
     /**
      * @pattern ^[0-9]+$
-     * @example ["12826"]
+     * @example ["23161357"]
      */
     id: ID;
     clips: null | {
@@ -3018,7 +2994,6 @@ export type ClipsCardsUserData = {
         __typename: "PageInfo";
       };
       edges: {
-        /** @example ["MjA="] */
         cursor: null | Cursor;
         node: null | (Clip & ClipCommentsExposure);
         __typename: "ClipEdge";
@@ -3052,13 +3027,13 @@ export type ClipsDownloadButtonData = {
     durationSeconds: number;
     /**
      * @format uint32
-     * @example [0, 957063, 957456, 899934, 944919, 773854]
+     * @example [957063, 957456, 899934, 944919, 773854]
      */
     viewCount: number;
     broadcaster: null | {
       /**
        * @pattern ^[0-9]+$
-       * @example ["12826"]
+       * @example ["23161357"]
        */
       id: ID;
       __typename: "User";
@@ -3066,7 +3041,7 @@ export type ClipsDownloadButtonData = {
     curator: null | {
       /**
        * @pattern ^[0-9]+$
-       * @example ["12826"]
+       * @example ["23161357"]
        */
       id: ID;
       __typename: "User";
@@ -3077,7 +3052,7 @@ export type ClipsDownloadButtonData = {
        * @example ["509672"]
        */
       id: ID;
-      /** @example ["IRL", "Just Chatting", "Special Events", "Cyberpunk 2077", "League of Legends", "You Know The Drill", "RuneScape: Dragonwilds"] */
+      /** @example ["IRL", "Cyberpunk 2077", "Just Chatting", "Special Events", "League of Legends", "You Know The Drill", "RuneScape: Dragonwilds"] */
       name: string;
       __typename: "Game";
     };
@@ -3131,9 +3106,9 @@ export type DirectoryPageGameData = {
      * @example ["509672"]
      */
     id: ID;
-    /** @example ["IRL", "Just Chatting", "Special Events", "Cyberpunk 2077", "League of Legends", "You Know The Drill", "RuneScape: Dragonwilds"] */
+    /** @example ["IRL", "Cyberpunk 2077", "Just Chatting", "Special Events", "League of Legends", "You Know The Drill", "RuneScape: Dragonwilds"] */
     name: string;
-    /** @example ["IRL", "Just Chatting", "Special Events", "Talk Shows & Podcasts", "Grand Theft Auto V", "Poker", "Halloween: The Game"] */
+    /** @example ["IRL", "Cyberpunk 2077", "Just Chatting", "Special Events", "Gwent: The Witcher Card Game", "Grand Theft Auto V", "DayZ"] */
     displayName: string;
     streams: null | {
       /** @example ["MAY_CONTAIN_MATURE_CONTENT"] */
@@ -3166,12 +3141,11 @@ export type FFZRecentBroadcastsData = {
   user: null | {
     /**
      * @pattern ^[0-9]+$
-     * @example ["12826"]
+     * @example ["23161357"]
      */
     id: ID;
     videos: null | {
       edges: {
-        /** @example ["2901708053|816756|2026-10-15T20:49:51Z|40181"] */
         cursor: null | Cursor;
         node: null | {
           /**
@@ -3179,16 +3153,16 @@ export type FFZRecentBroadcastsData = {
            * @example ["2323270866"]
            */
           id: ID;
-          /** @example ["Twitch Recap: 2024 according to Twitch Chat!", "Creator Camp LIVE: Streaming Basics with @Snackless & @KawaiiGuy"] */
+          /** @example ["Twitch Recap: 2024 according to Twitch Chat!", "REDstreams — Cyberpunk 2077: Edgerunners 2 Update (2.5) | Overview"] */
           title: null | string;
           /**
            * @format date-time
-           * @example ["2024-12-10T16:45:35Z", "2025-03-13T18:48:05Z"]
+           * @example ["2024-12-10T16:45:35Z", "2026-10-27T15:45:17Z"]
            */
           createdAt: string;
           /**
            * @format date-time
-           * @example ["2024-12-10T16:45:35Z", "2025-03-13T18:48:05Z"]
+           * @example ["2024-12-10T16:45:35Z", "2026-10-27T15:45:17Z"]
            */
           publishedAt: string;
           __typename: "Video";
@@ -3226,7 +3200,7 @@ export type FilterableVideoTowerVideosData = {
   user: null | {
     /**
      * @pattern ^[0-9]+$
-     * @example ["12826"]
+     * @example ["23161357"]
      */
     id: ID;
     videos: null | {
@@ -3257,7 +3231,7 @@ export type GetPinnedChatData = {
   channel: null | {
     /**
      * @pattern ^[0-9]+$
-     * @example ["12826"]
+     * @example ["26490481"]
      */
     id: ID;
     pinnedChatMessages: {
@@ -3273,11 +3247,11 @@ export type GetPinnedChatData = {
           pinnedMessage: {
             /**
              * @format uuid
-             * @example ["8828a3ba-6c79-4a8b-8f0b-e185b981ccfb"]
+             * @example ["279e8293-cec0-40df-a475-6b35981a2e49"]
              */
             id: ID;
             content: null | {
-              /** @example ["!activematter: I'm playing Active Matter, a hardcore tactical shooter - out now on Steam, PlayStation 5 and Xbox Series X|S. Get the game and support the stream here: https://amplay.net/lirik #ad", "DS2 Randomizer by Chainsboyo https://www.nexusmods.com/darksouls2/mods/1317"] */
+              /** @example ["NODDERS  vampire server"] */
               text: string;
               fragments: {
                 content:
@@ -3285,17 +3259,17 @@ export type GetPinnedChatData = {
                   | {
                       /**
                        * @pattern ^[0-9]+$
-                       * @example ["12826"]
+                       * @example ["23161357"]
                        * @aliasFor id
                        */
                       userID: ID;
-                      /** @example ["twitch", "xqc", "lirik", "forsen", "yasongas", "shungiteeworks", "nottdarius"] */
+                      /** @example ["lirik", "twitch", "cdprojektred", "forsen", "tickett_", "st1mgreeen", "lipton_18"] */
                       login: string;
                       __typename: "User";
                     }
                   | {
                       /**
-                       * @example ["emotesv2_28ba31b7d6a04a14bf5455549b115bba", "emotesv2_4a4348c11b014485a0a357345152846a"]
+                       * @example ["emotesv2_42ba00f9d5e24c4ca189d642b9e0b0c9", "emotesv2_845e6a3e8a0a40d0afc90081defa16c1"]
                        * @aliasFor id
                        */
                       emoteID: ID;
@@ -3313,7 +3287,7 @@ export type GetPinnedChatData = {
                     }
                   | { __typename: "AutoMod" }
                   | { __typename: "GifContent" };
-                /** @example ["!activematter: I'm playing Active Matter, a hardcore tactical shooter - out now on Steam, PlayStation 5 and Xbox Series X|S. Get the game and support the stream here: ", "https://amplay.net/lirik"] */
+                /** @example ["NODDERS  vampire server", "Clueless"] */
                 text: string;
                 __typename: "MessageFragment";
               }[];
@@ -3322,28 +3296,28 @@ export type GetPinnedChatData = {
             parentMessage: null | {
               /**
                * @format uuid
-               * @example ["8828a3ba-6c79-4a8b-8f0b-e185b981ccfb"]
+               * @example ["279e8293-cec0-40df-a475-6b35981a2e49"]
                */
               id: ID;
               content: null | {
-                /** @example ["!activematter: I'm playing Active Matter, a hardcore tactical shooter - out now on Steam, PlayStation 5 and Xbox Series X|S. Get the game and support the stream here: https://amplay.net/lirik #ad", "DS2 Randomizer by Chainsboyo https://www.nexusmods.com/darksouls2/mods/1317"] */
+                /** @example ["NODDERS  vampire server"] */
                 text: string;
                 __typename: "MessageContent";
               };
               /**
                * @format date-time
-               * @example ["2025-03-21T12:52:15.832863832Z", "2026-09-19T16:05:13.704561536Z"]
+               * @example ["2026-10-28T01:53:30.667651882Z", "2026-10-28T01:53:31.732043463Z"]
                */
               sentAt: string;
               sender: {
                 /**
                  * @pattern ^[0-9]+$
-                 * @example ["12826"]
+                 * @example ["23161357"]
                  */
                 id: ID;
-                /** @example ["twitch", "xqc", "lirik", "forsen", "yasongas", "shungiteeworks", "nottdarius"] */
+                /** @example ["lirik", "twitch", "cdprojektred", "forsen", "tickett_", "st1mgreeen", "lipton_18"] */
                 login: string;
-                /** @example ["Twitch", "ayuuexe", "xQc", "LIRIK", "RSDragonwilds", "S0LAF1D3", "Jinnytty"] */
+                /** @example ["Twitch", "CD PROJEKT RED", "LIRIK", "forsen", "ayuuexe", "xQc", "RSDragonwilds"] */
                 displayName: string;
                 __typename: "User";
               };
@@ -3352,23 +3326,23 @@ export type GetPinnedChatData = {
             threadParentMessage: null | {
               /**
                * @format uuid
-               * @example ["8828a3ba-6c79-4a8b-8f0b-e185b981ccfb"]
+               * @example ["279e8293-cec0-40df-a475-6b35981a2e49"]
                */
               id: ID;
               content: null | {
-                /** @example ["!activematter: I'm playing Active Matter, a hardcore tactical shooter - out now on Steam, PlayStation 5 and Xbox Series X|S. Get the game and support the stream here: https://amplay.net/lirik #ad", "DS2 Randomizer by Chainsboyo https://www.nexusmods.com/darksouls2/mods/1317"] */
+                /** @example ["NODDERS  vampire server"] */
                 text: string;
                 __typename: "MessageContent";
               };
               sender: {
                 /**
                  * @pattern ^[0-9]+$
-                 * @example ["12826"]
+                 * @example ["23161357"]
                  */
                 id: ID;
-                /** @example ["twitch", "xqc", "lirik", "forsen", "yasongas", "shungiteeworks", "nottdarius"] */
+                /** @example ["lirik", "twitch", "cdprojektred", "forsen", "tickett_", "st1mgreeen", "lipton_18"] */
                 login: string;
-                /** @example ["Twitch", "ayuuexe", "xQc", "LIRIK", "RSDragonwilds", "S0LAF1D3", "Jinnytty"] */
+                /** @example ["Twitch", "CD PROJEKT RED", "LIRIK", "forsen", "ayuuexe", "xQc", "RSDragonwilds"] */
                 displayName: string;
                 __typename: "User";
               };
@@ -3376,30 +3350,30 @@ export type GetPinnedChatData = {
             };
             /**
              * @format date-time
-             * @example ["2025-03-21T12:52:15.832863832Z", "2026-09-19T16:05:13.704561536Z"]
+             * @example ["2026-10-28T01:53:30.667651882Z", "2026-10-28T01:53:31.732043463Z"]
              */
             sentAt: string;
             sender: {
               /**
                * @pattern ^[0-9]+$
-               * @example ["12826"]
+               * @example ["23161357"]
                */
               id: ID;
-              /** @example ["twitch", "xqc", "lirik", "forsen", "yasongas", "shungiteeworks", "nottdarius"] */
+              /** @example ["lirik", "twitch", "cdprojektred", "forsen", "tickett_", "st1mgreeen", "lipton_18"] */
               login: string;
               /**
                * @pattern ^#[0-9a-fA-F]{6}$
-               * @example ["#0029CC", "#5B99FF", "#54BC75", "#FDC1E1"]
+               * @example ["#00FF7F", "#1E90FF", "#DAA520", "#FF69B4", "#0000FF", "#5F9EA0", "#8A2BE2"]
                */
               chatColor: null | string;
-              /** @example ["Twitch", "ayuuexe", "xQc", "LIRIK", "RSDragonwilds", "S0LAF1D3", "Jinnytty"] */
+              /** @example ["Twitch", "CD PROJEKT RED", "LIRIK", "forsen", "ayuuexe", "xQc", "RSDragonwilds"] */
               displayName: string;
               displayBadges: {
-                /** @example ["cHJlZGljdGlvbnM7Ymx1ZS0xOw==", "cHJlZGljdGlvbnM7Ymx1ZS0yOw=="] */
+                /** @example ["Yml0czsxOw==", "cHJlZGljdGlvbnM7Ymx1ZS0xOw=="] */
                 id: ID;
-                /** @example ["", "predictions", "bits"] */
+                /** @example ["", "bits", "predictions"] */
                 setID: ID;
-                /** @example ["", "blue-1", "blue-2", "blue-3", "blue-4", "blue-5", "pink-2", "100"] */
+                /** @example ["", "1", "blue-1", "blue-2", "blue-3", "blue-4", "blue-5", "pink-2"] */
                 version: string;
                 __typename: "Badge";
               }[];
@@ -3409,12 +3383,12 @@ export type GetPinnedChatData = {
           };
           /**
            * @format date-time
-           * @example ["2026-09-19T16:05:13Z", "2025-03-16T14:59:25Z"]
+           * @example ["2026-09-19T16:05:13Z", "2026-10-27T19:53:04Z"]
            */
           startsAt: string;
           /**
            * @format date-time
-           * @example ["2026-09-19T16:05:15Z", "2025-03-16T14:59:27Z"]
+           * @example ["2026-09-19T16:05:15Z", "2026-10-27T19:53:13Z"]
            */
           updatedAt: string;
           /**
@@ -3425,18 +3399,17 @@ export type GetPinnedChatData = {
           pinnedBy: {
             /**
              * @pattern ^[0-9]+$
-             * @example ["12826"]
+             * @example ["23161357"]
              */
             id: ID;
-            /** @example ["twitch", "xqc", "lirik", "forsen", "yasongas", "shungiteeworks", "nottdarius"] */
+            /** @example ["lirik", "twitch", "cdprojektred", "forsen", "tickett_", "st1mgreeen", "lipton_18"] */
             login: string;
-            /** @example ["Twitch", "ayuuexe", "xQc", "LIRIK", "RSDragonwilds", "S0LAF1D3", "Jinnytty"] */
+            /** @example ["Twitch", "CD PROJEKT RED", "LIRIK", "forsen", "ayuuexe", "xQc", "RSDragonwilds"] */
             displayName: string;
             __typename: "User";
           };
           __typename: "PinnedChatMessage";
         };
-        /** @example [""] */
         cursor: Cursor;
         __typename: "PinnedChatMessageEdge";
       }[];
@@ -3461,7 +3434,7 @@ export type GetUserIDData = {
   user: null | {
     /**
      * @pattern ^[0-9]+$
-     * @example ["12826"]
+     * @example ["23161357"]
      */
     id: ID;
     __typename: "User";
@@ -3550,7 +3523,7 @@ export type SearchTraySearchSuggestionsData = {
   searchSuggestions: {
     edges: SearchSuggestionNode[];
     tracking: {
-      /** @example ["c5c28bd1a3a8ef7d2362b36362b27021", "f2e30a701219f934464c90fd40250b94"] */
+      /** @example ["", "c5c28bd1a3a8ef7d2362b36362b27021", "e8355991cdff31be2f227ac0bfe59105"] */
       modelTrackingID: ID;
       /**
        * @format uuid
@@ -3583,14 +3556,14 @@ export type StreamMetadataData = {
   user: null | {
     /**
      * @pattern ^[0-9]+$
-     * @example ["12826"]
+     * @example ["23161357"]
      */
     id: ID;
-    /** @example ["Twitch", "ayuuexe", "xQc", "LIRIK", "RSDragonwilds", "S0LAF1D3", "Jinnytty"] */
+    /** @example ["Twitch", "CD PROJEKT RED", "LIRIK", "forsen", "ayuuexe", "xQc", "RSDragonwilds"] */
     displayName: string;
     /**
      * @pattern ^[0-9a-fA-F]{6}$
-     * @example ["5C16C5", "FFBF00", "9146FF", "FF9AFC", "FA1ED2", "7959B4", "15C2ED"]
+     * @example ["5C16C5", "DC0D15", "F1E9A4", "FAB3FF", "FFD37A", "FFBF00", "2D2628"]
      */
     primaryColorHex: null | string;
     roles: null | {
@@ -3600,7 +3573,7 @@ export type StreamMetadataData = {
     };
     /**
      * @format uri
-     * @example ["https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-70x70.png", "https://static-cdn.jtvnw.net/jtv_user_pictures/d5e6ebb4-a245-4ebf-bea6-2183e2f39600-profile_image-70x70.png"]
+     * @example ["https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-70x70.png", "https://static-cdn.jtvnw.net/jtv_user_pictures/3c3366d7-728a-4204-bfdd-7c823858e4d9-profile_image-70x70.png"]
      * @gqlArg `width: Int [50, 70, 300, 28, 150]`
      */
     profileImageURL: string;
@@ -3610,16 +3583,16 @@ export type StreamMetadataData = {
        * @example ["2351"]
        */
       id: ID;
-      /** @example ["twitchcon", "ggtalentgroup", "tsm", "ths", "loadedllc", "pubgpartners"] */
+      /** @example ["twitchcon", "ggtalentgroup", "gentlemates", "skybass", "tsm", "1gsquad", "streamdatabase"] */
       name: string;
-      /** @example ["TwitchCon Europe 2026", "GG Talent Group", "TSM", "The Hammer Squad", "Loaded", "PUBG Partners"] */
+      /** @example ["TwitchCon Europe 2026", "GG Talent Group", "Gentle Mates", "Team SKY BASS", "TSM", "1G SQUAD", "Stream Database"] */
       displayName: string;
       __typename: "Team";
     };
     channel: {
       /**
        * @pattern ^[0-9]+$
-       * @example ["12826"]
+       * @example ["26490481"]
        */
       id: ID;
       __typename: "Channel";
@@ -3644,7 +3617,7 @@ export type StreamMetadataData = {
       type: string;
       /**
        * @format date-time
-       * @example ["2026-06-07T17:11:20Z", "2026-06-07T16:57:23Z"]
+       * @example ["2026-10-28T00:12:25Z", "2026-06-07T17:11:20Z"]
        */
       createdAt: string;
       game: null | {
@@ -3653,9 +3626,9 @@ export type StreamMetadataData = {
          * @example ["509672"]
          */
         id: ID;
-        /** @example ["irl", "just-chatting", "special-events", "cyberpunk-2077", "grand-theft-auto-v", "overwatch-2", "counter-strike"] */
+        /** @example ["irl", "cyberpunk-2077", "just-chatting", "special-events", "grand-theft-auto-v", "overwatch-2", "counter-strike"] */
         slug: string;
-        /** @example ["IRL", "Just Chatting", "Special Events", "Cyberpunk 2077", "League of Legends", "You Know The Drill", "RuneScape: Dragonwilds"] */
+        /** @example ["IRL", "Cyberpunk 2077", "Just Chatting", "Special Events", "League of Legends", "You Know The Drill", "RuneScape: Dragonwilds"] */
         name: string;
         __typename: "Game";
       };
@@ -3673,10 +3646,10 @@ export type UseLiveData = {
   user: null | {
     /**
      * @pattern ^[0-9]+$
-     * @example ["12826"]
+     * @example ["23161357"]
      */
     id: ID;
-    /** @example ["twitch", "xqc", "lirik", "forsen", "yasongas", "shungiteeworks", "nottdarius"] */
+    /** @example ["lirik", "twitch", "cdprojektred", "forsen", "tickett_", "st1mgreeen", "lipton_18"] */
     login: string;
     stream: null | {
       /**
@@ -3686,7 +3659,7 @@ export type UseLiveData = {
       id: ID;
       /**
        * @format date-time
-       * @example ["2026-06-07T17:11:20Z", "2026-06-07T16:57:23Z"]
+       * @example ["2026-10-28T00:12:25Z", "2026-06-07T17:11:20Z"]
        */
       createdAt: string;
       __typename: "Stream";
@@ -3703,7 +3676,7 @@ export type UseViewCountData = {
   user: null | {
     /**
      * @pattern ^[0-9]+$
-     * @example ["12826"]
+     * @example ["23161357"]
      */
     id: ID;
     stream: null | {
@@ -3714,7 +3687,7 @@ export type UseViewCountData = {
       id: ID;
       /**
        * @format uint32
-       * @example [0, 46802, 656, 1572, 1518, 1432]
+       * @example [0, 129, 131, 322, 29438, 11854]
        */
       viewersCount: number;
       /**
@@ -3779,18 +3752,18 @@ export type VideoMetadataData = {
   user: null | {
     /**
      * @pattern ^[0-9]+$
-     * @example ["12826"]
+     * @example ["23161357"]
      */
     id: ID;
     /**
      * @pattern ^[0-9a-fA-F]{6}$
-     * @example ["5C16C5", "FFBF00", "9146FF", "FF9AFC", "FA1ED2", "7959B4", "15C2ED"]
+     * @example ["5C16C5", "DC0D15", "F1E9A4", "FAB3FF", "FFD37A", "FFBF00", "2D2628"]
      */
     primaryColorHex: null | string;
     isPartner: boolean;
     /**
      * @format uri
-     * @example ["https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-70x70.png", "https://static-cdn.jtvnw.net/jtv_user_pictures/d5e6ebb4-a245-4ebf-bea6-2183e2f39600-profile_image-70x70.png"]
+     * @example ["https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-70x70.png", "https://static-cdn.jtvnw.net/jtv_user_pictures/3c3366d7-728a-4204-bfdd-7c823858e4d9-profile_image-70x70.png"]
      * @gqlArg `width: Int [50, 70, 300, 28, 150]`
      */
     profileImageURL: string;
@@ -3815,7 +3788,7 @@ export type VideoMetadataData = {
       id: ID;
       /**
        * @format uint32
-       * @example [0, 46802, 656, 1572, 1518, 1432]
+       * @example [0, 129, 131, 322, 29438, 11854]
        */
       viewersCount: number;
       __typename: "Stream";
@@ -3823,7 +3796,7 @@ export type VideoMetadataData = {
     followers: {
       /**
        * @format uint32
-       * @example [0, 2430015, 2459534, 2471025, 2380069, 2380116]
+       * @example [0, 2430015, 2459534, 522430, 2471025, 2380069]
        */
       totalCount: number;
       __typename: "FollowerConnection";
@@ -3842,7 +3815,7 @@ export type VideoPreviewOverlayData = {
   user: null | {
     /**
      * @pattern ^[0-9]+$
-     * @example ["12826"]
+     * @example ["23161357"]
      */
     id: ID;
     stream: null | {
