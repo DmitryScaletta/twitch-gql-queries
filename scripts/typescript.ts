@@ -222,20 +222,29 @@ const typeAt = (schema: Schema, nodes: Nodes, indent = 0): string => {
   const members = objects(schema.allOf).map(refName);
   const own = Object.keys(propsOf(schema));
   const shaped = members.length > 0 || own.length > 0;
-  if (shaped)
+  if (shaped) {
     parts.push(
       [...members, ...(own.length === 0 ? [] : [objectOf(schema, nodes, indent)])].join(" & "),
     );
+  }
 
   // a keyword says nothing of its own once a shape is found beside it
   const plain = found.filter((one) => one !== "array" && one !== "null");
-  if (!shaped || plain.some((one) => one !== "object"))
+  if (!shaped || plain.some((one) => one !== "object")) {
     parts.push(...plain.map((one) => plainOf({ ...schema, type: one })));
+  }
 
-  if (parts.length === 0) return plainOf(schema);
+  const cannotType = (schema: Schema): never => {
+    const name = isText(schema.title) ? ` "${schema.title}"` : "";
+    throw new Error(`cannot type schema${name}: ${JSON.stringify(schema)}`);
+  };
+
+  if (parts.length === 0) {
+    const plain = plainOf(schema);
+    return plain === "unknown" ? cannotType(schema) : plain;
+  }
   const kept = [...new Set(parts)];
-  // nothing known swallows whatever sits beside it, `null` among them
-  if (kept.includes("unknown")) return "unknown";
+  if (kept.includes("unknown")) return cannotType(schema);
   return kept.sort((a, b) => Number(b === "null") - Number(a === "null")).join(" | ");
 };
 
@@ -299,8 +308,9 @@ const constOf = (nodes: Nodes, name: string, keys: string[]) => {
  */
 const requiredVariablesOf = (variables: Schema): Schema => {
   const required: string[] = [];
-  for (const [name, one] of Object.entries(propsOf(variables)))
+  for (const [name, one] of Object.entries(propsOf(variables))) {
     if (!nullableOf(one)) required.push(name);
+  }
   return { ...variables, required };
 };
 
