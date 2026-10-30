@@ -8636,6 +8636,55 @@ export type ChannelLeaderboardItem = {
   __typename: "UserLeaderboardItem";
 };
 
+/** ℹ️ Not real Twitch type name */
+export type ChannelLeaderboardNudges_LeaderboardNudges = {
+  id: ID;
+  nudges:
+    | null
+    | ChannelLeaderboardNudges_LeaderboardNudgesNudges
+    | ChannelLeaderboardNudges_LeaderboardNudgesNudges[];
+  __typename: string;
+};
+
+/** ℹ️ Not real Twitch type name */
+export type ChannelLeaderboardNudges_LeaderboardNudgesNudges = {
+  type: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  quantity: null | number;
+  giftEmAll:
+    | null
+    | ChannelLeaderboardNudges_LeaderboardNudgesNudgesGiftEmAll
+    | ChannelLeaderboardNudges_LeaderboardNudgesNudgesGiftEmAll[];
+  hypeTrain:
+    | null
+    | ChannelLeaderboardNudges_LeaderboardNudgesNudgesHypeTrain
+    | ChannelLeaderboardNudges_LeaderboardNudgesNudgesHypeTrain[];
+  __typename: string;
+};
+
+/** ℹ️ Not real Twitch type name */
+export type ChannelLeaderboardNudges_LeaderboardNudgesNudgesGiftEmAll = {
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  followerCount: null | number;
+  __typename: string;
+};
+
+/** ℹ️ Not real Twitch type name */
+export type ChannelLeaderboardNudges_LeaderboardNudgesNudgesHypeTrain = {
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  giftBombThresholdCount: null | number;
+  __typename: string;
+};
+
 export type ChannelLeaderboardSubscriptionProduct = {
   /**
    * @pattern ^[0-9]+$
@@ -15395,6 +15444,31 @@ export type CreateCharityCampaign_CreateCharityCampaignError = {
 export type CreateClipComment_CreateClipComment = {
   comment: null | ClipCommentFragment;
   error: UnknownValue;
+  __typename: string;
+};
+
+/** ℹ️ Not real Twitch type name */
+export type CreateCollaborationGroup_CreateCollaborationGroup = {
+  collaboration:
+    | null
+    | CreateCollaborationGroup_CreateCollaborationGroupCollaboration
+    | CreateCollaborationGroup_CreateCollaborationGroupCollaboration[];
+  error:
+    | null
+    | CreateCollaborationGroup_CreateCollaborationGroupError
+    | CreateCollaborationGroup_CreateCollaborationGroupError[];
+  __typename: string;
+};
+
+/** ℹ️ Not real Twitch type name */
+export type CreateCollaborationGroup_CreateCollaborationGroupCollaboration = {
+  id: ID;
+  __typename: string;
+};
+
+/** ℹ️ Not real Twitch type name */
+export type CreateCollaborationGroup_CreateCollaborationGroupError = {
+  code: UnknownValue;
   __typename: string;
 };
 
@@ -28243,6 +28317,31 @@ export type GenerateSessionInviteLink_GenerateSessionInviteLinkError = {
   __typename: string;
 };
 
+/** ℹ️ Not real Twitch type name */
+export type GenerateSubReferral_GenerateSubReferral = {
+  referral:
+    | null
+    | GenerateSubReferral_GenerateSubReferralReferral
+    | GenerateSubReferral_GenerateSubReferralReferral[];
+  error:
+    | null
+    | GenerateSubReferral_GenerateSubReferralError
+    | GenerateSubReferral_GenerateSubReferralError[];
+  __typename: string;
+};
+
+/** ℹ️ Not real Twitch type name */
+export type GenerateSubReferral_GenerateSubReferralError = {
+  code: UnknownValue;
+  __typename: string;
+};
+
+/** ℹ️ Not real Twitch type name */
+export type GenerateSubReferral_GenerateSubReferralReferral = {
+  id: ID;
+  __typename: string;
+};
+
 export type GenericSearchCategoriesEdgeFragment = {
   /** ⚠️ Low confidence about: nullable */
   cursor: null | Cursor;
@@ -29707,6 +29806,72 @@ export type GroupedTimeseriesItems = {
   dataset: null | CategoryTimeseriesItem;
   category: UnknownValue;
   __typename: "GroupedTimeseriesItems";
+};
+
+export type GtaTempStreamsShelfStream = {
+  /**
+   * @pattern ^[0-9]+$
+   * @example ["316180784725"]
+   */
+  id: ID;
+  /** @example ["", "🌎LIVE🌎CLICK🌎GTA V🌎NOPIXEL V🌎LOCKED IN🌎MEGA ULTRA DAY🌎UPGRADE UNLOCK TODAY🌎PALETO PROGRESS COPE?🌎COME FIND OUT🌎9393938399🌎", "dayz chillin - !starforge @StarforgeSystems"] */
+  title: string;
+  /**
+   * @format uint32
+   * @example [0, 129, 131, 322, 29438, 11854]
+   */
+  viewersCount: number;
+  /**
+   * @format uint32
+   * @example [0, 1920, 2560, 1280, 1536, 1724]
+   */
+  width: number;
+  /**
+   * @format uint32
+   * @example [0, 1080, 1440, 720, 864, 936, 900, 540, 532, 810, 576]
+   */
+  height: number;
+  /**
+   * @example ["https://static-cdn.jtvnw.net/previews-ttv/live_user_ayuuexe-1280x720.jpg", "https://static-cdn.jtvnw.net/previews-ttv/live_user_xqc-1280x720.jpg"]
+   * @gqlArg `width: Int [320, 180, 1280, 80, 640, 360, 90]`
+   * @gqlArg `height: Int [180, 320, 720, 45, 360, 640, 160]`
+   */
+  previewImageURL: string;
+  broadcaster: null | {
+    self: null | {
+      follower: null | {
+        /**
+         * @format date-time
+         * @example ["2015-11-22T18:41:17Z", "2024-12-03T19:40:54Z"]
+         */
+        followedAt: string;
+        __typename: "FollowerEdge";
+      };
+      __typename: "UserSelfConnection";
+    };
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["23161357"]
+     */
+    id: ID;
+    /** @example ["lirik", "twitch", "cdprojektred", "forsen", "tickett_", "st1mgreeen", "lipton_18"] */
+    login: string;
+    /** @example ["Twitch", "CD PROJEKT RED", "LIRIK", "forsen", "ayuuexe", "xQc", "RSDragonwilds"] */
+    displayName: string;
+    /**
+     * @pattern ^[0-9a-fA-F]{6}$
+     * @example ["5C16C5", "DC0D15", "F1E9A4", "FAB3FF", "FFD37A", "FFBF00", "2D2628"]
+     */
+    primaryColorHex: null | string;
+    /**
+     * @format uri
+     * @example ["https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-70x70.png", "https://static-cdn.jtvnw.net/jtv_user_pictures/3c3366d7-728a-4204-bfdd-7c823858e4d9-profile_image-70x70.png"]
+     * @gqlArg `width: Int [50, 70, 300, 28, 150]`
+     */
+    profileImageURL: string;
+    __typename: "User";
+  };
+  __typename: "Stream";
 };
 
 /** ℹ️ Not real Twitch type name */
@@ -35331,6 +35496,14 @@ export type MwebGamesDirectoryEdge = {
   cursor: Cursor;
   node: null | MwebGameCard;
   __typename: "GameEdge";
+};
+
+export type MwebOfflineHomeClipsPeriod = {
+  edges: {
+    node: null | MwebClipCard;
+    __typename: "ClipEdge";
+  }[];
+  __typename: "ClipConnection";
 };
 
 export type MwebRecommendedChannelsQueryFragment = {
@@ -47622,6 +47795,32 @@ export type SocialAuthStatus_UserSettingsUserSocialLoginStatusSocialAuthUser = {
   __typename: string;
 };
 
+/** ℹ️ Not real Twitch type name */
+export type SocialGiftSubsFollowCTA_UserPublicSubReferral = {
+  status: UnknownValue;
+  maxSubAwards: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format date-time
+   */
+  endAt: null | string;
+  __typename: string;
+};
+
+/** ℹ️ Not real Twitch type name */
+export type SocialGiftSubsReferrals_UserSubReferrals = {
+  id: ID;
+  code: UnknownValue;
+  maxSubAwards: UnknownValue;
+  status: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format date-time
+   */
+  endAt: null | string;
+  __typename: string;
+};
+
 export type SocialMedia = {
   /**
    * @format uuid
@@ -52184,6 +52383,11 @@ export type SubscriptionBenefit = {
   purchasedWithPrime: boolean;
   /** @format date-time */
   renewsAt: null | string;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format date-time
+   */
+  startsAt: null | string;
   /**
    * @pattern ^[0-9]+$
    * @example ["1000"]
@@ -62756,6 +62960,27 @@ export type AccessIsSiteAdminQueryResponse = QueryResponse<
   "AccessIsSiteAdminQuery"
 >;
 
+export type AccessIsSocialGiftSubsEligibleData = {
+  currentUser: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["23161357"]
+     */
+    id: ID;
+    payout: {
+      /** ⚠️ Low confidence about: nullable */
+      isAcquiredCreator: null | boolean;
+      __typename: "Payout";
+    };
+    __typename: "User";
+  };
+};
+
+export type AccessIsSocialGiftSubsEligibleResponse = QueryResponse<
+  AccessIsSocialGiftSubsEligibleData,
+  "AccessIsSocialGiftSubsEligible"
+>;
+
 export type AccessIsStreamDelayEnabledQueryVariables = { channelLogin: string };
 
 export type AccessIsStreamDelayEnabledQueryData = {
@@ -67243,6 +67468,14 @@ export type CategoryRecapsData = {
               id: ID;
               /** @example ["lirik", "twitch", "cdprojektred", "forsen", "tickett_", "st1mgreeen", "lipton_18"] */
               login: string;
+              /** @example ["Twitch", "CD PROJEKT RED", "LIRIK", "forsen", "ayuuexe", "xQc", "RSDragonwilds"] */
+              displayName: string;
+              /**
+               * @format uri
+               * @example ["https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-70x70.png", "https://static-cdn.jtvnw.net/jtv_user_pictures/3c3366d7-728a-4204-bfdd-7c823858e4d9-profile_image-70x70.png"]
+               * @gqlArg `width: Int [50, 70, 300, 28, 150]`
+               */
+              profileImageURL: string;
               __typename: "User";
             };
           });
@@ -69160,6 +69393,23 @@ export type ChannelLayoutData = {
 };
 
 export type ChannelLayoutResponse = QueryResponse<ChannelLayoutData, "ChannelLayout">;
+
+export type ChannelLeaderboardNudgesVariables = {
+  channelID: ID;
+  sessionID: ID;
+};
+
+export type ChannelLeaderboardNudgesData = {
+  leaderboardNudges:
+    | null
+    | ChannelLeaderboardNudges_LeaderboardNudges
+    | ChannelLeaderboardNudges_LeaderboardNudges[];
+};
+
+export type ChannelLeaderboardNudgesResponse = QueryResponse<
+  ChannelLeaderboardNudgesData,
+  "ChannelLeaderboardNudges"
+>;
 
 export type ChannelLeaderboardsVariables = {
   channelID: ID;
@@ -80074,6 +80324,152 @@ export type DirectoryGameRedirectData = {
 export type DirectoryGameRedirectResponse = QueryResponse<
   DirectoryGameRedirectData,
   "DirectoryGameRedirect"
+>;
+
+export type DirectoryGTATempClipsShelfVariables = {
+  slug: string;
+  /** @format int32 */
+  limit?: null | number;
+  criteria?: null | GameClipsInput;
+};
+
+export type DirectoryGTATempClipsShelfData = {
+  game: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["509672"]
+     */
+    id: ID;
+    clips: null | {
+      edges: {
+        node:
+          | null
+          | (PreviewCardClip & {
+              broadcaster: null | {
+                /**
+                 * @pattern ^[0-9]+$
+                 * @example ["23161357"]
+                 */
+                id: ID;
+                self: null | {
+                  follower: null | {
+                    /**
+                     * @format date-time
+                     * @example ["2015-11-22T18:41:17Z", "2024-12-03T19:40:54Z"]
+                     */
+                    followedAt: string;
+                    __typename: "FollowerEdge";
+                  };
+                  __typename: "UserSelfConnection";
+                };
+                __typename: "User";
+              };
+            });
+        __typename: "ClipEdge";
+      }[];
+      __typename: "ClipConnection";
+    };
+    __typename: "Game";
+  };
+};
+
+export type DirectoryGTATempClipsShelfResponse = QueryResponse<
+  DirectoryGTATempClipsShelfData,
+  "Directory_GTATempClipsShelf"
+>;
+
+export type DirectoryGTATempStreamsShelfVariables = {
+  slug: string;
+  /** @format int32 */
+  limit?: null | number;
+  options?: null | GameStreamOptions;
+  /**
+   * @format int32
+   * @default 50
+   */
+  imageWidth?: null | number;
+};
+
+export type DirectoryGTATempStreamsShelfData = {
+  game: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["509672"]
+     */
+    id: ID;
+    streams: null | {
+      edges: {
+        node: null | GtaTempStreamsShelfStream;
+        trackingID: null | ID;
+        __typename: "StreamEdge";
+      }[];
+      __typename: "StreamConnection";
+    };
+    __typename: "Game";
+  };
+};
+
+export type DirectoryGTATempStreamsShelfResponse = QueryResponse<
+  DirectoryGTATempStreamsShelfData,
+  "Directory_GTATempStreamsShelf"
+>;
+
+export type DirectoryGTATempVideosShelfVariables = {
+  slug: string;
+  /** @format int32 */
+  limit?: null | number;
+  videoSort?: null | VideoSort;
+  broadcastTypes: BroadcastType[];
+  /** @default true */
+  includePreviewBlur?: null | boolean;
+};
+
+export type DirectoryGTATempVideosShelfData = {
+  game: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["509672"]
+     */
+    id: ID;
+    videos: {
+      edges: (VideoEdge & {
+        node: null | {
+          /**
+           * @pattern ^[0-9]+$
+           * @example ["2323270866"]
+           */
+          id: ID;
+          owner: null | {
+            /**
+             * @pattern ^[0-9]+$
+             * @example ["23161357"]
+             */
+            id: ID;
+            self: null | {
+              follower: null | {
+                /**
+                 * @format date-time
+                 * @example ["2015-11-22T18:41:17Z", "2024-12-03T19:40:54Z"]
+                 */
+                followedAt: string;
+                __typename: "FollowerEdge";
+              };
+              __typename: "UserSelfConnection";
+            };
+            __typename: "User";
+          };
+          __typename: "Video";
+        };
+      })[];
+      __typename: "VideoConnection";
+    };
+    __typename: "Game";
+  };
+};
+
+export type DirectoryGTATempVideosShelfResponse = QueryResponse<
+  DirectoryGTATempVideosShelfData,
+  "Directory_GTATempVideosShelf"
 >;
 
 export type DirectoryPageGameVariables = {
@@ -92203,6 +92599,164 @@ export type MwebGamesDirectoryQueryResponse = QueryResponse<
   "MwebGamesDirectoryQuery"
 >;
 
+export type MwebGTATempClipsShelfVariables = {
+  slug: string;
+  /** @format int32 */
+  limit?: null | number;
+  criteria?: null | GameClipsInput;
+};
+
+export type MwebGTATempClipsShelfData = {
+  game: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["509672"]
+     */
+    id: ID;
+    clips: null | {
+      edges: {
+        node:
+          | null
+          | (MwebClipCard & {
+              broadcaster: null | {
+                /**
+                 * @pattern ^[0-9]+$
+                 * @example ["23161357"]
+                 */
+                id: ID;
+                self: null | {
+                  follower: null | {
+                    /**
+                     * @format date-time
+                     * @example ["2015-11-22T18:41:17Z", "2024-12-03T19:40:54Z"]
+                     */
+                    followedAt: string;
+                    __typename: "FollowerEdge";
+                  };
+                  __typename: "UserSelfConnection";
+                };
+                __typename: "User";
+              };
+            });
+        __typename: "ClipEdge";
+      }[];
+      __typename: "ClipConnection";
+    };
+    __typename: "Game";
+  };
+};
+
+export type MwebGTATempClipsShelfResponse = QueryResponse<
+  MwebGTATempClipsShelfData,
+  "Mweb_GTATempClipsShelf"
+>;
+
+export type MwebGTATempStreamsShelfVariables = {
+  slug: string;
+  /** @format int32 */
+  limit?: null | number;
+  options?: null | GameStreamOptions;
+};
+
+export type MwebGTATempStreamsShelfData = {
+  game: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["509672"]
+     */
+    id: ID;
+    streams: null | {
+      edges: {
+        node:
+          | null
+          | (MwebStreamCard & {
+              broadcaster: null | {
+                /**
+                 * @pattern ^[0-9]+$
+                 * @example ["23161357"]
+                 */
+                id: ID;
+                self: null | {
+                  follower: null | {
+                    /**
+                     * @format date-time
+                     * @example ["2015-11-22T18:41:17Z", "2024-12-03T19:40:54Z"]
+                     */
+                    followedAt: string;
+                    __typename: "FollowerEdge";
+                  };
+                  __typename: "UserSelfConnection";
+                };
+                __typename: "User";
+              };
+            });
+        trackingID: null | ID;
+        __typename: "StreamEdge";
+      }[];
+      __typename: "StreamConnection";
+    };
+    __typename: "Game";
+  };
+};
+
+export type MwebGTATempStreamsShelfResponse = QueryResponse<
+  MwebGTATempStreamsShelfData,
+  "Mweb_GTATempStreamsShelf"
+>;
+
+export type MwebGTATempVideosShelfVariables = {
+  slug: string;
+  /** @format int32 */
+  limit?: null | number;
+  videoSort?: null | VideoSort;
+  broadcastTypes: BroadcastType[];
+};
+
+export type MwebGTATempVideosShelfData = {
+  game: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["509672"]
+     */
+    id: ID;
+    videos: {
+      edges: {
+        node:
+          | null
+          | (MwebVideoCard & {
+              owner: null | {
+                /**
+                 * @pattern ^[0-9]+$
+                 * @example ["23161357"]
+                 */
+                id: ID;
+                self: null | {
+                  follower: null | {
+                    /**
+                     * @format date-time
+                     * @example ["2015-11-22T18:41:17Z", "2024-12-03T19:40:54Z"]
+                     */
+                    followedAt: string;
+                    __typename: "FollowerEdge";
+                  };
+                  __typename: "UserSelfConnection";
+                };
+                __typename: "User";
+              };
+            });
+        __typename: "VideoEdge";
+      }[];
+      __typename: "VideoConnection";
+    };
+    __typename: "Game";
+  };
+};
+
+export type MwebGTATempVideosShelfResponse = QueryResponse<
+  MwebGTATempVideosShelfData,
+  "Mweb_GTATempVideosShelf"
+>;
+
 export type MwebLiveStreamTimeVariables = { login: string };
 
 export type MwebLiveStreamTimeData = {
@@ -92232,6 +92786,35 @@ export type MwebLiveStreamTimeData = {
 export type MwebLiveStreamTimeResponse = QueryResponse<
   MwebLiveStreamTimeData,
   "MwebLiveStreamTime"
+>;
+
+export type MwebOfflineHomeClipsQueryVariables = {
+  login: string;
+  /** @format int32 */
+  first: number;
+  shouldFilterByDiscoverySetting: boolean;
+};
+
+export type MwebOfflineHomeClipsQueryData = {
+  user: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["23161357"]
+     */
+    id: ID;
+    /** @aliasFor clips */
+    lastWeek: null | MwebOfflineHomeClipsPeriod;
+    /** @aliasFor clips */
+    lastMonth: null | MwebOfflineHomeClipsPeriod;
+    /** @aliasFor clips */
+    allTime: null | MwebOfflineHomeClipsPeriod;
+    __typename: "User";
+  };
+};
+
+export type MwebOfflineHomeClipsQueryResponse = QueryResponse<
+  MwebOfflineHomeClipsQueryData,
+  "MwebOfflineHomeClips_Query"
 >;
 
 export type MwebPrimeLinkQueryData = {
@@ -100545,6 +101128,48 @@ export type SocialAuthStatusData = {
 
 export type SocialAuthStatusResponse = QueryResponse<SocialAuthStatusData, "SocialAuthStatus">;
 
+export type SocialGiftSubsFollowCTAVariables = { channelID: ID };
+
+export type SocialGiftSubsFollowCTAData = {
+  user: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["23161357"]
+     */
+    id: ID;
+    publicSubReferral:
+      | null
+      | SocialGiftSubsFollowCTA_UserPublicSubReferral
+      | SocialGiftSubsFollowCTA_UserPublicSubReferral[];
+    __typename: "User";
+  };
+};
+
+export type SocialGiftSubsFollowCTAResponse = QueryResponse<
+  SocialGiftSubsFollowCTAData,
+  "SocialGiftSubsFollowCTA"
+>;
+
+export type SocialGiftSubsReferralsData = {
+  currentUser: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["23161357"]
+     */
+    id: ID;
+    subReferrals:
+      | null
+      | SocialGiftSubsReferrals_UserSubReferrals
+      | SocialGiftSubsReferrals_UserSubReferrals[];
+    __typename: "User";
+  };
+};
+
+export type SocialGiftSubsReferralsResponse = QueryResponse<
+  SocialGiftSubsReferralsData,
+  "SocialGiftSubsReferrals"
+>;
+
 export type SocialMediaVariables = { channelID: ID };
 
 export type SocialMediaData = {
@@ -104519,6 +105144,11 @@ export type SupportPanelSubscriptionDetailsData = {
             /** @format date-time */
             dunningPeriodEndsAt: null | string;
             isFreeTrial: boolean;
+            /**
+             * ⚠️ Low confidence about: nullable
+             * @format date-time
+             */
+            startsAt: null | string;
           });
       /** @aliasFor subscriptionTenure */
       cumulativeTenure: null | {
@@ -114544,6 +115174,20 @@ export type CreateClipCommentData = {
 
 export type CreateClipCommentResponse = QueryResponse<CreateClipCommentData, "CreateClipComment">;
 
+export type CreateCollaborationGroupVariables = { input: EnumOrInput };
+
+export type CreateCollaborationGroupData = {
+  createCollaborationGroup:
+    | null
+    | CreateCollaborationGroup_CreateCollaborationGroup
+    | CreateCollaborationGroup_CreateCollaborationGroup[];
+};
+
+export type CreateCollaborationGroupResponse = QueryResponse<
+  CreateCollaborationGroupData,
+  "CreateCollaborationGroup"
+>;
+
 export type CreateCommunityPointsCommunityGoalVariables = { input: EnumOrInput };
 
 export type CreateCommunityPointsCommunityGoalData = {
@@ -117181,6 +117825,20 @@ export type GenerateSessionInviteLinkData = {
 export type GenerateSessionInviteLinkResponse = QueryResponse<
   GenerateSessionInviteLinkData,
   "GenerateSessionInviteLink"
+>;
+
+export type GenerateSubReferralVariables = { input: EnumOrInput };
+
+export type GenerateSubReferralData = {
+  generateSubReferral:
+    | null
+    | GenerateSubReferral_GenerateSubReferral
+    | GenerateSubReferral_GenerateSubReferral[];
+};
+
+export type GenerateSubReferralResponse = QueryResponse<
+  GenerateSubReferralData,
+  "GenerateSubReferral"
 >;
 
 export type GetAlertAssetUploadConfigurationVariables = { input: EnumOrInput };
@@ -122549,6 +123207,7 @@ export type QueryVariablesMap = {
   AccessIsMonetizedQuery: AccessIsMonetizedQueryVariables;
   AccessIsPartnerQuery: AccessIsPartnerQueryVariables;
   AccessIsSiteAdminQuery: AccessIsSiteAdminQueryVariables;
+  AccessIsSocialGiftSubsEligible: Record<string, never>;
   AccessIsStreamDelayEnabledQuery: AccessIsStreamDelayEnabledQueryVariables;
   AccessIsSubscriptionsEnabledQuery: AccessIsSubscriptionsEnabledQueryVariables;
   AccessMaxAdBreakLengthQuery: AccessMaxAdBreakLengthQueryVariables;
@@ -122760,6 +123419,7 @@ export type QueryVariablesMap = {
   ChannelHomeHasRecaps: ChannelHomeHasRecapsVariables;
   ChannelInfo: ChannelInfoVariables;
   ChannelLayout: ChannelLayoutVariables;
+  ChannelLeaderboardNudges: ChannelLeaderboardNudgesVariables;
   ChannelLeaderboards: ChannelLeaderboardsVariables;
   ChannelPage_ChannelInfoBar_User: ChannelPageChannelInfoBarUserVariables;
   ChannelPage__ChannelViewersCount: ChannelPageChannelViewersCountVariables;
@@ -123081,6 +123741,9 @@ export type QueryVariablesMap = {
   DirectoryEvent_Vertical: DirectoryEventVerticalVariables;
   DirectoryGameClips_Pageview: DirectoryGameClipsPageviewVariables;
   DirectoryGameRedirect: DirectoryGameRedirectVariables;
+  Directory_GTATempClipsShelf: DirectoryGTATempClipsShelfVariables;
+  Directory_GTATempStreamsShelf: DirectoryGTATempStreamsShelfVariables;
+  Directory_GTATempVideosShelf: DirectoryGTATempVideosShelfVariables;
   DirectoryPage_Game: DirectoryPageGameVariables;
   DirectoryRoot_Directory: DirectoryRootDirectoryVariables;
   DirectoryUpcomingPage: DirectoryUpcomingPageVariables;
@@ -123456,7 +124119,11 @@ export type QueryVariablesMap = {
   MwebFollowingPageQuery: MwebFollowingPageQueryVariables;
   MwebFrontPageQuery: MwebFrontPageQueryVariables;
   MwebGamesDirectoryQuery: MwebGamesDirectoryQueryVariables;
+  Mweb_GTATempClipsShelf: MwebGTATempClipsShelfVariables;
+  Mweb_GTATempStreamsShelf: MwebGTATempStreamsShelfVariables;
+  Mweb_GTATempVideosShelf: MwebGTATempVideosShelfVariables;
   MwebLiveStreamTime: MwebLiveStreamTimeVariables;
+  MwebOfflineHomeClips_Query: MwebOfflineHomeClipsQueryVariables;
   MwebPrimeLinkQuery: Record<string, never>;
   MWebSkylineViewerSheet: MWebSkylineViewerSheetVariables;
   MwebSubfeedByIdQuery: MwebSubfeedByIdQueryVariables;
@@ -123704,6 +124371,8 @@ export type QueryVariablesMap = {
   Snackbar_AdProperties: SnackbarAdPropertiesVariables;
   SnoozeAdsQuickAction_AdProperties: SnoozeAdsQuickActionAdPropertiesVariables;
   SocialAuthStatus: Record<string, never>;
+  SocialGiftSubsFollowCTA: SocialGiftSubsFollowCTAVariables;
+  SocialGiftSubsReferrals: Record<string, never>;
   SocialMedia: SocialMediaVariables;
   SpendableBalance: Record<string, never>;
   SpendableBalanceHistory: SpendableBalanceHistoryVariables;
@@ -124211,6 +124880,7 @@ export type QueryVariablesMap = {
   CreateChannelRoleLinkKey: CreateChannelRoleLinkKeyVariables;
   CreateCharityCampaign: CreateCharityCampaignVariables;
   CreateClipComment: CreateClipCommentVariables;
+  CreateCollaborationGroup: CreateCollaborationGroupVariables;
   CreateCommunityPointsCommunityGoal: CreateCommunityPointsCommunityGoalVariables;
   CreateCommunityPointsImageUploadInfo: CreateCommunityPointsImageUploadInfoVariables;
   CreateCreatorCoachReminder: CreateCreatorCoachReminderVariables;
@@ -124412,6 +125082,7 @@ export type QueryVariablesMap = {
   GenerateReportURL: GenerateReportURLVariables;
   GenerateSecondFactorQRCode: GenerateSecondFactorQRCodeVariables;
   GenerateSessionInviteLink: GenerateSessionInviteLinkVariables;
+  GenerateSubReferral: GenerateSubReferralVariables;
   GetAlertAssetUploadConfiguration: GetAlertAssetUploadConfigurationVariables;
   GetBrowserBackgroundUploadConfiguration: GetBrowserBackgroundUploadConfigurationVariables;
   GetKeyBatchDownloadURL: GetKeyBatchDownloadURLVariables;
@@ -124837,6 +125508,7 @@ export type QueryResponseMap = {
   AccessIsMonetizedQuery: AccessIsMonetizedQueryResponse;
   AccessIsPartnerQuery: AccessIsPartnerQueryResponse;
   AccessIsSiteAdminQuery: AccessIsSiteAdminQueryResponse;
+  AccessIsSocialGiftSubsEligible: AccessIsSocialGiftSubsEligibleResponse;
   AccessIsStreamDelayEnabledQuery: AccessIsStreamDelayEnabledQueryResponse;
   AccessIsSubscriptionsEnabledQuery: AccessIsSubscriptionsEnabledQueryResponse;
   AccessMaxAdBreakLengthQuery: AccessMaxAdBreakLengthQueryResponse;
@@ -125048,6 +125720,7 @@ export type QueryResponseMap = {
   ChannelHomeHasRecaps: ChannelHomeHasRecapsResponse;
   ChannelInfo: ChannelInfoResponse;
   ChannelLayout: ChannelLayoutResponse;
+  ChannelLeaderboardNudges: ChannelLeaderboardNudgesResponse;
   ChannelLeaderboards: ChannelLeaderboardsResponse;
   ChannelPage_ChannelInfoBar_User: ChannelPageChannelInfoBarUserResponse;
   ChannelPage__ChannelViewersCount: ChannelPageChannelViewersCountResponse;
@@ -125369,6 +126042,9 @@ export type QueryResponseMap = {
   DirectoryEvent_Vertical: DirectoryEventVerticalResponse;
   DirectoryGameClips_Pageview: DirectoryGameClipsPageviewResponse;
   DirectoryGameRedirect: DirectoryGameRedirectResponse;
+  Directory_GTATempClipsShelf: DirectoryGTATempClipsShelfResponse;
+  Directory_GTATempStreamsShelf: DirectoryGTATempStreamsShelfResponse;
+  Directory_GTATempVideosShelf: DirectoryGTATempVideosShelfResponse;
   DirectoryPage_Game: DirectoryPageGameResponse;
   DirectoryRoot_Directory: DirectoryRootDirectoryResponse;
   DirectoryUpcomingPage: DirectoryUpcomingPageResponse;
@@ -125744,7 +126420,11 @@ export type QueryResponseMap = {
   MwebFollowingPageQuery: MwebFollowingPageQueryResponse;
   MwebFrontPageQuery: MwebFrontPageQueryResponse;
   MwebGamesDirectoryQuery: MwebGamesDirectoryQueryResponse;
+  Mweb_GTATempClipsShelf: MwebGTATempClipsShelfResponse;
+  Mweb_GTATempStreamsShelf: MwebGTATempStreamsShelfResponse;
+  Mweb_GTATempVideosShelf: MwebGTATempVideosShelfResponse;
   MwebLiveStreamTime: MwebLiveStreamTimeResponse;
+  MwebOfflineHomeClips_Query: MwebOfflineHomeClipsQueryResponse;
   MwebPrimeLinkQuery: MwebPrimeLinkQueryResponse;
   MWebSkylineViewerSheet: MWebSkylineViewerSheetResponse;
   MwebSubfeedByIdQuery: MwebSubfeedByIdQueryResponse;
@@ -125992,6 +126672,8 @@ export type QueryResponseMap = {
   Snackbar_AdProperties: SnackbarAdPropertiesResponse;
   SnoozeAdsQuickAction_AdProperties: SnoozeAdsQuickActionAdPropertiesResponse;
   SocialAuthStatus: SocialAuthStatusResponse;
+  SocialGiftSubsFollowCTA: SocialGiftSubsFollowCTAResponse;
+  SocialGiftSubsReferrals: SocialGiftSubsReferralsResponse;
   SocialMedia: SocialMediaResponse;
   SpendableBalance: SpendableBalanceResponse;
   SpendableBalanceHistory: SpendableBalanceHistoryResponse;
@@ -126499,6 +127181,7 @@ export type QueryResponseMap = {
   CreateChannelRoleLinkKey: CreateChannelRoleLinkKeyResponse;
   CreateCharityCampaign: CreateCharityCampaignResponse;
   CreateClipComment: CreateClipCommentResponse;
+  CreateCollaborationGroup: CreateCollaborationGroupResponse;
   CreateCommunityPointsCommunityGoal: CreateCommunityPointsCommunityGoalResponse;
   CreateCommunityPointsImageUploadInfo: CreateCommunityPointsImageUploadInfoResponse;
   CreateCreatorCoachReminder: CreateCreatorCoachReminderResponse;
@@ -126700,6 +127383,7 @@ export type QueryResponseMap = {
   GenerateReportURL: GenerateReportURLResponse;
   GenerateSecondFactorQRCode: GenerateSecondFactorQRCodeResponse;
   GenerateSessionInviteLink: GenerateSessionInviteLinkResponse;
+  GenerateSubReferral: GenerateSubReferralResponse;
   GetAlertAssetUploadConfiguration: GetAlertAssetUploadConfigurationResponse;
   GetBrowserBackgroundUploadConfiguration: GetBrowserBackgroundUploadConfigurationResponse;
   GetKeyBatchDownloadURL: GetKeyBatchDownloadURLResponse;
