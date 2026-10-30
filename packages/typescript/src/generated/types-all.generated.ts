@@ -5909,8 +5909,6 @@ export type BitsThresholdSettingsFormGetBitsThresholdSettings_UserSettingsCheerC
 
 /** ℹ️ Not real Twitch type name */
 export type BitsThresholdSettingsFormGetBitsThresholdSettings_UserSettingsCheerPinnedCheers = {
-  /** ⚠️ Low confidence about: nullable */
-  isEnabled: null | boolean;
   /**
    * ⚠️ Low confidence about: nullable
    * @format uint32
@@ -5918,33 +5916,6 @@ export type BitsThresholdSettingsFormGetBitsThresholdSettings_UserSettingsCheerP
   minBits: null | number;
   __typename: string;
 };
-
-/** ℹ️ Not real Twitch type name */
-export type BitsThresholdSettingsFormSetIsPinnedCheersEnabled_UpdateCheerPartnerSettings = {
-  cheer:
-    | null
-    | BitsThresholdSettingsFormSetIsPinnedCheersEnabled_UpdateCheerPartnerSettingsCheer
-    | BitsThresholdSettingsFormSetIsPinnedCheersEnabled_UpdateCheerPartnerSettingsCheer[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type BitsThresholdSettingsFormSetIsPinnedCheersEnabled_UpdateCheerPartnerSettingsCheer = {
-  id: ID;
-  pinnedCheers:
-    | null
-    | BitsThresholdSettingsFormSetIsPinnedCheersEnabled_UpdateCheerPartnerSettingsCheerPinnedCheers
-    | BitsThresholdSettingsFormSetIsPinnedCheersEnabled_UpdateCheerPartnerSettingsCheerPinnedCheers[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type BitsThresholdSettingsFormSetIsPinnedCheersEnabled_UpdateCheerPartnerSettingsCheerPinnedCheers =
-  {
-    /** ⚠️ Low confidence about: nullable */
-    isEnabled: null | boolean;
-    __typename: string;
-  };
 
 /** ℹ️ Not real Twitch type name */
 export type BitsThresholdSettingsFormSetMinBitsPerEmote_UpdateCheerPartnerSettings = {
@@ -5992,6 +5963,10 @@ export type BitsThresholdSettingsFormSetMinBitsToCheer_UpdateCheerPartnerSetting
     | null
     | BitsThresholdSettingsFormSetMinBitsToCheer_UpdateCheerPartnerSettingsCheerChatMessage
     | BitsThresholdSettingsFormSetMinBitsToCheer_UpdateCheerPartnerSettingsCheerChatMessage[];
+  pinnedCheers:
+    | null
+    | BitsThresholdSettingsFormSetMinBitsToCheer_UpdateCheerPartnerSettingsCheerPinnedCheers
+    | BitsThresholdSettingsFormSetMinBitsToCheer_UpdateCheerPartnerSettingsCheerPinnedCheers[];
   __typename: string;
 };
 
@@ -6007,33 +5982,15 @@ export type BitsThresholdSettingsFormSetMinBitsToCheer_UpdateCheerPartnerSetting
   };
 
 /** ℹ️ Not real Twitch type name */
-export type BitsThresholdSettingsFormSetMinBitsToPin_UpdateCheerPartnerSettings = {
-  cheer:
-    | null
-    | BitsThresholdSettingsFormSetMinBitsToPin_UpdateCheerPartnerSettingsCheer
-    | BitsThresholdSettingsFormSetMinBitsToPin_UpdateCheerPartnerSettingsCheer[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type BitsThresholdSettingsFormSetMinBitsToPin_UpdateCheerPartnerSettingsCheer = {
-  id: ID;
-  pinnedCheers:
-    | null
-    | BitsThresholdSettingsFormSetMinBitsToPin_UpdateCheerPartnerSettingsCheerPinnedCheers
-    | BitsThresholdSettingsFormSetMinBitsToPin_UpdateCheerPartnerSettingsCheerPinnedCheers[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type BitsThresholdSettingsFormSetMinBitsToPin_UpdateCheerPartnerSettingsCheerPinnedCheers = {
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format uint32
-   */
-  minBits: null | number;
-  __typename: string;
-};
+export type BitsThresholdSettingsFormSetMinBitsToCheer_UpdateCheerPartnerSettingsCheerPinnedCheers =
+  {
+    /**
+     * ⚠️ Low confidence about: nullable
+     * @format uint32
+     */
+    minBits: null | number;
+    __typename: string;
+  };
 
 export type BitsTransaction = {
   id: ID;
@@ -7727,6 +7684,13 @@ export type CategoryRatingFragment = {
   __typename: "CategoryRating";
 };
 
+/** ℹ️ Not real Twitch type name */
+export type CategoryRecaps_RecapSelf = {
+  watchedStatus: UnknownValue;
+  clipResumeIndex: UnknownValue;
+  __typename: string;
+};
+
 export type CategoryTagFragment = {
   /**
    * @format uuid
@@ -8382,7 +8346,7 @@ export type ChannelFollowers = {
      * @format uint32
      * @example [0, 2430015, 2459534, 522430, 2471025, 2380069]
      */
-    totalCount: number;
+    totalCount: null | number;
     __typename: "FollowerConnection";
   };
   __typename: "User";
@@ -14482,7 +14446,7 @@ export type ContentClipsManagerClip = {
        * @format uint32
        * @example [0, 2430015, 2459534, 522430, 2471025, 2380069]
        */
-      totalCount: number;
+      totalCount: null | number;
       __typename: "FollowerConnection";
     };
     stream: null | {
@@ -29147,6 +29111,123 @@ export type GetRecapAssetUploadConfig_GetRecapAssetUploadConfig = {
 };
 
 /** ℹ️ Not real Twitch type name */
+export type GetReceivedCollaborationInvites_ReceivedCollaborationInvites = {
+  id: ID;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format date-time
+   */
+  createdAt: null | string;
+  sender:
+    | null
+    | GetReceivedCollaborationInvites_ReceivedCollaborationInvitesSender
+    | GetReceivedCollaborationInvites_ReceivedCollaborationInvitesSender[];
+  group:
+    | null
+    | GetReceivedCollaborationInvites_ReceivedCollaborationInvitesGroup
+    | GetReceivedCollaborationInvites_ReceivedCollaborationInvitesGroup[];
+  __typename: string;
+};
+
+/** ℹ️ Not real Twitch type name */
+export type GetReceivedCollaborationInvites_ReceivedCollaborationInvitesGroup = {
+  id: ID;
+  collaborators: null | Collaborator;
+  sharedChat:
+    | null
+    | GetReceivedCollaborationInvites_ReceivedCollaborationInvitesGroupSharedChat
+    | GetReceivedCollaborationInvites_ReceivedCollaborationInvitesGroupSharedChat[];
+  guestStar:
+    | null
+    | GetReceivedCollaborationInvites_ReceivedCollaborationInvitesGroupGuestStar
+    | GetReceivedCollaborationInvites_ReceivedCollaborationInvitesGroupGuestStar[];
+  __typename: string;
+};
+
+/** ℹ️ Not real Twitch type name */
+export type GetReceivedCollaborationInvites_ReceivedCollaborationInvitesGroupGuestStar = {
+  id: ID;
+  guests:
+    | null
+    | GetReceivedCollaborationInvites_ReceivedCollaborationInvitesGroupGuestStarGuests
+    | GetReceivedCollaborationInvites_ReceivedCollaborationInvitesGroupGuestStarGuests[];
+  __typename: string;
+};
+
+/** ℹ️ Not real Twitch type name */
+export type GetReceivedCollaborationInvites_ReceivedCollaborationInvitesGroupGuestStarGuests = {
+  /** @aliasFor id */
+  slotID: ID;
+  user:
+    | null
+    | GetReceivedCollaborationInvites_ReceivedCollaborationInvitesGroupGuestStarGuestsUser
+    | GetReceivedCollaborationInvites_ReceivedCollaborationInvitesGroupGuestStarGuestsUser[];
+  __typename: string;
+};
+
+/** ℹ️ Not real Twitch type name */
+export type GetReceivedCollaborationInvites_ReceivedCollaborationInvitesGroupGuestStarGuestsUser = {
+  id: ID;
+  __typename: string;
+};
+
+/** ℹ️ Not real Twitch type name */
+export type GetReceivedCollaborationInvites_ReceivedCollaborationInvitesGroupSharedChat = {
+  id: ID;
+  status: UnknownValue;
+  host:
+    | null
+    | GetReceivedCollaborationInvites_ReceivedCollaborationInvitesGroupSharedChatHost
+    | GetReceivedCollaborationInvites_ReceivedCollaborationInvitesGroupSharedChatHost[];
+  participants:
+    | null
+    | GetReceivedCollaborationInvites_ReceivedCollaborationInvitesGroupSharedChatParticipants
+    | GetReceivedCollaborationInvites_ReceivedCollaborationInvitesGroupSharedChatParticipants[];
+  __typename: string;
+};
+
+/** ℹ️ Not real Twitch type name */
+export type GetReceivedCollaborationInvites_ReceivedCollaborationInvitesGroupSharedChatHost = {
+  id: ID;
+  __typename: string;
+};
+
+/** ℹ️ Not real Twitch type name */
+export type GetReceivedCollaborationInvites_ReceivedCollaborationInvitesGroupSharedChatParticipants =
+  {
+    id: ID;
+    channel:
+      | null
+      | GetReceivedCollaborationInvites_ReceivedCollaborationInvitesGroupSharedChatParticipantsChannel
+      | GetReceivedCollaborationInvites_ReceivedCollaborationInvitesGroupSharedChatParticipantsChannel[];
+    status: UnknownValue;
+    __typename: string;
+  };
+
+/** ℹ️ Not real Twitch type name */
+export type GetReceivedCollaborationInvites_ReceivedCollaborationInvitesGroupSharedChatParticipantsChannel =
+  {
+    id: ID;
+    __typename: string;
+  };
+
+/** ℹ️ Not real Twitch type name */
+export type GetReceivedCollaborationInvites_ReceivedCollaborationInvitesSender = {
+  id: ID;
+  /** ⚠️ Low confidence about: nullable */
+  login: null | string;
+  /** ⚠️ Low confidence about: nullable */
+  displayName: null | string;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uri
+   * @gqlArg `width: Int [300]`
+   */
+  profileImageURL: null | string;
+  __typename: string;
+};
+
+/** ℹ️ Not real Twitch type name */
 export type GetRequestToJoinQueue_RequestToJoinQueue = {
   id: ID;
   host:
@@ -31943,7 +32024,7 @@ export type InsightsUserFragment = {
      * @format uint32
      * @example [0, 2430015, 2459534, 522430, 2471025, 2380069]
      */
-    totalCount: number;
+    totalCount: null | number;
     __typename: "FollowerConnection";
   };
   __typename: "User";
@@ -34740,6 +34821,22 @@ export type MwebChannelFeaturedCardVideoFragment = {
   __typename: "Video";
 };
 
+export type MwebChannelHomeClipPreview = {
+  /**
+   * @pattern ^[0-9]+$
+   * @example ["3942697259"]
+   */
+  id: ID;
+  contentClassificationLabels:
+    | null
+    | {
+        /** @example ["MatureGame", "ProfanityVulgarity"] */
+        id: ID;
+        __typename: "ContentClassificationLabel";
+      }[];
+  __typename: "Clip";
+};
+
 export type MwebChannelHomePageCategoryShelfItemsFragment = MwebGameCard & {
   /**
    * @pattern ^[0-9]+$
@@ -34791,7 +34888,7 @@ export type MwebChannelHomePageChannelFragment = {
         type: string;
         /** @example ["Featured Clips", "Recent broadcasts", "Recent highlights and uploads", "All videos", "TwitchCon San Diego 2024", "TwitchCon Europe 2024", "Patch Notes"] */
         title: string;
-        items: (MwebVideoShelfItemsFragment & { __typename: "Clip" | "Video" })[];
+        items: null | (MwebVideoShelfItemsFragment & { __typename: "Clip" | "Video" })[];
         __typename: "VideoShelf";
       };
       __typename: "VideoShelfEdge";
@@ -35121,7 +35218,7 @@ export type MwebChannelVideosPageChannelFragment = MwebChannelVideosPageVideoLis
         title: string;
         /** @example ["TOP_CLIPS", "LATEST_BROADCASTS", "LATEST_NON_BROADCASTS", "ALL_VIDEOS", "COLLECTION"] */
         type: string;
-        items: (MwebVideoShelfItemsFragment & { __typename: "Clip" | "Video" })[];
+        items: null | (MwebVideoShelfItemsFragment & { __typename: "Clip" | "Video" })[];
         __typename: "VideoShelf";
       };
       __typename: "VideoShelfEdge";
@@ -35500,7 +35597,7 @@ export type MwebGamesDirectoryEdge = {
 
 export type MwebOfflineHomeClipsPeriod = {
   edges: {
-    node: null | MwebClipCard;
+    node: null | (MwebClipCard & MwebChannelHomeClipPreview);
     __typename: "ClipEdge";
   }[];
   __typename: "ClipConnection";
@@ -36373,7 +36470,7 @@ export type NotificationSettingsFollowEdge = {
        * @format uint32
        * @example [0, 2430015, 2459534, 522430, 2471025, 2380069]
        */
-      totalCount: number;
+      totalCount: null | number;
       __typename: "FollowerConnection";
     };
     roles: null | {
@@ -36571,7 +36668,7 @@ export type OnboardingChannelFragment = {
      * @format uint32
      * @example [0, 2430015, 2459534, 522430, 2471025, 2380069]
      */
-    totalCount: number;
+    totalCount: null | number;
     __typename: "FollowerConnection";
   };
   /** @example ["lirik", "twitch", "cdprojektred", "forsen", "tickett_", "st1mgreeen", "lipton_18"] */
@@ -41381,6 +41478,7 @@ export type RecapsPlayerRecapFields = {
    * @format uint32
    */
   viewCount: null | number;
+  self: null | RecapsPlayerRecapFields_RecapSelf | RecapsPlayerRecapFields_RecapSelf[];
   clips: null | RecapsPlayerRecapFields_RecapClips | RecapsPlayerRecapFields_RecapClips[];
   __typename: "Recap";
 };
@@ -41454,6 +41552,13 @@ export type RecapsPlayerRecapFields_RecapClipsClipCurator = {
   id: ID;
   /** ⚠️ Low confidence about: nullable */
   login: null | string;
+  __typename: string;
+};
+
+/** ℹ️ Not real Twitch type name */
+export type RecapsPlayerRecapFields_RecapSelf = {
+  watchedStatus: UnknownValue;
+  clipResumeIndex: UnknownValue;
   __typename: string;
 };
 
@@ -43836,7 +43941,7 @@ export type SearchForUserFragment = {
      * @format uint32
      * @example [0, 2430015, 2459534, 522430, 2471025, 2380069]
      */
-    totalCount: number;
+    totalCount: null | number;
     __typename: "FollowerConnection";
   };
   /**
@@ -44636,7 +44741,7 @@ export type SearchStreamerResult = {
      * @format uint32
      * @example [0, 2430015, 2459534, 522430, 2471025, 2380069]
      */
-    totalCount: number;
+    totalCount: null | number;
     __typename: "FollowerConnection";
   };
   __typename: "User";
@@ -47808,6 +47913,29 @@ export type SocialGiftSubsFollowCTA_UserPublicSubReferral = {
 };
 
 /** ℹ️ Not real Twitch type name */
+export type SocialGiftSubsRedemptions_UserSubRedemptions = {
+  id: ID;
+  /** ⚠️ Low confidence about: nullable */
+  redeemerChannelName: null | string;
+  redeemer:
+    | null
+    | SocialGiftSubsRedemptions_UserSubRedemptionsRedeemer
+    | SocialGiftSubsRedemptions_UserSubRedemptionsRedeemer[];
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format date-time
+   */
+  updatedAt: null | string;
+  __typename: string;
+};
+
+/** ℹ️ Not real Twitch type name */
+export type SocialGiftSubsRedemptions_UserSubRedemptionsRedeemer = {
+  id: ID;
+  __typename: string;
+};
+
+/** ℹ️ Not real Twitch type name */
 export type SocialGiftSubsReferrals_UserSubReferrals = {
   id: ID;
   code: UnknownValue;
@@ -50974,7 +51102,7 @@ export type StreamSummaryClipFragment = {
        * @format uint32
        * @example [0, 2430015, 2459534, 522430, 2471025, 2380069]
        */
-      totalCount: number;
+      totalCount: null | number;
       __typename: "FollowerConnection";
     };
     stream: null | {
@@ -59356,7 +59484,7 @@ export type UpdatedShelf = {
     };
     __typename: "Collection";
   };
-  items: (ShelfPreviewCardClip | PreviewCardVideo)[];
+  items: null | (ShelfPreviewCardClip | PreviewCardVideo)[];
   __typename: "VideoShelf";
 };
 
@@ -61194,7 +61322,7 @@ export type VideoShelfEdge = {
     /** @example ["TOP_CLIPS", "LATEST_BROADCASTS", "LATEST_NON_BROADCASTS", "ALL_VIDEOS", "COLLECTION"] */
     type: string;
     collection: null | (PreviewCollection & { __typename: "Collection" });
-    items: (ShelfPreviewCardClip | PreviewCardVideo)[];
+    items: null | (ShelfPreviewCardClip | PreviewCardVideo)[];
     __typename: "VideoShelf";
   };
   __typename: "VideoShelfEdge";
@@ -62443,7 +62571,7 @@ export type YourCommunityUserFragment = {
      * @format uint32
      * @example [0, 2430015, 2459534, 522430, 2471025, 2380069]
      */
-    totalCount: number;
+    totalCount: null | number;
     __typename: "FollowerConnection";
   };
   __typename: "User";
@@ -66719,7 +66847,7 @@ export type BroadcastFollowSubCountsData = {
        * @format uint32
        * @example [0, 2430015, 2459534, 522430, 2471025, 2380069]
        */
-      totalCount: number;
+      totalCount: null | number;
       __typename: "FollowerConnection";
     };
     subscriberScore: {
@@ -67460,6 +67588,7 @@ export type CategoryRecapsData = {
       node:
         | null
         | (RecapCardFields & {
+            self: null | CategoryRecaps_RecapSelf | CategoryRecaps_RecapSelf[];
             channel: null | {
               /**
                * @pattern ^[0-9]+$
@@ -68961,7 +69090,7 @@ export type ChannelAvatarData = {
        * @format uint32
        * @example [0, 2430015, 2459534, 522430, 2471025, 2380069]
        */
-      totalCount: number;
+      totalCount: null | number;
       __typename: "FollowerConnection";
     };
     roles: null | {
@@ -69524,7 +69653,7 @@ export type ChannelPageChannelInfoBarUserData = {
        * @format uint32
        * @example [0, 2430015, 2459534, 522430, 2471025, 2380069]
        */
-      totalCount: number;
+      totalCount: null | number;
       __typename: "FollowerConnection";
     };
     primaryTeam: null | {
@@ -70460,7 +70589,7 @@ export type ChannelRootAboutPanelData = {
        * @format uint32
        * @example [0, 2430015, 2459534, 522430, 2471025, 2380069]
        */
-      totalCount: number;
+      totalCount: null | number;
       __typename: "FollowerConnection";
     };
     roles: null | {
@@ -75032,6 +75161,32 @@ export type CollaborationPromoPrivateCalloutResponse = QueryResponse<
   "CollaborationPromoPrivateCallout"
 >;
 
+export type CollaborationStartIntroUserData = {
+  currentUser: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["23161357"]
+     */
+    id: ID;
+    /** @example ["lirik", "twitch", "cdprojektred", "forsen", "tickett_", "st1mgreeen", "lipton_18"] */
+    login: string;
+    /** @example ["Twitch", "CD PROJEKT RED", "LIRIK", "forsen", "ayuuexe", "xQc", "RSDragonwilds"] */
+    displayName: string;
+    /**
+     * @format uri
+     * @example ["https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-70x70.png", "https://static-cdn.jtvnw.net/jtv_user_pictures/3c3366d7-728a-4204-bfdd-7c823858e4d9-profile_image-70x70.png"]
+     * @gqlArg `width: Int [50, 70, 300, 28, 150]`
+     */
+    profileImageURL: string;
+    __typename: "User";
+  };
+};
+
+export type CollaborationStartIntroUserResponse = QueryResponse<
+  CollaborationStartIntroUserData,
+  "CollaborationStartIntroUser"
+>;
+
 export type CollaborationSummaryMetricsVariables = {
   channelID: ID;
   /** @format time */
@@ -75647,7 +75802,7 @@ export type CommonHooksSearchUsersData = {
            * @format uint32
            * @example [0, 2430015, 2459534, 522430, 2471025, 2380069]
            */
-          totalCount: number;
+          totalCount: null | number;
           __typename: "FollowerConnection";
         };
         lastBroadcast: null | {
@@ -84025,7 +84180,7 @@ export type FFZFetchUserData = {
        * @format uint32
        * @example [0, 2430015, 2459534, 522430, 2471025, 2380069]
        */
-      totalCount: number;
+      totalCount: null | number;
       __typename: "FollowerConnection";
     };
     roles: null | {
@@ -84929,7 +85084,7 @@ export type FollowerCountData = {
        * @format uint32
        * @example [0, 2430015, 2459534, 522430, 2471025, 2380069]
        */
-      totalCount: number;
+      totalCount: null | number;
       __typename: "FollowerConnection";
     };
     __typename: "User";
@@ -84994,7 +85149,7 @@ export type FollowersTileQueryData = {
        * @format uint32
        * @example [0, 2430015, 2459534, 522430, 2471025, 2380069]
        */
-      totalCount: number;
+      totalCount: null | number;
       __typename: "FollowerConnection";
     };
     __typename: "User";
@@ -85395,7 +85550,7 @@ export type FollowUserData = {
        * @format uint32
        * @example [0, 2430015, 2459534, 522430, 2471025, 2380069]
        */
-      totalCount: number;
+      totalCount: null | number;
       __typename: "FollowerConnection";
     };
     self: null | {
@@ -87294,6 +87449,18 @@ export type GetRawMediaData = { rawMedia: null | RawMedia };
 
 export type GetRawMediaResponse = QueryResponse<GetRawMediaData, "GetRawMedia">;
 
+export type GetReceivedCollaborationInvitesData = {
+  receivedCollaborationInvites:
+    | null
+    | GetReceivedCollaborationInvites_ReceivedCollaborationInvites
+    | GetReceivedCollaborationInvites_ReceivedCollaborationInvites[];
+};
+
+export type GetReceivedCollaborationInvitesResponse = QueryResponse<
+  GetReceivedCollaborationInvitesData,
+  "GetReceivedCollaborationInvites"
+>;
+
 export type GetRequestToJoinQueueVariables = {
   input?: null | EnumOrInput;
   cursor?: null | Cursor;
@@ -87659,7 +87826,7 @@ export type GetSponsorshipsCreatorProfilePreviewData = {
        * @format uint32
        * @example [0, 2430015, 2459534, 522430, 2471025, 2380069]
        */
-      totalCount: number;
+      totalCount: null | number;
       __typename: "FollowerConnection";
     };
     roles: null | {
@@ -87709,7 +87876,7 @@ export type GetSponsorshipsCreatorProfileSettingsData = {
        * @format uint32
        * @example [0, 2430015, 2459534, 522430, 2471025, 2380069]
        */
-      totalCount: number;
+      totalCount: null | number;
       __typename: "FollowerConnection";
     };
     roles: null | {
@@ -87762,7 +87929,7 @@ export type GetSubscriberFollowersCountData = {
        * @format uint32
        * @example [0, 2430015, 2459534, 522430, 2471025, 2380069]
        */
-      totalCount: number;
+      totalCount: null | number;
       __typename: "FollowerConnection";
     };
     __typename: "User";
@@ -89831,7 +89998,7 @@ export type HomeShelfVideosData = {
           description: null | string;
           /** @example ["TOP_CLIPS", "LATEST_BROADCASTS", "LATEST_NON_BROADCASTS", "ALL_VIDEOS", "COLLECTION"] */
           type: string;
-          items: (HomeShelfVideosVideo | ChannelHomeClip)[];
+          items: null | (HomeShelfVideosVideo | ChannelHomeClip)[];
           __typename: "VideoShelf";
         };
         __typename: "VideoShelfEdge";
@@ -91922,6 +92089,36 @@ export type MwebChannelHomePageQueryData = {
 export type MwebChannelHomePageQueryResponse = QueryResponse<
   MwebChannelHomePageQueryData,
   "MwebChannelHomePage_Query"
+>;
+
+export type MwebChannelHomeShelfClipLabelsQueryVariables = { login: string };
+
+export type MwebChannelHomeShelfClipLabelsQueryData = {
+  user: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["23161357"]
+     */
+    id: ID;
+    videoShelves: {
+      edges: {
+        node: {
+          /** @example ["KVe_rYFMGxiPsA", "6e8b060e-b329-45e4-8e7a-ded5177ee78a", "5ef0dc73-e8a1-4789-96ef-0d43bff28ec8"] */
+          id: ID;
+          items: null | (MwebChannelHomeClipPreview | { __typename: "Video" })[];
+          __typename: "VideoShelf";
+        };
+        __typename: "VideoShelfEdge";
+      }[];
+      __typename: "VideoShelfConnection";
+    };
+    __typename: "User";
+  };
+};
+
+export type MwebChannelHomeShelfClipLabelsQueryResponse = QueryResponse<
+  MwebChannelHomeShelfClipLabelsQueryData,
+  "MwebChannelHomeShelfClipLabels_Query"
 >;
 
 export type MwebChannelLiveQueryVariables = {
@@ -97128,7 +97325,7 @@ export type QuickActionManageGoalsData = {
        * @format uint32
        * @example [0, 2430015, 2459534, 522430, 2471025, 2380069]
        */
-      totalCount: number;
+      totalCount: null | number;
       __typename: "FollowerConnection";
     };
     __typename: "User";
@@ -101150,6 +101347,28 @@ export type SocialGiftSubsFollowCTAResponse = QueryResponse<
   "SocialGiftSubsFollowCTA"
 >;
 
+export type SocialGiftSubsRedemptionsVariables = { referralCode: string };
+
+export type SocialGiftSubsRedemptionsData = {
+  currentUser: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["23161357"]
+     */
+    id: ID;
+    subRedemptions:
+      | null
+      | SocialGiftSubsRedemptions_UserSubRedemptions
+      | SocialGiftSubsRedemptions_UserSubRedemptions[];
+    __typename: "User";
+  };
+};
+
+export type SocialGiftSubsRedemptionsResponse = QueryResponse<
+  SocialGiftSubsRedemptionsData,
+  "SocialGiftSubsRedemptions"
+>;
+
 export type SocialGiftSubsReferralsData = {
   currentUser: null | {
     /**
@@ -101708,7 +101927,7 @@ export type StatsWidgetData = {
        * @format uint32
        * @example [0, 2430015, 2459534, 522430, 2471025, 2380069]
        */
-      totalCount: number;
+      totalCount: null | number;
       __typename: "FollowerConnection";
     };
     subscriberScore: {
@@ -102247,7 +102466,7 @@ export type StreamerCardData = {
        * @format uint32
        * @example [0, 2430015, 2459534, 522430, 2471025, 2380069]
        */
-      totalCount: number;
+      totalCount: null | number;
       __typename: "FollowerConnection";
     };
     channel: {
@@ -109809,7 +110028,6 @@ export type VideoCommentsData = GlobalCheerInfo & {
     roles: null | {
       isStaff: null | boolean;
       isSiteAdmin: null | boolean;
-      isGlobalMod: null | boolean;
       __typename: "UserRoles";
     };
     blockedUsers: (null | {
@@ -109847,10 +110065,6 @@ export type VideoCommentsData = GlobalCheerInfo & {
           /** @example ["lirik", "twitch", "cdprojektred", "forsen", "tickett_", "st1mgreeen", "lipton_18"] */
           login: string;
           broadcastBadges: Badge[];
-          self: null | {
-            isModerator: boolean;
-            __typename: "UserSelfConnection";
-          };
         });
     __typename: "Video";
   };
@@ -110349,7 +110563,7 @@ export type VideoMetadataData = {
        * @format uint32
        * @example [0, 2430015, 2459534, 522430, 2471025, 2380069]
        */
-      totalCount: number;
+      totalCount: null | number;
       __typename: "FollowerConnection";
     };
     __typename: "User";
@@ -113760,20 +113974,6 @@ export type BatchInviteUsersToCollabGroupResponse = QueryResponse<
   "BatchInviteUsersToCollabGroup"
 >;
 
-export type BitsThresholdSettingsFormSetIsPinnedCheersEnabledVariables = { input: EnumOrInput };
-
-export type BitsThresholdSettingsFormSetIsPinnedCheersEnabledData = {
-  updateCheerPartnerSettings:
-    | null
-    | BitsThresholdSettingsFormSetIsPinnedCheersEnabled_UpdateCheerPartnerSettings
-    | BitsThresholdSettingsFormSetIsPinnedCheersEnabled_UpdateCheerPartnerSettings[];
-};
-
-export type BitsThresholdSettingsFormSetIsPinnedCheersEnabledResponse = QueryResponse<
-  BitsThresholdSettingsFormSetIsPinnedCheersEnabledData,
-  "BitsThresholdSettingsForm_SetIsPinnedCheersEnabled"
->;
-
 export type BitsThresholdSettingsFormSetMinBitsPerEmoteVariables = { input: EnumOrInput };
 
 export type BitsThresholdSettingsFormSetMinBitsPerEmoteData = {
@@ -113800,20 +114000,6 @@ export type BitsThresholdSettingsFormSetMinBitsToCheerData = {
 export type BitsThresholdSettingsFormSetMinBitsToCheerResponse = QueryResponse<
   BitsThresholdSettingsFormSetMinBitsToCheerData,
   "BitsThresholdSettingsForm_SetMinBitsToCheer"
->;
-
-export type BitsThresholdSettingsFormSetMinBitsToPinVariables = { input: EnumOrInput };
-
-export type BitsThresholdSettingsFormSetMinBitsToPinData = {
-  updateCheerPartnerSettings:
-    | null
-    | BitsThresholdSettingsFormSetMinBitsToPin_UpdateCheerPartnerSettings
-    | BitsThresholdSettingsFormSetMinBitsToPin_UpdateCheerPartnerSettings[];
-};
-
-export type BitsThresholdSettingsFormSetMinBitsToPinResponse = QueryResponse<
-  BitsThresholdSettingsFormSetMinBitsToPinData,
-  "BitsThresholdSettingsForm_SetMinBitsToPin"
 >;
 
 export type BlockUserVariables = { input: EnumOrInput };
@@ -123565,6 +123751,7 @@ export type QueryVariablesMap = {
   CollaborationInviteLinkExistingCollabGroup: CollaborationInviteLinkExistingCollabGroupVariables;
   CollaborationInviteLinkExistingGuestStarSession: CollaborationInviteLinkExistingGuestStarSessionVariables;
   CollaborationPromoPrivateCallout: CollaborationPromoPrivateCalloutVariables;
+  CollaborationStartIntroUser: Record<string, never>;
   CollaborationSummaryMetrics: CollaborationSummaryMetricsVariables;
   CollaborationValidateInviteLinkToken: CollaborationValidateInviteLinkTokenVariables;
   CollaboratorListQuery: CollaboratorListQueryVariables;
@@ -123940,6 +124127,7 @@ export type QueryVariablesMap = {
   GetQuestCampaignWithRewardGroups: GetQuestCampaignWithRewardGroupsVariables;
   GetQuestRewardsByOrg: GetQuestRewardsByOrgVariables;
   GetRawMedia: GetRawMediaVariables;
+  GetReceivedCollaborationInvites: Record<string, never>;
   GetRequestToJoinQueue: GetRequestToJoinQueueVariables;
   GetSettingsLogAction: GetSettingsLogActionVariables;
   GetSingleGiftPricing: GetSingleGiftPricingVariables;
@@ -124104,6 +124292,7 @@ export type QueryVariablesMap = {
   MwebChannelClipPageQuery: MwebChannelClipPageQueryVariables;
   MwebChannelClipsPage_Query: MwebChannelClipsPageQueryVariables;
   MwebChannelHomePage_Query: MwebChannelHomePageQueryVariables;
+  MwebChannelHomeShelfClipLabels_Query: MwebChannelHomeShelfClipLabelsQueryVariables;
   MwebChannelLiveQuery: MwebChannelLiveQueryVariables;
   MwebChannelSchedulePage_Query: MwebChannelSchedulePageQueryVariables;
   MwebChannelVideoPage_Query: MwebChannelVideoPageQueryVariables;
@@ -124372,6 +124561,7 @@ export type QueryVariablesMap = {
   SnoozeAdsQuickAction_AdProperties: SnoozeAdsQuickActionAdPropertiesVariables;
   SocialAuthStatus: Record<string, never>;
   SocialGiftSubsFollowCTA: SocialGiftSubsFollowCTAVariables;
+  SocialGiftSubsRedemptions: SocialGiftSubsRedemptionsVariables;
   SocialGiftSubsReferrals: Record<string, never>;
   SocialMedia: SocialMediaVariables;
   SpendableBalance: Record<string, never>;
@@ -124773,10 +124963,8 @@ export type QueryVariablesMap = {
   BadgeRewards_UpdateQuestCampaignStatus: BadgeRewardsUpdateQuestCampaignStatusVariables;
   BanVideoCommenter: BanVideoCommenterVariables;
   BatchInviteUsersToCollabGroup: BatchInviteUsersToCollabGroupVariables;
-  BitsThresholdSettingsForm_SetIsPinnedCheersEnabled: BitsThresholdSettingsFormSetIsPinnedCheersEnabledVariables;
   BitsThresholdSettingsForm_SetMinBitsPerEmote: BitsThresholdSettingsFormSetMinBitsPerEmoteVariables;
   BitsThresholdSettingsForm_SetMinBitsToCheer: BitsThresholdSettingsFormSetMinBitsToCheerVariables;
-  BitsThresholdSettingsForm_SetMinBitsToPin: BitsThresholdSettingsFormSetMinBitsToPinVariables;
   BlockUser: BlockUserVariables;
   BrowserPushNotifications_AddBrowserPushSubscription: BrowserPushNotificationsAddBrowserPushSubscriptionVariables;
   BulkApproveUnbanRequests: BulkApproveUnbanRequestsVariables;
@@ -125866,6 +126054,7 @@ export type QueryResponseMap = {
   CollaborationInviteLinkExistingCollabGroup: CollaborationInviteLinkExistingCollabGroupResponse;
   CollaborationInviteLinkExistingGuestStarSession: CollaborationInviteLinkExistingGuestStarSessionResponse;
   CollaborationPromoPrivateCallout: CollaborationPromoPrivateCalloutResponse;
+  CollaborationStartIntroUser: CollaborationStartIntroUserResponse;
   CollaborationSummaryMetrics: CollaborationSummaryMetricsResponse;
   CollaborationValidateInviteLinkToken: CollaborationValidateInviteLinkTokenResponse;
   CollaboratorListQuery: CollaboratorListQueryResponse;
@@ -126241,6 +126430,7 @@ export type QueryResponseMap = {
   GetQuestCampaignWithRewardGroups: GetQuestCampaignWithRewardGroupsResponse;
   GetQuestRewardsByOrg: GetQuestRewardsByOrgResponse;
   GetRawMedia: GetRawMediaResponse;
+  GetReceivedCollaborationInvites: GetReceivedCollaborationInvitesResponse;
   GetRequestToJoinQueue: GetRequestToJoinQueueResponse;
   GetSettingsLogAction: GetSettingsLogActionResponse;
   GetSingleGiftPricing: GetSingleGiftPricingResponse;
@@ -126405,6 +126595,7 @@ export type QueryResponseMap = {
   MwebChannelClipPageQuery: MwebChannelClipPageQueryResponse;
   MwebChannelClipsPage_Query: MwebChannelClipsPageQueryResponse;
   MwebChannelHomePage_Query: MwebChannelHomePageQueryResponse;
+  MwebChannelHomeShelfClipLabels_Query: MwebChannelHomeShelfClipLabelsQueryResponse;
   MwebChannelLiveQuery: MwebChannelLiveQueryResponse;
   MwebChannelSchedulePage_Query: MwebChannelSchedulePageQueryResponse;
   MwebChannelVideoPage_Query: MwebChannelVideoPageQueryResponse;
@@ -126673,6 +126864,7 @@ export type QueryResponseMap = {
   SnoozeAdsQuickAction_AdProperties: SnoozeAdsQuickActionAdPropertiesResponse;
   SocialAuthStatus: SocialAuthStatusResponse;
   SocialGiftSubsFollowCTA: SocialGiftSubsFollowCTAResponse;
+  SocialGiftSubsRedemptions: SocialGiftSubsRedemptionsResponse;
   SocialGiftSubsReferrals: SocialGiftSubsReferralsResponse;
   SocialMedia: SocialMediaResponse;
   SpendableBalance: SpendableBalanceResponse;
@@ -127074,10 +127266,8 @@ export type QueryResponseMap = {
   BadgeRewards_UpdateQuestCampaignStatus: BadgeRewardsUpdateQuestCampaignStatusResponse;
   BanVideoCommenter: BanVideoCommenterResponse;
   BatchInviteUsersToCollabGroup: BatchInviteUsersToCollabGroupResponse;
-  BitsThresholdSettingsForm_SetIsPinnedCheersEnabled: BitsThresholdSettingsFormSetIsPinnedCheersEnabledResponse;
   BitsThresholdSettingsForm_SetMinBitsPerEmote: BitsThresholdSettingsFormSetMinBitsPerEmoteResponse;
   BitsThresholdSettingsForm_SetMinBitsToCheer: BitsThresholdSettingsFormSetMinBitsToCheerResponse;
-  BitsThresholdSettingsForm_SetMinBitsToPin: BitsThresholdSettingsFormSetMinBitsToPinResponse;
   BlockUser: BlockUserResponse;
   BrowserPushNotifications_AddBrowserPushSubscription: BrowserPushNotificationsAddBrowserPushSubscriptionResponse;
   BulkApproveUnbanRequests: BulkApproveUnbanRequestsResponse;

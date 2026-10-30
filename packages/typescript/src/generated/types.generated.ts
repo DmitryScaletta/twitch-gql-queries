@@ -591,7 +591,7 @@ export type ContentClipsManagerClip = {
        * @format uint32
        * @example [0, 2430015, 2459534, 522430, 2471025, 2380069]
        */
-      totalCount: number;
+      totalCount: null | number;
       __typename: "FollowerConnection";
     };
     stream: null | {
@@ -1798,7 +1798,7 @@ export type SearchForUserFragment = {
      * @format uint32
      * @example [0, 2430015, 2459534, 522430, 2471025, 2380069]
      */
-    totalCount: number;
+    totalCount: null | number;
     __typename: "FollowerConnection";
   };
   /**
@@ -2673,7 +2673,7 @@ export type VideoShelfEdge = {
     /** @example ["TOP_CLIPS", "LATEST_BROADCASTS", "LATEST_NON_BROADCASTS", "ALL_VIDEOS", "COLLECTION"] */
     type: string;
     collection: null | (PreviewCollection & { __typename: "Collection" });
-    items: (ShelfPreviewCardClip | PreviewCardVideo)[];
+    items: null | (ShelfPreviewCardClip | PreviewCardVideo)[];
     __typename: "VideoShelf";
   };
   __typename: "VideoShelfEdge";
@@ -2754,7 +2754,7 @@ export type ChannelRootAboutPanelData = {
        * @format uint32
        * @example [0, 2430015, 2459534, 522430, 2471025, 2380069]
        */
-      totalCount: number;
+      totalCount: null | number;
       __typename: "FollowerConnection";
     };
     roles: null | {
@@ -3798,7 +3798,7 @@ export type VideoMetadataData = {
        * @format uint32
        * @example [0, 2430015, 2459534, 522430, 2471025, 2380069]
        */
-      totalCount: number;
+      totalCount: null | number;
       __typename: "FollowerConnection";
     };
     __typename: "User";
