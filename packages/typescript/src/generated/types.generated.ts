@@ -3236,7 +3236,7 @@ export type GetPinnedChatData = {
     id: ID;
     pinnedChatMessages: {
       edges: {
-        node: null | {
+        node: {
           /**
            * @format uuid
            * @example ["c47bf9cf-5d0f-4288-ab1a-4740d3a84525"]

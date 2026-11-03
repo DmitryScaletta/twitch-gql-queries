@@ -34936,6 +34936,85 @@ export type MwebChannelHomePageStreamerShelfItemsFragment = MwebUserCardFragment
   id: ID;
 };
 
+/** ℹ️ Not real Twitch type name */
+export type MwebChannelHomeShelfTopClipsQuery_VideoTopClips = {
+  edges: {
+    node:
+      | null
+      | (MwebChannelHomeClipPreview & {
+          /**
+           * @pattern ^[0-9]+$
+           * @example ["3942697259"]
+           */
+          id: ID;
+          /** @example ["EphemeralEncouragingBulgogiPraiseIt-98gnj_-unqEO0uvs", "CredulousBlightedSquirrelOSkomodo-GdY_nETXjEzIz_gm"] */
+          slug: string;
+          /**
+           * @format uint32
+           * @example [2694, 7644, 7897, 11412, 12062]
+           */
+          videoOffsetSeconds: null | number;
+        });
+    __typename: "ClipEdge";
+  }[];
+  __typename: string;
+};
+
+export type MwebChannelHomeVodPreview = {
+  /**
+   * @pattern ^[0-9]+$
+   * @example ["2323270866"]
+   */
+  id: ID;
+  /** @example ["RECORDING", "RECORDED"] */
+  status: string;
+  restriction:
+    | null
+    | MwebChannelHomeVodPreview_VideoRestriction
+    | MwebChannelHomeVodPreview_VideoRestriction[];
+  resourceRestriction: null | {
+    /** @example ["vod:2397382584"] */
+    id: ID;
+    __typename: "ResourceRestriction";
+  };
+  contentClassificationLabels: {
+    /** @example ["MatureGame", "ProfanityVulgarity"] */
+    id: ID;
+    __typename: "ContentClassificationLabel";
+  }[];
+  __typename: "Video";
+};
+
+/** ℹ️ Not real Twitch type name */
+export type MwebChannelHomeVodPreviewTopMomentQuery_VideoTopClips = {
+  edges: {
+    node:
+      | null
+      | (MwebChannelHomeClipPreview & {
+          /**
+           * @pattern ^[0-9]+$
+           * @example ["3942697259"]
+           */
+          id: ID;
+          /** @example ["EphemeralEncouragingBulgogiPraiseIt-98gnj_-unqEO0uvs", "CredulousBlightedSquirrelOSkomodo-GdY_nETXjEzIz_gm"] */
+          slug: string;
+          /**
+           * @format uint32
+           * @example [2694, 7644, 7897, 11412, 12062]
+           */
+          videoOffsetSeconds: null | number;
+        });
+    __typename: "ClipEdge";
+  }[];
+  __typename: string;
+};
+
+/** ℹ️ Not real Twitch type name */
+export type MwebChannelHomeVodPreview_VideoRestriction = {
+  type: UnknownValue;
+  __typename: string;
+};
+
 export type MwebChannelSchedulePageFutureSegmentsInterruptionFragment = {
   /**
    * ⚠️ Low confidence about: nullable
@@ -36326,6 +36405,89 @@ export type NeoCheermote = {
     __typename: "CheermoteTier";
   }[];
   __typename: "Cheermote";
+};
+
+/** ℹ️ Not real Twitch type name */
+export type NewAllCampaignsPage_DropsCampaigns = {
+  id: ID;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
+  /** ⚠️ Low confidence about: nullable */
+  brandName: null | string;
+  status: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format date-time
+   */
+  startAt: null | string;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format date-time
+   */
+  endAt: null | string;
+  game: null | NewAllCampaignsPage_DropsCampaignsGame | NewAllCampaignsPage_DropsCampaignsGame[];
+  rewardGroups:
+    | null
+    | NewAllCampaignsPage_DropsCampaignsRewardGroups
+    | NewAllCampaignsPage_DropsCampaignsRewardGroups[];
+  __typename: string;
+};
+
+/** ℹ️ Not real Twitch type name */
+export type NewAllCampaignsPage_DropsCampaignsGame = {
+  id: ID;
+  /** ⚠️ Low confidence about: nullable */
+  displayName: null | string;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uri
+   * @gqlArg `width: Int [144]`
+   * @gqlArg `height: Int [192]`
+   */
+  boxArtURL: null | string;
+  __typename: string;
+};
+
+/** ℹ️ Not real Twitch type name */
+export type NewAllCampaignsPage_DropsCampaignsRewardGroups = {
+  id: ID;
+  progressCriteria:
+    | null
+    | NewAllCampaignsPage_DropsCampaignsRewardGroupsProgressCriteria
+    | NewAllCampaignsPage_DropsCampaignsRewardGroupsProgressCriteria[];
+  rewards:
+    | null
+    | NewAllCampaignsPage_DropsCampaignsRewardGroupsRewards
+    | NewAllCampaignsPage_DropsCampaignsRewardGroupsRewards[];
+  __typename: string;
+};
+
+/** ℹ️ Not real Twitch type name */
+export type NewAllCampaignsPage_DropsCampaignsRewardGroupsProgressCriteria = {
+  categories:
+    | null
+    | NewAllCampaignsPage_DropsCampaignsRewardGroupsProgressCriteriaCategories
+    | NewAllCampaignsPage_DropsCampaignsRewardGroupsProgressCriteriaCategories[];
+  __typename: string;
+};
+
+/** ℹ️ Not real Twitch type name */
+export type NewAllCampaignsPage_DropsCampaignsRewardGroupsProgressCriteriaCategories = {
+  id: ID;
+  __typename: string;
+};
+
+/** ℹ️ Not real Twitch type name */
+export type NewAllCampaignsPage_DropsCampaignsRewardGroupsRewards = {
+  id: ID;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uri
+   */
+  thumbnailURL: null | string;
+  __typename: string;
 };
 
 /** ℹ️ Not real Twitch type name */
@@ -38598,94 +38760,6 @@ export type PinataTrainDetails = {
   id: ID;
   deteriorationStage: UnknownValue;
   __typename: "PinataTrainDetails";
-};
-
-export type PinnedChatMessage = {
-  /**
-   * @format uuid
-   * @example ["c47bf9cf-5d0f-4288-ab1a-4740d3a84525"]
-   */
-  id: ID;
-  pinnedMessage: {
-    /**
-     * @format uuid
-     * @example ["279e8293-cec0-40df-a475-6b35981a2e49"]
-     */
-    id: ID;
-    content: null | MessageContent;
-    /**
-     * @format date-time
-     * @example ["2026-10-28T01:53:30.667651882Z", "2026-10-28T01:53:31.732043463Z"]
-     */
-    sentAt: string;
-    sender: {
-      /**
-       * @pattern ^[0-9]+$
-       * @example ["23161357"]
-       */
-      id: ID;
-      /** @example ["lirik", "twitch", "cdprojektred", "forsen", "tickett_", "st1mgreeen", "lipton_18"] */
-      login: string;
-      /**
-       * @pattern ^#[0-9a-fA-F]{6}$
-       * @example ["#00FF7F", "#1E90FF", "#DAA520", "#FF69B4", "#0000FF", "#5F9EA0", "#8A2BE2"]
-       */
-      chatColor: null | string;
-      /** @example ["Twitch", "CD PROJEKT RED", "LIRIK", "forsen", "ayuuexe", "xQc", "RSDragonwilds"] */
-      displayName: string;
-      __typename: "User";
-    };
-    __typename: "Message";
-  };
-  /**
-   * @format date-time
-   * @example ["2026-09-19T16:05:13Z", "2026-10-27T19:53:04Z"]
-   */
-  startsAt: string;
-  /**
-   * @format date-time
-   * @example ["2026-09-19T16:05:15Z", "2026-10-27T19:53:13Z"]
-   */
-  updatedAt: string;
-  /**
-   * @format date-time
-   * @example ["2026-10-17T03:01:21Z"]
-   */
-  endsAt: null | string;
-  /** @example ["MOD"] */
-  type: string;
-  paidLevel: UnknownValue;
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format uint32
-   */
-  bitsAmount: null | number;
-  __typename: "PinnedChatMessage";
-};
-
-export type PinnedChatMessageType = "CHEER" | "MOD";
-
-export type PinnedCheerLevels = {
-  /** @example ["FOUR", "FIVE", "SIX", "SEVEN", "EIGHT", "ONE", "TWO", "THREE"] */
-  id: ID;
-  /** @example ["FOUR", "FIVE", "SIX", "SEVEN", "EIGHT", "ONE", "TWO", "THREE"] */
-  name: string;
-  /**
-   * @format uint32
-   * @example [1000, 2000, 5000, 10000, 100000]
-   */
-  minBits: number;
-  /**
-   * @format uint32
-   * @example [1999, 4999, 9999, 99999, 250000]
-   */
-  maxBits: number;
-  /**
-   * @format uint32
-   * @example [600, 1200, 3600, 7200, 18000]
-   */
-  durationSeconds: number;
-  __typename: "PinnedCheerLevel";
 };
 
 /** ℹ️ Not real Twitch type name */
@@ -66283,12 +66357,6 @@ export type BitsCardMainCardData = {
          * @directive include(if: $withCheerBombEventEnabled)
          */
         isCheerBombEventEnabled?: null | boolean;
-        /**
-         * @format uint32
-         * @example [1000, 100, 500]
-         */
-        minBitsToPin: number;
-        pinnedCheerLevels: PinnedCheerLevels[];
         __typename: "CheerSettings";
       };
       __typename: "CheerInfo";
@@ -87201,7 +87269,7 @@ export type GetPinnedChatData = {
     id: ID;
     pinnedChatMessages: {
       edges: {
-        node: null | {
+        node: {
           /**
            * @format uuid
            * @example ["c47bf9cf-5d0f-4288-ab1a-4740d3a84525"]
@@ -92121,6 +92189,74 @@ export type MwebChannelHomeShelfClipLabelsQueryResponse = QueryResponse<
   "MwebChannelHomeShelfClipLabels_Query"
 >;
 
+export type MwebChannelHomeShelfTopClipsQueryVariables = { login: string };
+
+export type MwebChannelHomeShelfTopClipsQueryData = {
+  user: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["23161357"]
+     */
+    id: ID;
+    videoShelves: {
+      edges: {
+        node: {
+          /** @example ["KVe_rYFMGxiPsA", "6e8b060e-b329-45e4-8e7a-ded5177ee78a", "5ef0dc73-e8a1-4789-96ef-0d43bff28ec8"] */
+          id: ID;
+          items:
+            | null
+            | (
+                | (MwebChannelHomeVodPreview & {
+                    /**
+                     * @pattern ^[0-9]+$
+                     * @example ["2323270866"]
+                     */
+                    id: ID;
+                    topClips:
+                      | null
+                      | MwebChannelHomeShelfTopClipsQuery_VideoTopClips
+                      | MwebChannelHomeShelfTopClipsQuery_VideoTopClips[];
+                  })
+                | { __typename: "Clip" }
+              )[];
+          __typename: "VideoShelf";
+        };
+        __typename: "VideoShelfEdge";
+      }[];
+      __typename: "VideoShelfConnection";
+    };
+    __typename: "User";
+  };
+};
+
+export type MwebChannelHomeShelfTopClipsQueryResponse = QueryResponse<
+  MwebChannelHomeShelfTopClipsQueryData,
+  "MwebChannelHomeShelfTopClips_Query"
+>;
+
+export type MwebChannelHomeVodPreviewTopMomentQueryVariables = { vodID: ID };
+
+export type MwebChannelHomeVodPreviewTopMomentQueryData = {
+  video:
+    | null
+    | (MwebChannelHomeVodPreview & {
+        /**
+         * @pattern ^[0-9]+$
+         * @example ["2323270866"]
+         */
+        id: ID;
+        topClips:
+          | null
+          | MwebChannelHomeVodPreviewTopMomentQuery_VideoTopClips
+          | MwebChannelHomeVodPreviewTopMomentQuery_VideoTopClips[];
+      });
+};
+
+export type MwebChannelHomeVodPreviewTopMomentQueryResponse = QueryResponse<
+  MwebChannelHomeVodPreviewTopMomentQueryData,
+  "MwebChannelHomeVodPreviewTopMoment_Query"
+>;
+
 export type MwebChannelLiveQueryVariables = {
   login: string;
   includeIsDualFormat: boolean;
@@ -93541,6 +93677,15 @@ export type NativeChannelLiveQueryResponse = QueryResponse<
   "NativeChannelLiveQuery"
 >;
 
+export type NewAllCampaignsPageData = {
+  dropsCampaigns: null | NewAllCampaignsPage_DropsCampaigns | NewAllCampaignsPage_DropsCampaigns[];
+};
+
+export type NewAllCampaignsPageResponse = QueryResponse<
+  NewAllCampaignsPageData,
+  "NewAllCampaignsPage"
+>;
+
 export type NewPollModalQueryVariables = { id: ID };
 
 export type NewPollModalQueryData = {
@@ -94768,63 +94913,6 @@ export type OpenCallingCallerInfoResponse = QueryResponse<
   "OpenCallingCallerInfo"
 >;
 
-export type PaidPinnedChatVariables = {
-  channelID: ID;
-  /** @format int32 */
-  count: number;
-  messageType: PinnedChatMessageType;
-  after?: null | Cursor;
-};
-
-export type PaidPinnedChatData = {
-  channel: null | {
-    /**
-     * @pattern ^[0-9]+$
-     * @example ["26490481"]
-     */
-    id: ID;
-    pinnedChatMessages: {
-      edges: {
-        node: null | PinnedChatMessage;
-        cursor: Cursor;
-        __typename: "PinnedChatMessageEdge";
-      }[];
-      pageInfo: null | {
-        hasNextPage: boolean;
-        __typename: "PageInfo";
-      };
-      __typename: "PinnedChatMessageConnection";
-    };
-    __typename: "Channel";
-  };
-};
-
-export type PaidPinnedChatResponse = QueryResponse<PaidPinnedChatData, "PaidPinnedChat">;
-
-export type PaidPinnedChatMessageContentVariables = {
-  channelID: ID;
-  senderID?: null | ID;
-};
-
-export type PaidPinnedChatMessageContentData = {
-  user: null | {
-    /**
-     * @pattern ^[0-9]+$
-     * @example ["23161357"]
-     */
-    id: ID;
-    broadcastBadges: Badge[];
-    displayBadges: Badge[];
-    __typename: "User";
-  };
-  badges: Badge[];
-};
-
-export type PaidPinnedChatMessageContentResponse = QueryResponse<
-  PaidPinnedChatMessageContentData,
-  "PaidPinnedChatMessageContent"
->;
-
 export type PartnerPlusPageQueryVariables = { channelLogin: string };
 
 export type PartnerPlusPageQueryData = {
@@ -95923,41 +96011,6 @@ export type PinnedChatSettingsData = {
 export type PinnedChatSettingsResponse = QueryResponse<
   PinnedChatSettingsData,
   "PinnedChatSettings"
->;
-
-export type PinnedCheersSettingsVariables = { login: string };
-
-export type PinnedCheersSettingsData = {
-  user: null | {
-    /**
-     * @pattern ^[0-9]+$
-     * @example ["23161357"]
-     */
-    id: ID;
-    cheer: null | {
-      /**
-       * @pattern ^[0-9]+$
-       * @example ["71092938"]
-       */
-      id: ID;
-      settings: {
-        /**
-         * @pattern ^[0-9]+$
-         * @example ["71092938"]
-         */
-        id: ID;
-        isPinnedCheersEnabled: boolean;
-        __typename: "CheerSettings";
-      };
-      __typename: "CheerInfo";
-    };
-    __typename: "User";
-  };
-};
-
-export type PinnedCheersSettingsResponse = QueryResponse<
-  PinnedCheersSettingsData,
-  "PinnedCheersSettings"
 >;
 
 export type PlaybackAccessTokenVariables = {
@@ -102169,7 +102222,6 @@ export type StreamChatData = {
     roles: null | {
       isPartner: boolean;
       isAffiliate: boolean;
-      isPreAffiliate: boolean;
       __typename: "UserRoles";
     };
     self: null | {
@@ -124293,6 +124345,8 @@ export type QueryVariablesMap = {
   MwebChannelClipsPage_Query: MwebChannelClipsPageQueryVariables;
   MwebChannelHomePage_Query: MwebChannelHomePageQueryVariables;
   MwebChannelHomeShelfClipLabels_Query: MwebChannelHomeShelfClipLabelsQueryVariables;
+  MwebChannelHomeShelfTopClips_Query: MwebChannelHomeShelfTopClipsQueryVariables;
+  MwebChannelHomeVodPreviewTopMoment_Query: MwebChannelHomeVodPreviewTopMomentQueryVariables;
   MwebChannelLiveQuery: MwebChannelLiveQueryVariables;
   MwebChannelSchedulePage_Query: MwebChannelSchedulePageQueryVariables;
   MwebChannelVideoPage_Query: MwebChannelVideoPageQueryVariables;
@@ -124327,6 +124381,7 @@ export type QueryVariablesMap = {
   MyCollaborationsShelf: MyCollaborationsShelfVariables;
   MyEditableChannels: MyEditableChannelsVariables;
   NativeChannelLiveQuery: NativeChannelLiveQueryVariables;
+  NewAllCampaignsPage: Record<string, never>;
   NewPollModalQuery: NewPollModalQueryVariables;
   NewSubscriptionsTimeseriesStats_StreamSummary: NewSubscriptionsTimeseriesStatsStreamSummaryVariables;
   NewVsReturning_TimeSeries: NewVsReturningTimeSeriesVariables;
@@ -124351,8 +124406,6 @@ export type QueryVariablesMap = {
   OnsiteNotifications_ListNotifications: OnsiteNotificationsListNotificationsVariables;
   OnsiteNotifications_Summary: Record<string, never>;
   OpenCallingCallerInfo: OpenCallingCallerInfoVariables;
-  PaidPinnedChat: PaidPinnedChatVariables;
-  PaidPinnedChatMessageContent: PaidPinnedChatMessageContentVariables;
   PartnerPlusPageQuery: PartnerPlusPageQueryVariables;
   PartnerPlusPendingGrant: PartnerPlusPendingGrantVariables;
   PartnerPlusPublicQuery: PartnerPlusPublicQueryVariables;
@@ -124386,7 +124439,6 @@ export type QueryVariablesMap = {
   PhoneVerificationAudioScanningDisclosureContextQuery: PhoneVerificationAudioScanningDisclosureContextQueryVariables;
   PinataEnableToggle: PinataEnableToggleVariables;
   PinnedChatSettings: PinnedChatSettingsVariables;
-  PinnedCheersSettings: PinnedCheersSettingsVariables;
   PlaybackAccessToken: PlaybackAccessTokenVariables;
   PlayerTrackingContextQuery: PlayerTrackingContextQueryVariables;
   PlusProgramPanel_Query: PlusProgramPanelQueryVariables;
@@ -126596,6 +126648,8 @@ export type QueryResponseMap = {
   MwebChannelClipsPage_Query: MwebChannelClipsPageQueryResponse;
   MwebChannelHomePage_Query: MwebChannelHomePageQueryResponse;
   MwebChannelHomeShelfClipLabels_Query: MwebChannelHomeShelfClipLabelsQueryResponse;
+  MwebChannelHomeShelfTopClips_Query: MwebChannelHomeShelfTopClipsQueryResponse;
+  MwebChannelHomeVodPreviewTopMoment_Query: MwebChannelHomeVodPreviewTopMomentQueryResponse;
   MwebChannelLiveQuery: MwebChannelLiveQueryResponse;
   MwebChannelSchedulePage_Query: MwebChannelSchedulePageQueryResponse;
   MwebChannelVideoPage_Query: MwebChannelVideoPageQueryResponse;
@@ -126630,6 +126684,7 @@ export type QueryResponseMap = {
   MyCollaborationsShelf: MyCollaborationsShelfResponse;
   MyEditableChannels: MyEditableChannelsResponse;
   NativeChannelLiveQuery: NativeChannelLiveQueryResponse;
+  NewAllCampaignsPage: NewAllCampaignsPageResponse;
   NewPollModalQuery: NewPollModalQueryResponse;
   NewSubscriptionsTimeseriesStats_StreamSummary: NewSubscriptionsTimeseriesStatsStreamSummaryResponse;
   NewVsReturning_TimeSeries: NewVsReturningTimeSeriesResponse;
@@ -126654,8 +126709,6 @@ export type QueryResponseMap = {
   OnsiteNotifications_ListNotifications: OnsiteNotificationsListNotificationsResponse;
   OnsiteNotifications_Summary: OnsiteNotificationsSummaryResponse;
   OpenCallingCallerInfo: OpenCallingCallerInfoResponse;
-  PaidPinnedChat: PaidPinnedChatResponse;
-  PaidPinnedChatMessageContent: PaidPinnedChatMessageContentResponse;
   PartnerPlusPageQuery: PartnerPlusPageQueryResponse;
   PartnerPlusPendingGrant: PartnerPlusPendingGrantResponse;
   PartnerPlusPublicQuery: PartnerPlusPublicQueryResponse;
@@ -126689,7 +126742,6 @@ export type QueryResponseMap = {
   PhoneVerificationAudioScanningDisclosureContextQuery: PhoneVerificationAudioScanningDisclosureContextQueryResponse;
   PinataEnableToggle: PinataEnableToggleResponse;
   PinnedChatSettings: PinnedChatSettingsResponse;
-  PinnedCheersSettings: PinnedCheersSettingsResponse;
   PlaybackAccessToken: PlaybackAccessTokenResponse;
   PlayerTrackingContextQuery: PlayerTrackingContextQueryResponse;
   PlusProgramPanel_Query: PlusProgramPanelQueryResponse;
