@@ -21,5 +21,5 @@ export const StreamMetadataQuery = ["StreamMetadata", "8f3c9ee3a77ff7e648268ac5d
 export const UseLiveQuery = ["UseLive", "639d5f11bfb8bf3053b424d9ef650d04c4ebb7d94711d644afb08fe9a0fad5d9"] as const;
 export const UseViewCountQuery = ["UseViewCount", "e28de6b91c2ac736882f4960e7de60ca4a4eeebc06affdc45d6408b19318cef7"] as const;
 export const VideoAccessTokenClipQuery = ["VideoAccessToken_Clip", "c5ca7c4143e42f257b91b97b37fbb19206460f42f564a02095bb504fd0a31af8"] as const;
-export const VideoMetadataQuery = ["VideoMetadata", "45111672eea2e507f8ba44d101a61862f9c56b11dee09a15634cb75cb9b9084d"] as const;
+export const VideoMetadataQuery = ["VideoMetadata", "b3da056388e7d942c097815e6547094119d4c78400af72ca4ee045ba8b422690"] as const;
 export const VideoPreviewOverlayQuery = ["VideoPreviewOverlay", "9515480dee68a77e667cb19de634739d33f243572b007e98e67184b1a5d8369f"] as const;

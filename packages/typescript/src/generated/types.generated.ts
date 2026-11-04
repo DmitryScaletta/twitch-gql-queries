@@ -589,7 +589,7 @@ export type ContentClipsManagerClip = {
     followers: {
       /**
        * @format uint32
-       * @example [0, 2430015, 2459534, 522430, 2471025, 2380069]
+       * @example [0, 2430015, 2459534, 522430, 2471025, 2485645]
        */
       totalCount: null | number;
       __typename: "FollowerConnection";
@@ -1381,7 +1381,7 @@ export type PreviewCardVideo = {
   title: null | string;
   /**
    * @format uint32
-   * @example [0, 772963, 277364, 171376, 163669, 1911]
+   * @example [0, 772963, 277364, 171376, 171377, 163669]
    */
   viewCount: number;
   resourceRestriction: null | ResourceRestriction;
@@ -1610,7 +1610,7 @@ export type SearchForFeaturedVideoFragment = {
    * @example ["2323270866"]
    */
   id: ID;
-  /** @example ["RECORDING", "RECORDED"] */
+  /** @example ["RECORDED", "RECORDING"] */
   status: string;
   /**
    * @format uint32
@@ -1621,7 +1621,7 @@ export type SearchForFeaturedVideoFragment = {
   title: null | string;
   /**
    * @format uint32
-   * @example [0, 772963, 277364, 171376, 163669, 1911]
+   * @example [0, 772963, 277364, 171376, 171377, 163669]
    */
   viewCount: number;
   /**
@@ -1796,7 +1796,7 @@ export type SearchForUserFragment = {
   followers: {
     /**
      * @format uint32
-     * @example [0, 2430015, 2459534, 522430, 2471025, 2380069]
+     * @example [0, 2430015, 2459534, 522430, 2471025, 2485645]
      */
     totalCount: null | number;
     __typename: "FollowerConnection";
@@ -2028,7 +2028,7 @@ export type SearchForVideoFragment = {
   title: null | string;
   /**
    * @format uint32
-   * @example [0, 772963, 277364, 171376, 163669, 1911]
+   * @example [0, 772963, 277364, 171376, 171377, 163669]
    */
   viewCount: number;
   previewThumbnailProperties: {
@@ -2456,7 +2456,7 @@ export type UserBioVideo = {
       displayName: string;
       __typename: "Game";
     };
-    /** @example ["RECORDING", "RECORDED"] */
+    /** @example ["RECORDED", "RECORDING"] */
     status: string;
     __typename: "Video";
   };
@@ -2610,7 +2610,7 @@ export type VideoMetadataVideo = {
   createdAt: string;
   /**
    * @format uint32
-   * @example [0, 772963, 277364, 171376, 163669, 1911]
+   * @example [0, 772963, 277364, 171376, 171377, 163669]
    */
   viewCount: number;
   /**
@@ -2625,6 +2625,8 @@ export type VideoMetadataVideo = {
   lengthSeconds: number;
   /** @example ["ARCHIVE", "HIGHLIGHT", "UPLOAD"] */
   broadcastType: string;
+  /** @example ["RECORDED", "RECORDING"] */
+  status: string;
   owner: null | {
     /**
      * @pattern ^[0-9]+$
@@ -2752,7 +2754,7 @@ export type ChannelRootAboutPanelData = {
     followers: {
       /**
        * @format uint32
-       * @example [0, 2430015, 2459534, 522430, 2471025, 2380069]
+       * @example [0, 2430015, 2459534, 522430, 2471025, 2485645]
        */
       totalCount: null | number;
       __typename: "FollowerConnection";
@@ -3796,7 +3798,7 @@ export type VideoMetadataData = {
     followers: {
       /**
        * @format uint32
-       * @example [0, 2430015, 2459534, 522430, 2471025, 2380069]
+       * @example [0, 2430015, 2459534, 522430, 2471025, 2485645]
        */
       totalCount: null | number;
       __typename: "FollowerConnection";

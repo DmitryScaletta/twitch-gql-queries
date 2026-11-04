@@ -3690,7 +3690,7 @@ export type AnnualRecapVideo2024 = {
   title: null | string;
   /**
    * @format uint32
-   * @example [0, 772963, 277364, 171376, 163669, 1911]
+   * @example [0, 772963, 277364, 171376, 171377, 163669]
    */
   viewCount: number;
   /**
@@ -3735,7 +3735,7 @@ export type AnnualRecapVideo2025 = {
   title: null | string;
   /**
    * @format uint32
-   * @example [0, 772963, 277364, 171376, 163669, 1911]
+   * @example [0, 772963, 277364, 171376, 171377, 163669]
    */
   viewCount: number;
   /**
@@ -4423,6 +4423,42 @@ export type AutoRaidApprovedTargets_UserAutoRaidTargetsEdgesNode = {
 /** ℹ️ Not real Twitch type name */
 export type AutoRaidExistingLists_UserRaidRecommendations = {
   user: null | AutoRaidSettingsListChannel;
+  __typename: string;
+};
+
+/** ℹ️ Not real Twitch type name */
+export type AutoRaidFtueAlertEnableAutoRaid_UpdateAutoRaidSettings = {
+  user:
+    | null
+    | AutoRaidFtueAlertEnableAutoRaid_UpdateAutoRaidSettingsUser
+    | AutoRaidFtueAlertEnableAutoRaid_UpdateAutoRaidSettingsUser[];
+  error:
+    | null
+    | AutoRaidFtueAlertEnableAutoRaid_UpdateAutoRaidSettingsError
+    | AutoRaidFtueAlertEnableAutoRaid_UpdateAutoRaidSettingsError[];
+  __typename: string;
+};
+
+/** ℹ️ Not real Twitch type name */
+export type AutoRaidFtueAlertEnableAutoRaid_UpdateAutoRaidSettingsError = {
+  code: UnknownValue;
+  __typename: string;
+};
+
+/** ℹ️ Not real Twitch type name */
+export type AutoRaidFtueAlertEnableAutoRaid_UpdateAutoRaidSettingsUser = {
+  id: ID;
+  autoRaidSettings:
+    | null
+    | AutoRaidFtueAlertEnableAutoRaid_UpdateAutoRaidSettingsUserAutoRaidSettings
+    | AutoRaidFtueAlertEnableAutoRaid_UpdateAutoRaidSettingsUserAutoRaidSettings[];
+  __typename: string;
+};
+
+/** ℹ️ Not real Twitch type name */
+export type AutoRaidFtueAlertEnableAutoRaid_UpdateAutoRaidSettingsUserAutoRaidSettings = {
+  /** ⚠️ Low confidence about: nullable */
+  isEnabled: null | boolean;
   __typename: string;
 };
 
@@ -8344,7 +8380,7 @@ export type ChannelFollowers = {
   followers: {
     /**
      * @format uint32
-     * @example [0, 2430015, 2459534, 522430, 2471025, 2380069]
+     * @example [0, 2430015, 2459534, 522430, 2471025, 2485645]
      */
     totalCount: null | number;
     __typename: "FollowerConnection";
@@ -13179,7 +13215,7 @@ export type CollectionEditorVideo = {
   title: null | string;
   /**
    * @format uint32
-   * @example [0, 772963, 277364, 171376, 163669, 1911]
+   * @example [0, 772963, 277364, 171376, 171377, 163669]
    */
   viewCount: number;
   __typename: "Video";
@@ -13612,7 +13648,7 @@ export type CommonHooksSearchVideos_UserSearchVideos = {
       title: null | string;
       /**
        * @format uint32
-       * @example [0, 772963, 277364, 171376, 163669, 1911]
+       * @example [0, 772963, 277364, 171376, 171377, 163669]
        */
       viewCount: number;
       __typename: "Video";
@@ -14444,7 +14480,7 @@ export type ContentClipsManagerClip = {
     followers: {
       /**
        * @format uint32
-       * @example [0, 2430015, 2459534, 522430, 2471025, 2380069]
+       * @example [0, 2430015, 2459534, 522430, 2471025, 2485645]
        */
       totalCount: null | number;
       __typename: "FollowerConnection";
@@ -22778,7 +22814,7 @@ export type EditVideoPropertiesModalVideo = {
     __typename: "VideoRendition";
   };
   scope: UnknownValue;
-  /** @example ["RECORDING", "RECORDED"] */
+  /** @example ["RECORDED", "RECORDING"] */
   status: string;
   tags: UnknownValue;
   /** ⚠️ Low confidence about: nullable */
@@ -22787,7 +22823,7 @@ export type EditVideoPropertiesModalVideo = {
   title: null | string;
   /**
    * @format uint32
-   * @example [0, 772963, 277364, 171376, 163669, 1911]
+   * @example [0, 772963, 277364, 171376, 171377, 163669]
    */
   viewCount: number;
   /**
@@ -25700,6 +25736,8 @@ export type ExternallyConfiguredSponsorshipCampaign_ExternallyConfiguredSponsors
    */
   endsAt: null | string;
   numPackageUnits: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  isMatureGameExcluded: null | boolean;
   guidelinesDo: UnknownValue;
   guidelinesDont: UnknownValue;
   packageDefinition:
@@ -31173,7 +31211,7 @@ export type HomeShelfVideosVideo = {
   publishedAt: string;
   /**
    * @format uint32
-   * @example [0, 772963, 277364, 171376, 163669, 1911]
+   * @example [0, 772963, 277364, 171376, 171377, 163669]
    */
   viewCount: number;
   /**
@@ -32022,7 +32060,7 @@ export type InsightsUserFragment = {
   followers: {
     /**
      * @format uint32
-     * @example [0, 2430015, 2459534, 522430, 2471025, 2380069]
+     * @example [0, 2430015, 2459534, 522430, 2471025, 2485645]
      */
     totalCount: null | number;
     __typename: "FollowerConnection";
@@ -32757,6 +32795,35 @@ export type LegendaryEmoteSeason_LegendaryEmoteSeasonUserProgressChestInventory 
   unopenedCount: null | number;
   __typename: string;
 };
+
+/** ℹ️ Not real Twitch type name */
+export type LegendaryEmotesOptOutToggleUpdateRewardCampaignHidden_UpdateRewardCampaignHidden = {
+  rewardCampaignChannelSettings:
+    | null
+    | LegendaryEmotesOptOutToggleUpdateRewardCampaignHidden_UpdateRewardCampaignHiddenRewardCampaignChannelSettings
+    | LegendaryEmotesOptOutToggleUpdateRewardCampaignHidden_UpdateRewardCampaignHiddenRewardCampaignChannelSettings[];
+  __typename: string;
+};
+
+/** ℹ️ Not real Twitch type name */
+export type LegendaryEmotesOptOutToggleUpdateRewardCampaignHidden_UpdateRewardCampaignHiddenRewardCampaignChannelSettings =
+  {
+    rewardCampaignsHidden:
+      | null
+      | LegendaryEmotesOptOutToggleUpdateRewardCampaignHidden_UpdateRewardCampaignHiddenRewardCampaignChannelSettingsRewardCampaignsHidden
+      | LegendaryEmotesOptOutToggleUpdateRewardCampaignHidden_UpdateRewardCampaignHiddenRewardCampaignChannelSettingsRewardCampaignsHidden[];
+    __typename: string;
+  };
+
+/** ℹ️ Not real Twitch type name */
+export type LegendaryEmotesOptOutToggleUpdateRewardCampaignHidden_UpdateRewardCampaignHiddenRewardCampaignChannelSettingsRewardCampaignsHidden =
+  {
+    /** ⚠️ Low confidence about: nullable */
+    rewardCampaignID: null | ID;
+    /** ⚠️ Low confidence about: nullable */
+    isHidden: null | boolean;
+    __typename: string;
+  };
 
 /** ℹ️ Not real Twitch type name */
 export type LikeClipComment_LikeClipComment = {
@@ -34784,7 +34851,7 @@ export type MwebChannelFeaturedCardVideoFragment = {
   title: null | string;
   /**
    * @format uint32
-   * @example [0, 772963, 277364, 171376, 163669, 1911]
+   * @example [0, 772963, 277364, 171376, 171377, 163669]
    */
   viewCount: number;
   /**
@@ -34966,7 +35033,7 @@ export type MwebChannelHomeVodPreview = {
    * @example ["2323270866"]
    */
   id: ID;
-  /** @example ["RECORDING", "RECORDED"] */
+  /** @example ["RECORDED", "RECORDING"] */
   status: string;
   restriction:
     | null
@@ -35191,7 +35258,7 @@ export type MwebChannelVODPageRelatedVODFragment = {
   previewThumbnailURL: string;
   /**
    * @format uint32
-   * @example [0, 772963, 277364, 171376, 163669, 1911]
+   * @example [0, 772963, 277364, 171376, 171377, 163669]
    */
   viewCount: number;
   /**
@@ -36143,7 +36210,7 @@ export type MwebVideoCard = {
   lengthSeconds: number;
   /**
    * @format uint32
-   * @example [0, 772963, 277364, 171376, 163669, 1911]
+   * @example [0, 772963, 277364, 171376, 171377, 163669]
    * @aliasFor viewCount
    */
   videoViewCount: number;
@@ -36630,7 +36697,7 @@ export type NotificationSettingsFollowEdge = {
     followers: {
       /**
        * @format uint32
-       * @example [0, 2430015, 2459534, 522430, 2471025, 2380069]
+       * @example [0, 2430015, 2459534, 522430, 2471025, 2485645]
        */
       totalCount: null | number;
       __typename: "FollowerConnection";
@@ -36828,7 +36895,7 @@ export type OnboardingChannelFragment = {
   followers: {
     /**
      * @format uint32
-     * @example [0, 2430015, 2459534, 522430, 2471025, 2380069]
+     * @example [0, 2430015, 2459534, 522430, 2471025, 2485645]
      */
     totalCount: null | number;
     __typename: "FollowerConnection";
@@ -38007,6 +38074,26 @@ export type PathToPartnerV2Quest = {
 /** ℹ️ Not real Twitch type name */
 export type PauseCustomRewardRedemptions_UpdateCommunityPointsCustomReward = {
   reward: null | CustomRewardFragment;
+  __typename: string;
+};
+
+/** ℹ️ Not real Twitch type name */
+export type PauseHostTrainHold_PauseHostTrainHold = {
+  error:
+    | null
+    | PauseHostTrainHold_PauseHostTrainHoldError
+    | PauseHostTrainHold_PauseHostTrainHoldError[];
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format date-time
+   */
+  holdEndsAt: null | string;
+  __typename: string;
+};
+
+/** ℹ️ Not real Twitch type name */
+export type PauseHostTrainHold_PauseHostTrainHoldError = {
+  code: UnknownValue;
   __typename: string;
 };
 
@@ -39778,7 +39865,7 @@ export type PreviewCardVideo = {
   title: null | string;
   /**
    * @format uint32
-   * @example [0, 772963, 277364, 171376, 163669, 1911]
+   * @example [0, 772963, 277364, 171376, 171377, 163669]
    */
   viewCount: number;
   resourceRestriction: null | ResourceRestriction;
@@ -41398,6 +41485,8 @@ export type RecapCardFields_RecapClips = {
 /** ℹ️ Not real Twitch type name */
 export type RecapCardFields_RecapClipsClip = {
   id: ID;
+  /** ⚠️ Low confidence about: nullable */
+  slug: null | string;
   playbackAccessToken:
     | null
     | RecapCardFields_RecapClipsClipPlaybackAccessToken
@@ -42657,6 +42746,28 @@ export type RemoveViewerFromRTJQueue_RemoveViewerFromRTJQueueError = {
   __typename: string;
 };
 
+/** ℹ️ Not real Twitch type name */
+export type ReplaceHostTrainFirstStation_ReplaceHostTrainFirstStation = {
+  error:
+    | null
+    | ReplaceHostTrainFirstStation_ReplaceHostTrainFirstStationError
+    | ReplaceHostTrainFirstStation_ReplaceHostTrainFirstStationError[];
+  /** ⚠️ Low confidence about: nullable */
+  isFirstStationEligible: null | boolean;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format date-time
+   */
+  holdEndsAt: null | string;
+  __typename: string;
+};
+
+/** ℹ️ Not real Twitch type name */
+export type ReplaceHostTrainFirstStation_ReplaceHostTrainFirstStationError = {
+  code: UnknownValue;
+  __typename: string;
+};
+
 export type ReplyMessage = {
   /**
    * @format uuid
@@ -43007,6 +43118,26 @@ export type ResourceRestriction = {
   /** @example ["ALLOW_ALL_TIERS"] */
   options: string[];
   __typename: "ResourceRestriction";
+};
+
+/** ℹ️ Not real Twitch type name */
+export type ResumeHostTrainHold_ResumeHostTrainHold = {
+  error:
+    | null
+    | ResumeHostTrainHold_ResumeHostTrainHoldError
+    | ResumeHostTrainHold_ResumeHostTrainHoldError[];
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format date-time
+   */
+  holdEndsAt: null | string;
+  __typename: string;
+};
+
+/** ℹ️ Not real Twitch type name */
+export type ResumeHostTrainHold_ResumeHostTrainHoldError = {
+  code: UnknownValue;
+  __typename: string;
 };
 
 /** ℹ️ Not real Twitch type name */
@@ -43827,7 +43958,7 @@ export type SearchForFeaturedVideoFragment = {
    * @example ["2323270866"]
    */
   id: ID;
-  /** @example ["RECORDING", "RECORDED"] */
+  /** @example ["RECORDED", "RECORDING"] */
   status: string;
   /**
    * @format uint32
@@ -43838,7 +43969,7 @@ export type SearchForFeaturedVideoFragment = {
   title: null | string;
   /**
    * @format uint32
-   * @example [0, 772963, 277364, 171376, 163669, 1911]
+   * @example [0, 772963, 277364, 171376, 171377, 163669]
    */
   viewCount: number;
   /**
@@ -44013,7 +44144,7 @@ export type SearchForUserFragment = {
   followers: {
     /**
      * @format uint32
-     * @example [0, 2430015, 2459534, 522430, 2471025, 2380069]
+     * @example [0, 2430015, 2459534, 522430, 2471025, 2485645]
      */
     totalCount: null | number;
     __typename: "FollowerConnection";
@@ -44245,7 +44376,7 @@ export type SearchForVideoFragment = {
   title: null | string;
   /**
    * @format uint32
-   * @example [0, 772963, 277364, 171376, 163669, 1911]
+   * @example [0, 772963, 277364, 171376, 171377, 163669]
    */
   viewCount: number;
   previewThumbnailProperties: {
@@ -44813,7 +44944,7 @@ export type SearchStreamerResult = {
   followers: {
     /**
      * @format uint32
-     * @example [0, 2430015, 2459534, 522430, 2471025, 2380069]
+     * @example [0, 2430015, 2459534, 522430, 2471025, 2485645]
      */
     totalCount: null | number;
     __typename: "FollowerConnection";
@@ -49845,6 +49976,8 @@ export type StartGuestStarSession_StartGuestStarSessionSessionSelfGuest = {
 /** ℹ️ Not real Twitch type name */
 export type StartHostTrain_StartHostTrain = {
   error: null | StartHostTrain_StartHostTrainError | StartHostTrain_StartHostTrainError[];
+  /** ⚠️ Low confidence about: nullable */
+  isFirstStationEligible: null | boolean;
   __typename: string;
 };
 
@@ -51174,7 +51307,7 @@ export type StreamSummaryClipFragment = {
     followers: {
       /**
        * @format uint32
-       * @example [0, 2430015, 2459534, 522430, 2471025, 2380069]
+       * @example [0, 2430015, 2459534, 522430, 2471025, 2485645]
        */
       totalCount: null | number;
       __typename: "FollowerConnection";
@@ -53426,6 +53559,21 @@ export type TagFragment = {
 };
 
 export type TagType = "CONTENT";
+
+/** ℹ️ Not real Twitch type name */
+export type TakeHostTrainTopRankedStation_TakeHostTrainTopRankedStation = {
+  error:
+    | null
+    | TakeHostTrainTopRankedStation_TakeHostTrainTopRankedStationError
+    | TakeHostTrainTopRankedStation_TakeHostTrainTopRankedStationError[];
+  __typename: string;
+};
+
+/** ℹ️ Not real Twitch type name */
+export type TakeHostTrainTopRankedStation_TakeHostTrainTopRankedStationError = {
+  code: UnknownValue;
+  __typename: string;
+};
 
 /** ℹ️ Not real Twitch type name */
 export type TaxFormsCurrentUser_UserPayoutInvite = {
@@ -55684,13 +55832,6 @@ export type TriggerQuestEventDrop_TriggerQuestEventDropRewardGroup = {
 /** ℹ️ Not real Twitch type name */
 export type TriggerQuestEventDrop_TriggerQuestEventDropTrigger = {
   id: ID;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type TurboAwarenessBannerChannelSharedPromotions_UserSettingsCreatorMonetizationSettings = {
-  /** ⚠️ Low confidence about: nullable */
-  hasSharedPromotions: null | boolean;
   __typename: string;
 };
 
@@ -58932,6 +59073,12 @@ export type UpdateRestrictStreamViewingSettings_UpdateRestrictStreamViewingSetti
   __typename: string;
 };
 
+export type UpdateRewardCampaignHiddenInput = {
+  isHidden?: null | boolean;
+  rewardCampaignID?: null | ID;
+  userID?: null | ID;
+};
+
 /** ℹ️ Not real Twitch type name */
 export type UpdateRoomModes_UpdateRoomModes = {
   room: null | UpdateRoomModes_UpdateRoomModesRoom | UpdateRoomModes_UpdateRoomModesRoom[];
@@ -59801,7 +59948,7 @@ export type UserBioVideo = {
       displayName: string;
       __typename: "Game";
     };
-    /** @example ["RECORDING", "RECORDED"] */
+    /** @example ["RECORDED", "RECORDING"] */
     status: string;
     __typename: "Video";
   };
@@ -60378,7 +60525,7 @@ export type Video = {
   title: null | string;
   /**
    * @format uint32
-   * @example [0, 772963, 277364, 171376, 163669, 1911]
+   * @example [0, 772963, 277364, 171376, 171377, 163669]
    */
   viewCount: number;
   contentTags: null | TagFragment[];
@@ -60922,7 +61069,7 @@ export type VideoManagerVideo = {
   publishedAt: string;
   renditions: null | VideoManagerVideoRenditions;
   scope: UnknownValue;
-  /** @example ["RECORDING", "RECORDED"] */
+  /** @example ["RECORDED", "RECORDING"] */
   status: string;
   tags: UnknownValue;
   /** ⚠️ Low confidence about: nullable */
@@ -60936,7 +61083,7 @@ export type VideoManagerVideo = {
   viewableAt: null | string;
   /**
    * @format uint32
-   * @example [0, 772963, 277364, 171376, 163669, 1911]
+   * @example [0, 772963, 277364, 171376, 171377, 163669]
    */
   viewCount: number;
   /**
@@ -61053,7 +61200,7 @@ export type VideoMetadataVideo = {
   createdAt: string;
   /**
    * @format uint32
-   * @example [0, 772963, 277364, 171376, 163669, 1911]
+   * @example [0, 772963, 277364, 171376, 171377, 163669]
    */
   viewCount: number;
   /**
@@ -61068,6 +61215,8 @@ export type VideoMetadataVideo = {
   lengthSeconds: number;
   /** @example ["ARCHIVE", "HIGHLIGHT", "UPLOAD"] */
   broadcastType: string;
+  /** @example ["RECORDED", "RECORDING"] */
+  status: string;
   owner: null | {
     /**
      * @pattern ^[0-9]+$
@@ -62643,7 +62792,7 @@ export type YourCommunityUserFragment = {
   followers: {
     /**
      * @format uint32
-     * @example [0, 2430015, 2459534, 522430, 2471025, 2380069]
+     * @example [0, 2430015, 2459534, 522430, 2471025, 2485645]
      */
     totalCount: null | number;
     __typename: "FollowerConnection";
@@ -66913,7 +67062,7 @@ export type BroadcastFollowSubCountsData = {
     followers: {
       /**
        * @format uint32
-       * @example [0, 2430015, 2459534, 522430, 2471025, 2380069]
+       * @example [0, 2430015, 2459534, 522430, 2471025, 2485645]
        */
       totalCount: null | number;
       __typename: "FollowerConnection";
@@ -69156,7 +69305,7 @@ export type ChannelAvatarData = {
     followers: {
       /**
        * @format uint32
-       * @example [0, 2430015, 2459534, 522430, 2471025, 2380069]
+       * @example [0, 2430015, 2459534, 522430, 2471025, 2485645]
        */
       totalCount: null | number;
       __typename: "FollowerConnection";
@@ -69719,7 +69868,7 @@ export type ChannelPageChannelInfoBarUserData = {
     followers: {
       /**
        * @format uint32
-       * @example [0, 2430015, 2459534, 522430, 2471025, 2380069]
+       * @example [0, 2430015, 2459534, 522430, 2471025, 2485645]
        */
       totalCount: null | number;
       __typename: "FollowerConnection";
@@ -70655,7 +70804,7 @@ export type ChannelRootAboutPanelData = {
     followers: {
       /**
        * @format uint32
-       * @example [0, 2430015, 2459534, 522430, 2471025, 2380069]
+       * @example [0, 2430015, 2459534, 522430, 2471025, 2485645]
        */
       totalCount: null | number;
       __typename: "FollowerConnection";
@@ -75868,7 +76017,7 @@ export type CommonHooksSearchUsersData = {
         followers: {
           /**
            * @format uint32
-           * @example [0, 2430015, 2459534, 522430, 2471025, 2380069]
+           * @example [0, 2430015, 2459534, 522430, 2471025, 2485645]
            */
           totalCount: null | number;
           __typename: "FollowerConnection";
@@ -77169,7 +77318,7 @@ export type CopyrightVideoData = {
     publishedAt: string;
     /**
      * @format uint32
-     * @example [0, 772963, 277364, 171376, 163669, 1911]
+     * @example [0, 772963, 277364, 171376, 171377, 163669]
      */
     viewCount: number;
     __typename: "Video";
@@ -84246,7 +84395,7 @@ export type FFZFetchUserData = {
     followers: {
       /**
        * @format uint32
-       * @example [0, 2430015, 2459534, 522430, 2471025, 2380069]
+       * @example [0, 2430015, 2459534, 522430, 2471025, 2485645]
        */
       totalCount: null | number;
       __typename: "FollowerConnection";
@@ -85150,7 +85299,7 @@ export type FollowerCountData = {
     followers: {
       /**
        * @format uint32
-       * @example [0, 2430015, 2459534, 522430, 2471025, 2380069]
+       * @example [0, 2430015, 2459534, 522430, 2471025, 2485645]
        */
       totalCount: null | number;
       __typename: "FollowerConnection";
@@ -85215,7 +85364,7 @@ export type FollowersTileQueryData = {
     followers: {
       /**
        * @format uint32
-       * @example [0, 2430015, 2459534, 522430, 2471025, 2380069]
+       * @example [0, 2430015, 2459534, 522430, 2471025, 2485645]
        */
       totalCount: null | number;
       __typename: "FollowerConnection";
@@ -85616,7 +85765,7 @@ export type FollowUserData = {
     followers: {
       /**
        * @format uint32
-       * @example [0, 2430015, 2459534, 522430, 2471025, 2380069]
+       * @example [0, 2430015, 2459534, 522430, 2471025, 2485645]
        */
       totalCount: null | number;
       __typename: "FollowerConnection";
@@ -87892,7 +88041,7 @@ export type GetSponsorshipsCreatorProfilePreviewData = {
     followers: {
       /**
        * @format uint32
-       * @example [0, 2430015, 2459534, 522430, 2471025, 2380069]
+       * @example [0, 2430015, 2459534, 522430, 2471025, 2485645]
        */
       totalCount: null | number;
       __typename: "FollowerConnection";
@@ -87942,7 +88091,7 @@ export type GetSponsorshipsCreatorProfileSettingsData = {
     followers: {
       /**
        * @format uint32
-       * @example [0, 2430015, 2459534, 522430, 2471025, 2380069]
+       * @example [0, 2430015, 2459534, 522430, 2471025, 2485645]
        */
       totalCount: null | number;
       __typename: "FollowerConnection";
@@ -87995,7 +88144,7 @@ export type GetSubscriberFollowersCountData = {
     followers: {
       /**
        * @format uint32
-       * @example [0, 2430015, 2459534, 522430, 2471025, 2380069]
+       * @example [0, 2430015, 2459534, 522430, 2471025, 2485645]
        */
       totalCount: null | number;
       __typename: "FollowerConnection";
@@ -89727,7 +89876,7 @@ export type HighlighterPageVideoData = {
         publishedAt: string;
         /**
          * @format uint32
-         * @example [0, 772963, 277364, 171376, 163669, 1911]
+         * @example [0, 772963, 277364, 171376, 171377, 163669]
          */
         viewCount: number;
       });
@@ -90716,6 +90865,36 @@ export type LegendaryEmoteSeasonData = {
 export type LegendaryEmoteSeasonResponse = QueryResponse<
   LegendaryEmoteSeasonData,
   "LegendaryEmoteSeason"
+>;
+
+export type LegendaryEmotesOptOutToggleChannelSettingsVariables = { channelID: ID };
+
+export type LegendaryEmotesOptOutToggleChannelSettingsData = {
+  channel: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["26490481"]
+     */
+    id: ID;
+    rewardCampaignChannelSettings: {
+      rewardCampaignsHidden:
+        | null
+        | {
+            /** ⚠️ Low confidence about: nullable */
+            rewardCampaignID: null | ID;
+            /** ⚠️ Low confidence about: nullable */
+            isHidden: null | boolean;
+            __typename: string;
+          }[];
+      __typename: "RewardCampaignChannelSettings";
+    };
+    __typename: "Channel";
+  };
+};
+
+export type LegendaryEmotesOptOutToggleChannelSettingsResponse = QueryResponse<
+  LegendaryEmotesOptOutToggleChannelSettingsData,
+  "LegendaryEmotesOptOutToggle_ChannelSettings"
 >;
 
 export type LiveNotificationsToggleUserVariables = { login: string };
@@ -97376,7 +97555,7 @@ export type QuickActionManageGoalsData = {
     followers: {
       /**
        * @format uint32
-       * @example [0, 2430015, 2459534, 522430, 2471025, 2380069]
+       * @example [0, 2430015, 2459534, 522430, 2471025, 2485645]
        */
       totalCount: null | number;
       __typename: "FollowerConnection";
@@ -97856,6 +98035,10 @@ export type RaidNotificationChannelsData = {
      * @gqlArg `width: Int [50, 70, 300, 28, 150]`
      */
     profileImageURL: string;
+    self: null | {
+      isEditor: boolean;
+      __typename: "UserSelfConnection";
+    };
     __typename: "User";
   };
   /** @aliasFor user */
@@ -101978,7 +102161,7 @@ export type StatsWidgetData = {
     followers: {
       /**
        * @format uint32
-       * @example [0, 2430015, 2459534, 522430, 2471025, 2380069]
+       * @example [0, 2430015, 2459534, 522430, 2471025, 2485645]
        */
       totalCount: null | number;
       __typename: "FollowerConnection";
@@ -102516,7 +102699,7 @@ export type StreamerCardData = {
     followers: {
       /**
        * @format uint32
-       * @example [0, 2430015, 2459534, 522430, 2471025, 2380069]
+       * @example [0, 2430015, 2459534, 522430, 2471025, 2485645]
        */
       totalCount: null | number;
       __typename: "FollowerConnection";
@@ -103318,7 +103501,7 @@ export type StreamScheduleData = {
           lengthSeconds: number;
           /**
            * @format uint32
-           * @example [0, 772963, 277364, 171376, 163669, 1911]
+           * @example [0, 772963, 277364, 171376, 171377, 163669]
            */
           viewCount: number;
           /**
@@ -105105,6 +105288,32 @@ export type SupportPanelGiftingSectionChannelLookupData = {
 export type SupportPanelGiftingSectionChannelLookupResponse = QueryResponse<
   SupportPanelGiftingSectionChannelLookupData,
   "SupportPanelGiftingSectionChannelLookup"
+>;
+
+export type SupportPanelOpenSubscriptionBenefitVariables = { login: string };
+
+export type SupportPanelOpenSubscriptionBenefitData = {
+  user: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["23161357"]
+     */
+    id: ID;
+    self: null | {
+      subscriptionBenefit: null | {
+        /** @example ["3L7hSWPX941bMubywA98e4uYNdT", "3KyHdOj3R8PmXqz66jFOU07Ia7D"] */
+        id: ID;
+        __typename: "SubscriptionBenefit";
+      };
+      __typename: "UserSelfConnection";
+    };
+    __typename: "User";
+  };
+};
+
+export type SupportPanelOpenSubscriptionBenefitResponse = QueryResponse<
+  SupportPanelOpenSubscriptionBenefitData,
+  "SupportPanelOpen_SubscriptionBenefit"
 >;
 
 export type SupportPanelPartnerPlusGoalVariables = { channelID: ID };
@@ -107512,31 +107721,6 @@ export type TurboAndSubUpsellData = {
 };
 
 export type TurboAndSubUpsellResponse = QueryResponse<TurboAndSubUpsellData, "TurboAndSubUpsell">;
-
-export type TurboAwarenessBannerChannelSharedPromotionsVariables = { login: string };
-
-export type TurboAwarenessBannerChannelSharedPromotionsData = {
-  user: null | {
-    /**
-     * @pattern ^[0-9]+$
-     * @example ["23161357"]
-     */
-    id: ID;
-    settings: {
-      creatorMonetizationSettings:
-        | null
-        | TurboAwarenessBannerChannelSharedPromotions_UserSettingsCreatorMonetizationSettings
-        | TurboAwarenessBannerChannelSharedPromotions_UserSettingsCreatorMonetizationSettings[];
-      __typename: "UserSettings";
-    };
-    __typename: "User";
-  };
-};
-
-export type TurboAwarenessBannerChannelSharedPromotionsResponse = QueryResponse<
-  TurboAwarenessBannerChannelSharedPromotionsData,
-  "TurboAwarenessBanner_ChannelSharedPromotions"
->;
 
 export type TurboProductInformationVariables = {
   name: string;
@@ -110613,7 +110797,7 @@ export type VideoMetadataData = {
     followers: {
       /**
        * @format uint32
-       * @example [0, 2430015, 2459534, 522430, 2471025, 2380069]
+       * @example [0, 2430015, 2459534, 522430, 2471025, 2485645]
        */
       totalCount: null | number;
       __typename: "FollowerConnection";
@@ -113928,6 +114112,20 @@ export type AssignUserToSlotData = {
 };
 
 export type AssignUserToSlotResponse = QueryResponse<AssignUserToSlotData, "AssignUserToSlot">;
+
+export type AutoRaidFtueAlertEnableAutoRaidVariables = { input: EnumOrInput };
+
+export type AutoRaidFtueAlertEnableAutoRaidData = {
+  updateAutoRaidSettings:
+    | null
+    | AutoRaidFtueAlertEnableAutoRaid_UpdateAutoRaidSettings
+    | AutoRaidFtueAlertEnableAutoRaid_UpdateAutoRaidSettings[];
+};
+
+export type AutoRaidFtueAlertEnableAutoRaidResponse = QueryResponse<
+  AutoRaidFtueAlertEnableAutoRaidData,
+  "AutoRaidFtueAlert_EnableAutoRaid"
+>;
 
 export type BadgeRewardsCreateChannelQuestCampaignsAndRewardGroupsVariables = {
   input: EnumOrInput;
@@ -118506,6 +118704,22 @@ export type LeaveRaidData = { leaveRaid: null | LeaveRaid_LeaveRaid | LeaveRaid_
 
 export type LeaveRaidResponse = QueryResponse<LeaveRaidData, "LeaveRaid">;
 
+export type LegendaryEmotesOptOutToggleUpdateRewardCampaignHiddenVariables = {
+  input: UpdateRewardCampaignHiddenInput;
+};
+
+export type LegendaryEmotesOptOutToggleUpdateRewardCampaignHiddenData = {
+  updateRewardCampaignHidden:
+    | null
+    | LegendaryEmotesOptOutToggleUpdateRewardCampaignHidden_UpdateRewardCampaignHidden
+    | LegendaryEmotesOptOutToggleUpdateRewardCampaignHidden_UpdateRewardCampaignHidden[];
+};
+
+export type LegendaryEmotesOptOutToggleUpdateRewardCampaignHiddenResponse = QueryResponse<
+  LegendaryEmotesOptOutToggleUpdateRewardCampaignHiddenData,
+  "LegendaryEmotesOptOutToggle_UpdateRewardCampaignHidden"
+>;
+
 export type LikeClipCommentVariables = { input: EnumOrInput };
 
 export type LikeClipCommentData = {
@@ -118936,6 +119150,20 @@ export type PauseCustomRewardRedemptionsData = {
 export type PauseCustomRewardRedemptionsResponse = QueryResponse<
   PauseCustomRewardRedemptionsData,
   "PauseCustomRewardRedemptions"
+>;
+
+export type PauseHostTrainHoldVariables = { input: EnumOrInput };
+
+export type PauseHostTrainHoldData = {
+  pauseHostTrainHold:
+    | null
+    | PauseHostTrainHold_PauseHostTrainHold
+    | PauseHostTrainHold_PauseHostTrainHold[];
+};
+
+export type PauseHostTrainHoldResponse = QueryResponse<
+  PauseHostTrainHoldData,
+  "PauseHostTrainHold"
 >;
 
 export type PauseRaidsVariables = { input: EnumOrInput };
@@ -119600,6 +119828,20 @@ export type RemoveViewerFromRTJQueueResponse = QueryResponse<
   "RemoveViewerFromRTJQueue"
 >;
 
+export type ReplaceHostTrainFirstStationVariables = { input: EnumOrInput };
+
+export type ReplaceHostTrainFirstStationData = {
+  replaceHostTrainFirstStation:
+    | null
+    | ReplaceHostTrainFirstStation_ReplaceHostTrainFirstStation
+    | ReplaceHostTrainFirstStation_ReplaceHostTrainFirstStation[];
+};
+
+export type ReplaceHostTrainFirstStationResponse = QueryResponse<
+  ReplaceHostTrainFirstStationData,
+  "ReplaceHostTrainFirstStation"
+>;
+
 export type ReporterAppealsAppealReportVariables = { input: EnumOrInput };
 
 export type ReporterAppealsAppealReportData = {
@@ -119682,6 +119924,20 @@ export type ResolvePredictionData = {
 };
 
 export type ResolvePredictionResponse = QueryResponse<ResolvePredictionData, "ResolvePrediction">;
+
+export type ResumeHostTrainHoldVariables = { input: EnumOrInput };
+
+export type ResumeHostTrainHoldData = {
+  resumeHostTrainHold:
+    | null
+    | ResumeHostTrainHold_ResumeHostTrainHold
+    | ResumeHostTrainHold_ResumeHostTrainHold[];
+};
+
+export type ResumeHostTrainHoldResponse = QueryResponse<
+  ResumeHostTrainHoldData,
+  "ResumeHostTrainHold"
+>;
 
 export type ResumeScheduleVariables = { input: EnumOrInput };
 
@@ -121154,6 +121410,20 @@ export type SyncedSettingsSetReadableChatColorsData = {
 export type SyncedSettingsSetReadableChatColorsResponse = QueryResponse<
   SyncedSettingsSetReadableChatColorsData,
   "SyncedSettingsSetReadableChatColors"
+>;
+
+export type TakeHostTrainTopRankedStationVariables = { input: EnumOrInput };
+
+export type TakeHostTrainTopRankedStationData = {
+  takeHostTrainTopRankedStation:
+    | null
+    | TakeHostTrainTopRankedStation_TakeHostTrainTopRankedStation
+    | TakeHostTrainTopRankedStation_TakeHostTrainTopRankedStation[];
+};
+
+export type TakeHostTrainTopRankedStationResponse = QueryResponse<
+  TakeHostTrainTopRankedStationData,
+  "TakeHostTrainTopRankedStation"
 >;
 
 export type TeamsDashboardCreateTeamImageUploadRequestVariables = { input: EnumOrInput };
@@ -124291,6 +124561,7 @@ export type QueryVariablesMap = {
   LeaderboardSettings_GetLeaderboardSettings: LeaderboardSettingsGetLeaderboardSettingsVariables;
   LegacyViewsTileQuery: LegacyViewsTileQueryVariables;
   LegendaryEmoteSeason: LegendaryEmoteSeasonVariables;
+  LegendaryEmotesOptOutToggle_ChannelSettings: LegendaryEmotesOptOutToggleChannelSettingsVariables;
   LiveNotificationsToggle_User: LiveNotificationsToggleUserVariables;
   LiveShoppingProductDetails: LiveShoppingProductDetailsVariables;
   LiveShoppingProductSummaries: LiveShoppingProductSummariesVariables;
@@ -124725,6 +124996,7 @@ export type QueryVariablesMap = {
   SupportPanelFooterPrimeStatus: SupportPanelFooterPrimeStatusVariables;
   SupportPanelGifting_GifterBadgeProgressV2: SupportPanelGiftingGifterBadgeProgressV2Variables;
   SupportPanelGiftingSectionChannelLookup: SupportPanelGiftingSectionChannelLookupVariables;
+  SupportPanelOpen_SubscriptionBenefit: SupportPanelOpenSubscriptionBenefitVariables;
   SupportPanelPartnerPlusGoal: SupportPanelPartnerPlusGoalVariables;
   SupportPanelSingleGifting_GiftingOptions: SupportPanelSingleGiftingGiftingOptionsVariables;
   SupportPanelSingleGifting_UserInfo: SupportPanelSingleGiftingUserInfoVariables;
@@ -124795,7 +125067,6 @@ export type QueryVariablesMap = {
   TrackingManager_RequestInfo: Record<string, never>;
   TransactionHistoryTab_UserPaymentTransactions: TransactionHistoryTabUserPaymentTransactionsVariables;
   TurboAndSubUpsell: TurboAndSubUpsellVariables;
-  TurboAwarenessBanner_ChannelSharedPromotions: TurboAwarenessBannerChannelSharedPromotionsVariables;
   TurboProductInformation: TurboProductInformationVariables;
   TurboSubGiftSuccessScreen: TurboSubGiftSuccessScreenVariables;
   TurboSubscriptionProduct: TurboSubscriptionProductVariables;
@@ -125008,6 +125279,7 @@ export type QueryVariablesMap = {
   AssignEmoteToSubscriptionProduct: AssignEmoteToSubscriptionProductVariables;
   AssignLeadMod: AssignLeadModVariables;
   AssignUserToSlot: AssignUserToSlotVariables;
+  AutoRaidFtueAlert_EnableAutoRaid: AutoRaidFtueAlertEnableAutoRaidVariables;
   BadgeRewards_CreateChannelQuestCampaignsAndRewardGroups: BadgeRewardsCreateChannelQuestCampaignsAndRewardGroupsVariables;
   BadgeRewards_CreateQuestBadgeUploadConfig: BadgeRewardsCreateQuestBadgeUploadConfigVariables;
   BadgeRewards_DeleteQuestCampaign: BadgeRewardsDeleteQuestCampaignVariables;
@@ -125357,6 +125629,7 @@ export type QueryVariablesMap = {
   LeaveCollaborationGroup: LeaveCollaborationGroupVariables;
   LeaveHostTrain: LeaveHostTrainVariables;
   LeaveRaid: LeaveRaidVariables;
+  LegendaryEmotesOptOutToggle_UpdateRewardCampaignHidden: LegendaryEmotesOptOutToggleUpdateRewardCampaignHiddenVariables;
   LikeClipComment: LikeClipCommentVariables;
   LinkPrimeAccount: LinkPrimeAccountVariables;
   LinkSocialAuthConnection: LinkSocialAuthConnectionVariables;
@@ -125389,6 +125662,7 @@ export type QueryVariablesMap = {
   optIntoPreaffiliate: Record<string, never>;
   OptInToPreaffiliate: Record<string, never>;
   PauseCustomRewardRedemptions: PauseCustomRewardRedemptionsVariables;
+  PauseHostTrainHold: PauseHostTrainHoldVariables;
   PauseRaids: PauseRaidsVariables;
   PayoutOnboardingAgreement_AcceptProgramAgreement: PayoutOnboardingAgreementAcceptProgramAgreementVariables;
   PayoutOnboardingRegistration_RegisterPayoutWorkflow: PayoutOnboardingRegistrationRegisterPayoutWorkflowVariables;
@@ -125441,6 +125715,7 @@ export type QueryVariablesMap = {
   RemoveSocialMedia: RemoveSocialMediaVariables;
   RemoveUserFromNotificationCampaign: RemoveUserFromNotificationCampaignVariables;
   RemoveViewerFromRTJQueue: RemoveViewerFromRTJQueueVariables;
+  ReplaceHostTrainFirstStation: ReplaceHostTrainFirstStationVariables;
   ReporterAppeals_AppealReport: ReporterAppealsAppealReportVariables;
   ReportWizard_CreateReport: ReportWizardCreateReportVariables;
   RequestRelayCode: RequestRelayCodeVariables;
@@ -125448,6 +125723,7 @@ export type QueryVariablesMap = {
   ResetOauthAppSecret: ResetOauthAppSecretVariables;
   ResetUsername: ResetUsernameVariables;
   ResolvePrediction: ResolvePredictionVariables;
+  ResumeHostTrainHold: ResumeHostTrainHoldVariables;
   ResumeSchedule: ResumeScheduleVariables;
   revokeCommunityRole: RevokeCommunityRoleVariables;
   ScheduleFutureGuestStarInvite: ScheduleFutureGuestStarInviteVariables;
@@ -125558,6 +125834,7 @@ export type QueryVariablesMap = {
   SyncedSettingsSetGifAnimations: SyncedSettingsSetGifAnimationsVariables;
   SyncedSettingsSetGifsEnabled: SyncedSettingsSetGifsEnabledVariables;
   SyncedSettingsSetReadableChatColors: SyncedSettingsSetReadableChatColorsVariables;
+  TakeHostTrainTopRankedStation: TakeHostTrainTopRankedStationVariables;
   TeamsDashboard_CreateTeamImageUploadRequest: TeamsDashboardCreateTeamImageUploadRequestVariables;
   TeamsDashboard_DeleteTeamInvitation: TeamsDashboardDeleteTeamInvitationVariables;
   TeamsDashboard_InviteUserToTeam: TeamsDashboardInviteUserToTeamVariables;
@@ -126594,6 +126871,7 @@ export type QueryResponseMap = {
   LeaderboardSettings_GetLeaderboardSettings: LeaderboardSettingsGetLeaderboardSettingsResponse;
   LegacyViewsTileQuery: LegacyViewsTileQueryResponse;
   LegendaryEmoteSeason: LegendaryEmoteSeasonResponse;
+  LegendaryEmotesOptOutToggle_ChannelSettings: LegendaryEmotesOptOutToggleChannelSettingsResponse;
   LiveNotificationsToggle_User: LiveNotificationsToggleUserResponse;
   LiveShoppingProductDetails: LiveShoppingProductDetailsResponse;
   LiveShoppingProductSummaries: LiveShoppingProductSummariesResponse;
@@ -127028,6 +127306,7 @@ export type QueryResponseMap = {
   SupportPanelFooterPrimeStatus: SupportPanelFooterPrimeStatusResponse;
   SupportPanelGifting_GifterBadgeProgressV2: SupportPanelGiftingGifterBadgeProgressV2Response;
   SupportPanelGiftingSectionChannelLookup: SupportPanelGiftingSectionChannelLookupResponse;
+  SupportPanelOpen_SubscriptionBenefit: SupportPanelOpenSubscriptionBenefitResponse;
   SupportPanelPartnerPlusGoal: SupportPanelPartnerPlusGoalResponse;
   SupportPanelSingleGifting_GiftingOptions: SupportPanelSingleGiftingGiftingOptionsResponse;
   SupportPanelSingleGifting_UserInfo: SupportPanelSingleGiftingUserInfoResponse;
@@ -127098,7 +127377,6 @@ export type QueryResponseMap = {
   TrackingManager_RequestInfo: TrackingManagerRequestInfoResponse;
   TransactionHistoryTab_UserPaymentTransactions: TransactionHistoryTabUserPaymentTransactionsResponse;
   TurboAndSubUpsell: TurboAndSubUpsellResponse;
-  TurboAwarenessBanner_ChannelSharedPromotions: TurboAwarenessBannerChannelSharedPromotionsResponse;
   TurboProductInformation: TurboProductInformationResponse;
   TurboSubGiftSuccessScreen: TurboSubGiftSuccessScreenResponse;
   TurboSubscriptionProduct: TurboSubscriptionProductResponse;
@@ -127311,6 +127589,7 @@ export type QueryResponseMap = {
   AssignEmoteToSubscriptionProduct: AssignEmoteToSubscriptionProductResponse;
   AssignLeadMod: AssignLeadModResponse;
   AssignUserToSlot: AssignUserToSlotResponse;
+  AutoRaidFtueAlert_EnableAutoRaid: AutoRaidFtueAlertEnableAutoRaidResponse;
   BadgeRewards_CreateChannelQuestCampaignsAndRewardGroups: BadgeRewardsCreateChannelQuestCampaignsAndRewardGroupsResponse;
   BadgeRewards_CreateQuestBadgeUploadConfig: BadgeRewardsCreateQuestBadgeUploadConfigResponse;
   BadgeRewards_DeleteQuestCampaign: BadgeRewardsDeleteQuestCampaignResponse;
@@ -127660,6 +127939,7 @@ export type QueryResponseMap = {
   LeaveCollaborationGroup: LeaveCollaborationGroupResponse;
   LeaveHostTrain: LeaveHostTrainResponse;
   LeaveRaid: LeaveRaidResponse;
+  LegendaryEmotesOptOutToggle_UpdateRewardCampaignHidden: LegendaryEmotesOptOutToggleUpdateRewardCampaignHiddenResponse;
   LikeClipComment: LikeClipCommentResponse;
   LinkPrimeAccount: LinkPrimeAccountResponse;
   LinkSocialAuthConnection: LinkSocialAuthConnectionResponse;
@@ -127692,6 +127972,7 @@ export type QueryResponseMap = {
   optIntoPreaffiliate: OptIntoPreaffiliateResponse;
   OptInToPreaffiliate: OptInToPreaffiliateResponse;
   PauseCustomRewardRedemptions: PauseCustomRewardRedemptionsResponse;
+  PauseHostTrainHold: PauseHostTrainHoldResponse;
   PauseRaids: PauseRaidsResponse;
   PayoutOnboardingAgreement_AcceptProgramAgreement: PayoutOnboardingAgreementAcceptProgramAgreementResponse;
   PayoutOnboardingRegistration_RegisterPayoutWorkflow: PayoutOnboardingRegistrationRegisterPayoutWorkflowResponse;
@@ -127744,6 +128025,7 @@ export type QueryResponseMap = {
   RemoveSocialMedia: RemoveSocialMediaResponse;
   RemoveUserFromNotificationCampaign: RemoveUserFromNotificationCampaignResponse;
   RemoveViewerFromRTJQueue: RemoveViewerFromRTJQueueResponse;
+  ReplaceHostTrainFirstStation: ReplaceHostTrainFirstStationResponse;
   ReporterAppeals_AppealReport: ReporterAppealsAppealReportResponse;
   ReportWizard_CreateReport: ReportWizardCreateReportResponse;
   RequestRelayCode: RequestRelayCodeResponse;
@@ -127751,6 +128033,7 @@ export type QueryResponseMap = {
   ResetOauthAppSecret: ResetOauthAppSecretResponse;
   ResetUsername: ResetUsernameResponse;
   ResolvePrediction: ResolvePredictionResponse;
+  ResumeHostTrainHold: ResumeHostTrainHoldResponse;
   ResumeSchedule: ResumeScheduleResponse;
   revokeCommunityRole: RevokeCommunityRoleResponse;
   ScheduleFutureGuestStarInvite: ScheduleFutureGuestStarInviteResponse;
@@ -127861,6 +128144,7 @@ export type QueryResponseMap = {
   SyncedSettingsSetGifAnimations: SyncedSettingsSetGifAnimationsResponse;
   SyncedSettingsSetGifsEnabled: SyncedSettingsSetGifsEnabledResponse;
   SyncedSettingsSetReadableChatColors: SyncedSettingsSetReadableChatColorsResponse;
+  TakeHostTrainTopRankedStation: TakeHostTrainTopRankedStationResponse;
   TeamsDashboard_CreateTeamImageUploadRequest: TeamsDashboardCreateTeamImageUploadRequestResponse;
   TeamsDashboard_DeleteTeamInvitation: TeamsDashboardDeleteTeamInvitationResponse;
   TeamsDashboard_InviteUserToTeam: TeamsDashboardInviteUserToTeamResponse;
