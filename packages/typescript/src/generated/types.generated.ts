@@ -733,7 +733,8 @@ export type CoreChannelWithHomePrefsFragment = CoreUserFragment & {
        */
       id: ID;
       isAuthorized: boolean;
-      restrictionType: null;
+      /** @example ["UNKNOWN"] */
+      restrictionType: null | string;
       __typename: "ChannelSelfEdge";
     };
     trailer: {
@@ -3832,7 +3833,8 @@ export type VideoPreviewOverlayData = {
        * @gqlArg `height: Int [180, 320, 720, 45, 360, 640, 160]`
        */
       previewImageURL: string;
-      restrictionType: null;
+      /** @example ["AD_POLICY"] */
+      restrictionType: null | string;
       __typename: "Stream";
     };
     __typename: "User";

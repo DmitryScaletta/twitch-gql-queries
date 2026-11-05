@@ -368,12 +368,7 @@ export type ActiveSponsorshipInstances_SponsorshipInstances = {
       automodLevelMinimum: UnknownValue;
       activities: null | {
         state: UnknownValue;
-        __typename:
-          | "ChannelSkin"
-          | "GiftSubMatch"
-          | "HostReadAd"
-          | "SponsoredSocialPosts"
-          | "SubsidizedSubscriptions";
+        __typename: "ChannelSkin" | "GiftSubMatch" | "HostReadAd" | "SubsidizedSubscriptions";
       };
       __typename: "CampaignInstance";
     };
@@ -15022,7 +15017,8 @@ export type CoreChannelFragment = CoreUserFragment & {
        */
       id: ID;
       isAuthorized: boolean;
-      restrictionType: null;
+      /** @example ["UNKNOWN"] */
+      restrictionType: null | string;
       __typename: "ChannelSelfEdge";
     };
     trailer: {
@@ -15078,7 +15074,8 @@ export type CoreChannelWithHomePrefsFragment = CoreUserFragment & {
        */
       id: ID;
       isAuthorized: boolean;
-      restrictionType: null;
+      /** @example ["UNKNOWN"] */
+      restrictionType: null | string;
       __typename: "ChannelSelfEdge";
     };
     trailer: {
@@ -32146,6 +32143,11 @@ export type InventoryUserDropReward = {
    * @format uint32
    */
   totalCount: null | number;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format date-time
+   */
+  expiresAt: null | string;
   __typename: "UserDropReward";
 };
 
@@ -47580,6 +47582,8 @@ export type ShieldModeSettings = {
   isOpenCallingDisabled: null | boolean;
   /** ⚠️ Low confidence about: nullable */
   isGifPickerDisabled: null | boolean;
+  /** ⚠️ Low confidence about: nullable */
+  isIncomingRaidsDisabled: null | boolean;
   updateSettingsErrors:
     | null
     | ShieldModeSettings_ShieldModerationSettingsUpdateSettingsErrors
@@ -48338,17 +48342,8 @@ export type SponsorBannerEligibility_SponsorBannerEligibility = {
   __typename: string;
 };
 
-/** ℹ️ Not real Twitch type name */
-export type SponsoredSocialPostsUserConnections_AccountConnectionSetTwitter = {
-  username: UnknownValue;
-  __typename: string;
-};
-
 export type SponsorshipActivationSettings = {
   channelSkinVideoOverlayAssetPosition: UnknownValue;
-  sponsoredSocialPostsTemplate: UnknownValue;
-  /** ⚠️ Low confidence about: nullable */
-  sponsoredSocialPostsLocale: null | string;
   __typename: "UserSponsorshipActivationSettings";
 };
 
@@ -48356,7 +48351,6 @@ export type SponsorshipActivity =
   | (SponsorshipChannelSkin & { __typename: "ChannelSkin" })
   | (SponsorshipHostReadAd & { __typename: "HostReadAd" })
   | (SponsorshipSubSub & { __typename: "SubsidizedSubscriptions" })
-  | (SponsorshipSocialPost & { __typename: "SponsoredSocialPosts" })
   | (SponsorshipGiftSubMatch & { __typename: "GiftSubMatch" });
 
 export type SponsorshipActivityBase = {
@@ -48376,12 +48370,7 @@ export type SponsorshipActivityBase = {
   /** ⚠️ Low confidence about: nullable */
   isPrimary: null | boolean;
   activationProgression: UnknownValue;
-  __typename:
-    | "ChannelSkin"
-    | "GiftSubMatch"
-    | "HostReadAd"
-    | "SponsoredSocialPosts"
-    | "SubsidizedSubscriptions";
+  __typename: "ChannelSkin" | "GiftSubMatch" | "HostReadAd" | "SubsidizedSubscriptions";
 };
 
 /** ℹ️ Not real Twitch type name */
@@ -48489,7 +48478,6 @@ export type SponsorshipCampaignInstance = {
     | { __typename: "ChannelSkin" }
     | { __typename: "GiftSubMatch" }
     | { __typename: "HostReadAd" }
-    | { __typename: "SponsoredSocialPosts" }
     | { __typename: "SubsidizedSubscriptions" };
   demandSource: UnknownValue;
   /**
@@ -48787,7 +48775,6 @@ export type SponsorshipCampaignLastSeenInstance = {
     | { __typename: "ChannelSkin" }
     | { __typename: "GiftSubMatch" }
     | { __typename: "HostReadAd" }
-    | { __typename: "SponsoredSocialPosts" }
     | { __typename: "SubsidizedSubscriptions" };
   demandSource: UnknownValue;
   /**
@@ -48864,6 +48851,42 @@ export type SponsorshipCampaignLastSeenInstance_CampaignInstanceSelf = {
   paymentScheme: null | string;
   campaignInstancePacing: null | SponsorshipCampaignInstancePacing;
   requiredCcls: UnknownValue;
+  __typename: string;
+};
+
+/** ℹ️ Not real Twitch type name */
+export type SponsorshipCategoryWarnings_SponsorshipInstances = {
+  edges: {
+    node: null | {
+      id: ID;
+      /** ⚠️ Low confidence about: nullable */
+      isMatureGameExcluded: null | boolean;
+      activities: null | {
+        state: UnknownValue;
+        __typename: "ChannelSkin" | "GiftSubMatch" | "HostReadAd" | "SubsidizedSubscriptions";
+      };
+      eligibleCategories: null | {
+        /**
+         * @pattern ^[0-9]+$
+         * @example ["509672"]
+         */
+        id: ID;
+        __typename: "Game";
+      };
+      excludedCategories:
+        | null
+        | SponsorshipCategoryWarnings_SponsorshipInstancesEdgesNodeExcludedCategories
+        | SponsorshipCategoryWarnings_SponsorshipInstancesEdgesNodeExcludedCategories[];
+      __typename: "CampaignInstance";
+    };
+    __typename: string;
+  }[];
+  __typename: string;
+};
+
+/** ℹ️ Not real Twitch type name */
+export type SponsorshipCategoryWarnings_SponsorshipInstancesEdgesNodeExcludedCategories = {
+  id: ID;
   __typename: string;
 };
 
@@ -49042,18 +49065,6 @@ export type SponsorshipPendingCostreamInstances_SponsorshipPendingCostreamInstan
   __typename: string;
 };
 
-export type SponsorshipSocialPost =
-  | SponsorshipActivityBase
-  | {
-      ctaMessage: UnknownValue;
-      /**
-       * ⚠️ Low confidence about: nullable
-       * @format uri
-       */
-      ctaURL: null | string;
-      __typename: "SponsoredSocialPosts";
-    };
-
 export type SponsorshipSubSub =
   | SponsorshipActivityBase
   | {
@@ -49185,31 +49196,6 @@ export type SponsorshipToolsActivity =
         | SponsorshipToolsActivity_ChannelSkinActivation[];
       __typename: "GiftSubMatch";
       advertiser: null | GiftSubMatchAdvertiserFragment;
-    }
-  | {
-      /** ⚠️ Low confidence about: nullable */
-      name: null | string;
-      state: UnknownValue;
-      activationProgression: UnknownValue;
-      progress:
-        | null
-        | SponsorshipToolsActivity_ChannelSkinProgress
-        | SponsorshipToolsActivity_ChannelSkinProgress[];
-      communityProgress:
-        | null
-        | SponsorshipToolsActivity_ChannelSkinCommunityProgress
-        | SponsorshipToolsActivity_ChannelSkinCommunityProgress[];
-      activation:
-        | null
-        | SponsorshipToolsActivity_ChannelSkinActivation
-        | SponsorshipToolsActivity_ChannelSkinActivation[];
-      __typename: "SponsoredSocialPosts";
-      ctaMessage: UnknownValue;
-      /**
-       * ⚠️ Low confidence about: nullable
-       * @format uri
-       */
-      ctaURL: null | string;
     };
 
 /** ℹ️ Not real Twitch type name */
@@ -49497,12 +49483,7 @@ export type SponsorshipToolsManualTrigger = {
   id: ID;
   type: UnknownValue;
   activities: SponsorshipToolsActivity & {
-    __typename:
-      | "ChannelSkin"
-      | "GiftSubMatch"
-      | "HostReadAd"
-      | "SponsoredSocialPosts"
-      | "SubsidizedSubscriptions";
+    __typename: "ChannelSkin" | "GiftSubMatch" | "HostReadAd" | "SubsidizedSubscriptions";
   };
   /**
    * ⚠️ Low confidence about: nullable
@@ -53344,6 +53325,33 @@ export type SupportChatRecentSession_RecentSupportChatSessionMessages = {
   wasEscalated: UnknownValue;
   wasSessionEnded: UnknownValue;
   citations: UnknownValue;
+  __typename: string;
+};
+
+/** ℹ️ Not real Twitch type name */
+export type SupportPanelChannelTopEmotes_ChannelRecap = {
+  emoteUsage:
+    | null
+    | SupportPanelChannelTopEmotes_ChannelRecapEmoteUsage
+    | SupportPanelChannelTopEmotes_ChannelRecapEmoteUsage[];
+  __typename: string;
+};
+
+/** ℹ️ Not real Twitch type name */
+export type SupportPanelChannelTopEmotes_ChannelRecapEmoteUsage = {
+  emote:
+    | null
+    | SupportPanelChannelTopEmotes_ChannelRecapEmoteUsageEmote
+    | SupportPanelChannelTopEmotes_ChannelRecapEmoteUsageEmote[];
+  totalUsage: UnknownValue;
+  __typename: string;
+};
+
+/** ℹ️ Not real Twitch type name */
+export type SupportPanelChannelTopEmotes_ChannelRecapEmoteUsageEmote = {
+  id: ID;
+  /** ⚠️ Low confidence about: nullable */
+  token: null | string;
   __typename: string;
 };
 
@@ -101759,29 +101767,6 @@ export type SponsorBannerEligibilityResponse = QueryResponse<
   "SponsorBannerEligibility"
 >;
 
-export type SponsoredSocialPostsUserConnectionsData = {
-  currentUser: null | {
-    /**
-     * @pattern ^[0-9]+$
-     * @example ["23161357"]
-     */
-    id: ID;
-    accountConnections: {
-      twitter:
-        | null
-        | SponsoredSocialPostsUserConnections_AccountConnectionSetTwitter
-        | SponsoredSocialPostsUserConnections_AccountConnectionSetTwitter[];
-      __typename: "AccountConnectionSet";
-    };
-    __typename: "User";
-  };
-};
-
-export type SponsoredSocialPostsUserConnectionsResponse = QueryResponse<
-  SponsoredSocialPostsUserConnectionsData,
-  "SponsoredSocialPostsUserConnections"
->;
-
 export type SponsorshipActivationSettingsVariables = { input: UserSponsorshipSettingsInput };
 
 export type SponsorshipActivationSettingsData = {
@@ -101848,6 +101833,23 @@ export type SponsorshipCampaignInstancesData = {
 export type SponsorshipCampaignInstancesResponse = QueryResponse<
   SponsorshipCampaignInstancesData,
   "SponsorshipCampaignInstances"
+>;
+
+export type SponsorshipCategoryWarningsVariables = {
+  creatorID: ID;
+  query?: null | SponsorshipInstanceQuery;
+};
+
+export type SponsorshipCategoryWarningsData = {
+  sponsorshipInstances:
+    | null
+    | SponsorshipCategoryWarnings_SponsorshipInstances
+    | SponsorshipCategoryWarnings_SponsorshipInstances[];
+};
+
+export type SponsorshipCategoryWarningsResponse = QueryResponse<
+  SponsorshipCategoryWarningsData,
+  "SponsorshipCategoryWarnings"
 >;
 
 export type SponsorshipChannelSettingsVariables = { channelLogin: string };
@@ -104881,6 +104883,26 @@ export type SupportChatRecentSessionResponse = QueryResponse<
   "SupportChatRecentSession"
 >;
 
+export type SupportPanelBenefitPackBadgeVariables = { login: string };
+
+export type SupportPanelBenefitPackBadgeData = {
+  user: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["23161357"]
+     */
+    id: ID;
+    broadcastBadges: Badge[];
+    __typename: "User";
+  };
+  badges: Badge[];
+};
+
+export type SupportPanelBenefitPackBadgeResponse = QueryResponse<
+  SupportPanelBenefitPackBadgeData,
+  "SupportPanelBenefitPackBadge"
+>;
+
 export type SupportPanelBenefitsSectionBadgesVariables = { login: string };
 
 export type SupportPanelBenefitsSectionBadgesData = {
@@ -104982,6 +105004,32 @@ export type SupportPanelBenefitsSectionUserData = {
 export type SupportPanelBenefitsSectionUserResponse = QueryResponse<
   SupportPanelBenefitsSectionUserData,
   "SupportPanelBenefitsSectionUser"
+>;
+
+export type SupportPanelChannelTopEmotesVariables = {
+  channelID: ID;
+  /** @format time */
+  endsAt: string;
+};
+
+export type SupportPanelChannelTopEmotesData = {
+  channel: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["26490481"]
+     */
+    id: ID;
+    recap:
+      | null
+      | SupportPanelChannelTopEmotes_ChannelRecap
+      | SupportPanelChannelTopEmotes_ChannelRecap[];
+    __typename: "Channel";
+  };
+};
+
+export type SupportPanelChannelTopEmotesResponse = QueryResponse<
+  SupportPanelChannelTopEmotesData,
+  "SupportPanelChannelTopEmotes"
 >;
 
 export type SupportPanelCheckoutServiceVariables = {
@@ -105475,6 +105523,57 @@ export type SupportPanelSingleGiftingUserInfoResponse = QueryResponse<
   "SupportPanelSingleGifting_UserInfo"
 >;
 
+export type SupportPanelSubHeroVariables = {
+  login: string;
+  /**
+   * @format int32
+   * @default 150
+   */
+  avatarSize?: null | number;
+};
+
+export type SupportPanelSubHeroData = {
+  user: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["23161357"]
+     */
+    id: ID;
+    /** @example ["Twitch", "CD PROJEKT RED", "LIRIK", "forsen", "ayuuexe", "xQc", "RSDragonwilds"] */
+    displayName: string;
+    /**
+     * @format uri
+     * @example ["https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-70x70.png", "https://static-cdn.jtvnw.net/jtv_user_pictures/3c3366d7-728a-4204-bfdd-7c823858e4d9-profile_image-70x70.png"]
+     * @gqlArg `width: Int [50, 70, 300, 28, 150]`
+     */
+    profileImageURL: string;
+    __typename: "User";
+  };
+  currentUser: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["23161357"]
+     */
+    id: ID;
+    /** @example ["lirik", "twitch", "cdprojektred", "forsen", "tickett_", "st1mgreeen", "lipton_18"] */
+    login: string;
+    /** @example ["Twitch", "CD PROJEKT RED", "LIRIK", "forsen", "ayuuexe", "xQc", "RSDragonwilds"] */
+    displayName: string;
+    /**
+     * @format uri
+     * @example ["https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-70x70.png", "https://static-cdn.jtvnw.net/jtv_user_pictures/3c3366d7-728a-4204-bfdd-7c823858e4d9-profile_image-70x70.png"]
+     * @gqlArg `width: Int [50, 70, 300, 28, 150]`
+     */
+    profileImageURL: string;
+    __typename: "User";
+  };
+};
+
+export type SupportPanelSubHeroResponse = QueryResponse<
+  SupportPanelSubHeroData,
+  "SupportPanelSubHero"
+>;
+
 export type SupportPanelSubscribeViewFooterVariables = {
   login: string;
   /** @default  */
@@ -105502,6 +105601,8 @@ export type SupportPanelSubscribeViewFooterData = {
         profileImageURL: string;
         self: null | {
           subscriptionBenefit: null | SubBenefit;
+          /** @aliasFor subscriptionTenure */
+          cumulativeTenure: null | Tenure;
           __typename: "UserSelfConnection";
         };
         subscriptionProductsResult:
@@ -111843,7 +111944,8 @@ export type VideoPreviewOverlayData = {
        * @gqlArg `height: Int [180, 320, 720, 45, 360, 640, 160]`
        */
       previewImageURL: string;
-      restrictionType: null;
+      /** @example ["AD_POLICY"] */
+      restrictionType: null | string;
       __typename: "Stream";
     };
     __typename: "User";
@@ -124892,12 +124994,12 @@ export type QueryVariablesMap = {
   SpendableBalanceOptStateQuery: Record<string, never>;
   SponsorBannerChannelContext: SponsorBannerChannelContextVariables;
   SponsorBannerEligibility: SponsorBannerEligibilityVariables;
-  SponsoredSocialPostsUserConnections: Record<string, never>;
   SponsorshipActivationSettings: SponsorshipActivationSettingsVariables;
   SponsorshipAdvertiserProfile: Record<string, never>;
   SponsorshipCampaignInstance: SponsorshipCampaignInstanceVariables;
   SponsorshipCampaignInstancePacings: SponsorshipCampaignInstancePacingsVariables;
   SponsorshipCampaignInstances: SponsorshipCampaignInstancesVariables;
+  SponsorshipCategoryWarnings: SponsorshipCategoryWarningsVariables;
   SponsorshipChannelSettings: SponsorshipChannelSettingsVariables;
   SponsorshipPendingCostreamInstances: SponsorshipPendingCostreamInstancesVariables;
   SponsorshipsCreatorProfile_CommunityStats: SponsorshipsCreatorProfileCommunityStatsVariables;
@@ -124985,9 +125087,11 @@ export type QueryVariablesMap = {
   SunlightHomePageCards: SunlightHomePageCardsVariables;
   SupportChatCurrentUser: Record<string, never>;
   SupportChatRecentSession: Record<string, never>;
+  SupportPanelBenefitPackBadge: SupportPanelBenefitPackBadgeVariables;
   SupportPanelBenefitsSectionBadges: SupportPanelBenefitsSectionBadgesVariables;
   SupportPanelBenefitsSectionEmotes: SupportPanelBenefitsSectionEmotesVariables;
   SupportPanelBenefitsSectionUser: SupportPanelBenefitsSectionUserVariables;
+  SupportPanelChannelTopEmotes: SupportPanelChannelTopEmotesVariables;
   SupportPanelCheckoutService: SupportPanelCheckoutServiceVariables;
   SupportPanelCommunituyGifting_UserInfo: SupportPanelCommunituyGiftingUserInfoVariables;
   SupportPanelCommunityGifting_GifterBadgeProgress: SupportPanelCommunityGiftingGifterBadgeProgressVariables;
@@ -125000,6 +125104,7 @@ export type QueryVariablesMap = {
   SupportPanelPartnerPlusGoal: SupportPanelPartnerPlusGoalVariables;
   SupportPanelSingleGifting_GiftingOptions: SupportPanelSingleGiftingGiftingOptionsVariables;
   SupportPanelSingleGifting_UserInfo: SupportPanelSingleGiftingUserInfoVariables;
+  SupportPanelSubHero: SupportPanelSubHeroVariables;
   SupportPanelSubscribeViewFooter: SupportPanelSubscribeViewFooterVariables;
   SupportPanelSubscribeViewFooterPrime: SupportPanelSubscribeViewFooterPrimeVariables;
   SupportPanelSubscriptionDetails: SupportPanelSubscriptionDetailsVariables;
@@ -127202,12 +127307,12 @@ export type QueryResponseMap = {
   SpendableBalanceOptStateQuery: SpendableBalanceOptStateQueryResponse;
   SponsorBannerChannelContext: SponsorBannerChannelContextResponse;
   SponsorBannerEligibility: SponsorBannerEligibilityResponse;
-  SponsoredSocialPostsUserConnections: SponsoredSocialPostsUserConnectionsResponse;
   SponsorshipActivationSettings: SponsorshipActivationSettingsResponse;
   SponsorshipAdvertiserProfile: SponsorshipAdvertiserProfileResponse;
   SponsorshipCampaignInstance: SponsorshipCampaignInstanceResponse;
   SponsorshipCampaignInstancePacings: SponsorshipCampaignInstancePacingsResponse;
   SponsorshipCampaignInstances: SponsorshipCampaignInstancesResponse;
+  SponsorshipCategoryWarnings: SponsorshipCategoryWarningsResponse;
   SponsorshipChannelSettings: SponsorshipChannelSettingsResponse;
   SponsorshipPendingCostreamInstances: SponsorshipPendingCostreamInstancesResponse;
   SponsorshipsCreatorProfile_CommunityStats: SponsorshipsCreatorProfileCommunityStatsResponse;
@@ -127295,9 +127400,11 @@ export type QueryResponseMap = {
   SunlightHomePageCards: SunlightHomePageCardsResponse;
   SupportChatCurrentUser: SupportChatCurrentUserResponse;
   SupportChatRecentSession: SupportChatRecentSessionResponse;
+  SupportPanelBenefitPackBadge: SupportPanelBenefitPackBadgeResponse;
   SupportPanelBenefitsSectionBadges: SupportPanelBenefitsSectionBadgesResponse;
   SupportPanelBenefitsSectionEmotes: SupportPanelBenefitsSectionEmotesResponse;
   SupportPanelBenefitsSectionUser: SupportPanelBenefitsSectionUserResponse;
+  SupportPanelChannelTopEmotes: SupportPanelChannelTopEmotesResponse;
   SupportPanelCheckoutService: SupportPanelCheckoutServiceResponse;
   SupportPanelCommunituyGifting_UserInfo: SupportPanelCommunituyGiftingUserInfoResponse;
   SupportPanelCommunityGifting_GifterBadgeProgress: SupportPanelCommunityGiftingGifterBadgeProgressResponse;
@@ -127310,6 +127417,7 @@ export type QueryResponseMap = {
   SupportPanelPartnerPlusGoal: SupportPanelPartnerPlusGoalResponse;
   SupportPanelSingleGifting_GiftingOptions: SupportPanelSingleGiftingGiftingOptionsResponse;
   SupportPanelSingleGifting_UserInfo: SupportPanelSingleGiftingUserInfoResponse;
+  SupportPanelSubHero: SupportPanelSubHeroResponse;
   SupportPanelSubscribeViewFooter: SupportPanelSubscribeViewFooterResponse;
   SupportPanelSubscribeViewFooterPrime: SupportPanelSubscribeViewFooterPrimeResponse;
   SupportPanelSubscriptionDetails: SupportPanelSubscriptionDetailsResponse;
