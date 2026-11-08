@@ -58,25 +58,17 @@ export type AcceptPredictionTermsMutation_UpdateUserPredictionSettings = {
     | null
     | AcceptPredictionTermsMutation_UpdateUserPredictionSettingsError
     | AcceptPredictionTermsMutation_UpdateUserPredictionSettingsError[];
-  settings:
-    | null
-    | AcceptPredictionTermsMutation_UpdateUserPredictionSettingsSettings
-    | AcceptPredictionTermsMutation_UpdateUserPredictionSettingsSettings[];
+  settings: null | {
+    hasAcceptedTOS: boolean;
+    isTemporaryChatBadgeEnabled: boolean;
+    __typename: "UserPredictionSettings";
+  };
   __typename: string;
 };
 
 /** ℹ️ Not real Twitch type name */
 export type AcceptPredictionTermsMutation_UpdateUserPredictionSettingsError = {
   code: UnknownValue;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type AcceptPredictionTermsMutation_UpdateUserPredictionSettingsSettings = {
-  /** ⚠️ Low confidence about: nullable */
-  hasAcceptedTOS: null | boolean;
-  /** ⚠️ Low confidence about: nullable */
-  isTemporaryChatBadgeEnabled: null | boolean;
   __typename: string;
 };
 
@@ -178,6 +170,16 @@ export type AccessIsPartnerQuery_UserPayoutInvite = {
 };
 
 /** ℹ️ Not real Twitch type name */
+export type AccessIsSocialGiftSubsEligible_UserSubReferrals = {
+  id: ID;
+  status: UnknownValue;
+  __typename: string;
+};
+
+/** ℹ️ Not real Twitch type name */
+export type AccountLimitStatus = "NOTRESTRICTED" | "OVERRIDE" | "RESTRICTED";
+
+/** ℹ️ Not real Twitch type name */
 export type AccountSecurityStatusPasswordCompromiseStatus_PasswordCompromisedStatus = {
   /** ⚠️ Low confidence about: nullable */
   isBreached: null | boolean;
@@ -186,7 +188,7 @@ export type AccountSecurityStatusPasswordCompromiseStatus_PasswordCompromisedSta
 
 export type AccountVerificationOptions = {
   /** @example ["PARTIAL", "NONE", "ALL"] */
-  emailVerificationMode: string;
+  emailVerificationMode: VerificationMode;
   partialEmailVerificationConfig: {
     /**
      * @format uint32
@@ -204,7 +206,7 @@ export type AccountVerificationOptions = {
     __typename: "ChatPartialVerificationConfig";
   };
   /** @example ["NONE", "ALL", "PARTIAL"] */
-  phoneVerificationMode: string;
+  phoneVerificationMode: VerificationMode;
   partialPhoneVerificationConfig: {
     /**
      * @format uint32
@@ -230,21 +232,14 @@ export type AccountVerificationOptions = {
 /** ℹ️ Not real Twitch type name */
 export type AcknowledgeAlertsAudioScanningDisclosure_AcknowledgeAlertsAudioScanningDisclosure = {
   error: UnknownValue;
-  acknowledgementStatus:
-    | null
-    | AcknowledgeAlertsAudioScanningDisclosure_AcknowledgeAlertsAudioScanningDisclosureAcknowledgementStatus
-    | AcknowledgeAlertsAudioScanningDisclosure_AcknowledgeAlertsAudioScanningDisclosureAcknowledgementStatus[];
+  acknowledgementStatus: null | {
+    /** @example ["23161357"] */
+    id: ID;
+    hasAcknowledgedAudioScanningDisclosure: boolean;
+    __typename: "AlertsAudioScanningDisclosureStatus";
+  };
   __typename: string;
 };
-
-/** ℹ️ Not real Twitch type name */
-export type AcknowledgeAlertsAudioScanningDisclosure_AcknowledgeAlertsAudioScanningDisclosureAcknowledgementStatus =
-  {
-    id: ID;
-    /** ⚠️ Low confidence about: nullable */
-    hasAcknowledgedAudioScanningDisclosure: null | boolean;
-    __typename: string;
-  };
 
 /** ℹ️ Not real Twitch type name */
 export type AcknowledgeAutoBanEvent_AcknowledgeAutoBannedUsers = {
@@ -270,27 +265,15 @@ export type AcknowledgeChatWarning_AcknowledgeChatWarningError = {
 
 /** ℹ️ Not real Twitch type name */
 export type AcknowledgeUnbanRequest_AcknowledgeUnbanRequest = {
-  unbanRequest:
-    | null
-    | AcknowledgeUnbanRequest_AcknowledgeUnbanRequestUnbanRequest
-    | AcknowledgeUnbanRequest_AcknowledgeUnbanRequestUnbanRequest[];
-  error:
-    | null
-    | AcknowledgeUnbanRequest_AcknowledgeUnbanRequestError
-    | AcknowledgeUnbanRequest_AcknowledgeUnbanRequestError[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type AcknowledgeUnbanRequest_AcknowledgeUnbanRequestError = {
-  code: UnknownValue;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type AcknowledgeUnbanRequest_AcknowledgeUnbanRequestUnbanRequest = {
-  id: ID;
-  status: UnknownValue;
+  unbanRequest: null | {
+    id: ID;
+    status: UnknownValue;
+    __typename: "UnbanRequest";
+  };
+  error: null | {
+    code: UnknownValue;
+    __typename: "UnbanRequestError";
+  };
   __typename: string;
 };
 
@@ -335,6 +318,9 @@ export type ActiveAlertsUsage = {
 };
 
 /** ℹ️ Not real Twitch type name */
+export type ActiveCostreamDetailsRole = "NONE";
+
+/** ℹ️ Not real Twitch type name */
 export type ActiveCostreamDetails_ActiveCostreamDetailsOrganizer = {
   id: ID;
   /** ⚠️ Low confidence about: nullable */
@@ -349,9 +335,18 @@ export type ActiveCostreamDetails_ActiveCostreamDetailsOrganizer = {
   __typename: string;
 };
 
+/** ℹ️ Not real Twitch type name */
+export type ActiveHypeTrainStatusHypeTrainType =
+  | "COMMUNITY"
+  | "GOLDEN_KAPPA"
+  | "MYTHIC"
+  | "PINATA"
+  | "REGULAR"
+  | "TREASURE";
+
 export type ActiveMultipliersFragment = {
   /** @example ["SUB_T1", "SUB_T2", "SUB_T3"] */
-  reasonCode: string;
+  reasonCode: CommunityPointsMultiplierReasonCode;
   /**
    * @format float
    * @example [0.2, 0.4, 1]
@@ -415,20 +410,20 @@ export type ActivityFeedEmote = {
   token: string;
   /** @example ["c23ba858-6cca-49ac-9ba1-6886e74b63b2", "408258241"] */
   setID: ID;
-  modifiers: null | ActivityFeedEmote_EmoteModifiers | ActivityFeedEmote_EmoteModifiers[];
+  modifiers:
+    | null
+    | (null | {
+        /** @example ["HF", "SG", "TK"] */
+        code: EmoteModifierCode;
+        /** @example ["HORIZONTAL_FLIP", "SUNGLASSES", "THINKING"] */
+        name: EmoteModifierName;
+        __typename: "EmoteModifier";
+      })[];
   /** @example ["LIMITED_TIME", "SUBSCRIPTIONS", "GLOBALS", "SMILIES", "MEGA_COMMERCE", "FOLLOWER", "TWO_FACTOR"] */
-  type: string;
+  type: EmoteType;
   /** @example ["ANIMATED", "STATIC"] */
-  assetType: string;
+  assetType: EmoteAssetType;
   __typename: "Emote";
-};
-
-/** ℹ️ Not real Twitch type name */
-export type ActivityFeedEmote_EmoteModifiers = {
-  code: UnknownValue;
-  /** ⚠️ Low confidence about: nullable */
-  name: null | string;
-  __typename: string;
 };
 
 export type ActivityFeedEvent = {
@@ -441,7 +436,18 @@ export type ActivityFeedEvent = {
   titleTooltip: null | ActivityFeedTokens;
   content: null | ActivityFeedTokens;
   contentBody: null | ActivityFeedTokens;
-  user: null | ActivityFeedEvent_ActivityFeedEventUser | ActivityFeedEvent_ActivityFeedEventUser[];
+  user: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["23161357"]
+     */
+    id: ID;
+    /** @example ["Twitch", "CD PROJEKT RED", "LIRIK", "forsen", "ayuuexe", "xQc", "RSDragonwilds"] */
+    displayName: string;
+    /** @example ["lirik", "twitch", "cdprojektred", "forsen", "tickett_", "st1mgreeen", "lipton_18"] */
+    login: string;
+    __typename: "User";
+  };
   userContent: null | ActivityFeedTokens;
   alert:
     | null
@@ -524,16 +530,6 @@ export type ActivityFeedEventDetailList = {
 };
 
 export type ActivityFeedEventDetails = ActivityFeedEventDetailList | ActivityFeedEventDetailAssets;
-
-/** ℹ️ Not real Twitch type name */
-export type ActivityFeedEvent_ActivityFeedEventUser = {
-  id: ID;
-  /** ⚠️ Low confidence about: nullable */
-  displayName: null | string;
-  /** ⚠️ Low confidence about: nullable */
-  login: null | string;
-  __typename: string;
-};
 
 /** ℹ️ Not real Twitch type name */
 export type ActivityFeedFollowUserV2_FollowUser = {
@@ -878,7 +874,7 @@ export type AdRequestContext = {
   isVLM: boolean;
   playerContext: {
     /** @example ["VOD"] */
-    contentType: string;
+    contentType: AdRequestContextPlayerContextContentType;
     isAutoPlay: boolean;
     /** @example ["deadbeefdeadbeefdeadbeefdeadbeefdeadbeef"] */
     nauthSig: string;
@@ -890,10 +886,16 @@ export type AdRequestContext = {
     playerType: string;
   };
   /** @example ["PREROLL"] */
-  rollType: string;
+  rollType: AdRequestContextRollType;
   /** @example ["zQMsnrHFqdsf3wfl2dCUbXXvj6BNUJm2", "D3uLmH9de1Is1d8HWTw08iI4HuqvrNbG"] */
   twitchCorrelator: string;
 };
+
+/** ℹ️ Not real Twitch type name */
+export type AdRequestContextPlayerContextContentType = "VOD";
+
+/** ℹ️ Not real Twitch type name */
+export type AdRequestContextRollType = "MIDROLL" | "POSTROLL" | "PREROLL";
 
 export type AdRequestCurrentUser = {
   /**
@@ -940,7 +942,7 @@ export type AdRequestVOD = {
    */
   lengthSeconds: number;
   /** @example ["ARCHIVE", "HIGHLIGHT", "UPLOAD"] */
-  broadcastType: string;
+  broadcastType: BroadcastType;
   /** @example ["Twitch Recap: 2024 according to Twitch Chat!", "REDstreams — Cyberpunk 2077: Edgerunners 2 Update (2.5) | Overview"] */
   title: null | string;
   game: null | AdRequestGame;
@@ -982,20 +984,18 @@ export type AdScheduleSettings = {
 
 /** ℹ️ Not real Twitch type name */
 export type AddAuthorizedStreamer_AddStreamAuthorizedUser = {
-  channel:
-    | null
-    | AddAuthorizedStreamer_AddStreamAuthorizedUserChannel
-    | AddAuthorizedStreamer_AddStreamAuthorizedUserChannel[];
+  channel: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["26490481"]
+     */
+    id: ID;
+    __typename: "Channel";
+  };
   error:
     | null
     | AddAuthorizedStreamer_AddStreamAuthorizedUserError
     | AddAuthorizedStreamer_AddStreamAuthorizedUserError[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type AddAuthorizedStreamer_AddStreamAuthorizedUserChannel = {
-  id: ID;
   __typename: string;
 };
 
@@ -1165,15 +1165,16 @@ export type AddCodesToCollection_AddCodesToCollectionError = {
 
 /** ℹ️ Not real Twitch type name */
 export type AddEditorUser_AddEditor = {
-  channel: null | AddEditorUser_AddEditorChannel | AddEditorUser_AddEditorChannel[];
+  channel: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["26490481"]
+     */
+    id: ID;
+    __typename: "Channel";
+  };
   targetUser: null | AddEditorUser_AddEditorTargetUser | AddEditorUser_AddEditorTargetUser[];
   error: null | AddEditorUser_AddEditorError | AddEditorUser_AddEditorError[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type AddEditorUser_AddEditorChannel = {
-  id: ID;
   __typename: string;
 };
 
@@ -1236,16 +1237,10 @@ export type AddOrgInvite_CreateOrganizationInviteError = {
 
 /** ℹ️ Not real Twitch type name */
 export type AddRecommendationFeedback_AddRecommendationFeedback = {
-  recommendationFeedback:
-    | null
-    | AddRecommendationFeedback_AddRecommendationFeedbackRecommendationFeedback
-    | AddRecommendationFeedback_AddRecommendationFeedbackRecommendationFeedback[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type AddRecommendationFeedback_AddRecommendationFeedbackRecommendationFeedback = {
-  id: ID;
+  recommendationFeedback: null | {
+    id: ID;
+    __typename: "RecommendationFeedback";
+  };
   __typename: string;
 };
 
@@ -1315,6 +1310,13 @@ export type AdsGeneralSettingsRevshareQuery_UserPayoutPlans = {
 };
 
 /** ℹ️ Not real Twitch type name */
+export type AdsGeneralSettingsUpdatePrerollNotifications_AdPropertiesDisablePrerollsAbility = {
+  /** ⚠️ Low confidence about: nullable */
+  hasDisablePrerollsNotificationsEnabled: null | boolean;
+  __typename: string;
+};
+
+/** ℹ️ Not real Twitch type name */
 export type AdsGeneralSettingsUpdatePrerollNotifications_UpdateAdProperties = {
   targetUser:
     | null
@@ -1326,30 +1328,22 @@ export type AdsGeneralSettingsUpdatePrerollNotifications_UpdateAdProperties = {
 /** ℹ️ Not real Twitch type name */
 export type AdsGeneralSettingsUpdatePrerollNotifications_UpdateAdPropertiesTargetUser = {
   id: ID;
-  adProperties:
-    | null
-    | AdsGeneralSettingsUpdatePrerollNotifications_UpdateAdPropertiesTargetUserAdProperties
-    | AdsGeneralSettingsUpdatePrerollNotifications_UpdateAdPropertiesTargetUserAdProperties[];
+  adProperties: null | {
+    disablePrerollsAbility:
+      | null
+      | AdsGeneralSettingsUpdatePrerollNotifications_AdPropertiesDisablePrerollsAbility
+      | AdsGeneralSettingsUpdatePrerollNotifications_AdPropertiesDisablePrerollsAbility[];
+    __typename: "AdProperties";
+  };
   __typename: string;
 };
 
 /** ℹ️ Not real Twitch type name */
-export type AdsGeneralSettingsUpdatePrerollNotifications_UpdateAdPropertiesTargetUserAdProperties =
-  {
-    disablePrerollsAbility:
-      | null
-      | AdsGeneralSettingsUpdatePrerollNotifications_UpdateAdPropertiesTargetUserAdPropertiesDisablePrerollsAbility
-      | AdsGeneralSettingsUpdatePrerollNotifications_UpdateAdPropertiesTargetUserAdPropertiesDisablePrerollsAbility[];
-    __typename: string;
-  };
-
-/** ℹ️ Not real Twitch type name */
-export type AdsGeneralSettingsUpdatePrerollNotifications_UpdateAdPropertiesTargetUserAdPropertiesDisablePrerollsAbility =
-  {
-    /** ⚠️ Low confidence about: nullable */
-    hasDisablePrerollsNotificationsEnabled: null | boolean;
-    __typename: string;
-  };
+export type AdsGeneralSettingsUpdatePrerolls_AdPropertiesDisablePrerollsAbility = {
+  /** ⚠️ Low confidence about: nullable */
+  hasDisablePrerollsAbilityEnabled: null | boolean;
+  __typename: string;
+};
 
 /** ℹ️ Not real Twitch type name */
 export type AdsGeneralSettingsUpdatePrerolls_UpdateAdProperties = {
@@ -1363,29 +1357,15 @@ export type AdsGeneralSettingsUpdatePrerolls_UpdateAdProperties = {
 /** ℹ️ Not real Twitch type name */
 export type AdsGeneralSettingsUpdatePrerolls_UpdateAdPropertiesTargetUser = {
   id: ID;
-  adProperties:
-    | null
-    | AdsGeneralSettingsUpdatePrerolls_UpdateAdPropertiesTargetUserAdProperties
-    | AdsGeneralSettingsUpdatePrerolls_UpdateAdPropertiesTargetUserAdProperties[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type AdsGeneralSettingsUpdatePrerolls_UpdateAdPropertiesTargetUserAdProperties = {
-  disablePrerollsAbility:
-    | null
-    | AdsGeneralSettingsUpdatePrerolls_UpdateAdPropertiesTargetUserAdPropertiesDisablePrerollsAbility
-    | AdsGeneralSettingsUpdatePrerolls_UpdateAdPropertiesTargetUserAdPropertiesDisablePrerollsAbility[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type AdsGeneralSettingsUpdatePrerolls_UpdateAdPropertiesTargetUserAdPropertiesDisablePrerollsAbility =
-  {
-    /** ⚠️ Low confidence about: nullable */
-    hasDisablePrerollsAbilityEnabled: null | boolean;
-    __typename: string;
+  adProperties: null | {
+    disablePrerollsAbility:
+      | null
+      | AdsGeneralSettingsUpdatePrerolls_AdPropertiesDisablePrerollsAbility
+      | AdsGeneralSettingsUpdatePrerolls_AdPropertiesDisablePrerollsAbility[];
+    __typename: "AdProperties";
   };
+  __typename: string;
+};
 
 /** ℹ️ Not real Twitch type name */
 export type AdsGeneralSettingsUpdateSDAEnabled_UpdateAdProperties = {
@@ -1399,40 +1379,23 @@ export type AdsGeneralSettingsUpdateSDAEnabled_UpdateAdProperties = {
 /** ℹ️ Not real Twitch type name */
 export type AdsGeneralSettingsUpdateSDAEnabled_UpdateAdPropertiesTargetUser = {
   id: ID;
-  adProperties:
-    | null
-    | AdsGeneralSettingsUpdateSDAEnabled_UpdateAdPropertiesTargetUserAdProperties
-    | AdsGeneralSettingsUpdateSDAEnabled_UpdateAdPropertiesTargetUserAdProperties[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type AdsGeneralSettingsUpdateSDAEnabled_UpdateAdPropertiesTargetUserAdProperties = {
-  /** ⚠️ Low confidence about: nullable */
-  isStreamDisplayAdsDisabled: null | boolean;
+  adProperties: null | {
+    /** ⚠️ Low confidence about: nullable */
+    isStreamDisplayAdsDisabled: null | boolean;
+    __typename: "AdProperties";
+  };
   __typename: string;
 };
 
 /** ℹ️ Not real Twitch type name */
 export type AdsManagerInstallReminderSetFirstTimeUserExperienceConfig_SetAdManagerFirstTimeUserExperienceConfig =
   {
-    config:
-      | null
-      | AdsManagerInstallReminderSetFirstTimeUserExperienceConfig_SetAdManagerFirstTimeUserExperienceConfigConfig
-      | AdsManagerInstallReminderSetFirstTimeUserExperienceConfig_SetAdManagerFirstTimeUserExperienceConfigConfig[];
-    __typename: string;
-  };
-
-/** ℹ️ Not real Twitch type name */
-export type AdsManagerInstallReminderSetFirstTimeUserExperienceConfig_SetAdManagerFirstTimeUserExperienceConfigConfig =
-  {
-    /** ⚠️ Low confidence about: nullable */
-    hasSeenManagerFull: null | boolean;
-    /**
-     * ⚠️ Low confidence about: nullable
-     * @format date-time
-     */
-    installRemindedAt: null | string;
+    config: null | {
+      hasSeenManagerFull: boolean;
+      /** @format date-time */
+      installRemindedAt: null | string;
+      __typename: "AdManagerFirstTimeUserExperienceConfig";
+    };
     __typename: string;
   };
 
@@ -1481,26 +1444,14 @@ export type AdsManagerSliderTooltipsQuery_UserPayoutPlans = {
 
 /** ℹ️ Not real Twitch type name */
 export type AdsManagerTutorialSetAdManagerFTUE_SetAdManagerFirstTimeUserExperienceConfig = {
-  config:
-    | null
-    | AdsManagerTutorialSetAdManagerFTUE_SetAdManagerFirstTimeUserExperienceConfigConfig
-    | AdsManagerTutorialSetAdManagerFTUE_SetAdManagerFirstTimeUserExperienceConfigConfig[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type AdsManagerTutorialSetAdManagerFTUE_SetAdManagerFirstTimeUserExperienceConfigConfig = {
-  /** ⚠️ Low confidence about: nullable */
-  hasSeenManagerFull: null | boolean;
-  /** ⚠️ Low confidence about: nullable */
-  hasSeenManagerIntro: null | boolean;
-  /** ⚠️ Low confidence about: nullable */
-  hasSeenScheduler: null | boolean;
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format date-time
-   */
-  installRemindedAt: null | string;
+  config: null | {
+    hasSeenManagerFull: boolean;
+    hasSeenManagerIntro: boolean;
+    hasSeenScheduler: boolean;
+    /** @format date-time */
+    installRemindedAt: null | string;
+    __typename: "AdManagerFirstTimeUserExperienceConfig";
+  };
   __typename: string;
 };
 
@@ -1571,7 +1522,7 @@ export type AggregateReactionsBreakdownByContentKeyFragment = {
   /** @example ["", "SullenColdbloodedSwanDBstyle-zRyQjXuUzTNRwK7H", "FaintProtectiveSquirrelAsianGlow-WELiiMEnBqJBfdDa"] */
   id: ID;
   /** @example ["CLIP"] */
-  type: string;
+  type: ContentKeyType;
   /**
    * @format uint32
    * @example [0, 1, 2]
@@ -1669,22 +1620,25 @@ export type AlertAssets_AlertAssets = {
   __typename: string;
 };
 
+/** ℹ️ Not real Twitch type name */
+export type AlertCheerConditionFeatureType = "CHEER";
+
 export type AlertCheerConditionFragment = {
   /** @example ["AT_LEAST"] */
-  operator: string;
+  operator: AlertConditionOperator;
   /**
    * @format uint32
    * @example [1]
    */
   amountCheered: number;
   /** @example ["CHEER"] */
-  featureType: string;
+  featureType: AlertCheerConditionFeatureType;
   __typename: "AlertCheerCondition";
 };
 
 export type AlertConditionFragment = {
   /** @example ["FOLLOW", "SUBSCRIPTION_TENURE", "SUBSCRIPTION_TIER", "GIFT_SUBSCRIPTION", "COMMUNITY_GIFT_SUBSCRIPTION", "CHEER", "RAID", "CHARITY_DONATION_AMOUNT", "HYPE_TRAIN_STARTED", "HYPE_TRAIN_NEW_ALL_TIME_HIGH_REACHED", "CREATOR_GOAL_STARTED", "CREATOR_GOAL_REACHED", "CHANNEL_POINTS_REDEMPTION_ANY", "COMBOS_STARTED", "COMBOS_LEVEL_ACHIEVED"] */
-  type: string;
+  type: AlertConditionType;
   trigger:
     | null
     | (AlertConditionTriggerFragment & {
@@ -1712,10 +1666,13 @@ export type AlertConditionFragment = {
   __typename: "AlertCondition";
 };
 
+/** ℹ️ Not real Twitch type name */
+export type AlertConditionOperator = "AT_LEAST" | "EXACTLY" | "UNKNOWN_OPERATOR";
+
 export type AlertConditionTriggerFragment =
   | {
       /** @example ["PRIME"] */
-      tier: string;
+      tier: AlertSubscriptionTierConditionTier;
       __typename: "AlertSubscriptionTierCondition";
     }
   | {
@@ -1728,7 +1685,7 @@ export type AlertConditionTriggerFragment =
     }
   | {
       /** @example ["AT_LEAST"] */
-      operator: string;
+      operator: AlertConditionOperator;
       /**
        * @format int32
        * @example [1]
@@ -1739,7 +1696,7 @@ export type AlertConditionTriggerFragment =
   | AlertCheerConditionFragment
   | {
       /** @example ["AT_LEAST"] */
-      operator: string;
+      operator: AlertConditionOperator;
       /**
        * @format uint32
        * @example [1]
@@ -1766,7 +1723,7 @@ export type AlertConditionTriggerFragment =
     }
   | {
       /** @example ["EXACTLY", "AT_LEAST"] */
-      operator: string;
+      operator: AlertConditionOperator;
       /**
        * @format int32
        * @example [1, 2]
@@ -1780,7 +1737,7 @@ export type AlertConditionTriggerFragment =
     }
   | {
       /** @example ["ANY"] */
-      creatorGoalType: string;
+      creatorGoalType: AlertCreatorGoalConditionCreatorGoalType;
       __typename: "AlertCreatorGoalCondition";
     }
   | {
@@ -1790,7 +1747,7 @@ export type AlertConditionTriggerFragment =
     }
   | {
       /** @example ["EXACTLY"] */
-      operator: string;
+      operator: AlertConditionOperator;
       /**
        * @format int32
        * @example [1]
@@ -1800,7 +1757,7 @@ export type AlertConditionTriggerFragment =
     }
   | {
       /** @example ["AT_LEAST"] */
-      operator: string;
+      operator: AlertConditionOperator;
       /**
        * @format uint32
        * @example [0]
@@ -1834,6 +1791,79 @@ export type AlertConditionTriggerFragment =
       userIds: UnknownValue;
       __typename: "AlertUserIdsCondition";
     };
+
+/** ℹ️ Not real Twitch type name */
+export type AlertConditionType =
+  | "ANONYMOUS_COMMUNITY_GIFT_SUBSCRIPTION"
+  | "ANONYMOUS_CROWDCONTROL_EFFECT"
+  | "ANONYMOUS_CROWDCONTROL_EXCHANGE"
+  | "ANONYMOUS_GIFT_SUBSCRIPTION"
+  | "ANONYMOUS_STREAM_ELEMENTS_MERCH"
+  | "ANONYMOUS_STREAM_LABS_CHARITY_DONATION"
+  | "ANONYMOUS_STREAM_LABS_MEDIA_ALERT"
+  | "ANONYMOUS_STREAM_LABS_MERCH"
+  | "ANONYMOUS_STREAM_LABS_TIP"
+  | "ANONYMOUS_THRONE_CONTRIBUTION_PURCHASED"
+  | "ANONYMOUS_THRONE_GIFT_PURCHASED"
+  | "CHANNEL_POINTS_REDEMPTION"
+  | "CHANNEL_POINTS_REDEMPTION_ANY"
+  | "CHANNEL_POINTS_REDEMPTION_USER_IDS"
+  | "CHARITY_DONATION_AMOUNT"
+  | "CHARITY_DONATION_USER_IDS"
+  | "CHEER"
+  | "CHEER_USER_IDS"
+  | "COMBOS_ENDED"
+  | "COMBOS_LEVEL_ACHIEVED"
+  | "COMBOS_STARTED"
+  | "COMMUNITY_GIFT_SUBSCRIPTION"
+  | "COMMUNITY_GIFT_SUBSCRIPTION_USER_IDS"
+  | "CREATOR_GOAL_REACHED"
+  | "CREATOR_GOAL_REACHED_25"
+  | "CREATOR_GOAL_REACHED_50"
+  | "CREATOR_GOAL_REACHED_75"
+  | "CREATOR_GOAL_STARTED"
+  | "CROWDCONTROL_EFFECT"
+  | "CROWDCONTROL_EXCHANGE"
+  | "CROWDCONTROL_POOL"
+  | "FIRST_TIME_CHEERER"
+  | "FOLLOW"
+  | "GIFT_SUBSCRIPTION"
+  | "GIFT_SUBSCRIPTION_USER_IDS"
+  | "HOST"
+  | "HOST_NAME"
+  | "HYPE_TRAIN_LEVEL_ACHIEVED"
+  | "HYPE_TRAIN_NEW_ALL_TIME_HIGH_REACHED"
+  | "HYPE_TRAIN_STARTED"
+  | "MODIVERSARY_TENURE"
+  | "PAID_PINNED_CHAT"
+  | "PAID_UPGRADE_SUBSCRIPTION"
+  | "POWERUPS_ANIMATED_MESSAGE"
+  | "POWERUPS_CELEBRATION"
+  | "POWERUPS_CUSTOM"
+  | "POWERUPS_GIGANTIFY_EMOTE"
+  | "RAID"
+  | "RAIDER_NAME"
+  | "STREAM_ELEMENTS_MERCH"
+  | "STREAM_LABS_CHARITY_DONATION"
+  | "STREAM_LABS_MEDIA_ALERT"
+  | "STREAM_LABS_MERCH"
+  | "STREAM_LABS_TIP"
+  | "SUBSCRIPTION"
+  | "SUBSCRIPTION_MULTI_MONTH_DURATION"
+  | "SUBSCRIPTION_PAID_UPGRADE_TYPE"
+  | "SUBSCRIPTION_TENURE"
+  | "SUBSCRIPTION_TIER"
+  | "SUBSCRIPTION_USER_IDS"
+  | "THRONE_BADGE_EARNED"
+  | "THRONE_CONTRIBUTION_PURCHASED"
+  | "THRONE_GIFT_CROWDFUNDED"
+  | "THRONE_GIFT_PURCHASED"
+  | "THRONE_GIFT_REMINDER"
+  | "THRONE_GIFT_SUGGESTED"
+  | "UNKNOWN_CONDITION";
+
+/** ℹ️ Not real Twitch type name */
+export type AlertCreatorGoalConditionCreatorGoalType = "ANY";
 
 export type AlertEmoteFragment = {
   id: ID;
@@ -2193,15 +2223,29 @@ export type AlertEvent =
           }
         | {
             /** @aliasFor currentContributions */
-            currentMoneyContributions:
-              | null
-              | AlertEvent_ChannelGoalMoneyContributionsCurrentContributions
-              | AlertEvent_ChannelGoalMoneyContributionsCurrentContributions[];
+            currentMoneyContributions: null | {
+              /**
+               * ⚠️ Low confidence about: nullable
+               * @format uint32
+               */
+              amount: null | number;
+              /** ⚠️ Low confidence about: nullable */
+              currencyCode: null | string;
+              minorUnits: UnknownValue;
+              __typename: "Money";
+            };
             /** @aliasFor targetContributions */
-            targetMoneyContributions:
-              | null
-              | AlertEvent_ChannelGoalMoneyContributionsTargetContributions
-              | AlertEvent_ChannelGoalMoneyContributionsTargetContributions[];
+            targetMoneyContributions: null | {
+              /**
+               * ⚠️ Low confidence about: nullable
+               * @format uint32
+               */
+              amount: null | number;
+              /** ⚠️ Low confidence about: nullable */
+              currencyCode: null | string;
+              minorUnits: UnknownValue;
+              __typename: "Money";
+            };
             __typename: "ChannelGoalMoneyContributions";
           };
     }
@@ -2223,10 +2267,17 @@ export type AlertEvent =
       donor: null | ActivityFeedUser;
       /** ⚠️ Low confidence about: nullable */
       charityName: null | string;
-      money:
-        | null
-        | AlertEvent_ActivityFeedCharityDonationAlertMoney
-        | AlertEvent_ActivityFeedCharityDonationAlertMoney[];
+      money: null | {
+        /**
+         * ⚠️ Low confidence about: nullable
+         * @format uint32
+         */
+        amount: null | number;
+        /** ⚠️ Low confidence about: nullable */
+        currencyCode: null | string;
+        minorUnits: UnknownValue;
+        __typename: "Money";
+      };
     }
   | {
       __typename: "ActivityFeedChannelPointsRedemptionAlert";
@@ -2364,66 +2415,41 @@ export type AlertEvent_ActivityFeedChannelPointsRedemptionAlertReward = {
 };
 
 /** ℹ️ Not real Twitch type name */
-export type AlertEvent_ActivityFeedCharityDonationAlertMoney = {
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format uint32
-   */
-  amount: null | number;
-  /** ⚠️ Low confidence about: nullable */
-  currencyCode: null | string;
-  minorUnits: UnknownValue;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
 export type AlertEvent_ActivityFeedPrimeResubscriptionAlertViewerCustomizationSelection = {
   /** ⚠️ Low confidence about: nullable */
   alertSetID: null | ID;
   /** ⚠️ Low confidence about: nullable */
   viewerCustomizationID: null | ID;
-  image:
-    | null
-    | AlertEvent_ActivityFeedPrimeResubscriptionAlertViewerCustomizationSelectionImage
-    | AlertEvent_ActivityFeedPrimeResubscriptionAlertViewerCustomizationSelectionImage[];
-  sound:
-    | null
-    | AlertEvent_ActivityFeedPrimeResubscriptionAlertViewerCustomizationSelectionSound
-    | AlertEvent_ActivityFeedPrimeResubscriptionAlertViewerCustomizationSelectionSound[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type AlertEvent_ActivityFeedPrimeResubscriptionAlertViewerCustomizationSelectionImage = {
-  /** ⚠️ Low confidence about: nullable */
-  assetMimeType: null | string;
-  assetType: UnknownValue;
-  id: ID;
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format uri
-   */
-  url: null | string;
-  volume: UnknownValue;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type AlertEvent_ActivityFeedPrimeResubscriptionAlertViewerCustomizationSelectionSound = {
-  /** ⚠️ Low confidence about: nullable */
-  assetMimeType: null | string;
-  assetType: UnknownValue;
-  id: ID;
-  /** ⚠️ Low confidence about: nullable */
-  isMuted: null | boolean;
-  /** ⚠️ Low confidence about: nullable */
-  name: null | string;
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format uri
-   */
-  url: null | string;
-  volume: UnknownValue;
+  image: null | {
+    /** ⚠️ Low confidence about: nullable */
+    assetMimeType: null | string;
+    assetType: UnknownValue;
+    id: ID;
+    /**
+     * ⚠️ Low confidence about: nullable
+     * @format uri
+     */
+    url: null | string;
+    volume: UnknownValue;
+    __typename: "AlertViewerImage";
+  };
+  sound: null | {
+    /** ⚠️ Low confidence about: nullable */
+    assetMimeType: null | string;
+    assetType: UnknownValue;
+    id: ID;
+    /** ⚠️ Low confidence about: nullable */
+    isMuted: null | boolean;
+    /** ⚠️ Low confidence about: nullable */
+    name: null | string;
+    /**
+     * ⚠️ Low confidence about: nullable
+     * @format uri
+     */
+    url: null | string;
+    volume: UnknownValue;
+    __typename: "AlertViewerSound";
+  };
   __typename: string;
 };
 
@@ -2433,74 +2459,36 @@ export type AlertEvent_ActivityFeedResubscriptionAlertViewerCustomizationSelecti
   alertSetID: null | ID;
   /** ⚠️ Low confidence about: nullable */
   viewerCustomizationID: null | ID;
-  image:
-    | null
-    | AlertEvent_ActivityFeedResubscriptionAlertViewerCustomizationSelectionImage
-    | AlertEvent_ActivityFeedResubscriptionAlertViewerCustomizationSelectionImage[];
-  sound:
-    | null
-    | AlertEvent_ActivityFeedResubscriptionAlertViewerCustomizationSelectionSound
-    | AlertEvent_ActivityFeedResubscriptionAlertViewerCustomizationSelectionSound[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type AlertEvent_ActivityFeedResubscriptionAlertViewerCustomizationSelectionImage = {
-  id: ID;
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format uri
-   */
-  url: null | string;
-  volume: UnknownValue;
-  assetType: UnknownValue;
-  /** ⚠️ Low confidence about: nullable */
-  assetMimeType: null | string;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type AlertEvent_ActivityFeedResubscriptionAlertViewerCustomizationSelectionSound = {
-  id: ID;
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format uri
-   */
-  url: null | string;
-  volume: UnknownValue;
-  /** ⚠️ Low confidence about: nullable */
-  isMuted: null | boolean;
-  assetType: UnknownValue;
-  /** ⚠️ Low confidence about: nullable */
-  assetMimeType: null | string;
-  /** ⚠️ Low confidence about: nullable */
-  name: null | string;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type AlertEvent_ChannelGoalMoneyContributionsCurrentContributions = {
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format uint32
-   */
-  amount: null | number;
-  /** ⚠️ Low confidence about: nullable */
-  currencyCode: null | string;
-  minorUnits: UnknownValue;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type AlertEvent_ChannelGoalMoneyContributionsTargetContributions = {
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format uint32
-   */
-  amount: null | number;
-  /** ⚠️ Low confidence about: nullable */
-  currencyCode: null | string;
-  minorUnits: UnknownValue;
+  image: null | {
+    id: ID;
+    /**
+     * ⚠️ Low confidence about: nullable
+     * @format uri
+     */
+    url: null | string;
+    volume: UnknownValue;
+    assetType: UnknownValue;
+    /** ⚠️ Low confidence about: nullable */
+    assetMimeType: null | string;
+    __typename: "AlertViewerImage";
+  };
+  sound: null | {
+    id: ID;
+    /**
+     * ⚠️ Low confidence about: nullable
+     * @format uri
+     */
+    url: null | string;
+    volume: UnknownValue;
+    /** ⚠️ Low confidence about: nullable */
+    isMuted: null | boolean;
+    assetType: UnknownValue;
+    /** ⚠️ Low confidence about: nullable */
+    assetMimeType: null | string;
+    /** ⚠️ Low confidence about: nullable */
+    name: null | string;
+    __typename: "AlertViewerSound";
+  };
   __typename: string;
 };
 
@@ -2509,6 +2497,9 @@ export type AlertFeatureFlags = {
   isUserIdsConditionEnabled: boolean;
   __typename: "AlertsFeatureLaunchFlags";
 };
+
+/** ℹ️ Not real Twitch type name */
+export type AlertImageAssetType = "VIDEO";
 
 export type AlertIntegerComparisonConditionFragment = {
   operator: UnknownValue;
@@ -2590,6 +2581,12 @@ export type AlertSetWithViewerCustomizationFragment = AlertSetDisplayFragment & 
 };
 
 /** ℹ️ Not real Twitch type name */
+export type AlertSoundAssetType = "AUDIO" | "IMAGE" | "UNKNOWN_TYPE" | "VIDEO";
+
+/** ℹ️ Not real Twitch type name */
+export type AlertSubscriptionTierConditionTier = "PRIME";
+
+/** ℹ️ Not real Twitch type name */
 export type AlertTextToSpeechVoicesQuery_AllAlertTextToSpeechVoices = {
   id: ID;
   /** ⚠️ Low confidence about: nullable */
@@ -2608,7 +2605,7 @@ export type AlertVariationFragment = {
   /** @example ["New Follow", "New Subscriber", "Prime Subscription", "Resubscription", "Gifted Subscription", "Community Gifts", "Cheering of Any Amount"] */
   name: string;
   /** @example ["ENABLED"] */
-  state: string;
+  state: AlertVariationState;
   /** @example [""] */
   ownerID: ID;
   /**
@@ -2631,7 +2628,7 @@ export type AlertVariationFragment = {
     url: string;
     volume: null;
     /** @example ["VIDEO"] */
-    assetType: string;
+    assetType: AlertImageAssetType;
     /** @example ["video/webm"] */
     assetMimeType: string;
     __typename: "AlertImage";
@@ -2651,7 +2648,7 @@ export type AlertVariationFragment = {
     volume: number;
     isMuted: boolean;
     /** @example ["AUDIO"] */
-    assetType: string;
+    assetType: AlertSoundAssetType;
     /** @example ["audio/wav"] */
     assetMimeType: string;
     __typename: "AlertSound";
@@ -2724,6 +2721,9 @@ export type AlertVariationHTMLFragment = {
   combinedMarkup: UnknownValue;
   __typename: "AlertVariationCustomMarkup";
 };
+
+/** ℹ️ Not real Twitch type name */
+export type AlertVariationState = "ENABLED";
 
 export type AlertViewerCustomizationFragment = {
   id: ID;
@@ -2845,7 +2845,7 @@ export type AlertsChannelPointsReward = {
   cost: number;
   isUserInputRequired: boolean;
   /** @example ["POINTS"] */
-  pricingType: string;
+  pricingType: CommunityPointsCustomRewardPricingType;
   __typename: "CommunityPointsCustomReward";
 };
 
@@ -2900,10 +2900,24 @@ export type AllCostreamersAnalyticsQuery_CostreamingSummaryActiveCostreamers = {
 
 /** ℹ️ Not real Twitch type name */
 export type AllCostreamersAnalyticsQuery_CostreamingSummaryActiveCostreamersEdgesNode = {
-  user:
-    | null
-    | AllCostreamersAnalyticsQuery_CostreamingSummaryActiveCostreamersEdgesNodeUser
-    | AllCostreamersAnalyticsQuery_CostreamingSummaryActiveCostreamersEdgesNodeUser[];
+  user: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["23161357"]
+     */
+    id: ID;
+    /** @example ["lirik", "twitch", "cdprojektred", "forsen", "tickett_", "st1mgreeen", "lipton_18"] */
+    login: string;
+    /** @example ["Twitch", "CD PROJEKT RED", "LIRIK", "forsen", "ayuuexe", "xQc", "RSDragonwilds"] */
+    displayName: string;
+    /**
+     * @format uri
+     * @example ["https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-70x70.png", "https://static-cdn.jtvnw.net/jtv_user_pictures/3c3366d7-728a-4204-bfdd-7c823858e4d9-profile_image-70x70.png"]
+     * @gqlArg `width: Int [50, 70, 300, 28, 150]`
+     */
+    profileImageURL: string;
+    __typename: "User";
+  };
   /**
    * ⚠️ Low confidence about: nullable
    * @format uint32
@@ -2914,22 +2928,6 @@ export type AllCostreamersAnalyticsQuery_CostreamingSummaryActiveCostreamersEdge
    * @format uint32
    */
   averageCCV: null | number;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type AllCostreamersAnalyticsQuery_CostreamingSummaryActiveCostreamersEdgesNodeUser = {
-  id: ID;
-  /** ⚠️ Low confidence about: nullable */
-  login: null | string;
-  /** ⚠️ Low confidence about: nullable */
-  displayName: null | string;
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format uri
-   * @gqlArg `width: Int [50]`
-   */
-  profileImageURL: null | string;
   __typename: string;
 };
 
@@ -2967,36 +2965,32 @@ export type AllCostreamersDiscoveryQuery_CostreamDetailsAllCostreamersEdgesNode 
   login: null | string;
   /** ⚠️ Low confidence about: nullable */
   displayName: null | string;
-  stream:
-    | null
-    | AllCostreamersDiscoveryQuery_CostreamDetailsAllCostreamersEdgesNodeStream
-    | AllCostreamersDiscoveryQuery_CostreamDetailsAllCostreamersEdgesNodeStream[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type AllCostreamersDiscoveryQuery_CostreamDetailsAllCostreamersEdgesNodeStream = {
-  id: ID;
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format uint32
-   */
-  viewersCount: null | number;
+  stream: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["316180784725"]
+     */
+    id: ID;
+    /**
+     * @format uint32
+     * @example [0, 129, 131, 322, 29438, 11854]
+     */
+    viewersCount: number;
+    __typename: "Stream";
+  };
   __typename: string;
 };
 
 /** ℹ️ Not real Twitch type name */
 export type AllowCaughtAutoModMessage_AllowRejectedChatMessage = {
-  message:
-    | null
-    | AllowCaughtAutoModMessage_AllowRejectedChatMessageMessage
-    | AllowCaughtAutoModMessage_AllowRejectedChatMessageMessage[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type AllowCaughtAutoModMessage_AllowRejectedChatMessageMessage = {
-  id: ID;
+  message: null | {
+    /**
+     * @format uuid
+     * @example ["279e8293-cec0-40df-a475-6b35981a2e49"]
+     */
+    id: ID;
+    __typename: "Message";
+  };
   __typename: string;
 };
 
@@ -3378,10 +3372,32 @@ export type AnnualRecapTopCategory2025 = {
 };
 
 export type AnnualRecapTopChannel = {
-  channel:
-    | null
-    | AnnualRecapTopChannel_AnnualRecapChannel2023Channel
-    | AnnualRecapTopChannel_AnnualRecapChannel2023Channel[];
+  channel: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["26490481"]
+     */
+    id: ID;
+    /** @example ["RevedTV", "summit1g", "Wholesome_Games", "StreamCanvas", "Distortion2", "StreamDatabase", "LIRIK"] */
+    displayName: string;
+    owner: {
+      /**
+       * @pattern ^[0-9]+$
+       * @example ["23161357"]
+       */
+      id: ID;
+      /** @example ["lirik", "twitch", "cdprojektred", "forsen", "tickett_", "st1mgreeen", "lipton_18"] */
+      login: string;
+      /**
+       * @format uri
+       * @example ["https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-70x70.png", "https://static-cdn.jtvnw.net/jtv_user_pictures/3c3366d7-728a-4204-bfdd-7c823858e4d9-profile_image-70x70.png"]
+       * @gqlArg `width: Int [50, 70, 300, 28, 150]`
+       */
+      profileImageURL: string;
+      __typename: "User";
+    };
+    __typename: "Channel";
+  };
   totalHoursWatched: UnknownValue;
   totalChatsSent: UnknownValue;
   totalChannelPointsEarned: UnknownValue;
@@ -3400,10 +3416,32 @@ export type AnnualRecapTopChannel = {
 };
 
 export type AnnualRecapTopChannel2024 = {
-  channel:
-    | null
-    | AnnualRecapTopChannel2024_AnnualRecapChannel2024Channel
-    | AnnualRecapTopChannel2024_AnnualRecapChannel2024Channel[];
+  channel: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["26490481"]
+     */
+    id: ID;
+    /** @example ["RevedTV", "summit1g", "Wholesome_Games", "StreamCanvas", "Distortion2", "StreamDatabase", "LIRIK"] */
+    displayName: string;
+    owner: {
+      /**
+       * @pattern ^[0-9]+$
+       * @example ["23161357"]
+       */
+      id: ID;
+      /** @example ["lirik", "twitch", "cdprojektred", "forsen", "tickett_", "st1mgreeen", "lipton_18"] */
+      login: string;
+      /**
+       * @format uri
+       * @example ["https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-70x70.png", "https://static-cdn.jtvnw.net/jtv_user_pictures/3c3366d7-728a-4204-bfdd-7c823858e4d9-profile_image-70x70.png"]
+       * @gqlArg `width: Int [50, 70, 300, 28, 150]`
+       */
+      profileImageURL: string;
+      __typename: "User";
+    };
+    __typename: "Channel";
+  };
   totalHoursWatched: UnknownValue;
   totalChatsSent: UnknownValue;
   totalChannelPointsEarned: UnknownValue;
@@ -3412,37 +3450,33 @@ export type AnnualRecapTopChannel2024 = {
   __typename: "AnnualRecapChannel2024";
 };
 
-/** ℹ️ Not real Twitch type name */
-export type AnnualRecapTopChannel2024_AnnualRecapChannel2024Channel = {
-  id: ID;
-  /** ⚠️ Low confidence about: nullable */
-  displayName: null | string;
-  owner:
-    | null
-    | AnnualRecapTopChannel2024_AnnualRecapChannel2024ChannelOwner
-    | AnnualRecapTopChannel2024_AnnualRecapChannel2024ChannelOwner[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type AnnualRecapTopChannel2024_AnnualRecapChannel2024ChannelOwner = {
-  id: ID;
-  /** ⚠️ Low confidence about: nullable */
-  login: null | string;
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format uri
-   * @gqlArg `width: Int [150]`
-   */
-  profileImageURL: null | string;
-  __typename: string;
-};
-
 export type AnnualRecapTopChannel2025 = {
-  channel:
-    | null
-    | AnnualRecapTopChannel2025_AnnualRecapChannel2025Channel
-    | AnnualRecapTopChannel2025_AnnualRecapChannel2025Channel[];
+  channel: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["26490481"]
+     */
+    id: ID;
+    /** @example ["RevedTV", "summit1g", "Wholesome_Games", "StreamCanvas", "Distortion2", "StreamDatabase", "LIRIK"] */
+    displayName: string;
+    owner: {
+      /**
+       * @pattern ^[0-9]+$
+       * @example ["23161357"]
+       */
+      id: ID;
+      /** @example ["lirik", "twitch", "cdprojektred", "forsen", "tickett_", "st1mgreeen", "lipton_18"] */
+      login: string;
+      /**
+       * @format uri
+       * @example ["https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-70x70.png", "https://static-cdn.jtvnw.net/jtv_user_pictures/3c3366d7-728a-4204-bfdd-7c823858e4d9-profile_image-70x70.png"]
+       * @gqlArg `width: Int [50, 70, 300, 28, 150]`
+       */
+      profileImageURL: string;
+      __typename: "User";
+    };
+    __typename: "Channel";
+  };
   totalHoursWatched: UnknownValue;
   totalChatsSent: UnknownValue;
   totalChannelPointsEarned: UnknownValue;
@@ -3451,85 +3485,31 @@ export type AnnualRecapTopChannel2025 = {
   __typename: "AnnualRecapChannel2025";
 };
 
-/** ℹ️ Not real Twitch type name */
-export type AnnualRecapTopChannel2025_AnnualRecapChannel2025Channel = {
-  id: ID;
-  /** ⚠️ Low confidence about: nullable */
-  displayName: null | string;
-  owner:
-    | null
-    | AnnualRecapTopChannel2025_AnnualRecapChannel2025ChannelOwner
-    | AnnualRecapTopChannel2025_AnnualRecapChannel2025ChannelOwner[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type AnnualRecapTopChannel2025_AnnualRecapChannel2025ChannelOwner = {
-  id: ID;
-  /** ⚠️ Low confidence about: nullable */
-  login: null | string;
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format uri
-   * @gqlArg `width: Int [150]`
-   */
-  profileImageURL: null | string;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type AnnualRecapTopChannel_AnnualRecapChannel2023Channel = {
-  id: ID;
-  /** ⚠️ Low confidence about: nullable */
-  displayName: null | string;
-  owner:
-    | null
-    | AnnualRecapTopChannel_AnnualRecapChannel2023ChannelOwner
-    | AnnualRecapTopChannel_AnnualRecapChannel2023ChannelOwner[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type AnnualRecapTopChannel_AnnualRecapChannel2023ChannelOwner = {
-  id: ID;
-  /** ⚠️ Low confidence about: nullable */
-  login: null | string;
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format uri
-   * @gqlArg `width: Int [150]`
-   */
-  profileImageURL: null | string;
-  __typename: string;
-};
-
 export type AnnualRecapTopCollaborator2024 = {
   /**
    * ⚠️ Low confidence about: nullable
    * @format uint32
    */
   count: null | number;
-  user:
-    | null
-    | AnnualRecapTopCollaborator2024_AnnualRecapTopCollaborator2024User
-    | AnnualRecapTopCollaborator2024_AnnualRecapTopCollaborator2024User[];
+  user: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["23161357"]
+     */
+    id: ID;
+    /** @example ["Twitch", "CD PROJEKT RED", "LIRIK", "forsen", "ayuuexe", "xQc", "RSDragonwilds"] */
+    displayName: string;
+    /** @example ["lirik", "twitch", "cdprojektred", "forsen", "tickett_", "st1mgreeen", "lipton_18"] */
+    login: string;
+    /**
+     * @format uri
+     * @example ["https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-70x70.png", "https://static-cdn.jtvnw.net/jtv_user_pictures/3c3366d7-728a-4204-bfdd-7c823858e4d9-profile_image-70x70.png"]
+     * @gqlArg `width: Int [50, 70, 300, 28, 150]`
+     */
+    profileImageURL: string;
+    __typename: "User";
+  };
   __typename: "AnnualRecapTopCollaborator2024";
-};
-
-/** ℹ️ Not real Twitch type name */
-export type AnnualRecapTopCollaborator2024_AnnualRecapTopCollaborator2024User = {
-  id: ID;
-  /** ⚠️ Low confidence about: nullable */
-  displayName: null | string;
-  /** ⚠️ Low confidence about: nullable */
-  login: null | string;
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format uri
-   * @gqlArg `width: Int [300]`
-   */
-  profileImageURL: null | string;
-  __typename: string;
 };
 
 export type AnnualRecapTopCollaborator2025 = {
@@ -3538,27 +3518,25 @@ export type AnnualRecapTopCollaborator2025 = {
    * @format uint32
    */
   count: null | number;
-  user:
-    | null
-    | AnnualRecapTopCollaborator2025_AnnualRecapTopCollaborator2025User
-    | AnnualRecapTopCollaborator2025_AnnualRecapTopCollaborator2025User[];
+  user: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["23161357"]
+     */
+    id: ID;
+    /** @example ["Twitch", "CD PROJEKT RED", "LIRIK", "forsen", "ayuuexe", "xQc", "RSDragonwilds"] */
+    displayName: string;
+    /** @example ["lirik", "twitch", "cdprojektred", "forsen", "tickett_", "st1mgreeen", "lipton_18"] */
+    login: string;
+    /**
+     * @format uri
+     * @example ["https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-70x70.png", "https://static-cdn.jtvnw.net/jtv_user_pictures/3c3366d7-728a-4204-bfdd-7c823858e4d9-profile_image-70x70.png"]
+     * @gqlArg `width: Int [50, 70, 300, 28, 150]`
+     */
+    profileImageURL: string;
+    __typename: "User";
+  };
   __typename: "AnnualRecapTopCollaborator2025";
-};
-
-/** ℹ️ Not real Twitch type name */
-export type AnnualRecapTopCollaborator2025_AnnualRecapTopCollaborator2025User = {
-  id: ID;
-  /** ⚠️ Low confidence about: nullable */
-  displayName: null | string;
-  /** ⚠️ Low confidence about: nullable */
-  login: null | string;
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format uri
-   * @gqlArg `width: Int [300]`
-   */
-  profileImageURL: null | string;
-  __typename: string;
 };
 
 export type AnnualRecapTopEmote = {
@@ -3844,32 +3822,20 @@ export type ApproveBansSharingRequests_ApproveBansSharingRequests = {
 
 /** ℹ️ Not real Twitch type name */
 export type ApproveUnbanRequest_ApproveUnbanRequest = {
-  unbanRequest:
-    | null
-    | ApproveUnbanRequest_ApproveUnbanRequestUnbanRequest
-    | ApproveUnbanRequest_ApproveUnbanRequestUnbanRequest[];
-  error:
-    | null
-    | ApproveUnbanRequest_ApproveUnbanRequestError
-    | ApproveUnbanRequest_ApproveUnbanRequestError[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type ApproveUnbanRequest_ApproveUnbanRequestError = {
-  code: UnknownValue;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type ApproveUnbanRequest_ApproveUnbanRequestUnbanRequest = {
-  id: ID;
-  status: UnknownValue;
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format date-time
-   */
-  resolvedAt: null | string;
+  unbanRequest: null | {
+    id: ID;
+    status: UnknownValue;
+    /**
+     * ⚠️ Low confidence about: nullable
+     * @format date-time
+     */
+    resolvedAt: null | string;
+    __typename: "UnbanRequest";
+  };
+  error: null | {
+    code: UnknownValue;
+    __typename: "UnbanRequestError";
+  };
   __typename: string;
 };
 
@@ -3892,13 +3858,10 @@ export type ArchivePollInput = { pollID?: null | ID };
 
 /** ℹ️ Not real Twitch type name */
 export type ArchivePoll_ArchivePoll = {
-  poll: null | ArchivePoll_ArchivePollPoll | ArchivePoll_ArchivePollPoll[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type ArchivePoll_ArchivePollPoll = {
-  id: ID;
+  poll: null | {
+    id: ID;
+    __typename: "Poll";
+  };
   __typename: string;
 };
 
@@ -3936,17 +3899,11 @@ export type ArtistAttributionUpdateChannelSetting_UpdateChannelEmoteAttributionS
 
 /** ℹ️ Not real Twitch type name */
 export type ArtistAttributionUpdateEmote_UpdateEmoteAttributionState = {
-  emoteArtistAttribution:
-    | null
-    | ArtistAttributionUpdateEmote_UpdateEmoteAttributionStateEmoteArtistAttribution
-    | ArtistAttributionUpdateEmote_UpdateEmoteAttributionStateEmoteArtistAttribution[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type ArtistAttributionUpdateEmote_UpdateEmoteAttributionStateEmoteArtistAttribution = {
-  id: ID;
-  state: UnknownValue;
+  emoteArtistAttribution: null | {
+    id: ID;
+    state: UnknownValue;
+    __typename: "EmoteArtistAttribution";
+  };
   __typename: string;
 };
 
@@ -4423,10 +4380,18 @@ export type AutoRaidExistingLists_UserRaidRecommendations = {
 
 /** ℹ️ Not real Twitch type name */
 export type AutoRaidFtueAlertEnableAutoRaid_UpdateAutoRaidSettings = {
-  user:
-    | null
-    | AutoRaidFtueAlertEnableAutoRaid_UpdateAutoRaidSettingsUser
-    | AutoRaidFtueAlertEnableAutoRaid_UpdateAutoRaidSettingsUser[];
+  user: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["23161357"]
+     */
+    id: ID;
+    autoRaidSettings:
+      | null
+      | AutoRaidFtueAlertEnableAutoRaid_UserAutoRaidSettings
+      | AutoRaidFtueAlertEnableAutoRaid_UserAutoRaidSettings[];
+    __typename: "User";
+  };
   error:
     | null
     | AutoRaidFtueAlertEnableAutoRaid_UpdateAutoRaidSettingsError
@@ -4441,17 +4406,7 @@ export type AutoRaidFtueAlertEnableAutoRaid_UpdateAutoRaidSettingsError = {
 };
 
 /** ℹ️ Not real Twitch type name */
-export type AutoRaidFtueAlertEnableAutoRaid_UpdateAutoRaidSettingsUser = {
-  id: ID;
-  autoRaidSettings:
-    | null
-    | AutoRaidFtueAlertEnableAutoRaid_UpdateAutoRaidSettingsUserAutoRaidSettings
-    | AutoRaidFtueAlertEnableAutoRaid_UpdateAutoRaidSettingsUserAutoRaidSettings[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type AutoRaidFtueAlertEnableAutoRaid_UpdateAutoRaidSettingsUserAutoRaidSettings = {
+export type AutoRaidFtueAlertEnableAutoRaid_UserAutoRaidSettings = {
   /** ⚠️ Low confidence about: nullable */
   isEnabled: null | boolean;
   __typename: string;
@@ -4536,6 +4491,9 @@ export type AutohostListSearchUserEdgeFragment = {
   __typename: "SearchUserEdge";
 };
 
+/** ℹ️ Not real Twitch type name */
+export type AutohostSettingsStrategy = "ORDERED" | "RANDOM";
+
 export type AutomaticRewardFragment = {
   /** @example ["71092938:RANDOM_SUB_EMOTE_UNLOCK", "71092938:CHOSEN_SUB_EMOTE_UNLOCK"] */
   id: ID;
@@ -4583,9 +4541,9 @@ export type AutomaticRewardFragment = {
    */
   minimumCost: number;
   /** @example ["POINTS", "BITS"] */
-  pricingType: string;
+  pricingType: CommunityPointsCustomRewardPricingType;
   /** @example ["RANDOM_SUB_EMOTE_UNLOCK", "CHOSEN_SUB_EMOTE_UNLOCK", "CHOSEN_MODIFIED_SUB_EMOTE_UNLOCK", "SEND_ANIMATED_MESSAGE", "SEND_GIGANTIFIED_EMOTE", "CELEBRATION", "SINGLE_MESSAGE_BYPASS_SUB_MODE", "SEND_HIGHLIGHTED_MESSAGE"] */
-  type: string;
+  type: CommunityPointsAutomaticRewardType;
   /**
    * @format date-time
    * @example ["2025-12-08T04:05:34.521646438Z", "2023-10-10T22:51:31.12692378Z"]
@@ -4773,11 +4731,14 @@ export type Badge = {
    */
   image4x: string;
   /** @example ["VISIT_URL", "SUBSCRIBE", "GET_TURBO"] */
-  clickAction: null | string;
+  clickAction: null | BadgeClickAction;
   /** @example ["https://www.twitch.tv/directory/category/destiny-2\t", "https://bits.twitch.tv", "https://help.twitch.tv/s/article/guide-to-cheering-with-bits"] */
   clickURL: null | string;
   __typename: "Badge";
 };
+
+/** ℹ️ Not real Twitch type name */
+export type BadgeClickAction = "GET_BITS" | "GET_TURBO" | "SUBSCRIBE" | "VISIT_URL";
 
 /** ℹ️ Not real Twitch type name */
 export type BadgeCollectionEarnedRewards_EarnedDropRewardCampaign = {
@@ -5005,52 +4966,6 @@ export type BadgeRewardsDeleteQuestCampaign_DeleteQuestCampaignError = {
   message: null | string;
   code: UnknownValue;
   __typename: string;
-};
-
-export type BadgeRewardsGetQuestCampaign_QuestCampaign = {
-  id: ID;
-  /** ⚠️ Low confidence about: nullable */
-  name: null | string;
-  status: UnknownValue;
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format date-time
-   */
-  startsAt: null | string;
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format date-time
-   */
-  endsAt: null | string;
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format uri
-   */
-  imageURL: null | string;
-  rewardGroups: null | {
-    id: ID;
-    unlockRequirements:
-      | null
-      | BadgeRewardsGetQuestCampaign_QuestRewardGroupUnlockRequirements
-      | BadgeRewardsGetQuestCampaign_QuestRewardGroupUnlockRequirements[];
-    rewards: null | {
-      id: ID;
-      /** ⚠️ Low confidence about: nullable */
-      name: null | string;
-      /**
-       * ⚠️ Low confidence about: nullable
-       * @format uri
-       */
-      imageAssetURL: null | string;
-      __typename: "QuestReward";
-    };
-    leaderboardConfig:
-      | null
-      | BadgeRewardsGetQuestCampaign_QuestCampaignRewardGroupsLeaderboardConfig
-      | BadgeRewardsGetQuestCampaign_QuestCampaignRewardGroupsLeaderboardConfig[];
-    __typename: "QuestRewardGroup";
-  };
-  __typename: "QuestCampaign";
 };
 
 /** ℹ️ Not real Twitch type name */
@@ -5346,6 +5261,15 @@ export type BadgesPageQuery_UserSettingsCheerBadges = {
   __typename: string;
 };
 
+/** ℹ️ Not real Twitch type name */
+export type BanEvasionDetectionSettingsLikelyTreatment = "RESTRICTED";
+
+/** ℹ️ Not real Twitch type name */
+export type BanEvasionDetectionSettingsPossibleTreatment =
+  | "ACTIVE_MONITORING"
+  | "NONE"
+  | "RESTRICTED";
+
 export type BannedUser = {
   /**
    * ⚠️ Low confidence about: nullable
@@ -5582,34 +5506,35 @@ export type BillingManager = {
   firstName: null | string;
   /** ⚠️ Low confidence about: nullable */
   lastName: null | string;
-  user: null | BillingManager_OrganizationMemberUser | BillingManager_OrganizationMemberUser[];
+  user: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["23161357"]
+     */
+    id: ID;
+    /** @example ["lirik", "twitch", "cdprojektred", "forsen", "tickett_", "st1mgreeen", "lipton_18"] */
+    login: string;
+    /**
+     * @format uri
+     * @example ["https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-70x70.png", "https://static-cdn.jtvnw.net/jtv_user_pictures/3c3366d7-728a-4204-bfdd-7c823858e4d9-profile_image-70x70.png"]
+     * @gqlArg `width: Int [50, 70, 300, 28, 150]`
+     */
+    profileImageURL: string;
+    /**
+     * ⚠️ Low confidence about: nullable
+     * @format date-time
+     */
+    deletedAt: null | string;
+    __typename: "User";
+  };
   __typename: "OrganizationMember";
-};
-
-/** ℹ️ Not real Twitch type name */
-export type BillingManager_OrganizationMemberUser = {
-  id: ID;
-  /** ⚠️ Low confidence about: nullable */
-  login: null | string;
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format uri
-   * @gqlArg `width: Int [50]`
-   */
-  profileImageURL: null | string;
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format date-time
-   */
-  deletedAt: null | string;
-  __typename: string;
 };
 
 export type BitsAdOffer = {
   /** @example ["AD-5"] */
   id: ID;
   /** @example ["AD"] */
-  type: string;
+  type: BitsAdOfferType;
   /**
    * @format int32
    * @example [5]
@@ -5617,6 +5542,9 @@ export type BitsAdOffer = {
   bits: number;
   __typename: "BitsAdOffer";
 };
+
+/** ℹ️ Not real Twitch type name */
+export type BitsAdOfferType = "AD";
 
 export type BitsBadge = {
   /** @example ["23161357;26490481", "23161357;59685493"] */
@@ -5655,7 +5583,42 @@ export type BitsBadgeTier = {
    * @format date-time
    */
   lastUpdated: null | string;
-  badge: null | BitsBadgeTier_BitsBadgeTierBadge | BitsBadgeTier_BitsBadgeTierBadge[];
+  badge: null | {
+    /** @example ["Yml0czsxOw==", "cHJlZGljdGlvbnM7Ymx1ZS0xOw=="] */
+    id: ID;
+    /** @example ["cheer 1", "Predicted Blue (1)"] */
+    title: string;
+    /**
+     * @format uri
+     * @example ["https://static-cdn.jtvnw.net/badges/v1/73b5c3fb-24f9-4a82-a852-2f475b59411c/1", "https://static-cdn.jtvnw.net/badges/v1/73b5c3fb-24f9-4a82-a852-2f475b59411c/2"]
+     * @aliasFor imageURL
+     * @gqlArg `size: BadgeImageURLSize`
+     */
+    image1x: string;
+    /**
+     * @format uri
+     * @example ["https://static-cdn.jtvnw.net/badges/v1/73b5c3fb-24f9-4a82-a852-2f475b59411c/1", "https://static-cdn.jtvnw.net/badges/v1/73b5c3fb-24f9-4a82-a852-2f475b59411c/2"]
+     * @aliasFor imageURL
+     * @gqlArg `size: BadgeImageURLSize`
+     */
+    image2x: string;
+    /**
+     * @format uri
+     * @example ["https://static-cdn.jtvnw.net/badges/v1/73b5c3fb-24f9-4a82-a852-2f475b59411c/1", "https://static-cdn.jtvnw.net/badges/v1/73b5c3fb-24f9-4a82-a852-2f475b59411c/2"]
+     * @aliasFor imageURL
+     * @gqlArg `size: BadgeImageURLSize`
+     */
+    image4x: string;
+    user: null | {
+      /**
+       * @pattern ^[0-9]+$
+       * @example ["23161357"]
+       */
+      id: ID;
+      __typename: "User";
+    };
+    __typename: "Badge";
+  };
   emoticons: null | {
     /** @example ["emotesv2_42ba00f9d5e24c4ca189d642b9e0b0c9", "emotesv2_845e6a3e8a0a40d0afc90081defa16c1"] */
     id: ID;
@@ -5670,9 +5633,6 @@ export type BitsBadgeTier = {
   canUploadEmoticons: null | boolean;
   __typename: "BitsBadgeTier";
 };
-
-/** ℹ️ Not real Twitch type name */
-export type BitsBadgeTierBadgeImageURLSize = "DOUBLE" | "NORMAL" | "QUADRUPLE";
 
 export type BitsBadgeTierEmoteData = {
   cheer: null | {
@@ -5712,47 +5672,11 @@ export type BitsBadgeTierEmoteData = {
   __typename: "User";
 };
 
-/** ℹ️ Not real Twitch type name */
-export type BitsBadgeTier_BitsBadgeTierBadge = {
-  id: ID;
-  /** ⚠️ Low confidence about: nullable */
-  title: null | string;
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format uri
-   * @aliasFor imageURL
-   * @gqlArg `size: BitsBadgeTierBadgeImageURLSize`
-   */
-  image1x: null | string;
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format uri
-   * @aliasFor imageURL
-   * @gqlArg `size: BitsBadgeTierBadgeImageURLSize`
-   */
-  image2x: null | string;
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format uri
-   * @aliasFor imageURL
-   * @gqlArg `size: BitsBadgeTierBadgeImageURLSize`
-   */
-  image4x: null | string;
-  user: null | BitsBadgeTier_BitsBadgeTierBadgeUser | BitsBadgeTier_BitsBadgeTierBadgeUser[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type BitsBadgeTier_BitsBadgeTierBadgeUser = {
-  id: ID;
-  __typename: string;
-};
-
 export type BitsBundleOffer = {
   /** @example ["amzn1.twitch.commerce.offer.19b765be-8ca7-4646-94d0-1547f833c3d8", "amzn1.twitch.commerce.offer.8f6707b4-8810-4384-90bf-851638b60f97"] */
   id: ID;
   /** @example ["BUNDLE"] */
-  type: string;
+  type: BitsBundleOfferType;
   /**
    * @format int32
    * @example [100, 500, 1500, 5000, 10000]
@@ -5773,7 +5697,7 @@ export type BitsBundleOffer = {
   url: string;
   includesVAT: boolean;
   /** @example ["USD"] */
-  currencyCode: string;
+  currencyCode: PriceInfoCurrency;
   promotion: null | BitsBundleOfferPromotion;
   __typename: "BitsBundleOffer";
 };
@@ -5788,6 +5712,9 @@ export type BitsBundleOfferPromotion = {
   type: UnknownValue;
   __typename: "BitsPromotion";
 };
+
+/** ℹ️ Not real Twitch type name */
+export type BitsBundleOfferType = "AD" | "BUNDLE";
 
 /** ℹ️ Not real Twitch type name */
 export type BitsCardSpendableBalancePromo_PayoutThreshold = {
@@ -6181,6 +6108,37 @@ export type BrandLiftSurvey_BrandLiftSurveyQuestionsChoices = {
   __typename: string;
 };
 
+/** ℹ️ Not real Twitch type name */
+export type BroadcastSettingsLanguage =
+  | "AR"
+  | "BG"
+  | "CS"
+  | "DA"
+  | "DE"
+  | "EL"
+  | "EN"
+  | "ES"
+  | "FI"
+  | "FR"
+  | "HI"
+  | "HU"
+  | "IT"
+  | "JA"
+  | "KO"
+  | "NL"
+  | "NO"
+  | "PL"
+  | "PT"
+  | "RO"
+  | "RU"
+  | "SK"
+  | "SV"
+  | "TH"
+  | "TR"
+  | "UK"
+  | "VI"
+  | "ZH";
+
 export type BroadcastTagFragment = {
   /**
    * @format uuid
@@ -6200,10 +6158,15 @@ export type BroadcastTagFragment = {
 
 export type BroadcastTagScopedFragment = BroadcastTagFragment & {
   /** @example ["CATEGORY"] */
-  scope: string;
+  scope: TagScope;
 };
 
-export type BroadcastType = "ARCHIVE" | "HIGHLIGHT" | "PAST_PREMIERE" | "UPLOAD";
+export type BroadcastType =
+  | "ARCHIVE"
+  | "HIGHLIGHT"
+  | "PAST_PREMIERE"
+  | "PREMIERE_UPLOAD"
+  | "UPLOAD";
 
 export type BroadcasterInfo = {
   /**
@@ -6363,7 +6326,7 @@ export type BrowsePagePopularStreamsWithTagsNode = {
   type: string;
   previewThumbnailProperties: {
     /** @example ["BLUR_NOT_REQUIRED", "BLUR_REASON_TYPE_SEXUAL_THEMES"] */
-    blurReason: string;
+    blurReason: PreviewThumbnailPropertiesBlurReason;
     __typename: "PreviewThumbnailProperties";
   };
   /** @directive include(if: $includeCostreaming) */
@@ -6411,7 +6374,7 @@ export type BrowseVerticalShelf = {
   title: null | ShelfTitle;
   subtitle: null | ShelfTitle;
   /** @example ["COLLECTION"] */
-  type: string;
+  type: VerticalShelfType;
   __typename: "VerticalShelf";
 };
 
@@ -6421,7 +6384,6 @@ export type BrowseVerticalShelfContentEdge = {
     | null
     | BrowseVerticalGame
     | BrowseVerticalStream
-    | StoryPreviewFragment
     | {
         /**
          * @pattern ^[0-9]+$
@@ -6454,7 +6416,8 @@ export type BrowseVerticalShelfContentEdge = {
         id: ID;
         __typename: "User";
       }
-    | { __typename: "Directory" };
+    | { __typename: "Directory" }
+    | { __typename: "StoryPreview" };
   trackingID: ID;
   __typename: "ShelfContentEdge";
 };
@@ -6529,7 +6492,7 @@ export type BrowseVerticalStream = {
   type: string;
   previewThumbnailProperties: {
     /** @example ["BLUR_NOT_REQUIRED", "BLUR_REASON_TYPE_SEXUAL_THEMES"] */
-    blurReason: string;
+    blurReason: PreviewThumbnailPropertiesBlurReason;
     __typename: "PreviewThumbnailProperties";
   };
   contentClassificationLabels:
@@ -6702,16 +6665,10 @@ export type BulkApproveUnbanRequests_BulkApproveUnbanRequest = {
     | null
     | BulkApproveUnbanRequests_BulkApproveUnbanRequestUnbanRequests
     | BulkApproveUnbanRequests_BulkApproveUnbanRequestUnbanRequests[];
-  error:
-    | null
-    | BulkApproveUnbanRequests_BulkApproveUnbanRequestError
-    | BulkApproveUnbanRequests_BulkApproveUnbanRequestError[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type BulkApproveUnbanRequests_BulkApproveUnbanRequestError = {
-  code: UnknownValue;
+  error: null | {
+    code: UnknownValue;
+    __typename: "UnbanRequestError";
+  };
   __typename: string;
 };
 
@@ -6728,16 +6685,10 @@ export type BulkDenyUnbanRequests_BulkDenyUnbanRequest = {
     | null
     | BulkDenyUnbanRequests_BulkDenyUnbanRequestUnbanRequests
     | BulkDenyUnbanRequests_BulkDenyUnbanRequestUnbanRequests[];
-  error:
-    | null
-    | BulkDenyUnbanRequests_BulkDenyUnbanRequestError
-    | BulkDenyUnbanRequests_BulkDenyUnbanRequestError[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type BulkDenyUnbanRequests_BulkDenyUnbanRequestError = {
-  code: UnknownValue;
+  error: null | {
+    code: UnknownValue;
+    __typename: "UnbanRequestError";
+  };
   __typename: string;
 };
 
@@ -6843,22 +6794,20 @@ export type BulkUpdateLowTrustTreatment_BulkUpdateLowTrustUserTreatmentPropertie
     | null
     | BulkUpdateLowTrustTreatment_BulkUpdateLowTrustUserTreatmentPropertiesTreatment
     | BulkUpdateLowTrustTreatment_BulkUpdateLowTrustUserTreatmentPropertiesTreatment[];
-  user:
-    | null
-    | BulkUpdateLowTrustTreatment_BulkUpdateLowTrustUserTreatmentPropertiesUser
-    | BulkUpdateLowTrustTreatment_BulkUpdateLowTrustUserTreatmentPropertiesUser[];
+  user: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["23161357"]
+     */
+    id: ID;
+    __typename: "User";
+  };
   __typename: string;
 };
 
 /** ℹ️ Not real Twitch type name */
 export type BulkUpdateLowTrustTreatment_BulkUpdateLowTrustUserTreatmentPropertiesTreatment = {
   type: UnknownValue;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type BulkUpdateLowTrustTreatment_BulkUpdateLowTrustUserTreatmentPropertiesUser = {
-  id: ID;
   __typename: string;
 };
 
@@ -7034,7 +6983,7 @@ export type CampaignInProgress = {
   /** @example ["V3.7 Wuthering Waves", "Twitch Drops campaign 3rd", "Inoxtag Icon Series ", "Dragonfire 9 - #2/7", "Drops", "AOS Drops Day 7", "Rogue Ops - Stage 2"] */
   name: string;
   /** @example ["ACTIVE", "EXPIRED"] */
-  status: string;
+  status: DropCampaignStatus;
   self: null | CampaignInProgress_DropCampaignSelf | CampaignInProgress_DropCampaignSelf[];
   game: {
     /**
@@ -7220,27 +7169,21 @@ export type CampaignMetadataFragment = {
 /** ℹ️ Not real Twitch type name */
 export type CampaignTopSupporters_ChannelCampaignLeaderboard = {
   id: ID;
-  items:
-    | null
-    | CampaignTopSupporters_ChannelCampaignLeaderboardItems
-    | CampaignTopSupporters_ChannelCampaignLeaderboardItems[];
+  items: null | {
+    edges: {
+      /** @pattern ^[0-9]+$ */
+      cursor: Cursor;
+      node: null | ChannelLeaderboardItem;
+      __typename: "UserLeaderboardItemEdge";
+    }[];
+    __typename: "UserLeaderboardItemConnection";
+  };
   myPosition: null | ChannelLeaderboardItem;
   /**
    * ⚠️ Low confidence about: nullable
    * @format uint32
    */
   secondsRemaining: null | number;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type CampaignTopSupporters_ChannelCampaignLeaderboardItems = {
-  edges: {
-    /** ⚠️ Low confidence about: nullable */
-    cursor: null | Cursor;
-    node: null | ChannelLeaderboardItem;
-    __typename: string;
-  }[];
   __typename: string;
 };
 
@@ -7311,26 +7254,40 @@ export type CanJoinCollabGroupFragment_CollaborationGroupSharedChat = {
   status: UnknownValue;
   participants: null | {
     id: ID;
-    channel:
-      | null
-      | CanJoinCollabGroupFragment_SharedChatParticipantChannel
-      | CanJoinCollabGroupFragment_SharedChatParticipantChannel[];
+    channel: null | {
+      /**
+       * @pattern ^[0-9]+$
+       * @example ["26490481"]
+       */
+      id: ID;
+      owner: {
+        /**
+         * @pattern ^[0-9]+$
+         * @example ["23161357"]
+         */
+        id: ID;
+        /** @example ["lirik", "twitch", "cdprojektred", "forsen", "tickett_", "st1mgreeen", "lipton_18"] */
+        login: string;
+        /** @example ["Twitch", "CD PROJEKT RED", "LIRIK", "forsen", "ayuuexe", "xQc", "RSDragonwilds"] */
+        displayName: string;
+        /**
+         * @format uri
+         * @example ["https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-70x70.png", "https://static-cdn.jtvnw.net/jtv_user_pictures/3c3366d7-728a-4204-bfdd-7c823858e4d9-profile_image-70x70.png"]
+         * @gqlArg `width: Int [50, 70, 300, 28, 150]`
+         */
+        profileImageURL: string;
+        /**
+         * @pattern ^[0-9a-fA-F]{6}$
+         * @example ["5C16C5", "DC0D15", "F1E9A4", "FAB3FF", "FFD37A", "FFBF00", "2D2628"]
+         */
+        primaryColorHex: null | string;
+        /** @example ["", "Twitch is where thousands of communities come together for whatever, every day. "] */
+        description: null | string;
+        __typename: "User";
+      };
+      __typename: "Channel";
+    };
     __typename: "SharedChatParticipant";
-  };
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type CanJoinCollabGroupFragment_SharedChatParticipantChannel = {
-  id: ID;
-  owner: {
-    id: UnknownValue;
-    login: UnknownValue;
-    displayName: UnknownValue;
-    profileImageURL: UnknownValue;
-    primaryColorHex: UnknownValue;
-    description: UnknownValue;
-    __typename: string;
   };
   __typename: string;
 };
@@ -7471,20 +7428,14 @@ export type CancelReasonsQuery_CreatorDashboardChannelAnalyticsDoNotRenewReasonA
 
 /** ℹ️ Not real Twitch type name */
 export type CancelSponsorshipCampaignInstance_CancelSponsorshipCampaignInstance = {
-  campaignInstance:
-    | null
-    | CancelSponsorshipCampaignInstance_CancelSponsorshipCampaignInstanceCampaignInstance
-    | CancelSponsorshipCampaignInstance_CancelSponsorshipCampaignInstanceCampaignInstance[];
+  campaignInstance: null | {
+    id: ID;
+    __typename: "CampaignInstance";
+  };
   error:
     | null
     | CancelSponsorshipCampaignInstance_CancelSponsorshipCampaignInstanceError
     | CancelSponsorshipCampaignInstance_CancelSponsorshipCampaignInstanceError[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type CancelSponsorshipCampaignInstance_CancelSponsorshipCampaignInstanceCampaignInstance = {
-  id: ID;
   __typename: string;
 };
 
@@ -7496,27 +7447,15 @@ export type CancelSponsorshipCampaignInstance_CancelSponsorshipCampaignInstanceE
 
 /** ℹ️ Not real Twitch type name */
 export type CancelUnbanRequest_CancelUnbanRequest = {
-  unbanRequest:
-    | null
-    | CancelUnbanRequest_CancelUnbanRequestUnbanRequest
-    | CancelUnbanRequest_CancelUnbanRequestUnbanRequest[];
-  error:
-    | null
-    | CancelUnbanRequest_CancelUnbanRequestError
-    | CancelUnbanRequest_CancelUnbanRequestError[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type CancelUnbanRequest_CancelUnbanRequestError = {
-  code: UnknownValue;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type CancelUnbanRequest_CancelUnbanRequestUnbanRequest = {
-  id: ID;
-  status: UnknownValue;
+  unbanRequest: null | {
+    id: ID;
+    status: UnknownValue;
+    __typename: "UnbanRequest";
+  };
+  error: null | {
+    code: UnknownValue;
+    __typename: "UnbanRequestError";
+  };
   __typename: string;
 };
 
@@ -7699,6 +7638,9 @@ export type CategoryRankingFragment = {
   metadata: MetadataFragment;
   __typename: "CategoryRanking";
 };
+
+/** ℹ️ Not real Twitch type name */
+export type CategoryRankingListError = "NO_RECENT_CATEGORIES" | "NO_SUGGESTIONS";
 
 export type CategoryRatingFragment = {
   /** @example ["509670"] */
@@ -7911,21 +7853,22 @@ export type ChangePaymentMethodBanner_PaymentMethodRecurringPaymentDetails = {
 /** ℹ️ Not real Twitch type name */
 export type ChangeUsername_ChangeUsername = {
   error: null | ChangeUsername_ChangeUsernameError | ChangeUsername_ChangeUsernameError[];
-  user: null | ChangeUsername_ChangeUsernameUser | ChangeUsername_ChangeUsernameUser[];
+  user: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["23161357"]
+     */
+    id: ID;
+    /** @example ["lirik", "twitch", "cdprojektred", "forsen", "tickett_", "st1mgreeen", "lipton_18"] */
+    login: string;
+    __typename: "User";
+  };
   __typename: string;
 };
 
 /** ℹ️ Not real Twitch type name */
 export type ChangeUsername_ChangeUsernameError = {
   code: UnknownValue;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type ChangeUsername_ChangeUsernameUser = {
-  id: ID;
-  /** ⚠️ Low confidence about: nullable */
-  login: null | string;
   __typename: string;
 };
 
@@ -8226,6 +8169,14 @@ export type ChannelAnniversary = {
   __typename: "StreamEventCelebration";
 };
 
+/** ℹ️ Not real Twitch type name */
+export type ChannelAuditAction =
+  | "AD_RUN"
+  | "AUTO_AD_RUN"
+  | "CHANNEL_ROLE_CHANGE"
+  | "GAME_UPDATE"
+  | "TITLE_UPDATE";
+
 export type ChannelAvatar = {
   /**
    * @pattern ^[0-9]+$
@@ -8250,6 +8201,9 @@ export type ChannelAvatar = {
   __typename: "User";
 };
 
+/** ℹ️ Not real Twitch type name */
+export type ChannelClipsSettingsDiscoverySetting = "UNSPECIFIED";
+
 export type ChannelCover = {
   /**
    * @pattern ^[0-9]+$
@@ -8271,7 +8225,7 @@ export type ChannelCover = {
   __typename: "User";
 };
 
-export type ChannelDashboardViewType = "STREAM_MANAGER";
+export type ChannelDashboardViewType = "STREAM_MANAGER" | "TWITCH_STUDIO";
 
 export type ChannelDescription = {
   /**
@@ -8338,7 +8292,15 @@ export type ChannelDropsCampaigns_DropsProgressCriteriaChannels = {
 
 export type ChannelEmoteUsage = {
   id: ID;
-  emote: null | ChannelEmoteUsage_EmoteUsageEmote | ChannelEmoteUsage_EmoteUsageEmote[];
+  emote: null | {
+    /** @example ["emotesv2_42ba00f9d5e24c4ca189d642b9e0b0c9", "emotesv2_845e6a3e8a0a40d0afc90081defa16c1"] */
+    id: ID;
+    /** ⚠️ Low confidence about: nullable */
+    suffix: null | string;
+    /** @example ["sumFast", "sumSmash", "sumPls", "sumMiting", "sumX", "sumKomrade", "sumPause"] */
+    token: string;
+    __typename: "Emote";
+  };
   emoteGroup:
     | null
     | ChannelEmoteUsage_EmoteUsageEmoteGroup
@@ -8346,16 +8308,6 @@ export type ChannelEmoteUsage = {
   totalUsage: UnknownValue;
   uniqueUsers: UnknownValue;
   __typename: "EmoteUsage";
-};
-
-/** ℹ️ Not real Twitch type name */
-export type ChannelEmoteUsage_EmoteUsageEmote = {
-  id: ID;
-  /** ⚠️ Low confidence about: nullable */
-  suffix: null | string;
-  /** ⚠️ Low confidence about: nullable */
-  token: null | string;
-  __typename: string;
 };
 
 /** ℹ️ Not real Twitch type name */
@@ -8411,13 +8363,16 @@ export type ChannelFromFeedback = {
   __typename: "Channel";
 };
 
+/** ℹ️ Not real Twitch type name */
+export type ChannelGoalContributionType = "FOLLOWERS" | "NEW_BITS" | "NEW_SUBS" | "SUBS";
+
 export type ChannelGoalFragment = {
   /** @example ["2iTRUeViGHhZmNv7MT9XfpMSu14", "3BP4EHza6gw8kXlziOieegxpvrn"] */
   id: ID;
   /** @example ["NEW_SUBS", "FOLLOWERS", "NEW_BITS", "SUBS"] */
-  contributionType: string;
+  contributionType: ChannelGoalContributionType;
   /** @example ["ACTIVE"] */
-  state: string;
+  state: ChannelGoalState;
   /**
    * @format uint32
    * @example [0, 2430015, 2459534, 1131904, 143093, 5]
@@ -8451,6 +8406,9 @@ export type ChannelGoalFragment = {
   shouldAutoIncrement: null | boolean;
   __typename: "ChannelGoal";
 };
+
+/** ℹ️ Not real Twitch type name */
+export type ChannelGoalState = "ACTIVE";
 
 export type ChannelHomeClip = {
   /**
@@ -8567,6 +8525,12 @@ export type ChannelHomeClip = {
   __typename: "Clip";
 };
 
+/** ℹ️ Not real Twitch type name */
+export type ChannelHomePreferencesHeroPreset = "PRESET_1" | "PRESET_2";
+
+/** ℹ️ Not real Twitch type name */
+export type ChannelHomePreferencesStreamerShelfType = "AUTOHOST";
+
 export type ChannelHomeSocialMedia = {
   /**
    * @format uuid
@@ -8581,6 +8545,9 @@ export type ChannelHomeSocialMedia = {
   url: string;
   __typename: "SocialMedia";
 };
+
+/** ℹ️ Not real Twitch type name */
+export type ChannelHomeStreamerShelfType = "AUTOHOST" | "DISABLED" | "TEAM";
 
 export type ChannelLeaderboard = {
   /** @example ["bits-usage-by-channel-v1-71092938-WEEK-loggedout", "bits-usage-by-channel-v1-23161357-WEEK-loggedout"] */
@@ -8692,7 +8659,7 @@ export type ChannelLeaderboardSubscriptionProduct = {
   price: string;
   priceInfo: {
     /** @example ["EUR", "USD"] */
-    currency: string;
+    currency: PriceInfoCurrency;
     /**
      * @format int32
      * @example [2]
@@ -8721,10 +8688,10 @@ export type ChannelLeaderboardWithRankContext = ChannelLeaderboard & {
 /** ℹ️ Not real Twitch type name */
 export type ChannelLeaderboardWithRankContext_UserLeaderboardMyRankContext = {
   edges: {
-    /** ⚠️ Low confidence about: nullable */
-    cursor: null | Cursor;
+    /** @pattern ^[0-9]+$ */
+    cursor: Cursor;
     node: null | ChannelLeaderboardItem;
-    __typename: string;
+    __typename: "UserLeaderboardItemEdge";
   }[];
   __typename: string;
 };
@@ -8746,6 +8713,16 @@ export type ChannelName = {
   };
   __typename: "User";
 };
+
+/** ℹ️ Not real Twitch type name */
+export type ChannelNotificationSettingCategory = "ALL";
+
+/** ℹ️ Not real Twitch type name */
+export type ChannelNotificationSettingsFollowsSettingState =
+  | "ALWAYS"
+  | "LIVE_UP_ONLY"
+  | "NEVER"
+  | "PERSONALIZED";
 
 /** ℹ️ Not real Twitch type name */
 export type ChannelPanelsCreatePanelImageUploadInfo_CreatePanelImageUploadInfo = {
@@ -8775,7 +8752,7 @@ export type ChannelPanelsDefaultPanel = {
    */
   id: ID;
   /** @example ["DEFAULT"] */
-  type: string;
+  type: DefaultPanelType;
   /** @example ["JINNYTTY SHOULDER RIDER"] */
   title: null | string;
   /**
@@ -8804,7 +8781,7 @@ export type ChannelPanelsDeletePanel_DeletePanel = {
          */
         id: ID;
         /** @example ["DEFAULT"] */
-        type: string;
+        type: DefaultPanelType;
         __typename: "DefaultPanel";
         /** @example ["JINNYTTY SHOULDER RIDER"] */
         title: null | string;
@@ -8828,7 +8805,7 @@ export type ChannelPanelsDeletePanel_DeletePanel = {
          */
         id: ID;
         /** @example ["DEFAULT"] */
-        type: string;
+        type: DefaultPanelType;
         __typename: "ExtensionPanel";
         /** @example ["extension-panel-1", "extension-panel-2"] */
         slotID: ID;
@@ -8843,7 +8820,7 @@ export type ChannelPanelsExtensionPanel = {
    */
   id: ID;
   /** @example ["EXTENSION"] */
-  type: string;
+  type: ExtensionPanelType;
   /** @example ["extension-panel-1", "extension-panel-2"] */
   slotID: ID;
   __typename: "ExtensionPanel";
@@ -8859,7 +8836,7 @@ export type ChannelPanelsOrderPanels_OrderPanels = {
          */
         id: ID;
         /** @example ["DEFAULT"] */
-        type: string;
+        type: DefaultPanelType;
         __typename: "DefaultPanel";
         /** @example ["JINNYTTY SHOULDER RIDER"] */
         title: null | string;
@@ -8883,7 +8860,7 @@ export type ChannelPanelsOrderPanels_OrderPanels = {
          */
         id: ID;
         /** @example ["DEFAULT"] */
-        type: string;
+        type: DefaultPanelType;
         __typename: "ExtensionPanel";
         /** @example ["extension-panel-1", "extension-panel-2"] */
         slotID: ID;
@@ -9027,16 +9004,8 @@ export type ChannelRefreshVideoShelfQuery_UserVideoShelvesAvailable = {
   __typename: string;
 };
 
-export type ChannelScheduleSegment_ScheduleSegment = {
-  /** @example ["eyJzZWdtZW50SUQiOiJiNzU0MDEzZC1iOTRlLTRlNmEtYWFmYi03YmM0NmMzNDEzODciLCJpc29ZZWFyIjoyMDI2LCJpc29XZWVrIjozOH0=", "eyJzZWdtZW50SUQiOiI1ZDhiZjNmYi1mN2I0LTRlYTMtOTZhNC1lZTI2MDBlNDNkNzEiLCJpc29ZZWFyIjoyMDI2LCJpc29XZWVrIjo0NH0="] */
-  id: ID;
-  /**
-   * @format date-time
-   * @example ["2026-09-20T16:00:00Z", "2026-10-28T01:00:00Z"]
-   */
-  startAt: string;
-  __typename: "ScheduleSegment";
-};
+/** ℹ️ Not real Twitch type name */
+export type ChannelSelfEdgeRestrictionType = "UNKNOWN";
 
 export type ChannelSkinsAdsAudiencePolicy = {
   /** ⚠️ Low confidence about: nullable */
@@ -9098,10 +9067,15 @@ export type ChannelSkins_ChannelSponsorships = {
 /** ℹ️ Not real Twitch type name */
 export type ChannelSkins_ChannelSponsorshipsChannelSkin = {
   adsAudiencePolicy: null | ChannelSkinsAdsAudiencePolicy;
-  advertiser:
-    | null
-    | ChannelSkins_ChannelSponsorshipsChannelSkinAdvertiser
-    | ChannelSkins_ChannelSponsorshipsChannelSkinAdvertiser[];
+  advertiser: null | {
+    ctaMessage: UnknownValue;
+    /**
+     * ⚠️ Low confidence about: nullable
+     * @format uri
+     */
+    ctaURL: null | string;
+    __typename: "Advertiser";
+  };
   placements: null | ChannelSkinsPlacement;
   activation:
     | null
@@ -9129,17 +9103,6 @@ export type ChannelSkins_ChannelSponsorshipsChannelSkin = {
 export type ChannelSkins_ChannelSponsorshipsChannelSkinActivation = {
   id: ID;
   version: UnknownValue;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type ChannelSkins_ChannelSponsorshipsChannelSkinAdvertiser = {
-  ctaMessage: UnknownValue;
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format uri
-   */
-  ctaURL: null | string;
   __typename: string;
 };
 
@@ -9621,114 +9584,89 @@ export type ChannelSubFreeTrialToggleSetting_UserSettingsCreatorMonetizationSett
 /** ℹ️ Not real Twitch type name */
 export type ChannelTrailerSettingsSetChannelTrailer_SetChannelTrailer = {
   error: UnknownValue;
-  channel:
-    | null
-    | ChannelTrailerSettingsSetChannelTrailer_SetChannelTrailerChannel
-    | ChannelTrailerSettingsSetChannelTrailer_SetChannelTrailerChannel[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type ChannelTrailerSettingsSetChannelTrailer_SetChannelTrailerChannel = {
-  id: ID;
-  owner:
-    | null
-    | ChannelTrailerSettingsSetChannelTrailer_SetChannelTrailerChannelOwner
-    | ChannelTrailerSettingsSetChannelTrailer_SetChannelTrailerChannelOwner[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type ChannelTrailerSettingsSetChannelTrailer_SetChannelTrailerChannelOwner = {
-  id: ID;
-  channel:
-    | null
-    | ChannelTrailerSettingsSetChannelTrailer_SetChannelTrailerChannelOwnerChannel
-    | ChannelTrailerSettingsSetChannelTrailer_SetChannelTrailerChannelOwnerChannel[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type ChannelTrailerSettingsSetChannelTrailer_SetChannelTrailerChannelOwnerChannel = {
-  id: ID;
-  trailer:
-    | null
-    | ChannelTrailerSettingsSetChannelTrailer_SetChannelTrailerChannelOwnerChannelTrailer
-    | ChannelTrailerSettingsSetChannelTrailer_SetChannelTrailerChannelOwnerChannelTrailer[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type ChannelTrailerSettingsSetChannelTrailer_SetChannelTrailerChannelOwnerChannelTrailer = {
-  video:
-    | null
-    | ChannelTrailerSettingsSetChannelTrailer_SetChannelTrailerChannelOwnerChannelTrailerVideo
-    | ChannelTrailerSettingsSetChannelTrailer_SetChannelTrailerChannelOwnerChannelTrailerVideo[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type ChannelTrailerSettingsSetChannelTrailer_SetChannelTrailerChannelOwnerChannelTrailerVideo =
-  {
+  channel: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["26490481"]
+     */
     id: ID;
-    __typename: string;
+    owner: {
+      /**
+       * @pattern ^[0-9]+$
+       * @example ["23161357"]
+       */
+      id: ID;
+      channel: {
+        /**
+         * @pattern ^[0-9]+$
+         * @example ["26490481"]
+         */
+        id: ID;
+        trailer: {
+          video: null | {
+            /**
+             * @pattern ^[0-9]+$
+             * @example ["2323270866"]
+             */
+            id: ID;
+            __typename: "Video";
+          };
+          __typename: "Trailer";
+        };
+        __typename: "Channel";
+      };
+      __typename: "User";
+    };
+    __typename: "Channel";
   };
+  __typename: string;
+};
 
 /** ℹ️ Not real Twitch type name */
 export type ChannelTrailerSetupSetChannelTrailer_SetChannelTrailer = {
   error: UnknownValue;
-  channel:
-    | null
-    | ChannelTrailerSetupSetChannelTrailer_SetChannelTrailerChannel
-    | ChannelTrailerSetupSetChannelTrailer_SetChannelTrailerChannel[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type ChannelTrailerSetupSetChannelTrailer_SetChannelTrailerChannel = {
-  id: ID;
-  trailer:
-    | null
-    | ChannelTrailerSetupSetChannelTrailer_SetChannelTrailerChannelTrailer
-    | ChannelTrailerSetupSetChannelTrailer_SetChannelTrailerChannelTrailer[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type ChannelTrailerSetupSetChannelTrailer_SetChannelTrailerChannelTrailer = {
-  video:
-    | null
-    | ChannelTrailerSetupSetChannelTrailer_SetChannelTrailerChannelTrailerVideo
-    | ChannelTrailerSetupSetChannelTrailer_SetChannelTrailerChannelTrailerVideo[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type ChannelTrailerSetupSetChannelTrailer_SetChannelTrailerChannelTrailerVideo = {
-  id: ID;
+  channel: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["26490481"]
+     */
+    id: ID;
+    trailer: {
+      video: null | {
+        /**
+         * @pattern ^[0-9]+$
+         * @example ["2323270866"]
+         */
+        id: ID;
+        __typename: "Video";
+      };
+      __typename: "Trailer";
+    };
+    __typename: "Channel";
+  };
   __typename: string;
 };
 
 /** ℹ️ Not real Twitch type name */
 export type ChannelTrailerSetupUpdateVideo_UpdateVideo = {
-  video:
-    | null
-    | ChannelTrailerSetupUpdateVideo_UpdateVideoVideo
-    | ChannelTrailerSetupUpdateVideo_UpdateVideoVideo[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type ChannelTrailerSetupUpdateVideo_UpdateVideoVideo = {
-  id: ID;
-  /** ⚠️ Low confidence about: nullable */
-  title: null | string;
-  language: UnknownValue;
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format uri
-   */
-  previewThumbnailURL: null | string;
+  video: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["2323270866"]
+     */
+    id: ID;
+    /** @example ["Twitch Recap: 2024 according to Twitch Chat!", "REDstreams — Cyberpunk 2077: Edgerunners 2 Update (2.5) | Overview"] */
+    title: null | string;
+    /** @example ["en"] */
+    language: string;
+    /**
+     * @example ["https://static-cdn.jtvnw.net/cf_vods/d1m7jfoe9zdc1j/82ef4729c6011d6072e2_twitch_43295848617_1733849129//thumb/thumb0-90x60.jpg", "https://static-cdn.jtvnw.net/cf_vods/d3fi1amfgojobc/7fbc776f6b7a4659c4e4_cdprojektred_319108158181_1793115910//thumb/thumb0-90x60.jpg"]
+     * @gqlArg `width: Int [320, 90, 640, 240, 400, 1280, 80, 160, 214]`
+     * @gqlArg `height: Int [180, 60, 360, 135, 225, 480, 720, 51, 45, 90]`
+     */
+    previewThumbnailURL: string;
+    __typename: "Video";
+  };
   __typename: string;
 };
 
@@ -9756,10 +9694,17 @@ export type ChannelViewerMilestoneSettingsMutation_UpdateChannelViewerMilestoneS
     | null
     | ChannelViewerMilestoneSettingsMutation_UpdateChannelViewerMilestoneSettingsError
     | ChannelViewerMilestoneSettingsMutation_UpdateChannelViewerMilestoneSettingsError[];
-  settings:
-    | null
-    | ChannelViewerMilestoneSettingsMutation_UpdateChannelViewerMilestoneSettingsSettings
-    | ChannelViewerMilestoneSettingsMutation_UpdateChannelViewerMilestoneSettingsSettings[];
+  settings: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["71092938"]
+     */
+    id: ID;
+    isWatchStreakOptOut: boolean;
+    /** ⚠️ Low confidence about: nullable */
+    isShareWatchStreakOptOut: null | boolean;
+    __typename: "ViewerMilestoneSettings";
+  };
   __typename: string;
 };
 
@@ -9770,14 +9715,10 @@ export type ChannelViewerMilestoneSettingsMutation_UpdateChannelViewerMilestoneS
 };
 
 /** ℹ️ Not real Twitch type name */
-export type ChannelViewerMilestoneSettingsMutation_UpdateChannelViewerMilestoneSettingsSettings = {
-  id: ID;
-  /** ⚠️ Low confidence about: nullable */
-  isWatchStreakOptOut: null | boolean;
-  /** ⚠️ Low confidence about: nullable */
-  isShareWatchStreakOptOut: null | boolean;
-  __typename: string;
-};
+export type ChargeModelPlanIntervalUnit = "DAYS" | "MONTHS" | "UNKNOWN";
+
+/** ℹ️ Not real Twitch type name */
+export type ChargeModelPlanRenewalPolicy = "AUTO_RENEW" | "NO_RENEW" | "UNKNOWN";
 
 export type Charity = {
   id: ID;
@@ -10004,7 +9945,7 @@ export type CharityOffer = {
           /** @example ["33d10886-ace9-466b-9060-e10013aa05a21887", "41679e35-3eaf-4acf-b861-e8941c99650f", "63967dc1-a829-453e-9425-53c0f68313723565"] */
           id: ID;
           /** @example ["EUR", "USD"] */
-          currency: string;
+          currency: PriceInfoCurrency;
           /**
            * @format int32
            * @example [2]
@@ -10089,18 +10030,6 @@ export type CharityPurchasableOfferFragment = CharityOffer & {
 };
 
 /** ℹ️ Not real Twitch type name */
-export type CharityRoot_ChannelCharityCampaigns = {
-  edges: {
-    node: null | {
-      id: ID;
-      __typename: "CharityCampaign";
-    };
-    __typename: string;
-  }[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
 export type Charity_CharityLocation = {
   country: UnknownValue;
   __typename: string;
@@ -10108,10 +10037,10 @@ export type Charity_CharityLocation = {
 
 export type ChatAccountVerificationOptions = {
   /** @example ["PARTIAL", "NONE", "ALL"] */
-  emailVerificationMode: string;
+  emailVerificationMode: VerificationMode;
   partialEmailVerificationConfig: ChatPartialVerification;
   /** @example ["NONE", "ALL", "PARTIAL"] */
-  phoneVerificationMode: string;
+  phoneVerificationMode: VerificationMode;
   partialPhoneVerificationConfig: ChatPartialVerification;
   isSubscriberExempt: boolean;
   isVIPExempt: boolean;
@@ -10180,10 +10109,42 @@ export type ChatBadgeListItemUpdateBitsBadgeTiers_UpdateBitsBadgeTiersTiers = {
    * @format date-time
    */
   lastUpdated: null | string;
-  badge:
-    | null
-    | ChatBadgeListItemUpdateBitsBadgeTiers_UpdateBitsBadgeTiersTiersBadge
-    | ChatBadgeListItemUpdateBitsBadgeTiers_UpdateBitsBadgeTiersTiersBadge[];
+  badge: null | {
+    /** @example ["Yml0czsxOw==", "cHJlZGljdGlvbnM7Ymx1ZS0xOw=="] */
+    id: ID;
+    /** @example ["cheer 1", "Predicted Blue (1)"] */
+    title: string;
+    /**
+     * @format uri
+     * @example ["https://static-cdn.jtvnw.net/badges/v1/73b5c3fb-24f9-4a82-a852-2f475b59411c/1", "https://static-cdn.jtvnw.net/badges/v1/73b5c3fb-24f9-4a82-a852-2f475b59411c/2"]
+     * @aliasFor imageURL
+     * @gqlArg `size: BadgeImageURLSize`
+     */
+    image1x: string;
+    /**
+     * @format uri
+     * @example ["https://static-cdn.jtvnw.net/badges/v1/73b5c3fb-24f9-4a82-a852-2f475b59411c/1", "https://static-cdn.jtvnw.net/badges/v1/73b5c3fb-24f9-4a82-a852-2f475b59411c/2"]
+     * @aliasFor imageURL
+     * @gqlArg `size: BadgeImageURLSize`
+     */
+    image2x: string;
+    /**
+     * @format uri
+     * @example ["https://static-cdn.jtvnw.net/badges/v1/73b5c3fb-24f9-4a82-a852-2f475b59411c/1", "https://static-cdn.jtvnw.net/badges/v1/73b5c3fb-24f9-4a82-a852-2f475b59411c/2"]
+     * @aliasFor imageURL
+     * @gqlArg `size: BadgeImageURLSize`
+     */
+    image4x: string;
+    user: null | {
+      /**
+       * @pattern ^[0-9]+$
+       * @example ["23161357"]
+       */
+      id: ID;
+      __typename: "User";
+    };
+    __typename: "Badge";
+  };
   emoticons: null | {
     /** @example ["emotesv2_42ba00f9d5e24c4ca189d642b9e0b0c9", "emotesv2_845e6a3e8a0a40d0afc90081defa16c1"] */
     id: ID;
@@ -10200,45 +10161,6 @@ export type ChatBadgeListItemUpdateBitsBadgeTiers_UpdateBitsBadgeTiersTiers = {
     | ChatBadgeListItemUpdateBitsBadgeTiers_UpdateBitsBadgeTiersTiersEmoticonUploadConfigurations[];
   /** ⚠️ Low confidence about: nullable */
   canUploadEmoticons: null | boolean;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type ChatBadgeListItemUpdateBitsBadgeTiers_UpdateBitsBadgeTiersTiersBadge = {
-  id: ID;
-  /** ⚠️ Low confidence about: nullable */
-  title: null | string;
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format uri
-   * @aliasFor imageURL
-   * @gqlArg `size: UpdateBitsBadgeTiersTiersBadgeImageURLSize`
-   */
-  image1x: null | string;
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format uri
-   * @aliasFor imageURL
-   * @gqlArg `size: UpdateBitsBadgeTiersTiersBadgeImageURLSize`
-   */
-  image2x: null | string;
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format uri
-   * @aliasFor imageURL
-   * @gqlArg `size: UpdateBitsBadgeTiersTiersBadgeImageURLSize`
-   */
-  image4x: null | string;
-  user:
-    | null
-    | ChatBadgeListItemUpdateBitsBadgeTiers_UpdateBitsBadgeTiersTiersBadgeUser
-    | ChatBadgeListItemUpdateBitsBadgeTiers_UpdateBitsBadgeTiersTiersBadgeUser[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type ChatBadgeListItemUpdateBitsBadgeTiers_UpdateBitsBadgeTiersTiersBadgeUser = {
-  id: ID;
   __typename: string;
 };
 
@@ -10333,10 +10255,42 @@ export type ChatBadgeTiersFormUpdateBadgeTiers_UpdateBitsBadgeTiersTiers = {
    * @format date-time
    */
   lastUpdated: null | string;
-  badge:
-    | null
-    | ChatBadgeTiersFormUpdateBadgeTiers_UpdateBitsBadgeTiersTiersBadge
-    | ChatBadgeTiersFormUpdateBadgeTiers_UpdateBitsBadgeTiersTiersBadge[];
+  badge: null | {
+    /** @example ["Yml0czsxOw==", "cHJlZGljdGlvbnM7Ymx1ZS0xOw=="] */
+    id: ID;
+    /** @example ["cheer 1", "Predicted Blue (1)"] */
+    title: string;
+    /**
+     * @format uri
+     * @example ["https://static-cdn.jtvnw.net/badges/v1/73b5c3fb-24f9-4a82-a852-2f475b59411c/1", "https://static-cdn.jtvnw.net/badges/v1/73b5c3fb-24f9-4a82-a852-2f475b59411c/2"]
+     * @aliasFor imageURL
+     * @gqlArg `size: BadgeImageURLSize`
+     */
+    image1x: string;
+    /**
+     * @format uri
+     * @example ["https://static-cdn.jtvnw.net/badges/v1/73b5c3fb-24f9-4a82-a852-2f475b59411c/1", "https://static-cdn.jtvnw.net/badges/v1/73b5c3fb-24f9-4a82-a852-2f475b59411c/2"]
+     * @aliasFor imageURL
+     * @gqlArg `size: BadgeImageURLSize`
+     */
+    image2x: string;
+    /**
+     * @format uri
+     * @example ["https://static-cdn.jtvnw.net/badges/v1/73b5c3fb-24f9-4a82-a852-2f475b59411c/1", "https://static-cdn.jtvnw.net/badges/v1/73b5c3fb-24f9-4a82-a852-2f475b59411c/2"]
+     * @aliasFor imageURL
+     * @gqlArg `size: BadgeImageURLSize`
+     */
+    image4x: string;
+    user: null | {
+      /**
+       * @pattern ^[0-9]+$
+       * @example ["23161357"]
+       */
+      id: ID;
+      __typename: "User";
+    };
+    __typename: "Badge";
+  };
   emoticons: null | {
     /** @example ["emotesv2_42ba00f9d5e24c4ca189d642b9e0b0c9", "emotesv2_845e6a3e8a0a40d0afc90081defa16c1"] */
     id: ID;
@@ -10349,45 +10303,6 @@ export type ChatBadgeTiersFormUpdateBadgeTiers_UpdateBitsBadgeTiersTiers = {
   };
   /** ⚠️ Low confidence about: nullable */
   canUploadEmoticons: null | boolean;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type ChatBadgeTiersFormUpdateBadgeTiers_UpdateBitsBadgeTiersTiersBadge = {
-  id: ID;
-  /** ⚠️ Low confidence about: nullable */
-  title: null | string;
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format uri
-   * @aliasFor imageURL
-   * @gqlArg `size: UpdateBitsBadgeTiersTiersBadgeImageURLSize`
-   */
-  image1x: null | string;
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format uri
-   * @aliasFor imageURL
-   * @gqlArg `size: UpdateBitsBadgeTiersTiersBadgeImageURLSize`
-   */
-  image2x: null | string;
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format uri
-   * @aliasFor imageURL
-   * @gqlArg `size: UpdateBitsBadgeTiersTiersBadgeImageURLSize`
-   */
-  image4x: null | string;
-  user:
-    | null
-    | ChatBadgeTiersFormUpdateBadgeTiers_UpdateBitsBadgeTiersTiersBadgeUser
-    | ChatBadgeTiersFormUpdateBadgeTiers_UpdateBitsBadgeTiersTiersBadgeUser[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type ChatBadgeTiersFormUpdateBadgeTiers_UpdateBitsBadgeTiersTiersBadgeUser = {
-  id: ID;
   __typename: string;
 };
 
@@ -10518,41 +10433,31 @@ export type ChatCreateRaid_CreateRaidRaid = {
 export type ChatDeleteChatMessage_DeleteChatMessage = {
   /** ⚠️ Low confidence about: nullable */
   responseCode: null | string;
-  message:
-    | null
-    | ChatDeleteChatMessage_DeleteChatMessageMessage
-    | ChatDeleteChatMessage_DeleteChatMessageMessage[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type ChatDeleteChatMessage_DeleteChatMessageMessage = {
-  id: ID;
-  sender:
-    | null
-    | ChatDeleteChatMessage_DeleteChatMessageMessageSender
-    | ChatDeleteChatMessage_DeleteChatMessageMessageSender[];
-  content:
-    | null
-    | ChatDeleteChatMessage_DeleteChatMessageMessageContent
-    | ChatDeleteChatMessage_DeleteChatMessageMessageContent[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type ChatDeleteChatMessage_DeleteChatMessageMessageContent = {
-  /** ⚠️ Low confidence about: nullable */
-  text: null | string;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type ChatDeleteChatMessage_DeleteChatMessageMessageSender = {
-  id: ID;
-  /** ⚠️ Low confidence about: nullable */
-  login: null | string;
-  /** ⚠️ Low confidence about: nullable */
-  displayName: null | string;
+  message: null | {
+    /**
+     * @format uuid
+     * @example ["279e8293-cec0-40df-a475-6b35981a2e49"]
+     */
+    id: ID;
+    sender: {
+      /**
+       * @pattern ^[0-9]+$
+       * @example ["23161357"]
+       */
+      id: ID;
+      /** @example ["lirik", "twitch", "cdprojektred", "forsen", "tickett_", "st1mgreeen", "lipton_18"] */
+      login: string;
+      /** @example ["Twitch", "CD PROJEKT RED", "LIRIK", "forsen", "ayuuexe", "xQc", "RSDragonwilds"] */
+      displayName: string;
+      __typename: "User";
+    };
+    content: null | {
+      /** @example ["NODDERS  vampire server"] */
+      text: string;
+      __typename: "MessageContent";
+    };
+    __typename: "Message";
+  };
   __typename: string;
 };
 
@@ -10565,7 +10470,7 @@ export type ChatEarnedBadgesChannelData_CurrentChannelViewer = {
 
 export type ChatHighlightDisplay = {
   /** @example ["COMPACT", "FULL"] */
-  chatHighlightDisplayMode: string;
+  chatHighlightDisplayMode: ChatHighlightDisplayChatHighlightDisplayMode;
   isEnabled: boolean;
   /**
    * @format uint32
@@ -10574,6 +10479,9 @@ export type ChatHighlightDisplay = {
   durationMinutes: null | number;
   __typename: "ChatHighlightDisplay";
 };
+
+/** ℹ️ Not real Twitch type name */
+export type ChatHighlightDisplayChatHighlightDisplayMode = "COMPACT" | "FULL";
 
 export type ChatHistoryParentMessage = {
   /**
@@ -10659,67 +10567,57 @@ export type ChatInputSendCheer_SendCheerValidationError = {
   code: UnknownValue;
   /** ⚠️ Low confidence about: nullable */
   message: null | string;
-  messageContent:
-    | null
-    | ChatInputSendCheer_SendCheerValidationErrorMessageContent
-    | ChatInputSendCheer_SendCheerValidationErrorMessageContent[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type ChatInputSendCheer_SendCheerValidationErrorMessageContent = {
-  /** ⚠️ Low confidence about: nullable */
-  text: null | string;
-  fragments:
-    | null
-    | ChatInputSendCheer_SendCheerValidationErrorMessageContentFragments
-    | ChatInputSendCheer_SendCheerValidationErrorMessageContentFragments[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type ChatInputSendCheer_SendCheerValidationErrorMessageContentFragments = {
-  /** ⚠️ Low confidence about: nullable */
-  text: null | string;
-  content:
-    | {
-        topics: null | ChatInputSendCheer_AutoModTopics | ChatInputSendCheer_AutoModTopics[];
-        __typename: "AutoMod";
-      }
-    | {
-        /**
-         * ⚠️ Low confidence about: nullable
-         * @format uint32
-         */
-        bitsAmount: null | number;
-        prefix: UnknownValue;
-        tier: UnknownValue;
-        __typename: "CheermoteToken";
-      }
-    | {
-        /**
-         * @example ["emotesv2_42ba00f9d5e24c4ca189d642b9e0b0c9", "emotesv2_845e6a3e8a0a40d0afc90081defa16c1"]
-         * @aliasFor id
-         */
-        emoteID: ID;
-        /** @example ["c23ba858-6cca-49ac-9ba1-6886e74b63b2", "408258241"] */
-        setID: ID;
-        /** @example ["sumFast", "sumSmash", "sumPls", "sumMiting", "sumX", "sumKomrade", "sumPause"] */
-        token: string;
-        __typename: "Emote";
-      }
-    | {
-        /**
-         * @pattern ^[0-9]+$
-         * @example ["23161357"]
-         */
-        id: ID;
-        /** @example ["lirik", "twitch", "cdprojektred", "forsen", "tickett_", "st1mgreeen", "lipton_18"] */
-        login: string;
-        /** @example ["Twitch", "CD PROJEKT RED", "LIRIK", "forsen", "ayuuexe", "xQc", "RSDragonwilds"] */
-        displayName: string;
-        __typename: "User";
-      };
+  messageContent: null | {
+    /** @example ["NODDERS  vampire server"] */
+    text: string;
+    fragments: {
+      /** @example ["NODDERS  vampire server", "Clueless"] */
+      text: string;
+      content:
+        | null
+        | {
+            topics: null | ChatInputSendCheer_AutoModTopics | ChatInputSendCheer_AutoModTopics[];
+            __typename: "AutoMod";
+          }
+        | {
+            /**
+             * ⚠️ Low confidence about: nullable
+             * @format uint32
+             */
+            bitsAmount: null | number;
+            prefix: UnknownValue;
+            tier: UnknownValue;
+            __typename: "CheermoteToken";
+          }
+        | {
+            /**
+             * @example ["emotesv2_42ba00f9d5e24c4ca189d642b9e0b0c9", "emotesv2_845e6a3e8a0a40d0afc90081defa16c1"]
+             * @aliasFor id
+             */
+            emoteID: ID;
+            /** @example ["c23ba858-6cca-49ac-9ba1-6886e74b63b2", "408258241"] */
+            setID: ID;
+            /** @example ["sumFast", "sumSmash", "sumPls", "sumMiting", "sumX", "sumKomrade", "sumPause"] */
+            token: string;
+            __typename: "Emote";
+          }
+        | {
+            /**
+             * @pattern ^[0-9]+$
+             * @example ["23161357"]
+             */
+            id: ID;
+            /** @example ["lirik", "twitch", "cdprojektred", "forsen", "tickett_", "st1mgreeen", "lipton_18"] */
+            login: string;
+            /** @example ["Twitch", "CD PROJEKT RED", "LIRIK", "forsen", "ayuuexe", "xQc", "RSDragonwilds"] */
+            displayName: string;
+            __typename: "User";
+          }
+        | { __typename: "GifContent" };
+      __typename: "MessageFragment";
+    }[];
+    __typename: "MessageContent";
+  };
   __typename: string;
 };
 
@@ -11064,76 +10962,54 @@ export type ChatSettings = {
 
 /** ℹ️ Not real Twitch type name */
 export type ChatSettingsDeselectBadgeModifier_UpdateUserSubscriptionSettings = {
-  subscriptionSettings:
-    | null
-    | ChatSettingsDeselectBadgeModifier_UpdateUserSubscriptionSettingsSubscriptionSettings
-    | ChatSettingsDeselectBadgeModifier_UpdateUserSubscriptionSettingsSubscriptionSettings[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type ChatSettingsDeselectBadgeModifier_UpdateUserSubscriptionSettingsSubscriptionSettings = {
-  /** ⚠️ Low confidence about: nullable */
-  isBadgeModifierHidden: null | boolean;
+  subscriptionSettings: null | {
+    /** ⚠️ Low confidence about: nullable */
+    isBadgeModifierHidden: null | boolean;
+    __typename: "UserSubscriptionSettings";
+  };
   __typename: string;
 };
 
 /** ℹ️ Not real Twitch type name */
 export type ChatSettingsDeselectChannelBadge_DeselectChannelBadge = {
-  user:
-    | null
-    | ChatSettingsDeselectChannelBadge_DeselectChannelBadgeUser
-    | ChatSettingsDeselectChannelBadge_DeselectChannelBadgeUser[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type ChatSettingsDeselectChannelBadge_DeselectChannelBadgeUser = {
-  id: ID;
-  self:
-    | null
-    | ChatSettingsDeselectChannelBadge_DeselectChannelBadgeUserSelf
-    | ChatSettingsDeselectChannelBadge_DeselectChannelBadgeUserSelf[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type ChatSettingsDeselectChannelBadge_DeselectChannelBadgeUserSelf = {
-  selectedBadge: null | Badge;
-  availableBadges: null | Badge;
+  user: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["23161357"]
+     */
+    id: ID;
+    self: null | {
+      selectedBadge: null | Badge;
+      availableBadges: null | Badge;
+      __typename: "UserSelfConnection";
+    };
+    __typename: "User";
+  };
   __typename: string;
 };
 
 /** ℹ️ Not real Twitch type name */
 export type ChatSettingsDeselectGlobalBadge_DeselectGlobalBadge = {
-  user:
-    | null
-    | ChatSettingsDeselectGlobalBadge_DeselectGlobalBadgeUser
-    | ChatSettingsDeselectGlobalBadge_DeselectGlobalBadgeUser[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type ChatSettingsDeselectGlobalBadge_DeselectGlobalBadgeUser = {
-  id: ID;
-  selectedBadge: null | Badge;
-  availableBadges: null | Badge;
+  user: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["23161357"]
+     */
+    id: ID;
+    selectedBadge: null | Badge;
+    availableBadges: null | Badge;
+    __typename: "User";
+  };
   __typename: string;
 };
 
 /** ℹ️ Not real Twitch type name */
 export type ChatSettingsSelectBadgeModifier_UpdateUserSubscriptionSettings = {
-  subscriptionSettings:
-    | null
-    | ChatSettingsSelectBadgeModifier_UpdateUserSubscriptionSettingsSubscriptionSettings
-    | ChatSettingsSelectBadgeModifier_UpdateUserSubscriptionSettingsSubscriptionSettings[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type ChatSettingsSelectBadgeModifier_UpdateUserSubscriptionSettingsSubscriptionSettings = {
-  /** ⚠️ Low confidence about: nullable */
-  isBadgeModifierHidden: null | boolean;
+  subscriptionSettings: null | {
+    /** ⚠️ Low confidence about: nullable */
+    isBadgeModifierHidden: null | boolean;
+    __typename: "UserSubscriptionSettings";
+  };
   __typename: string;
 };
 
@@ -11141,44 +11017,34 @@ export type ChatSettingsSelectBadgeModifier_UpdateUserSubscriptionSettingsSubscr
 export type ChatSettingsSelectChannelBadge_SelectChannelBadge = {
   /** ⚠️ Low confidence about: nullable */
   isSuccessful: null | boolean;
-  user:
-    | null
-    | ChatSettingsSelectChannelBadge_SelectChannelBadgeUser
-    | ChatSettingsSelectChannelBadge_SelectChannelBadgeUser[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type ChatSettingsSelectChannelBadge_SelectChannelBadgeUser = {
-  id: ID;
-  self:
-    | null
-    | ChatSettingsSelectChannelBadge_SelectChannelBadgeUserSelf
-    | ChatSettingsSelectChannelBadge_SelectChannelBadgeUserSelf[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type ChatSettingsSelectChannelBadge_SelectChannelBadgeUserSelf = {
-  selectedBadge: null | Badge;
-  availableBadges: null | Badge;
+  user: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["23161357"]
+     */
+    id: ID;
+    self: null | {
+      selectedBadge: null | Badge;
+      availableBadges: null | Badge;
+      __typename: "UserSelfConnection";
+    };
+    __typename: "User";
+  };
   __typename: string;
 };
 
 /** ℹ️ Not real Twitch type name */
 export type ChatSettingsSelectGlobalBadge_SelectGlobalBadge = {
-  user:
-    | null
-    | ChatSettingsSelectGlobalBadge_SelectGlobalBadgeUser
-    | ChatSettingsSelectGlobalBadge_SelectGlobalBadgeUser[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type ChatSettingsSelectGlobalBadge_SelectGlobalBadgeUser = {
-  id: ID;
-  selectedBadge: null | Badge;
-  availableBadges: null | Badge;
+  user: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["23161357"]
+     */
+    id: ID;
+    selectedBadge: null | Badge;
+    availableBadges: null | Badge;
+    __typename: "User";
+  };
   __typename: string;
 };
 
@@ -11186,28 +11052,20 @@ export type ChatSettingsSelectGlobalBadge_SelectGlobalBadgeUser = {
 export type ChatSettingsSelectRoleBadge_SelectChannelAuthorityBadge = {
   /** ⚠️ Low confidence about: nullable */
   isSuccessful: null | boolean;
-  user:
-    | null
-    | ChatSettingsSelectRoleBadge_SelectChannelAuthorityBadgeUser
-    | ChatSettingsSelectRoleBadge_SelectChannelAuthorityBadgeUser[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type ChatSettingsSelectRoleBadge_SelectChannelAuthorityBadgeUser = {
-  id: ID;
-  self:
-    | null
-    | ChatSettingsSelectRoleBadge_SelectChannelAuthorityBadgeUserSelf
-    | ChatSettingsSelectRoleBadge_SelectChannelAuthorityBadgeUserSelf[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type ChatSettingsSelectRoleBadge_SelectChannelAuthorityBadgeUserSelf = {
-  selectedBadge: null | Badge;
-  availableBadges: null | Badge;
-  selectedChannelAuthorityBadge: null | Badge;
+  user: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["23161357"]
+     */
+    id: ID;
+    self: null | {
+      selectedBadge: null | Badge;
+      availableBadges: null | Badge;
+      selectedChannelAuthorityBadge: null | Badge;
+      __typename: "UserSelfConnection";
+    };
+    __typename: "User";
+  };
   __typename: string;
 };
 
@@ -11269,6 +11127,16 @@ export type ChatShareResubUseResubToken_UseChatNotificationToken = {
   isSuccess: null | boolean;
   __typename: string;
 };
+
+/** ℹ️ Not real Twitch type name */
+export type ChatUISettingsChatPauseSetting =
+  | "ALTKEY"
+  | "MOUSEOVER"
+  | "MOUSEOVER_ALTKEY"
+  | "SCROLL_ONLY";
+
+/** ℹ️ Not real Twitch type name */
+export type ChatUISettingsDeletedMessageDisplaySetting = "BRIEF" | "DETAILED" | "LEGACY";
 
 /** ℹ️ Not real Twitch type name */
 export type ChatUnbanUserFromChatRoom_UnbanUserFromChatRoom = {
@@ -11336,10 +11204,19 @@ export type ChatUnbanUserFromChatRoom_UnbanUserFromChatRoomError = {
 
 /** ℹ️ Not real Twitch type name */
 export type ChatUpdateChatColorV2_UpdateChatColorV2 = {
-  user:
-    | null
-    | ChatUpdateChatColorV2_UpdateChatColorV2User
-    | ChatUpdateChatColorV2_UpdateChatColorV2User[];
+  user: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["23161357"]
+     */
+    id: ID;
+    /**
+     * @pattern ^#[0-9a-fA-F]{6}$
+     * @example ["#00FF7F", "#1E90FF", "#DAA520", "#FF69B4", "#0000FF", "#5F9EA0", "#8A2BE2"]
+     */
+    chatColor: null | string;
+    __typename: "User";
+  };
   error:
     | null
     | ChatUpdateChatColorV2_UpdateChatColorV2Error
@@ -11354,24 +11231,20 @@ export type ChatUpdateChatColorV2_UpdateChatColorV2Error = {
 };
 
 /** ℹ️ Not real Twitch type name */
-export type ChatUpdateChatColorV2_UpdateChatColorV2User = {
-  id: ID;
-  /** ⚠️ Low confidence about: nullable */
-  chatColor: null | string;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
 export type ChatUpdateChatColor_UpdateChatColor = {
-  user: null | ChatUpdateChatColor_UpdateChatColorUser | ChatUpdateChatColor_UpdateChatColorUser[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type ChatUpdateChatColor_UpdateChatColorUser = {
-  id: ID;
-  /** ⚠️ Low confidence about: nullable */
-  chatColor: null | string;
+  user: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["23161357"]
+     */
+    id: ID;
+    /**
+     * @pattern ^#[0-9a-fA-F]{6}$
+     * @example ["#00FF7F", "#1E90FF", "#DAA520", "#FF69B4", "#0000FF", "#5F9EA0", "#8A2BE2"]
+     */
+    chatColor: null | string;
+    __typename: "User";
+  };
   __typename: string;
 };
 
@@ -11518,6 +11391,35 @@ export type CheckoutFormScreenManager_CheckoutFuturePriceSummaryPrice = {
 };
 
 /** ℹ️ Not real Twitch type name */
+export type CheckoutFormScreenManager_EligiblePaymentMethodAuthorizationAgreement = {
+  id: ID;
+  display:
+    | null
+    | CheckoutFormScreenManager_EligiblePaymentMethodAuthorizationAgreementDisplay
+    | CheckoutFormScreenManager_EligiblePaymentMethodAuthorizationAgreementDisplay[];
+  __typename: string;
+};
+
+/** ℹ️ Not real Twitch type name */
+export type CheckoutFormScreenManager_EligiblePaymentMethodAuthorizationAgreementDisplay = {
+  key: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  isConsentRequired: null | boolean;
+  fields:
+    | null
+    | CheckoutFormScreenManager_EligiblePaymentMethodAuthorizationAgreementDisplayFields
+    | CheckoutFormScreenManager_EligiblePaymentMethodAuthorizationAgreementDisplayFields[];
+  __typename: string;
+};
+
+/** ℹ️ Not real Twitch type name */
+export type CheckoutFormScreenManager_EligiblePaymentMethodAuthorizationAgreementDisplayFields = {
+  key: UnknownValue;
+  value: UnknownValue;
+  __typename: string;
+};
+
+/** ℹ️ Not real Twitch type name */
 export type CheckoutFormScreenManager_ProductPurchaseTaxRegion = {
   /** ⚠️ Low confidence about: nullable */
   countryCode: null | string;
@@ -11560,7 +11462,7 @@ export type CheckoutOfferFragment = OfferEligibilityFragment & {
           /** @example ["33d10886-ace9-466b-9060-e10013aa05a21887", "41679e35-3eaf-4acf-b861-e8941c99650f", "63967dc1-a829-453e-9425-53c0f68313723565"] */
           id: ID;
           /** @example ["EUR", "USD"] */
-          currency: string;
+          currency: PriceInfoCurrency;
           /**
            * @format int32
            * @example [2]
@@ -11577,10 +11479,24 @@ export type CheckoutOfferFragment = OfferEligibilityFragment & {
                  * @format uint32
                  */
                 total: null | number;
-                discount:
-                  | null
-                  | CheckoutOfferFragment_FixedPricingDiscount
-                  | CheckoutOfferFragment_FixedPricingDiscount[];
+                discount: null | {
+                  /**
+                   * @format int32
+                   * @example [1887, 3565, 942, 1780, 8920]
+                   */
+                  price: number;
+                  /**
+                   * @format int32
+                   * @example [0]
+                   */
+                  tax: number;
+                  /**
+                   * @format uint32
+                   * @example [1887, 3565, 942, 1780, 8920]
+                   */
+                  total: number;
+                  __typename: "DiscountBreakdown";
+                };
                 __typename: "FixedPricing";
               }
             | { __typename: "RangedPricing" };
@@ -11606,7 +11522,7 @@ export type CheckoutOfferFragment = OfferEligibilityFragment & {
        */
       discountPercent: number;
       /** @example ["DISCOUNT_TYPE_PERCENT"] */
-      discountType: string;
+      discountType: PromotionDisplayDiscountType;
       __typename: "PromotionDisplay";
     };
     eligibilityFilters: {
@@ -11626,7 +11542,7 @@ export type CheckoutOfferFragment = OfferEligibilityFragment & {
     __typename: "OfferTagBinding";
   }[];
   /** @example ["COMMUNITY", "SINGLE_RECIPIENT"] */
-  giftType: null | string;
+  giftType: null | OfferGiftType;
   quantity: {
     /**
      * @format int32
@@ -11656,18 +11572,6 @@ export type CheckoutOfferFragment_ChargeModelExternal = {
 /** ℹ️ Not real Twitch type name */
 export type CheckoutOfferFragment_ChargeModelExternalSelf = {
   checkoutSKU: UnknownValue;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type CheckoutOfferFragment_FixedPricingDiscount = {
-  price: UnknownValue;
-  tax: UnknownValue;
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format uint32
-   */
-  total: null | number;
   __typename: string;
 };
 
@@ -11775,6 +11679,38 @@ export type CheckoutPrice_ProductPurchaseTaxRegion = {
   __typename: string;
 };
 
+/** ℹ️ Not real Twitch type name */
+export type CheckoutV2InitiatePendingPurchaseOffer_InitiatePendingPurchaseOffer = {
+  error: UnknownValue;
+  pendingPurchase:
+    | null
+    | CheckoutV2InitiatePendingPurchaseOffer_InitiatePendingPurchaseOfferPendingPurchase
+    | CheckoutV2InitiatePendingPurchaseOffer_InitiatePendingPurchaseOfferPendingPurchase[];
+  __typename: string;
+};
+
+/** ℹ️ Not real Twitch type name */
+export type CheckoutV2InitiatePendingPurchaseOffer_InitiatePendingPurchaseOfferPendingPurchase = {
+  id: ID;
+  state: UnknownValue;
+  __typename: string;
+};
+
+/** ℹ️ Not real Twitch type name */
+export type CheckoutV2PendingPurchaseOrder_PendingPurchaseOrder = {
+  id: ID;
+  state: UnknownValue;
+  action: null | {
+    /**
+     * ⚠️ Low confidence about: nullable
+     * @format uri
+     */
+    url: null | string;
+    __typename: "RedirectAction";
+  };
+  __typename: string;
+};
+
 export type CheerDisplayConfig = {
   /** @example ["light", "dark"] */
   backgrounds: string[];
@@ -11792,7 +11728,7 @@ export type CheerDisplayConfig = {
     __typename: "CheermoteColorConfig";
   }[];
   /** @example ["SPONSORED", "DEFAULT", "CUSTOM", "CHARITY", "FIRST_PARTY", "THIRD_PARTY", "ANONYMOUS", "DISPLAY_ONLY"] */
-  order: string[];
+  order: CheermoteType[];
   /** @example ["1", "1.5", "2", "3", "4"] */
   scales: string[];
   types: {
@@ -11851,6 +11787,18 @@ export type CheermoteGroup = {
 };
 
 /** ℹ️ Not real Twitch type name */
+export type CheermoteType =
+  | "ANONYMOUS"
+  | "CHARITY"
+  | "CUSTOM"
+  | "DEFAULT"
+  | "DISPLAY_ONLY"
+  | "FIRST_PARTY"
+  | "SPONSORED"
+  | "THIRD_PARTY"
+  | "UNKNOWN";
+
+/** ℹ️ Not real Twitch type name */
 export type ChoiceBreakdown_UserLatestPollChoice = {
   id: ID;
   voters:
@@ -11894,8 +11842,16 @@ export type ClaimCommunityPoints_ClaimCommunityPointsClaim = {
   id: ID;
   multipliers:
     | null
-    | ClaimCommunityPoints_ClaimCommunityPointsClaimMultipliers
-    | ClaimCommunityPoints_ClaimCommunityPointsClaimMultipliers[];
+    | (null | {
+        /**
+         * @format float
+         * @example [0.2, 0.4, 1]
+         */
+        factor: number;
+        /** @example ["SUB_T1", "SUB_T2", "SUB_T3"] */
+        reasonCode: CommunityPointsMultiplierReasonCode;
+        __typename: "CommunityPointsMultiplier";
+      })[];
   /**
    * ⚠️ Low confidence about: nullable
    * @format uint32
@@ -11906,14 +11862,6 @@ export type ClaimCommunityPoints_ClaimCommunityPointsClaim = {
    * @format uint32
    */
   pointsEarnedTotal: null | number;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type ClaimCommunityPoints_ClaimCommunityPointsClaimMultipliers = {
-  factor: UnknownValue;
-  /** ⚠️ Low confidence about: nullable */
-  reasonCode: null | string;
   __typename: string;
 };
 
@@ -12004,7 +11952,7 @@ export type Clip = {
    */
   viewCount: number;
   /** @example ["EN", "ES", "RU"] */
-  language: string;
+  language: ClipLanguage;
   curator: null | {
     /**
      * @pattern ^[0-9]+$
@@ -12098,6 +12046,9 @@ export type Clip = {
   __typename: "Clip";
 };
 
+/** ℹ️ Not real Twitch type name */
+export type ClipAssetCreationState = "CREATED" | "FAILED";
+
 export type ClipAssetFragment = {
   /** @example ["ce4b4ef1-4e8d-4391-bff6-2bc4c5506a4d/LANDSCAPE", "c8e52370-1429-4023-9ce8-9d016939e3c2/LANDSCAPE"] */
   id: ID;
@@ -12112,7 +12063,7 @@ export type ClipAssetFragment = {
    */
   createdAt: string;
   /** @example ["CREATED", "FAILED"] */
-  creationState: string;
+  creationState: ClipAssetCreationState;
   curator: null | {
     /**
      * @pattern ^[0-9]+$
@@ -12157,7 +12108,7 @@ export type ClipAssetFragment = {
      */
     width: number;
     /** @example ["AVC", "HEVC"] */
-    videoCodec: string;
+    videoCodec: VideoCodec;
     /**
      * @format float
      * @example [0, 60, 30.03076934814453, 60.01000213623047, 30.005001068115234, 60.0133362969549]
@@ -12179,6 +12130,9 @@ export type ClipAssetFragment = {
   portraitMetadata: null | PortraitClipCropping;
   __typename: "ClipAsset";
 };
+
+/** ℹ️ Not real Twitch type name */
+export type ClipAssetType = "ENHANCED" | "RECOMPOSED" | "SOURCE" | "UNKNOWN";
 
 export type ClipCategoryAggregationBucketFragment = {
   totalClips: UnknownValue;
@@ -12298,22 +12252,6 @@ export type ClipCommentFragment_ClipCommentParentComment = {
   __typename: string;
 };
 
-/** ℹ️ Not real Twitch type name */
-export type ClipCommentReplies_ClipCommentReplies = {
-  edges: {
-    /** ⚠️ Low confidence about: nullable */
-    cursor: null | Cursor;
-    node: null | ClipCommentFragment;
-    __typename: string;
-  }[];
-  pageInfo: null | {
-    hasNextPage: boolean;
-    endCursor: null | Cursor;
-    __typename: "PageInfo";
-  };
-  __typename: string;
-};
-
 export type ClipCommentsExposure = {
   isCommentsEnabled: boolean;
   /**
@@ -12365,6 +12303,21 @@ export type ClipCreationCreateClipFromRawMedia_CreateClipFromRawMedia = {
 };
 
 /** ℹ️ Not real Twitch type name */
+export type ClipCreationPermissionEligibilityErrorCode =
+  | "CATEGORY_NOT_CLIPPABLE"
+  | "CHANNEL_BANNED"
+  | "CHANNEL_NOT_CLIPPABLE"
+  | "CHANNEL_NOT_LIVE"
+  | "DJ_CATEGORY_NOT_CLIPPABLE"
+  | "PARTICIPATING_DJ_CHANNEL_NOT_CLIPPABLE"
+  | "REQUEST_THROTTLED"
+  | "UNKNOWN"
+  | "USER_BANNED"
+  | "USER_RESTRICTED"
+  | "USER_TIMED_OUT"
+  | "VIDEO_SUBONLY";
+
+/** ℹ️ Not real Twitch type name */
 export type ClipEditEditClipMedia_EditClipMedia = {
   clip: null | ClipCreateAndEditFragment;
   error: UnknownValue;
@@ -12375,6 +12328,37 @@ export type ClipGuests = {
   guests: null | (null | GuestStarUser)[];
   __typename: "GuestStarParticipants";
 };
+
+/** ℹ️ Not real Twitch type name */
+export type ClipLanguage =
+  | "AR"
+  | "BG"
+  | "CS"
+  | "DA"
+  | "DE"
+  | "EL"
+  | "EN"
+  | "ES"
+  | "FI"
+  | "FR"
+  | "HI"
+  | "HU"
+  | "IT"
+  | "JA"
+  | "KO"
+  | "NL"
+  | "NO"
+  | "PL"
+  | "PT"
+  | "RO"
+  | "RU"
+  | "SK"
+  | "SV"
+  | "TH"
+  | "TR"
+  | "UK"
+  | "VI"
+  | "ZH";
 
 export type ClipLeaderboard = {
   /** @example ["clips-71092938", "clips-12826"] */
@@ -12529,13 +12513,13 @@ export type ClipModalFragment = {
      */
     id: ID;
     /** @example ["ARCHIVE", "HIGHLIGHT", "UPLOAD"] */
-    broadcastType: string;
+    broadcastType: BroadcastType;
     /** @example ["Twitch Recap: 2024 according to Twitch Chat!", "REDstreams — Cyberpunk 2077: Edgerunners 2 Update (2.5) | Overview"] */
     title: null | string;
     __typename: "Video";
   };
   /** @example ["EN", "ES", "RU"] */
-  language: string;
+  language: ClipLanguage;
   isPublished: boolean;
   __typename: "Clip";
 };
@@ -12561,45 +12545,107 @@ export type ClipReferrals_ClipReferralsReferrers = {
   total: null | number;
   referrals:
     | null
-    | ClipReferrals_ClipReferralsReferrersReferrals
-    | ClipReferrals_ClipReferralsReferrersReferrals[];
+    | (null | {
+        /**
+         * @format uint32
+         * @example [0, 1]
+         */
+        total: number;
+        /**
+         * @format date-time
+         * @example ["2026-09-28T21:00:00Z", "2026-09-29T21:00:00Z"]
+         */
+        timestamp: string;
+        __typename: "OnDemandReferral";
+      })[];
   __typename: string;
 };
 
-/** ℹ️ Not real Twitch type name */
-export type ClipReferrals_ClipReferralsReferrersReferrals = {
+export type ClipStageMetadata = {
   /**
-   * ⚠️ Low confidence about: nullable
-   * @format uint32
+   * @pattern ^[0-9]+$
+   * @example ["3942697259"]
    */
-  total: null | number;
-  timestamp: UnknownValue;
-  __typename: string;
+  id: ID;
+  /** @example ["xqc makes the wrong choice", "wow"] */
+  title: string;
+  /**
+   * @format uint32
+   * @example [957063, 957456, 899934, 944919, 773854]
+   */
+  viewCount: number;
+  broadcaster: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["23161357"]
+     */
+    id: ID;
+    /** @example ["lirik", "twitch", "cdprojektred", "forsen", "tickett_", "st1mgreeen", "lipton_18"] */
+    login: string;
+    /** @example ["Twitch", "CD PROJEKT RED", "LIRIK", "forsen", "ayuuexe", "xQc", "RSDragonwilds"] */
+    displayName: string;
+    /**
+     * @format uri
+     * @example ["https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-70x70.png", "https://static-cdn.jtvnw.net/jtv_user_pictures/3c3366d7-728a-4204-bfdd-7c823858e4d9-profile_image-70x70.png"]
+     * @gqlArg `width: Int [50, 70, 300, 28, 150]`
+     */
+    profileImageURL: string;
+    roles: null | {
+      isPartner: boolean;
+      __typename: "UserRoles";
+    };
+    __typename: "User";
+  };
+  curator: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["23161357"]
+     */
+    id: ID;
+    /** @example ["lirik", "twitch", "cdprojektred", "forsen", "tickett_", "st1mgreeen", "lipton_18"] */
+    login: string;
+    /** @example ["Twitch", "CD PROJEKT RED", "LIRIK", "forsen", "ayuuexe", "xQc", "RSDragonwilds"] */
+    displayName: string;
+    __typename: "User";
+  };
+  game: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["509672"]
+     */
+    id: ID;
+    /** @example ["IRL", "Cyberpunk 2077", "Just Chatting", "Special Events", "League of Legends", "You Know The Drill", "RuneScape: Dragonwilds"] */
+    name: string;
+    /** @example ["IRL", "Cyberpunk 2077", "Just Chatting", "Special Events", "Gwent: The Witcher Card Game", "Grand Theft Auto V", "DayZ"] */
+    displayName: string;
+    /** @example ["irl", "cyberpunk-2077", "just-chatting", "special-events", "grand-theft-auto-v", "overwatch-2", "counter-strike"] */
+    slug: string;
+    __typename: "Game";
+  };
+  __typename: "Clip";
 };
 
 export type ClipUserAggregationBucketFragment = {
   totalClips: UnknownValue;
-  user:
-    | null
-    | ClipUserAggregationBucketFragment_ClipUserAggregationBucketUser
-    | ClipUserAggregationBucketFragment_ClipUserAggregationBucketUser[];
+  user: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["23161357"]
+     */
+    id: ID;
+    /** @example ["lirik", "twitch", "cdprojektred", "forsen", "tickett_", "st1mgreeen", "lipton_18"] */
+    login: string;
+    /** @example ["Twitch", "CD PROJEKT RED", "LIRIK", "forsen", "ayuuexe", "xQc", "RSDragonwilds"] */
+    displayName: string;
+    /**
+     * @format uri
+     * @example ["https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-70x70.png", "https://static-cdn.jtvnw.net/jtv_user_pictures/3c3366d7-728a-4204-bfdd-7c823858e4d9-profile_image-70x70.png"]
+     * @gqlArg `width: Int [50, 70, 300, 28, 150]`
+     */
+    profileImageURL: string;
+    __typename: "User";
+  };
   __typename: "ClipUserAggregationBucket";
-};
-
-/** ℹ️ Not real Twitch type name */
-export type ClipUserAggregationBucketFragment_ClipUserAggregationBucketUser = {
-  id: ID;
-  /** ⚠️ Low confidence about: nullable */
-  login: null | string;
-  /** ⚠️ Low confidence about: nullable */
-  displayName: null | string;
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format uri
-   * @gqlArg `width: Int [70]`
-   */
-  profileImageURL: null | string;
-  __typename: string;
 };
 
 /** ℹ️ Not real Twitch type name */
@@ -12637,26 +12683,26 @@ export type ClipsDeleteClips_DeleteClipsClips = {
 };
 
 /** ℹ️ Not real Twitch type name */
+export type ClipsInputFilter = "ALL_TIME" | "LAST_DAY" | "LAST_MONTH" | "LAST_WEEK";
+
+/** ℹ️ Not real Twitch type name */
 export type ClipsManagerAddClipToCreatorProfile_AddClipToCreatorProfile = {
-  clip:
-    | null
-    | ClipsManagerAddClipToCreatorProfile_AddClipToCreatorProfileClip
-    | ClipsManagerAddClipToCreatorProfile_AddClipToCreatorProfileClip[];
+  clip: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["3942697259"]
+     */
+    id: ID;
+    /** @example ["EphemeralEncouragingBulgogiPraiseIt-98gnj_-unqEO0uvs", "CredulousBlightedSquirrelOSkomodo-GdY_nETXjEzIz_gm"] */
+    slug: string;
+    isCreatorProfile: boolean;
+    __typename: "Clip";
+  };
   creatorProfile:
     | null
     | ClipsManagerAddClipToCreatorProfile_AddClipToCreatorProfileCreatorProfile
     | ClipsManagerAddClipToCreatorProfile_AddClipToCreatorProfileCreatorProfile[];
   error: UnknownValue;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type ClipsManagerAddClipToCreatorProfile_AddClipToCreatorProfileClip = {
-  id: ID;
-  /** ⚠️ Low confidence about: nullable */
-  slug: null | string;
-  /** ⚠️ Low confidence about: nullable */
-  isCreatorProfile: null | boolean;
   __typename: string;
 };
 
@@ -12681,25 +12727,22 @@ export type ClipsManagerAddClipToCreatorProfile_AddClipToCreatorProfileCreatorPr
 
 /** ℹ️ Not real Twitch type name */
 export type ClipsManagerRemoveClipFromCreatorProfile_RemoveClipFromCreatorProfile = {
-  clip:
-    | null
-    | ClipsManagerRemoveClipFromCreatorProfile_RemoveClipFromCreatorProfileClip
-    | ClipsManagerRemoveClipFromCreatorProfile_RemoveClipFromCreatorProfileClip[];
+  clip: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["3942697259"]
+     */
+    id: ID;
+    /** @example ["EphemeralEncouragingBulgogiPraiseIt-98gnj_-unqEO0uvs", "CredulousBlightedSquirrelOSkomodo-GdY_nETXjEzIz_gm"] */
+    slug: string;
+    isCreatorProfile: boolean;
+    __typename: "Clip";
+  };
   creatorProfile:
     | null
     | ClipsManagerRemoveClipFromCreatorProfile_RemoveClipFromCreatorProfileCreatorProfile
     | ClipsManagerRemoveClipFromCreatorProfile_RemoveClipFromCreatorProfileCreatorProfile[];
   error: UnknownValue;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type ClipsManagerRemoveClipFromCreatorProfile_RemoveClipFromCreatorProfileClip = {
-  id: ID;
-  /** ⚠️ Low confidence about: nullable */
-  slug: null | string;
-  /** ⚠️ Low confidence about: nullable */
-  isCreatorProfile: null | boolean;
   __typename: string;
 };
 
@@ -12743,19 +12786,20 @@ export type ClipsTitleEditCommunityMoment_ClipCommunityMoment = {
 
 /** ℹ️ Not real Twitch type name */
 export type ClipsTitleEditUpdateClip_UpdateClip = {
-  clip: null | ClipsTitleEditUpdateClip_UpdateClipClip | ClipsTitleEditUpdateClip_UpdateClipClip[];
+  clip: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["3942697259"]
+     */
+    id: ID;
+    /** @example ["xqc makes the wrong choice", "wow"] */
+    title: string;
+    __typename: "Clip";
+  };
   error:
     | null
     | ClipsTitleEditUpdateClip_UpdateClipError
     | ClipsTitleEditUpdateClip_UpdateClipError[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type ClipsTitleEditUpdateClip_UpdateClipClip = {
-  id: ID;
-  /** ⚠️ Low confidence about: nullable */
-  title: null | string;
   __typename: string;
 };
 
@@ -12843,6 +12887,9 @@ export type CodeRedemptionValidationRedeemKey_RedeemClaimableKey = {
   __typename: string;
 };
 
+/** ℹ️ Not real Twitch type name */
+export type CollabSettingsDoNotDisturbSetting = "UNSET";
+
 export type CollaborationGroup = {
   id: ID;
   collaborators: null | Collaborator;
@@ -12926,12 +12973,6 @@ export type CollaborationJoinSessionWithToken_JoinSessionWithInviteTokenEligibil
   session: ValidGuestStarSessionData | ValidSharedChatSessionData | ValidCollaborationGroupData;
   validationErrors: UnknownValue;
   __typename: string;
-};
-
-export type CollaborationPromoPrivateCallout_SharedChatSession = {
-  id: ID;
-  status: UnknownValue;
-  __typename: "SharedChatSession";
 };
 
 export type CollaborationSessions = {
@@ -13137,7 +13178,7 @@ export type CollectionEditorFields = {
    */
   thumbnailURL: null | string;
   /** @example ["DEFAULT"] */
-  type: string;
+  type: CollectionType;
   __typename: "Collection";
 };
 
@@ -13159,21 +13200,6 @@ export type CollectionEditorReorderCollectionItem_ReorderCollectionItem = {
 };
 
 /** ℹ️ Not real Twitch type name */
-export type CollectionEditorSearchCreatorVideos_UserSearchVideos = {
-  edges: {
-    /** ⚠️ Low confidence about: nullable */
-    cursor: null | Cursor;
-    node: null | SearchCardVideo;
-    __typename: string;
-  }[];
-  pageInfo: null | {
-    hasNextPage: boolean;
-    __typename: "PageInfo";
-  };
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
 export type CollectionEditorUpdateCollection_UpdateCollection = {
   collection: null | (CollectionEditorFields & ItemConnection);
   __typename: string;
@@ -13186,7 +13212,7 @@ export type CollectionEditorVideo = {
    */
   id: ID;
   /** @example ["ARCHIVE", "HIGHLIGHT", "UPLOAD"] */
-  broadcastType: string;
+  broadcastType: BroadcastType;
   /** ⚠️ Low confidence about: nullable */
   isDeleted: null | boolean;
   /**
@@ -13241,7 +13267,7 @@ export type CollectionFields = {
   /** @example ["TwitchCon San Diego 2024", "TwitchCon Europe 2024", "Patch Notes", "Twitch Public Access", "Let's Chat", "Subathon Highlights", "yt vids"] */
   title: string;
   /** @example ["DEFAULT"] */
-  type: string;
+  type: CollectionType;
   /**
    * @format date-time
    * @example ["2025-01-16T22:23:44.892Z", "2025-01-16T22:22:55.39Z"]
@@ -13318,18 +13344,16 @@ export type CollectionManagerCreateCollection_CreateCollection = {
 
 /** ℹ️ Not real Twitch type name */
 export type CollectionManagerDeleteCollection_DeleteCollection = {
-  collection:
-    | null
-    | CollectionManagerDeleteCollection_DeleteCollectionCollection
-    | CollectionManagerDeleteCollection_DeleteCollectionCollection[];
+  collection: null | {
+    /** @example ["KVe_rYFMGxiPsA", "JJ-N82-m4BfH4A"] */
+    id: ID;
+    __typename: "Collection";
+  };
   __typename: string;
 };
 
 /** ℹ️ Not real Twitch type name */
-export type CollectionManagerDeleteCollection_DeleteCollectionCollection = {
-  id: ID;
-  __typename: string;
-};
+export type CollectionType = "DEFAULT";
 
 export type CollectionVideo = {
   /**
@@ -13515,10 +13539,16 @@ export type CommonHooksSearchStreams_SearchStreamEdgeNode = {
    * @gqlArg `height: Int [180]`
    */
   previewImageURL: null | string;
-  game:
-    | null
-    | CommonHooksSearchStreams_SearchStreamEdgeNodeGame
-    | CommonHooksSearchStreams_SearchStreamEdgeNodeGame[];
+  game: null | {
+    /** @example ["IRL", "Cyberpunk 2077", "Just Chatting", "Special Events", "League of Legends", "You Know The Drill", "RuneScape: Dragonwilds"] */
+    name: string;
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["509672"]
+     */
+    id: ID;
+    __typename: "Game";
+  };
   broadcaster:
     | null
     | CommonHooksSearchStreams_SearchStreamEdgeNodeBroadcaster
@@ -13552,14 +13582,6 @@ export type CommonHooksSearchStreams_SearchStreamEdgeNodeBroadcaster = {
 };
 
 /** ℹ️ Not real Twitch type name */
-export type CommonHooksSearchStreams_SearchStreamEdgeNodeGame = {
-  /** ⚠️ Low confidence about: nullable */
-  name: null | string;
-  id: ID;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
 export type CommonHooksSearchStreams_SearchStreams = {
   edges: {
     /** ⚠️ Low confidence about: nullable */
@@ -13569,86 +13591,6 @@ export type CommonHooksSearchStreams_SearchStreams = {
       | CommonHooksSearchStreams_SearchStreamEdgeNode
       | CommonHooksSearchStreams_SearchStreamEdgeNode[];
     __typename: "SearchStreamEdge";
-  }[];
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format uint32
-   */
-  totalCount: null | number;
-  pageInfo: null | {
-    hasNextPage: boolean;
-    hasPreviousPage: boolean;
-    __typename: "PageInfo";
-  };
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type CommonHooksSearchVideos_UserSearchVideos = {
-  edges: {
-    /** ⚠️ Low confidence about: nullable */
-    cursor: null | Cursor;
-    node: null | {
-      contentTags: null | TagFragment[];
-      /**
-       * @format date-time
-       * @example ["2024-12-10T16:45:35Z", "2026-10-27T15:45:17Z"]
-       */
-      createdAt: string;
-      owner: null | {
-        /**
-         * @pattern ^[0-9]+$
-         * @example ["23161357"]
-         */
-        id: ID;
-        /** @example ["Twitch", "CD PROJEKT RED", "LIRIK", "forsen", "ayuuexe", "xQc", "RSDragonwilds"] */
-        displayName: string;
-        /** @example ["lirik", "twitch", "cdprojektred", "forsen", "tickett_", "st1mgreeen", "lipton_18"] */
-        login: string;
-        roles: null | {
-          isPartner: boolean;
-          __typename: "UserRoles";
-        };
-        __typename: "User";
-      };
-      /**
-       * @pattern ^[0-9]+$
-       * @example ["2323270866"]
-       */
-      id: ID;
-      game: null | {
-        /**
-         * @pattern ^[0-9]+$
-         * @example ["509672"]
-         */
-        id: ID;
-        /** @example ["IRL", "Cyberpunk 2077", "Just Chatting", "Special Events", "League of Legends", "You Know The Drill", "RuneScape: Dragonwilds"] */
-        name: string;
-        /** @example ["IRL", "Cyberpunk 2077", "Just Chatting", "Special Events", "Gwent: The Witcher Card Game", "Grand Theft Auto V", "DayZ"] */
-        displayName: string;
-        __typename: "Game";
-      };
-      /**
-       * @format uint32
-       * @example [15389, 4359, 4621, 621, 4472]
-       */
-      lengthSeconds: number;
-      /**
-       * @example ["https://static-cdn.jtvnw.net/cf_vods/d1m7jfoe9zdc1j/82ef4729c6011d6072e2_twitch_43295848617_1733849129//thumb/thumb0-90x60.jpg", "https://static-cdn.jtvnw.net/cf_vods/d3fi1amfgojobc/7fbc776f6b7a4659c4e4_cdprojektred_319108158181_1793115910//thumb/thumb0-90x60.jpg"]
-       * @gqlArg `width: Int [320, 90, 640, 240, 400, 1280, 80, 160, 214]`
-       * @gqlArg `height: Int [180, 60, 360, 135, 225, 480, 720, 51, 45, 90]`
-       */
-      previewThumbnailURL: string;
-      /** @example ["Twitch Recap: 2024 according to Twitch Chat!", "REDstreams — Cyberpunk 2077: Edgerunners 2 Update (2.5) | Overview"] */
-      title: null | string;
-      /**
-       * @format uint32
-       * @example [0, 772963, 277364, 171376, 171377, 163669]
-       */
-      viewCount: number;
-      __typename: "Video";
-    };
-    __typename: string;
   }[];
   /**
    * ⚠️ Low confidence about: nullable
@@ -13688,12 +13630,15 @@ export type CommonHooksUnblockUser_UnblockUserTargetUser = {
   __typename: string;
 };
 
+/** ℹ️ Not real Twitch type name */
+export type CommunityCreatorHomeCardRelationshipToChannel = "UNKNOWN";
+
 export type CommunityGiftOfferFields = {
   offer: null | {
     /** @example ["amzn1.twitch.commerce.offer.98232214-5c3d-4da1-a9b3-c3333fb3483d", "amzn1.twitch.commerce.offer.3dedec40-a018-4790-0b9f-0f22ec580202"] */
     id: ID;
     /** @example ["WEB"] */
-    platform: string;
+    platform: OfferPlatform;
     eligibility: {
       isEligible: boolean;
       promotionInstance:
@@ -13709,7 +13654,7 @@ export type CommunityGiftOfferFields = {
             /** @example ["33d10886-ace9-466b-9060-e10013aa05a21887", "41679e35-3eaf-4acf-b861-e8941c99650f", "63967dc1-a829-453e-9425-53c0f68313723565"] */
             id: ID;
             /** @example ["EUR", "USD"] */
-            currency: string;
+            currency: PriceInfoCurrency;
             /**
              * @format int32
              * @example [2]
@@ -13726,10 +13671,24 @@ export type CommunityGiftOfferFields = {
                    * @format uint32
                    */
                   total: null | number;
-                  discount:
-                    | null
-                    | CommunityGiftOfferFields_FixedPricingDiscount
-                    | CommunityGiftOfferFields_FixedPricingDiscount[];
+                  discount: null | {
+                    /**
+                     * @format int32
+                     * @example [1887, 3565, 942, 1780, 8920]
+                     */
+                    price: number;
+                    /**
+                     * @format int32
+                     * @example [0]
+                     */
+                    tax: number;
+                    /**
+                     * @format uint32
+                     * @example [1887, 3565, 942, 1780, 8920]
+                     */
+                    total: number;
+                    __typename: "DiscountBreakdown";
+                  };
                   __typename: "FixedPricing";
                 }
               | {
@@ -13751,11 +13710,11 @@ export type CommunityGiftOfferFields = {
                */
               duration: number;
               /** @example ["MONTHS"] */
-              unit: string;
+              unit: ChargeModelPlanIntervalUnit;
               __typename: "ChargeModelPlanInterval";
             };
             /** @example ["AUTO_RENEW", "NO_RENEW"] */
-            renewalPolicy: string;
+            renewalPolicy: ChargeModelPlanRenewalPolicy;
             __typename: "ChargeModelPlan";
           };
           __typename: "InternalChargeModel";
@@ -13774,7 +13733,7 @@ export type CommunityGiftOfferFields = {
       /** @example ["multimonth_t2_3m_10_perc_off", "multimonth_t2_6m_15_perc_off", "multimonth_t1_3m_10_perc_off", "multimonth_t1_6m_15_perc_off", "multimonth_t3_6m_15_perc_off", "multimonth_t3_3m_10_perc_off"] */
       name: string;
       /** @example ["PROMOTION_TYPE_DISCOUNT"] */
-      promoType: string;
+      promoType: OfferPromotionPromoType;
       promotionalSKU: UnknownValue;
       /** @format date-time */
       endAt: null | string;
@@ -13785,7 +13744,7 @@ export type CommunityGiftOfferFields = {
          */
         discountPercent: number;
         /** @example ["DISCOUNT_TYPE_PERCENT"] */
-        discountType: string;
+        discountType: PromotionDisplayDiscountType;
         __typename: "PromotionDisplay";
       };
       eligibilityFilters: {
@@ -13842,18 +13801,6 @@ export type CommunityGiftOfferFields_ChargeModelExternalSelf = {
 };
 
 /** ℹ️ Not real Twitch type name */
-export type CommunityGiftOfferFields_FixedPricingDiscount = {
-  price: UnknownValue;
-  tax: UnknownValue;
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format uint32
-   */
-  total: null | number;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
 export type CommunityGiftOfferFields_OfferEligibilityPromotionInstance = {
   id: ID;
   __typename: string;
@@ -13865,32 +13812,29 @@ export type CommunityGiftOfferFields_OfferPromotions = {
   /** ⚠️ Low confidence about: nullable */
   name: null | string;
   promoType: UnknownValue;
-  promoDisplay:
-    | null
-    | CommunityGiftOfferFields_OfferPromotionsPromoDisplay
-    | CommunityGiftOfferFields_OfferPromotionsPromoDisplay[];
-  quantity:
-    | null
-    | CommunityGiftOfferFields_OfferPromotionsQuantity
-    | CommunityGiftOfferFields_OfferPromotionsQuantity[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type CommunityGiftOfferFields_OfferPromotionsPromoDisplay = {
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format float
-   */
-  discountPercent: null | number;
-  discountType: UnknownValue;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type CommunityGiftOfferFields_OfferPromotionsQuantity = {
-  min: UnknownValue;
-  max: UnknownValue;
+  promoDisplay: null | {
+    /**
+     * @format int32
+     * @example [10, 15]
+     */
+    discountPercent: number;
+    /** @example ["DISCOUNT_TYPE_PERCENT"] */
+    discountType: PromotionDisplayDiscountType;
+    __typename: "PromotionDisplay";
+  };
+  quantity: null | {
+    /**
+     * @format int32
+     * @example [1, 5]
+     */
+    min: number;
+    /**
+     * @format int32
+     * @example [1, 200, 100, 40]
+     */
+    max: number;
+    __typename: "Range";
+  };
   __typename: string;
 };
 
@@ -13961,11 +13905,11 @@ export type CommunityGoalItem = {
    */
   startedAt: null | string;
   /** @example ["UNSTARTED", "FULFILLED"] */
-  status: string;
+  status: CommunityPointsCommunityGoalStatus;
   /** @example ["Drink some water!", "BOOST_GOAL_421326609_2021-03-01T09-28-15Z"] */
   title: string;
   /** @example ["CREATOR", "BOOST"] */
-  type: string;
+  type: CommunityPointsCommunityGoalType;
   __typename: "CommunityPointsCommunityGoal";
 };
 
@@ -13979,6 +13923,17 @@ export type CommunityMomentsCreateMomentQuickAction_BroadcasterCommunityMomentDe
   cooldownExpiresAt: null | string;
   __typename: string;
 };
+
+/** ℹ️ Not real Twitch type name */
+export type CommunityPointsAutomaticRewardType =
+  | "CELEBRATION"
+  | "CHOSEN_MODIFIED_SUB_EMOTE_UNLOCK"
+  | "CHOSEN_SUB_EMOTE_UNLOCK"
+  | "RANDOM_SUB_EMOTE_UNLOCK"
+  | "SEND_ANIMATED_MESSAGE"
+  | "SEND_GIGANTIFIED_EMOTE"
+  | "SEND_HIGHLIGHTED_MESSAGE"
+  | "SINGLE_MESSAGE_BYPASS_SUB_MODE";
 
 export type CommunityPointsBalanceFragment = {
   channel: {
@@ -14001,7 +13956,7 @@ export type CommunityPointsBalanceFragment = {
         balance: number;
         activeMultipliers: {
           /** @example ["SUB_T1", "SUB_T2", "SUB_T3"] */
-          reasonCode: string;
+          reasonCode: CommunityPointsMultiplierReasonCode;
           /**
            * @format float
            * @example [0.2, 0.4, 1]
@@ -14019,7 +13974,19 @@ export type CommunityPointsBalanceFragment = {
   __typename: "User";
 };
 
-export type CommunityPointsCommunityGoalType = "BOOST" | "CREATOR";
+/** ℹ️ Not real Twitch type name */
+export type CommunityPointsCommunityGoalStatus =
+  | "ARCHIVED"
+  | "ENDED"
+  | "FULFILLED"
+  | "STARTED"
+  | "UNKNOWN"
+  | "UNSTARTED";
+
+export type CommunityPointsCommunityGoalType = "BOOST" | "CREATOR" | "UNKNOWN";
+
+/** ℹ️ Not real Twitch type name */
+export type CommunityPointsCustomRewardPricingType = "BITS" | "POINTS" | "POINTS_AND_BITS";
 
 export type CommunityPointsEmoteFragment = {
   /** @example ["1480140", "emotesv2_453537635a4748a2a826ad0d7b9769d2"] */
@@ -14028,6 +13995,17 @@ export type CommunityPointsEmoteFragment = {
   token: string;
   __typename: "CommunityPointsEmote";
 };
+
+/** ℹ️ Not real Twitch type name */
+export type CommunityPointsLastViewedContentByTypeAndIDContentType = "AUTOMATIC_REWARD";
+
+/** ℹ️ Not real Twitch type name */
+export type CommunityPointsLastViewedContentByTypeContentType =
+  | "AUTOMATIC_REWARD"
+  | "CUSTOM_REWARD";
+
+/** ℹ️ Not real Twitch type name */
+export type CommunityPointsMultiplierReasonCode = "SUB_T1" | "SUB_T2" | "SUB_T3";
 
 export type CommunityPointsUserFragment = {
   /**
@@ -14237,10 +14215,14 @@ export type CompleteVideoUpload_CompleteVideoUpload = {
     | null
     | CompleteVideoUpload_CompleteVideoUploadOwner
     | CompleteVideoUpload_CompleteVideoUploadOwner[];
-  channel:
-    | null
-    | CompleteVideoUpload_CompleteVideoUploadChannel
-    | CompleteVideoUpload_CompleteVideoUploadChannel[];
+  channel: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["26490481"]
+     */
+    id: ID;
+    __typename: "Channel";
+  };
   status: UnknownValue;
   /**
    * ⚠️ Low confidence about: nullable
@@ -14252,12 +14234,6 @@ export type CompleteVideoUpload_CompleteVideoUpload = {
    * @format date-time
    */
   lastUpdatedAt: null | string;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type CompleteVideoUpload_CompleteVideoUploadChannel = {
-  id: ID;
   __typename: string;
 };
 
@@ -14301,6 +14277,12 @@ export type ConnectAdIdentityInput = {
   targetDeviceID: ID;
 };
 
+/** ℹ️ Not real Twitch type name */
+export type ConnectionBanners = "DISCOVERY_PREFERENCE" | "MAY_CONTAIN_MATURE_CONTENT";
+
+/** ℹ️ Not real Twitch type name */
+export type ConsentPrivacyLawName = "CCPA" | "GDPR" | "QPL" | "ROW";
+
 export type ContentClassificationLabelFields = {
   /** @example ["MatureGame", "ProfanityVulgarity"] */
   id: ID;
@@ -14312,52 +14294,61 @@ export type ContentClassificationLabelFields = {
 export type ContentClassificationLabelPoliciesFields = {
   signPostProperties: {
     /** @example ["SIGN_POST_NOT_REQUIRED"] */
-    signPost: string;
+    signPost: ContentClassificationLabelPolicySignPostPropertiesSignPost;
     contentClassificationLabels: UnknownValue[];
     __typename: "ContentClassificationLabelPolicySignPostProperties";
   };
   contentGateProperties: {
     /** @example ["CONTENT_GATE_NOT_REQUIRED"] */
-    contentGate: string;
+    contentGate: ContentClassificationLabelPolicyContentGatePropertiesContentGate;
     __typename: "ContentClassificationLabelPolicyContentGateProperties";
   };
   __typename: "ContentClassificationLabelPolicyProperties";
 };
 
 /** ℹ️ Not real Twitch type name */
+export type ContentClassificationLabelPolicyContentGatePropertiesContentGate =
+  | "CONTENT_GATE_NOT_REQUIRED"
+  | "CONTENT_GATE_TYPE_AGE_AND_REGION"
+  | "CONTENT_GATE_TYPE_AGE_VERIFICATION_AND_REGION"
+  | "CONTENT_GATE_TYPE_GUARDIAN_LIMITED"
+  | "CONTENT_GATE_TYPE_REGION"
+  | "CONTENT_GATE_TYPE_USER_LIMITED";
+
+/** ℹ️ Not real Twitch type name */
+export type ContentClassificationLabelPolicySignPostPropertiesSignPost =
+  | "SIGN_POST_NOT_REQUIRED"
+  | "SIGN_POST_TYPE_MATURE";
+
+/** ℹ️ Not real Twitch type name */
 export type ContentClassificationLabelsMutation_SetContentClassificationLabels = {
   contentClassificationLabels:
     | null
-    | ContentClassificationLabelsMutation_SetContentClassificationLabelsContentClassificationLabels
-    | ContentClassificationLabelsMutation_SetContentClassificationLabelsContentClassificationLabels[];
+    | (null | {
+        /** @example ["MatureGame", "ProfanityVulgarity"] */
+        id: ID;
+        /** @example ["Mature-rated game"] */
+        localizedName: string;
+        /** ⚠️ Low confidence about: nullable */
+        description: null | string;
+        isEnabled: boolean;
+        /** ⚠️ Low confidence about: nullable */
+        isLocked: null | boolean;
+        /**
+         * ⚠️ Low confidence about: nullable
+         * @format date-time
+         */
+        lockedUntil: null | string;
+        /** ⚠️ Low confidence about: nullable */
+        isSelectable: null | boolean;
+        __typename: "ContentClassificationLabel";
+      })[];
   error:
     | null
     | ContentClassificationLabelsMutation_SetContentClassificationLabelsError
     | ContentClassificationLabelsMutation_SetContentClassificationLabelsError[];
   __typename: string;
 };
-
-/** ℹ️ Not real Twitch type name */
-export type ContentClassificationLabelsMutation_SetContentClassificationLabelsContentClassificationLabels =
-  {
-    id: ID;
-    /** ⚠️ Low confidence about: nullable */
-    localizedName: null | string;
-    /** ⚠️ Low confidence about: nullable */
-    description: null | string;
-    /** ⚠️ Low confidence about: nullable */
-    isEnabled: null | boolean;
-    /** ⚠️ Low confidence about: nullable */
-    isLocked: null | boolean;
-    /**
-     * ⚠️ Low confidence about: nullable
-     * @format date-time
-     */
-    lockedUntil: null | string;
-    /** ⚠️ Low confidence about: nullable */
-    isSelectable: null | boolean;
-    __typename: string;
-  };
 
 /** ℹ️ Not real Twitch type name */
 export type ContentClassificationLabelsMutation_SetContentClassificationLabelsError = {
@@ -14400,7 +14391,7 @@ export type ContentClipsManagerClip = {
   topLevelCommentCount: number;
   isCommentsEnabled: boolean;
   /** @example ["EN", "ES", "RU"] */
-  language: string;
+  language: ClipLanguage;
   assets: ClipAssetFragment[];
   curator: null | {
     /**
@@ -14555,7 +14546,7 @@ export type ContentClipsManagerClip = {
      */
     id: ID;
     /** @example ["ARCHIVE", "HIGHLIGHT", "UPLOAD"] */
-    broadcastType: string;
+    broadcastType: BroadcastType;
     /** @example ["Twitch Recap: 2024 according to Twitch Chat!", "REDstreams — Cyberpunk 2077: Edgerunners 2 Update (2.5) | Overview"] */
     title: null | string;
     __typename: "Video";
@@ -14627,6 +14618,9 @@ export type ContentDiscoveryPreferenceFragment_DiscoveryPreferencePreviewBlur = 
 };
 
 /** ℹ️ Not real Twitch type name */
+export type ContentKeyType = "CLIP";
+
+/** ℹ️ Not real Twitch type name */
 export type ContentMatchedExtensionActivation_ApplyExtensionActivations = {
   installedExtensions: null | ContentMatchedExtensionInstallationFields;
   __typename: string;
@@ -14643,9 +14637,9 @@ export type ContentMatchedExtensionInstallationFields = {
   id: ID;
   activationConfig: {
     /** @example ["PANEL", "VIDEO_OVERLAY", "COMPONENT"] */
-    anchor: string;
+    anchor: ExtensionActivationConfigAnchor;
     /** @example ["ACTIVE"] */
-    state: string;
+    state: ExtensionActivationConfigState;
     /** @example ["extension-panel-3", "extension-panel-1", "extension-overlay-1", "extension-component-1", "extension-panel-2"] */
     slot: string;
     __typename: "ExtensionActivationConfig";
@@ -14660,7 +14654,7 @@ export type ContentMatchedExtensionInstallationFields = {
     /** @example ["0.5.1", "3.2.17", "2.0.1", "5.2.2", "1.3.1", "1.1.2", "3.2.7"] */
     version: string;
     /** @example ["OPTIONAL", "NONE"] */
-    bitsSupportLevel: string;
+    bitsSupportLevel: ExtensionBitsSupportLevel;
     isBitsEnabled: boolean;
     views: null | {
       component: null | {
@@ -14705,21 +14699,18 @@ export type ContentMatchedExtensionInstallationFields = {
 /** ℹ️ Not real Twitch type name */
 export type ContentMatchedExtensionInstallationFields_ExtensionInstallationFeatureFlagsDynamicManagement =
   {
-    game:
-      | null
-      | ContentMatchedExtensionInstallationFields_ExtensionInstallationFeatureFlagsDynamicManagementGame
-      | ContentMatchedExtensionInstallationFields_ExtensionInstallationFeatureFlagsDynamicManagementGame[];
+    game: null | {
+      /**
+       * @pattern ^[0-9]+$
+       * @example ["509672"]
+       */
+      id: ID;
+      /** @example ["IRL", "Cyberpunk 2077", "Just Chatting", "Special Events", "Gwent: The Witcher Card Game", "Grand Theft Auto V", "DayZ"] */
+      displayName: string;
+      __typename: "Game";
+    };
     /** ⚠️ Low confidence about: nullable */
     isManaged: null | boolean;
-    __typename: string;
-  };
-
-/** ℹ️ Not real Twitch type name */
-export type ContentMatchedExtensionInstallationFields_ExtensionInstallationFeatureFlagsDynamicManagementGame =
-  {
-    id: ID;
-    /** ⚠️ Low confidence about: nullable */
-    displayName: null | string;
     __typename: string;
   };
 
@@ -14777,56 +14768,45 @@ export type ContentMomentsPage_ChannelCommunityMomentsEdgesNode = {
    * @format uint32
    */
   claimCount: null | number;
-  clip:
-    | null
-    | ContentMomentsPage_ChannelCommunityMomentsEdgesNodeClip
-    | ContentMomentsPage_ChannelCommunityMomentsEdgesNodeClip[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type ContentMomentsPage_ChannelCommunityMomentsEdgesNodeClip = {
-  id: ID;
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format date-time
-   */
-  createdAt: null | string;
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format uint32
-   */
-  durationSeconds: null | number;
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format uri
-   * @gqlArg `width: Int [260]`
-   * @gqlArg `height: Int [147]`
-   */
-  thumbnailURL: null | string;
-  /** ⚠️ Low confidence about: nullable */
-  title: null | string;
-  /** ⚠️ Low confidence about: nullable */
-  slug: null | string;
-  /** ⚠️ Low confidence about: nullable */
-  isPublished: null | boolean;
+  clip: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["3942697259"]
+     */
+    id: ID;
+    /**
+     * @format date-time
+     * @example ["2020-12-09T19:18:10Z", "2021-04-04T21:34:33Z"]
+     */
+    createdAt: string;
+    /**
+     * @format uint32
+     * @example [44, 26, 25, 42, 30, 59, 36, 41, 60, 29]
+     */
+    durationSeconds: number;
+    /**
+     * @example ["", "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/ce4b4ef1-4e8d-4391-bff6-2bc4c5506a4d/landscape/thumb/thumb-0000000000-1920x1080.jpg", "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/b0181c83-be87-4dab-ad46-15dde4d81647/landscape/thumb/thumb-0000000000-1920x1080.jpg"]
+     * @gqlArg `width: Int [480, 86, 147, 260]`
+     * @gqlArg `height: Int [272, 45, 260, 147]`
+     */
+    thumbnailURL: string;
+    /** @example ["xqc makes the wrong choice", "wow"] */
+    title: string;
+    /** @example ["EphemeralEncouragingBulgogiPraiseIt-98gnj_-unqEO0uvs", "CredulousBlightedSquirrelOSkomodo-GdY_nETXjEzIz_gm"] */
+    slug: string;
+    isPublished: boolean;
+    __typename: "Clip";
+  };
   __typename: string;
 };
 
 /** ℹ️ Not real Twitch type name */
 export type ContentPolicyPropertiesMutation_SetContentPolicyProperties = {
-  contentPolicyProperties:
-    | null
-    | ContentPolicyPropertiesMutation_SetContentPolicyPropertiesContentPolicyProperties
-    | ContentPolicyPropertiesMutation_SetContentPolicyPropertiesContentPolicyProperties[];
+  contentPolicyProperties: null | {
+    hasBrandedContent: boolean;
+    __typename: "ContentPolicyProperties";
+  };
   error: UnknownValue;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type ContentPolicyPropertiesMutation_SetContentPolicyPropertiesContentPolicyProperties = {
-  /** ⚠️ Low confidence about: nullable */
-  hasBrandedContent: null | boolean;
   __typename: string;
 };
 
@@ -14858,7 +14838,7 @@ export type ContentPolicyPropertiesVideo = {
    */
   id: ID;
   /** @example ["ARCHIVE", "HIGHLIGHT", "UPLOAD"] */
-  broadcastType: string;
+  broadcastType: BroadcastType;
   contentPolicyProperties: {
     hasBrandedContent: boolean;
     __typename: "ContentPolicyProperties";
@@ -15018,7 +14998,7 @@ export type CoreChannelFragment = CoreUserFragment & {
       id: ID;
       isAuthorized: boolean;
       /** @example ["UNKNOWN"] */
-      restrictionType: null | string;
+      restrictionType: null | ChannelSelfEdgeRestrictionType;
       __typename: "ChannelSelfEdge";
     };
     trailer: {
@@ -15075,7 +15055,7 @@ export type CoreChannelWithHomePrefsFragment = CoreUserFragment & {
       id: ID;
       isAuthorized: boolean;
       /** @example ["UNKNOWN"] */
-      restrictionType: null | string;
+      restrictionType: null | ChannelSelfEdgeRestrictionType;
       __typename: "ChannelSelfEdge";
     };
     trailer: {
@@ -15103,7 +15083,7 @@ export type CoreChannelWithHomePrefsFragment = CoreUserFragment & {
     home: {
       preferences: {
         /** @example ["PRESET_2", "PRESET_1"] */
-        heroPreset: string;
+        heroPreset: ChannelHomePreferencesHeroPreset;
         __typename: "ChannelHomePreferences";
       };
       __typename: "ChannelHome";
@@ -15196,28 +15176,24 @@ export type CoreUserFragment = {
 
 /** ℹ️ Not real Twitch type name */
 export type CoreUtilsSetLanguagePreference_SetPreferredLanguageTag = {
-  user:
-    | null
-    | CoreUtilsSetLanguagePreference_SetPreferredLanguageTagUser
-    | CoreUtilsSetLanguagePreference_SetPreferredLanguageTagUser[];
+  user: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["23161357"]
+     */
+    id: ID;
+    settings: {
+      /** @example ["EN"] */
+      preferredLanguageTag: UserSettingsPreferredLanguageTag;
+      __typename: "UserSettings";
+    };
+    __typename: "User";
+  };
   __typename: string;
 };
 
 /** ℹ️ Not real Twitch type name */
-export type CoreUtilsSetLanguagePreference_SetPreferredLanguageTagUser = {
-  id: ID;
-  settings:
-    | null
-    | CoreUtilsSetLanguagePreference_SetPreferredLanguageTagUserSettings
-    | CoreUtilsSetLanguagePreference_SetPreferredLanguageTagUserSettings[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type CoreUtilsSetLanguagePreference_SetPreferredLanguageTagUserSettings = {
-  preferredLanguageTag: UnknownValue;
-  __typename: string;
-};
+export type CostreamDetailsRole = "COSTREAMER" | "NONE" | "ORGANIZER";
 
 export type CostreamingAllowlistUser = {
   /**
@@ -15246,7 +15222,7 @@ export type CostreamingDiscoveryDetails = {
   costreamersCount: number;
   organizer: null | CostreamingUserWithViewcount;
   /** @example ["ORGANIZER", "COSTREAMER"] */
-  role: string;
+  role: CostreamDetailsRole;
   topCostreamers: CostreamingUserWithViewcount[];
   /**
    * @format uint32
@@ -15644,10 +15620,14 @@ export type CreateDataAccessRequest_CreateDataAccessRequest = {
 export type CreateDataAccessRequest_CreateDataAccessRequestAccessRequest = {
   /** ⚠️ Low confidence about: nullable */
   accessRequestID: null | ID;
-  user:
-    | null
-    | CreateDataAccessRequest_CreateDataAccessRequestAccessRequestUser
-    | CreateDataAccessRequest_CreateDataAccessRequestAccessRequestUser[];
+  user: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["23161357"]
+     */
+    id: ID;
+    __typename: "User";
+  };
   /**
    * ⚠️ Low confidence about: nullable
    * @format date-time
@@ -15678,12 +15658,6 @@ export type CreateDataAccessRequest_CreateDataAccessRequestAccessRequest = {
   /** ⚠️ Low confidence about: nullable */
   isDelivered: null | boolean;
   dataCategories: UnknownValue;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type CreateDataAccessRequest_CreateDataAccessRequestAccessRequestUser = {
-  id: ID;
   __typename: string;
 };
 
@@ -15833,16 +15807,10 @@ export type CreateOauthApp_CreateOauthAppError = {
 
 /** ℹ️ Not real Twitch type name */
 export type CreateOptInCampaignInstance_CreateOptInSponsorshipInstance = {
-  campaignInstance:
-    | null
-    | CreateOptInCampaignInstance_CreateOptInSponsorshipInstanceCampaignInstance
-    | CreateOptInCampaignInstance_CreateOptInSponsorshipInstanceCampaignInstance[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type CreateOptInCampaignInstance_CreateOptInSponsorshipInstanceCampaignInstance = {
-  id: ID;
+  campaignInstance: null | {
+    id: ID;
+    __typename: "CampaignInstance";
+  };
   __typename: string;
 };
 
@@ -15873,7 +15841,7 @@ export type CreatePanelPayload = {
          */
         id: ID;
         /** @example ["DEFAULT"] */
-        type: string;
+        type: DefaultPanelType;
         __typename: "DefaultPanel";
         /** @example ["JINNYTTY SHOULDER RIDER"] */
         title: null | string;
@@ -15898,7 +15866,7 @@ export type CreatePanelPayload = {
          */
         id: ID;
         /** @example ["DEFAULT"] */
-        type: string;
+        type: DefaultPanelType;
         __typename: "ExtensionPanel";
         /** @example ["extension-panel-1", "extension-panel-2"] */
         slotID: ID;
@@ -16019,10 +15987,10 @@ export type CreatePredictionEvent_CreatePredictionEventError = {
 
 /** ℹ️ Not real Twitch type name */
 export type CreateQuestCampaign_CreateQuestCampaign = {
-  questCampaign:
-    | null
-    | CreateQuestCampaign_CreateQuestCampaignQuestCampaign
-    | CreateQuestCampaign_CreateQuestCampaignQuestCampaign[];
+  questCampaign: null | {
+    id: ID;
+    __typename: "QuestCampaign";
+  };
   error:
     | null
     | CreateQuestCampaign_CreateQuestCampaignError
@@ -16035,12 +16003,6 @@ export type CreateQuestCampaign_CreateQuestCampaignError = {
   code: UnknownValue;
   /** ⚠️ Low confidence about: nullable */
   message: null | string;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type CreateQuestCampaign_CreateQuestCampaignQuestCampaign = {
-  id: ID;
   __typename: string;
 };
 
@@ -16402,27 +16364,20 @@ export type CreateStreamScheduleSegment_CreateScheduleSegmentErrorConflictingSeg
 
 /** ℹ️ Not real Twitch type name */
 export type CreateStreamSchedule_CreateSchedule = {
-  channel:
-    | null
-    | CreateStreamSchedule_CreateScheduleChannel
-    | CreateStreamSchedule_CreateScheduleChannel[];
+  channel: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["26490481"]
+     */
+    id: ID;
+    schedule: null | {
+      /** @example ["schedule-12826", "schedule-23161357"] */
+      id: ID;
+      __typename: "Schedule";
+    };
+    __typename: "Channel";
+  };
   error: UnknownValue;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type CreateStreamSchedule_CreateScheduleChannel = {
-  id: ID;
-  schedule:
-    | null
-    | CreateStreamSchedule_CreateScheduleChannelSchedule
-    | CreateStreamSchedule_CreateScheduleChannelSchedule[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type CreateStreamSchedule_CreateScheduleChannelSchedule = {
-  id: ID;
   __typename: string;
 };
 
@@ -16462,32 +16417,20 @@ export type CreateTargetingBriefUpload_CreateSponsorshipAssetUploadError = {
 
 /** ℹ️ Not real Twitch type name */
 export type CreateUnbanRequest_CreateUnbanRequest = {
-  unbanRequest:
-    | null
-    | CreateUnbanRequest_CreateUnbanRequestUnbanRequest
-    | CreateUnbanRequest_CreateUnbanRequestUnbanRequest[];
-  error:
-    | null
-    | CreateUnbanRequest_CreateUnbanRequestError
-    | CreateUnbanRequest_CreateUnbanRequestError[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type CreateUnbanRequest_CreateUnbanRequestError = {
-  code: UnknownValue;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type CreateUnbanRequest_CreateUnbanRequestUnbanRequest = {
-  id: ID;
-  status: UnknownValue;
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format date-time
-   */
-  createdAt: null | string;
+  unbanRequest: null | {
+    id: ID;
+    status: UnknownValue;
+    /**
+     * ⚠️ Low confidence about: nullable
+     * @format date-time
+     */
+    createdAt: null | string;
+    __typename: "UnbanRequest";
+  };
+  error: null | {
+    code: UnknownValue;
+    __typename: "UnbanRequestError";
+  };
   __typename: string;
 };
 
@@ -16545,10 +16488,14 @@ export type CreateVideoUpload_CreateVideoUpload = {
     | null
     | CreateVideoUpload_CreateVideoUploadOwner
     | CreateVideoUpload_CreateVideoUploadOwner[];
-  channel:
-    | null
-    | CreateVideoUpload_CreateVideoUploadChannel
-    | CreateVideoUpload_CreateVideoUploadChannel[];
+  channel: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["26490481"]
+     */
+    id: ID;
+    __typename: "Channel";
+  };
   status: UnknownValue;
   /**
    * ⚠️ Low confidence about: nullable
@@ -16560,12 +16507,6 @@ export type CreateVideoUpload_CreateVideoUpload = {
    * @format date-time
    */
   lastUpdatedAt: null | string;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type CreateVideoUpload_CreateVideoUploadChannel = {
-  id: ID;
   __typename: string;
 };
 
@@ -16827,10 +16768,37 @@ export type CreatorCoachFeedbackHistory_CreatorFeedbackHistoryConnectionEdgesNod
    * @format date-time
    */
   expiresAt: null | string;
-  video:
-    | null
-    | CreatorCoachFeedbackHistory_CreatorFeedbackHistoryConnectionEdgesNodeVideo
-    | CreatorCoachFeedbackHistory_CreatorFeedbackHistoryConnectionEdgesNodeVideo[];
+  video: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["2323270866"]
+     */
+    id: ID;
+    /** @example ["Twitch Recap: 2024 according to Twitch Chat!", "REDstreams — Cyberpunk 2077: Edgerunners 2 Update (2.5) | Overview"] */
+    title: null | string;
+    /**
+     * @format date-time
+     * @example ["2024-12-10T16:45:35Z", "2026-10-27T15:45:17Z"]
+     */
+    createdAt: string;
+    /**
+     * @format uint32
+     * @example [15389, 4359, 4621, 621, 4472]
+     */
+    lengthSeconds: number;
+    /**
+     * @example ["https://static-cdn.jtvnw.net/cf_vods/d1m7jfoe9zdc1j/82ef4729c6011d6072e2_twitch_43295848617_1733849129//thumb/thumb0-90x60.jpg", "https://static-cdn.jtvnw.net/cf_vods/d3fi1amfgojobc/7fbc776f6b7a4659c4e4_cdprojektred_319108158181_1793115910//thumb/thumb0-90x60.jpg"]
+     * @gqlArg `width: Int [320, 90, 640, 240, 400, 1280, 80, 160, 214]`
+     * @gqlArg `height: Int [180, 60, 360, 135, 225, 480, 720, 51, 45, 90]`
+     */
+    previewThumbnailURL: string;
+    /**
+     * @format uri
+     * @example ["https://d2nvs31859zcd8.cloudfront.net/f6fb26a4fc319171fbd4_12826_1816688726_67c67a23-a2fb-4221-9df3-604bd9d487dc/storyboards/1816688726-info.json", "https://d1m7jfoe9zdc1j.cloudfront.net/82ef4729c6011d6072e2_twitch_43295848617_1733849129/storyboards/2323270866-info.json"]
+     */
+    seekPreviewsURL: string;
+    __typename: "Video";
+  };
   highlights:
     | null
     | CreatorCoachFeedbackHistory_CreatorFeedbackHistoryConnectionEdgesNodeHighlights
@@ -16939,36 +16907,6 @@ export type CreatorCoachFeedbackHistory_CreatorFeedbackHistoryConnectionEdgesNod
   };
 
 /** ℹ️ Not real Twitch type name */
-export type CreatorCoachFeedbackHistory_CreatorFeedbackHistoryConnectionEdgesNodeVideo = {
-  id: ID;
-  /** ⚠️ Low confidence about: nullable */
-  title: null | string;
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format date-time
-   */
-  createdAt: null | string;
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format uint32
-   */
-  lengthSeconds: null | number;
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format uri
-   * @gqlArg `width: Int [320]`
-   * @gqlArg `height: Int [180]`
-   */
-  previewThumbnailURL: null | string;
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format uri
-   */
-  seekPreviewsURL: null | string;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
 export type CreatorCoachFeedbackHistory_CreatorFeedbackHistoryConnectionInFlightFeedback = {
   /**
    * ⚠️ Low confidence about: nullable
@@ -16977,6 +16915,9 @@ export type CreatorCoachFeedbackHistory_CreatorFeedbackHistoryConnectionInFlight
   broadcastStartedAt: null | string;
   __typename: string;
 };
+
+/** ℹ️ Not real Twitch type name */
+export type CreatorCoachSettingsEligibility = "INELIGIBLE";
 
 /** ℹ️ Not real Twitch type name */
 export type CreatorCollaborationChannelData_ChannelGuestStarSessionCall = {
@@ -17039,10 +16980,15 @@ export type CreatorCollaborationChannelData_UserRelationship = {
    * @format date-time
    */
   followedByAt: null | string;
-  subscriptionBenefit:
-    | null
-    | CreatorCollaborationChannelData_UserRelationshipSubscriptionBenefit
-    | CreatorCollaborationChannelData_UserRelationshipSubscriptionBenefit[];
+  subscriptionBenefit: null | {
+    /** @example ["3L7hSWPX941bMubywA98e4uYNdT", "3KyHdOj3R8PmXqz66jFOU07Ia7D"] */
+    id: ID;
+    gift: {
+      isGift: boolean;
+      __typename: "SubscriptionGift";
+    };
+    __typename: "SubscriptionBenefit";
+  };
   subscriptionTenure: null | {
     /**
      * @format uint32
@@ -17105,23 +17051,6 @@ export type CreatorCollaborationChannelData_UserRelationshipRaidHistoryTarget = 
   __typename: string;
 };
 
-/** ℹ️ Not real Twitch type name */
-export type CreatorCollaborationChannelData_UserRelationshipSubscriptionBenefit = {
-  id: ID;
-  gift:
-    | null
-    | CreatorCollaborationChannelData_UserRelationshipSubscriptionBenefitGift
-    | CreatorCollaborationChannelData_UserRelationshipSubscriptionBenefitGift[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type CreatorCollaborationChannelData_UserRelationshipSubscriptionBenefitGift = {
-  /** ⚠️ Low confidence about: nullable */
-  isGift: null | boolean;
-  __typename: string;
-};
-
 export type CreatorHomeCardActionFragment = {
   event:
     | null
@@ -17140,7 +17069,7 @@ export type CreatorHomeCardActionFragment = {
       }
     | {
         /** @example ["DASHBOARD"] */
-        pageType: string;
+        pageType: CreatorHomeCardPageNavigateEventPageType;
         /** @example ["settings/moderation/automod", "settings/stream?open_modal=viewer_exports#clips-settings", "settings/channel/brand", "extensions"] */
         subpath: string;
         channel: null | {
@@ -17175,7 +17104,7 @@ export type CreatorHomeCardActionFragment = {
                * @example ["TEXT_AREA"]
                * @aliasFor value
                */
-              fieldValue: string;
+              fieldValue: CreatorHomeTokenizedTextFieldType;
               __typename: "CreatorHomeCardFieldSubmitValue";
             };
         __typename: "CreatorHomeCardSubmitEvent";
@@ -17184,23 +17113,35 @@ export type CreatorHomeCardActionFragment = {
     | null
     | {
         /** @example ["PRIMARY_BUTTON", "FOOTER"] */
-        fieldType: string;
+        fieldType: CreatorHomeTokenizedTextFieldType;
         __typename: "CreatorHomeCardFieldClickTrigger";
       }
     | {
         /** @example ["CONTENT", "DISMISSED_CARD_CONTENT"] */
-        fieldType: string;
+        fieldType: CreatorHomeTokenizedTextFieldType;
         /** @example ["cta"] */
         ctaKey: string;
         __typename: "CreatorHomeCardFieldCTATrigger";
       }
     | {
         /** @example ["CTA"] */
-        decoratorTriggerType: string;
+        decoratorTriggerType: CreatorHomeCardDecoratorClickTriggerDecoratorTriggerType;
         __typename: "CreatorHomeCardDecoratorClickTrigger";
       };
   __typename: "CreatorHomeCardAction";
 };
+
+/** ℹ️ Not real Twitch type name */
+export type CreatorHomeCardColorTheme = "BLUE" | "DEFAULT";
+
+/** ℹ️ Not real Twitch type name */
+export type CreatorHomeCardDecoratorClickTriggerDecoratorTriggerType =
+  | "ANY"
+  | "BACKGROUND_IMAGE"
+  | "CTA"
+  | "ICON"
+  | "IMAGE"
+  | "VOD";
 
 export type CreatorHomeCardDecoratorsFragment = {
   /** @example ["", "https://static-cdn.jtvnw.net/dartapi-assets/Creator Home - Drops.png", "https://static-cdn.jtvnw.net/twitch-creator-home-prod/subscriptions-insight.svg"] */
@@ -17219,7 +17160,7 @@ export type CreatorHomeCardDecoratorsFragment = {
     /** @example ["Target", "FollowHollow", "DateStart", "GlyphLength", "GlyphViews"] */
     name: string;
     /** @example ["RED", "DEFAULT"] */
-    colorTheme: string;
+    colorTheme: CreatorHomeIconDecoratorColorTheme;
     __typename: "CreatorHomeIconDecorator";
   };
   __typename: "CreatorHomeCardDecorators";
@@ -17233,11 +17174,40 @@ export type CreatorHomeCardDecoratorsFragment_CreatorHomeCardDecoratorsVod = {
   __typename: string;
 };
 
+/** ℹ️ Not real Twitch type name */
+export type CreatorHomeCardDismissalMetadataType = "CARD_ID" | "CATEGORY_NAME" | "CHANNEL_ID";
+
+/** ℹ️ Not real Twitch type name */
+export type CreatorHomeCardPageNavigateEventPageType = "DASHBOARD";
+
+/** ℹ️ Not real Twitch type name */
+export type CreatorHomeCardTemplate =
+  | "ANALYTICS_IMPACT"
+  | "ANALYTICS_IMPACT_EMOTE"
+  | "ANALYTICS_SUMMARY_NUMBER_CHANGE"
+  | "ANNOUNCEMENT_IMAGE_LINK_OUT"
+  | "COMMUNITY_IMAGE"
+  | "COMMUNITY_PAIR_IMAGE_AND_TEXT"
+  | "COMMUNITY_TIP"
+  | "EXTERNAL_VIDEO_AND_DESCRIPTION_16_BY_9"
+  | "FEATURE_IMAGE_LINK_OUT"
+  | "FEATURE_LINK_OUT_IMAGE_BELOW_TEXT"
+  | "FEATURE_WITH_CTA"
+  | "FEATURE_WITH_TEXT_AREA"
+  | "HERO_DEFAULT"
+  | "IMAGE_AND_DESCRIPTION"
+  | "INSIGHTS_IMAGE"
+  | "INSIGHTS_TIP"
+  | "NONE"
+  | "TARGET_PROGRESS"
+  | "TIP_CARD"
+  | "VOD_AND_DESCRIPTION_16_BY_9";
+
 export type CreatorHomeCardsBaseFragment = {
   /** @example ["HERO_GENERIC_GET_BACK_TO_STREAMING_WITH_SCHEDULE", "spotlight_halloween_drops_2026_0d40363e-6245-4b73-a339-295a5976124a"] */
   identifier: string;
   /** @example ["NONE", "IMAGE_AND_DESCRIPTION", "TARGET_PROGRESS", "TIP_CARD"] */
-  template: string;
+  template: CreatorHomeCardTemplate;
   decorators: null | CreatorHomeCardDecoratorsFragment;
   actions: null | CreatorHomeCardActionFragment[];
   tokenizedTextSections: null | CreatorHomeTokenizedTextFragment[];
@@ -17249,7 +17219,7 @@ export type CreatorHomeCardsBaseFragment = {
     /** @example ["spotlight_halloween_drops_2026_0d40363e-6245-4b73-a339-295a5976124a"] */
     identifier: string;
     /** @example ["CARD_ID"] */
-    type: string;
+    type: CreatorHomeCardDismissalMetadataType;
     featureState: null | string;
     __typename: "CreatorHomeCardDismissalMetadata";
   };
@@ -17258,7 +17228,7 @@ export type CreatorHomeCardsBaseFragment = {
     __typename: "CreatorHomeTestPageMetadata";
   };
   /** @example ["DEFAULT", "BLUE"] */
-  colorTheme: string;
+  colorTheme: CreatorHomeCardColorTheme;
   customContent:
     | null
     | (CreatorHomeCustomContentFragment & {
@@ -17277,7 +17247,7 @@ export type CreatorHomeCardsBaseFragment = {
       });
   trackingMetadata: {
     /** @example ["NONE", "MARKETING"] */
-    itemRole: string;
+    itemRole: CreatorHomeTrackingMetadataItemRole;
     variantName: null | string;
     __typename: "CreatorHomeTrackingMetadata";
   };
@@ -17321,7 +17291,7 @@ export type CreatorHomeCustomContentFragment =
        */
       url: string;
       /** @example ["TEMPLATE_DEFAULT"] */
-      size: string;
+      size: CreatorHomeCustomContentImageSize;
       backgroundColor: null | string;
       __typename: "CreatorHomeCustomContentImage";
     }
@@ -17362,13 +17332,13 @@ export type CreatorHomeCustomContentFragment =
     }
   | {
       /** @example ["PRIMARY_BUTTON"] */
-      submitField: string;
+      submitField: CreatorHomeTokenizedTextFieldType;
       input: null | {
         /** @example ["TEXT_AREA"] */
-        hintTextField: string;
+        hintTextField: CreatorHomeTokenizedTextFieldType;
         initialValue: null;
         /** @example ["DEFAULT"] */
-        state: string;
+        state: CreatorHomeCustomContentInputFieldTextAreaState;
         /** @example ["MULTI_LINE"] */
         style: string;
         __typename: "CreatorHomeCustomContentInputFieldTextArea";
@@ -17378,29 +17348,26 @@ export type CreatorHomeCustomContentFragment =
   | {
       links:
         | null
-        | CreatorHomeCustomContentFragment_CreatorHomeCustomContentSocialMediaLinks
-        | CreatorHomeCustomContentFragment_CreatorHomeCustomContentSocialMediaLinks[];
+        | (null | {
+            /**
+             * @format uuid
+             * @example ["158c5f04-b28c-4fb8-882c-ef3d87e3b8ac"]
+             */
+            id: ID;
+            /** @example ["twitter", "instagram", "tiktok", "youtube", "discord", "reddit", "YouTube"] */
+            name: string;
+            /** @example ["https://www.tiktok.com/@staryuukiii ", "https://twitter.com/twitch", "https://www.instagram.com/twitch/"] */
+            url: string;
+            /** @example ["Twitter", "Instagram", "TikTok", "YouTube", "Discord", "reddit", "youtube"] */
+            title: string;
+            __typename: "SocialMedia";
+          })[];
       __typename: "CreatorHomeCustomContentSocialMedia";
     }
   | {
       requirements: null | CreatorHomeTargetProgressRequirementFragment[];
       __typename: "CreatorHomeCustomContentTargetProgress";
     };
-
-/** ℹ️ Not real Twitch type name */
-export type CreatorHomeCustomContentFragment_CreatorHomeCustomContentSocialMediaLinks = {
-  id: ID;
-  /** ⚠️ Low confidence about: nullable */
-  name: null | string;
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format uri
-   */
-  url: null | string;
-  /** ⚠️ Low confidence about: nullable */
-  title: null | string;
-  __typename: string;
-};
 
 /** ℹ️ Not real Twitch type name */
 export type CreatorHomeCustomContentFragment_CreatorHomeCustomContentUserListUserItems = {
@@ -17422,6 +17389,27 @@ export type CreatorHomeCustomContentFragment_CreatorHomeCustomContentVODPreviewV
   __typename: string;
 };
 
+/** ℹ️ Not real Twitch type name */
+export type CreatorHomeCustomContentImageSize = "IMAGE_DEFAULT" | "TEMPLATE_DEFAULT";
+
+/** ℹ️ Not real Twitch type name */
+export type CreatorHomeCustomContentInputFieldTextAreaState = "DEFAULT";
+
+/** ℹ️ Not real Twitch type name */
+export type CreatorHomeIconDecoratorColorTheme = "DEFAULT" | "RED";
+
+/** ℹ️ Not real Twitch type name */
+export type CreatorHomePanelType =
+  | "ACTIONS"
+  | "ANNOUNCEMENT"
+  | "COMMUNITY"
+  | "FEATURES"
+  | "HERO"
+  | "INSIGHTS"
+  | "SHORTCUTS"
+  | "SPOTLIGHT"
+  | "TIPS";
+
 export type CreatorHomePlatformType = "WEB";
 
 /** ℹ️ Not real Twitch type name */
@@ -17437,11 +17425,11 @@ export type CreatorHomeStartCommunityChallenge_UpdateCommunityPointsCommunityGoa
      */
     id: ID;
     /** @example ["UNSTARTED", "FULFILLED"] */
-    status: string;
+    status: CommunityPointsCommunityGoalStatus;
     /** @example ["Drink some water!", "BOOST_GOAL_421326609_2021-03-01T09-28-15Z"] */
     title: string;
     /** @example ["CREATOR", "BOOST"] */
-    type: string;
+    type: CommunityPointsCommunityGoalType;
     __typename: "CommunityPointsCommunityGoal";
   };
   __typename: string;
@@ -17478,12 +17466,12 @@ export type CreatorHomeSuggestedExtensionsExtensionEdge = {
 export type CreatorHomeTargetProgressRequirementFragment = {
   isCompleted: boolean;
   /** @example ["GREEN", "BLUE", "MAGENTA", "YELLOW"] */
-  progressColor: string;
+  progressColor: CreatorHomeTargetProgressRequirementProgressColor;
   icon: null | {
     /** @example ["Target", "FollowHollow", "DateStart", "GlyphLength", "GlyphViews"] */
     name: string;
     /** @example ["RED", "DEFAULT"] */
-    colorTheme: string;
+    colorTheme: CreatorHomeIconDecoratorColorTheme;
     __typename: "CreatorHomeIconDecorator";
   };
   /**
@@ -17499,9 +17487,34 @@ export type CreatorHomeTargetProgressRequirementFragment = {
   __typename: "CreatorHomeTargetProgressRequirement";
 };
 
+/** ℹ️ Not real Twitch type name */
+export type CreatorHomeTargetProgressRequirementProgressColor =
+  | "BLUE"
+  | "GREEN"
+  | "MAGENTA"
+  | "YELLOW";
+
+/** ℹ️ Not real Twitch type name */
+export type CreatorHomeTokenizedTextFieldType =
+  | "BOTTOM_PILL"
+  | "CONTENT"
+  | "CONTENT_LIST_ITEMS"
+  | "DISMISSED_CARD_CONTENT"
+  | "FOOTER"
+  | "FOOTER_TITLE"
+  | "HEADER"
+  | "HEADER_TITLE"
+  | "NONE"
+  | "PRIMARY_BUTTON"
+  | "SECONDARY_BUTTON"
+  | "SUBTITLE"
+  | "TEXT_AREA"
+  | "TITLE"
+  | "TOP_PILL";
+
 export type CreatorHomeTokenizedTextFragment = {
   /** @example ["PRIMARY_BUTTON", "CONTENT", "TITLE", "FOOTER", "SUBTITLE", "CONTENT_LIST_ITEMS", "HEADER"] */
-  fieldType: string;
+  fieldType: CreatorHomeTokenizedTextFieldType;
   content: null | TokenizedTextFragment;
   style: null | {
     pillStyle: string;
@@ -17509,6 +17522,9 @@ export type CreatorHomeTokenizedTextFragment = {
   };
   __typename: "CreatorHomeTokenizedText";
 };
+
+/** ℹ️ Not real Twitch type name */
+export type CreatorHomeTrackingMetadataItemRole = "MARKETING" | "NONE";
 
 /** ℹ️ Not real Twitch type name */
 export type CreatorMenuRecentRaids_UserRecentRaids = {
@@ -17822,6 +17838,9 @@ export type CreatorMetricsByInterval = {
   __typename: "CreatorMetricsByIntervalItem";
 };
 
+/** ℹ️ Not real Twitch type name */
+export type CreatorMilestoneRedemptionStatus = "IN_PROGRESS";
+
 export type CreatorPromotionActivationFragment = {
   /**
    * ⚠️ Low confidence about: nullable
@@ -17968,22 +17987,15 @@ export type CreatorWalletPromoCallout_PayoutThresholdEarningsResolver = {
 
 /** ℹ️ Not real Twitch type name */
 export type CreatorWalletPromoCallout_PayoutThresholdEarningsResolverPreviousMonthAccrual = {
-  earnedAmount:
-    | null
-    | CreatorWalletPromoCallout_PayoutThresholdEarningsResolverPreviousMonthAccrualEarnedAmount
-    | CreatorWalletPromoCallout_PayoutThresholdEarningsResolverPreviousMonthAccrualEarnedAmount[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type CreatorWalletPromoCallout_PayoutThresholdEarningsResolverPreviousMonthAccrualEarnedAmount =
-  {
+  earnedAmount: null | {
     nanos: UnknownValue;
     units: UnknownValue;
     /** ⚠️ Low confidence about: nullable */
     currencyCode: null | string;
-    __typename: string;
+    __typename: "PayoutChannelRevenueMoney";
   };
+  __typename: string;
+};
 
 /** ℹ️ Not real Twitch type name */
 export type CreatorWalletPromoEligibility_HasSpendableBalanceVideoBannerPromoEligibility = {
@@ -17991,6 +18003,9 @@ export type CreatorWalletPromoEligibility_HasSpendableBalanceVideoBannerPromoEli
   isEligible: null | boolean;
   __typename: string;
 };
+
+/** ℹ️ Not real Twitch type name */
+export type CreditChargeModelCreditType = "NO_CREDIT_TYPE" | "PRIME_TOKEN" | "SUB_TOKEN";
 
 export type CrowdControlAlert = {
   /** @aliasFor type */
@@ -18034,13 +18049,13 @@ export type CrowdControlPurchase = {
 export type CuratedTagFragment = {
   /** @example ["stream-o-ween-2026", "nopixel-v"] */
   id: ID;
-  /** @example ["Stream-o-Ween", "Nopixel V", "EPL Katowice", "Valorant Champions 2026", "Shopping"] */
+  /** @example ["Stream-o-Ween", "Nopixel V", "EPL Katowice", "Valorant Champions 2026", "Shopping", "TwitchCon"] */
   displayName: string;
   /**
    * @format uri
    * @example ["https://static-cdn.jtvnw.net/tag-icons/stream-o-ween-2026-c7725d44.png", "https://static-cdn.jtvnw.net/tag-icons/nopixel-v-a44ffc16.png"]
    */
-  iconURL: string;
+  iconURL: null | string;
   /** @example ["EVENT_PAGE"] */
   routeTo: string;
   /** @example ["EVENT"] */
@@ -18314,7 +18329,7 @@ export type CustomRewardFragment = {
    */
   cost: number;
   /** @example ["POINTS"] */
-  pricingType: string;
+  pricingType: CommunityPointsCustomRewardPricingType;
   defaultImage: null | PointsImageFragment;
   image: null | PointsImageFragment;
   maxPerStreamSetting: {
@@ -18386,7 +18401,7 @@ export type CustomRewardItem = {
    */
   bitsCost: number;
   /** @example ["POINTS"] */
-  pricingType: string;
+  pricingType: CommunityPointsCustomRewardPricingType;
   isEnabled: boolean;
   isPaused: boolean;
   /**
@@ -18537,6 +18552,9 @@ export type DJSignupGetDJState_UserDjEligibility = {
 };
 
 /** ℹ️ Not real Twitch type name */
+export type DJStatusProgramState = "DJ" | "NOT_DJ";
+
+/** ℹ️ Not real Twitch type name */
 export type DSAWizardMutation_SubmitAdFeedback = {
   error: UnknownValue;
   __typename: string;
@@ -18605,7 +18623,7 @@ export type DailyViewDropCollection = {
     name: string;
     progressCriteria: {
       /** @example ["WATCH", "SUB"] */
-      requirementType: string;
+      requirementType: DropsProgressCriteriaRequirementType;
       requirements: {
         /**
          * @format uint32
@@ -18808,7 +18826,7 @@ export type DashboardDropCampaign = {
     __typename: "Game";
   };
   /** @example ["ACTIVE", "EXPIRED"] */
-  status: string;
+  status: DropCampaignStatus;
   /**
    * @format date-time
    * @example ["2026-09-30T03:00:00Z", "2026-10-01T08:00:00Z"]
@@ -18841,10 +18859,18 @@ export type DashboardDropCampaignDetails_UserDropCampaign = {
    * @format date-time
    */
   endAt: null | string;
-  game:
-    | null
-    | DashboardDropCampaignDetails_UserDropCampaignGame
-    | DashboardDropCampaignDetails_UserDropCampaignGame[];
+  game: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["509672"]
+     */
+    id: ID;
+    /** @example ["irl", "cyberpunk-2077", "just-chatting", "special-events", "grand-theft-auto-v", "overwatch-2", "counter-strike"] */
+    slug: string;
+    /** @example ["IRL", "Cyberpunk 2077", "Just Chatting", "Special Events", "Gwent: The Witcher Card Game", "Grand Theft Auto V", "DayZ"] */
+    displayName: string;
+    __typename: "Game";
+  };
   /**
    * ⚠️ Low confidence about: nullable
    * @format uri
@@ -18887,16 +18913,6 @@ export type DashboardDropCampaignDetails_UserDropCampaignAllowChannels = {
   displayName: null | string;
   /** ⚠️ Low confidence about: nullable */
   name: null | string;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type DashboardDropCampaignDetails_UserDropCampaignGame = {
-  id: ID;
-  /** ⚠️ Low confidence about: nullable */
-  slug: null | string;
-  /** ⚠️ Low confidence about: nullable */
-  displayName: null | string;
   __typename: string;
 };
 
@@ -18963,10 +18979,16 @@ export type DashboardDropCampaignDetails_UserDropCampaignTimeBasedDropsBenefitEd
    * @format uint32
    */
   entitlementLimit: null | number;
-  game:
-    | null
-    | DashboardDropCampaignDetails_UserDropCampaignTimeBasedDropsBenefitEdgesBenefitGame
-    | DashboardDropCampaignDetails_UserDropCampaignTimeBasedDropsBenefitEdgesBenefitGame[];
+  game: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["509672"]
+     */
+    id: ID;
+    /** @example ["IRL", "Cyberpunk 2077", "Just Chatting", "Special Events", "League of Legends", "You Know The Drill", "RuneScape: Dragonwilds"] */
+    name: string;
+    __typename: "Game";
+  };
   /**
    * ⚠️ Low confidence about: nullable
    * @format uri
@@ -18981,14 +19003,6 @@ export type DashboardDropCampaignDetails_UserDropCampaignTimeBasedDropsBenefitEd
     | DashboardDropCampaignDetails_UserDropCampaignTimeBasedDropsBenefitEdgesBenefitOwnerOrganization
     | DashboardDropCampaignDetails_UserDropCampaignTimeBasedDropsBenefitEdgesBenefitOwnerOrganization[];
   distributionType: UnknownValue;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type DashboardDropCampaignDetails_UserDropCampaignTimeBasedDropsBenefitEdgesBenefitGame = {
-  id: ID;
-  /** ⚠️ Low confidence about: nullable */
-  name: null | string;
   __typename: string;
 };
 
@@ -19077,27 +19091,37 @@ export type DashboardSettingsAutoRaidRemoveTargets_RemoveAutoRaidTargetError = {
 
 /** ℹ️ Not real Twitch type name */
 export type DashboardSettingsUserColorDelete_DeleteUserColors = {
-  user:
-    | null
-    | DashboardSettingsUserColorDelete_DeleteUserColorsUser
-    | DashboardSettingsUserColorDelete_DeleteUserColorsUser[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type DashboardSettingsUserColorDelete_DeleteUserColorsUser = {
-  id: ID;
-  /** ⚠️ Low confidence about: nullable */
-  primaryColorHex: null | string;
+  user: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["23161357"]
+     */
+    id: ID;
+    /**
+     * @pattern ^[0-9a-fA-F]{6}$
+     * @example ["5C16C5", "DC0D15", "F1E9A4", "FAB3FF", "FFD37A", "FFBF00", "2D2628"]
+     */
+    primaryColorHex: null | string;
+    __typename: "User";
+  };
   __typename: string;
 };
 
 /** ℹ️ Not real Twitch type name */
 export type DashboardSettingsUserColorUpdate_UpdateUserColors = {
-  user:
-    | null
-    | DashboardSettingsUserColorUpdate_UpdateUserColorsUser
-    | DashboardSettingsUserColorUpdate_UpdateUserColorsUser[];
+  user: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["23161357"]
+     */
+    id: ID;
+    /**
+     * @pattern ^[0-9a-fA-F]{6}$
+     * @example ["5C16C5", "DC0D15", "F1E9A4", "FAB3FF", "FFD37A", "FFBF00", "2D2628"]
+     */
+    primaryColorHex: null | string;
+    __typename: "User";
+  };
   error:
     | null
     | DashboardSettingsUserColorUpdate_UpdateUserColorsError
@@ -19108,14 +19132,6 @@ export type DashboardSettingsUserColorUpdate_UpdateUserColors = {
 /** ℹ️ Not real Twitch type name */
 export type DashboardSettingsUserColorUpdate_UpdateUserColorsError = {
   code: UnknownValue;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type DashboardSettingsUserColorUpdate_UpdateUserColorsUser = {
-  id: ID;
-  /** ⚠️ Low confidence about: nullable */
-  primaryColorHex: null | string;
   __typename: string;
 };
 
@@ -19211,10 +19227,14 @@ export type DataAccessRequests_DataAccessRequests = {
 export type DataAccessRequests_DataAccessRequestsAccessRequests = {
   /** ⚠️ Low confidence about: nullable */
   accessRequestID: null | ID;
-  user:
-    | null
-    | DataAccessRequests_DataAccessRequestsAccessRequestsUser
-    | DataAccessRequests_DataAccessRequestsAccessRequestsUser[];
+  user: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["23161357"]
+     */
+    id: ID;
+    __typename: "User";
+  };
   /**
    * ⚠️ Low confidence about: nullable
    * @format date-time
@@ -19248,12 +19268,6 @@ export type DataAccessRequests_DataAccessRequestsAccessRequests = {
   /** ⚠️ Low confidence about: nullable */
   isDelivered: null | boolean;
   dataCategories: UnknownValue;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type DataAccessRequests_DataAccessRequestsAccessRequestsUser = {
-  id: ID;
   __typename: string;
 };
 
@@ -19387,7 +19401,7 @@ export type DecoratedTokenFragment = {
         /** @example ["gaechkatm", "EmjayPlayss", "qmaxgaren"] */
         key: string;
         /** @example ["UNKNOWN", "DMCA", "TOS_TEMPORARY", "TOS_INDEFINITE"] */
-        reason: string;
+        reason: UserDoesNotExistReason;
         __typename: "UserDoesNotExist";
       }
     | {
@@ -19428,6 +19442,9 @@ export type DefaultEmoteLibraryImagesQuery_DefaultEmoteLibraryImages = {
 };
 
 /** ℹ️ Not real Twitch type name */
+export type DefaultPanelType = "DEFAULT";
+
+/** ℹ️ Not real Twitch type name */
 export type DeleteAlertAsset_DeleteAlertAsset = {
   error: UnknownValue;
   __typename: string;
@@ -19447,20 +19464,18 @@ export type DeleteAlertVariation_DeleteAlertVariation = {
 
 /** ℹ️ Not real Twitch type name */
 export type DeleteAuthorizedStreamer_DeleteStreamAuthorizedUser = {
-  channel:
-    | null
-    | DeleteAuthorizedStreamer_DeleteStreamAuthorizedUserChannel
-    | DeleteAuthorizedStreamer_DeleteStreamAuthorizedUserChannel[];
+  channel: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["26490481"]
+     */
+    id: ID;
+    __typename: "Channel";
+  };
   error:
     | null
     | DeleteAuthorizedStreamer_DeleteStreamAuthorizedUserError
     | DeleteAuthorizedStreamer_DeleteStreamAuthorizedUserError[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type DeleteAuthorizedStreamer_DeleteStreamAuthorizedUserChannel = {
-  id: ID;
   __typename: string;
 };
 
@@ -19515,19 +19530,20 @@ export type DeleteChannelPermittedTerm_DeleteChannelPermittedTermByIDError = {
 
 /** ℹ️ Not real Twitch type name */
 export type DeleteClipComment_DeleteClipComment = {
-  clip: null | DeleteClipComment_DeleteClipCommentClip | DeleteClipComment_DeleteClipCommentClip[];
+  clip: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["3942697259"]
+     */
+    id: ID;
+    /**
+     * @format uint32
+     * @example [0, 21, 14, 4, 2, 3, 1, 29, 6, 15, 19]
+     */
+    topLevelCommentCount: number;
+    __typename: "Clip";
+  };
   error: UnknownValue;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type DeleteClipComment_DeleteClipCommentClip = {
-  id: ID;
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format uint32
-   */
-  topLevelCommentCount: null | number;
   __typename: string;
 };
 
@@ -19607,22 +19623,20 @@ export type DeleteCustomChannelPointsReward_DeleteCommunityPointsCustomReward = 
     | null
     | DeleteCustomChannelPointsReward_DeleteCommunityPointsCustomRewardError
     | DeleteCustomChannelPointsReward_DeleteCommunityPointsCustomRewardError[];
-  reward:
-    | null
-    | DeleteCustomChannelPointsReward_DeleteCommunityPointsCustomRewardReward
-    | DeleteCustomChannelPointsReward_DeleteCommunityPointsCustomRewardReward[];
+  reward: null | {
+    /**
+     * @format uuid
+     * @example ["1e20a97c-c84e-11f1-b89b-0a58a9feac02"]
+     */
+    id: ID;
+    __typename: "Reward";
+  };
   __typename: string;
 };
 
 /** ℹ️ Not real Twitch type name */
 export type DeleteCustomChannelPointsReward_DeleteCommunityPointsCustomRewardError = {
   code: UnknownValue;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type DeleteCustomChannelPointsReward_DeleteCommunityPointsCustomRewardReward = {
-  id: ID;
   __typename: string;
 };
 
@@ -19650,20 +19664,18 @@ export type DeleteEmoteAttribution_DeleteEmoteAttributionEmote = {
 
 /** ℹ️ Not real Twitch type name */
 export type DeleteFounderBadges_DeleteFounderBadges = {
-  channel:
-    | null
-    | DeleteFounderBadges_DeleteFounderBadgesChannel
-    | DeleteFounderBadges_DeleteFounderBadgesChannel[];
+  channel: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["26490481"]
+     */
+    id: ID;
+    __typename: "Channel";
+  };
   users:
     | null
     | DeleteFounderBadges_DeleteFounderBadgesUsers
     | DeleteFounderBadges_DeleteFounderBadgesUsers[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type DeleteFounderBadges_DeleteFounderBadgesChannel = {
-  id: ID;
   __typename: string;
 };
 
@@ -19775,13 +19787,14 @@ export type DeleteScheduleSegment_DeleteScheduleSegment = {
 /** ℹ️ Not real Twitch type name */
 export type DeleteSchedule_DeleteSchedule = {
   error: UnknownValue;
-  channel: null | DeleteSchedule_DeleteScheduleChannel | DeleteSchedule_DeleteScheduleChannel[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type DeleteSchedule_DeleteScheduleChannel = {
-  id: ID;
+  channel: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["26490481"]
+     */
+    id: ID;
+    __typename: "Channel";
+  };
   __typename: string;
 };
 
@@ -19875,55 +19888,34 @@ export type DenyBansSharingRequests_DenyBansSharingRequests = {
 
 /** ℹ️ Not real Twitch type name */
 export type DenyCaughtAutoModMessage_DenyRejectedChatMessage = {
-  message:
-    | null
-    | DenyCaughtAutoModMessage_DenyRejectedChatMessageMessage
-    | DenyCaughtAutoModMessage_DenyRejectedChatMessageMessage[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type DenyCaughtAutoModMessage_DenyRejectedChatMessageMessage = {
-  id: ID;
+  message: null | {
+    /**
+     * @format uuid
+     * @example ["279e8293-cec0-40df-a475-6b35981a2e49"]
+     */
+    id: ID;
+    __typename: "Message";
+  };
   __typename: string;
 };
 
 /** ℹ️ Not real Twitch type name */
 export type DenyUnbanRequest_DenyUnbanRequest = {
-  unbanRequest:
-    | null
-    | DenyUnbanRequest_DenyUnbanRequestUnbanRequest
-    | DenyUnbanRequest_DenyUnbanRequestUnbanRequest[];
-  error: null | DenyUnbanRequest_DenyUnbanRequestError | DenyUnbanRequest_DenyUnbanRequestError[];
+  unbanRequest: null | {
+    id: ID;
+    status: UnknownValue;
+    /**
+     * ⚠️ Low confidence about: nullable
+     * @format date-time
+     */
+    resolvedAt: null | string;
+    __typename: "UnbanRequest";
+  };
+  error: null | {
+    code: UnknownValue;
+    __typename: "UnbanRequestError";
+  };
   __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type DenyUnbanRequest_DenyUnbanRequestError = {
-  code: UnknownValue;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type DenyUnbanRequest_DenyUnbanRequestUnbanRequest = {
-  id: ID;
-  status: UnknownValue;
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format date-time
-   */
-  resolvedAt: null | string;
-  __typename: string;
-};
-
-export type DevCommonUtilsFetchGames_Organization = {
-  /**
-   * @format uuid
-   * @example ["beda0fa5-d8c5-4465-be03-fded75d8c01e"]
-   */
-  id: ID;
-  games: null | FetchedGame;
-  __typename: "Organization";
 };
 
 /** ℹ️ Not real Twitch type name */
@@ -19948,19 +19940,6 @@ export type DevCurrentUserApps_UserOauthApps = {
 export type DevCurrentUserApps_UserOauthAppsEdgesNode = {
   id: ID;
   __typename: string;
-};
-
-export type DevDashboardUserCompanySettings_Organization = {
-  /**
-   * @format uuid
-   * @example ["beda0fa5-d8c5-4465-be03-fded75d8c01e"]
-   */
-  id: ID;
-  brandPortalSettings:
-    | null
-    | DevDashboardUserCompanySettings_OrganizationBrandPortalSettings
-    | DevDashboardUserCompanySettings_OrganizationBrandPortalSettings[];
-  __typename: "Organization";
 };
 
 /** ℹ️ Not real Twitch type name */
@@ -19996,30 +19975,6 @@ export type DevExtensionCreatePageCreateExtensionClient_CreateExtensionClient = 
 export type DevExtensionCreatePageCreateExtensionClient_CreateExtensionClientClient = {
   id: ID;
   __typename: string;
-};
-
-export type DevExtensionEligibleBillingManager_Organization = {
-  /**
-   * @format uuid
-   * @example ["beda0fa5-d8c5-4465-be03-fded75d8c01e"]
-   */
-  id: ID;
-  /** @aliasFor members */
-  billingManagers:
-    | null
-    | DevExtensionEligibleBillingManager_OrganizationMembers
-    | DevExtensionEligibleBillingManager_OrganizationMembers[];
-  /** @aliasFor members */
-  administrators:
-    | null
-    | DevExtensionEligibleBillingManager_OrganizationMembers
-    | DevExtensionEligibleBillingManager_OrganizationMembers[];
-  /** @aliasFor members */
-  owner:
-    | null
-    | DevExtensionEligibleBillingManager_OrganizationMembers
-    | DevExtensionEligibleBillingManager_OrganizationMembers[];
-  __typename: "Organization";
 };
 
 /** ℹ️ Not real Twitch type name */
@@ -20113,12 +20068,6 @@ export type DevExtensionListPageCurrentUser_ExtensionClientsEdgesNode = {
   __typename: string;
 };
 
-export type DevExtensionMonetizationAssignedBillingManager_ExtensionClient = {
-  id: ID;
-  assignedBillingManager: null | BillingManager;
-  __typename: "ExtensionClient";
-};
-
 /** ℹ️ Not real Twitch type name */
 export type DevExtensionPayoutInviteStatusCurrentUser_UserPayoutInvite = {
   id: ID;
@@ -20135,12 +20084,6 @@ export type DevExtensionPayoutInviteStatusCurrentUser_UserPayoutInviteWorkflow =
   id: ID;
   currentStep: UnknownValue;
   __typename: string;
-};
-
-export type DevExtensionSettingsAssignedBillingManager_ExtensionClient = {
-  id: ID;
-  assignedBillingManager: null | BillingManager;
-  __typename: "ExtensionClient";
 };
 
 /** ℹ️ Not real Twitch type name */
@@ -20436,19 +20379,6 @@ export type DevGetExtensionSecrets_ExtensionSecretsSecrets = {
   __typename: string;
 };
 
-export type DevIsEventTriggeredDropsEligible_Organization = {
-  /**
-   * @format uuid
-   * @example ["beda0fa5-d8c5-4465-be03-fded75d8c01e"]
-   */
-  id: ID;
-  quests:
-    | null
-    | DevIsEventTriggeredDropsEligible_OrganizationQuests
-    | DevIsEventTriggeredDropsEligible_OrganizationQuests[];
-  __typename: "Organization";
-};
-
 /** ℹ️ Not real Twitch type name */
 export type DevIsEventTriggeredDropsEligible_OrganizationQuests = {
   featureAccess:
@@ -20624,18 +20554,6 @@ export type DevMutationExtensionDeleteImage_DeleteExtensionImageManifestViewsVid
   __typename: string;
 };
 
-export type DevOrgMembers_Organization = {
-  /**
-   * @format uuid
-   * @example ["beda0fa5-d8c5-4465-be03-fded75d8c01e"]
-   */
-  id: ID;
-  members: null | DevOrgMembers_OrganizationMembers | DevOrgMembers_OrganizationMembers[];
-  invites: null | DevOrgMembers_OrganizationInvites | DevOrgMembers_OrganizationInvites[];
-  self: null | DevOrgMembers_OrganizationSelf | DevOrgMembers_OrganizationSelf[];
-  __typename: "Organization";
-};
-
 /** ℹ️ Not real Twitch type name */
 export type DevOrgMembers_OrganizationInvites = {
   /**
@@ -20677,23 +20595,6 @@ export type DevOrgMembers_OrganizationSelf = {
   __typename: string;
 };
 
-export type DevOrganizationPanelGamesDrops_Organization = {
-  /**
-   * @format uuid
-   * @example ["beda0fa5-d8c5-4465-be03-fded75d8c01e"]
-   */
-  id: ID;
-  games: null | {
-    /**
-     * @pattern ^[0-9]+$
-     * @example ["509672"]
-     */
-    id: ID;
-    __typename: "Game";
-  };
-  __typename: "Organization";
-};
-
 /** ℹ️ Not real Twitch type name */
 export type DevPresignReportURL_PresignDevInsightsReportURL = {
   /**
@@ -20702,27 +20603,6 @@ export type DevPresignReportURL_PresignDevInsightsReportURL = {
    */
   url: null | string;
   __typename: string;
-};
-
-export type DevQuestCampaignDetailsPageOrgGameClientIDQuery_Organization = {
-  /**
-   * @format uuid
-   * @example ["beda0fa5-d8c5-4465-be03-fded75d8c01e"]
-   */
-  id: ID;
-  games: null | {
-    /**
-     * @pattern ^[0-9]+$
-     * @example ["509672"]
-     */
-    id: ID;
-    dropAccountLink:
-      | null
-      | DevQuestCampaignDetailsPageOrgGameClientIDQuery_OrganizationGamesDropAccountLink
-      | DevQuestCampaignDetailsPageOrgGameClientIDQuery_OrganizationGamesDropAccountLink[];
-    __typename: "Game";
-  };
-  __typename: "Organization";
 };
 
 /** ℹ️ Not real Twitch type name */
@@ -20771,10 +20651,22 @@ export type DevQuestCampaignFragment = {
     | null
     | DevQuestCampaignFragment_QuestCampaignChannelAllowlist
     | DevQuestCampaignFragment_QuestCampaignChannelAllowlist[];
-  game:
-    | null
-    | DevQuestCampaignFragment_QuestCampaignGame
-    | DevQuestCampaignFragment_QuestCampaignGame[];
+  game: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["509672"]
+     */
+    id: ID;
+    /** @example ["IRL", "Cyberpunk 2077", "Just Chatting", "Special Events", "League of Legends", "You Know The Drill", "RuneScape: Dragonwilds"] */
+    name: string;
+    /**
+     * @example ["https://static-cdn.jtvnw.net/ttv-boxart/509672-{width}x{height}.jpg", "https://static-cdn.jtvnw.net/ttv-boxart/65876-{width}x{height}.jpg"]
+     * @gqlArg `width: Int [52, 144, 40, 285, 250, 188, 90, 85, 200, 120]`
+     * @gqlArg `height: Int [72, 192, 56, 380, 300, 250, 55, 120, 113, 160]`
+     */
+    boxArtURL: string;
+    __typename: "Game";
+  };
   /**
    * ⚠️ Low confidence about: nullable
    * @format uri
@@ -20788,19 +20680,6 @@ export type DevQuestCampaignFragment = {
 /** ℹ️ Not real Twitch type name */
 export type DevQuestCampaignFragment_QuestCampaignChannelAllowlist = {
   id: ID;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type DevQuestCampaignFragment_QuestCampaignGame = {
-  id: ID;
-  /** ⚠️ Low confidence about: nullable */
-  name: null | string;
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format uri
-   */
-  boxArtURL: null | string;
   __typename: string;
 };
 
@@ -20826,7 +20705,22 @@ export type DevQuestRewardFragment = {
   createdAt: null | string;
   id: ID;
   distributionType: UnknownValue;
-  game: null | DevQuestRewardFragment_QuestRewardGame | DevQuestRewardFragment_QuestRewardGame[];
+  game: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["509672"]
+     */
+    id: ID;
+    /** @example ["IRL", "Cyberpunk 2077", "Just Chatting", "Special Events", "League of Legends", "You Know The Drill", "RuneScape: Dragonwilds"] */
+    name: string;
+    /**
+     * @example ["https://static-cdn.jtvnw.net/ttv-boxart/509672-{width}x{height}.jpg", "https://static-cdn.jtvnw.net/ttv-boxart/65876-{width}x{height}.jpg"]
+     * @gqlArg `width: Int [52, 144, 40, 285, 250, 188, 90, 85, 200, 120]`
+     * @gqlArg `height: Int [72, 192, 56, 380, 300, 250, 55, 120, 113, 160]`
+     */
+    boxArtURL: string;
+    __typename: "Game";
+  };
   /**
    * ⚠️ Low confidence about: nullable
    * @format uri
@@ -20838,19 +20732,6 @@ export type DevQuestRewardFragment = {
   /** ⚠️ Low confidence about: nullable */
   isIosAvailable: null | boolean;
   __typename: "QuestReward";
-};
-
-/** ℹ️ Not real Twitch type name */
-export type DevQuestRewardFragment_QuestRewardGame = {
-  id: ID;
-  /** ⚠️ Low confidence about: nullable */
-  name: null | string;
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format uri
-   */
-  boxArtURL: null | string;
-  __typename: string;
 };
 
 /** ℹ️ Not real Twitch type name */
@@ -21076,7 +20957,7 @@ export type DirectoryCollectionStream = {
   };
   previewThumbnailProperties: {
     /** @example ["BLUR_NOT_REQUIRED", "BLUR_REASON_TYPE_SEXUAL_THEMES"] */
-    blurReason: string;
+    blurReason: PreviewThumbnailPropertiesBlurReason;
     __typename: "PreviewThumbnailProperties";
   };
   /** @directive include(if: $includeCostreaming) */
@@ -21106,37 +20987,18 @@ export type DirectoryCollectionTitle = {
   __typename: "BrowsableCollectionTitle";
 };
 
-export type DirectoryEventCuratedBanner_CuratedTag = {
-  /** @example ["stream-o-ween-2026", "nopixel-v"] */
-  id: ID;
-  /** ⚠️ Low confidence about: nullable */
-  slug: null | string;
-  /** @example ["Stream-o-Ween", "Nopixel V", "EPL Katowice", "Valorant Champions 2026", "Shopping"] */
-  displayName: string;
-  /** ⚠️ Low confidence about: nullable */
-  description: null | string;
-  /**
-   * @format uri
-   * @example ["https://static-cdn.jtvnw.net/tag-box-art/nopixel-v-18bfb553.png", "https://static-cdn.jtvnw.net/tag-box-art/epl-katowice-2026-5e0199a9.png"]
-   */
-  boxartURL: string;
-  /**
-   * @format uint32
-   * @example [21191, 298, 25701, 43238, 160]
-   */
-  viewersCount: null | number;
-  __typename: "CuratedTag";
-};
-
 /** ℹ️ Not real Twitch type name */
 export type DirectoryEventVertical_PremiumEvent = {
   id: ID;
   tags: UnknownValue;
   externalLink: UnknownValue;
-  browsableCollection:
-    | null
-    | DirectoryEventVertical_PremiumEventBrowsableCollection
-    | DirectoryEventVertical_PremiumEventBrowsableCollection[];
+  browsableCollection: null | {
+    /** @example ["collection-just-chatting-irl-streams", "collection-stream-o-ween"] */
+    id: ID;
+    /** @example ["just-chatting-irl-streams", "stream-o-ween", "moba-games", "drops-enabled", "hype-train", "speedrun-challenge-run", "music-dj-streams"] */
+    slug: string;
+    __typename: "BrowsableCollection";
+  };
   mainBroadcaster:
     | null
     | DirectoryEventVertical_PremiumEventMainBroadcaster
@@ -21145,14 +21007,6 @@ export type DirectoryEventVertical_PremiumEvent = {
     | null
     | DirectoryEventVertical_PremiumEventVerticalDirectory
     | DirectoryEventVertical_PremiumEventVerticalDirectory[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type DirectoryEventVertical_PremiumEventBrowsableCollection = {
-  id: ID;
-  /** ⚠️ Low confidence about: nullable */
-  slug: null | string;
   __typename: string;
 };
 
@@ -21277,7 +21131,7 @@ export type DirectoryPageGameStreamWithTagsNode = {
   };
   previewThumbnailProperties: {
     /** @example ["BLUR_NOT_REQUIRED", "BLUR_REASON_TYPE_SEXUAL_THEMES"] */
-    blurReason: string;
+    blurReason: PreviewThumbnailPropertiesBlurReason;
     __typename: "PreviewThumbnailProperties";
   };
   contentClassificationLabels:
@@ -21419,25 +21273,17 @@ export type DismissPasskeyPrompt_DismissPasskeyPromptError = {
 
 /** ℹ️ Not real Twitch type name */
 export type DismissUserModiversaryCallout_DismissUserModiversaryCallout = {
-  modiversary:
-    | null
-    | DismissUserModiversaryCallout_DismissUserModiversaryCalloutModiversary
-    | DismissUserModiversaryCallout_DismissUserModiversaryCalloutModiversary[];
+  modiversary: null | {
+    hasMilestoneAlert: boolean;
+    canSendUserNotice: boolean;
+    /**
+     * @format uint32
+     * @example [0]
+     */
+    months: number;
+    __typename: "UserModiversary";
+  };
   error: UnknownValue;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type DismissUserModiversaryCallout_DismissUserModiversaryCalloutModiversary = {
-  /** ⚠️ Low confidence about: nullable */
-  hasMilestoneAlert: null | boolean;
-  /** ⚠️ Low confidence about: nullable */
-  canSendUserNotice: null | boolean;
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format uint32
-   */
-  months: null | number;
   __typename: string;
 };
 
@@ -21599,7 +21445,7 @@ export type DropCampaign = {
     __typename: "Game";
   };
   /** @example ["ACTIVE", "EXPIRED"] */
-  status: string;
+  status: DropCampaignStatus;
   /**
    * @format date-time
    * @example ["2026-09-30T03:00:00Z", "2026-10-01T08:00:00Z"]
@@ -21656,10 +21502,18 @@ export type DropCampaignDetails_UserDropCampaign = {
    * @format date-time
    */
   endAt: null | string;
-  game:
-    | null
-    | DropCampaignDetails_UserDropCampaignGame
-    | DropCampaignDetails_UserDropCampaignGame[];
+  game: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["509672"]
+     */
+    id: ID;
+    /** @example ["irl", "cyberpunk-2077", "just-chatting", "special-events", "grand-theft-auto-v", "overwatch-2", "counter-strike"] */
+    slug: string;
+    /** @example ["IRL", "Cyberpunk 2077", "Just Chatting", "Special Events", "Gwent: The Witcher Card Game", "Grand Theft Auto V", "DayZ"] */
+    displayName: string;
+    __typename: "Game";
+  };
   /**
    * ⚠️ Low confidence about: nullable
    * @format uri
@@ -21702,16 +21556,6 @@ export type DropCampaignDetails_UserDropCampaignAllowChannels = {
   displayName: null | string;
   /** ⚠️ Low confidence about: nullable */
   name: null | string;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type DropCampaignDetails_UserDropCampaignGame = {
-  id: ID;
-  /** ⚠️ Low confidence about: nullable */
-  slug: null | string;
-  /** ⚠️ Low confidence about: nullable */
-  displayName: null | string;
   __typename: string;
 };
 
@@ -21786,10 +21630,16 @@ export type DropCampaignDetails_UserDropCampaignTimeBasedDropsBenefitEdgesBenefi
    * @format uint32
    */
   entitlementLimit: null | number;
-  game:
-    | null
-    | DropCampaignDetails_UserDropCampaignTimeBasedDropsBenefitEdgesBenefitGame
-    | DropCampaignDetails_UserDropCampaignTimeBasedDropsBenefitEdgesBenefitGame[];
+  game: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["509672"]
+     */
+    id: ID;
+    /** @example ["IRL", "Cyberpunk 2077", "Just Chatting", "Special Events", "League of Legends", "You Know The Drill", "RuneScape: Dragonwilds"] */
+    name: string;
+    __typename: "Game";
+  };
   /**
    * ⚠️ Low confidence about: nullable
    * @format uri
@@ -21808,14 +21658,6 @@ export type DropCampaignDetails_UserDropCampaignTimeBasedDropsBenefitEdgesBenefi
 };
 
 /** ℹ️ Not real Twitch type name */
-export type DropCampaignDetails_UserDropCampaignTimeBasedDropsBenefitEdgesBenefitGame = {
-  id: ID;
-  /** ⚠️ Low confidence about: nullable */
-  name: null | string;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
 export type DropCampaignDetails_UserDropCampaignTimeBasedDropsBenefitEdgesBenefitOwnerOrganization =
   {
     id: ID;
@@ -21829,6 +21671,9 @@ export type DropCampaignDetails_UserDropCampaignTimeBasedDropsPreconditionDrops 
   id: ID;
   __typename: string;
 };
+
+/** ℹ️ Not real Twitch type name */
+export type DropCampaignStatus = "ACTIVE" | "EXPIRED";
 
 /** ℹ️ Not real Twitch type name */
 export type DropCampaign_DropCampaignSelf = {
@@ -21937,44 +21782,6 @@ export type DropChannelCampaignsProgress_DropsRewardPoolRewards = {
    */
   thumbnailURL: null | string;
   __typename: string;
-};
-
-export type DropV3OrganizationGames_Organization = {
-  /**
-   * @format uuid
-   * @example ["beda0fa5-d8c5-4465-be03-fded75d8c01e"]
-   */
-  id: ID;
-  games: null | {
-    /**
-     * @pattern ^[0-9]+$
-     * @example ["509672"]
-     */
-    id: ID;
-    /** @example ["IRL", "Cyberpunk 2077", "Just Chatting", "Special Events", "League of Legends", "You Know The Drill", "RuneScape: Dragonwilds"] */
-    name: string;
-    /** @example ["IRL", "Cyberpunk 2077", "Just Chatting", "Special Events", "Gwent: The Witcher Card Game", "Grand Theft Auto V", "DayZ"] */
-    displayName: string;
-    /**
-     * @example ["https://static-cdn.jtvnw.net/ttv-boxart/509672-{width}x{height}.jpg", "https://static-cdn.jtvnw.net/ttv-boxart/65876-{width}x{height}.jpg"]
-     * @aliasFor boxArtURL
-     * @gqlArg `width: Int [52, 144, 40, 285, 250, 188, 90, 85, 200, 120]`
-     * @gqlArg `height: Int [72, 192, 56, 380, 300, 250, 55, 120, 113, 160]`
-     */
-    boxArtURLSmall: string;
-    /**
-     * @example ["https://static-cdn.jtvnw.net/ttv-boxart/509672-{width}x{height}.jpg", "https://static-cdn.jtvnw.net/ttv-boxart/65876-{width}x{height}.jpg"]
-     * @gqlArg `width: Int [52, 144, 40, 285, 250, 188, 90, 85, 200, 120]`
-     * @gqlArg `height: Int [72, 192, 56, 380, 300, 250, 55, 120, 113, 160]`
-     */
-    boxArtURL: string;
-    dropAccountLink:
-      | null
-      | DropV3OrganizationGames_OrganizationGamesDropAccountLink
-      | DropV3OrganizationGames_OrganizationGamesDropAccountLink[];
-    __typename: "Game";
-  };
-  __typename: "Organization";
 };
 
 /** ℹ️ Not real Twitch type name */
@@ -22182,6 +21989,23 @@ export type DropsPrivateCallout_TimeBasedDropCampaign = {
   endAt: null | string;
   __typename: string;
 };
+
+/** ℹ️ Not real Twitch type name */
+export type DropsProgressCriteriaRequirementType =
+  | "EVENT_TRIGGERED"
+  | "SUB"
+  | "TURBO"
+  | "VIEWED_AD"
+  | "WATCH";
+
+/** ℹ️ Not real Twitch type name */
+export type DropsRewardDistributionType =
+  | "BADGE"
+  | "CODE"
+  | "DIRECT_ENTITLEMENT"
+  | "EMOTE"
+  | "POOL"
+  | "UNSPECIFIED";
 
 /** ℹ️ Not real Twitch type name */
 export type DropsTrayClaimDropRewards_ClaimDropRewards = {
@@ -22444,10 +22268,14 @@ export type EditBroadcastContextBroadcastSettingsMutation_UpdateBroadcastSetting
 
 /** ℹ️ Not real Twitch type name */
 export type EditBroadcastContextChannelRerunStatusMutation_SetChannelRerunStatus = {
-  channel:
-    | null
-    | EditBroadcastContextChannelRerunStatusMutation_SetChannelRerunStatusChannel
-    | EditBroadcastContextChannelRerunStatusMutation_SetChannelRerunStatusChannel[];
+  channel: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["26490481"]
+     */
+    id: ID;
+    __typename: "Channel";
+  };
   channelRerunStatus:
     | null
     | EditBroadcastContextChannelRerunStatusMutation_SetChannelRerunStatusChannelRerunStatus
@@ -22456,12 +22284,6 @@ export type EditBroadcastContextChannelRerunStatusMutation_SetChannelRerunStatus
     | null
     | EditBroadcastContextChannelRerunStatusMutation_SetChannelRerunStatusError
     | EditBroadcastContextChannelRerunStatusMutation_SetChannelRerunStatusError[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type EditBroadcastContextChannelRerunStatusMutation_SetChannelRerunStatusChannel = {
-  id: ID;
   __typename: string;
 };
 
@@ -22527,13 +22349,6 @@ export type EditBroadcastContextQuery_BroadcastSettingsContentClassificationLabe
     contentClassificationLabelsAllowed: UnknownValue;
     __typename: string;
   };
-
-/** ℹ️ Not real Twitch type name */
-export type EditBroadcastContextQuery_BroadcastSettingsContentPolicyProperties = {
-  /** ⚠️ Low confidence about: nullable */
-  hasBrandedContent: null | boolean;
-  __typename: string;
-};
 
 /** ℹ️ Not real Twitch type name */
 export type EditBroadcastContextQuery_BroadcastSettingsLiveUpNotificationInfo = {
@@ -22653,30 +22468,28 @@ export type EditProfileCreateProfileImageUploadURL_CreateProfileImageUploadURLEr
 
 /** ℹ️ Not real Twitch type name */
 export type EditProfileSetUserDefaultProfileImage_SetUserDefaultProfileImage = {
-  user:
-    | null
-    | EditProfileSetUserDefaultProfileImage_SetUserDefaultProfileImageUser
-    | EditProfileSetUserDefaultProfileImage_SetUserDefaultProfileImageUser[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type EditProfileSetUserDefaultProfileImage_SetUserDefaultProfileImageUser = {
-  id: ID;
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format uri
-   * @aliasFor profileImageURL
-   * @gqlArg `width: Int [300]`
-   */
-  a: null | string;
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format uri
-   * @aliasFor profileImageURL
-   * @gqlArg `width: Int [300]`
-   */
-  b: null | string;
+  user: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["23161357"]
+     */
+    id: ID;
+    /**
+     * @format uri
+     * @example ["https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-70x70.png", "https://static-cdn.jtvnw.net/jtv_user_pictures/3c3366d7-728a-4204-bfdd-7c823858e4d9-profile_image-70x70.png"]
+     * @aliasFor profileImageURL
+     * @gqlArg `width: Int [50, 70, 300, 28, 150]`
+     */
+    a: string;
+    /**
+     * @format uri
+     * @example ["https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-70x70.png", "https://static-cdn.jtvnw.net/jtv_user_pictures/3c3366d7-728a-4204-bfdd-7c823858e4d9-profile_image-70x70.png"]
+     * @aliasFor profileImageURL
+     * @gqlArg `width: Int [50, 70, 300, 28, 150]`
+     */
+    b: string;
+    __typename: "User";
+  };
   __typename: string;
 };
 
@@ -22695,38 +22508,36 @@ export type EditVideoPropertiesModalGame = {
 
 /** ℹ️ Not real Twitch type name */
 export type EditVideoPropertiesModalUpdateVideo_UpdateVideo = {
-  video:
-    | null
-    | EditVideoPropertiesModalUpdateVideo_UpdateVideoVideo
-    | EditVideoPropertiesModalUpdateVideo_UpdateVideoVideo[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type EditVideoPropertiesModalUpdateVideo_UpdateVideoVideo = {
-  id: ID;
-  /** ⚠️ Low confidence about: nullable */
-  title: null | string;
-  /** ⚠️ Low confidence about: nullable */
-  description: null | string;
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format uri
-   */
-  previewThumbnailURL: null | string;
-  game:
-    | null
-    | EditVideoPropertiesModalUpdateVideo_UpdateVideoVideoGame
-    | EditVideoPropertiesModalUpdateVideo_UpdateVideoVideoGame[];
-  language: UnknownValue;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type EditVideoPropertiesModalUpdateVideo_UpdateVideoVideoGame = {
-  id: ID;
-  /** ⚠️ Low confidence about: nullable */
-  name: null | string;
+  video: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["2323270866"]
+     */
+    id: ID;
+    /** @example ["Twitch Recap: 2024 according to Twitch Chat!", "REDstreams — Cyberpunk 2077: Edgerunners 2 Update (2.5) | Overview"] */
+    title: null | string;
+    /** @example ["The legendary TwitchCon Drag Showcase is back! Check out all the amazing performers right here!", "Now you know when our show happen! Nice."] */
+    description: null | string;
+    /**
+     * @example ["https://static-cdn.jtvnw.net/cf_vods/d1m7jfoe9zdc1j/82ef4729c6011d6072e2_twitch_43295848617_1733849129//thumb/thumb0-90x60.jpg", "https://static-cdn.jtvnw.net/cf_vods/d3fi1amfgojobc/7fbc776f6b7a4659c4e4_cdprojektred_319108158181_1793115910//thumb/thumb0-90x60.jpg"]
+     * @gqlArg `width: Int [320, 90, 640, 240, 400, 1280, 80, 160, 214]`
+     * @gqlArg `height: Int [180, 60, 360, 135, 225, 480, 720, 51, 45, 90]`
+     */
+    previewThumbnailURL: string;
+    game: null | {
+      /**
+       * @pattern ^[0-9]+$
+       * @example ["509672"]
+       */
+      id: ID;
+      /** @example ["IRL", "Cyberpunk 2077", "Just Chatting", "Special Events", "League of Legends", "You Know The Drill", "RuneScape: Dragonwilds"] */
+      name: string;
+      __typename: "Game";
+    };
+    /** @example ["en"] */
+    language: string;
+    __typename: "Video";
+  };
   __typename: string;
 };
 
@@ -22747,7 +22558,7 @@ export type EditVideoPropertiesModalVideo = {
   contentTags: null | ContentTag[];
   resourceRestriction: null | ResourceRestriction;
   /** @example ["ARCHIVE", "HIGHLIGHT", "UPLOAD"] */
-  broadcastType: string;
+  broadcastType: BroadcastType;
   /** @example ["The legendary TwitchCon Drag Showcase is back! Check out all the amazing performers right here!", "Now you know when our show happen! Nice."] */
   description: null | string;
   /** @example ["en"] */
@@ -22812,7 +22623,7 @@ export type EditVideoPropertiesModalVideo = {
   };
   scope: UnknownValue;
   /** @example ["RECORDED", "RECORDING"] */
-  status: string;
+  status: VideoStatus;
   tags: UnknownValue;
   /** ⚠️ Low confidence about: nullable */
   thumbnailURLs: null | (null | string)[];
@@ -22865,13 +22676,19 @@ export type EditVideoPropertiesModalVideo_VideoRenditionThumbnails = {
   __typename: string;
 };
 
+/** ℹ️ Not real Twitch type name */
+export type EligiblePaymentMethodAvailabilityStatus = "AVAILABLE";
+
 export type EligiblePaymentMethodFragment = {
   /** @example ["XSOLLA"] */
-  name: string;
+  name: EligiblePaymentMethodName;
   /** @example ["AVAILABLE"] */
-  availabilityStatus: string;
+  availabilityStatus: EligiblePaymentMethodAvailabilityStatus;
   __typename: "EligiblePaymentMethod";
 };
+
+/** ℹ️ Not real Twitch type name */
+export type EligiblePaymentMethodName = "XSOLLA";
 
 /** ℹ️ Not real Twitch type name */
 export type EmailVerificationBannerEmail_VerificationRequest = {
@@ -22881,12 +22698,7 @@ export type EmailVerificationBannerEmail_VerificationRequest = {
 };
 
 /** ℹ️ Not real Twitch type name */
-export type EmoteByIdQuery_EmoteModifiers = {
-  code: UnknownValue;
-  /** ⚠️ Low confidence about: nullable */
-  name: null | string;
-  __typename: string;
-};
+export type EmoteAssetType = "ANIMATED" | "STATIC";
 
 /** ℹ️ Not real Twitch type name */
 export type EmoteCard_EmoteArtist = {
@@ -22961,6 +22773,9 @@ export type EmoteModificationFragment = {
   __typename: "CommunityPointsEmoteModification";
 };
 
+/** ℹ️ Not real Twitch type name */
+export type EmoteModifierCode = "HF" | "SG" | "TK";
+
 export type EmoteModifierFragment = {
   /** @example ["MOD_BW", "MOD_HF", "MOD_SG", "MOD_SQ", "MOD_TK"] */
   id: ID;
@@ -22970,6 +22785,15 @@ export type EmoteModifierFragment = {
   iconLight: PointsImageFragment;
   __typename: "CommunityPointsEmoteModifier";
 };
+
+/** ℹ️ Not real Twitch type name */
+export type EmoteModifierName =
+  | "BLACK_WHITE"
+  | "HORIZONTAL_FLIP"
+  | "SQUISHED"
+  | "SUNGLASSES"
+  | "THINKING"
+  | "UNKNOWN";
 
 export type EmotePickerSubUpsellPriceInfoSubscriptionProduct =
   EmotePickerUserSubscriptionProduct & { offers: null | SubProductOfferFragment[] };
@@ -23037,6 +22861,9 @@ export type EmoteSetEmote = {
   __typename: "Emote";
 };
 
+/** ℹ️ Not real Twitch type name */
+export type EmoteSetProductType = "NONE";
+
 export type EmoteSetsEdgeFragment = {
   cursor: Cursor;
   node: {
@@ -23051,12 +22878,17 @@ export type EmoteSetsEdgeFragment = {
       token: string;
       modifiers:
         | null
-        | EmoteSetsEdgeFragment_EmoteModifiers
-        | EmoteSetsEdgeFragment_EmoteModifiers[];
+        | (null | {
+            /** @example ["HF", "SG", "TK"] */
+            code: EmoteModifierCode;
+            /** @example ["HORIZONTAL_FLIP", "SUNGLASSES", "THINKING"] */
+            name: EmoteModifierName;
+            __typename: "EmoteModifier";
+          })[];
       /** @example ["LIMITED_TIME", "SUBSCRIPTIONS", "GLOBALS", "SMILIES", "MEGA_COMMERCE", "FOLLOWER", "TWO_FACTOR"] */
-      type: string;
+      type: EmoteType;
       /** @example ["ANIMATED", "STATIC"] */
-      assetType: string;
+      assetType: EmoteAssetType;
       __typename: "Emote";
     }[];
     /** @directive include(if: $withOwner) */
@@ -23084,12 +22916,26 @@ export type EmoteSetsEdgeFragment = {
 };
 
 /** ℹ️ Not real Twitch type name */
-export type EmoteSetsEdgeFragment_EmoteModifiers = {
-  code: UnknownValue;
-  /** ⚠️ Low confidence about: nullable */
-  name: null | string;
-  __typename: string;
-};
+export type EmoteSubscriptionTier = "TIER_1" | "TIER_2" | "TIER_3";
+
+/** ℹ️ Not real Twitch type name */
+export type EmoteType =
+  | "ARCHIVE"
+  | "BITS_BADGE_TIERS"
+  | "CHANNEL_POINTS"
+  | "COLLECTIONS"
+  | "FOLLOWER"
+  | "GLOBALS"
+  | "HYPE_TRAIN"
+  | "LIMITED_TIME"
+  | "MEGA_COMMERCE"
+  | "PINATA"
+  | "PRIME"
+  | "SMILIES"
+  | "SUBSCRIPTIONS"
+  | "TURBO"
+  | "TWO_FACTOR"
+  | "UNKNOWN";
 
 export type EmoteVariantFragment = {
   /** @example ["1480140", "emotesv2_453537635a4748a2a826ad0d7b9769d2"] */
@@ -23220,7 +23066,7 @@ export type EmotesSettingsEmote = {
   /** @example ["c23ba858-6cca-49ac-9ba1-6886e74b63b2", "408258241"] */
   setID: ID;
   /** @example ["ANIMATED", "STATIC"] */
-  assetType: string;
+  assetType: EmoteAssetType;
   /**
    * ⚠️ Low confidence about: nullable
    * @format date-time
@@ -23232,7 +23078,7 @@ export type EmotesSettingsEmote = {
    */
   order: number;
   /** @example ["LIMITED_TIME", "SUBSCRIPTIONS", "GLOBALS", "SMILIES", "MEGA_COMMERCE", "FOLLOWER", "TWO_FACTOR"] */
-  type: string;
+  type: EmoteType;
   imageSource: UnknownValue;
   __typename: "Emote";
 };
@@ -23470,35 +23316,28 @@ export type EmotesSettings_UserSettingsCheerCustomPrefix = {
 };
 
 /** ℹ️ Not real Twitch type name */
+export type EmoticonPrefixState = "UNKNOWN";
+
+/** ℹ️ Not real Twitch type name */
 export type EnableChannelPointsSettingsMutation_UpdateCommunityPointsChannelSettings = {
   error:
     | null
     | EnableChannelPointsSettingsMutation_UpdateCommunityPointsChannelSettingsError
     | EnableChannelPointsSettingsMutation_UpdateCommunityPointsChannelSettingsError[];
-  channel:
-    | null
-    | EnableChannelPointsSettingsMutation_UpdateCommunityPointsChannelSettingsChannel
-    | EnableChannelPointsSettingsMutation_UpdateCommunityPointsChannelSettingsChannel[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type EnableChannelPointsSettingsMutation_UpdateCommunityPointsChannelSettingsChannel = {
-  id: ID;
-  communityPointsSettings:
-    | null
-    | EnableChannelPointsSettingsMutation_UpdateCommunityPointsChannelSettingsChannelCommunityPointsSettings
-    | EnableChannelPointsSettingsMutation_UpdateCommunityPointsChannelSettingsChannelCommunityPointsSettings[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type EnableChannelPointsSettingsMutation_UpdateCommunityPointsChannelSettingsChannelCommunityPointsSettings =
-  {
-    /** ⚠️ Low confidence about: nullable */
-    isEnabled: null | boolean;
-    __typename: string;
+  channel: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["26490481"]
+     */
+    id: ID;
+    communityPointsSettings: {
+      isEnabled: boolean;
+      __typename: "CommunityPointsChannelSettings";
+    };
+    __typename: "Channel";
   };
+  __typename: string;
+};
 
 /** ℹ️ Not real Twitch type name */
 export type EnableChannelPointsSettingsMutation_UpdateCommunityPointsChannelSettingsError = {
@@ -23599,10 +23438,14 @@ export type EndGuestStarScreenshare_EndGuestStarScreenshareSessionGuests = {
     | null
     | EndGuestStarScreenshare_EndGuestStarScreenshareSessionGuestsVideo
     | EndGuestStarScreenshare_EndGuestStarScreenshareSessionGuestsVideo[];
-  user:
-    | null
-    | EndGuestStarScreenshare_EndGuestStarScreenshareSessionGuestsUser
-    | EndGuestStarScreenshare_EndGuestStarScreenshareSessionGuestsUser[];
+  user: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["23161357"]
+     */
+    id: ID;
+    __typename: "User";
+  };
   __typename: string;
 };
 
@@ -23614,12 +23457,6 @@ export type EndGuestStarScreenshare_EndGuestStarScreenshareSessionGuestsAudio = 
   isHostEnabled: null | boolean;
   /** ⚠️ Low confidence about: nullable */
   isGuestEnabled: null | boolean;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type EndGuestStarScreenshare_EndGuestStarScreenshareSessionGuestsUser = {
-  id: ID;
   __typename: string;
 };
 
@@ -23948,7 +23785,7 @@ export type Extension = {
   id: ID;
   isBitsEnabled: boolean;
   /** @example ["OPTIONAL", "NONE"] */
-  bitsSupportLevel: string;
+  bitsSupportLevel: ExtensionBitsSupportLevel;
   /** @example ["CozyCafe", "Blerp 🎉", "🥳 Free & Animated Panels - OWN3D", "Sound Alerts", "Viewer Geolocation", "nopixel V Companion", "StreamElements Leaderboards"] */
   name: string;
   /** @example [""] */
@@ -23961,7 +23798,7 @@ export type Extension = {
   version: string;
   views: null | ExtensionViews;
   /** @example ["RELEASED"] */
-  state: string;
+  state: ExtensionState;
   /**
    * @example ["https://blerp.com", "https://blerp.com/soundbites", "https://blerp.com/", "https://blerp.com/legal", "https://blerp.com/terms", "https://blerp.com/privacy", "blerp.com", "twitch.blerp.com", "party.blerp.com", "api.blerp.com", "ebs.blerp.com", "https://blerp.com/twitch-config", "https://blerp.com/login", "https://blerp.com/create", "https://blerp.com/soundbites/", "https://blerp.com/sound-collection/", "https://blerp.com/twitch", "https://blerp.com/desktop", "https://blerp.com/live-streaming", "https://www.youtube.com https://youtu.be", "https://api.streamelements.com", "https://api.twitch.tv", "https://cdn.7tv.app", "https://cdn.betterttv.net", "https://cdn.frankerfacez.com", "https://cdn.streamelements.com", "https://dev.twitch.tv", "https://extension-files.twitch.tv", "https://extension.streamelements.com", "https://localhost:3400", "https://localhost:9080", "https://static-cdn.jtvnw.net", "https://streamelements.com", "https://twitch.tv", "https://uaw3vx1k0ttq74u9b2zfvt768eebh1.ext-twitch.tv", "wss://extension.streamelements.com", "https://localhost:8080", "https://twitter.com", "https://soundalerts.com", "https://dashboard.soundalerts.com", " https://twitch.tv", " https://id.twitch.tv", " https://functions.soundalerts.com", "", "www.igdb.com", "igdb.com", "twitch.extensions.barrycarlyon.co.uk", "https://github.com/", "https://twitch.com/", "https://store.steampowered.com/app/665300/Stream_Avatars/", " https://www.streamavatars.com/", " steam://store/665300", "https://casperr.website", "https://www.twitch.tv/ext/f5647q7fyxw8848z7ksuk6b1ry79ks", "https://api.sandbox.own3d.pro/", "https://ext-login.own3d.dev/", "https://api.own3d.pro/", "https://latest-followers-api-cache.b-cdn.net/", "https://id.stream.tv/login", " https://ext.own3d.pro", " https://own3d-ext-api-cache.b-cdn.net", " https://fonts.bunny.net", "https://wb3bnc8np7tdnxj2sfbk0aa3vklulo.ext-twitch.tv"]
    * @aliasFor whitelistedConfigURLs
@@ -23991,6 +23828,15 @@ export type ExtensionActionSubscriptionProduct = {
   __typename: "SubscriptionProduct";
 };
 
+/** ℹ️ Not real Twitch type name */
+export type ExtensionActivationConfigAnchor = "COMPONENT" | "HIDDEN" | "PANEL" | "VIDEO_OVERLAY";
+
+/** ℹ️ Not real Twitch type name */
+export type ExtensionActivationConfigState = "ACTIVE";
+
+/** ℹ️ Not real Twitch type name */
+export type ExtensionBitsSupportLevel = "NONE" | "OPTIONAL";
+
 export type ExtensionCategoryPageExtensionEdge = {
   /** ⚠️ Low confidence about: nullable */
   cursor: null | Cursor;
@@ -24010,7 +23856,7 @@ export type ExtensionCategoryPageExtensionEdge = {
     };
     isBitsEnabled: boolean;
     /** @example ["OPTIONAL", "NONE"] */
-    bitsSupportLevel: string;
+    bitsSupportLevel: ExtensionBitsSupportLevel;
     /** @example ["CozyCafe", "Blerp 🎉", "🥳 Free & Animated Panels - OWN3D", "Sound Alerts", "Viewer Geolocation", "nopixel V Companion", "StreamElements Leaderboards"] */
     name: string;
     self:
@@ -24020,7 +23866,7 @@ export type ExtensionCategoryPageExtensionEdge = {
     /** @example [""] */
     sku: string;
     /** @example ["RELEASED"] */
-    state: string;
+    state: ExtensionState;
     /** @example ["Serve drinks, customize your café aesthetic, interact with chat, and watch cute café animations live on stream.", "Blerp is the best alert builder on Twitch! Easily create a unique alert for every goal, sub, channel point or tip! "] */
     summary: string;
     /** @example [""] */
@@ -24114,11 +23960,11 @@ export type ExtensionConfigureApplyExtensionActivations_ApplyExtensionActivation
     id: ID;
     activationConfig: {
       /** @example ["PANEL", "VIDEO_OVERLAY", "COMPONENT"] */
-      anchor: string;
+      anchor: ExtensionActivationConfigAnchor;
       /** @example ["extension-panel-3", "extension-panel-1", "extension-overlay-1", "extension-component-1", "extension-panel-2"] */
       slot: string;
       /** @example ["ACTIVE"] */
-      state: string;
+      state: ExtensionActivationConfigState;
       __typename: "ExtensionActivationConfig";
     };
     extension: null | {
@@ -24158,11 +24004,11 @@ export type ExtensionConfigureModalApplyExtensionActivations_ApplyExtensionActiv
     id: ID;
     activationConfig: {
       /** @example ["PANEL", "VIDEO_OVERLAY", "COMPONENT"] */
-      anchor: string;
+      anchor: ExtensionActivationConfigAnchor;
       /** @example ["extension-panel-3", "extension-panel-1", "extension-overlay-1", "extension-component-1", "extension-panel-2"] */
       slot: string;
       /** @example ["ACTIVE"] */
-      state: string;
+      state: ExtensionActivationConfigState;
       __typename: "ExtensionActivationConfig";
     };
     extension: null | {
@@ -24179,7 +24025,7 @@ export type ExtensionConfigureModalApplyExtensionActivations_ApplyExtensionActiv
       /** ⚠️ Low confidence about: nullable */
       hasChatSupport: null | boolean;
       /** @example ["OPTIONAL", "NONE"] */
-      bitsSupportLevel: string;
+      bitsSupportLevel: ExtensionBitsSupportLevel;
       isBitsEnabled: boolean;
       subscriptionsSupportLevel: UnknownValue;
       /** @example ["0.5.1", "3.2.17", "2.0.1", "5.2.2", "1.3.1", "1.1.2", "3.2.7"] */
@@ -24222,21 +24068,18 @@ export type ExtensionConfigureModalApplyExtensionActivations_ExtensionContentMat
 /** ℹ️ Not real Twitch type name */
 export type ExtensionConfigureModalApplyExtensionActivations_ExtensionInstallationFeatureFlagsDynamicManagement =
   {
-    game:
-      | null
-      | ExtensionConfigureModalApplyExtensionActivations_ExtensionInstallationFeatureFlagsDynamicManagementGame
-      | ExtensionConfigureModalApplyExtensionActivations_ExtensionInstallationFeatureFlagsDynamicManagementGame[];
+    game: null | {
+      /**
+       * @pattern ^[0-9]+$
+       * @example ["509672"]
+       */
+      id: ID;
+      /** @example ["IRL", "Cyberpunk 2077", "Just Chatting", "Special Events", "Gwent: The Witcher Card Game", "Grand Theft Auto V", "DayZ"] */
+      displayName: string;
+      __typename: "Game";
+    };
     /** ⚠️ Low confidence about: nullable */
     isManaged: null | boolean;
-    __typename: string;
-  };
-
-/** ℹ️ Not real Twitch type name */
-export type ExtensionConfigureModalApplyExtensionActivations_ExtensionInstallationFeatureFlagsDynamicManagementGame =
-  {
-    id: ID;
-    /** ⚠️ Low confidence about: nullable */
-    displayName: null | string;
     __typename: string;
   };
 
@@ -24249,20 +24092,18 @@ export type ExtensionConfigureModalApplyExtensionActivations_ExtensionInstallati
 
 /** ℹ️ Not real Twitch type name */
 export type ExtensionConfigure_ExtensionInstallationFeatureFlagsDynamicManagement = {
-  game:
-    | null
-    | ExtensionConfigure_ExtensionInstallationFeatureFlagsDynamicManagementGame
-    | ExtensionConfigure_ExtensionInstallationFeatureFlagsDynamicManagementGame[];
+  game: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["509672"]
+     */
+    id: ID;
+    /** @example ["IRL", "Cyberpunk 2077", "Just Chatting", "Special Events", "Gwent: The Witcher Card Game", "Grand Theft Auto V", "DayZ"] */
+    displayName: string;
+    __typename: "Game";
+  };
   /** ⚠️ Low confidence about: nullable */
   isManaged: null | boolean;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type ExtensionConfigure_ExtensionInstallationFeatureFlagsDynamicManagementGame = {
-  id: ID;
-  /** ⚠️ Low confidence about: nullable */
-  displayName: null | string;
   __typename: string;
 };
 
@@ -24345,10 +24186,15 @@ export type ExtensionDiscoveryManifest = {
     | null
     | ExtensionDiscoveryManifest_ExtensionDiscoveryManifestGames
     | ExtensionDiscoveryManifest_ExtensionDiscoveryManifestGames[];
-  iconURLs:
-    | null
-    | ExtensionDiscoveryManifest_ExtensionDiscoveryManifestIconURLs
-    | ExtensionDiscoveryManifest_ExtensionDiscoveryManifestIconURLs[];
+  iconURLs: null | {
+    /** @example ["https://extensions-discovery-images.twitch.tv/9zqhb3hba48m0c382uno7k2t74isfi/1.1.0/discoveryfbbf81b5-734d-4c7f-9f3a-ee0ac69d0e6e", "https://extensions-discovery-images.twitch.tv/nstuq90nghenyqwqme61jgvmtp253a/1.0.0/discovery26490c9b-90b5-4a2b-9cb8-1739935e2113"] */
+    discoverySplash: string;
+    /** @example ["", "https://extensions-discovery-images.twitch.tv/9zqhb3hba48m0c382uno7k2t74isfi/1.1.0/taskbare76ef45f-76b0-406a-9c12-3ff87d809dfd", "https://extensions-discovery-images.twitch.tv/nstuq90nghenyqwqme61jgvmtp253a/1.0.0/taskbar1e4b1a08-660a-40ff-b19b-0d3f533fcb57"] */
+    square24: string;
+    /** @example ["https://extensions-discovery-images.twitch.tv/y00k8pvmggnkvjr99gj9gxi63sb3wz/0.0.1/logo9cce0750-d6f5-4c38-85be-7cff49a62608", "https://extensions-discovery-images.twitch.tv/oafn7vvzfyzyccwrwrt233221oe5wq/0.1.17/logoed4c3440-0900-4a92-807c-d4923f3940d8"] */
+    square100: string;
+    __typename: "ExtensionIcons";
+  };
   /** ⚠️ Low confidence about: nullable */
   name: null | string;
   /**
@@ -24390,14 +24236,6 @@ export type ExtensionDiscoveryManifest_ExtensionDiscoveryManifestGames = {
   __typename: string;
 };
 
-/** ℹ️ Not real Twitch type name */
-export type ExtensionDiscoveryManifest_ExtensionDiscoveryManifestIconURLs = {
-  discoverySplash: UnknownValue;
-  square24: UnknownValue;
-  square100: UnknownValue;
-  __typename: string;
-};
-
 export type ExtensionIconURLs = {
   /** @example ["https://extensions-discovery-images.twitch.tv/y00k8pvmggnkvjr99gj9gxi63sb3wz/0.0.1/logo9cce0750-d6f5-4c38-85be-7cff49a62608", "https://extensions-discovery-images.twitch.tv/oafn7vvzfyzyccwrwrt233221oe5wq/0.1.17/logoed4c3440-0900-4a92-807c-d4923f3940d8"] */
   square100: string;
@@ -24429,11 +24267,11 @@ export type ExtensionInstallationSelfEdge = {
     };
     activationConfig: {
       /** @example ["PANEL", "VIDEO_OVERLAY", "COMPONENT"] */
-      anchor: string;
+      anchor: ExtensionActivationConfigAnchor;
       /** @example ["extension-panel-3", "extension-panel-1", "extension-overlay-1", "extension-component-1", "extension-panel-2"] */
       slot: string;
       /** @example ["ACTIVE"] */
-      state: string;
+      state: ExtensionActivationConfigState;
       /**
        * @format int32
        * @example [0]
@@ -24507,11 +24345,11 @@ export type ExtensionManagementPageApplyExtensionActivations_ApplyExtensionActiv
     id: ID;
     activationConfig: {
       /** @example ["PANEL", "VIDEO_OVERLAY", "COMPONENT"] */
-      anchor: string;
+      anchor: ExtensionActivationConfigAnchor;
       /** @example ["extension-panel-3", "extension-panel-1", "extension-overlay-1", "extension-component-1", "extension-panel-2"] */
       slot: string;
       /** @example ["ACTIVE"] */
-      state: string;
+      state: ExtensionActivationConfigState;
       __typename: "ExtensionActivationConfig";
     };
     extension: null | {
@@ -24528,7 +24366,7 @@ export type ExtensionManagementPageApplyExtensionActivations_ApplyExtensionActiv
       /** ⚠️ Low confidence about: nullable */
       hasChatSupport: null | boolean;
       /** @example ["OPTIONAL", "NONE"] */
-      bitsSupportLevel: string;
+      bitsSupportLevel: ExtensionBitsSupportLevel;
       isBitsEnabled: boolean;
       subscriptionsSupportLevel: UnknownValue;
       /** @example ["0.5.1", "3.2.17", "2.0.1", "5.2.2", "1.3.1", "1.1.2", "3.2.7"] */
@@ -24571,21 +24409,18 @@ export type ExtensionManagementPageApplyExtensionActivations_ExtensionContentMat
 /** ℹ️ Not real Twitch type name */
 export type ExtensionManagementPageApplyExtensionActivations_ExtensionInstallationFeatureFlagsDynamicManagement =
   {
-    game:
-      | null
-      | ExtensionManagementPageApplyExtensionActivations_ExtensionInstallationFeatureFlagsDynamicManagementGame
-      | ExtensionManagementPageApplyExtensionActivations_ExtensionInstallationFeatureFlagsDynamicManagementGame[];
+    game: null | {
+      /**
+       * @pattern ^[0-9]+$
+       * @example ["509672"]
+       */
+      id: ID;
+      /** @example ["IRL", "Cyberpunk 2077", "Just Chatting", "Special Events", "Gwent: The Witcher Card Game", "Grand Theft Auto V", "DayZ"] */
+      displayName: string;
+      __typename: "Game";
+    };
     /** ⚠️ Low confidence about: nullable */
     isManaged: null | boolean;
-    __typename: string;
-  };
-
-/** ℹ️ Not real Twitch type name */
-export type ExtensionManagementPageApplyExtensionActivations_ExtensionInstallationFeatureFlagsDynamicManagementGame =
-  {
-    id: ID;
-    /** ⚠️ Low confidence about: nullable */
-    displayName: null | string;
     __typename: string;
   };
 
@@ -24601,11 +24436,11 @@ export type ExtensionManagementPageExtensionInstallation = {
   id: ID;
   activationConfig: {
     /** @example ["PANEL", "VIDEO_OVERLAY", "COMPONENT"] */
-    anchor: string;
+    anchor: ExtensionActivationConfigAnchor;
     /** @example ["extension-panel-3", "extension-panel-1", "extension-overlay-1", "extension-component-1", "extension-panel-2"] */
     slot: string;
     /** @example ["ACTIVE"] */
-    state: string;
+    state: ExtensionActivationConfigState;
     __typename: "ExtensionActivationConfig";
   };
   extension: null | {
@@ -24622,13 +24457,13 @@ export type ExtensionManagementPageExtensionInstallation = {
     hasChatSupport: null | boolean;
     isBitsEnabled: boolean;
     /** @example ["OPTIONAL", "NONE"] */
-    bitsSupportLevel: string;
+    bitsSupportLevel: ExtensionBitsSupportLevel;
     /** @example ["CozyCafe", "Blerp 🎉", "🥳 Free & Animated Panels - OWN3D", "Sound Alerts", "Viewer Geolocation", "nopixel V Companion", "StreamElements Leaderboards"] */
     name: string;
     /** @example [""] */
     sku: string;
     /** @example ["RELEASED"] */
-    state: string;
+    state: ExtensionState;
     subscriptionsSupportLevel: UnknownValue;
     /** @example [""] */
     vendorCode: string;
@@ -24719,21 +24554,18 @@ export type ExtensionManagementPageFeatureFlagsFragment = {
 /** ℹ️ Not real Twitch type name */
 export type ExtensionManagementPageFeatureFlagsFragment_ExtensionInstallationFeatureFlagsDynamicManagement =
   {
-    game:
-      | null
-      | ExtensionManagementPageFeatureFlagsFragment_ExtensionInstallationFeatureFlagsDynamicManagementGame
-      | ExtensionManagementPageFeatureFlagsFragment_ExtensionInstallationFeatureFlagsDynamicManagementGame[];
+    game: null | {
+      /**
+       * @pattern ^[0-9]+$
+       * @example ["509672"]
+       */
+      id: ID;
+      /** @example ["IRL", "Cyberpunk 2077", "Just Chatting", "Special Events", "Gwent: The Witcher Card Game", "Grand Theft Auto V", "DayZ"] */
+      displayName: string;
+      __typename: "Game";
+    };
     /** ⚠️ Low confidence about: nullable */
     isManaged: null | boolean;
-    __typename: string;
-  };
-
-/** ℹ️ Not real Twitch type name */
-export type ExtensionManagementPageFeatureFlagsFragment_ExtensionInstallationFeatureFlagsDynamicManagementGame =
-  {
-    id: ID;
-    /** ⚠️ Low confidence about: nullable */
-    displayName: null | string;
     __typename: string;
   };
 
@@ -24754,10 +24586,50 @@ export type ExtensionManifest = {
     | null
     | ExtensionManifest_ExtensionManifestDeveloperManifest
     | ExtensionManifest_ExtensionManifestDeveloperManifest[];
-  discoveryManifest:
-    | null
-    | ExtensionManifest_ExtensionManifestDiscoveryManifest
-    | ExtensionManifest_ExtensionManifestDiscoveryManifest[];
+  discoveryManifest: null | {
+    /** ⚠️ Low confidence about: nullable */
+    authorName: null | string;
+    categories:
+      | null
+      | ExtensionManifest_ExtensionDiscoveryManifestCategories
+      | ExtensionManifest_ExtensionDiscoveryManifestCategories[];
+    /** ⚠️ Low confidence about: nullable */
+    description: null | string;
+    games:
+      | null
+      | ExtensionManifest_ExtensionDiscoveryManifestGames
+      | ExtensionManifest_ExtensionDiscoveryManifestGames[];
+    iconURLs: null | {
+      /** @example ["https://extensions-discovery-images.twitch.tv/9zqhb3hba48m0c382uno7k2t74isfi/1.1.0/discoveryfbbf81b5-734d-4c7f-9f3a-ee0ac69d0e6e", "https://extensions-discovery-images.twitch.tv/nstuq90nghenyqwqme61jgvmtp253a/1.0.0/discovery26490c9b-90b5-4a2b-9cb8-1739935e2113"] */
+      discoverySplash: string;
+      /** @example ["", "https://extensions-discovery-images.twitch.tv/9zqhb3hba48m0c382uno7k2t74isfi/1.1.0/taskbare76ef45f-76b0-406a-9c12-3ff87d809dfd", "https://extensions-discovery-images.twitch.tv/nstuq90nghenyqwqme61jgvmtp253a/1.0.0/taskbar1e4b1a08-660a-40ff-b19b-0d3f533fcb57"] */
+      square24: string;
+      /** @example ["https://extensions-discovery-images.twitch.tv/y00k8pvmggnkvjr99gj9gxi63sb3wz/0.0.1/logo9cce0750-d6f5-4c38-85be-7cff49a62608", "https://extensions-discovery-images.twitch.tv/oafn7vvzfyzyccwrwrt233221oe5wq/0.1.17/logoed4c3440-0900-4a92-807c-d4923f3940d8"] */
+      square100: string;
+      __typename: "ExtensionIcons";
+    };
+    /** ⚠️ Low confidence about: nullable */
+    name: null | string;
+    /**
+     * ⚠️ Low confidence about: nullable
+     * @format uri
+     */
+    privacyPolicyURL: null | string;
+    /** ⚠️ Low confidence about: nullable */
+    screenshotURLs: null | (null | string)[];
+    /** ⚠️ Low confidence about: nullable */
+    summary: null | string;
+    /** ⚠️ Low confidence about: nullable */
+    supportEmail: null | string;
+    /**
+     * ⚠️ Low confidence about: nullable
+     * @format uri
+     */
+    termsURL: null | string;
+    /** ⚠️ Low confidence about: nullable */
+    viewerSummary: null | string;
+    __typename: "ExtensionDiscoveryManifest";
+  };
   capabilities:
     | null
     | ExtensionManifest_ExtensionManifestCapabilities
@@ -24767,6 +24639,24 @@ export type ExtensionManifest = {
     | ExtensionManifest_ExtensionManifestViews
     | ExtensionManifest_ExtensionManifestViews[];
   __typename: "ExtensionManifest";
+};
+
+/** ℹ️ Not real Twitch type name */
+export type ExtensionManifest_ExtensionDiscoveryManifestCategories = {
+  id: ID;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
+  __typename: string;
+};
+
+/** ℹ️ Not real Twitch type name */
+export type ExtensionManifest_ExtensionDiscoveryManifestGames = {
+  id: ID;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
+  /** ⚠️ Low confidence about: nullable */
+  displayName: null | string;
+  __typename: string;
 };
 
 /** ℹ️ Not real Twitch type name */
@@ -24849,73 +24739,6 @@ export type ExtensionManifest_ExtensionManifestDeveloperManifest = {
   lastTransitionedAt: null | string;
   testingBaseURI: UnknownValue;
   versionState: UnknownValue;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type ExtensionManifest_ExtensionManifestDiscoveryManifest = {
-  /** ⚠️ Low confidence about: nullable */
-  authorName: null | string;
-  categories:
-    | null
-    | ExtensionManifest_ExtensionManifestDiscoveryManifestCategories
-    | ExtensionManifest_ExtensionManifestDiscoveryManifestCategories[];
-  /** ⚠️ Low confidence about: nullable */
-  description: null | string;
-  games:
-    | null
-    | ExtensionManifest_ExtensionManifestDiscoveryManifestGames
-    | ExtensionManifest_ExtensionManifestDiscoveryManifestGames[];
-  iconURLs:
-    | null
-    | ExtensionManifest_ExtensionManifestDiscoveryManifestIconURLs
-    | ExtensionManifest_ExtensionManifestDiscoveryManifestIconURLs[];
-  /** ⚠️ Low confidence about: nullable */
-  name: null | string;
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format uri
-   */
-  privacyPolicyURL: null | string;
-  /** ⚠️ Low confidence about: nullable */
-  screenshotURLs: null | (null | string)[];
-  /** ⚠️ Low confidence about: nullable */
-  summary: null | string;
-  /** ⚠️ Low confidence about: nullable */
-  supportEmail: null | string;
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format uri
-   */
-  termsURL: null | string;
-  /** ⚠️ Low confidence about: nullable */
-  viewerSummary: null | string;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type ExtensionManifest_ExtensionManifestDiscoveryManifestCategories = {
-  id: ID;
-  /** ⚠️ Low confidence about: nullable */
-  name: null | string;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type ExtensionManifest_ExtensionManifestDiscoveryManifestGames = {
-  id: ID;
-  /** ⚠️ Low confidence about: nullable */
-  name: null | string;
-  /** ⚠️ Low confidence about: nullable */
-  displayName: null | string;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type ExtensionManifest_ExtensionManifestDiscoveryManifestIconURLs = {
-  discoverySplash: UnknownValue;
-  square24: UnknownValue;
-  square100: UnknownValue;
   __typename: string;
 };
 
@@ -25135,6 +24958,9 @@ export type ExtensionPanelConditionsBitsBalance_ExtensionChallengeCondition = {
   __typename: string;
 };
 
+/** ℹ️ Not real Twitch type name */
+export type ExtensionPanelType = "EXTENSION";
+
 export type ExtensionPermissionsPageFeatureFlagsFragment = {
   /** ⚠️ Low confidence about: nullable */
   canSendChat: null | boolean;
@@ -25151,21 +24977,18 @@ export type ExtensionPermissionsPageFeatureFlagsFragment = {
 /** ℹ️ Not real Twitch type name */
 export type ExtensionPermissionsPageFeatureFlagsFragment_ExtensionInstallationFeatureFlagsDynamicManagement =
   {
-    game:
-      | null
-      | ExtensionPermissionsPageFeatureFlagsFragment_ExtensionInstallationFeatureFlagsDynamicManagementGame
-      | ExtensionPermissionsPageFeatureFlagsFragment_ExtensionInstallationFeatureFlagsDynamicManagementGame[];
+    game: null | {
+      /**
+       * @pattern ^[0-9]+$
+       * @example ["509672"]
+       */
+      id: ID;
+      /** @example ["IRL", "Cyberpunk 2077", "Just Chatting", "Special Events", "Gwent: The Witcher Card Game", "Grand Theft Auto V", "DayZ"] */
+      displayName: string;
+      __typename: "Game";
+    };
     /** ⚠️ Low confidence about: nullable */
     isManaged: null | boolean;
-    __typename: string;
-  };
-
-/** ℹ️ Not real Twitch type name */
-export type ExtensionPermissionsPageFeatureFlagsFragment_ExtensionInstallationFeatureFlagsDynamicManagementGame =
-  {
-    id: ID;
-    /** ⚠️ Low confidence about: nullable */
-    displayName: null | string;
     __typename: string;
   };
 
@@ -25205,21 +25028,18 @@ export type ExtensionPermissionsPageSetFeatureFlags_SetExtensionFeatureFlagsInst
 /** ℹ️ Not real Twitch type name */
 export type ExtensionPermissionsPageSetFeatureFlags_SetExtensionFeatureFlagsInstalledExtensionPermittedFeaturesDynamicManagement =
   {
-    game:
-      | null
-      | ExtensionPermissionsPageSetFeatureFlags_SetExtensionFeatureFlagsInstalledExtensionPermittedFeaturesDynamicManagementGame
-      | ExtensionPermissionsPageSetFeatureFlags_SetExtensionFeatureFlagsInstalledExtensionPermittedFeaturesDynamicManagementGame[];
+    game: null | {
+      /**
+       * @pattern ^[0-9]+$
+       * @example ["509672"]
+       */
+      id: ID;
+      /** @example ["IRL", "Cyberpunk 2077", "Just Chatting", "Special Events", "Gwent: The Witcher Card Game", "Grand Theft Auto V", "DayZ"] */
+      displayName: string;
+      __typename: "Game";
+    };
     /** ⚠️ Low confidence about: nullable */
     isManaged: null | boolean;
-    __typename: string;
-  };
-
-/** ℹ️ Not real Twitch type name */
-export type ExtensionPermissionsPageSetFeatureFlags_SetExtensionFeatureFlagsInstalledExtensionPermittedFeaturesDynamicManagementGame =
-  {
-    id: ID;
-    /** ⚠️ Low confidence about: nullable */
-    displayName: null | string;
     __typename: string;
   };
 
@@ -25238,7 +25058,7 @@ export type ExtensionRecommendationsExtensionEdge = {
     };
     isBitsEnabled: boolean;
     /** @example ["OPTIONAL", "NONE"] */
-    bitsSupportLevel: string;
+    bitsSupportLevel: ExtensionBitsSupportLevel;
     /** @example ["CozyCafe", "Blerp 🎉", "🥳 Free & Animated Panels - OWN3D", "Sound Alerts", "Viewer Geolocation", "nopixel V Companion", "StreamElements Leaderboards"] */
     name: string;
     self:
@@ -25268,11 +25088,11 @@ export type ExtensionRecommendationsInstallExtension_InstallExtension = {
     id: ID;
     activationConfig: {
       /** @example ["PANEL", "VIDEO_OVERLAY", "COMPONENT"] */
-      anchor: string;
+      anchor: ExtensionActivationConfigAnchor;
       /** @example ["extension-panel-3", "extension-panel-1", "extension-overlay-1", "extension-component-1", "extension-panel-2"] */
       slot: string;
       /** @example ["ACTIVE"] */
-      state: string;
+      state: ExtensionActivationConfigState;
       __typename: "ExtensionActivationConfig";
     };
     extension: null | {
@@ -25308,7 +25128,7 @@ export type ExtensionSearchPageExtensionEdge = {
     };
     isBitsEnabled: boolean;
     /** @example ["OPTIONAL", "NONE"] */
-    bitsSupportLevel: string;
+    bitsSupportLevel: ExtensionBitsSupportLevel;
     /** @example ["CozyCafe", "Blerp 🎉", "🥳 Free & Animated Panels - OWN3D", "Sound Alerts", "Viewer Geolocation", "nopixel V Companion", "StreamElements Leaderboards"] */
     name: string;
     self:
@@ -25318,7 +25138,7 @@ export type ExtensionSearchPageExtensionEdge = {
     /** @example [""] */
     sku: string;
     /** @example ["RELEASED"] */
-    state: string;
+    state: ExtensionState;
     /** @example ["Serve drinks, customize your café aesthetic, interact with chat, and watch cute café animations live on stream.", "Blerp is the best alert builder on Twitch! Easily create a unique alert for every goal, sub, channel point or tip! "] */
     summary: string;
     /** @example [""] */
@@ -25415,6 +25235,20 @@ export type ExtensionSearchPage_Extensions = {
   };
   __typename: string;
 };
+
+/** ℹ️ Not real Twitch type name */
+export type ExtensionState =
+  | "APPROVED"
+  | "ASSETS_UPLOADED"
+  | "DELETED"
+  | "DEPRECATED"
+  | "IN_REVIEW"
+  | "IN_TEST"
+  | "PENDING_ACTION"
+  | "READY_FOR_REVIEW"
+  | "REJECTED"
+  | "RELEASED"
+  | "UPLOADING";
 
 export type ExtensionViews = {
   component: null | {
@@ -25528,7 +25362,7 @@ export type ExtensionsDiscoveryPageExtension = {
   screenshotURLs: string[];
   isBitsEnabled: boolean;
   /** @example ["OPTIONAL", "NONE"] */
-  bitsSupportLevel: string;
+  bitsSupportLevel: ExtensionBitsSupportLevel;
   /** @example ["CozyCafe", "Blerp 🎉", "🥳 Free & Animated Panels - OWN3D", "Sound Alerts", "Viewer Geolocation", "nopixel V Companion", "StreamElements Leaderboards"] */
   name: string;
   self:
@@ -25536,7 +25370,7 @@ export type ExtensionsDiscoveryPageExtension = {
     | ExtensionsDiscoveryPageExtension_ExtensionSelf
     | ExtensionsDiscoveryPageExtension_ExtensionSelf[];
   /** @example ["RELEASED"] */
-  state: string;
+  state: ExtensionState;
   /** @example ["Serve drinks, customize your café aesthetic, interact with chat, and watch cute café animations live on stream.", "Blerp is the best alert builder on Twitch! Easily create a unique alert for every goal, sub, channel point or tip! "] */
   summary: string;
   /** @example ["0.5.1", "3.2.17", "2.0.1", "5.2.2", "1.3.1", "1.1.2", "3.2.7"] */
@@ -25549,7 +25383,7 @@ export type ExtensionsDiscoveryPageExtensionInstallation = {
   id: ID;
   activationConfig: {
     /** @example ["ACTIVE"] */
-    state: string;
+    state: ExtensionActivationConfigState;
     __typename: "ExtensionActivationConfig";
   };
   extension: null | {
@@ -25574,21 +25408,18 @@ export type ExtensionsDiscoveryPageExtension_ExtensionSelf = {
 /** ℹ️ Not real Twitch type name */
 export type ExtensionsDiscoveryPageInstallExtension_ExtensionInstallationFeatureFlagsDynamicManagement =
   {
-    game:
-      | null
-      | ExtensionsDiscoveryPageInstallExtension_ExtensionInstallationFeatureFlagsDynamicManagementGame
-      | ExtensionsDiscoveryPageInstallExtension_ExtensionInstallationFeatureFlagsDynamicManagementGame[];
+    game: null | {
+      /**
+       * @pattern ^[0-9]+$
+       * @example ["509672"]
+       */
+      id: ID;
+      /** @example ["IRL", "Cyberpunk 2077", "Just Chatting", "Special Events", "Gwent: The Witcher Card Game", "Grand Theft Auto V", "DayZ"] */
+      displayName: string;
+      __typename: "Game";
+    };
     /** ⚠️ Low confidence about: nullable */
     isManaged: null | boolean;
-    __typename: string;
-  };
-
-/** ℹ️ Not real Twitch type name */
-export type ExtensionsDiscoveryPageInstallExtension_ExtensionInstallationFeatureFlagsDynamicManagementGame =
-  {
-    id: ID;
-    /** ⚠️ Low confidence about: nullable */
-    displayName: null | string;
     __typename: string;
   };
 
@@ -25605,7 +25436,7 @@ export type ExtensionsDiscoveryPageInstallExtension_InstallExtension = {
     id: ID;
     activationConfig: {
       /** @example ["ACTIVE"] */
-      state: string;
+      state: ExtensionActivationConfigState;
       __typename: "ExtensionActivationConfig";
     };
     extension: null | {
@@ -25977,14 +25808,11 @@ export type ExternallyConfiguredSponsorshipCampaign_ExternallyConfiguredSponsors
 
 /** ℹ️ Not real Twitch type name */
 export type FFZArchivePoll_ArchivePoll = {
-  poll: null | FFZArchivePoll_ArchivePollPoll | FFZArchivePoll_ArchivePollPoll[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type FFZArchivePoll_ArchivePollPoll = {
-  id: ID;
-  status: UnknownValue;
+  poll: null | {
+    id: ID;
+    status: UnknownValue;
+    __typename: "Poll";
+  };
   __typename: string;
 };
 
@@ -26022,84 +25850,32 @@ export type FFZCreatePoll_CreatePollPollChoices = {
 export type FFZDeleteChatMessage_DeleteChatMessage = {
   /** ⚠️ Low confidence about: nullable */
   responseCode: null | string;
-  message:
-    | null
-    | FFZDeleteChatMessage_DeleteChatMessageMessage
-    | FFZDeleteChatMessage_DeleteChatMessageMessage[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type FFZDeleteChatMessage_DeleteChatMessageMessage = {
-  id: ID;
-  sender:
-    | null
-    | FFZDeleteChatMessage_DeleteChatMessageMessageSender
-    | FFZDeleteChatMessage_DeleteChatMessageMessageSender[];
-  content:
-    | null
-    | FFZDeleteChatMessage_DeleteChatMessageMessageContent
-    | FFZDeleteChatMessage_DeleteChatMessageMessageContent[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type FFZDeleteChatMessage_DeleteChatMessageMessageContent = {
-  /** ⚠️ Low confidence about: nullable */
-  text: null | string;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type FFZDeleteChatMessage_DeleteChatMessageMessageSender = {
-  id: ID;
-  /** ⚠️ Low confidence about: nullable */
-  login: null | string;
-  /** ⚠️ Low confidence about: nullable */
-  displayName: null | string;
-  __typename: string;
-};
-
-export type FFZFetchPoll_Poll = {
-  id: ID;
-  status: UnknownValue;
-  /** ⚠️ Low confidence about: nullable */
-  title: null | string;
-  ownedBy: null | FFZFetchPoll_PollOwnedBy | FFZFetchPoll_PollOwnedBy[];
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format uint32
-   */
-  durationSeconds: null | number;
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format date-time
-   */
-  endedAt: null | string;
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format date-time
-   */
-  startedAt: null | string;
-  totalVoters: UnknownValue;
-  choices: null | {
+  message: null | {
+    /**
+     * @format uuid
+     * @example ["279e8293-cec0-40df-a475-6b35981a2e49"]
+     */
     id: ID;
-    /** ⚠️ Low confidence about: nullable */
-    title: null | string;
-    votes: null | {
-      id: ID;
-      base: UnknownValue;
-      bits: UnknownValue;
+    sender: {
       /**
-       * ⚠️ Low confidence about: nullable
-       * @format uint32
+       * @pattern ^[0-9]+$
+       * @example ["23161357"]
        */
-      total: null | number;
-      __typename: "PollVoteBreakdown";
+      id: ID;
+      /** @example ["lirik", "twitch", "cdprojektred", "forsen", "tickett_", "st1mgreeen", "lipton_18"] */
+      login: string;
+      /** @example ["Twitch", "CD PROJEKT RED", "LIRIK", "forsen", "ayuuexe", "xQc", "RSDragonwilds"] */
+      displayName: string;
+      __typename: "User";
     };
-    __typename: "PollChoice";
+    content: null | {
+      /** @example ["NODDERS  vampire server"] */
+      text: string;
+      __typename: "MessageContent";
+    };
+    __typename: "Message";
   };
-  __typename: "Poll";
+  __typename: string;
 };
 
 /** ℹ️ Not real Twitch type name */
@@ -26172,7 +25948,7 @@ export type FFZGetDrops_UserInventory = {
     /** @example ["V3.7 Wuthering Waves", "Twitch Drops campaign 3rd", "Inoxtag Icon Series ", "Dragonfire 9 - #2/7", "Drops", "AOS Drops Day 7", "Rogue Ops - Stage 2"] */
     name: string;
     /** @example ["ACTIVE", "EXPIRED"] */
-    status: string;
+    status: DropCampaignStatus;
     timeBasedDrops:
       | null
       | FFZGetDrops_DropCampaignTimeBasedDrops
@@ -26221,14 +25997,11 @@ export type FFZSearchCategory_SearchCategories = {
 
 /** ℹ️ Not real Twitch type name */
 export type FFZTerminatePoll_TerminatePoll = {
-  poll: null | FFZTerminatePoll_TerminatePollPoll | FFZTerminatePoll_TerminatePollPoll[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type FFZTerminatePoll_TerminatePollPoll = {
-  id: ID;
-  status: UnknownValue;
+  poll: null | {
+    id: ID;
+    status: UnknownValue;
+    __typename: "Poll";
+  };
   __typename: string;
 };
 
@@ -26315,24 +26088,29 @@ export type FeatureClipsUpdateClips_UpdateFeaturedClipsResults = {
   /** ⚠️ Low confidence about: nullable */
   slug: null | string;
   error: UnknownValue;
-  clip:
-    | null
-    | FeatureClipsUpdateClips_UpdateFeaturedClipsResultsClip
-    | FeatureClipsUpdateClips_UpdateFeaturedClipsResultsClip[];
+  clip: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["3942697259"]
+     */
+    id: ID;
+    isFeatured: boolean;
+    __typename: "Clip";
+  };
   __typename: string;
 };
 
 /** ℹ️ Not real Twitch type name */
-export type FeatureClipsUpdateClips_UpdateFeaturedClipsResultsClip = {
-  id: ID;
-  /** ⚠️ Low confidence about: nullable */
-  isFeatured: null | boolean;
-  __typename: string;
-};
+export type FeatureCreatorHomeCardFeatureCompletionState =
+  | "COMPLETED"
+  | "IN_PROGRESS"
+  | "NOT_STARTED"
+  | "OPT_OUT"
+  | "UNKNOWN";
 
 export type FeatureCreatorHomeCardFragment = {
   /** @example ["NOT_STARTED", "COMPLETED"] */
-  featureCompletionState: string;
+  featureCompletionState: FeatureCreatorHomeCardFeatureCompletionState;
   emoteAssets: null | SubEmoteFragment;
   badgeAsset:
     | null
@@ -26502,15 +26280,24 @@ export type FeatureOptInStateInput = {
   userID: ID;
 };
 
+/** ℹ️ Not real Twitch type name */
+export type FeatureOptInStateResultOptInState = "NONE";
+
+/** ℹ️ Not real Twitch type name */
+export type FeaturedStreamSourceType = "PROMOTION";
+
 export type FeaturedUpcomingStreamsOptions = {
   /** @example ["TOP"] */
-  scheduleType?: null | string;
+  scheduleType?: null | FeaturedUpcomingStreamsOptionsScheduleType;
   /**
    * @format int32
    * @example [180]
    */
   utcOffsetMinutes?: null | number;
 };
+
+/** ℹ️ Not real Twitch type name */
+export type FeaturedUpcomingStreamsOptionsScheduleType = "TOP";
 
 export type FeedClipFragment = {
   content: null | FeedClipFragment_FeedClipContent | FeedClipFragment_FeedClipContent[];
@@ -26538,11 +26325,28 @@ export type FeedClipFragment_FeedClipContent = {
    * @format uint32
    */
   durationSeconds: null | number;
-  game: null | FeedClipFragment_FeedClipContentGame | FeedClipFragment_FeedClipContentGame[];
-  broadcastIdentifier:
-    | null
-    | FeedClipFragment_FeedClipContentBroadcastIdentifier
-    | FeedClipFragment_FeedClipContentBroadcastIdentifier[];
+  game: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["509672"]
+     */
+    id: ID;
+    /** @example ["irl", "cyberpunk-2077", "just-chatting", "special-events", "grand-theft-auto-v", "overwatch-2", "counter-strike"] */
+    slug: string;
+    /** @example ["IRL", "Cyberpunk 2077", "Just Chatting", "Special Events", "Gwent: The Witcher Card Game", "Grand Theft Auto V", "DayZ"] */
+    displayName: string;
+    /** @example ["IRL", "Cyberpunk 2077", "Just Chatting", "Special Events", "League of Legends", "You Know The Drill", "RuneScape: Dragonwilds"] */
+    name: string;
+    __typename: "Game";
+  };
+  broadcastIdentifier: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["319108158181"]
+     */
+    id: ID;
+    __typename: "BroadcastIdOnly";
+  };
   /** ⚠️ Low confidence about: nullable */
   slug: null | string;
   /** ⚠️ Low confidence about: nullable */
@@ -26629,12 +26433,6 @@ export type FeedClipFragment_FeedClipContentAssetsVideoQualities = {
 };
 
 /** ℹ️ Not real Twitch type name */
-export type FeedClipFragment_FeedClipContentBroadcastIdentifier = {
-  id: ID;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
 export type FeedClipFragment_FeedClipContentBroadcaster = {
   id: ID;
   /** ⚠️ Low confidence about: nullable */
@@ -26661,27 +26459,18 @@ export type FeedClipFragment_FeedClipContentBroadcaster = {
     | null
     | FeedClipFragment_FeedClipContentBroadcasterSelf
     | FeedClipFragment_FeedClipContentBroadcasterSelf[];
-  channel:
-    | null
-    | FeedClipFragment_FeedClipContentBroadcasterChannel
-    | FeedClipFragment_FeedClipContentBroadcasterChannel[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type FeedClipFragment_FeedClipContentBroadcasterChannel = {
-  id: ID;
-  clipsSettings:
-    | null
-    | FeedClipFragment_FeedClipContentBroadcasterChannelClipsSettings
-    | FeedClipFragment_FeedClipContentBroadcasterChannelClipsSettings[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type FeedClipFragment_FeedClipContentBroadcasterChannelClipsSettings = {
-  /** ⚠️ Low confidence about: nullable */
-  isClipCommentsEnabled: null | boolean;
+  channel: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["26490481"]
+     */
+    id: ID;
+    clipsSettings: {
+      isClipCommentsEnabled: boolean;
+      __typename: "ChannelClipsSettings";
+    };
+    __typename: "Channel";
+  };
   __typename: string;
 };
 
@@ -26742,18 +26531,6 @@ export type FeedClipFragment_FeedClipContentCurator = {
   login: null | string;
   /** ⚠️ Low confidence about: nullable */
   displayName: null | string;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type FeedClipFragment_FeedClipContentGame = {
-  id: ID;
-  /** ⚠️ Low confidence about: nullable */
-  slug: null | string;
-  /** ⚠️ Low confidence about: nullable */
-  displayName: null | string;
-  /** ⚠️ Low confidence about: nullable */
-  name: null | string;
   __typename: string;
 };
 
@@ -26885,10 +26662,23 @@ export type FeedContentFragmentPostPlay_FeedClipContent = {
     | null
     | FeedContentFragmentPostPlay_FeedClipContentCurator
     | FeedContentFragmentPostPlay_FeedClipContentCurator[];
-  game:
-    | null
-    | FeedContentFragmentPostPlay_FeedClipContentGame
-    | FeedContentFragmentPostPlay_FeedClipContentGame[];
+  game: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["509672"]
+     */
+    id: ID;
+    /** @example ["IRL", "Cyberpunk 2077", "Just Chatting", "Special Events", "League of Legends", "You Know The Drill", "RuneScape: Dragonwilds"] */
+    name: string;
+    /** @example ["IRL", "Cyberpunk 2077", "Just Chatting", "Special Events", "Gwent: The Witcher Card Game", "Grand Theft Auto V", "DayZ"] */
+    displayName: string;
+    /**
+     * @example ["irl", "cyberpunk-2077", "just-chatting", "special-events", "grand-theft-auto-v", "overwatch-2", "counter-strike"]
+     * @aliasFor slug
+     */
+    categorySlug: string;
+    __typename: "Game";
+  };
   broadcaster:
     | null
     | FeedContentFragmentPostPlay_FeedClipContentBroadcaster
@@ -26910,10 +26700,11 @@ export type FeedContentFragmentPostPlay_FeedClipContent = {
    * @format uint32
    */
   durationSeconds: null | number;
-  previewThumbnailProperties:
-    | null
-    | FeedContentFragmentPostPlay_FeedClipContentPreviewThumbnailProperties
-    | FeedContentFragmentPostPlay_FeedClipContentPreviewThumbnailProperties[];
+  previewThumbnailProperties: null | {
+    /** @example ["BLUR_NOT_REQUIRED", "BLUR_REASON_TYPE_SEXUAL_THEMES"] */
+    blurReason: PreviewThumbnailPropertiesBlurReason;
+    __typename: "PreviewThumbnailProperties";
+  };
   __typename: string;
 };
 
@@ -26934,27 +26725,6 @@ export type FeedContentFragmentPostPlay_FeedClipContentCurator = {
   login: null | string;
   /** ⚠️ Low confidence about: nullable */
   displayName: null | string;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type FeedContentFragmentPostPlay_FeedClipContentGame = {
-  id: ID;
-  /** ⚠️ Low confidence about: nullable */
-  name: null | string;
-  /** ⚠️ Low confidence about: nullable */
-  displayName: null | string;
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @aliasFor slug
-   */
-  categorySlug: null | string;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type FeedContentFragmentPostPlay_FeedClipContentPreviewThumbnailProperties = {
-  blurReason: UnknownValue;
   __typename: string;
 };
 
@@ -26982,7 +26752,21 @@ export type FeedContentFragment_FeedClipContent = {
     | null
     | FeedContentFragment_FeedClipContentCurator
     | FeedContentFragment_FeedClipContentCurator[];
-  game: null | FeedContentFragment_FeedClipContentGame | FeedContentFragment_FeedClipContentGame[];
+  game: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["509672"]
+     */
+    id: ID;
+    /** @example ["IRL", "Cyberpunk 2077", "Just Chatting", "Special Events", "League of Legends", "You Know The Drill", "RuneScape: Dragonwilds"] */
+    name: string;
+    /**
+     * @example ["irl", "cyberpunk-2077", "just-chatting", "special-events", "grand-theft-auto-v", "overwatch-2", "counter-strike"]
+     * @aliasFor slug
+     */
+    categorySlug: string;
+    __typename: "Game";
+  };
   broadcaster:
     | null
     | FeedContentFragment_FeedClipContentBroadcaster
@@ -27004,10 +26788,11 @@ export type FeedContentFragment_FeedClipContent = {
    * @format uint32
    */
   durationSeconds: null | number;
-  previewThumbnailProperties:
-    | null
-    | FeedContentFragment_FeedClipContentPreviewThumbnailProperties
-    | FeedContentFragment_FeedClipContentPreviewThumbnailProperties[];
+  previewThumbnailProperties: null | {
+    /** @example ["BLUR_NOT_REQUIRED", "BLUR_REASON_TYPE_SEXUAL_THEMES"] */
+    blurReason: PreviewThumbnailPropertiesBlurReason;
+    __typename: "PreviewThumbnailProperties";
+  };
   __typename: string;
 };
 
@@ -27050,25 +26835,6 @@ export type FeedContentFragment_FeedClipContentCurator = {
   __typename: string;
 };
 
-/** ℹ️ Not real Twitch type name */
-export type FeedContentFragment_FeedClipContentGame = {
-  id: ID;
-  /** ⚠️ Low confidence about: nullable */
-  name: null | string;
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @aliasFor slug
-   */
-  categorySlug: null | string;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type FeedContentFragment_FeedClipContentPreviewThumbnailProperties = {
-  blurReason: UnknownValue;
-  __typename: string;
-};
-
 export type FeedItemsInput = {
   context?: null | {
     clientApp?: null | string;
@@ -27076,7 +26842,7 @@ export type FeedItemsInput = {
     /** @example ["web"] */
     platform?: null | string;
   };
-  feedLocation?: null | FeedItemsInputFeedLocation;
+  feedLocation?: null | InputFeedLocation;
   feedLocationAttributes?: null | { categorySlugAllowlist?: null | string[] };
   ingress?: null | FeedItemsInputIngress;
   /** @format uint32 */
@@ -27086,14 +26852,29 @@ export type FeedItemsInput = {
 };
 
 /** ℹ️ Not real Twitch type name */
-export type FeedItemsInputFeedLocation = "CLIPS" | "CLIPS_CATEGORY";
-
-/** ℹ️ Not real Twitch type name */
-export type FeedItemsInputIngress = "BROWSE_CATEGORY_CLIP";
+export type FeedItemsInputIngress =
+  | "BROWSE_CATEGORY_CLIP"
+  | "FEED_TAB_DEFAULT"
+  | "FEED_TAB_NON_DEFAULT"
+  | "FEED_TAB_NON_DEFAULT_INELIGIBLE"
+  | "FIREFLY"
+  | "INELIGIBLE"
+  | "OTHER";
 
 export type FeedStreamFragment = {
   content: null | FeedStreamFragment_FeedStreamContent | FeedStreamFragment_FeedStreamContent[];
   __typename: "FeedStream";
+};
+
+/** ℹ️ Not real Twitch type name */
+export type FeedStreamFragment_ChannelCollaboration = {
+  id: ID;
+  collaborators: null | {
+    id: ID;
+    user: null | FeedCollaboratorUserFragment;
+    __typename: "Collaborator";
+  };
+  __typename: string;
 };
 
 /** ℹ️ Not real Twitch type name */
@@ -27109,10 +26890,32 @@ export type FeedStreamFragment_FeedStreamContent = {
    * @format uint32
    */
   collaborationViewersCount: null | number;
-  costreamDetails:
-    | null
-    | FeedStreamFragment_FeedStreamContentCostreamDetails
-    | FeedStreamFragment_FeedStreamContentCostreamDetails[];
+  costreamDetails: null | {
+    /** @example ["ORGANIZER", "COSTREAMER"] */
+    role: CostreamDetailsRole;
+    /**
+     * @format uint32
+     * @example [53318, 665, 54790, 55713, 54158]
+     */
+    totalViewersCount: number;
+    organizer: null | {
+      /**
+       * @pattern ^[0-9]+$
+       * @example ["23161357"]
+       */
+      id: ID;
+      stream: null | {
+        /**
+         * @pattern ^[0-9]+$
+         * @example ["316180784725"]
+         */
+        id: ID;
+        __typename: "Stream";
+      };
+      __typename: "User";
+    };
+    __typename: "CostreamDetails";
+  };
   /**
    * ⚠️ Low confidence about: nullable
    * @format uri
@@ -27145,30 +26948,63 @@ export type FeedStreamFragment_FeedStreamContent = {
    */
   width: null | number;
   type: UnknownValue;
-  playbackAccessToken:
-    | null
-    | FeedStreamFragment_FeedStreamContentPlaybackAccessToken
-    | FeedStreamFragment_FeedStreamContentPlaybackAccessToken[];
-  game:
-    | null
-    | FeedStreamFragment_FeedStreamContentGame
-    | FeedStreamFragment_FeedStreamContentGame[];
+  playbackAccessToken: null | {
+    /** @example ["deadbeefdeadbeefdeadbeefdeadbeefdeadbeef"] */
+    signature: string;
+    /** @example ["{\"authorization\":{\"forbidden\":false,\"reason\":\"\"},\"clip_uri\":\"https://d1ndex63qxojbr.cloudfront.net/nauth/ce4b4ef1-4e8d-4391-bff6-2bc4c5506a4d/landscape/avc/360/index.mp4\",\"clip_slug\":\"DeliciousDelightfulPicklesWOOP\",\"device_id\":null,\"expires\":1792252612,\"user_id\":\"\",\"version\":3}"] */
+    value: string;
+    authorization: {
+      /** @example ["NONE", "GEOBLOCKED"] */
+      forbiddenReasonCode: PlaybackAccessTokenAuthorizationForbiddenReasonCode;
+      __typename: "PlaybackAccessTokenAuthorization";
+    };
+    __typename: "PlaybackAccessToken";
+  };
+  game: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["509672"]
+     */
+    id: ID;
+    /** @example ["IRL", "Cyberpunk 2077", "Just Chatting", "Special Events", "League of Legends", "You Know The Drill", "RuneScape: Dragonwilds"] */
+    name: string;
+    /** @example ["IRL", "Cyberpunk 2077", "Just Chatting", "Special Events", "Gwent: The Witcher Card Game", "Grand Theft Auto V", "DayZ"] */
+    displayName: string;
+    /** @example ["irl", "cyberpunk-2077", "just-chatting", "special-events", "grand-theft-auto-v", "overwatch-2", "counter-strike"] */
+    slug: string;
+    __typename: "Game";
+  };
   freeformTags:
     | null
-    | FeedStreamFragment_FeedStreamContentFreeformTags
-    | FeedStreamFragment_FeedStreamContentFreeformTags[];
+    | (null | {
+        /** @example ["fft:CHANNEL:71092938:0", "fft:CHANNEL:71092938:1"] */
+        id: ID;
+        /** @example ["English", "femboy", "Speedrun", "Русский", "Уют", "Образование", "Женщина"] */
+        name: string;
+        __typename: "FreeformTag";
+      })[];
   contentClassificationLabels:
     | null
     | FeedStreamFragment_FeedStreamContentContentClassificationLabels
     | FeedStreamFragment_FeedStreamContentContentClassificationLabels[];
-  contentClassificationLabelPolicyProperties:
-    | null
-    | FeedStreamFragment_FeedStreamContentContentClassificationLabelPolicyProperties
-    | FeedStreamFragment_FeedStreamContentContentClassificationLabelPolicyProperties[];
-  contentPolicyProperties:
-    | null
-    | FeedStreamFragment_FeedStreamContentContentPolicyProperties
-    | FeedStreamFragment_FeedStreamContentContentPolicyProperties[];
+  contentClassificationLabelPolicyProperties: null | {
+    signPostProperties: {
+      /** @example ["SIGN_POST_NOT_REQUIRED"] */
+      signPost: ContentClassificationLabelPolicySignPostPropertiesSignPost;
+      contentClassificationLabels: UnknownValue[];
+      __typename: "ContentClassificationLabelPolicySignPostProperties";
+    };
+    contentGateProperties: {
+      /** @example ["CONTENT_GATE_NOT_REQUIRED"] */
+      contentGate: ContentClassificationLabelPolicyContentGatePropertiesContentGate;
+      __typename: "ContentClassificationLabelPolicyContentGateProperties";
+    };
+    __typename: "ContentClassificationLabelPolicyProperties";
+  };
+  contentPolicyProperties: null | {
+    hasBrandedContent: boolean;
+    __typename: "ContentPolicyProperties";
+  };
   broadcaster:
     | null
     | FeedStreamFragment_FeedStreamContentBroadcaster
@@ -27185,10 +27021,16 @@ export type FeedStreamFragment_FeedStreamContentBroadcaster = {
     | null
     | FeedStreamFragment_FeedStreamContentBroadcasterRoles
     | FeedStreamFragment_FeedStreamContentBroadcasterRoles[];
-  broadcastSettings:
-    | null
-    | FeedStreamFragment_FeedStreamContentBroadcasterBroadcastSettings
-    | FeedStreamFragment_FeedStreamContentBroadcasterBroadcastSettings[];
+  broadcastSettings: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["71092938"]
+     */
+    id: ID;
+    /** @example ["", "Blind playthrough of Terraria! Permadeath and Expert mode!", "BOO! DRUM AND BASS! gogo yubari/killbill 🩸 (˵◝ ⩊  ◜˵マ !discord"] */
+    title: string;
+    __typename: "BroadcastSettings";
+  };
   /** ⚠️ Low confidence about: nullable */
   login: null | string;
   /** ⚠️ Low confidence about: nullable */
@@ -27203,45 +27045,18 @@ export type FeedStreamFragment_FeedStreamContentBroadcaster = {
     | null
     | FeedStreamFragment_FeedStreamContentBroadcasterSelf
     | FeedStreamFragment_FeedStreamContentBroadcasterSelf[];
-  channel:
-    | null
-    | FeedStreamFragment_FeedStreamContentBroadcasterChannel
-    | FeedStreamFragment_FeedStreamContentBroadcasterChannel[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type FeedStreamFragment_FeedStreamContentBroadcasterBroadcastSettings = {
-  id: ID;
-  /** ⚠️ Low confidence about: nullable */
-  title: null | string;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type FeedStreamFragment_FeedStreamContentBroadcasterChannel = {
-  id: ID;
-  collaboration:
-    | null
-    | FeedStreamFragment_FeedStreamContentBroadcasterChannelCollaboration
-    | FeedStreamFragment_FeedStreamContentBroadcasterChannelCollaboration[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type FeedStreamFragment_FeedStreamContentBroadcasterChannelCollaboration = {
-  id: ID;
-  collaborators:
-    | null
-    | FeedStreamFragment_FeedStreamContentBroadcasterChannelCollaborationCollaborators
-    | FeedStreamFragment_FeedStreamContentBroadcasterChannelCollaborationCollaborators[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type FeedStreamFragment_FeedStreamContentBroadcasterChannelCollaborationCollaborators = {
-  id: ID;
-  user: null | FeedCollaboratorUserFragment;
+  channel: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["26490481"]
+     */
+    id: ID;
+    collaboration:
+      | null
+      | FeedStreamFragment_ChannelCollaboration
+      | FeedStreamFragment_ChannelCollaboration[];
+    __typename: "Channel";
+  };
   __typename: string;
 };
 
@@ -27277,114 +27092,10 @@ export type FeedStreamFragment_FeedStreamContentBroadcasterSelfFollower = {
 };
 
 /** ℹ️ Not real Twitch type name */
-export type FeedStreamFragment_FeedStreamContentContentClassificationLabelPolicyProperties = {
-  signPostProperties:
-    | null
-    | FeedStreamFragment_FeedStreamContentContentClassificationLabelPolicyPropertiesSignPostProperties
-    | FeedStreamFragment_FeedStreamContentContentClassificationLabelPolicyPropertiesSignPostProperties[];
-  contentGateProperties:
-    | null
-    | FeedStreamFragment_FeedStreamContentContentClassificationLabelPolicyPropertiesContentGateProperties
-    | FeedStreamFragment_FeedStreamContentContentClassificationLabelPolicyPropertiesContentGateProperties[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type FeedStreamFragment_FeedStreamContentContentClassificationLabelPolicyPropertiesContentGateProperties =
-  {
-    contentGate: UnknownValue;
-    __typename: string;
-  };
-
-/** ℹ️ Not real Twitch type name */
-export type FeedStreamFragment_FeedStreamContentContentClassificationLabelPolicyPropertiesSignPostProperties =
-  {
-    signPost: UnknownValue;
-    contentClassificationLabels: UnknownValue;
-    __typename: string;
-  };
-
-/** ℹ️ Not real Twitch type name */
 export type FeedStreamFragment_FeedStreamContentContentClassificationLabels = {
   id: ID;
   /** ⚠️ Low confidence about: nullable */
   localizedName: null | string;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type FeedStreamFragment_FeedStreamContentContentPolicyProperties = {
-  /** ⚠️ Low confidence about: nullable */
-  hasBrandedContent: null | boolean;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type FeedStreamFragment_FeedStreamContentCostreamDetails = {
-  role: UnknownValue;
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format uint32
-   */
-  totalViewersCount: null | number;
-  organizer:
-    | null
-    | FeedStreamFragment_FeedStreamContentCostreamDetailsOrganizer
-    | FeedStreamFragment_FeedStreamContentCostreamDetailsOrganizer[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type FeedStreamFragment_FeedStreamContentCostreamDetailsOrganizer = {
-  id: ID;
-  stream:
-    | null
-    | FeedStreamFragment_FeedStreamContentCostreamDetailsOrganizerStream
-    | FeedStreamFragment_FeedStreamContentCostreamDetailsOrganizerStream[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type FeedStreamFragment_FeedStreamContentCostreamDetailsOrganizerStream = {
-  id: ID;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type FeedStreamFragment_FeedStreamContentFreeformTags = {
-  id: ID;
-  /** ⚠️ Low confidence about: nullable */
-  name: null | string;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type FeedStreamFragment_FeedStreamContentGame = {
-  id: ID;
-  /** ⚠️ Low confidence about: nullable */
-  name: null | string;
-  /** ⚠️ Low confidence about: nullable */
-  displayName: null | string;
-  /** ⚠️ Low confidence about: nullable */
-  slug: null | string;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type FeedStreamFragment_FeedStreamContentPlaybackAccessToken = {
-  signature: UnknownValue;
-  value: UnknownValue;
-  authorization:
-    | null
-    | FeedStreamFragment_FeedStreamContentPlaybackAccessTokenAuthorization
-    | FeedStreamFragment_FeedStreamContentPlaybackAccessTokenAuthorization[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type FeedStreamFragment_FeedStreamContentPlaybackAccessTokenAuthorization = {
-  /** ⚠️ Low confidence about: nullable */
-  forbiddenReasonCode: null | string;
   __typename: string;
 };
 
@@ -27582,26 +27293,20 @@ export type FilterTagFragment = {
   /** @example ["Rhythm & Music Game", "Indie Game", "Arcade", "Action", "RPG", "Adventure Game", "Strategy"] */
   tagName: string;
   /** @example ["CATEGORY"] */
-  scope: string;
+  scope: TagScope;
   __typename: "Tag";
 };
 
 /** ℹ️ Not real Twitch type name */
 export type FinishSponsorshipCampaignInstance_FinishSponsorshipCampaignInstance = {
-  campaignInstance:
-    | null
-    | FinishSponsorshipCampaignInstance_FinishSponsorshipCampaignInstanceCampaignInstance
-    | FinishSponsorshipCampaignInstance_FinishSponsorshipCampaignInstanceCampaignInstance[];
+  campaignInstance: null | {
+    id: ID;
+    __typename: "CampaignInstance";
+  };
   error:
     | null
     | FinishSponsorshipCampaignInstance_FinishSponsorshipCampaignInstanceError
     | FinishSponsorshipCampaignInstance_FinishSponsorshipCampaignInstanceError[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type FinishSponsorshipCampaignInstance_FinishSponsorshipCampaignInstanceCampaignInstance = {
-  id: ID;
   __typename: string;
 };
 
@@ -27717,10 +27422,10 @@ export type FollowEdgeNotificationSettingsFragment = {
   id: ID;
   isEnabled: boolean;
   /** @example ["NEVER"] */
-  followsSettingState: string;
+  followsSettingState: ChannelNotificationSettingsFollowsSettingState;
   nodes: {
     /** @example ["ALL"] */
-    category: string;
+    category: ChannelNotificationSettingCategory;
     isEnabled: boolean;
     /** @example ["off"] */
     settingState: string;
@@ -27731,131 +27436,86 @@ export type FollowEdgeNotificationSettingsFragment = {
 
 /** ℹ️ Not real Twitch type name */
 export type FollowGameButtonFollowGame_FollowGame = {
-  game:
-    | null
-    | FollowGameButtonFollowGame_FollowGameGame
-    | FollowGameButtonFollowGame_FollowGameGame[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type FollowGameButtonFollowGame_FollowGameGame = {
-  id: ID;
-  self:
-    | null
-    | FollowGameButtonFollowGame_FollowGameGameSelf
-    | FollowGameButtonFollowGame_FollowGameGameSelf[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type FollowGameButtonFollowGame_FollowGameGameSelf = {
-  follow:
-    | null
-    | FollowGameButtonFollowGame_FollowGameGameSelfFollow
-    | FollowGameButtonFollowGame_FollowGameGameSelfFollow[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type FollowGameButtonFollowGame_FollowGameGameSelfFollow = {
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format date-time
-   */
-  followedAt: null | string;
+  game: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["509672"]
+     */
+    id: ID;
+    self: {
+      follow: null | {
+        /**
+         * @format date-time
+         * @example ["2016-04-22T03:46:46.801392Z", "2024-12-17T08:00:08.957987415Z"]
+         */
+        followedAt: string;
+        __typename: "GameFollow";
+      };
+      __typename: "GameSelfConnection";
+    };
+    __typename: "Game";
+  };
   __typename: string;
 };
 
 /** ℹ️ Not real Twitch type name */
 export type FollowGameButtonUnfollowGame_UnfollowGame = {
-  follow:
-    | null
-    | FollowGameButtonUnfollowGame_UnfollowGameFollow
-    | FollowGameButtonUnfollowGame_UnfollowGameFollow[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type FollowGameButtonUnfollowGame_UnfollowGameFollow = {
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format date-time
-   */
-  followedAt: null | string;
+  follow: null | {
+    /**
+     * @format date-time
+     * @example ["2016-04-22T03:46:46.801392Z", "2024-12-17T08:00:08.957987415Z"]
+     */
+    followedAt: string;
+    __typename: "GameFollow";
+  };
   __typename: string;
 };
 
 /** ℹ️ Not real Twitch type name */
 export type FollowGameCardFollowGame_FollowGame = {
-  game: null | FollowGameCardFollowGame_FollowGameGame | FollowGameCardFollowGame_FollowGameGame[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type FollowGameCardFollowGame_FollowGameGame = {
-  id: ID;
-  self:
-    | null
-    | FollowGameCardFollowGame_FollowGameGameSelf
-    | FollowGameCardFollowGame_FollowGameGameSelf[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type FollowGameCardFollowGame_FollowGameGameSelf = {
-  follow:
-    | null
-    | FollowGameCardFollowGame_FollowGameGameSelfFollow
-    | FollowGameCardFollowGame_FollowGameGameSelfFollow[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type FollowGameCardFollowGame_FollowGameGameSelfFollow = {
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format date-time
-   */
-  followedAt: null | string;
+  game: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["509672"]
+     */
+    id: ID;
+    self: {
+      follow: null | {
+        /**
+         * @format date-time
+         * @example ["2016-04-22T03:46:46.801392Z", "2024-12-17T08:00:08.957987415Z"]
+         */
+        followedAt: string;
+        __typename: "GameFollow";
+      };
+      __typename: "GameSelfConnection";
+    };
+    __typename: "Game";
+  };
   __typename: string;
 };
 
 /** ℹ️ Not real Twitch type name */
 export type FollowGameCardUnfollowGame_UnfollowGame = {
-  game:
-    | null
-    | FollowGameCardUnfollowGame_UnfollowGameGame
-    | FollowGameCardUnfollowGame_UnfollowGameGame[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type FollowGameCardUnfollowGame_UnfollowGameGame = {
-  id: ID;
-  self:
-    | null
-    | FollowGameCardUnfollowGame_UnfollowGameGameSelf
-    | FollowGameCardUnfollowGame_UnfollowGameGameSelf[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type FollowGameCardUnfollowGame_UnfollowGameGameSelf = {
-  follow:
-    | null
-    | FollowGameCardUnfollowGame_UnfollowGameGameSelfFollow
-    | FollowGameCardUnfollowGame_UnfollowGameGameSelfFollow[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type FollowGameCardUnfollowGame_UnfollowGameGameSelfFollow = {
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format date-time
-   */
-  followedAt: null | string;
+  game: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["509672"]
+     */
+    id: ID;
+    self: {
+      follow: null | {
+        /**
+         * @format date-time
+         * @example ["2016-04-22T03:46:46.801392Z", "2024-12-17T08:00:08.957987415Z"]
+         */
+        followedAt: string;
+        __typename: "GameFollow";
+      };
+      __typename: "GameSelfConnection";
+    };
+    __typename: "Game";
+  };
   __typename: string;
 };
 
@@ -27872,7 +27532,7 @@ export type FollowUserInput = {
 
 export type FollowVerificationSettings = {
   /** @example ["NONE"] */
-  emailVerificationMode: string;
+  emailVerificationMode: VerificationMode;
   partialEmailVerificationConfig: {
     /**
      * @format uint32
@@ -27883,7 +27543,7 @@ export type FollowVerificationSettings = {
     __typename: "FollowPartialVerificationConfig";
   };
   /** @example ["NONE"] */
-  phoneVerificationMode: string;
+  phoneVerificationMode: VerificationMode;
   partialPhoneVerificationConfig: {
     /**
      * @format uint32
@@ -27971,26 +27631,24 @@ export type FoundersBadgePanelQuery_ChannelFounders = {
   isBanned: null | boolean;
   /** ⚠️ Low confidence about: nullable */
   isBlocked: null | boolean;
-  user:
-    | null
-    | FoundersBadgePanelQuery_ChannelFoundersUser
-    | FoundersBadgePanelQuery_ChannelFoundersUser[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type FoundersBadgePanelQuery_ChannelFoundersUser = {
-  id: ID;
-  /** ⚠️ Low confidence about: nullable */
-  login: null | string;
-  /** ⚠️ Low confidence about: nullable */
-  displayName: null | string;
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format uri
-   * @gqlArg `width: Int [70]`
-   */
-  profileImageURL: null | string;
+  user: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["23161357"]
+     */
+    id: ID;
+    /** @example ["lirik", "twitch", "cdprojektred", "forsen", "tickett_", "st1mgreeen", "lipton_18"] */
+    login: string;
+    /** @example ["Twitch", "CD PROJEKT RED", "LIRIK", "forsen", "ayuuexe", "xQc", "RSDragonwilds"] */
+    displayName: string;
+    /**
+     * @format uri
+     * @example ["https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-70x70.png", "https://static-cdn.jtvnw.net/jtv_user_pictures/3c3366d7-728a-4204-bfdd-7c823858e4d9-profile_image-70x70.png"]
+     * @gqlArg `width: Int [50, 70, 300, 28, 150]`
+     */
+    profileImageURL: string;
+    __typename: "User";
+  };
   __typename: string;
 };
 
@@ -28009,22 +27667,7 @@ export type FreeformTagItemFragment = {
   __typename: "FreeformTagAnalytic";
 };
 
-export type FreeformTagSort = "CONVERSIONS";
-
-/** ℹ️ Not real Twitch type name */
-export type FundraisersManagementPage_ChannelCharityCampaigns = {
-  edges: {
-    node: null | CharityCampaignItem;
-    /** ⚠️ Low confidence about: nullable */
-    cursor: null | Cursor;
-    __typename: string;
-  }[];
-  pageInfo: null | {
-    hasNextPage: boolean;
-    __typename: "PageInfo";
-  };
-  __typename: string;
-};
+export type FreeformTagSort = "CONVERSIONS" | "IMPRESSIONS";
 
 export type GDPRVendorStatus = {
   status: null | TcfVendorStatus | NonTCFVendorStatus;
@@ -28090,14 +27733,45 @@ export type GameClipsInput = {
   /** @format time */
   endAt?: null | string;
   /** @example ["LAST_WEEK", "LAST_DAY", "LAST_MONTH", "ALL_TIME"] */
-  filter?: null | string;
+  filter?: null | ClipsInputFilter;
   /** @example ["EN"] */
-  languages?: null | string[];
+  languages?: null | GameClipsInputLanguages[];
   period?: null | ClipsPeriod;
   shouldFilterByDiscoverySetting?: null | boolean;
   /** @format time */
   startAt?: null | string;
 };
+
+/** ℹ️ Not real Twitch type name */
+export type GameClipsInputLanguages =
+  | "AR"
+  | "BG"
+  | "CS"
+  | "DA"
+  | "DE"
+  | "EL"
+  | "EN"
+  | "ES"
+  | "FI"
+  | "FR"
+  | "HI"
+  | "HU"
+  | "IT"
+  | "JA"
+  | "KO"
+  | "NL"
+  | "NO"
+  | "PL"
+  | "PT"
+  | "RO"
+  | "RU"
+  | "SK"
+  | "SV"
+  | "TH"
+  | "TR"
+  | "UK"
+  | "VI"
+  | "ZH";
 
 export type GameFromFeedback = {
   /**
@@ -28122,7 +27796,7 @@ export type GameOptions = {
   /** @example ["JIRA-VXP-2397"] */
   requestID?: null | ID;
   /** @example ["RELEVANCE", "VIEWER_COUNT"] */
-  sort?: null | string;
+  sort?: null | OptionsSort;
   /** @example ["80427d95-bb46-42d3-bf4d-408e9bdca49a", "643fe658-c4fc-45f0-9aed-cbe54a7c1d10", "4d1eaa36-f750-4862-b7e9-d0a13970d535"] */
   tags?: null | string[];
 };
@@ -28153,19 +27827,57 @@ export type GameSelectorSearchCategories_SearchCategories = {
 
 export type GameStreamOptions = {
   /** @example ["EN", "ID", "CA", "DA", "DE", "ES", "FR", "IT", "HU", "NL", "NO", "PL", "PT", "RO", "SK", "FI", "SV", "TL", "VI", "TR", "CS", "EL", "BG", "RU", "UK", "AR", "MS", "HI", "TH", "ZH", "JA", "KO", "ASL", "OTHER"] */
-  broadcasterLanguages?: null | string[];
+  broadcasterLanguages?: null | GameStreamOptionsBroadcasterLanguages[];
   /** @example ["DropsEnabeled", "AskMeAnything", "DropsEnabled", "GTARP"] */
   freeformTags?: null | string[];
   /** @example ["SUB_ONLY_LIVE"] */
-  includeRestricted?: null | string[];
+  includeRestricted?: null | IncludeRestricted[];
   recommendationsContext?: null | RecommendationsContext;
   /** @example ["JIRA-VXP-2397"] */
   requestID?: null | ID;
   /** @example ["RELEVANCE", "VIEWER_COUNT", "VIEWER_COUNT_ASC", "RECENT"] */
-  sort?: null | string;
+  sort?: null | OptionsSort;
   systemFilters?: null | UnknownValue[];
   tags?: null | UnknownValue[];
 };
+
+/** ℹ️ Not real Twitch type name */
+export type GameStreamOptionsBroadcasterLanguages =
+  | "AR"
+  | "ASL"
+  | "BG"
+  | "CA"
+  | "CS"
+  | "DA"
+  | "DE"
+  | "EL"
+  | "EN"
+  | "ES"
+  | "FI"
+  | "FR"
+  | "HI"
+  | "HU"
+  | "ID"
+  | "IT"
+  | "JA"
+  | "KO"
+  | "MS"
+  | "NL"
+  | "NO"
+  | "OTHER"
+  | "PL"
+  | "PT"
+  | "RO"
+  | "RU"
+  | "SK"
+  | "SV"
+  | "TH"
+  | "TL"
+  | "TR"
+  | "UK"
+  | "VI"
+  | "ZH"
+  | "ZH_HK";
 
 export type GameTrackingFields = {
   /**
@@ -29003,76 +28715,9 @@ export type GetPremiumEventSettings_PremiumEventSettingsEvent = {
   __typename: string;
 };
 
-export type GetQuestCampaignWithRewardGroups_QuestCampaign = {
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format uri
-   */
-  redemptionURL: null | string;
-  /** ⚠️ Low confidence about: nullable */
-  description: null | string;
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format uri
-   */
-  detailsURL: null | string;
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format date-time
-   */
-  endsAt: null | string;
-  id: ID;
-  /** ⚠️ Low confidence about: nullable */
-  name: null | string;
-  owner:
-    | null
-    | GetQuestCampaignWithRewardGroups_QuestCampaignOwner
-    | GetQuestCampaignWithRewardGroups_QuestCampaignOwner[];
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format date-time
-   */
-  startsAt: null | string;
-  status: UnknownValue;
-  testViewers:
-    | null
-    | GetQuestCampaignWithRewardGroups_QuestCampaignTestViewers
-    | GetQuestCampaignWithRewardGroups_QuestCampaignTestViewers[];
-  channelAllowlist:
-    | null
-    | GetQuestCampaignWithRewardGroups_QuestCampaignChannelAllowlist
-    | GetQuestCampaignWithRewardGroups_QuestCampaignChannelAllowlist[];
-  /** ⚠️ Low confidence about: nullable */
-  shouldAllowOfflineMonetizedProgress: null | boolean;
-  game:
-    | null
-    | GetQuestCampaignWithRewardGroups_QuestCampaignGame
-    | GetQuestCampaignWithRewardGroups_QuestCampaignGame[];
-  rewardGroups: null | DevQuestRewardGroupFragment;
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format uri
-   */
-  imageURL: null | string;
-  __typename: "QuestCampaign";
-};
-
 /** ℹ️ Not real Twitch type name */
 export type GetQuestCampaignWithRewardGroups_QuestCampaignChannelAllowlist = {
   id: ID;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type GetQuestCampaignWithRewardGroups_QuestCampaignGame = {
-  id: ID;
-  /** ⚠️ Low confidence about: nullable */
-  name: null | string;
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format uri
-   */
-  boxArtURL: null | string;
   __typename: string;
 };
 
@@ -29090,36 +28735,10 @@ export type GetQuestCampaignWithRewardGroups_QuestCampaignTestViewers = {
   __typename: string;
 };
 
-export type GetQuestCampaignsByOrg_Organization = {
-  /**
-   * @format uuid
-   * @example ["beda0fa5-d8c5-4465-be03-fded75d8c01e"]
-   */
-  id: ID;
-  quests:
-    | null
-    | GetQuestCampaignsByOrg_OrganizationQuests
-    | GetQuestCampaignsByOrg_OrganizationQuests[];
-  __typename: "Organization";
-};
-
 /** ℹ️ Not real Twitch type name */
 export type GetQuestCampaignsByOrg_OrganizationQuests = {
   campaigns: null | DevQuestCampaignFragment;
   __typename: string;
-};
-
-export type GetQuestRewardsByOrg_Organization = {
-  /**
-   * @format uuid
-   * @example ["beda0fa5-d8c5-4465-be03-fded75d8c01e"]
-   */
-  id: ID;
-  quests:
-    | null
-    | GetQuestRewardsByOrg_OrganizationQuests
-    | GetQuestRewardsByOrg_OrganizationQuests[];
-  __typename: "Organization";
 };
 
 /** ℹ️ Not real Twitch type name */
@@ -29193,16 +28812,14 @@ export type GetReceivedCollaborationInvites_ReceivedCollaborationInvitesGroupGue
 export type GetReceivedCollaborationInvites_ReceivedCollaborationInvitesGroupGuestStarGuests = {
   /** @aliasFor id */
   slotID: ID;
-  user:
-    | null
-    | GetReceivedCollaborationInvites_ReceivedCollaborationInvitesGroupGuestStarGuestsUser
-    | GetReceivedCollaborationInvites_ReceivedCollaborationInvitesGroupGuestStarGuestsUser[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type GetReceivedCollaborationInvites_ReceivedCollaborationInvitesGroupGuestStarGuestsUser = {
-  id: ID;
+  user: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["23161357"]
+     */
+    id: ID;
+    __typename: "User";
+  };
   __typename: string;
 };
 
@@ -29231,18 +28848,15 @@ export type GetReceivedCollaborationInvites_ReceivedCollaborationInvitesGroupSha
 export type GetReceivedCollaborationInvites_ReceivedCollaborationInvitesGroupSharedChatParticipants =
   {
     id: ID;
-    channel:
-      | null
-      | GetReceivedCollaborationInvites_ReceivedCollaborationInvitesGroupSharedChatParticipantsChannel
-      | GetReceivedCollaborationInvites_ReceivedCollaborationInvitesGroupSharedChatParticipantsChannel[];
+    channel: null | {
+      /**
+       * @pattern ^[0-9]+$
+       * @example ["26490481"]
+       */
+      id: ID;
+      __typename: "Channel";
+    };
     status: UnknownValue;
-    __typename: string;
-  };
-
-/** ℹ️ Not real Twitch type name */
-export type GetReceivedCollaborationInvites_ReceivedCollaborationInvitesGroupSharedChatParticipantsChannel =
-  {
-    id: ID;
     __typename: string;
   };
 
@@ -29660,19 +29274,17 @@ export type GifSettingsPageChannelBenefitState_ChannelBenefitState = {
 
 /** ℹ️ Not real Twitch type name */
 export type GifSettingsPageUpdateChannelBenefitState_UpdateChannelBenefitState = {
-  channel:
-    | null
-    | GifSettingsPageUpdateChannelBenefitState_UpdateChannelBenefitStateChannel
-    | GifSettingsPageUpdateChannelBenefitState_UpdateChannelBenefitStateChannel[];
+  channel: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["26490481"]
+     */
+    id: ID;
+    __typename: "Channel";
+  };
   /** ⚠️ Low confidence about: nullable */
   affectedProductIDs: null | (null | ID)[];
   error: UnknownValue;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type GifSettingsPageUpdateChannelBenefitState_UpdateChannelBenefitStateChannel = {
-  id: ID;
   __typename: string;
 };
 
@@ -29878,10 +29490,16 @@ export type GoRaid_GoRaidRaid = {
 
 /** ℹ️ Not real Twitch type name */
 export type GrantCommunityRole_GrantCommunityRole = {
-  channel:
-    | null
-    | GrantCommunityRole_GrantCommunityRoleChannel
-    | GrantCommunityRole_GrantCommunityRoleChannel[];
+  channel: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["26490481"]
+     */
+    id: ID;
+    /** @example ["RevedTV", "summit1g", "Wholesome_Games", "StreamCanvas", "Distortion2", "StreamDatabase", "LIRIK"] */
+    displayName: string;
+    __typename: "Channel";
+  };
   grantee:
     | null
     | GrantCommunityRole_GrantCommunityRoleGrantee
@@ -29891,14 +29509,6 @@ export type GrantCommunityRole_GrantCommunityRole = {
     | GrantCommunityRole_GrantCommunityRoleError
     | GrantCommunityRole_GrantCommunityRoleError[];
   role: UnknownValue;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type GrantCommunityRole_GrantCommunityRoleChannel = {
-  id: ID;
-  /** ⚠️ Low confidence about: nullable */
-  displayName: null | string;
   __typename: string;
 };
 
@@ -30027,10 +29637,14 @@ export type GuestStarActiveJoinRequest_GuestStarActiveJoinRequestHost = {
 };
 
 export type GuestStarBrowserSource = {
-  user:
-    | null
-    | GuestStarBrowserSource_GuestStarBrowserSourceUser
-    | GuestStarBrowserSource_GuestStarBrowserSourceUser[];
+  user: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["23161357"]
+     */
+    id: ID;
+    __typename: "User";
+  };
   status: UnknownValue;
   /**
    * ⚠️ Low confidence about: nullable
@@ -30044,12 +29658,6 @@ export type GuestStarBrowserSource = {
   updatedAt: null | string;
   nonce: UnknownValue;
   __typename: "GuestStarBrowserSource";
-};
-
-/** ℹ️ Not real Twitch type name */
-export type GuestStarBrowserSource_GuestStarBrowserSourceUser = {
-  id: ID;
-  __typename: string;
 };
 
 /** ℹ️ Not real Twitch type name */
@@ -30080,10 +29688,17 @@ export type GuestStarChannelCollab = {
    * @example ["UNDEFINED", "NONE"]
    * @directive include(if: $openCallingFlagEnabled)
    */
-  canJoinStatus?: string;
+  canJoinStatus?: GuestStarChannelCollaborationCanJoinStatus;
   isFavorite: boolean;
   __typename: "GuestStarChannelCollaboration";
 };
+
+/** ℹ️ Not real Twitch type name */
+export type GuestStarChannelCollaborationCanJoinStatus =
+  | "AVAILABLE"
+  | "NONE"
+  | "UNAVAILABLE"
+  | "UNDEFINED";
 
 export type GuestStarChannelCollaborationOptions = {
   /** @example ["71092938", "12826", "23161357", "159498717", "421326609", "22484632", "91067577", "487510275", "587808896", "62938127", "26490481", "59685493", "757102582", "484668671", "558962394", "628814408", "233741947", "67708794", "39154778", "89132304", "544780041", "188890121", "31239503", "215363437", "457428542", "38759871", "135385636", "92048793", "451634552", "114037984", "47966045", "887449462", "53815140", "44407373", "232372312", "54742538", "30814134", "26819117", "42316376", "87481167", "32155044", "96555828", "51931241", "411377640", "1390894728", "1450226065", "111454676", "77964394", "884059667", "765082469", "47124404", "14397255", "600513126", "81121152", "1099473035", "629814814", "62557718", "160538649", "86716555", "118263259", "207813352", "823692721", "88107116", "71962385", "1229804680", "230768385", "1364571577", "156338481", "161287579", "1359738919", "608251283", "1290671880", "142198882", "51496027", "466139555", "1418941799", "173397905", "1290754410", "1357360792", "1358542802", "993828259", "26301881", "37402112", "26610234", "56649026", "121821372", "838340546", "43899589", "87186401", "48189727", "162757011", "663995665", "552120296", "270698079", "523836820", "87791915", "94849379", "64173519", "31089858", "25722719", "175831187", "189618878", "1124895128", "993419763", "120304051", "50628712", "57781936", "884056266", "27954235", "485471555", "25604128", "715007052", "43281991", "63614185", "89886468", "467031116", "68145728", "457942039", "100901794", "71955255", "220476955", "506457175", "181097289", "1108562195", "133099286", "136765278", "21841789", "25677980", "98742675", "618764474", "773388828", "1131600178", "22552479", "170671692", "86277097", "70075625", "465131731", "423486275", "116738112", "29128211", "44748026", "116860843", "711044449", "65411398", "661059687", "691503769", "104717035", "36316582", "76441880", "71089431", "450012016", "115139051", "425608057", "1307285020", "91465245", "817287033", "38158532", "718163932", "170934291", "181490238", "153497051", "897352307", "36487814", "182560660", "132501030", "162145194", "91967953", "31813025", "190708734", "30857876", "40784764", "69616738", "30324190", "272573477", "40261250", "249820319", "51522914", "196211954", "66628850", "601213281", "43494917", "276109315", "77166415", "137518388", "735800429", "71516015", "722829654", "214966288", "256734589", "191838041", "39783270", "187499405", "172115527", "450403118", "87291516", "155619370", "895617109", "1374589313", "988747133", "158539796", "269205804", "835103099", "1316455162", "848716993", "1320008598", "983164743", "46139892", "689045187", "23626008", "431592451", "42703112", "1418939132", "132256306", "249684868", "165794626", "1517292903", "249218588", "101204178", "72256775", "1518997021", "36324138", "93869876", "1528616839", "36926489", "139345001", "99899949", "922408450", "1543074470", "125401117", "1282818900", "239373609", "17261176", "735937795", "1207264898", "510089466", "809107579", "570983720", "530947420", "162151864", "225999279", "788862523", "246450563", "733702038", "204730616", "174809651", "107117952", "63936838", "110405254", "38244180", "109193436", "137347549", "132954738", "56990029", "51653974", "40740351", "105584645", "52803405", "457138035", "712201914", "200186636", "239867683", "837046873", "190695830", "47446321", "548281862", "279419549", "117349875", "32043488", "634606699", "834907358", "158439553", "1200831758", "1498248863", "100484450", "517475551", "85875635", "110644161", "463204522", "529626809", "1414906499", "486887318", "570739260", "1012715109", "458505769", "1515886752", "676366924", "835322699", "698924516", "512901888", "63667409", "456608875", "806175043", "152126110", "45098797", "44057119", "80188115", "27992608", "262832931", "1299378784", "52724849", "984840481", "411831580", "55125740", "408301033", "197397221", "97160118", "834113869", "96858382", "636587384", "20711821", "101710483", "44741426", "118722736", "1298016962", "1559945798", "1519078223", "1536313156", "169537796", "1519299080", "1465662656", "1520111489", "1594383457", "1428531183", "1218350688", "1350956499", "272193272", "1593187491", "24942351", "163524370", "938683961", "32303794", "1175904065", "1349846552", "1530338689", "1567890008", "1539667619", "60672611", "1435518089", "1071719866", "843740518", "42141270", "153859298", "243290777", "123424342", "192342215", "38803320", "652811150", "826486078", "103198412", "526183042", "644906663", "644440092", "630115761", "505738468", "430609471", "898382003", "556853329", "176441403", "123237616", "671272139", "472727281", "504988651", "45499194", "249691122", "500896062", "1239154143", "46363339", "222486066", "472485064", "505767963", "32223877", "1051170617", "148470918", "781680157", "1134646322", "561186742", "591918054", "65522246", "524423910", "73531575", "123488078", "608367544", "546398833", "698576097", "422590830", "511435967", "842509784", "48497267", "1061339425", "632689631", "114593347", "562411447", "577358335", "1004024423", "506159809", "740273054", "418412488", "768464179", "553146654", "157775434", "168318872", "504099992", "117581998", "163129529", "555829908", "66297751", "558634039", "524695472", "1124635383", "661552679", "57360930", "558814233", "659783419", "793869947", "555887723", "144544265", "442475436", "1567791626", "597148922", "158786970", "642833026", "505913587", "520108070", "931924601", "505294638", "585475460", "797830996", "547092485", "138487737", "122812628", "101771128", "151970282", "44564996", "504666498", "581224565", "1591451260", "1466193616", "1231706109", "203834299", "1269619674", "11349699", "619511970", "149150628", "509222511", "516072355", "663605250", "430090491", "1254376587", "737431995", "646797174", "650713083", "1413578072", "543077123", "842113540", "435661581", "167597916", "1124308541", "141851078", "254693657", "543075911", "628795121", "157648808", "595839365", "189687701", "1109382158", "975762117", "1541064734", "78945502", "176425807", "685028099", "1276572912", "1310981269", "240905706", "1119744883", "204111899", "536011581", "242371074", "195928403", "784929067", "114178012", "1509833474", "767175427", "892485468", "509898077", "488187640", "131233129", "22510310", "52541066", "944627117", "547064977", "29425224", "79294007", "30070692", "47474524", "53430798", "137710044", "7236692", "82370142", "200380955", "96726940", "45924986", "27586515", "11824781", "112286787", "23524577", "472066926", "38746172", "78738197", "23057278", "54989347", "81628627", "121059319", "29400754", "1054501690", "1539901214", "1001501388", "88524698", "504334548", "1328877870", "815921092", "201814696", "860284158", "31537723", "747246138", "671434110", "161688904", "511072818", "774977932", "642311180", "910032137", "31164747", "116020659", "1332612159", "132327093", "101114058", "1463464856", "26500692", "92725550", "48095008", "447355139", "508678940", "40430450", "546497748", "1307147891", "82662552", "716336602", "52238876", "477131976", "678600049", "140868804", "489754061", "693880951", "553516610", "454738776", "842813727", "549068777", "29182710", "121602567", "518948642", "907903949", "815524361", "677513212", "104953707", "558836478", "1498136616", "946377157", "681085774", "1228209912", "499541900", "126761087", "31493749", "1516957742", "62393966", "426787759", "887197383", "543877986", "410964018", "619390908", "770826376", "930815467", "683938778", "247445266", "491007433", "566986060", "941201637", "548315158", "1065674359", "1235913932", "796189953", "1468574366", "202644827", "996636438", "735718831", "1435461706", "402618974", "45822918", "1523854003", "854536428", "145806174", "94324343", "782351671", "157918614", "61308915", "253209809", "462739684", "486026199", "800605836", "1000835104", "813755111", "415498898", "810425456", "1011374577", "505231285", "1481607343", "187797016", "618936615", "1526115376", "609754861", "897659032", "249970982", "1436540361", "851752915", "466994015", "1528447649", "606460864", "1152592861", "659799492", "973253199", "1104028063", "479988984", "1015119369", "550099097", "60823114", "1101842668", "930617012", "686422692", "846094553", "777272073", "729311803", "1537852698", "1048160128", "666479220", "227279677", "27035281", "435548825", "505999038", "1110163675", "1287438228", "175832949", "1275882839", "407450229", "34411344", "882980154", "1356277240", "1106764339", "475130999", "1094420068", "133229108", "148563156", "38640167", "155437434", "82503124", "36671560", "50608583", "1024187104", "935168056", "136116126", "198553391", "1360775205", "68333687", "480292133", "48163475", "69060460", "576257973", "139820527", "736138424", "1591697507", "37815345", "142055558", "700398551", "450176701", "153022872", "683838879", "412760170", "431031092", "194610328", "111426970", "1440006738", "743835120", "194096949", "212991399", "47795367", "925749642", "953496787", "48855550", "1100118397", "58253951", "825242908", "499828177", "92532829", "532292869", "839651743", "440531859", "85592887", "435592958", "480463528", "63652347", "1346752523", "404081039", "527932418", "661426460", "581409604", "181463888", "525974276", "532335131", "102090362", "527668129", "579057791", "590591815", "500300118", "94243592", "260756056", "1460367408", "903035347", "505127548", "505604979", "428022291", "87458166", "1524835003", "753501893", "1516094491", "94108904", "1365131675", "513261637", "178179993", "266925625", "853480894", "887198156", "806030251", "514749403", "206961052", "503787019", "709061799", "122222876", "438572527", "521230445", "1557553083", "1557993926", "1305712820", "582622518", "1457377873", "277050537", "48533154", "59635827", "142260777", "159143377", "238498798", "247808909", "25458544", "530531437", "45302947", "485587109", "19571641", "21588571", "83704797", "124992464", "32393428", "11897156", "617224090", "52215959", "421515957", "274939044", "488430373", "565433810", "52665958", "670732116", "78075611", "546843454", "35689851", "86148217", "593334294", "40526749", "28455331", "45312649", "954148168", "1250836961", "405535112", "53006224", "215199679", "1553580569", "90737666", "238197475", "792523593", "57659145", "31457927", "106318725", "238380074", "79919937", "62282630", "24502131", "1123564205", "56190092", "544592866", "722400816", "1528503038", "444865230", "103288448", "137176010", "87752555", "103994676", "201041863", "48374601", "41945192", "953015638", "136852283", "462591406", "448483289", "51529432", "1072157495", "703222460", "110059426", "23211159", "267160288", "97938149", "418066881", "59362852", "445529741", "86224100", "997044464", "61000743", "818686501", "44811367", "187193172", "135154540", "32046349", "49974185", "133118594", "137540301", "111734416", "43246220", "29183589", "142924654", "896388738", "196409568", "54719215", "481868334", "43204993", "256472611", "1394958417", "48959037", "587659656", "1038925391", "1322991244", "846110366", "174773659", "828119002", "546785649", "79171560", "1311129216", "83757852", "538747863", "1567482604", "717379287", "65031415", "1335411074", "901524671", "433770743", "899339019", "1322463639", "424640502", "1468639855", "901413162", "819218609", "820307170", "1528521107", "258919124", "615553222", "724099274", "138590005", "1426265239", "276943717", "273505300", "561461049", "795267599", "1263627906", "1226907557", "1544460758", "771464046", "1079786679", "214164373", "1090285792", "87999490", "257914799", "955895784", "1532895342", "838879029", "793850840", "1230467924", "1519364473", "1127957044", "798229121", "1513931934", "1347256791", "195253043", "758234403", "1098601644", "234191047", "871396757", "1274226899"] */
@@ -30141,7 +29756,7 @@ export type GuestStarHostCollabSettings = {
     /** @example ["23161357"] */
     id: ID;
     /** @example ["UNSET"] */
-    doNotDisturbSetting: string;
+    doNotDisturbSetting: CollabSettingsDoNotDisturbSetting;
     /** @format date-time */
     doNotDisturbUntil: null | string;
     shouldAllowAffiliates: boolean;
@@ -30154,6 +29769,15 @@ export type GuestStarHostCollabSettings = {
   };
   __typename: "GuestStarHostSettings";
 };
+
+/** ℹ️ Not real Twitch type name */
+export type GuestStarHostSettingsCanStartSession = "PHONE_VERIFICATION_MISSING" | "VALID";
+
+/** ℹ️ Not real Twitch type name */
+export type GuestStarHostSettingsCollabStatus =
+  | "COLLAB_STATUS_NO_COLLAB"
+  | "COLLAB_STATUS_ONLY_FAVORITES"
+  | "COLLAB_STATUS_UNSPECIFIED";
 
 export type GuestStarInviteEdgeFragment = {
   /** ⚠️ Low confidence about: nullable */
@@ -30202,7 +29826,7 @@ export type GuestStarJoinRequestChannelCollab = {
   id: ID;
   session: null | GuestStarOngoingSession;
   /** @example ["UNDEFINED", "NONE"] */
-  canJoinStatus: string;
+  canJoinStatus: GuestStarChannelCollaborationCanJoinStatus;
   isFavorite: boolean;
   __typename: "GuestStarChannelCollaboration";
 };
@@ -30336,10 +29960,14 @@ export type GuestStarPreferences_GuestStarUserPreferencesGuest = {
     | null
     | GuestStarPreferences_GuestStarUserPreferencesGuestSelf
     | GuestStarPreferences_GuestStarUserPreferencesGuestSelf[];
-  stream:
-    | null
-    | GuestStarPreferences_GuestStarUserPreferencesGuestStream
-    | GuestStarPreferences_GuestStarUserPreferencesGuestStream[];
+  stream: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["316180784725"]
+     */
+    id: ID;
+    __typename: "Stream";
+  };
   __typename: string;
 };
 
@@ -30347,12 +29975,6 @@ export type GuestStarPreferences_GuestStarUserPreferencesGuest = {
 export type GuestStarPreferences_GuestStarUserPreferencesGuestSelf = {
   /** ⚠️ Low confidence about: nullable */
   hasGuestStarFavorited: null | boolean;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type GuestStarPreferences_GuestStarUserPreferencesGuestStream = {
-  id: ID;
   __typename: string;
 };
 
@@ -30502,32 +30124,24 @@ export type GuestStarSendJoinRequest_SendGuestStarJoinRequestSession = {
 /** ℹ️ Not real Twitch type name */
 export type GuestStarSendJoinRequest_SendGuestStarJoinRequestSessionGuests = {
   id: ID;
-  user:
-    | null
-    | GuestStarSendJoinRequest_SendGuestStarJoinRequestSessionGuestsUser
-    | GuestStarSendJoinRequest_SendGuestStarJoinRequestSessionGuestsUser[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type GuestStarSendJoinRequest_SendGuestStarJoinRequestSessionGuestsUser = {
-  id: ID;
+  user: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["23161357"]
+     */
+    id: ID;
+    __typename: "User";
+  };
   __typename: string;
 };
 
 /** ℹ️ Not real Twitch type name */
 export type GuestStarSendJoinRequest_SendGuestStarJoinRequestSessionHost = {
   id: ID;
-  sharedChatSession:
-    | null
-    | GuestStarSendJoinRequest_SendGuestStarJoinRequestSessionHostSharedChatSession
-    | GuestStarSendJoinRequest_SendGuestStarJoinRequestSessionHostSharedChatSession[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type GuestStarSendJoinRequest_SendGuestStarJoinRequestSessionHostSharedChatSession = {
-  id: ID;
+  sharedChatSession: null | {
+    id: ID;
+    __typename: "SharedChatSession";
+  };
   __typename: string;
 };
 
@@ -30667,30 +30281,11 @@ export type GuestStarSubscribers_ChannelAllSubscriptionsEdgesNode = {
 };
 
 /** ℹ️ Not real Twitch type name */
-export type GuestStarTeam_UserTeamMemberships = {
-  team: null | GuestStarTeam_UserTeamMembershipsTeam | GuestStarTeam_UserTeamMembershipsTeam[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type GuestStarTeam_UserTeamMembershipsTeam = {
-  id: ID;
-  members:
-    | null
-    | GuestStarTeam_UserTeamMembershipsTeamMembers
-    | GuestStarTeam_UserTeamMembershipsTeamMembers[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type GuestStarTeam_UserTeamMembershipsTeamMembers = {
+export type GuestStarTeam_TeamMembers = {
   edges: {
     /** ⚠️ Low confidence about: nullable */
     cursor: null | Cursor;
-    node:
-      | null
-      | GuestStarTeam_UserTeamMembershipsTeamMembersEdgesNode
-      | GuestStarTeam_UserTeamMembershipsTeamMembersEdgesNode[];
+    node: null | GuestStarTeam_TeamMembersEdgesNode | GuestStarTeam_TeamMembersEdgesNode[];
     __typename: string;
   }[];
   pageInfo: null | {
@@ -30701,7 +30296,7 @@ export type GuestStarTeam_UserTeamMembershipsTeamMembers = {
 };
 
 /** ℹ️ Not real Twitch type name */
-export type GuestStarTeam_UserTeamMembershipsTeamMembersEdgesNode = {
+export type GuestStarTeam_TeamMembersEdgesNode = {
   id: ID;
   __typename: string;
 };
@@ -30949,20 +30544,18 @@ export type HighlighterMarkersBookmarkEdge_VideoBookmarkEdgeNode = {
    * @format uint32
    */
   positionSeconds: null | number;
-  user:
-    | null
-    | HighlighterMarkersBookmarkEdge_VideoBookmarkEdgeNodeUser
-    | HighlighterMarkersBookmarkEdge_VideoBookmarkEdgeNodeUser[];
+  user: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["23161357"]
+     */
+    id: ID;
+    /** @example ["Twitch", "CD PROJEKT RED", "LIRIK", "forsen", "ayuuexe", "xQc", "RSDragonwilds"] */
+    displayName: string;
+    __typename: "User";
+  };
   /** ⚠️ Low confidence about: nullable */
   description: null | string;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type HighlighterMarkersBookmarkEdge_VideoBookmarkEdgeNodeUser = {
-  id: ID;
-  /** ⚠️ Low confidence about: nullable */
-  displayName: null | string;
   __typename: string;
 };
 
@@ -30995,48 +30588,6 @@ export type HighlighterStitchHighlights_CreateMultiVideoHighlightHighlight = {
    * @format uint32
    */
   lengthSeconds: null | number;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type HighlighterVODSelectorSearchCreatorVideos_UserSearchVideos = {
-  edges: {
-    /** ⚠️ Low confidence about: nullable */
-    cursor: null | Cursor;
-    node: null | {
-      /**
-       * @pattern ^[0-9]+$
-       * @example ["2323270866"]
-       */
-      id: ID;
-      /**
-       * @format uint32
-       * @example [15389, 4359, 4621, 621, 4472]
-       */
-      lengthSeconds: number;
-      /**
-       * @example ["https://static-cdn.jtvnw.net/cf_vods/d1m7jfoe9zdc1j/82ef4729c6011d6072e2_twitch_43295848617_1733849129//thumb/thumb0-90x60.jpg", "https://static-cdn.jtvnw.net/cf_vods/d3fi1amfgojobc/7fbc776f6b7a4659c4e4_cdprojektred_319108158181_1793115910//thumb/thumb0-90x60.jpg"]
-       * @gqlArg `width: Int [320, 90, 640, 240, 400, 1280, 80, 160, 214]`
-       * @gqlArg `height: Int [180, 60, 360, 135, 225, 480, 720, 51, 45, 90]`
-       */
-      previewThumbnailURL: string;
-      /**
-       * @format date-time
-       * @example ["2024-12-10T16:45:35Z", "2026-10-27T15:45:17Z"]
-       */
-      publishedAt: string;
-      /** @example ["Twitch Recap: 2024 according to Twitch Chat!", "REDstreams — Cyberpunk 2077: Edgerunners 2 Update (2.5) | Overview"] */
-      title: null | string;
-      /** @example ["ARCHIVE", "HIGHLIGHT", "UPLOAD"] */
-      broadcastType: string;
-      __typename: "Video";
-    };
-    __typename: string;
-  }[];
-  pageInfo: null | {
-    hasNextPage: boolean;
-    __typename: "PageInfo";
-  };
   __typename: string;
 };
 
@@ -31110,19 +30661,17 @@ export type HistoricalMessage_MessageSourceSenderBadges = {
 
 /** ℹ️ Not real Twitch type name */
 export type HomeOfflineCarousel_ChannelHomeAutohostCarouselCard = {
-  channel:
-    | null
-    | HomeOfflineCarousel_ChannelHomeAutohostCarouselCardChannel
-    | HomeOfflineCarousel_ChannelHomeAutohostCarouselCardChannel[];
+  channel: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["26490481"]
+     */
+    id: ID;
+    owner: CarouselUser;
+    __typename: "Channel";
+  };
   /** ⚠️ Low confidence about: nullable */
   trackingID: null | ID;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type HomeOfflineCarousel_ChannelHomeAutohostCarouselCardChannel = {
-  id: ID;
-  owner: null | CarouselUser;
   __typename: string;
 };
 
@@ -31302,7 +30851,7 @@ export type HomeTrackBroadcastFragment = {
    */
   id: ID;
   /** @example ["EN", "ES"] */
-  language: string;
+  language: BroadcastSettingsLanguage;
   __typename: "BroadcastSettings";
 };
 
@@ -31369,6 +30918,7 @@ export type HostRecommendationsFragment = {
 export type HostTrainContent_HostTrain = {
   id: ID;
   state: UnknownValue;
+  endReason: UnknownValue;
   /** ⚠️ Low confidence about: nullable */
   isAboard: null | boolean;
   /**
@@ -31412,6 +30962,47 @@ export type HostTrainContent_HostTrainStationChannel = {
   __typename: string;
 };
 
+/** ℹ️ Not real Twitch type name */
+export type HostTrainPoll_HostTrain = {
+  id: ID;
+  openPoll: null | HostTrainPoll_HostTrainOpenPoll | HostTrainPoll_HostTrainOpenPoll[];
+  __typename: string;
+};
+
+/** ℹ️ Not real Twitch type name */
+export type HostTrainPoll_HostTrainOpenPoll = {
+  id: ID;
+  choices: null | HostTrainPoll_HostTrainOpenPollChoices | HostTrainPoll_HostTrainOpenPollChoices[];
+  __typename: string;
+};
+
+/** ℹ️ Not real Twitch type name */
+export type HostTrainPoll_HostTrainOpenPollChoices = {
+  id: ID;
+  kind: UnknownValue;
+  channel:
+    | null
+    | HostTrainPoll_HostTrainOpenPollChoicesChannel
+    | HostTrainPoll_HostTrainOpenPollChoicesChannel[];
+  __typename: string;
+};
+
+/** ℹ️ Not real Twitch type name */
+export type HostTrainPoll_HostTrainOpenPollChoicesChannel = {
+  id: ID;
+  /** ⚠️ Low confidence about: nullable */
+  login: null | string;
+  /** ⚠️ Low confidence about: nullable */
+  displayName: null | string;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uri
+   * @gqlArg `width: Int [50]`
+   */
+  profileImageURL: null | string;
+  __typename: string;
+};
+
 export type HostUser = {
   /**
    * @pattern ^[0-9]+$
@@ -31448,13 +31039,19 @@ export type HourlyViewersInput = {
   /** @example ["en"] */
   languageTag: string;
   /** @example ["ANY"] */
-  region: string;
+  region: InputRegion;
   /**
    * @format int32
    * @example [3]
    */
   timeZoneOffset: number;
 };
+
+/** ℹ️ Not real Twitch type name */
+export type HourlyViewersListDataStatus = "EMPTY" | "NORMAL" | "PARTIAL";
+
+/** ℹ️ Not real Twitch type name */
+export type HourlyViewersListReleaseStatus = "UNKNOWN";
 
 export type HourlyViewersReportInput = {
   /** @example ["23161357"] */
@@ -31468,7 +31065,7 @@ export type HourlyViewersReportInput = {
   /** @example ["en"] */
   languageTag: string;
   /** @example ["ANY"] */
-  region: string;
+  region: InputRegion;
   /**
    * @format int32
    * @example [3]
@@ -31512,28 +31109,20 @@ export type HypeTrainApproachingEventsRemaining = {
 };
 
 export type HypeTrainBadgeReward = {
-  badge:
-    | null
-    | HypeTrainBadgeReward_HypeTrainBadgeRewardBadge
-    | HypeTrainBadgeReward_HypeTrainBadgeRewardBadge[];
+  badge: null | {
+    /** @example ["Yml0czsxOw==", "cHJlZGljdGlvbnM7Ymx1ZS0xOw=="] */
+    id: ID;
+    /** @example ["", "bits", "predictions"] */
+    setID: ID;
+    /**
+     * @format uri
+     * @example ["https://static-cdn.jtvnw.net/badges/v1/73b5c3fb-24f9-4a82-a852-2f475b59411c/1", "https://static-cdn.jtvnw.net/badges/v1/73b5c3fb-24f9-4a82-a852-2f475b59411c/2"]
+     * @gqlArg `size: BadgeImageURLSize`
+     */
+    imageURL: string;
+    __typename: "Badge";
+  };
   __typename: "HypeTrainBadgeReward";
-};
-
-/** ℹ️ Not real Twitch type name */
-export type HypeTrainBadgeRewardBadgeImageURLSize = "DOUBLE";
-
-/** ℹ️ Not real Twitch type name */
-export type HypeTrainBadgeReward_HypeTrainBadgeRewardBadge = {
-  id: ID;
-  /** ⚠️ Low confidence about: nullable */
-  setID: null | ID;
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format uri
-   * @gqlArg `size: HypeTrainBadgeRewardBadgeImageURLSize`
-   */
-  imageURL: null | string;
-  __typename: string;
 };
 
 export type HypeTrainCalloutEmote = {
@@ -31571,10 +31160,24 @@ export type HypeTrainConductor = {
   /** ⚠️ Low confidence about: nullable */
   source: null | string;
   participation: null | HypeTrainParticipation;
-  user:
-    | null
-    | HypeTrainConductor_HypeTrainConductorUser
-    | HypeTrainConductor_HypeTrainConductorUser[];
+  user: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["23161357"]
+     */
+    id: ID;
+    /** @example ["lirik", "twitch", "cdprojektred", "forsen", "tickett_", "st1mgreeen", "lipton_18"] */
+    login: string;
+    /** @example ["Twitch", "CD PROJEKT RED", "LIRIK", "forsen", "ayuuexe", "xQc", "RSDragonwilds"] */
+    displayName: string;
+    /**
+     * @format uri
+     * @example ["https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-70x70.png", "https://static-cdn.jtvnw.net/jtv_user_pictures/3c3366d7-728a-4204-bfdd-7c823858e4d9-profile_image-70x70.png"]
+     * @gqlArg `width: Int [50, 70, 300, 28, 150]`
+     */
+    profileImageURL: string;
+    __typename: "User";
+  };
   __typename: "HypeTrainConductor";
 };
 
@@ -31586,22 +31189,6 @@ export type HypeTrainConductorReward = {
     | null
     | (HypeTrainReward & { __typename: "HypeTrainBadgeReward" | "HypeTrainEmoteReward" });
   __typename: "HypeTrainConductorReward";
-};
-
-/** ℹ️ Not real Twitch type name */
-export type HypeTrainConductor_HypeTrainConductorUser = {
-  id: ID;
-  /** ⚠️ Low confidence about: nullable */
-  login: null | string;
-  /** ⚠️ Low confidence about: nullable */
-  displayName: null | string;
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format uri
-   * @gqlArg `width: Int [50]`
-   */
-  profileImageURL: null | string;
-  __typename: string;
 };
 
 export type HypeTrainConfig = {
@@ -31685,19 +31272,14 @@ export type HypeTrainDashboardConfig_HypeTrainConfigKickoff = {
 };
 
 export type HypeTrainEmoteReward = {
-  emote:
-    | null
-    | HypeTrainEmoteReward_HypeTrainEmoteRewardEmote
-    | HypeTrainEmoteReward_HypeTrainEmoteRewardEmote[];
+  emote: null | {
+    /** @example ["emotesv2_42ba00f9d5e24c4ca189d642b9e0b0c9", "emotesv2_845e6a3e8a0a40d0afc90081defa16c1"] */
+    id: ID;
+    /** @example ["sumFast", "sumSmash", "sumPls", "sumMiting", "sumX", "sumKomrade", "sumPause"] */
+    token: string;
+    __typename: "Emote";
+  };
   __typename: "HypeTrainEmoteReward";
-};
-
-/** ℹ️ Not real Twitch type name */
-export type HypeTrainEmoteReward_HypeTrainEmoteRewardEmote = {
-  id: ID;
-  /** ⚠️ Low confidence about: nullable */
-  token: null | string;
-  __typename: string;
 };
 
 export type HypeTrainExecution = {
@@ -31842,6 +31424,14 @@ export type IabInformation = {
   __typename: "IABSpecifiedInformation";
 };
 
+/** ℹ️ Not real Twitch type name */
+export type IdentityVerificationRequirementStatus =
+  | "COMPLETE"
+  | "FAILURE"
+  | "INCOMPLETE"
+  | "NOTREQUIRED"
+  | "REQUIRED";
+
 export type ImpressionAnalyticsFilter = "ALL";
 
 /** ℹ️ Not real Twitch type name */
@@ -31864,6 +31454,9 @@ export type ImpressionAnalytics_ImpressionAnalyticsItems = {
   name: null | string;
   __typename: string;
 };
+
+/** ℹ️ Not real Twitch type name */
+export type IncludeRestricted = "OWL_ALL_ACCESS_PASS" | "SUB_ONLY_LIVE";
 
 /** ℹ️ Not real Twitch type name */
 export type IncomingAdAlertSnoozeAd_SnoozeAd = {
@@ -31894,16 +31487,14 @@ export type IncomingRequests_BansSharingRelationshipsIncomingRequests = {
 
 /** ℹ️ Not real Twitch type name */
 export type IncrementClipViewCount_UpdateClipViewCount = {
-  clip:
-    | null
-    | IncrementClipViewCount_UpdateClipViewCountClip
-    | IncrementClipViewCount_UpdateClipViewCountClip[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type IncrementClipViewCount_UpdateClipViewCountClip = {
-  id: ID;
+  clip: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["3942697259"]
+     */
+    id: ID;
+    __typename: "Clip";
+  };
   __typename: string;
 };
 
@@ -32012,6 +31603,23 @@ export type InitSocialAuthLink_InitSocialAuthLinkSession = {
   __typename: string;
 };
 
+/** ℹ️ Not real Twitch type name */
+export type InputFeedLocation =
+  | "CATCHUP"
+  | "CLIPS"
+  | "CLIPS_CATEGORY"
+  | "CLIPS_FOLLOWS"
+  | "LIVE"
+  | "LIVE_CATEGORY"
+  | "LIVE_COLLECTION"
+  | "LIVE_FOLLOWS"
+  | "MOBILE_BROWSE_CLIPS"
+  | "MOBILE_BROWSE_LIVE"
+  | "UNKNOWN";
+
+/** ℹ️ Not real Twitch type name */
+export type InputRegion = "ANY";
+
 export type InsightsCardFragment = {
   currentValue: UnknownValue;
   emoteAsset: null | SubEmoteFragment;
@@ -32073,36 +31681,25 @@ export type InterruptSchedule_InterruptSchedule = {
     maximum: UnknownValue;
     __typename: "InterruptScheduleBoundsError";
   };
-  schedule:
-    | null
-    | InterruptSchedule_InterruptScheduleSchedule
-    | InterruptSchedule_InterruptScheduleSchedule[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type InterruptSchedule_InterruptScheduleSchedule = {
-  id: ID;
-  interruption:
-    | null
-    | InterruptSchedule_InterruptScheduleScheduleInterruption
-    | InterruptSchedule_InterruptScheduleScheduleInterruption[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type InterruptSchedule_InterruptScheduleScheduleInterruption = {
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format date-time
-   */
-  endAt: null | string;
-  reason: UnknownValue;
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format date-time
-   */
-  startAt: null | string;
+  schedule: null | {
+    /** @example ["schedule-12826", "schedule-23161357"] */
+    id: ID;
+    interruption: null | {
+      /**
+       * ⚠️ Low confidence about: nullable
+       * @format date-time
+       */
+      endAt: null | string;
+      reason: UnknownValue;
+      /**
+       * ⚠️ Low confidence about: nullable
+       * @format date-time
+       */
+      startAt: null | string;
+      __typename: "ScheduleInterruption";
+    };
+    __typename: "Schedule";
+  };
   __typename: string;
 };
 
@@ -32118,10 +31715,18 @@ export type InventoryUserDropReward = {
     | null
     | InventoryUserDropReward_UserDropRewardBenefit
     | InventoryUserDropReward_UserDropRewardBenefit[];
-  game:
-    | null
-    | InventoryUserDropReward_UserDropRewardGame
-    | InventoryUserDropReward_UserDropRewardGame[];
+  game: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["509672"]
+     */
+    id: ID;
+    /** @example ["IRL", "Cyberpunk 2077", "Just Chatting", "Special Events", "League of Legends", "You Know The Drill", "RuneScape: Dragonwilds"] */
+    name: string;
+    /** @example ["irl", "cyberpunk-2077", "just-chatting", "special-events", "grand-theft-auto-v", "overwatch-2", "counter-strike"] */
+    slug: string;
+    __typename: "Game";
+  };
   id: ID;
   /**
    * ⚠️ Low confidence about: nullable
@@ -32155,16 +31760,6 @@ export type InventoryUserDropReward = {
 export type InventoryUserDropReward_UserDropRewardBenefit = {
   id: ID;
   distributionType: UnknownValue;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type InventoryUserDropReward_UserDropRewardGame = {
-  id: ID;
-  /** ⚠️ Low confidence about: nullable */
-  name: null | string;
-  /** ⚠️ Low confidence about: nullable */
-  slug: null | string;
   __typename: string;
 };
 
@@ -32225,7 +31820,7 @@ export type InviteOnlyExtensionPageExtensionEdge = {
     };
     isBitsEnabled: boolean;
     /** @example ["OPTIONAL", "NONE"] */
-    bitsSupportLevel: string;
+    bitsSupportLevel: ExtensionBitsSupportLevel;
     /** @example ["CozyCafe", "Blerp 🎉", "🥳 Free & Animated Panels - OWN3D", "Sound Alerts", "Viewer Geolocation", "nopixel V Companion", "StreamElements Leaderboards"] */
     name: string;
     self:
@@ -32235,7 +31830,7 @@ export type InviteOnlyExtensionPageExtensionEdge = {
     /** @example [""] */
     sku: string;
     /** @example ["RELEASED"] */
-    state: string;
+    state: ExtensionState;
     /** @example ["Serve drinks, customize your café aesthetic, interact with chat, and watch cute café animations live on stream.", "Blerp is the best alert builder on Twitch! Easily create a unique alert for every goal, sub, channel point or tip! "] */
     summary: string;
     /** @example [""] */
@@ -32474,6 +32069,7 @@ export type JoinGuestStarSession_JoinGuestStarSessionSessionHost = {
 /** ℹ️ Not real Twitch type name */
 export type JoinHostTrain_JoinHostTrain = {
   error: null | JoinHostTrain_JoinHostTrainError | JoinHostTrain_JoinHostTrainError[];
+  electorateToken: UnknownValue;
   train: null | JoinHostTrain_JoinHostTrainTrain | JoinHostTrain_JoinHostTrainTrain[];
   __typename: string;
 };
@@ -32577,7 +32173,7 @@ export type LastViewedContentByTypeAndIDFragment = {
   /** @example ["SINGLE_MESSAGE_BYPASS_SUB_MODE", "SEND_HIGHLIGHTED_MESSAGE", "RANDOM_SUB_EMOTE_UNLOCK", "CHOSEN_SUB_EMOTE_UNLOCK", "CHOSEN_MODIFIED_SUB_EMOTE_UNLOCK", "SEND_ANIMATED_MESSAGE", "SEND_GIGANTIFIED_EMOTE", "CELEBRATION"] */
   contentID: ID;
   /** @example ["AUTOMATIC_REWARD"] */
-  contentType: string;
+  contentType: CommunityPointsLastViewedContentByTypeAndIDContentType;
   /**
    * @format date-time
    * @example ["2026-09-11T21:51:18.419397373Z", "2026-10-26T19:53:44.410924639Z"]
@@ -32588,7 +32184,7 @@ export type LastViewedContentByTypeAndIDFragment = {
 
 export type LastViewedContentByTypeFragment = {
   /** @example ["AUTOMATIC_REWARD", "CUSTOM_REWARD"] */
-  contentType: string;
+  contentType: CommunityPointsLastViewedContentByTypeContentType;
   /**
    * @format date-time
    * @example ["2025-07-29T08:44:18.718772933Z", "2023-07-31T15:05:55.428698713Z"]
@@ -32598,46 +32194,33 @@ export type LastViewedContentByTypeFragment = {
 };
 
 /** ℹ️ Not real Twitch type name */
+export type LeaderboardSettingsDefaultLeaderboard = "CHEER" | "CLIP" | "SUBGIFT" | "WATCHSTREAKS";
+
+/** ℹ️ Not real Twitch type name */
 export type LeaderboardSettingsUpdateLeaderboardSettings_UpdateLeaderboardSettings = {
-  user:
-    | null
-    | LeaderboardSettingsUpdateLeaderboardSettings_UpdateLeaderboardSettingsUser
-    | LeaderboardSettingsUpdateLeaderboardSettings_UpdateLeaderboardSettingsUser[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type LeaderboardSettingsUpdateLeaderboardSettings_UpdateLeaderboardSettingsUser = {
-  id: ID;
-  settings:
-    | null
-    | LeaderboardSettingsUpdateLeaderboardSettings_UpdateLeaderboardSettingsUserSettings
-    | LeaderboardSettingsUpdateLeaderboardSettings_UpdateLeaderboardSettingsUserSettings[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type LeaderboardSettingsUpdateLeaderboardSettings_UpdateLeaderboardSettingsUserSettings = {
-  leaderboard:
-    | null
-    | LeaderboardSettingsUpdateLeaderboardSettings_UpdateLeaderboardSettingsUserSettingsLeaderboard
-    | LeaderboardSettingsUpdateLeaderboardSettings_UpdateLeaderboardSettingsUserSettingsLeaderboard[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type LeaderboardSettingsUpdateLeaderboardSettings_UpdateLeaderboardSettingsUserSettingsLeaderboard =
-  {
-    /** ⚠️ Low confidence about: nullable */
-    isCheerEnabled: null | boolean;
-    /** ⚠️ Low confidence about: nullable */
-    isSubGiftEnabled: null | boolean;
-    /** ⚠️ Low confidence about: nullable */
-    isClipEnabled: null | boolean;
-    defaultLeaderboard: UnknownValue;
-    timePeriod: UnknownValue;
-    __typename: string;
+  user: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["23161357"]
+     */
+    id: ID;
+    settings: {
+      leaderboard: {
+        isCheerEnabled: boolean;
+        isSubGiftEnabled: boolean;
+        isClipEnabled: boolean;
+        /** @example ["SUBGIFT", "CLIP"] */
+        defaultLeaderboard: LeaderboardSettingsDefaultLeaderboard;
+        /** @example ["WEEK", "MONTH"] */
+        timePeriod: TimePeriod;
+        __typename: "LeaderboardSettings";
+      };
+      __typename: "UserSettings";
+    };
+    __typename: "User";
   };
+  __typename: string;
+};
 
 /** ℹ️ Not real Twitch type name */
 export type LeaveCollabGroup_LeaveCollaborationGroup = {
@@ -32713,7 +32296,7 @@ export type LegacyMWebSubscribeButtonFragment = {
          */
         id: ID;
         /** @example ["CHANSUB"] */
-        type: string;
+        type: SubscriptionProductType;
         __typename: "SubscriptionProduct";
       }[];
   self: null | {
@@ -32763,18 +32346,13 @@ export type LegendaryEmoteSeason_LegendaryEmoteSeasonEmotePool = {
   tier: UnknownValue;
   /** ⚠️ Low confidence about: nullable */
   isOwned: null | boolean;
-  emote:
-    | null
-    | LegendaryEmoteSeason_LegendaryEmoteSeasonEmotePoolEmote
-    | LegendaryEmoteSeason_LegendaryEmoteSeasonEmotePoolEmote[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type LegendaryEmoteSeason_LegendaryEmoteSeasonEmotePoolEmote = {
-  id: ID;
-  /** ⚠️ Low confidence about: nullable */
-  token: null | string;
+  emote: null | {
+    /** @example ["emotesv2_42ba00f9d5e24c4ca189d642b9e0b0c9", "emotesv2_845e6a3e8a0a40d0afc90081defa16c1"] */
+    id: ID;
+    /** @example ["sumFast", "sumSmash", "sumPls", "sumMiting", "sumX", "sumKomrade", "sumPause"] */
+    token: string;
+    __typename: "Emote";
+  };
   __typename: string;
 };
 
@@ -33477,28 +33055,26 @@ export type LoyaltyBadgesPageQuery_ChannelCreatorBadgeFlair = {
 };
 
 /** ℹ️ Not real Twitch type name */
-export type LoyaltyBadgesSetCreatorBadgeFlair_SetCreatorBadgeFlair = {
-  channel:
-    | null
-    | LoyaltyBadgesSetCreatorBadgeFlair_SetCreatorBadgeFlairChannel
-    | LoyaltyBadgesSetCreatorBadgeFlair_SetCreatorBadgeFlairChannel[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type LoyaltyBadgesSetCreatorBadgeFlair_SetCreatorBadgeFlairChannel = {
-  id: ID;
-  creatorBadgeFlair:
-    | null
-    | LoyaltyBadgesSetCreatorBadgeFlair_SetCreatorBadgeFlairChannelCreatorBadgeFlair
-    | LoyaltyBadgesSetCreatorBadgeFlair_SetCreatorBadgeFlairChannelCreatorBadgeFlair[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type LoyaltyBadgesSetCreatorBadgeFlair_SetCreatorBadgeFlairChannelCreatorBadgeFlair = {
+export type LoyaltyBadgesSetCreatorBadgeFlair_ChannelCreatorBadgeFlair = {
   setting: UnknownValue;
   assets: null | BadgeFlairAsset;
+  __typename: string;
+};
+
+/** ℹ️ Not real Twitch type name */
+export type LoyaltyBadgesSetCreatorBadgeFlair_SetCreatorBadgeFlair = {
+  channel: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["26490481"]
+     */
+    id: ID;
+    creatorBadgeFlair:
+      | null
+      | LoyaltyBadgesSetCreatorBadgeFlair_ChannelCreatorBadgeFlair
+      | LoyaltyBadgesSetCreatorBadgeFlair_ChannelCreatorBadgeFlair[];
+    __typename: "Channel";
+  };
   __typename: string;
 };
 
@@ -33543,18 +33119,6 @@ export type MWebActiveSubscriptionsQuery_UserSubscriptionBenefits = {
     node: null | SubscriptionBenefit;
     __typename: string;
   }[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type MWebBitsBuyCardOffers_FixedPricingDiscount = {
-  price: UnknownValue;
-  tax: UnknownValue;
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format uint32
-   */
-  total: null | number;
   __typename: string;
 };
 
@@ -33642,10 +33206,24 @@ export type MWebBitsBuyCardOffers_UserBitsProductsOffersListingChargeModelIntern
      * @format uint32
      */
     total: null | number;
-    discount:
-      | null
-      | MWebBitsBuyCardOffers_FixedPricingDiscount
-      | MWebBitsBuyCardOffers_FixedPricingDiscount[];
+    discount: null | {
+      /**
+       * @format int32
+       * @example [1887, 3565, 942, 1780, 8920]
+       */
+      price: number;
+      /**
+       * @format int32
+       * @example [0]
+       */
+      tax: number;
+      /**
+       * @format uint32
+       * @example [1887, 3565, 942, 1780, 8920]
+       */
+      total: number;
+      __typename: "DiscountBreakdown";
+    };
   };
   __typename: string;
 };
@@ -33889,6 +33467,9 @@ export type MessageSender = {
   displayBadges: Badge[];
   __typename: "User";
 };
+
+/** ℹ️ Not real Twitch type name */
+export type MessageType = "MOD";
 
 export type MetadataFragment = {
   /**
@@ -34421,14 +34002,6 @@ export type ModeratorModActionStreamSummaryCountByType_ModeratorModActionStreamS
   __typename: string;
 };
 
-/** ℹ️ Not real Twitch type name */
-export type ModifyEmoteOwnedEmotes_EmoteModifiers = {
-  code: UnknownValue;
-  /** ⚠️ Low confidence about: nullable */
-  name: null | string;
-  __typename: string;
-};
-
 export type ModifyLastUpdatedRoleOnClipInput = {
   /** @example ["AstuteRenownedFalconSpicyBoy-aV02Wxbe5zGQe5IT"] */
   slug: string;
@@ -34592,7 +34165,7 @@ export type MwebChanneLiveStreamInfoFragment = LegacyMWebSubscribeButtonFragment
     collaborationViewersCount: null | number;
     costreamDetails: null | {
       /** @example ["ORGANIZER", "COSTREAMER"] */
-      role: string;
+      role: CostreamDetailsRole;
       /**
        * @format uint32
        * @example [53318, 665, 54790, 55713, 54158]
@@ -34954,7 +34527,7 @@ export type MwebChannelHomePageChannelFragment = {
         /** @example ["KVe_rYFMGxiPsA", "6e8b060e-b329-45e4-8e7a-ded5177ee78a", "5ef0dc73-e8a1-4789-96ef-0d43bff28ec8"] */
         id: ID;
         /** @example ["TOP_CLIPS", "LATEST_BROADCASTS", "LATEST_NON_BROADCASTS", "ALL_VIDEOS", "COLLECTION"] */
-        type: string;
+        type: VideoShelfType;
         /** @example ["Featured Clips", "Recent broadcasts", "Recent highlights and uploads", "All videos", "TwitchCon San Diego 2024", "TwitchCon Europe 2024", "Patch Notes"] */
         title: string;
         items: null | (MwebVideoShelfItemsFragment & { __typename: "Clip" | "Video" })[];
@@ -35036,7 +34609,7 @@ export type MwebChannelHomeVodPreview = {
    */
   id: ID;
   /** @example ["RECORDED", "RECORDING"] */
-  status: string;
+  status: VideoStatus;
   restriction:
     | null
     | MwebChannelHomeVodPreview_VideoRestriction
@@ -35365,7 +34938,7 @@ export type MwebChannelVideosPageChannelFragment = MwebChannelVideosPageVideoLis
         /** @example ["Featured Clips", "Recent broadcasts", "Recent highlights and uploads", "All videos", "TwitchCon San Diego 2024", "TwitchCon Europe 2024", "Patch Notes"] */
         title: string;
         /** @example ["TOP_CLIPS", "LATEST_BROADCASTS", "LATEST_NON_BROADCASTS", "ALL_VIDEOS", "COLLECTION"] */
-        type: string;
+        type: VideoShelfType;
         items: null | (MwebVideoShelfItemsFragment & { __typename: "Clip" | "Video" })[];
         __typename: "VideoShelf";
       };
@@ -35686,7 +35259,7 @@ export type MwebFrontPageShelfTitleToken =
       text: string;
       hasEmphasis: boolean;
       /** @example ["STREAMS_DIRECTORY", "CATEGORIES_DIRECTORY", "NO_LINK"] */
-      location: string;
+      location: TextTokenLocation;
       /** @format uri */
       hyperlinkURL: null | string;
       __typename: "TextToken";
@@ -35761,10 +35334,9 @@ export type MwebRecommendedChannelsQueryFragment = {
 /** ℹ️ Not real Twitch type name */
 export type MwebRecommendedChannelsQueryFragment_RecommendedStreams = {
   edges: {
-    /** ⚠️ Low confidence about: nullable */
-    trackingID: null | ID;
-    node: null | MwebStreamCardHorizontalFragment;
-    __typename: string;
+    trackingID: ID;
+    node: MwebStreamCardHorizontalFragment;
+    __typename: "StreamRecommendationEdge";
   }[];
   __typename: string;
 };
@@ -35854,7 +35426,7 @@ export type MwebStreamCard = {
   freeformTags: FreeformTagFragment[];
   previewThumbnailProperties: {
     /** @example ["BLUR_NOT_REQUIRED", "BLUR_REASON_TYPE_SEXUAL_THEMES"] */
-    blurReason: string;
+    blurReason: PreviewThumbnailPropertiesBlurReason;
     __typename: "PreviewThumbnailProperties";
   };
   __typename: "Stream";
@@ -35955,7 +35527,7 @@ export type MwebStreamCardHorizontalFragment = {
   freeformTags: FreeformTagFragment[];
   previewThumbnailProperties: {
     /** @example ["BLUR_NOT_REQUIRED", "BLUR_REASON_TYPE_SEXUAL_THEMES"] */
-    blurReason: string;
+    blurReason: PreviewThumbnailPropertiesBlurReason;
     __typename: "PreviewThumbnailProperties";
   };
   __typename: "Stream";
@@ -35989,18 +35561,6 @@ export type MwebStreamCardHorizontalFragment_ChannelCollaboration = {
   __typename: string;
 };
 
-export type MwebSubfeedByIdQuery_Subfeed = {
-  id: ID;
-  /** ⚠️ Low confidence about: nullable */
-  name: null | string;
-  feedLocation: UnknownValue;
-  locationAttributes:
-    | null
-    | MwebSubfeedByIdQuery_SubfeedLocationAttributes
-    | MwebSubfeedByIdQuery_SubfeedLocationAttributes[];
-  __typename: "Subfeed";
-};
-
 /** ℹ️ Not real Twitch type name */
 export type MwebSubfeedByIdQuery_SubfeedLocationAttributes = {
   categoryIDAllowlist: UnknownValue;
@@ -36009,31 +35569,28 @@ export type MwebSubfeedByIdQuery_SubfeedLocationAttributes = {
 };
 
 /** ℹ️ Not real Twitch type name */
-export type MwebSubfeedsQuery_Subfeeds = {
-  edges: {
-    node: null | MwebSubfeedsQuery_SubfeedsEdgesNode | MwebSubfeedsQuery_SubfeedsEdgesNode[];
-    __typename: string;
-  }[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type MwebSubfeedsQuery_SubfeedsEdgesNode = {
-  id: ID;
-  /** ⚠️ Low confidence about: nullable */
-  name: null | string;
-  feedLocation: UnknownValue;
-  locationAttributes:
-    | null
-    | MwebSubfeedsQuery_SubfeedsEdgesNodeLocationAttributes
-    | MwebSubfeedsQuery_SubfeedsEdgesNodeLocationAttributes[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type MwebSubfeedsQuery_SubfeedsEdgesNodeLocationAttributes = {
+export type MwebSubfeedsQuery_SubfeedLocationAttributes = {
   categoryIDAllowlist: UnknownValue;
   collectionIDAllowlist: UnknownValue;
+  __typename: string;
+};
+
+/** ℹ️ Not real Twitch type name */
+export type MwebSubfeedsQuery_Subfeeds = {
+  edges: {
+    node: null | {
+      id: ID;
+      /** ⚠️ Low confidence about: nullable */
+      name: null | string;
+      feedLocation: UnknownValue;
+      locationAttributes:
+        | null
+        | MwebSubfeedsQuery_SubfeedLocationAttributes
+        | MwebSubfeedsQuery_SubfeedLocationAttributes[];
+      __typename: "Subfeed";
+    };
+    __typename: string;
+  }[];
   __typename: string;
 };
 
@@ -36460,7 +36017,7 @@ export type NeoCheermote = {
   /** @example ["Charity", "lirikCheer", "emiruCheer", "Cheer", "cheerwhal", "Corgo", "Scoops"] */
   prefix: string;
   /** @example ["DISPLAY_ONLY", "CUSTOM", "DEFAULT", "FIRST_PARTY", "THIRD_PARTY"] */
-  type: string;
+  type: CheermoteType;
   campaign: null | BitsCheermoteCampaign;
   tiers: {
     /** @example ["Charity;1", "Charity;100"] */
@@ -36474,6 +36031,20 @@ export type NeoCheermote = {
     __typename: "CheermoteTier";
   }[];
   __typename: "Cheermote";
+};
+
+/** ℹ️ Not real Twitch type name */
+export type NewAllCampaignsCampaignDetails_DropsRewardGroupSelf = {
+  status: UnknownValue;
+  currentMinutesWatched: UnknownValue;
+  currentSubs: UnknownValue;
+  currentTurboSubs: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  grantCount: null | number;
+  __typename: string;
 };
 
 /** ℹ️ Not real Twitch type name */
@@ -36494,26 +36065,26 @@ export type NewAllCampaignsPage_DropsCampaigns = {
    * @format date-time
    */
   endAt: null | string;
-  game: null | NewAllCampaignsPage_DropsCampaignsGame | NewAllCampaignsPage_DropsCampaignsGame[];
+  game: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["509672"]
+     */
+    id: ID;
+    /** @example ["IRL", "Cyberpunk 2077", "Just Chatting", "Special Events", "Gwent: The Witcher Card Game", "Grand Theft Auto V", "DayZ"] */
+    displayName: string;
+    /**
+     * @example ["https://static-cdn.jtvnw.net/ttv-boxart/509672-{width}x{height}.jpg", "https://static-cdn.jtvnw.net/ttv-boxart/65876-{width}x{height}.jpg"]
+     * @gqlArg `width: Int [52, 144, 40, 285, 250, 188, 90, 85, 200, 120]`
+     * @gqlArg `height: Int [72, 192, 56, 380, 300, 250, 55, 120, 113, 160]`
+     */
+    boxArtURL: string;
+    __typename: "Game";
+  };
   rewardGroups:
     | null
     | NewAllCampaignsPage_DropsCampaignsRewardGroups
     | NewAllCampaignsPage_DropsCampaignsRewardGroups[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type NewAllCampaignsPage_DropsCampaignsGame = {
-  id: ID;
-  /** ⚠️ Low confidence about: nullable */
-  displayName: null | string;
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format uri
-   * @gqlArg `width: Int [144]`
-   * @gqlArg `height: Int [192]`
-   */
-  boxArtURL: null | string;
   __typename: string;
 };
 
@@ -36646,6 +36217,13 @@ export type NotMePageVerificationRequest_VerificationRequest = {
   __typename: string;
 };
 
+/** ℹ️ Not real Twitch type name */
+export type NotificationCampaignDisplayType =
+  | "ALERTBANNER"
+  | "CALLOUT"
+  | "CUSTOM"
+  | "NO_DISPLAY_TYPE";
+
 export type NotificationCampaignFragment = {
   /**
    * @format uuid
@@ -36653,10 +36231,10 @@ export type NotificationCampaignFragment = {
    */
   id: ID;
   /** @example ["REVENUE", "DASHBOARD"] */
-  pages: string[];
+  pages: NotificationCampaignPages[];
   metadata: null | CampaignMetadataFragment;
   /** @example ["ALERTBANNER", "CALLOUT"] */
-  displayType: string;
+  displayType: NotificationCampaignDisplayType;
   /**
    * @format int32
    * @example [0, -1]
@@ -36664,6 +36242,15 @@ export type NotificationCampaignFragment = {
   priority: number;
   __typename: "NotificationCampaign";
 };
+
+/** ℹ️ Not real Twitch type name */
+export type NotificationCampaignPages =
+  | "CHANNEL"
+  | "DASHBOARD"
+  | "HOME"
+  | "NO_PAGE_LOCATION"
+  | "REVENUE"
+  | "WEBROOT";
 
 export type NotificationSettingFragment = {
   /** @example ["STREAMERSHOUTS", "creator_category", "moderation_category", "SUB_MESSAGES", "RESEARCHSTUDIES", "WATCHSTREAKS", "developer_category"] */
@@ -36762,7 +36349,7 @@ export type OauthFields_OAuthAppOwner = {
 
 export type OfferEligibilityFragment = {
   /** @example ["WEB"] */
-  platform: string;
+  platform: OfferPlatform;
   eligibility: {
     isEligible: boolean;
     reasonCode: null | string;
@@ -36781,6 +36368,16 @@ export type OfferEligibilityFragment_OfferEligibilityPromotionInstance = {
   __typename: string;
 };
 
+/** ℹ️ Not real Twitch type name */
+export type OfferEligibilityPurchaseType =
+  | "DEFAULT_PURCHASE"
+  | "DOWNGRADE_RECURRING_SUB_TIER"
+  | "FUTURE_PURCHASE"
+  | "UPGRADE_RECURRING_SUB_TIER";
+
+/** ℹ️ Not real Twitch type name */
+export type OfferGiftType = "COMMUNITY" | "SINGLE_RECIPIENT";
+
 export type OfferPlatform = "WEB";
 
 export type OfferPromotionFragment = {
@@ -36795,7 +36392,7 @@ export type OfferPromotionFragment = {
      */
     discountPercent: number;
     /** @example ["DISCOUNT_TYPE_PERCENT"] */
-    discountType: string;
+    discountType: PromotionDisplayDiscountType;
     __typename: "PromotionDisplay";
   };
   eligibilityFilters: {
@@ -36807,6 +36404,13 @@ export type OfferPromotionFragment = {
   endAt: null | string;
   __typename: "OfferPromotion";
 };
+
+/** ℹ️ Not real Twitch type name */
+export type OfferPromotionPromoType =
+  | "PROMOTION_TYPE_BONUS_PRODUCT"
+  | "PROMOTION_TYPE_DISCOUNT"
+  | "PROMOTION_TYPE_FREE_TRIAL"
+  | "PROMOTION_TYPE_NONE";
 
 export type OfferTagBindingInput = {
   /** @example ["is_anonymous", "product_id", "channel_id", "charge_interval"] */
@@ -36921,13 +36525,14 @@ export type OnboardingChannelsFragment = {
 
 /** ℹ️ Not real Twitch type name */
 export type OnboardingFollowGame_FollowGame = {
-  game: null | OnboardingFollowGame_FollowGameGame | OnboardingFollowGame_FollowGameGame[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type OnboardingFollowGame_FollowGameGame = {
-  id: ID;
+  game: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["509672"]
+     */
+    id: ID;
+    __typename: "Game";
+  };
   __typename: string;
 };
 
@@ -37182,9 +36787,8 @@ export type OnboardingModalRecommendations_RecommendedGames = {
 /** ℹ️ Not real Twitch type name */
 export type OnboardingModalRecommendations_RecommendedStreams = {
   edges: {
-    /** ⚠️ Low confidence about: nullable */
-    trackingID: null | ID;
-    node: null | {
+    trackingID: ID;
+    node: {
       /**
        * @pattern ^[0-9]+$
        * @example ["316180784725"]
@@ -37220,7 +36824,7 @@ export type OnboardingModalRecommendations_RecommendedStreams = {
       };
       __typename: "Stream";
     };
-    __typename: string;
+    __typename: "StreamRecommendationEdge";
   }[];
   __typename: string;
 };
@@ -37265,39 +36869,25 @@ export type OnboardingV2Category = {
 
 /** ℹ️ Not real Twitch type name */
 export type OnboardingV2FollowCategory_FollowGame = {
-  game:
-    | null
-    | OnboardingV2FollowCategory_FollowGameGame
-    | OnboardingV2FollowCategory_FollowGameGame[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type OnboardingV2FollowCategory_FollowGameGame = {
-  id: ID;
-  self:
-    | null
-    | OnboardingV2FollowCategory_FollowGameGameSelf
-    | OnboardingV2FollowCategory_FollowGameGameSelf[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type OnboardingV2FollowCategory_FollowGameGameSelf = {
-  follow:
-    | null
-    | OnboardingV2FollowCategory_FollowGameGameSelfFollow
-    | OnboardingV2FollowCategory_FollowGameGameSelfFollow[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type OnboardingV2FollowCategory_FollowGameGameSelfFollow = {
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format date-time
-   */
-  followedAt: null | string;
+  game: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["509672"]
+     */
+    id: ID;
+    self: {
+      follow: null | {
+        /**
+         * @format date-time
+         * @example ["2016-04-22T03:46:46.801392Z", "2024-12-17T08:00:08.957987415Z"]
+         */
+        followedAt: string;
+        __typename: "GameFollow";
+      };
+      __typename: "GameSelfConnection";
+    };
+    __typename: "Game";
+  };
   __typename: string;
 };
 
@@ -37323,24 +36913,18 @@ export type OnboardingV2SearchCategories_SearchCategories = {
 
 /** ℹ️ Not real Twitch type name */
 export type OnboardingV2UnfollowCategory_UnfollowGame = {
-  follow:
-    | null
-    | OnboardingV2UnfollowCategory_UnfollowGameFollow
-    | OnboardingV2UnfollowCategory_UnfollowGameFollow[];
+  follow: null | {
+    /**
+     * @format date-time
+     * @example ["2016-04-22T03:46:46.801392Z", "2024-12-17T08:00:08.957987415Z"]
+     */
+    followedAt: string;
+    __typename: "GameFollow";
+  };
   __typename: string;
 };
 
-/** ℹ️ Not real Twitch type name */
-export type OnboardingV2UnfollowCategory_UnfollowGameFollow = {
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format date-time
-   */
-  followedAt: null | string;
-  __typename: string;
-};
-
-export type OnsiteNotificationDisplayType = "CREATOR" | "VIEWER";
+export type OnsiteNotificationDisplayType = "CREATOR" | "SAFETY" | "VIEWER";
 
 /** ℹ️ Not real Twitch type name */
 export type OnsiteNotificationsDeleteNotification_DeleteNotification = {
@@ -37665,6 +37249,18 @@ export type OptIntoPreaffiliate_OptInToPreaffiliate = {
   __typename: string;
 };
 
+/** ℹ️ Not real Twitch type name */
+export type OptState = "UNSPECIFIED";
+
+/** ℹ️ Not real Twitch type name */
+export type OptionsSort =
+  | "CSGO_SKILL"
+  | "LOL_SUMMONER_RANK"
+  | "RECENT"
+  | "RELEVANCE"
+  | "VIEWER_COUNT"
+  | "VIEWER_COUNT_ASC";
+
 export type OrgApp = {
   /** ⚠️ Low confidence about: nullable */
   organizationName: null | string;
@@ -37750,25 +37346,27 @@ export type OrgMemberEdge = {
     title: null | string;
     /** ⚠️ Low confidence about: nullable */
     email: null | string;
-    user: null | OrgMemberEdge_OrganizationMemberUser | OrgMemberEdge_OrganizationMemberUser[];
+    user: null | {
+      /**
+       * @pattern ^[0-9]+$
+       * @example ["23161357"]
+       */
+      id: ID;
+      /** @example ["Twitch", "CD PROJEKT RED", "LIRIK", "forsen", "ayuuexe", "xQc", "RSDragonwilds"] */
+      displayName: string;
+      /** @example ["lirik", "twitch", "cdprojektred", "forsen", "tickett_", "st1mgreeen", "lipton_18"] */
+      login: string;
+      /**
+       * @format uri
+       * @example ["https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-70x70.png", "https://static-cdn.jtvnw.net/jtv_user_pictures/3c3366d7-728a-4204-bfdd-7c823858e4d9-profile_image-70x70.png"]
+       * @gqlArg `width: Int [50, 70, 300, 28, 150]`
+       */
+      profileImageURL: string;
+      __typename: "User";
+    };
     __typename: "OrganizationMember";
   };
   __typename: "OrganizationMemberEdge";
-};
-
-/** ℹ️ Not real Twitch type name */
-export type OrgMemberEdge_OrganizationMemberUser = {
-  id: ID;
-  displayName: UnknownValue;
-  /** ⚠️ Low confidence about: nullable */
-  login: null | string;
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format uri
-   * @gqlArg `width: Int [50]`
-   */
-  profileImageURL: null | string;
-  __typename: string;
 };
 
 export type OverwatchDetails = {
@@ -37813,6 +37411,12 @@ export type PartnerPlusPendingGrant_CreatorTermsStatusContractMetadata = {
   value: UnknownValue;
   __typename: string;
 };
+
+/** ℹ️ Not real Twitch type name */
+export type PartnerPlusProgramPublicLevel = "LEVEL_1" | "LEVEL_2" | "NONE" | "PARTNER_PLUS";
+
+/** ℹ️ Not real Twitch type name */
+export type PartnerPlusProgramPublicWidgetSetting = "LEVEL_1" | "LEVEL_2" | "OFF";
 
 /** ℹ️ Not real Twitch type name */
 export type PartnerPlusQuery_CreatorTermsStatus = {
@@ -38031,6 +37635,9 @@ export type PathToPartnerQuest = {
   __typename: "PathToPartner";
 };
 
+/** ℹ️ Not real Twitch type name */
+export type PathToPartnerTwoStatus = "INCOMPLETE";
+
 export type PathToPartnerV2Quest = {
   /**
    * @format uri
@@ -38040,7 +37647,7 @@ export type PathToPartnerV2Quest = {
   /** @format date-time */
   eligibleUntil: null | string;
   /** @example ["INCOMPLETE"] */
-  status: string;
+  status: PathToPartnerTwoStatus;
   criteria: {
     uniqueStreams: {
       /**
@@ -38101,7 +37708,24 @@ export type PauseHostTrainHold_PauseHostTrainHoldError = {
 
 /** ℹ️ Not real Twitch type name */
 export type PauseRaids_PauseRaids = {
-  user: null | PauseRaids_PauseRaidsUser | PauseRaids_PauseRaidsUser[];
+  user: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["23161357"]
+     */
+    id: ID;
+    raidSettings: null | {
+      /** ⚠️ Low confidence about: nullable */
+      isAllowingRaids: null | boolean;
+      /**
+       * ⚠️ Low confidence about: nullable
+       * @format date-time
+       */
+      pausedUntil: null | string;
+      __typename: "RaidSettings";
+    };
+    __typename: "User";
+  };
   error: null | PauseRaids_PauseRaidsError | PauseRaids_PauseRaidsError[];
   __typename: string;
 };
@@ -38109,28 +37733,6 @@ export type PauseRaids_PauseRaids = {
 /** ℹ️ Not real Twitch type name */
 export type PauseRaids_PauseRaidsError = {
   code: UnknownValue;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type PauseRaids_PauseRaidsUser = {
-  id: ID;
-  raidSettings:
-    | null
-    | PauseRaids_PauseRaidsUserRaidSettings
-    | PauseRaids_PauseRaidsUserRaidSettings[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type PauseRaids_PauseRaidsUserRaidSettings = {
-  /** ⚠️ Low confidence about: nullable */
-  isAllowingRaids: null | boolean;
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format date-time
-   */
-  pausedUntil: null | string;
   __typename: string;
 };
 
@@ -38148,9 +37750,9 @@ export type PaymentMethodFragment = {
   /** @example [""] */
   chargeInstrumentID: ID;
   /** @example ["XSOLLA", "GOOGLE_IAB"] */
-  provider: string;
+  provider: PaymentProvider;
   /** @example ["UNKNOWN"] */
-  paymentType: string;
+  paymentType: PaymentMethodPaymentType;
   billingCountry: null;
   billingEmail: null | string;
   billingUsername: null;
@@ -38166,6 +37768,9 @@ export type PaymentMethodFragment = {
 };
 
 /** ℹ️ Not real Twitch type name */
+export type PaymentMethodPaymentType = "UNKNOWN";
+
+/** ℹ️ Not real Twitch type name */
 export type PaymentMethodsTabUserPaymentMethods_PaymentMethodPurchaseProfiles = {
   id: ID;
   willRenew: UnknownValue;
@@ -38177,40 +37782,22 @@ export type PaymentMethodsTabUserPaymentMethods_PaymentMethodPurchaseProfiles = 
   renewalPrice: UnknownValue;
   renewalCurrency: UnknownValue;
   productType: UnknownValue;
-  subscriptionBenefit:
-    | null
-    | PaymentMethodsTabUserPaymentMethods_PaymentMethodPurchaseProfilesSubscriptionBenefit
-    | PaymentMethodsTabUserPaymentMethods_PaymentMethodPurchaseProfilesSubscriptionBenefit[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type PaymentMethodsTabUserPaymentMethods_PaymentMethodPurchaseProfilesSubscriptionBenefit = {
-  id: ID;
-  tier: UnknownValue;
-  user:
-    | null
-    | PaymentMethodsTabUserPaymentMethods_PaymentMethodPurchaseProfilesSubscriptionBenefitUser
-    | PaymentMethodsTabUserPaymentMethods_PaymentMethodPurchaseProfilesSubscriptionBenefitUser[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type PaymentMethodsTabUserPaymentMethods_PaymentMethodPurchaseProfilesSubscriptionBenefitUser =
-  {
+  subscriptionBenefit: null | {
+    /** @example ["3L7hSWPX941bMubywA98e4uYNdT", "3KyHdOj3R8PmXqz66jFOU07Ia7D"] */
     id: ID;
-    /** ⚠️ Low confidence about: nullable */
-    displayName: null | string;
     /**
-     * ⚠️ Low confidence about: nullable
-     * @format uri
-     * @gqlArg `width: Int [50]`
+     * @pattern ^[0-9]+$
+     * @example ["1000"]
      */
-    profileImageURL: null | string;
-    /** ⚠️ Low confidence about: nullable */
-    login: null | string;
-    __typename: string;
+    tier: string;
+    user:
+      | null
+      | PaymentMethodsTabUserPaymentMethods_SubscriptionBenefitUser
+      | PaymentMethodsTabUserPaymentMethods_SubscriptionBenefitUser[];
+    __typename: "SubscriptionBenefit";
   };
+  __typename: string;
+};
 
 /** ℹ️ Not real Twitch type name */
 export type PaymentMethodsTabUserPaymentMethods_PaymentMethodRecurringPaymentDetails = {
@@ -38226,41 +37813,22 @@ export type PaymentMethodsTabUserPaymentMethods_PaymentMethodRecurringPaymentDet
   renewalCurrency: UnknownValue;
   productType: UnknownValue;
   creatorWalletFundingStatus: UnknownValue;
-  subscriptionBenefit:
-    | null
-    | PaymentMethodsTabUserPaymentMethods_PaymentMethodRecurringPaymentDetailsSubscriptionBenefit
-    | PaymentMethodsTabUserPaymentMethods_PaymentMethodRecurringPaymentDetailsSubscriptionBenefit[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type PaymentMethodsTabUserPaymentMethods_PaymentMethodRecurringPaymentDetailsSubscriptionBenefit =
-  {
+  subscriptionBenefit: null | {
+    /** @example ["3L7hSWPX941bMubywA98e4uYNdT", "3KyHdOj3R8PmXqz66jFOU07Ia7D"] */
     id: ID;
-    tier: UnknownValue;
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["1000"]
+     */
+    tier: string;
     user:
       | null
-      | PaymentMethodsTabUserPaymentMethods_PaymentMethodRecurringPaymentDetailsSubscriptionBenefitUser
-      | PaymentMethodsTabUserPaymentMethods_PaymentMethodRecurringPaymentDetailsSubscriptionBenefitUser[];
-    __typename: string;
+      | PaymentMethodsTabUserPaymentMethods_SubscriptionBenefitUser
+      | PaymentMethodsTabUserPaymentMethods_SubscriptionBenefitUser[];
+    __typename: "SubscriptionBenefit";
   };
-
-/** ℹ️ Not real Twitch type name */
-export type PaymentMethodsTabUserPaymentMethods_PaymentMethodRecurringPaymentDetailsSubscriptionBenefitUser =
-  {
-    id: ID;
-    /** ⚠️ Low confidence about: nullable */
-    displayName: null | string;
-    /**
-     * ⚠️ Low confidence about: nullable
-     * @format uri
-     * @gqlArg `width: Int [50]`
-     */
-    profileImageURL: null | string;
-    /** ⚠️ Low confidence about: nullable */
-    login: null | string;
-    __typename: string;
-  };
+  __typename: string;
+};
 
 /** ℹ️ Not real Twitch type name */
 export type PaymentMethodsTabUserPaymentMethods_PaymentPastDueStatuses = {
@@ -38271,20 +37839,18 @@ export type PaymentMethodsTabUserPaymentMethods_PaymentPastDueStatuses = {
 };
 
 /** ℹ️ Not real Twitch type name */
-export type PaymentMethodsTabUserPaymentMethods_UserEligiblePaymentMethodsPayload = {
-  methods:
-    | null
-    | PaymentMethodsTabUserPaymentMethods_UserEligiblePaymentMethodsPayloadMethods
-    | PaymentMethodsTabUserPaymentMethods_UserEligiblePaymentMethodsPayloadMethods[];
-  error: UnknownValue;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type PaymentMethodsTabUserPaymentMethods_UserEligiblePaymentMethodsPayloadMethods = {
+export type PaymentMethodsTabUserPaymentMethods_SubscriptionBenefitUser = {
+  id: ID;
   /** ⚠️ Low confidence about: nullable */
-  name: null | string;
-  availabilityStatus: UnknownValue;
+  displayName: null | string;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uri
+   * @gqlArg `width: Int [150]`
+   */
+  profileImageURL: null | string;
+  /** ⚠️ Low confidence about: nullable */
+  login: null | string;
   __typename: string;
 };
 
@@ -38294,46 +37860,43 @@ export type PaymentMethodsTabUserPaymentMethods_UserPaymentMethodConfigs = {
     | null
     | PaymentMethodsTabUserPaymentMethods_UserPaymentMethodConfigsRecurly
     | PaymentMethodsTabUserPaymentMethods_UserPaymentMethodConfigsRecurly[];
-  xsolla:
-    | null
-    | PaymentMethodsTabUserPaymentMethods_UserPaymentMethodConfigsXsolla
-    | PaymentMethodsTabUserPaymentMethods_UserPaymentMethodConfigsXsolla[];
+  xsolla: null | {
+    /** @example ["deadbeefdeadbeefdeadbeefdeadbeef_lc_en"] */
+    token: string;
+    isSandbox: boolean;
+    __typename: "Xsolla";
+  };
   __typename: string;
 };
 
 /** ℹ️ Not real Twitch type name */
 export type PaymentMethodsTabUserPaymentMethods_UserPaymentMethodConfigsRecurly = {
   braintreeClientAuthorization: UnknownValue;
-  payWithAmazonConfigs:
-    | null
-    | PaymentMethodsTabUserPaymentMethods_UserPaymentMethodConfigsRecurlyPayWithAmazonConfigs
-    | PaymentMethodsTabUserPaymentMethods_UserPaymentMethodConfigsRecurlyPayWithAmazonConfigs[];
+  payWithAmazonConfigs: null | {
+    /** @example ["amzn1.application-oa2-client.608cce2919884a35a7fccdef39cada5c"] */
+    clientID: ID;
+    isProduction: boolean;
+    /** @example ["A25XD55Y69DBQZ"] */
+    sellerID: ID;
+    __typename: "PayWithAmazonConfigs";
+  };
   publicKey: UnknownValue;
   __typename: string;
 };
 
-/** ℹ️ Not real Twitch type name */
-export type PaymentMethodsTabUserPaymentMethods_UserPaymentMethodConfigsRecurlyPayWithAmazonConfigs =
-  {
-    /** ⚠️ Low confidence about: nullable */
-    clientID: null | ID;
-    /** ⚠️ Low confidence about: nullable */
-    isProduction: null | boolean;
-    /** ⚠️ Low confidence about: nullable */
-    sellerID: null | ID;
-    __typename: string;
-  };
-
-/** ℹ️ Not real Twitch type name */
-export type PaymentMethodsTabUserPaymentMethods_UserPaymentMethodConfigsXsolla = {
-  /** ⚠️ Low confidence about: nullable */
-  token: null | string;
-  /** ⚠️ Low confidence about: nullable */
-  isSandbox: null | boolean;
-  __typename: string;
-};
-
-export type PaymentProvider = "RECURLY" | "XSOLLA_V3";
+export type PaymentProvider =
+  | "APPLE_IAP"
+  | "BRAINTREE_PPGF"
+  | "GOOGLE_IAB"
+  | "PAYPAL"
+  | "PAYPAL_RT"
+  | "PRIME"
+  | "RECURLY"
+  | "SUB_TOKEN"
+  | "UNKNOWN"
+  | "XSOLLA"
+  | "XSOLLA_V3"
+  | "ZUORA";
 
 export type PaymentSession = {
   /**
@@ -38384,20 +37947,17 @@ export type PaymentTransaction = {
     | PaymentTransaction_PaymentTransactionRecipient[];
   paymentMethod:
     | null
-    | PaymentTransaction_PaymentTransactionPaymentMethod
-    | PaymentTransaction_PaymentTransactionPaymentMethod[];
+    | (null | {
+        /** @example ["XSOLLA", "GOOGLE_IAB"] */
+        provider: PaymentProvider;
+        /** @example ["UNKNOWN"] */
+        paymentType: PaymentMethodPaymentType;
+        cardType: null;
+        lastFour: null;
+        paymentScheme: null | string;
+        __typename: "PaymentMethod";
+      })[];
   __typename: "PaymentTransaction";
-};
-
-/** ℹ️ Not real Twitch type name */
-export type PaymentTransaction_PaymentTransactionPaymentMethod = {
-  provider: UnknownValue;
-  paymentType: UnknownValue;
-  cardType: UnknownValue;
-  lastFour: UnknownValue;
-  /** ⚠️ Low confidence about: nullable */
-  paymentScheme: null | string;
-  __typename: string;
 };
 
 /** ℹ️ Not real Twitch type name */
@@ -38778,14 +38338,6 @@ export type PayoutThresholdV2_PayoutThresholdPreviousMonthAccrual = {
   __typename: string;
 };
 
-/** ℹ️ Not real Twitch type name */
-export type PendingOrganizationApplication_PendingOrganizationApplication = {
-  /** ⚠️ Low confidence about: nullable */
-  organizationName: null | string;
-  status: UnknownValue;
-  __typename: string;
-};
-
 export type PendingSubscription = {
   price: UnknownValue;
   /**
@@ -38815,10 +38367,22 @@ export type PermittedTerm = {
 
 /** ℹ️ Not real Twitch type name */
 export type PinChatMessage_PinChatMessage = {
-  pinnedChatMessage:
-    | null
-    | PinChatMessage_PinChatMessagePinnedChatMessage
-    | PinChatMessage_PinChatMessagePinnedChatMessage[];
+  pinnedChatMessage: null | {
+    /**
+     * @format uuid
+     * @example ["c47bf9cf-5d0f-4288-ab1a-4740d3a84525"]
+     */
+    id: ID;
+    pinnedMessage: {
+      /**
+       * @format uuid
+       * @example ["279e8293-cec0-40df-a475-6b35981a2e49"]
+       */
+      id: ID;
+      __typename: "Message";
+    };
+    __typename: "PinnedChatMessage";
+  };
   error: null | PinChatMessage_PinChatMessageError | PinChatMessage_PinChatMessageError[];
   __typename: string;
 };
@@ -38826,22 +38390,6 @@ export type PinChatMessage_PinChatMessage = {
 /** ℹ️ Not real Twitch type name */
 export type PinChatMessage_PinChatMessageError = {
   code: UnknownValue;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type PinChatMessage_PinChatMessagePinnedChatMessage = {
-  id: ID;
-  pinnedMessage:
-    | null
-    | PinChatMessage_PinChatMessagePinnedChatMessagePinnedMessage
-    | PinChatMessage_PinChatMessagePinnedChatMessagePinnedMessage[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type PinChatMessage_PinChatMessagePinnedChatMessagePinnedMessage = {
-  id: ID;
   __typename: string;
 };
 
@@ -38866,10 +38414,23 @@ export type PlaceOrder_PlaceOrderError = {
 
 export type PlatformDetailInput = {
   /** @example ["WINDOWS"] */
-  deviceOS: string;
+  deviceOS: PlatformDetailInputDeviceOS;
   /** @example ["DESKTOP"] */
-  deviceType: string;
+  deviceType: PlatformDetailInputDeviceType;
 };
+
+/** ℹ️ Not real Twitch type name */
+export type PlatformDetailInputDeviceOS =
+  | "ANDROID"
+  | "CHROMEOS"
+  | "IOS"
+  | "LINUX"
+  | "MACOS"
+  | "OTHER"
+  | "WINDOWS";
+
+/** ℹ️ Not real Twitch type name */
+export type PlatformDetailInputDeviceType = "DESKTOP";
 
 export type PlatformEventSettingFragment = {
   /** @example ["smart", "all", "email", "push", "onsite"] */
@@ -38881,6 +38442,14 @@ export type PlatformEventSettingFragment = {
 };
 
 export type PlatformType = "all";
+
+/** ℹ️ Not real Twitch type name */
+export type PlaybackAccessTokenAuthorizationForbiddenReasonCode =
+  | "CHANNEL_RESTRICTED_BANNED_USER"
+  | "GEOBLOCKED"
+  | "NONE"
+  | "UNAUTHORIZED"
+  | "UNAUTHORIZED_ENTITLEMENTS";
 
 export type PlayerTrackingBroadcaster = {
   /**
@@ -38924,7 +38493,7 @@ export type PlayerTrackingVOD = {
    */
   id: ID;
   /** @example ["ARCHIVE", "HIGHLIGHT", "UPLOAD"] */
-  broadcastType: string;
+  broadcastType: BroadcastType;
   game: null | {
     /**
      * @pattern ^[0-9]+$
@@ -39065,7 +38634,7 @@ export type PokemonCampaignRewards = {
    */
   thumbnailURL: string;
   /** @example ["DIRECT_ENTITLEMENT", "POOL", "CODE", "BADGE"] */
-  distributionType: string;
+  distributionType: DropsRewardDistributionType;
   dropDetail:
     | null
     | PokemonCampaignRewards_DropsRewardDropDetail
@@ -39076,18 +38645,13 @@ export type PokemonCampaignRewards = {
 
 /** ℹ️ Not real Twitch type name */
 export type PokemonCampaignRewards_DropsRewardDropDetail = {
-  badge:
-    | null
-    | PokemonCampaignRewards_DropsRewardDropDetailBadge
-    | PokemonCampaignRewards_DropsRewardDropDetailBadge[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type PokemonCampaignRewards_DropsRewardDropDetailBadge = {
-  id: ID;
-  /** ⚠️ Low confidence about: nullable */
-  setID: null | ID;
+  badge: null | {
+    /** @example ["Yml0czsxOw==", "cHJlZGljdGlvbnM7Ymx1ZS0xOw=="] */
+    id: ID;
+    /** @example ["", "bits", "predictions"] */
+    setID: ID;
+    __typename: "Badge";
+  };
   __typename: string;
 };
 
@@ -39120,18 +38684,13 @@ export type PokemonCampaignRewards_DropsRewardPoolRewards = {
 
 /** ℹ️ Not real Twitch type name */
 export type PokemonCampaignRewards_DropsRewardPoolRewardsDropDetail = {
-  badge:
-    | null
-    | PokemonCampaignRewards_DropsRewardPoolRewardsDropDetailBadge
-    | PokemonCampaignRewards_DropsRewardPoolRewardsDropDetailBadge[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type PokemonCampaignRewards_DropsRewardPoolRewardsDropDetailBadge = {
-  id: ID;
-  /** ⚠️ Low confidence about: nullable */
-  setID: null | ID;
+  badge: null | {
+    /** @example ["Yml0czsxOw==", "cHJlZGljdGlvbnM7Ymx1ZS0xOw=="] */
+    id: ID;
+    /** @example ["", "bits", "predictions"] */
+    setID: ID;
+    __typename: "Badge";
+  };
   __typename: string;
 };
 
@@ -39180,7 +38739,7 @@ export type PokemonCampaignSection = {
     track: UnknownValue;
     progressCriteria: {
       /** @example ["WATCH", "SUB"] */
-      requirementType: string;
+      requirementType: DropsProgressCriteriaRequirementType;
       requirements: {
         /**
          * @format uint32
@@ -39329,19 +38888,17 @@ export type PollTopCommunityPointsContributor = {
    * @format uint32
    */
   communityPointsAmount: null | number;
-  user:
-    | null
-    | PollTopCommunityPointsContributor_PollTopCommunityPointsContributorUser
-    | PollTopCommunityPointsContributor_PollTopCommunityPointsContributorUser[];
+  user: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["23161357"]
+     */
+    id: ID;
+    /** @example ["Twitch", "CD PROJEKT RED", "LIRIK", "forsen", "ayuuexe", "xQc", "RSDragonwilds"] */
+    displayName: string;
+    __typename: "User";
+  };
   __typename: "PollTopCommunityPointsContributor";
-};
-
-/** ℹ️ Not real Twitch type name */
-export type PollTopCommunityPointsContributor_PollTopCommunityPointsContributorUser = {
-  id: ID;
-  /** ⚠️ Low confidence about: nullable */
-  displayName: null | string;
-  __typename: string;
 };
 
 export type PollVoteBreakdown = {
@@ -39359,44 +38916,36 @@ export type PollVoteBreakdown = {
 export type PollVoter = {
   id: ID;
   choices: null | PollVoterChoice;
-  poll: null | PollVoter_PollVoterPoll | PollVoter_PollVoterPoll[];
+  poll: null | {
+    id: ID;
+    __typename: "Poll";
+  };
   tokens: null | PollTokenBreakdown;
-  user: null | PollVoter_PollVoterUser | PollVoter_PollVoterUser[];
+  user: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["23161357"]
+     */
+    id: ID;
+    /** @example ["lirik", "twitch", "cdprojektred", "forsen", "tickett_", "st1mgreeen", "lipton_18"] */
+    login: string;
+    /** @example ["Twitch", "CD PROJEKT RED", "LIRIK", "forsen", "ayuuexe", "xQc", "RSDragonwilds"] */
+    displayName: string;
+    __typename: "User";
+  };
   votes: null | PollVoteBreakdown;
   __typename: "PollVoter";
 };
 
 export type PollVoterChoice = {
   id: ID;
-  pollChoice:
-    | null
-    | PollVoterChoice_PollVoterChoicePollChoice
-    | PollVoterChoice_PollVoterChoicePollChoice[];
+  pollChoice: null | {
+    id: ID;
+    __typename: "PollChoice";
+  };
   tokens: null | PollTokenBreakdown;
   votes: null | PollVoteBreakdown;
   __typename: "PollVoterChoice";
-};
-
-/** ℹ️ Not real Twitch type name */
-export type PollVoterChoice_PollVoterChoicePollChoice = {
-  id: ID;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type PollVoter_PollVoterPoll = {
-  id: ID;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type PollVoter_PollVoterUser = {
-  id: ID;
-  /** ⚠️ Low confidence about: nullable */
-  login: null | string;
-  /** ⚠️ Low confidence about: nullable */
-  displayName: null | string;
-  __typename: string;
 };
 
 /** ℹ️ Not real Twitch type name */
@@ -39413,7 +38962,7 @@ export type Poll_PollOwnedBy = {
 
 export type PortraitClipCropping = {
   /** @example ["FULL", "STACKED"] */
-  portraitClipLayout: string;
+  portraitClipLayout: PortraitClipCroppingPortraitClipLayout;
   fullTemplateMetadata: null | {
     mainFrame: null | PortraitCropMetadata;
     __typename: "FullTemplateMetadata";
@@ -39425,6 +38974,9 @@ export type PortraitClipCropping = {
   };
   __typename: "PortraitClipCropping";
 };
+
+/** ℹ️ Not real Twitch type name */
+export type PortraitClipCroppingPortraitClipLayout = "FULL" | "FULL_HEIGHT" | "SPLIT" | "STACKED";
 
 export type PortraitCropMetadata = {
   topLeft: {
@@ -39534,12 +39086,24 @@ export type PredictionEventFragment = {
    */
   predictionWindowSeconds: number;
   /** @example ["LOCKED", "RESOLVED"] */
-  status: string;
+  status: PredictionEventStatus;
   /** @example ["2nd Game of Sub Sunday Playtime", "will this blow up on landing in water or not", "How many Survivors will escape this match?", "First Game of Sub Sunday Playtime", "WILL XQC WIN?", "Early/On-time vs Late", "Will Rachel arrive on time?"] */
   title: string;
   winningOutcome: null | PredictionOutcomeFragment;
   __typename: "PredictionEvent";
 };
+
+/** ℹ️ Not real Twitch type name */
+export type PredictionEventStatus =
+  | "ACTIVE"
+  | "CANCELED"
+  | "CANCEL_PENDING"
+  | "LOCKED"
+  | "RESOLVED"
+  | "RESOLVE_PENDING";
+
+/** ℹ️ Not real Twitch type name */
+export type PredictionOutcomeColor = "BLUE" | "GREEN" | "GREY" | "ORANGE" | "PINK" | "PURPLE";
 
 export type PredictionOutcomeFragment = {
   /**
@@ -39548,7 +39112,7 @@ export type PredictionOutcomeFragment = {
    */
   id: ID;
   /** @example ["BLUE", "PINK"] */
-  color: string;
+  color: PredictionOutcomeColor;
   /** @example ["1 - 15 mins", "16-30 mins", "31 - 45 mins", "46 - 60 mins", "61+ mins", "YES", "NO"] */
   title: string;
   /**
@@ -39758,7 +39322,7 @@ export type PreviewCardClip = {
   };
   previewThumbnailProperties: {
     /** @example ["BLUR_NOT_REQUIRED", "BLUR_REASON_TYPE_SEXUAL_THEMES"] */
-    blurReason: string;
+    blurReason: PreviewThumbnailPropertiesBlurReason;
     __typename: "PreviewThumbnailProperties";
   };
   __typename: "Clip";
@@ -39875,7 +39439,7 @@ export type PreviewCardVideo = {
   /** @directive include(if: $includePreviewBlur) */
   previewThumbnailProperties?: {
     /** @example ["BLUR_NOT_REQUIRED", "BLUR_REASON_TYPE_SEXUAL_THEMES"] */
-    blurReason: string;
+    blurReason: PreviewThumbnailPropertiesBlurReason;
     __typename: "PreviewThumbnailProperties";
   };
   __typename: "Video";
@@ -39979,6 +39543,179 @@ export type PreviewLiveShoppingOrdersFragment_PreviewLiveShoppingOrdersPayloadRe
     type: UnknownValue;
     __typename: string;
   };
+
+/** ℹ️ Not real Twitch type name */
+export type PreviewThumbnailPropertiesBlurReason =
+  | "BLUR_NOT_REQUIRED"
+  | "BLUR_REASON_TYPE_SEXUAL_THEMES";
+
+/** ℹ️ Not real Twitch type name */
+export type PriceInfoCurrency =
+  | "AED"
+  | "AFN"
+  | "ALL"
+  | "AMD"
+  | "ANG"
+  | "AOA"
+  | "ARS"
+  | "AUD"
+  | "AWG"
+  | "AZN"
+  | "BAM"
+  | "BBD"
+  | "BDT"
+  | "BGN"
+  | "BHD"
+  | "BIF"
+  | "BMD"
+  | "BND"
+  | "BOB"
+  | "BOV"
+  | "BRL"
+  | "BSD"
+  | "BTN"
+  | "BWP"
+  | "BYN"
+  | "BZD"
+  | "CAD"
+  | "CDF"
+  | "CHE"
+  | "CHF"
+  | "CHW"
+  | "CLF"
+  | "CLP"
+  | "CNY"
+  | "COP"
+  | "COU"
+  | "CRC"
+  | "CUC"
+  | "CUP"
+  | "CVE"
+  | "CZK"
+  | "DJF"
+  | "DKK"
+  | "DOP"
+  | "DZD"
+  | "EGP"
+  | "ERN"
+  | "ETB"
+  | "EUR"
+  | "FJD"
+  | "FKP"
+  | "GBP"
+  | "GEL"
+  | "GHS"
+  | "GIP"
+  | "GMD"
+  | "GNF"
+  | "GTQ"
+  | "GYD"
+  | "HKD"
+  | "HNL"
+  | "HRK"
+  | "HTG"
+  | "HUF"
+  | "IDR"
+  | "ILS"
+  | "INR"
+  | "IQD"
+  | "IRR"
+  | "ISK"
+  | "JMD"
+  | "JOD"
+  | "JPY"
+  | "KES"
+  | "KGS"
+  | "KHR"
+  | "KMF"
+  | "KRW"
+  | "KWD"
+  | "KYD"
+  | "KZT"
+  | "LAK"
+  | "LBP"
+  | "LKR"
+  | "LRD"
+  | "LSL"
+  | "LYD"
+  | "MAD"
+  | "MDL"
+  | "MGA"
+  | "MKD"
+  | "MMK"
+  | "MNT"
+  | "MOP"
+  | "MRU"
+  | "MUR"
+  | "MVR"
+  | "MWK"
+  | "MXN"
+  | "MXV"
+  | "MYR"
+  | "MZN"
+  | "NAD"
+  | "NGN"
+  | "NIO"
+  | "NOK"
+  | "NPR"
+  | "NZD"
+  | "OMR"
+  | "PAB"
+  | "PEN"
+  | "PGK"
+  | "PHP"
+  | "PKR"
+  | "PLN"
+  | "PYG"
+  | "QAR"
+  | "RON"
+  | "RSD"
+  | "RUB"
+  | "RWF"
+  | "SAR"
+  | "SBD"
+  | "SCR"
+  | "SDG"
+  | "SEK"
+  | "SGD"
+  | "SHP"
+  | "SLL"
+  | "SOS"
+  | "SRD"
+  | "SSP"
+  | "STN"
+  | "SVC"
+  | "SZL"
+  | "THB"
+  | "TJS"
+  | "TMT"
+  | "TND"
+  | "TOP"
+  | "TRY"
+  | "TTD"
+  | "TWD"
+  | "TZS"
+  | "UAH"
+  | "UGX"
+  | "USD"
+  | "UYI"
+  | "UYU"
+  | "UYW"
+  | "UZS"
+  | "VES"
+  | "VND"
+  | "VUV"
+  | "WST"
+  | "XAF"
+  | "XCD"
+  | "XOF"
+  | "XPF"
+  | "XSU"
+  | "XUA"
+  | "YER"
+  | "ZAR"
+  | "ZMW"
+  | "ZWL";
 
 /** ℹ️ Not real Twitch type name */
 export type PrimeEarningsStatement_UserPrimePayoutHistory = {
@@ -40115,7 +39852,7 @@ export type PrimeSubProductOfferFragment = {
   /** @example ["channel_sub", "channel_sub_community_gift", "channel_sub_standard_gift", "turbo_standard_gift"] */
   tplr: string;
   /** @example ["WEB"] */
-  platform: string;
+  platform: OfferPlatform;
   eligibility: {
     /**
      * @format date-time
@@ -40137,7 +39874,7 @@ export type PrimeSubProductOfferFragment = {
     __typename: "OfferTagBinding";
   }[];
   /** @example ["COMMUNITY", "SINGLE_RECIPIENT"] */
-  giftType: null | string;
+  giftType: null | OfferGiftType;
   listing: {
     chargeModel: {
       internal: null | {
@@ -40145,7 +39882,7 @@ export type PrimeSubProductOfferFragment = {
           /** @example ["33d10886-ace9-466b-9060-e10013aa05a21887", "41679e35-3eaf-4acf-b861-e8941c99650f", "63967dc1-a829-453e-9425-53c0f68313723565"] */
           id: ID;
           /** @example ["EUR", "USD"] */
-          currency: string;
+          currency: PriceInfoCurrency;
           /**
            * @format int32
            * @example [2]
@@ -40184,18 +39921,18 @@ export type PrimeSubProductOfferFragment = {
              */
             duration: number;
             /** @example ["MONTHS"] */
-            unit: string;
+            unit: ChargeModelPlanIntervalUnit;
             __typename: "ChargeModelPlanInterval";
           };
           /** @example ["AUTO_RENEW", "NO_RENEW"] */
-          renewalPolicy: string;
+          renewalPolicy: ChargeModelPlanRenewalPolicy;
           __typename: "ChargeModelPlan";
         };
         __typename: "InternalChargeModel";
       };
       credit: null | {
         /** @example ["SUB_TOKEN", "PRIME_TOKEN"] */
-        creditType: string;
+        creditType: CreditChargeModelCreditType;
         /**
          * @format uint32
          * @example [1]
@@ -40219,7 +39956,7 @@ export type PrimeSubProductOfferFragment = {
        */
       discountPercent: number;
       /** @example ["DISCOUNT_TYPE_PERCENT"] */
-      discountType: string;
+      discountType: PromotionDisplayDiscountType;
       __typename: "PromotionDisplay";
     };
     eligibilityFilters: {
@@ -40228,7 +39965,7 @@ export type PrimeSubProductOfferFragment = {
       __typename: "EligibilityFilter";
     }[];
     /** @example ["PROMOTION_TYPE_DISCOUNT"] */
-    promoType: string;
+    promoType: OfferPromotionPromoType;
     /**
      * @format int32
      * @example [0]
@@ -40264,10 +40001,24 @@ export type PrimeSubProductOfferFragment_OfferEligibilityPromotionInstance = {
 export type PrimeSubscribeSpendPrimeSubscriptionCredit_SpendSubscriptionCredit = {
   /** ⚠️ Low confidence about: nullable */
   userID: null | ID;
-  subscriptionBenefit:
-    | null
-    | PrimeSubscribeSpendPrimeSubscriptionCredit_SpendSubscriptionCreditSubscriptionBenefit
-    | PrimeSubscribeSpendPrimeSubscriptionCredit_SpendSubscriptionCreditSubscriptionBenefit[];
+  subscriptionBenefit: null | {
+    /** @example ["3L7hSWPX941bMubywA98e4uYNdT", "3KyHdOj3R8PmXqz66jFOU07Ia7D"] */
+    id: ID;
+    purchasedWithPrime: boolean;
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["1000"]
+     */
+    tier: string;
+    /** @example ["WEB"] */
+    platform: SubscriptionBenefitPlatform;
+    /**
+     * @format date-time
+     * @example ["2026-11-24T03:03:32Z", "2026-11-20T19:02:54Z"]
+     */
+    endsAt: string;
+    __typename: "SubscriptionBenefit";
+  };
   error:
     | null
     | PrimeSubscribeSpendPrimeSubscriptionCredit_SpendSubscriptionCreditError
@@ -40280,21 +40031,6 @@ export type PrimeSubscribeSpendPrimeSubscriptionCredit_SpendSubscriptionCreditEr
   code: UnknownValue;
   __typename: string;
 };
-
-/** ℹ️ Not real Twitch type name */
-export type PrimeSubscribeSpendPrimeSubscriptionCredit_SpendSubscriptionCreditSubscriptionBenefit =
-  {
-    id: ID;
-    purchasedWithPrime: UnknownValue;
-    tier: UnknownValue;
-    platform: UnknownValue;
-    /**
-     * ⚠️ Low confidence about: nullable
-     * @format date-time
-     */
-    endsAt: null | string;
-    __typename: string;
-  };
 
 /** ℹ️ Not real Twitch type name */
 export type PrimeSubscribeUserPrimeData_SubscriptionBenefitPaidUpgrade = {
@@ -40315,6 +40051,13 @@ export type PrimeSubscribeUserPrimeData_SubscriptionGiftGifter = {
   __typename: string;
 };
 
+/** ℹ️ Not real Twitch type name */
+export type ProductConsentResultConsentType =
+  | "PRIVACY_NOTICE"
+  | "TERMS_OF_SALE"
+  | "TERMS_OF_SERVICE"
+  | "UNKNOWN";
+
 export type ProductOfferCheckoutPrice = {
   /** @example ["amzn1.twitch.commerce.offer.98232214-5c3d-4da1-a9b3-c3333fb3483d", "amzn1.twitch.commerce.offer.3dedec40-a018-4790-0b9f-0f22ec580202"] */
   id: ID;
@@ -40326,14 +40069,14 @@ export type ProductOfferCheckoutPrice = {
           /** @aliasFor checkoutPrice */
           recurlyCheckoutPrice: {
             /** @example ["UNKNOWN_USER_RESIDENCE"] */
-            errorCode: null | string;
+            errorCode: null | ProductPurchaseErrorCode;
             taxRegion:
               | null
               | ProductOfferCheckoutPrice_ProductPurchaseTaxRegion
               | ProductOfferCheckoutPrice_ProductPurchaseTaxRegion[];
             checkoutPriceSummary: null | {
               /** @example ["EUR"] */
-              currency: string;
+              currency: PriceInfoCurrency;
               /**
                * @format int32
                * @example [2]
@@ -40411,7 +40154,7 @@ export type ProductOfferCheckoutPrice = {
        */
       discountPercent: number;
       /** @example ["DISCOUNT_TYPE_PERCENT"] */
-      discountType: string;
+      discountType: PromotionDisplayDiscountType;
       __typename: "PromotionDisplay";
     };
     eligibilityFilters: {
@@ -40452,7 +40195,7 @@ export type ProductOfferCheckoutPriceDetails = {
     description: null | string;
     pricingIdentifier: UnknownValue;
     /** @example ["EUR"] */
-    currency: string;
+    currency: PriceInfoCurrency;
     /**
      * @format int32
      * @example [2]
@@ -40495,7 +40238,7 @@ export type ProductOfferCheckoutPriceDetails = {
     __typename: "CheckoutPriceSummary";
   };
   /** @example ["UNKNOWN_USER_RESIDENCE"] */
-  errorCode: null | string;
+  errorCode: null | ProductPurchaseErrorCode;
   __typename: "ProductPurchase";
 };
 
@@ -40561,7 +40304,7 @@ export type ProductOfferCheckoutPrices = {
       discountPercent: number;
       discountPrices: null | Money;
       /** @example ["DISCOUNT_TYPE_PERCENT"] */
-      discountType: string;
+      discountType: PromotionDisplayDiscountType;
       __typename: "PromotionDisplay";
     };
     eligibilityFilters: {
@@ -40603,51 +40346,57 @@ export type ProductOfferCheckoutPrices_OfferPromotions = {
   id: ID;
   /** ⚠️ Low confidence about: nullable */
   name: null | string;
-  promoDisplay:
-    | null
-    | ProductOfferCheckoutPrices_OfferPromotionsPromoDisplay
-    | ProductOfferCheckoutPrices_OfferPromotionsPromoDisplay[];
+  promoDisplay: null | {
+    /**
+     * @format int32
+     * @example [10, 15]
+     */
+    discountPercent: number;
+    discountPrices: null | Money;
+    /** @example ["DISCOUNT_TYPE_PERCENT"] */
+    discountType: PromotionDisplayDiscountType;
+    __typename: "PromotionDisplay";
+  };
   eligibilityFilters:
     | null
-    | ProductOfferCheckoutPrices_OfferPromotionsEligibilityFilters
-    | ProductOfferCheckoutPrices_OfferPromotionsEligibilityFilters[];
+    | (null | {
+        /** @example ["MULTIMONTH_WEB"] */
+        value: string;
+        __typename: "EligibilityFilter";
+      })[];
   priority: UnknownValue;
   /**
    * ⚠️ Low confidence about: nullable
    * @format date-time
    */
   endAt: null | string;
-  quantity:
-    | null
-    | ProductOfferCheckoutPrices_OfferPromotionsQuantity
-    | ProductOfferCheckoutPrices_OfferPromotionsQuantity[];
+  quantity: null | {
+    /**
+     * @format int32
+     * @example [1, 5]
+     */
+    min: number;
+    /**
+     * @format int32
+     * @example [1, 200, 100, 40]
+     */
+    max: number;
+    __typename: "Range";
+  };
   __typename: string;
 };
 
 /** ℹ️ Not real Twitch type name */
-export type ProductOfferCheckoutPrices_OfferPromotionsEligibilityFilters = {
-  value: UnknownValue;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type ProductOfferCheckoutPrices_OfferPromotionsPromoDisplay = {
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format float
-   */
-  discountPercent: null | number;
-  discountPrices: null | Money;
-  discountType: UnknownValue;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type ProductOfferCheckoutPrices_OfferPromotionsQuantity = {
-  min: UnknownValue;
-  max: UnknownValue;
-  __typename: string;
-};
+export type ProductPurchaseErrorCode =
+  | "BAD_REQUEST"
+  | "BILLING_INFO_NOT_FOUND"
+  | "INTERNAL"
+  | "NOT_FOUND"
+  | "PRICING_ID_NOT_FOUND"
+  | "PURCHASE_INELIGIBLE"
+  | "UNKNOWN"
+  | "UNKNOWN_USER_RESIDENCE"
+  | "USER_UNAUTHORIZED";
 
 export type ProfileUser = {
   /**
@@ -40664,7 +40413,7 @@ export type ProfileUser = {
   login: string;
   settings: {
     /** @example ["EN"] */
-    preferredLanguageTag: string;
+    preferredLanguageTag: UserSettingsPreferredLanguageTag;
     __typename: "UserSettings";
   };
   __typename: "User";
@@ -40720,6 +40469,12 @@ export type PromoteViewerFromRTJQueue_PromoteViewerFromRTJQueueError = {
   __typename: string;
 };
 
+/** ℹ️ Not real Twitch type name */
+export type PromotionDisplayDiscountType =
+  | "DISCOUNT_TYPE_NONE"
+  | "DISCOUNT_TYPE_PERCENT"
+  | "DISCOUNT_TYPE_PRICE";
+
 export type PubgDetails = {
   /**
    * ⚠️ Low confidence about: nullable
@@ -40774,16 +40529,10 @@ export type PurchasableOfferParams = {
 /** ℹ️ Not real Twitch type name */
 export type PurchaseBusinessOffer_PurchaseBusinessOffer = {
   error: UnknownValue;
-  purchaseOrder:
-    | null
-    | PurchaseBusinessOffer_PurchaseBusinessOfferPurchaseOrder
-    | PurchaseBusinessOffer_PurchaseBusinessOfferPurchaseOrder[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type PurchaseBusinessOffer_PurchaseBusinessOfferPurchaseOrder = {
-  id: ID;
+  purchaseOrder: null | {
+    id: ID;
+    __typename: "PurchaseOrder";
+  };
   __typename: string;
 };
 
@@ -40858,19 +40607,20 @@ export type QuestAssetUpload_CreateQuestAssetUploadUpload = {
 
 /** ℹ️ Not real Twitch type name */
 export type QuickActionCreateClip_CreateClip = {
-  clip: null | QuickActionCreateClip_CreateClipClip | QuickActionCreateClip_CreateClipClip[];
+  clip: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["3942697259"]
+     */
+    id: ID;
+    /**
+     * @format uri
+     * @example ["https://www.twitch.tv/xqc/clip/DeliciousDelightfulPicklesWOOP", "https://www.twitch.tv/xqc/clip/NimbleProductiveAsparagusHeyGuys-s77ZvN10Yr-O2sfo"]
+     */
+    url: string;
+    __typename: "Clip";
+  };
   error: null | QuickActionCreateClip_CreateClipError | QuickActionCreateClip_CreateClipError[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type QuickActionCreateClip_CreateClipClip = {
-  id: ID;
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format uri
-   */
-  url: null | string;
   __typename: string;
 };
 
@@ -40909,19 +40659,20 @@ export type QuickActionManageGoals_SubscriberScoreBreakdown = {
 
 /** ℹ️ Not real Twitch type name */
 export type QuickActionsCreateClip_CreateClip = {
-  clip: null | QuickActionsCreateClip_CreateClipClip | QuickActionsCreateClip_CreateClipClip[];
+  clip: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["3942697259"]
+     */
+    id: ID;
+    /**
+     * @format uri
+     * @example ["https://www.twitch.tv/xqc/clip/DeliciousDelightfulPicklesWOOP", "https://www.twitch.tv/xqc/clip/NimbleProductiveAsparagusHeyGuys-s77ZvN10Yr-O2sfo"]
+     */
+    url: string;
+    __typename: "Clip";
+  };
   error: null | QuickActionsCreateClip_CreateClipError | QuickActionsCreateClip_CreateClipError[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type QuickActionsCreateClip_CreateClipClip = {
-  id: ID;
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format uri
-   */
-  url: null | string;
   __typename: string;
 };
 
@@ -40954,29 +40705,27 @@ export type QuickActionsCreateCommunityMoment_CreateCommunityMomentMoment = {
 
 /** ℹ️ Not real Twitch type name */
 export type QuickActionsCreateMomentClip_CreateClip = {
-  clip:
-    | null
-    | QuickActionsCreateMomentClip_CreateClipClip
-    | QuickActionsCreateMomentClip_CreateClipClip[];
+  clip: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["3942697259"]
+     */
+    id: ID;
+    /** @example ["xqc makes the wrong choice", "wow"] */
+    title: string;
+    /**
+     * @format uri
+     * @example ["https://www.twitch.tv/xqc/clip/DeliciousDelightfulPicklesWOOP", "https://www.twitch.tv/xqc/clip/NimbleProductiveAsparagusHeyGuys-s77ZvN10Yr-O2sfo"]
+     */
+    url: string;
+    /** @example ["EphemeralEncouragingBulgogiPraiseIt-98gnj_-unqEO0uvs", "CredulousBlightedSquirrelOSkomodo-GdY_nETXjEzIz_gm"] */
+    slug: string;
+    __typename: "Clip";
+  };
   error:
     | null
     | QuickActionsCreateMomentClip_CreateClipError
     | QuickActionsCreateMomentClip_CreateClipError[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type QuickActionsCreateMomentClip_CreateClipClip = {
-  id: ID;
-  /** ⚠️ Low confidence about: nullable */
-  title: null | string;
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format uri
-   */
-  url: null | string;
-  /** ⚠️ Low confidence about: nullable */
-  slug: null | string;
   __typename: string;
 };
 
@@ -41375,9 +41124,9 @@ export type ReactionAssetFragment =
       /** @example ["sumFast", "sumSmash", "sumPls", "sumMiting", "sumX", "sumKomrade", "sumPause"] */
       token: string;
       /** @example ["ANIMATED", "STATIC"] */
-      assetType: string;
+      assetType: EmoteAssetType;
       /** @example ["LIMITED_TIME", "SUBSCRIPTIONS", "GLOBALS", "SMILIES", "MEGA_COMMERCE", "FOLLOWER", "TWO_FACTOR"] */
-      type: string;
+      type: EmoteType;
       __typename: "Emote";
     }
   | { __typename: "TwitchIcon" };
@@ -41385,9 +41134,19 @@ export type ReactionAssetFragment =
 export type ReactionAssetMetadataFragment = {
   asset: null | (ReactionAssetFragment & { __typename: "Emote" | "TwitchIcon" });
   /** @example ["LIKE", "LOVE", "HYPE", "LAUGH", "SAD"] */
-  type: string;
+  type: ReactionAssetMetadataType;
   __typename: "ReactionAssetMetadata";
 };
+
+/** ℹ️ Not real Twitch type name */
+export type ReactionAssetMetadataType =
+  | "HYPE"
+  | "LAUGH"
+  | "LIKE"
+  | "LOVE"
+  | "PRAISE"
+  | "SAD"
+  | "UNKNOWN";
 
 export type ReactionIdentifierNode = {
   viewer: null | ReactionUser;
@@ -41443,7 +41202,7 @@ export type ReactionsContentKey = {
   /** @example ["", "SullenColdbloodedSwanDBstyle-zRyQjXuUzTNRwK7H", "GiftedBenevolentTomatoPunchTrees--2-9TAfgK5lOuLPb"] */
   id: ID;
   /** @example ["CLIP"] */
-  type: string;
+  type: ContentKeyType;
 };
 
 export type ReactionsContentType = "CLIP";
@@ -41489,10 +41248,13 @@ export type RecapCardFields_RecapClipsClip = {
   id: ID;
   /** ⚠️ Low confidence about: nullable */
   slug: null | string;
-  playbackAccessToken:
-    | null
-    | RecapCardFields_RecapClipsClipPlaybackAccessToken
-    | RecapCardFields_RecapClipsClipPlaybackAccessToken[];
+  playbackAccessToken: null | {
+    /** @example ["{\"authorization\":{\"forbidden\":false,\"reason\":\"\"},\"clip_uri\":\"https://d1ndex63qxojbr.cloudfront.net/nauth/ce4b4ef1-4e8d-4391-bff6-2bc4c5506a4d/landscape/avc/360/index.mp4\",\"clip_slug\":\"DeliciousDelightfulPicklesWOOP\",\"device_id\":null,\"expires\":1792252612,\"user_id\":\"\",\"version\":3}"] */
+    value: string;
+    /** @example ["deadbeefdeadbeefdeadbeefdeadbeefdeadbeef"] */
+    signature: string;
+    __typename: "PlaybackAccessToken";
+  };
   assets: null | RecapCardFields_RecapClipsClipAssets | RecapCardFields_RecapClipsClipAssets[];
   __typename: string;
 };
@@ -41541,13 +41303,6 @@ export type RecapCardFields_RecapClipsClipAssetsVideoQualities = {
 };
 
 /** ℹ️ Not real Twitch type name */
-export type RecapCardFields_RecapClipsClipPlaybackAccessToken = {
-  value: UnknownValue;
-  signature: UnknownValue;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
 export type RecapClips_RecapClips = {
   clip: null | ContentClipsManagerClip;
   __typename: string;
@@ -41558,7 +41313,14 @@ export type RecapFilter = {
   channelIDs?: null | string[];
 };
 
-export type RecapSort = "POSTED_AT_DESC";
+export type RecapSort =
+  | "AFFINITY_DESC"
+  | "CDML_RECS"
+  | "POSTED_AT_ASC"
+  | "POSTED_AT_DESC"
+  | "SMART"
+  | "VIEWS_ASC"
+  | "VIEWS_DESC";
 
 export type RecapsPlayerChannelFields = {
   /**
@@ -41746,16 +41508,24 @@ export type RecentCategoryFragment = {
 export type RecentPredictionFragment = {
   /** @example ["14ce313dcdaacde6e5056df04b75d784a5b92f6e5ddbdf796551721cb443cea7", "227e9e26358fa2fa8cd597c34f702341ff537c67ab85145fdc01f04e24947e0a"] */
   id: ID;
-  event:
-    | null
-    | RecentPredictionFragment_PredictionEvent
-    | RecentPredictionFragment_PredictionEvent[];
+  event: null | {
+    /**
+     * @format uuid
+     * @example ["20fac95f-b388-4a66-8fd1-0f3d011d671b"]
+     */
+    id: ID;
+    __typename: "PredictionEvent";
+  };
   /** ⚠️ Low confidence about: nullable */
   isResultAcknowledged: null | boolean;
-  outcome:
-    | null
-    | RecentPredictionFragment_PredictionOutcome
-    | RecentPredictionFragment_PredictionOutcome[];
+  outcome: null | {
+    /**
+     * @format uuid
+     * @example ["6760897b-b0db-4c41-9321-15778b5bbc95"]
+     */
+    id: ID;
+    __typename: "PredictionOutcome";
+  };
   /**
    * @format uint32
    * @example [0, 100000, 50000, 11010, 5000, 3564]
@@ -41778,24 +41548,6 @@ export type RecentPredictionFragment = {
    */
   updatedAt: null | string;
   __typename: "Prediction";
-};
-
-export type RecentPredictionFragment_PredictionEvent = {
-  /**
-   * @format uuid
-   * @example ["20fac95f-b388-4a66-8fd1-0f3d011d671b"]
-   */
-  id: ID;
-  __typename: "PredictionEvent";
-};
-
-export type RecentPredictionFragment_PredictionOutcome = {
-  /**
-   * @format uuid
-   * @example ["6760897b-b0db-4c41-9321-15778b5bbc95"]
-   */
-  id: ID;
-  __typename: "PredictionOutcome";
 };
 
 /** ℹ️ Not real Twitch type name */
@@ -41840,7 +41592,7 @@ export type RecommendationEdge = {
   node: Stream & {
     previewThumbnailProperties: {
       /** @example ["BLUR_NOT_REQUIRED", "BLUR_REASON_TYPE_SEXUAL_THEMES"] */
-      blurReason: string;
+      blurReason: PreviewThumbnailPropertiesBlurReason;
       __typename: "PreviewThumbnailProperties";
     };
   };
@@ -41894,20 +41646,18 @@ export type RecommendedExtension_ExtensionContentMatchedGames = {
 
 /** ℹ️ Not real Twitch type name */
 export type RecommendedExtension_ExtensionInstallationFeatureFlagsDynamicManagement = {
-  game:
-    | null
-    | RecommendedExtension_ExtensionInstallationFeatureFlagsDynamicManagementGame
-    | RecommendedExtension_ExtensionInstallationFeatureFlagsDynamicManagementGame[];
+  game: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["509672"]
+     */
+    id: ID;
+    /** @example ["IRL", "Cyberpunk 2077", "Just Chatting", "Special Events", "Gwent: The Witcher Card Game", "Grand Theft Auto V", "DayZ"] */
+    displayName: string;
+    __typename: "Game";
+  };
   /** ⚠️ Low confidence about: nullable */
   isManaged: null | boolean;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type RecommendedExtension_ExtensionInstallationFeatureFlagsDynamicManagementGame = {
-  id: ID;
-  /** ⚠️ Low confidence about: nullable */
-  displayName: null | string;
   __typename: string;
 };
 
@@ -41951,7 +41701,7 @@ export type RecommendedPostplayClip = {
    */
   thumbnailURL: string;
   /** @example ["EN", "ES", "RU"] */
-  language: string;
+  language: ClipLanguage;
   /**
    * @format uint32
    * @example [957063, 957456, 899934, 944919, 773854]
@@ -42110,6 +41860,9 @@ export type RecordExperimentSurveyResponse_RecordExperimentSurveyResponseError =
   __typename: string;
 };
 
+/** ℹ️ Not real Twitch type name */
+export type RecurlySubscriptionBillingAddressCompleteness = "NOT_APPLICABLE";
+
 export type RecurringStreamEvent = {
   /**
    * ⚠️ Low confidence about: nullable
@@ -42250,10 +42003,14 @@ export type RedemptionsByRewardIDPaginated_ChannelCommunityPointsRedemptionQueue
     | null
     | RedemptionsByRewardIDPaginated_ChannelCommunityPointsRedemptionQueueEdgesNodeReward
     | RedemptionsByRewardIDPaginated_ChannelCommunityPointsRedemptionQueueEdgesNodeReward[];
-  user:
-    | null
-    | RedemptionsByRewardIDPaginated_ChannelCommunityPointsRedemptionQueueEdgesNodeUser
-    | RedemptionsByRewardIDPaginated_ChannelCommunityPointsRedemptionQueueEdgesNodeUser[];
+  user: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["23161357"]
+     */
+    id: ID;
+    __typename: "User";
+  };
   input: UnknownValue;
   timestamp: UnknownValue;
   __typename: string;
@@ -42264,12 +42021,6 @@ export type RedemptionsByRewardIDPaginated_ChannelCommunityPointsRedemptionQueue
   id: ID;
   /** ⚠️ Low confidence about: nullable */
   title: null | string;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type RedemptionsByRewardIDPaginated_ChannelCommunityPointsRedemptionQueueEdgesNodeUser = {
-  id: ID;
   __typename: string;
 };
 
@@ -42299,10 +42050,18 @@ export type ReferralTimeseriesFragment_VideoPlayReferralsTimeseriesReferrersItem
   __typename: string;
 };
 
-export type ReferralsDimension = "CHANNEL" | "COUNTRY" | "EXTERNAL" | "INTERNAL" | "PLATFORM";
+export type ReferralsDimension =
+  | "CATEGORY"
+  | "CHANNEL"
+  | "COLLECTION"
+  | "COUNTRY"
+  | "EXTERNAL"
+  | "INTERNAL"
+  | "PLATFORM";
 
 export type ReferralsFilter =
   | "ALL"
+  | "BROWSE_LIVE_WEB"
   | "EXTERNAL_LIVE_WEB"
   | "INTERNAL_CHANNEL_LIVE_WEB"
   | "INTERNAL_LIVE_WEB";
@@ -42324,16 +42083,14 @@ export type RegenerateGuestStarViewOnlyToken_RegenerateGuestStarViewOnlyTokenErr
 
 /** ℹ️ Not real Twitch type name */
 export type RegenerateStreamKeyMutation_RegenerateStreamKey = {
-  channel:
-    | null
-    | RegenerateStreamKeyMutation_RegenerateStreamKeyChannel
-    | RegenerateStreamKeyMutation_RegenerateStreamKeyChannel[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type RegenerateStreamKeyMutation_RegenerateStreamKeyChannel = {
-  id: ID;
+  channel: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["26490481"]
+     */
+    id: ID;
+    __typename: "Channel";
+  };
   __typename: string;
 };
 
@@ -42538,41 +42295,18 @@ export type RemoveChannelFromSharedChatSession_RemoveChannelFromSharedChatSessio
   };
 
 /** ℹ️ Not real Twitch type name */
-export type RemoveClipFromRecap_RemoveClipFromRecap = {
-  error: UnknownValue;
-  recap:
-    | null
-    | RemoveClipFromRecap_RemoveClipFromRecapRecap
-    | RemoveClipFromRecap_RemoveClipFromRecapRecap[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type RemoveClipFromRecap_RemoveClipFromRecapRecap = {
-  id: ID;
-  clips:
-    | null
-    | RemoveClipFromRecap_RemoveClipFromRecapRecapClips
-    | RemoveClipFromRecap_RemoveClipFromRecapRecapClips[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type RemoveClipFromRecap_RemoveClipFromRecapRecapClips = {
+export type RemoveClipFromRecap_RecapClips = {
   /**
    * ⚠️ Low confidence about: nullable
    * @format uint32
    */
   streamOffsetSeconds: null | number;
-  clip:
-    | null
-    | RemoveClipFromRecap_RemoveClipFromRecapRecapClipsClip
-    | RemoveClipFromRecap_RemoveClipFromRecapRecapClipsClip[];
+  clip: null | RemoveClipFromRecap_RecapClipsClip | RemoveClipFromRecap_RecapClipsClip[];
   __typename: string;
 };
 
 /** ℹ️ Not real Twitch type name */
-export type RemoveClipFromRecap_RemoveClipFromRecapRecapClipsClip = {
+export type RemoveClipFromRecap_RecapClipsClip = {
   id: ID;
   /** ⚠️ Low confidence about: nullable */
   slug: null | string;
@@ -42580,19 +42314,31 @@ export type RemoveClipFromRecap_RemoveClipFromRecapRecapClipsClip = {
 };
 
 /** ℹ️ Not real Twitch type name */
+export type RemoveClipFromRecap_RemoveClipFromRecap = {
+  error: UnknownValue;
+  recap: null | {
+    id: ID;
+    clips: null | RemoveClipFromRecap_RecapClips | RemoveClipFromRecap_RecapClips[];
+    __typename: "Recap";
+  };
+  __typename: string;
+};
+
+/** ℹ️ Not real Twitch type name */
 export type RemoveEditorUser_RemoveEditor = {
-  channel: null | RemoveEditorUser_RemoveEditorChannel | RemoveEditorUser_RemoveEditorChannel[];
+  channel: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["26490481"]
+     */
+    id: ID;
+    __typename: "Channel";
+  };
   targetUser:
     | null
     | RemoveEditorUser_RemoveEditorTargetUser
     | RemoveEditorUser_RemoveEditorTargetUser[];
   error: null | RemoveEditorUser_RemoveEditorError | RemoveEditorUser_RemoveEditorError[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type RemoveEditorUser_RemoveEditorChannel = {
-  id: ID;
   __typename: string;
 };
 
@@ -42707,6 +42453,53 @@ export type RemoveReactionByContentKey_RemoveReactionByContentKey = {
 /** ℹ️ Not real Twitch type name */
 export type RemoveReactionByContentKey_RemoveReactionByContentKeyError = {
   code: UnknownValue;
+  __typename: string;
+};
+
+/** ℹ️ Not real Twitch type name */
+export type RemoveSelfFromTeam_RemoveSelfFromTeam = {
+  user:
+    | null
+    | RemoveSelfFromTeam_RemoveSelfFromTeamUser
+    | RemoveSelfFromTeam_RemoveSelfFromTeamUser[];
+  __typename: string;
+};
+
+/** ℹ️ Not real Twitch type name */
+export type RemoveSelfFromTeam_RemoveSelfFromTeamUser = {
+  id: ID;
+  teamMemberships:
+    | null
+    | RemoveSelfFromTeam_RemoveSelfFromTeamUserTeamMemberships
+    | RemoveSelfFromTeam_RemoveSelfFromTeamUserTeamMemberships[];
+  __typename: string;
+};
+
+/** ℹ️ Not real Twitch type name */
+export type RemoveSelfFromTeam_RemoveSelfFromTeamUserTeamMemberships = {
+  /** ⚠️ Low confidence about: nullable */
+  isPrimary: null | boolean;
+  /** ⚠️ Low confidence about: nullable */
+  isRevenueRevealed: null | boolean;
+  /** ⚠️ Low confidence about: nullable */
+  isStatsRevealed: null | boolean;
+  team: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["2351"]
+     */
+    id: ID;
+    /** @example ["twitchcon", "ggtalentgroup", "gentlemates", "skybass", "tsm", "1gsquad", "streamdatabase"] */
+    name: string;
+    /** @example ["TwitchCon Europe 2026", "GG Talent Group", "Gentle Mates", "Team SKY BASS", "TSM", "1G SQUAD", "Stream Database"] */
+    displayName: string;
+    /**
+     * ⚠️ Low confidence about: nullable
+     * @format uri
+     */
+    logoURL: null | string;
+    __typename: "Team";
+  };
   __typename: string;
 };
 
@@ -42833,7 +42626,56 @@ export type ReplyMessage_MessageSourceSenderBadges = {
   __typename: string;
 };
 
-export type ReportContentType = "LIVESTREAM_REPORT";
+export type ReportContentType =
+  | "ALERT_REPORT"
+  | "BACKSTAGE_REPORT"
+  | "BITS_BADGE_REPORT"
+  | "CHANNEL_FEED_COMMENT_REPORT"
+  | "CHANNEL_FEED_POST_REPORT"
+  | "CHANNEL_POINTS_REPORT"
+  | "CHAT_REPORT"
+  | "CHECKOUT_MESSAGE"
+  | "CLIP_COMMENT"
+  | "CLIP_REPORT"
+  | "COLLAB_REQUEST"
+  | "COLLAB_REQUEST_REPORT"
+  | "COLLECTION_REPORT"
+  | "CREATOR_GOAL_REPORT"
+  | "CREATOR_LED_BADGE_REPORT"
+  | "CREATOR_MESSAGE_REPORT"
+  | "CURSE_PRIVATE_GROUP"
+  | "CURSE_PUBLIC_GROUP"
+  | "CURSE_WHISPER"
+  | "DK_REPORT"
+  | "EMOTE_REPORT"
+  | "EVENT_REPORT"
+  | "EXTENSION_REPORT"
+  | "GIF_MESSAGE_REPORT"
+  | "GUEST_STAR_BACKSTAGE_REPORT"
+  | "LIVESTREAM_REPORT"
+  | "LIVE_UP_REPORT"
+  | "MODERATOR_STRIKE_REASON"
+  | "MOD_COMMENT"
+  | "OFF_PLATFORM_REPORT"
+  | "POLL_REPORT"
+  | "RAID_REPORT"
+  | "RECAP"
+  | "REWARD_REDEMPTION_REPORT"
+  | "ROOM_REPORT"
+  | "SINGS_DUET_SEED_REPORT"
+  | "SINGS_GROUP_BIO_REPORT"
+  | "SINGS_GROUP_CHAT_REPORT"
+  | "SINGS_GROUP_NAME_REPORT"
+  | "SINGS_VOD_COMMENT_REPORT"
+  | "SOUND_BITE_REPORT"
+  | "STORY_REPORT"
+  | "SUB_BADGE_REPORT"
+  | "UNBAN_REQUEST_REPORT"
+  | "USERNAME_REPORT"
+  | "USER_REPORT"
+  | "VOD_COMMENT_REPORT"
+  | "VOD_REPORT"
+  | "WHISPER_REPORT";
 
 export type ReportFeedInteractionsInput = {
   context?: null | {
@@ -42846,7 +42688,7 @@ export type ReportFeedInteractionsInput = {
     /** @example ["487510275"] */
     channelID: ID;
     /** @example ["EN"] */
-    channelLanguage: string;
+    channelLanguage: ReportFeedInteractionsInputContextChannelLanguage;
     /** @example ["LofiGirl"] */
     channelName: string;
     /** @example ["DE"] */
@@ -42859,12 +42701,12 @@ export type ReportFeedInteractionsInput = {
     platform: string;
   };
   /** @example ["CLIPS"] */
-  feedLocation?: null | string;
+  feedLocation?: null | InputFeedLocation;
   interactions?:
     | null
     | {
         /** @example ["FEED_WATCH"] */
-        feedInteractionType: string;
+        feedInteractionType: ReportFeedInteractionsInputInteractionsFeedInteractionType;
         feedWatchInput: {
           /**
            * @format int32
@@ -42874,11 +42716,11 @@ export type ReportFeedInteractionsInput = {
           /** @example ["AstuteRenownedFalconSpicyBoy-aV02Wxbe5zGQe5IT"] */
           impressionID: ID;
           /** @example ["EXIT"] */
-          interactionReason: string;
+          interactionReason: ReportFeedInteractionsInputInteractionsFeedWatchInputInteractionReason;
           /** @example ["AstuteRenownedFalconSpicyBoy-aV02Wxbe5zGQe5IT"] */
           itemID: ID;
           /** @example ["CLIP"] */
-          itemType: string;
+          itemType: ReportFeedInteractionsInputInteractionsFeedWatchInputItemType;
           /**
            * @format uint32
            * @example [0]
@@ -42903,6 +42745,71 @@ export type ReportFeedInteractionsInput = {
 };
 
 /** ℹ️ Not real Twitch type name */
+export type ReportFeedInteractionsInputContextChannelLanguage =
+  | "AR"
+  | "BG"
+  | "CS"
+  | "DA"
+  | "DE"
+  | "EL"
+  | "EN"
+  | "ES"
+  | "FI"
+  | "FR"
+  | "HI"
+  | "HU"
+  | "IT"
+  | "JA"
+  | "KO"
+  | "NL"
+  | "NO"
+  | "PL"
+  | "PT"
+  | "RO"
+  | "RU"
+  | "SK"
+  | "SV"
+  | "TH"
+  | "TR"
+  | "UK"
+  | "VI"
+  | "ZH";
+
+/** ℹ️ Not real Twitch type name */
+export type ReportFeedInteractionsInputInteractionsFeedInteractionType =
+  | "FEED_BLOCK"
+  | "FEED_COMPLETION"
+  | "FEED_DISABLE_NOTIFICATION"
+  | "FEED_DISLIKE"
+  | "FEED_ENABLE_NOTIFICATION"
+  | "FEED_FOLLOW"
+  | "FEED_IMPRESSION"
+  | "FEED_LIKE"
+  | "FEED_NAV_CHANNEL"
+  | "FEED_NAV_LIVESTREAM"
+  | "FEED_NOT_INTERESTED"
+  | "FEED_PAUSE"
+  | "FEED_REPORT"
+  | "FEED_SHARE"
+  | "FEED_SWITCH_LOCATION"
+  | "FEED_UNDISLIKE"
+  | "FEED_UNFOLLOW"
+  | "FEED_UNLIKE"
+  | "FEED_UNPAUSE"
+  | "FEED_WATCH";
+
+/** ℹ️ Not real Twitch type name */
+export type ReportFeedInteractionsInputInteractionsFeedWatchInputInteractionReason =
+  | "EXIT"
+  | "INTERVAL";
+
+/** ℹ️ Not real Twitch type name */
+export type ReportFeedInteractionsInputInteractionsFeedWatchInputItemType = "CLIP";
+
+/** ℹ️ Not real Twitch type name */
+export type ReportReasonDeadEndType = "LINK_DMCA_GUIDELINES" | "MISINFORMATION" | "REPORTABLE";
+
+/** ℹ️ Not real Twitch type name */
 export type ReportWizardCreateReport_ReportUserContent = {
   error:
     | null
@@ -42916,6 +42823,12 @@ export type ReportWizardCreateReport_ReportUserContentError = {
   code: UnknownValue;
   __typename: string;
 };
+
+/** ℹ️ Not real Twitch type name */
+export type ReportableContentDeadEndType = "LINK_OFF_PLATFORM_GUIDELINES" | "REPORTABLE";
+
+/** ℹ️ Not real Twitch type name */
+export type ReportableContentReasonVisibility = "MAIN" | "SEARCH";
 
 /** ℹ️ Not real Twitch type name */
 export type ReportableModActionTargets_ReportableModActionTargets = {
@@ -43010,33 +42923,24 @@ export type RequestRelayCode_RequestRelayCodeError = {
 
 /** ℹ️ Not real Twitch type name */
 export type ResetChannelPointsIconMutation_UpdateCommunityPointsChannelSettings = {
-  channel:
-    | null
-    | ResetChannelPointsIconMutation_UpdateCommunityPointsChannelSettingsChannel
-    | ResetChannelPointsIconMutation_UpdateCommunityPointsChannelSettingsChannel[];
+  channel: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["26490481"]
+     */
+    id: ID;
+    communityPointsSettings: {
+      image: null | PointsImageFragment;
+      __typename: "CommunityPointsChannelSettings";
+    };
+    __typename: "Channel";
+  };
   error:
     | null
     | ResetChannelPointsIconMutation_UpdateCommunityPointsChannelSettingsError
     | ResetChannelPointsIconMutation_UpdateCommunityPointsChannelSettingsError[];
   __typename: string;
 };
-
-/** ℹ️ Not real Twitch type name */
-export type ResetChannelPointsIconMutation_UpdateCommunityPointsChannelSettingsChannel = {
-  id: ID;
-  communityPointsSettings:
-    | null
-    | ResetChannelPointsIconMutation_UpdateCommunityPointsChannelSettingsChannelCommunityPointsSettings
-    | ResetChannelPointsIconMutation_UpdateCommunityPointsChannelSettingsChannelCommunityPointsSettings[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type ResetChannelPointsIconMutation_UpdateCommunityPointsChannelSettingsChannelCommunityPointsSettings =
-  {
-    image: null | PointsImageFragment;
-    __typename: string;
-  };
 
 /** ℹ️ Not real Twitch type name */
 export type ResetChannelPointsIconMutation_UpdateCommunityPointsChannelSettingsError = {
@@ -43104,10 +43008,10 @@ export type ResourceRestriction = {
   /** @example ["vod:2397382584"] */
   id: ID;
   /** @example ["SUB_ONLY_LIVE"] */
-  type: string;
+  type: ResourceRestrictionType;
   exemptions: {
     /** @example ["STAFF", "SITE_ADMIN", "PRODUCT", "PREVIEW"] */
-    type: string;
+    type: ResourceRestrictionExemptionType;
     actions: {
       /** @example ["spookodey", "spookodey_2000", "spookodey_3000"] */
       name: string;
@@ -43118,8 +43022,97 @@ export type ResourceRestriction = {
     __typename: "ResourceRestrictionExemption";
   }[];
   /** @example ["ALLOW_ALL_TIERS"] */
-  options: string[];
+  options: ResourceRestrictionOptions[];
   __typename: "ResourceRestriction";
+};
+
+/** ℹ️ Not real Twitch type name */
+export type ResourceRestrictionExemptionType =
+  | "ALL"
+  | "CHANNEL_MODERATOR"
+  | "CHANNEL_VIP"
+  | "ORGANIZATION_MEMBER"
+  | "PREVIEW"
+  | "PRODUCT"
+  | "SITE_ADMIN"
+  | "STAFF"
+  | "UNKNOWN";
+
+/** ℹ️ Not real Twitch type name */
+export type ResourceRestrictionOptions =
+  | "ALLOW_ALL_TIERS"
+  | "ALLOW_CHANNEL_MODERATOR"
+  | "ALLOW_CHANNEL_VIP"
+  | "ALLOW_TIER_2_AND_3_ONLY"
+  | "ALLOW_TIER_3_ONLY";
+
+/** ℹ️ Not real Twitch type name */
+export type ResourceRestrictionType = "SUB_ONLY_LIVE";
+
+/** ℹ️ Not real Twitch type name */
+export type RespondToTeamInvitation_RespondToTeamInvitation = {
+  user:
+    | null
+    | RespondToTeamInvitation_RespondToTeamInvitationUser
+    | RespondToTeamInvitation_RespondToTeamInvitationUser[];
+  __typename: string;
+};
+
+/** ℹ️ Not real Twitch type name */
+export type RespondToTeamInvitation_RespondToTeamInvitationUser = {
+  id: ID;
+  teamMemberships:
+    | null
+    | RespondToTeamInvitation_RespondToTeamInvitationUserTeamMemberships
+    | RespondToTeamInvitation_RespondToTeamInvitationUserTeamMemberships[];
+  invitedTeams:
+    | null
+    | RespondToTeamInvitation_RespondToTeamInvitationUserInvitedTeams
+    | RespondToTeamInvitation_RespondToTeamInvitationUserInvitedTeams[];
+  __typename: string;
+};
+
+/** ℹ️ Not real Twitch type name */
+export type RespondToTeamInvitation_RespondToTeamInvitationUserInvitedTeams = {
+  id: ID;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
+  /** ⚠️ Low confidence about: nullable */
+  displayName: null | string;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uri
+   */
+  logoURL: null | string;
+  __typename: string;
+};
+
+/** ℹ️ Not real Twitch type name */
+export type RespondToTeamInvitation_RespondToTeamInvitationUserTeamMemberships = {
+  /** ⚠️ Low confidence about: nullable */
+  isPrimary: null | boolean;
+  /** ⚠️ Low confidence about: nullable */
+  isRevenueRevealed: null | boolean;
+  /** ⚠️ Low confidence about: nullable */
+  isStatsRevealed: null | boolean;
+  team: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["2351"]
+     */
+    id: ID;
+    /** @example ["twitchcon", "ggtalentgroup", "gentlemates", "skybass", "tsm", "1gsquad", "streamdatabase"] */
+    name: string;
+    /** @example ["TwitchCon Europe 2026", "GG Talent Group", "Gentle Mates", "Team SKY BASS", "TSM", "1G SQUAD", "Stream Database"] */
+    displayName: string;
+    /**
+     * ⚠️ Low confidence about: nullable
+     * @format uri
+     */
+    logoURL: null | string;
+    __typename: "Team";
+  };
+  __typename: string;
 };
 
 /** ℹ️ Not real Twitch type name */
@@ -43145,33 +43138,25 @@ export type ResumeHostTrainHold_ResumeHostTrainHoldError = {
 /** ℹ️ Not real Twitch type name */
 export type ResumeSchedule_ResumeSchedule = {
   error: UnknownValue;
-  schedule: null | ResumeSchedule_ResumeScheduleSchedule | ResumeSchedule_ResumeScheduleSchedule[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type ResumeSchedule_ResumeScheduleSchedule = {
-  id: ID;
-  interruption:
-    | null
-    | ResumeSchedule_ResumeScheduleScheduleInterruption
-    | ResumeSchedule_ResumeScheduleScheduleInterruption[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type ResumeSchedule_ResumeScheduleScheduleInterruption = {
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format date-time
-   */
-  endAt: null | string;
-  reason: UnknownValue;
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format date-time
-   */
-  startAt: null | string;
+  schedule: null | {
+    /** @example ["schedule-12826", "schedule-23161357"] */
+    id: ID;
+    interruption: null | {
+      /**
+       * ⚠️ Low confidence about: nullable
+       * @format date-time
+       */
+      endAt: null | string;
+      reason: UnknownValue;
+      /**
+       * ⚠️ Low confidence about: nullable
+       * @format date-time
+       */
+      startAt: null | string;
+      __typename: "ScheduleInterruption";
+    };
+    __typename: "Schedule";
+  };
   __typename: string;
 };
 
@@ -43241,10 +43226,16 @@ export type RevenueEarningsIndexPage_PayoutThreshold = {
 
 /** ℹ️ Not real Twitch type name */
 export type RevokeCommunityRole_RevokeCommunityRole = {
-  channel:
-    | null
-    | RevokeCommunityRole_RevokeCommunityRoleChannel
-    | RevokeCommunityRole_RevokeCommunityRoleChannel[];
+  channel: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["26490481"]
+     */
+    id: ID;
+    /** @example ["RevedTV", "summit1g", "Wholesome_Games", "StreamCanvas", "Distortion2", "StreamDatabase", "LIRIK"] */
+    displayName: string;
+    __typename: "Channel";
+  };
   revokee:
     | null
     | RevokeCommunityRole_RevokeCommunityRoleRevokee
@@ -43254,14 +43245,6 @@ export type RevokeCommunityRole_RevokeCommunityRole = {
     | RevokeCommunityRole_RevokeCommunityRoleError
     | RevokeCommunityRole_RevokeCommunityRoleError[];
   role: UnknownValue;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type RevokeCommunityRole_RevokeCommunityRoleChannel = {
-  id: ID;
-  /** ⚠️ Low confidence about: nullable */
-  displayName: null | string;
   __typename: string;
 };
 
@@ -43300,7 +43283,7 @@ export type RewardCampaign = {
    */
   endsAt: string;
   /** @example ["UNKNOWN"] */
-  status: string;
+  status: RewardCampaignStatus;
   /** @example ["First Partners Collection"] */
   summary: string;
   /** @example [""] */
@@ -43315,7 +43298,24 @@ export type RewardCampaign = {
   /** @example ["https://blog.twitch.tv/2026/10/20/sub-for-apple-tv-and-ted-lasso-chat-badges/ ", "https://help.twitch.tv/s/article/pokemon-chat-badges"] */
   aboutURL: string;
   isSitewide: boolean;
-  game: null | RewardCampaign_RewardCampaignGame | RewardCampaign_RewardCampaignGame[];
+  game: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["509672"]
+     */
+    id: ID;
+    /** @example ["irl", "cyberpunk-2077", "just-chatting", "special-events", "grand-theft-auto-v", "overwatch-2", "counter-strike"] */
+    slug: string;
+    /** @example ["IRL", "Cyberpunk 2077", "Just Chatting", "Special Events", "Gwent: The Witcher Card Game", "Grand Theft Auto V", "DayZ"] */
+    displayName: string;
+    /**
+     * @example ["https://static-cdn.jtvnw.net/ttv-boxart/509672-{width}x{height}.jpg", "https://static-cdn.jtvnw.net/ttv-boxart/65876-{width}x{height}.jpg"]
+     * @gqlArg `width: Int [52, 144, 40, 285, 250, 188, 90, 85, 200, 120]`
+     * @gqlArg `height: Int [72, 192, 56, 380, 300, 250, 55, 120, 113, 160]`
+     */
+    boxArtURL: string;
+    __typename: "Game";
+  };
   unlockRequirements: {
     /**
      * @format int32
@@ -43461,7 +43461,7 @@ export type RewardCampaignDropProgress = {
     id: ID;
     progressCriteria: {
       /** @example ["WATCH", "SUB"] */
-      requirementType: string;
+      requirementType: DropsProgressCriteriaRequirementType;
       requirements: {
         /**
          * @format int32
@@ -43490,7 +43490,7 @@ export type RewardCampaignDropProgress = {
        */
       thumbnailURL: string;
       /** @example ["DIRECT_ENTITLEMENT", "POOL", "CODE", "BADGE"] */
-      distributionType: string;
+      distributionType: DropsRewardDistributionType;
       __typename: "DropsReward";
     }[];
     __typename: "DropsRewardGroup";
@@ -43574,21 +43574,7 @@ export type RewardCampaignPreview = {
 };
 
 /** ℹ️ Not real Twitch type name */
-export type RewardCampaign_RewardCampaignGame = {
-  id: ID;
-  /** ⚠️ Low confidence about: nullable */
-  slug: null | string;
-  /** ⚠️ Low confidence about: nullable */
-  displayName: null | string;
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format uri
-   * @gqlArg `width: Int [120]`
-   * @gqlArg `height: Int [160]`
-   */
-  boxArtURL: null | string;
-  __typename: string;
-};
+export type RewardCampaignStatus = "UNKNOWN";
 
 /** ℹ️ Not real Twitch type name */
 export type RewardCodeModal_UserInventory = {
@@ -43948,7 +43934,7 @@ export type SearchForFeaturedClipFragment = {
   };
   previewThumbnailProperties: {
     /** @example ["BLUR_NOT_REQUIRED", "BLUR_REASON_TYPE_SEXUAL_THEMES"] */
-    blurReason: string;
+    blurReason: PreviewThumbnailPropertiesBlurReason;
     __typename: "PreviewThumbnailProperties";
   };
   __typename: "Clip";
@@ -43961,7 +43947,7 @@ export type SearchForFeaturedVideoFragment = {
    */
   id: ID;
   /** @example ["RECORDED", "RECORDING"] */
-  status: string;
+  status: VideoStatus;
   /**
    * @format uint32
    * @example [15389, 4359, 4621, 621, 4472]
@@ -44008,7 +43994,7 @@ export type SearchForFeaturedVideoFragment = {
   templatePreviewThumbnailURL: string;
   previewThumbnailProperties: {
     /** @example ["BLUR_NOT_REQUIRED", "BLUR_REASON_TYPE_SEXUAL_THEMES"] */
-    blurReason: string;
+    blurReason: PreviewThumbnailPropertiesBlurReason;
     __typename: "PreviewThumbnailProperties";
   };
   __typename: "Video";
@@ -44078,9 +44064,18 @@ export type SearchForOptions = {
   targets: {
     cursor: Cursor;
     /** @example ["CHANNEL", "VOD", "CHANNEL_WITH_TAG", "GAME"] */
-    index: string;
+    index: SearchForOptionsTargetsIndex;
   }[];
 };
+
+/** ℹ️ Not real Twitch type name */
+export type SearchForOptionsTargetsIndex =
+  | "CHANNEL"
+  | "CHANNEL_WITH_TAG"
+  | "GAME"
+  | "LIVE"
+  | "USER"
+  | "VOD";
 
 export type SearchForQuerySubstitutionFragment = {
   edges: {
@@ -44307,7 +44302,7 @@ export type SearchForUserFragment = {
         }[];
     previewThumbnailProperties: {
       /** @example ["BLUR_NOT_REQUIRED", "BLUR_REASON_TYPE_SEXUAL_THEMES"] */
-      blurReason: string;
+      blurReason: PreviewThumbnailPropertiesBlurReason;
       __typename: "PreviewThumbnailProperties";
     };
     __typename: "Stream";
@@ -44383,7 +44378,7 @@ export type SearchForVideoFragment = {
   viewCount: number;
   previewThumbnailProperties: {
     /** @example ["BLUR_NOT_REQUIRED", "BLUR_REASON_TYPE_SEXUAL_THEMES"] */
-    blurReason: string;
+    blurReason: PreviewThumbnailPropertiesBlurReason;
     __typename: "PreviewThumbnailProperties";
   };
   __typename: "Video";
@@ -44508,7 +44503,7 @@ export type SearchRelatedLiveChannelFragment = {
     };
     previewThumbnailProperties: {
       /** @example ["BLUR_NOT_REQUIRED", "BLUR_REASON_TYPE_SEXUAL_THEMES"] */
-      blurReason: string;
+      blurReason: PreviewThumbnailPropertiesBlurReason;
       __typename: "PreviewThumbnailProperties";
     };
     __typename: "Stream";
@@ -44880,10 +44875,16 @@ export type SearchStreamEdgeFragment = {
 /** ℹ️ Not real Twitch type name */
 export type SearchStreamEdgeFragment_SearchStreamEdgeNode = {
   id: ID;
-  game:
-    | null
-    | SearchStreamEdgeFragment_SearchStreamEdgeNodeGame
-    | SearchStreamEdgeFragment_SearchStreamEdgeNodeGame[];
+  game: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["509672"]
+     */
+    id: ID;
+    /** @example ["IRL", "Cyberpunk 2077", "Just Chatting", "Special Events", "League of Legends", "You Know The Drill", "RuneScape: Dragonwilds"] */
+    name: string;
+    __typename: "Game";
+  };
   broadcaster:
     | null
     | SearchStreamEdgeFragment_SearchStreamEdgeNodeBroadcaster
@@ -44916,14 +44917,6 @@ export type SearchStreamEdgeFragment_SearchStreamEdgeNodeBroadcaster = {
    * @gqlArg `width: Int [50]`
    */
   profileImageURL: null | string;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type SearchStreamEdgeFragment_SearchStreamEdgeNodeGame = {
-  id: ID;
-  /** ⚠️ Low confidence about: nullable */
-  name: null | string;
   __typename: string;
 };
 
@@ -45231,13 +45224,14 @@ export type SendCelebration_SendCelebrationError = {
 /** ℹ️ Not real Twitch type name */
 export type SendChatMessage_SendChatMessage = {
   dropReason: UnknownValue;
-  message: null | SendChatMessage_SendChatMessageMessage | SendChatMessage_SendChatMessageMessage[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type SendChatMessage_SendChatMessageMessage = {
-  id: ID;
+  message: null | {
+    /**
+     * @format uuid
+     * @example ["279e8293-cec0-40df-a475-6b35981a2e49"]
+     */
+    id: ID;
+    __typename: "Message";
+  };
   __typename: string;
 };
 
@@ -45266,13 +45260,14 @@ export type SendGifMessage_SendGifMessage = {
    * @format uint32
    */
   secondsUntilCanSend: null | number;
-  message: null | SendGifMessage_SendGifMessageMessage | SendGifMessage_SendGifMessageMessage[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type SendGifMessage_SendGifMessageMessage = {
-  id: ID;
+  message: null | {
+    /**
+     * @format uuid
+     * @example ["279e8293-cec0-40df-a475-6b35981a2e49"]
+     */
+    id: ID;
+    __typename: "Message";
+  };
   __typename: string;
 };
 
@@ -45309,10 +45304,22 @@ export type SendHighlightedChatMessage_SendHighlightedChatMessageError = {
 
 /** ℹ️ Not real Twitch type name */
 export type SendPinnedChatMessage_SendPinnedChatMessage = {
-  pinnedChatMessage:
-    | null
-    | SendPinnedChatMessage_SendPinnedChatMessagePinnedChatMessage
-    | SendPinnedChatMessage_SendPinnedChatMessagePinnedChatMessage[];
+  pinnedChatMessage: null | {
+    /**
+     * @format uuid
+     * @example ["c47bf9cf-5d0f-4288-ab1a-4740d3a84525"]
+     */
+    id: ID;
+    pinnedMessage: {
+      /**
+       * @format uuid
+       * @example ["279e8293-cec0-40df-a475-6b35981a2e49"]
+       */
+      id: ID;
+      __typename: "Message";
+    };
+    __typename: "PinnedChatMessage";
+  };
   error:
     | null
     | SendPinnedChatMessage_SendPinnedChatMessageError
@@ -45323,22 +45330,6 @@ export type SendPinnedChatMessage_SendPinnedChatMessage = {
 /** ℹ️ Not real Twitch type name */
 export type SendPinnedChatMessage_SendPinnedChatMessageError = {
   code: UnknownValue;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type SendPinnedChatMessage_SendPinnedChatMessagePinnedChatMessage = {
-  id: ID;
-  pinnedMessage:
-    | null
-    | SendPinnedChatMessage_SendPinnedChatMessagePinnedChatMessagePinnedMessage
-    | SendPinnedChatMessage_SendPinnedChatMessagePinnedChatMessagePinnedMessage[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type SendPinnedChatMessage_SendPinnedChatMessagePinnedChatMessagePinnedMessage = {
-  id: ID;
   __typename: string;
 };
 
@@ -45395,25 +45386,17 @@ export type SendSupportChatMessage_SendSupportChatMessageMessageSession = {
 
 /** ℹ️ Not real Twitch type name */
 export type SendUserModiversaryNotice_SendUserModiversaryNotice = {
-  modiversary:
-    | null
-    | SendUserModiversaryNotice_SendUserModiversaryNoticeModiversary
-    | SendUserModiversaryNotice_SendUserModiversaryNoticeModiversary[];
+  modiversary: null | {
+    hasMilestoneAlert: boolean;
+    canSendUserNotice: boolean;
+    /**
+     * @format uint32
+     * @example [0]
+     */
+    months: number;
+    __typename: "UserModiversary";
+  };
   error: UnknownValue;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type SendUserModiversaryNotice_SendUserModiversaryNoticeModiversary = {
-  /** ⚠️ Low confidence about: nullable */
-  hasMilestoneAlert: null | boolean;
-  /** ⚠️ Low confidence about: nullable */
-  canSendUserNotice: null | boolean;
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format uint32
-   */
-  months: null | number;
   __typename: string;
 };
 
@@ -45578,31 +45561,25 @@ export type SessionParticipant_GuestStarSlotVideo = {
 };
 
 /** ℹ️ Not real Twitch type name */
-export type SetAlertFiltersMutation_UpdateActivityFeedAlertSettings = {
-  settings:
-    | null
-    | SetAlertFiltersMutation_UpdateActivityFeedAlertSettingsSettings
-    | SetAlertFiltersMutation_UpdateActivityFeedAlertSettingsSettings[];
-  error: UnknownValue;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type SetAlertFiltersMutation_UpdateActivityFeedAlertSettingsSettings = {
-  /** ⚠️ Low confidence about: nullable */
-  isDNDModeEnabled: null | boolean;
-  categories:
-    | null
-    | SetAlertFiltersMutation_UpdateActivityFeedAlertSettingsSettingsCategories
-    | SetAlertFiltersMutation_UpdateActivityFeedAlertSettingsSettingsCategories[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type SetAlertFiltersMutation_UpdateActivityFeedAlertSettingsSettingsCategories = {
+export type SetAlertFiltersMutation_ActivityFeedAlertSettingsCategories = {
   id: ID;
   /** ⚠️ Low confidence about: nullable */
   isIgnored: null | boolean;
+  __typename: string;
+};
+
+/** ℹ️ Not real Twitch type name */
+export type SetAlertFiltersMutation_UpdateActivityFeedAlertSettings = {
+  settings: null | {
+    /** ⚠️ Low confidence about: nullable */
+    isDNDModeEnabled: null | boolean;
+    categories:
+      | null
+      | SetAlertFiltersMutation_ActivityFeedAlertSettingsCategories
+      | SetAlertFiltersMutation_ActivityFeedAlertSettingsCategories[];
+    __typename: "ActivityFeedAlertSettings";
+  };
+  error: UnknownValue;
   __typename: string;
 };
 
@@ -45702,6 +45679,20 @@ export type SetBusinessDetails_SetBusinessDetailsBusinessContactInfo = {
 export type SetCelebrationsEnabledInput = { isCelebrationsEnabled: boolean };
 
 /** ℹ️ Not real Twitch type name */
+export type SetChangelogRead_UpdateChangelogReadTime = {
+  user: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["23161357"]
+     */
+    id: ID;
+    hasUnreadChangelogItems: boolean;
+    __typename: "User";
+  };
+  __typename: string;
+};
+
+/** ℹ️ Not real Twitch type name */
 export type SetChatScreenReaderAutoAnnounce_SetChatScreenReaderAutoAnnounce = {
   /** ⚠️ Low confidence about: nullable */
   isChatScreenReaderAutoAnnounceEnabled: null | boolean;
@@ -45710,21 +45701,18 @@ export type SetChatScreenReaderAutoAnnounce_SetChatScreenReaderAutoAnnounce = {
 
 /** ℹ️ Not real Twitch type name */
 export type SetClipCommentsEnabled_SetClipCommentsEnabled = {
-  clip:
-    | null
-    | SetClipCommentsEnabled_SetClipCommentsEnabledClip
-    | SetClipCommentsEnabled_SetClipCommentsEnabledClip[];
+  clip: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["3942697259"]
+     */
+    id: ID;
+    /** @example ["EphemeralEncouragingBulgogiPraiseIt-98gnj_-unqEO0uvs", "CredulousBlightedSquirrelOSkomodo-GdY_nETXjEzIz_gm"] */
+    slug: string;
+    isCommentsEnabled: boolean;
+    __typename: "Clip";
+  };
   error: UnknownValue;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type SetClipCommentsEnabled_SetClipCommentsEnabledClip = {
-  id: ID;
-  /** ⚠️ Low confidence about: nullable */
-  slug: null | string;
-  /** ⚠️ Low confidence about: nullable */
-  isCommentsEnabled: null | boolean;
   __typename: string;
 };
 
@@ -45795,10 +45783,18 @@ export type SetDailyUsageLimit_SetDailyUsageLimit = {
     | null
     | SetDailyUsageLimit_SetDailyUsageLimitError
     | SetDailyUsageLimit_SetDailyUsageLimitError[];
-  user:
-    | null
-    | SetDailyUsageLimit_SetDailyUsageLimitUser
-    | SetDailyUsageLimit_SetDailyUsageLimitUser[];
+  user: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["23161357"]
+     */
+    id: ID;
+    dailyUsageLimit:
+      | null
+      | SetDailyUsageLimit_UserDailyUsageLimit
+      | SetDailyUsageLimit_UserDailyUsageLimit[];
+    __typename: "User";
+  };
   __typename: string;
 };
 
@@ -45809,17 +45805,7 @@ export type SetDailyUsageLimit_SetDailyUsageLimitError = {
 };
 
 /** ℹ️ Not real Twitch type name */
-export type SetDailyUsageLimit_SetDailyUsageLimitUser = {
-  id: ID;
-  dailyUsageLimit:
-    | null
-    | SetDailyUsageLimit_SetDailyUsageLimitUserDailyUsageLimit
-    | SetDailyUsageLimit_SetDailyUsageLimitUserDailyUsageLimit[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type SetDailyUsageLimit_SetDailyUsageLimitUserDailyUsageLimit = {
+export type SetDailyUsageLimit_UserDailyUsageLimit = {
   /**
    * ⚠️ Low confidence about: nullable
    * @format uint32
@@ -45915,11 +45901,31 @@ export type SetFollowersOnlyModeSetting_UpdateChatSettings = {
 };
 
 /** ℹ️ Not real Twitch type name */
+export type SetGameDropAccountLinkClient_OrganizationGamesDropAccountLink = {
+  /** ⚠️ Low confidence about: nullable */
+  clientID: null | ID;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format date-time
+   */
+  updatedAt: null | string;
+  __typename: string;
+};
+
+/** ℹ️ Not real Twitch type name */
 export type SetGameDropAccountLinkClient_SetGameDropAccountLinkClient = {
-  game:
-    | null
-    | SetGameDropAccountLinkClient_SetGameDropAccountLinkClientGame
-    | SetGameDropAccountLinkClient_SetGameDropAccountLinkClientGame[];
+  game: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["509672"]
+     */
+    id: ID;
+    dropAccountLink:
+      | null
+      | SetGameDropAccountLinkClient_OrganizationGamesDropAccountLink
+      | SetGameDropAccountLinkClient_OrganizationGamesDropAccountLink[];
+    __typename: "Game";
+  };
   error:
     | null
     | SetGameDropAccountLinkClient_SetGameDropAccountLinkClientError
@@ -45936,50 +45942,20 @@ export type SetGameDropAccountLinkClient_SetGameDropAccountLinkClientError = {
 };
 
 /** ℹ️ Not real Twitch type name */
-export type SetGameDropAccountLinkClient_SetGameDropAccountLinkClientGame = {
-  id: ID;
-  dropAccountLink:
-    | null
-    | SetGameDropAccountLinkClient_SetGameDropAccountLinkClientGameDropAccountLink
-    | SetGameDropAccountLinkClient_SetGameDropAccountLinkClientGameDropAccountLink[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type SetGameDropAccountLinkClient_SetGameDropAccountLinkClientGameDropAccountLink = {
-  /** ⚠️ Low confidence about: nullable */
-  clientID: null | ID;
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format date-time
-   */
-  updatedAt: null | string;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
 export type SetGiftCardUserResidenceMutation_SetUserResidence = {
-  user:
-    | null
-    | SetGiftCardUserResidenceMutation_SetUserResidenceUser
-    | SetGiftCardUserResidenceMutation_SetUserResidenceUser[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type SetGiftCardUserResidenceMutation_SetUserResidenceUser = {
-  id: ID;
-  residence:
-    | null
-    | SetGiftCardUserResidenceMutation_SetUserResidenceUserResidence
-    | SetGiftCardUserResidenceMutation_SetUserResidenceUserResidence[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type SetGiftCardUserResidenceMutation_SetUserResidenceUserResidence = {
-  /** ⚠️ Low confidence about: nullable */
-  countryCode: null | string;
+  user: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["23161357"]
+     */
+    id: ID;
+    residence: null | {
+      /** ⚠️ Low confidence about: nullable */
+      countryCode: null | string;
+      __typename: "UserResidence";
+    };
+    __typename: "User";
+  };
   __typename: string;
 };
 
@@ -45991,35 +45967,25 @@ export type SetGuestStarChangelogReadTimestamp_SetGuestStarChangelogReadTimestam
 
 /** ℹ️ Not real Twitch type name */
 export type SetGuestStarCollabSettings_SetGuestStarCollabSettings = {
-  collabSettings:
-    | null
-    | SetGuestStarCollabSettings_SetGuestStarCollabSettingsCollabSettings
-    | SetGuestStarCollabSettings_SetGuestStarCollabSettingsCollabSettings[];
+  collabSettings: null | {
+    /** @example ["23161357"] */
+    id: ID;
+    /** @example ["UNSET"] */
+    doNotDisturbSetting: CollabSettingsDoNotDisturbSetting;
+    /** @format date-time */
+    doNotDisturbUntil: null | string;
+    shouldAllowAffiliates: boolean;
+    shouldAllowFollows: boolean;
+    shouldAllowPartners: boolean;
+    shouldSkipDoNotDisturbForFavorites: boolean;
+    /** @example [""] */
+    statusMessage: string;
+    __typename: "CollabSettings";
+  };
   error:
     | null
     | SetGuestStarCollabSettings_SetGuestStarCollabSettingsError
     | SetGuestStarCollabSettings_SetGuestStarCollabSettingsError[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type SetGuestStarCollabSettings_SetGuestStarCollabSettingsCollabSettings = {
-  id: ID;
-  doNotDisturbSetting: UnknownValue;
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format date-time
-   */
-  doNotDisturbUntil: null | string;
-  /** ⚠️ Low confidence about: nullable */
-  shouldAllowAffiliates: null | boolean;
-  /** ⚠️ Low confidence about: nullable */
-  shouldAllowFollows: null | boolean;
-  /** ⚠️ Low confidence about: nullable */
-  shouldAllowPartners: null | boolean;
-  /** ⚠️ Low confidence about: nullable */
-  shouldSkipDoNotDisturbForFavorites: null | boolean;
-  statusMessage: UnknownValue;
   __typename: string;
 };
 
@@ -46265,81 +46231,70 @@ export type SetReminder_SetScheduleReminderError = {
 };
 
 /** ℹ️ Not real Twitch type name */
+export type SetResourceRestrictionMutation_ChannelRestriction = {
+  id: ID;
+  type: UnknownValue;
+  options: UnknownValue;
+  __typename: string;
+};
+
+/** ℹ️ Not real Twitch type name */
 export type SetResourceRestrictionMutation_SetResourceRestriction = {
-  stream:
-    | null
-    | SetResourceRestrictionMutation_SetResourceRestrictionStream
-    | SetResourceRestrictionMutation_SetResourceRestrictionStream[];
-  channel:
-    | null
-    | SetResourceRestrictionMutation_SetResourceRestrictionChannel
-    | SetResourceRestrictionMutation_SetResourceRestrictionChannel[];
-  video:
-    | null
-    | SetResourceRestrictionMutation_SetResourceRestrictionVideo
-    | SetResourceRestrictionMutation_SetResourceRestrictionVideo[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type SetResourceRestrictionMutation_SetResourceRestrictionChannel = {
-  id: ID;
-  restriction:
-    | null
-    | SetResourceRestrictionMutation_SetResourceRestrictionChannelRestriction
-    | SetResourceRestrictionMutation_SetResourceRestrictionChannelRestriction[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type SetResourceRestrictionMutation_SetResourceRestrictionChannelRestriction = {
-  id: ID;
-  type: UnknownValue;
-  options: UnknownValue;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type SetResourceRestrictionMutation_SetResourceRestrictionStream = {
-  id: ID;
-  restriction:
-    | null
-    | SetResourceRestrictionMutation_SetResourceRestrictionStreamRestriction
-    | SetResourceRestrictionMutation_SetResourceRestrictionStreamRestriction[];
-  restrictionType: UnknownValue;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type SetResourceRestrictionMutation_SetResourceRestrictionStreamRestriction = {
-  id: ID;
-  type: UnknownValue;
-  options: UnknownValue;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type SetResourceRestrictionMutation_SetResourceRestrictionVideo = {
-  id: ID;
-  resourceRestriction:
-    | null
-    | SetResourceRestrictionMutation_SetResourceRestrictionVideoResourceRestriction
-    | SetResourceRestrictionMutation_SetResourceRestrictionVideoResourceRestriction[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type SetResourceRestrictionMutation_SetResourceRestrictionVideoResourceRestriction = {
-  id: ID;
-  type: UnknownValue;
-  options: UnknownValue;
+  stream: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["316180784725"]
+     */
+    id: ID;
+    restriction: null | {
+      /** @example ["vod:2397382584"] */
+      id: ID;
+      /** @example ["SUB_ONLY_LIVE"] */
+      type: ResourceRestrictionType;
+      /** @example ["ALLOW_ALL_TIERS"] */
+      options: ResourceRestrictionOptions[];
+      __typename: "ResourceRestriction";
+    };
+    /** @example ["AD_POLICY"] */
+    restrictionType: null | string;
+    __typename: "Stream";
+  };
+  channel: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["26490481"]
+     */
+    id: ID;
+    restriction:
+      | null
+      | SetResourceRestrictionMutation_ChannelRestriction
+      | SetResourceRestrictionMutation_ChannelRestriction[];
+    __typename: "Channel";
+  };
+  video: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["2323270866"]
+     */
+    id: ID;
+    resourceRestriction: null | {
+      /** @example ["vod:2397382584"] */
+      id: ID;
+      /** @example ["SUB_ONLY_LIVE"] */
+      type: ResourceRestrictionType;
+      /** @example ["ALLOW_ALL_TIERS"] */
+      options: ResourceRestrictionOptions[];
+      __typename: "ResourceRestriction";
+    };
+    __typename: "Video";
+  };
   __typename: string;
 };
 
 export type SetSessionStatusInput = {
   activity: {
     /** @example ["WATCHING"] */
-    type: string;
+    type: SetSessionStatusInputActivityType;
     /**
      * @pattern ^[0-9]+$
      * @example ["26490481"]
@@ -46347,10 +46302,13 @@ export type SetSessionStatusInput = {
     userID: ID;
   };
   /** @example ["ONLINE", "OFFLINE"] */
-  availability: string;
+  availability: UserSettingsVisibility;
   /** @example ["", "3c6951d8aab144fd", "d3a228025ee941a9"] */
   sessionID: ID;
 };
+
+/** ℹ️ Not real Twitch type name */
+export type SetSessionStatusInputActivityType = "PLAYING" | "STREAMING" | "WATCHING";
 
 /** ℹ️ Not real Twitch type name */
 export type SetSlowModeSetting_UpdateChatSettings = {
@@ -46400,10 +46358,15 @@ export type SetStoryReshareSetting_SetStoryReshareSetting = {
 
 /** ℹ️ Not real Twitch type name */
 export type SetUnbanRequestsSettings_SetUnbanRequestsSettings = {
-  settings:
-    | null
-    | SetUnbanRequestsSettings_SetUnbanRequestsSettingsSettings
-    | SetUnbanRequestsSettings_SetUnbanRequestsSettingsSettings[];
+  settings: null | {
+    isEnabled: boolean;
+    /**
+     * @format uint32
+     * @example [2880, 15, 44, 30240]
+     */
+    cooldownMinutes: number;
+    __typename: "UnbanRequestsSettings";
+  };
   error:
     | null
     | SetUnbanRequestsSettings_SetUnbanRequestsSettingsError
@@ -46418,27 +46381,23 @@ export type SetUnbanRequestsSettings_SetUnbanRequestsSettingsError = {
 };
 
 /** ℹ️ Not real Twitch type name */
-export type SetUnbanRequestsSettings_SetUnbanRequestsSettingsSettings = {
-  /** ⚠️ Low confidence about: nullable */
-  isEnabled: null | boolean;
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format uint32
-   */
-  cooldownMinutes: null | number;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
 export type SetUserBroadcastingOffSetting_SetUserBroadcastingOffSetting = {
   error:
     | null
     | SetUserBroadcastingOffSetting_SetUserBroadcastingOffSettingError
     | SetUserBroadcastingOffSetting_SetUserBroadcastingOffSettingError[];
-  user:
-    | null
-    | SetUserBroadcastingOffSetting_SetUserBroadcastingOffSettingUser
-    | SetUserBroadcastingOffSetting_SetUserBroadcastingOffSettingUser[];
+  user: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["23161357"]
+     */
+    id: ID;
+    broadcastingOffSetting:
+      | null
+      | SetUserBroadcastingOffSetting_UserBroadcastingOffSetting
+      | SetUserBroadcastingOffSetting_UserBroadcastingOffSetting[];
+    __typename: "User";
+  };
   __typename: string;
 };
 
@@ -46449,52 +46408,33 @@ export type SetUserBroadcastingOffSetting_SetUserBroadcastingOffSettingError = {
 };
 
 /** ℹ️ Not real Twitch type name */
-export type SetUserBroadcastingOffSetting_SetUserBroadcastingOffSettingUser = {
-  id: ID;
-  broadcastingOffSetting:
-    | null
-    | SetUserBroadcastingOffSetting_SetUserBroadcastingOffSettingUserBroadcastingOffSetting
-    | SetUserBroadcastingOffSetting_SetUserBroadcastingOffSettingUserBroadcastingOffSetting[];
+export type SetUserBroadcastingOffSetting_UserBroadcastingOffSetting = {
+  /** ⚠️ Low confidence about: nullable */
+  isBroadcastingOff: null | boolean;
   __typename: string;
 };
 
 /** ℹ️ Not real Twitch type name */
-export type SetUserBroadcastingOffSetting_SetUserBroadcastingOffSettingUserBroadcastingOffSetting =
-  {
-    /** ⚠️ Low confidence about: nullable */
-    isBroadcastingOff: null | boolean;
-    __typename: string;
-  };
-
-/** ℹ️ Not real Twitch type name */
 export type SetUserResidenceMutation_SetUserResidence = {
-  user:
-    | null
-    | SetUserResidenceMutation_SetUserResidenceUser
-    | SetUserResidenceMutation_SetUserResidenceUser[];
+  user: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["23161357"]
+     */
+    id: ID;
+    residence: null | {
+      /** ⚠️ Low confidence about: nullable */
+      countryCode: null | string;
+      /** ⚠️ Low confidence about: nullable */
+      postalCode: null | string;
+      __typename: "UserResidence";
+    };
+    __typename: "User";
+  };
   warning:
     | null
     | SetUserResidenceMutation_SetUserResidenceWarning
     | SetUserResidenceMutation_SetUserResidenceWarning[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type SetUserResidenceMutation_SetUserResidenceUser = {
-  id: ID;
-  residence:
-    | null
-    | SetUserResidenceMutation_SetUserResidenceUserResidence
-    | SetUserResidenceMutation_SetUserResidenceUserResidence[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type SetUserResidenceMutation_SetUserResidenceUserResidence = {
-  /** ⚠️ Low confidence about: nullable */
-  countryCode: null | string;
-  /** ⚠️ Low confidence about: nullable */
-  postalCode: null | string;
   __typename: string;
 };
 
@@ -46510,30 +46450,20 @@ export type SetViewerCardModLogsAccessMutation_SetViewerCardModLogsAccess = {
     | null
     | SetViewerCardModLogsAccessMutation_SetViewerCardModLogsAccessError
     | SetViewerCardModLogsAccessMutation_SetViewerCardModLogsAccessError[];
-  channel:
-    | null
-    | SetViewerCardModLogsAccessMutation_SetViewerCardModLogsAccessChannel
-    | SetViewerCardModLogsAccessMutation_SetViewerCardModLogsAccessChannel[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type SetViewerCardModLogsAccessMutation_SetViewerCardModLogsAccessChannel = {
-  id: ID;
-  moderationSettings:
-    | null
-    | SetViewerCardModLogsAccessMutation_SetViewerCardModLogsAccessChannelModerationSettings
-    | SetViewerCardModLogsAccessMutation_SetViewerCardModLogsAccessChannelModerationSettings[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type SetViewerCardModLogsAccessMutation_SetViewerCardModLogsAccessChannelModerationSettings =
-  {
-    /** ⚠️ Low confidence about: nullable */
-    canAccessViewerCardModLogs: null | boolean;
-    __typename: string;
+  channel: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["26490481"]
+     */
+    id: ID;
+    moderationSettings: {
+      canAccessViewerCardModLogs: null | boolean;
+      __typename: "ChannelModerationSettings";
+    };
+    __typename: "Channel";
   };
+  __typename: string;
+};
 
 /** ℹ️ Not real Twitch type name */
 export type SetViewerCardModLogsAccessMutation_SetViewerCardModLogsAccessError = {
@@ -46543,10 +46473,18 @@ export type SetViewerCardModLogsAccessMutation_SetViewerCardModLogsAccessError =
 
 /** ℹ️ Not real Twitch type name */
 export type SetWhispersOffSetting_SetWhispersOffSetting = {
-  user:
-    | null
-    | SetWhispersOffSetting_SetWhispersOffSettingUser
-    | SetWhispersOffSetting_SetWhispersOffSettingUser[];
+  user: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["23161357"]
+     */
+    id: ID;
+    whisperSettings: {
+      isWhispersDisabledByParent: boolean;
+      __typename: "WhisperSettings";
+    };
+    __typename: "User";
+  };
   error:
     | null
     | SetWhispersOffSetting_SetWhispersOffSettingError
@@ -46561,34 +46499,15 @@ export type SetWhispersOffSetting_SetWhispersOffSettingError = {
 };
 
 /** ℹ️ Not real Twitch type name */
-export type SetWhispersOffSetting_SetWhispersOffSettingUser = {
-  id: ID;
-  whisperSettings:
-    | null
-    | SetWhispersOffSetting_SetWhispersOffSettingUserWhisperSettings
-    | SetWhispersOffSetting_SetWhispersOffSettingUserWhisperSettings[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type SetWhispersOffSetting_SetWhispersOffSettingUserWhisperSettings = {
-  /** ⚠️ Low confidence about: nullable */
-  isWhispersDisabledByParent: null | boolean;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
 export type SetWidgetPreference_SetPlusWidgetSetting = {
-  channel:
-    | null
-    | SetWidgetPreference_SetPlusWidgetSettingChannel
-    | SetWidgetPreference_SetPlusWidgetSettingChannel[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type SetWidgetPreference_SetPlusWidgetSettingChannel = {
-  id: ID;
+  channel: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["26490481"]
+     */
+    id: ID;
+    __typename: "Channel";
+  };
   __typename: string;
 };
 
@@ -46606,28 +46525,6 @@ export type SettingsChannelChatBannedChatters_ChannelBannedUsers = {
   };
   __typename: string;
 };
-
-/** ℹ️ Not real Twitch type name */
-export type SettingsChannelClipsSettings_ChannelClipCommentSettingsPartialPhoneVerificationConfig =
-  {
-    /** ⚠️ Low confidence about: nullable */
-    shouldRestrictFirstTimeCommenters: null | boolean;
-    /** ⚠️ Low confidence about: nullable */
-    shouldRestrictBasedOnAccountAge: null | boolean;
-    /**
-     * ⚠️ Low confidence about: nullable
-     * @format uint32
-     */
-    minimumAccountAgeInMinutes: null | number;
-    /** ⚠️ Low confidence about: nullable */
-    shouldRestrictBasedOnFollowerAge: null | boolean;
-    /**
-     * ⚠️ Low confidence about: nullable
-     * @format uint32
-     */
-    minimumFollowerAgeInMinutes: null | number;
-    __typename: string;
-  };
 
 /** ℹ️ Not real Twitch type name */
 export type SettingsChannelClipsSettings_ChannelClipsSettingsCreationRestrictedTo = {
@@ -46937,32 +46834,24 @@ export type SettingsConnectionsUbisoft_ClientAuthorization = {
 };
 
 /** ℹ️ Not real Twitch type name */
-export type SettingsPrimePagePrimeEmotesSetPickerUpdatePrimeSettings_UpdatePrimeSettings = {
-  primeSettings:
-    | null
-    | SettingsPrimePagePrimeEmotesSetPickerUpdatePrimeSettings_UpdatePrimeSettingsPrimeSettings
-    | SettingsPrimePagePrimeEmotesSetPickerUpdatePrimeSettings_UpdatePrimeSettingsPrimeSettings[];
+export type SettingsPrimePagePrimeEmotesSetPickerUpdatePrimeSettings_PrimeSettingsPrimeEmoticons = {
+  /** ⚠️ Low confidence about: nullable */
+  currentSetName: null | string;
   __typename: string;
 };
 
 /** ℹ️ Not real Twitch type name */
-export type SettingsPrimePagePrimeEmotesSetPickerUpdatePrimeSettings_UpdatePrimeSettingsPrimeSettings =
-  {
+export type SettingsPrimePagePrimeEmotesSetPickerUpdatePrimeSettings_UpdatePrimeSettings = {
+  primeSettings: null | {
     id: ID;
     primeEmoticons:
       | null
-      | SettingsPrimePagePrimeEmotesSetPickerUpdatePrimeSettings_UpdatePrimeSettingsPrimeSettingsPrimeEmoticons
-      | SettingsPrimePagePrimeEmotesSetPickerUpdatePrimeSettings_UpdatePrimeSettingsPrimeSettingsPrimeEmoticons[];
-    __typename: string;
+      | SettingsPrimePagePrimeEmotesSetPickerUpdatePrimeSettings_PrimeSettingsPrimeEmoticons
+      | SettingsPrimePagePrimeEmotesSetPickerUpdatePrimeSettings_PrimeSettingsPrimeEmoticons[];
+    __typename: "PrimeSettings";
   };
-
-/** ℹ️ Not real Twitch type name */
-export type SettingsPrimePagePrimeEmotesSetPickerUpdatePrimeSettings_UpdatePrimeSettingsPrimeSettingsPrimeEmoticons =
-  {
-    /** ⚠️ Low confidence about: nullable */
-    currentSetName: null | string;
-    __typename: string;
-  };
+  __typename: string;
+};
 
 /** ℹ️ Not real Twitch type name */
 export type SettingsSecurityPageContactSettings_UserSettingsTwoFactorPhoneNumber = {
@@ -47087,10 +46976,14 @@ export type SharedBanChannel = {
 
 export type SharedChatParticipant = {
   id: ID;
-  channel:
-    | null
-    | SharedChatParticipant_SharedChatParticipantChannel
-    | SharedChatParticipant_SharedChatParticipantChannel[];
+  channel: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["26490481"]
+     */
+    id: ID;
+    __typename: "Channel";
+  };
   /**
    * ⚠️ Low confidence about: nullable
    * @format date-time
@@ -47098,35 +46991,6 @@ export type SharedChatParticipant = {
   autoAcceptsAt: null | string;
   status: UnknownValue;
   __typename: "SharedChatParticipant";
-};
-
-/** ℹ️ Not real Twitch type name */
-export type SharedChatParticipant_SharedChatParticipantChannel = {
-  id: ID;
-  __typename: string;
-};
-
-export type SharedChatSession_SharedChatSession = {
-  id: ID;
-  host: null | SharedChatSession_SharedChatSessionHost | SharedChatSession_SharedChatSessionHost[];
-  status: UnknownValue;
-  participants: null | SharedChatParticipant;
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format date-time
-   */
-  createdAt: null | string;
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format date-time
-   */
-  updatedAt: null | string;
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format date-time
-   */
-  autoStartsAt: null | string;
-  __typename: "SharedChatSession";
 };
 
 /** ℹ️ Not real Twitch type name */
@@ -47173,33 +47037,29 @@ export type SharedHypeTrainDetails = {
 
 /** ℹ️ Not real Twitch type name */
 export type SharedHypeTrainDetails_SharedHypeTrainDetailsSharedAllTimeHighRecords = {
-  user:
-    | null
-    | SharedHypeTrainDetails_SharedHypeTrainDetailsSharedAllTimeHighRecordsUser
-    | SharedHypeTrainDetails_SharedHypeTrainDetailsSharedAllTimeHighRecordsUser[];
+  user: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["23161357"]
+     */
+    id: ID;
+    __typename: "User";
+  };
   channelAllTimeHigh: null | HypeTrainCompleted;
   __typename: string;
 };
 
 /** ℹ️ Not real Twitch type name */
-export type SharedHypeTrainDetails_SharedHypeTrainDetailsSharedAllTimeHighRecordsUser = {
-  id: ID;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
 export type SharedHypeTrainDetails_SharedHypeTrainDetailsSharedConductors = {
-  user:
-    | null
-    | SharedHypeTrainDetails_SharedHypeTrainDetailsSharedConductorsUser
-    | SharedHypeTrainDetails_SharedHypeTrainDetailsSharedConductorsUser[];
+  user: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["23161357"]
+     */
+    id: ID;
+    __typename: "User";
+  };
   conductors: null | HypeTrainConductor;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type SharedHypeTrainDetails_SharedHypeTrainDetailsSharedConductorsUser = {
-  id: ID;
   __typename: string;
 };
 
@@ -47327,7 +47187,7 @@ export type ShelfClip = {
    */
   durationSeconds: number;
   /** @example ["EN", "ES", "RU"] */
-  language: string;
+  language: ClipLanguage;
   champBadge: null | ShelfClip_ClipChampBadge | ShelfClip_ClipChampBadge[];
   isFeatured: boolean;
   isAutoCurated: boolean;
@@ -47376,13 +47236,19 @@ export type ShelfContentEdge = {
   /** @example [""] */
   promotionsCampaignID: ID;
   /** @example ["RECOMMENDED"] */
-  sourceType: string;
+  sourceType: ShelfContentEdgeSourceType;
   recommendationBadge:
     | null
     | ShelfContentEdge_ShelfContentEdgeRecommendationBadge
     | ShelfContentEdge_ShelfContentEdgeRecommendationBadge[];
   __typename: "ShelfContentEdge";
 };
+
+/** ℹ️ Not real Twitch type name */
+export type ShelfContentEdgeLabel = "NONE";
+
+/** ℹ️ Not real Twitch type name */
+export type ShelfContentEdgeSourceType = "RECOMMENDED";
 
 /** ℹ️ Not real Twitch type name */
 export type ShelfContentEdge_ShelfContentEdgeRecommendationBadge = {
@@ -47770,7 +47636,7 @@ export type SideNavContent = {
   /** @example [""] */
   promotionsCampaignID: ID;
   /** @example ["NONE"] */
-  label: string;
+  label: ShelfContentEdgeLabel;
   recommendationBadge:
     | null
     | SideNavContent_ShelfContentEdgeRecommendationBadge
@@ -47822,6 +47688,63 @@ export type SideNavContent = {
 /** ℹ️ Not real Twitch type name */
 export type SideNavContent_ShelfContentEdgeRecommendationBadge = {
   displayLabel: UnknownValue;
+  __typename: string;
+};
+
+/** ℹ️ Not real Twitch type name */
+export type SideNavCreatorBadgeDrops_ChannelOwnedDropCampaigns = {
+  channel: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["26490481"]
+     */
+    id: ID;
+    __typename: "Channel";
+  };
+  campaigns:
+    | null
+    | SideNavCreatorBadgeDrops_ChannelOwnedDropCampaignsCampaigns
+    | SideNavCreatorBadgeDrops_ChannelOwnedDropCampaignsCampaigns[];
+  __typename: string;
+};
+
+/** ℹ️ Not real Twitch type name */
+export type SideNavCreatorBadgeDrops_ChannelOwnedDropCampaignsCampaigns = {
+  id: ID;
+  /** ⚠️ Low confidence about: nullable */
+  brandName: null | string;
+  status: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format date-time
+   */
+  startAt: null | string;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format date-time
+   */
+  endAt: null | string;
+  rewardGroups:
+    | null
+    | SideNavCreatorBadgeDrops_ChannelOwnedDropCampaignsCampaignsRewardGroups
+    | SideNavCreatorBadgeDrops_ChannelOwnedDropCampaignsCampaignsRewardGroups[];
+  __typename: string;
+};
+
+/** ℹ️ Not real Twitch type name */
+export type SideNavCreatorBadgeDrops_ChannelOwnedDropCampaignsCampaignsRewardGroups = {
+  id: ID;
+  rewards:
+    | null
+    | SideNavCreatorBadgeDrops_ChannelOwnedDropCampaignsCampaignsRewardGroupsRewards
+    | SideNavCreatorBadgeDrops_ChannelOwnedDropCampaignsCampaignsRewardGroupsRewards[];
+  __typename: string;
+};
+
+/** ℹ️ Not real Twitch type name */
+export type SideNavCreatorBadgeDrops_ChannelOwnedDropCampaignsCampaignsRewardGroupsRewards = {
+  id: ID;
+  distributionType: UnknownValue;
   __typename: string;
 };
 
@@ -47968,7 +47891,7 @@ export type SideNavStream = {
     costreamersCount: number;
     organizer: null | CostreamingUserWithViewcount;
     /** @example ["ORGANIZER", "COSTREAMER"] */
-    role: string;
+    role: CostreamDetailsRole;
     topCostreamers: CostreamingUserWithViewcount[];
     /**
      * @format uint32
@@ -48221,7 +48144,7 @@ export type SocialMediaLinks = {
   __typename: "User";
 };
 
-export type SortOrder = "DESC";
+export type SortOrder = "ASC" | "DESC";
 
 /** ℹ️ Not real Twitch type name */
 export type SpendPrimeSubscriptionCreditMutation_SpendSubscriptionCredit = {
@@ -48229,10 +48152,29 @@ export type SpendPrimeSubscriptionCreditMutation_SpendSubscriptionCredit = {
     | null
     | SpendPrimeSubscriptionCreditMutation_SpendSubscriptionCreditError
     | SpendPrimeSubscriptionCreditMutation_SpendSubscriptionCreditError[];
-  subscriptionBenefit:
-    | null
-    | SpendPrimeSubscriptionCreditMutation_SpendSubscriptionCreditSubscriptionBenefit
-    | SpendPrimeSubscriptionCreditMutation_SpendSubscriptionCreditSubscriptionBenefit[];
+  subscriptionBenefit: null | {
+    /** @example ["3L7hSWPX941bMubywA98e4uYNdT", "3KyHdOj3R8PmXqz66jFOU07Ia7D"] */
+    id: ID;
+    product: null | {
+      /**
+       * @pattern ^[0-9]+$
+       * @example ["358"]
+       */
+      id: ID;
+      owner: {
+        /**
+         * @pattern ^[0-9]+$
+         * @example ["23161357"]
+         */
+        id: ID;
+        /** @example ["Twitch", "CD PROJEKT RED", "LIRIK", "forsen", "ayuuexe", "xQc", "RSDragonwilds"] */
+        displayName: string;
+        __typename: "User";
+      };
+      __typename: "SubscriptionProduct";
+    };
+    __typename: "SubscriptionBenefit";
+  };
   __typename: string;
 };
 
@@ -48242,46 +48184,16 @@ export type SpendPrimeSubscriptionCreditMutation_SpendSubscriptionCreditError = 
   __typename: string;
 };
 
-/** ℹ️ Not real Twitch type name */
-export type SpendPrimeSubscriptionCreditMutation_SpendSubscriptionCreditSubscriptionBenefit = {
-  id: ID;
-  product:
-    | null
-    | SpendPrimeSubscriptionCreditMutation_SpendSubscriptionCreditSubscriptionBenefitProduct
-    | SpendPrimeSubscriptionCreditMutation_SpendSubscriptionCreditSubscriptionBenefitProduct[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type SpendPrimeSubscriptionCreditMutation_SpendSubscriptionCreditSubscriptionBenefitProduct =
-  {
-    id: ID;
-    owner:
-      | null
-      | SpendPrimeSubscriptionCreditMutation_SpendSubscriptionCreditSubscriptionBenefitProductOwner
-      | SpendPrimeSubscriptionCreditMutation_SpendSubscriptionCreditSubscriptionBenefitProductOwner[];
-    __typename: string;
-  };
-
-/** ℹ️ Not real Twitch type name */
-export type SpendPrimeSubscriptionCreditMutation_SpendSubscriptionCreditSubscriptionBenefitProductOwner =
-  {
-    id: ID;
-    /** ⚠️ Low confidence about: nullable */
-    displayName: null | string;
-    __typename: string;
-  };
-
 export type SpendableBalance = {
   status: {
     /** @example ["UNSPECIFIED"] */
-    optState: string;
+    optState: OptState;
     /** @example ["INELIGIBLE"] */
-    eligibility: string;
+    eligibility: SpendableBalanceStatusEligibility;
     /** @example ["INVALID_COUNTRY"] */
-    ineligibilityReasons: string[];
+    ineligibilityReasons: SpendableBalanceStatusIneligibilityReasons[];
     /** @example ["AUTOMATIC"] */
-    payoutPreference: string;
+    payoutPreference: SpendableBalanceStatusPayoutPreference;
     __typename: "SpendableBalanceStatus";
   };
   currentBalance: {
@@ -48334,6 +48246,20 @@ export type SpendableBalanceHistory_SpendableBalanceHistory = {
   connection: null | SpendableBalanceHistoryConnection;
   __typename: string;
 };
+
+/** ℹ️ Not real Twitch type name */
+export type SpendableBalanceStatusEligibility = "INELIGIBLE";
+
+/** ℹ️ Not real Twitch type name */
+export type SpendableBalanceStatusIneligibilityReasons =
+  | "INVALID_COUNTRY"
+  | "INVALID_TAX"
+  | "NOT_PAYABLE"
+  | "PENDING_REVIEW"
+  | "UNKNOWN";
+
+/** ℹ️ Not real Twitch type name */
+export type SpendableBalanceStatusPayoutPreference = "AUTOMATIC" | "SPENDABLE_BALANCE" | "UNKNOWN";
 
 /** ℹ️ Not real Twitch type name */
 export type SponsorBannerEligibility_SponsorBannerEligibility = {
@@ -49052,9 +48978,12 @@ export type SponsorshipHostReadAd =
 
 export type SponsorshipInstanceQuery = {
   /** @example ["ACTIVE"] */
-  state?: null | string;
+  state?: null | SponsorshipInstanceQueryState;
   stateCategory?: null | SponsorshipInstancesQueryStateCategory;
 };
+
+/** ℹ️ Not real Twitch type name */
+export type SponsorshipInstanceQueryState = "ACTIVE";
 
 /** ℹ️ Not real Twitch type name */
 export type SponsorshipInstancesQueryStateCategory = "ACTIVE";
@@ -49316,16 +49245,14 @@ export type SponsorshipToolsCampaignInstance_CampaignInstanceCostreamOrganizerCh
    * @format uri
    */
   profileURL: null | string;
-  stream:
-    | null
-    | SponsorshipToolsCampaignInstance_CampaignInstanceCostreamOrganizerChannelsStream
-    | SponsorshipToolsCampaignInstance_CampaignInstanceCostreamOrganizerChannelsStream[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type SponsorshipToolsCampaignInstance_CampaignInstanceCostreamOrganizerChannelsStream = {
-  id: ID;
+  stream: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["316180784725"]
+     */
+    id: ID;
+    __typename: "Stream";
+  };
   __typename: string;
 };
 
@@ -49646,7 +49573,7 @@ export type SponsorshipsParams = {
   /** @example [""] */
   deviceOS: string;
   /** @example ["IAB_DEVICE_TYPE_PERSONAL_COMPUTER"] */
-  deviceType: string;
+  deviceType: SponsorshipsParamsDeviceType;
   /** @example ["web"] */
   platform: string;
   previewOverride: {
@@ -49658,6 +49585,13 @@ export type SponsorshipsParams = {
     productInstanceOverride: string;
   };
 };
+
+/** ℹ️ Not real Twitch type name */
+export type SponsorshipsParamsDeviceType =
+  | "IAB_DEVICE_TYPE_CONNECTED_TV"
+  | "IAB_DEVICE_TYPE_MOBILE_TABLET_GENERAL"
+  | "IAB_DEVICE_TYPE_PERSONAL_COMPUTER"
+  | "IAB_DEVICE_TYPE_UNSPECIFIED";
 
 /** ℹ️ Not real Twitch type name */
 export type SponsorshipsSuitabilityToggles_SponsorshipSuitabilityToggles = {
@@ -49758,10 +49692,14 @@ export type StartGuestStarScreenshare_StartGuestStarScreenshareSlot = {
     | null
     | StartGuestStarScreenshare_StartGuestStarScreenshareSlotVideo
     | StartGuestStarScreenshare_StartGuestStarScreenshareSlotVideo[];
-  user:
-    | null
-    | StartGuestStarScreenshare_StartGuestStarScreenshareSlotUser
-    | StartGuestStarScreenshare_StartGuestStarScreenshareSlotUser[];
+  user: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["23161357"]
+     */
+    id: ID;
+    __typename: "User";
+  };
   __typename: string;
 };
 
@@ -49773,12 +49711,6 @@ export type StartGuestStarScreenshare_StartGuestStarScreenshareSlotAudio = {
   isHostEnabled: null | boolean;
   /** ⚠️ Low confidence about: nullable */
   isGuestEnabled: null | boolean;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type StartGuestStarScreenshare_StartGuestStarScreenshareSlotUser = {
-  id: ID;
   __typename: string;
 };
 
@@ -49835,10 +49767,16 @@ export type StartGuestStarSession_StartGuestStarSessionSessionGuests = {
   id: ID;
   /** ⚠️ Low confidence about: nullable */
   isSlotLive: null | boolean;
-  user:
-    | null
-    | StartGuestStarSession_StartGuestStarSessionSessionGuestsUser
-    | StartGuestStarSession_StartGuestStarSessionSessionGuestsUser[];
+  user: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["23161357"]
+     */
+    id: ID;
+    /** @example ["Twitch", "CD PROJEKT RED", "LIRIK", "forsen", "ayuuexe", "xQc", "RSDragonwilds"] */
+    displayName: string;
+    __typename: "User";
+  };
   audio:
     | null
     | StartGuestStarSession_StartGuestStarSessionSessionGuestsAudio
@@ -49858,14 +49796,6 @@ export type StartGuestStarSession_StartGuestStarSessionSessionGuestsAudio = {
   isGuestEnabled: null | boolean;
   /** ⚠️ Low confidence about: nullable */
   isAvailable: null | boolean;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type StartGuestStarSession_StartGuestStarSessionSessionGuestsUser = {
-  id: ID;
-  /** ⚠️ Low confidence about: nullable */
-  displayName: null | string;
   __typename: string;
 };
 
@@ -50022,17 +49952,86 @@ export type StopHostTrain_StopHostTrainError = {
   __typename: string;
 };
 
+/** ℹ️ Not real Twitch type name */
+export type StoryAnchorType = "STORY";
+
 export type StoryBaseLayerDataBlockFragment =
   | {
-      clip:
-        | null
-        | StoryBaseLayerDataBlockFragment_StoryClipBlockClip
-        | StoryBaseLayerDataBlockFragment_StoryClipBlockClip[];
+      clip: null | {
+        /**
+         * @pattern ^[0-9]+$
+         * @example ["3942697259"]
+         */
+        id: ID;
+        /** @example ["EphemeralEncouragingBulgogiPraiseIt-98gnj_-unqEO0uvs", "CredulousBlightedSquirrelOSkomodo-GdY_nETXjEzIz_gm"] */
+        slug: string;
+        isAutoCurated: boolean;
+        isCommentsEnabled: boolean;
+        /**
+         * @format uint32
+         * @example [0, 21, 14, 4, 2, 3, 1, 29, 6, 15, 19]
+         */
+        topLevelCommentCount: number;
+        broadcastIdentifier: null | {
+          /**
+           * @pattern ^[0-9]+$
+           * @example ["319108158181"]
+           */
+          id: ID;
+          __typename: "BroadcastIdOnly";
+        };
+        broadcaster: null | {
+          /**
+           * @pattern ^[0-9]+$
+           * @example ["23161357"]
+           */
+          id: ID;
+          /** @example ["Twitch", "CD PROJEKT RED", "LIRIK", "forsen", "ayuuexe", "xQc", "RSDragonwilds"] */
+          displayName: string;
+          /** @example ["lirik", "twitch", "cdprojektred", "forsen", "tickett_", "st1mgreeen", "lipton_18"] */
+          login: string;
+          channel: {
+            /**
+             * @pattern ^[0-9]+$
+             * @example ["26490481"]
+             */
+            id: ID;
+            clipsSettings: {
+              isClipCommentsEnabled: boolean;
+              __typename: "ChannelClipsSettings";
+            };
+            __typename: "Channel";
+          };
+          __typename: "User";
+        };
+        video: null | {
+          /**
+           * @pattern ^[0-9]+$
+           * @example ["2323270866"]
+           */
+          id: ID;
+          __typename: "Video";
+        };
+        game: null | {
+          /**
+           * @pattern ^[0-9]+$
+           * @example ["509672"]
+           */
+          id: ID;
+          /** @example ["IRL", "Cyberpunk 2077", "Just Chatting", "Special Events", "Gwent: The Witcher Card Game", "Grand Theft Auto V", "DayZ"] */
+          displayName: string;
+          /** @example ["irl", "cyberpunk-2077", "just-chatting", "special-events", "grand-theft-auto-v", "overwatch-2", "counter-strike"] */
+          slug: string;
+          __typename: "Game";
+        };
+        __typename: "Clip";
+      };
       zoomOption: UnknownValue;
-      clipAsset:
-        | null
-        | StoryBaseLayerDataBlockFragment_StoryClipBlockClipAsset
-        | StoryBaseLayerDataBlockFragment_StoryClipBlockClipAsset[];
+      clipAsset: null | {
+        /** @example ["ce4b4ef1-4e8d-4391-bff6-2bc4c5506a4d/LANDSCAPE", "c8e52370-1429-4023-9ce8-9d016939e3c2/LANDSCAPE"] */
+        id: ID;
+        __typename: "ClipAsset";
+      };
       __typename: "StoryClipBlock";
     }
   | {
@@ -50068,98 +50067,6 @@ export type StoryBaseLayerDataBlockFragment =
       __typename: "StoryReshareBackgroundBlock";
     }
   | { __typename: "StoryVideoBackgroundBlock" };
-
-/** ℹ️ Not real Twitch type name */
-export type StoryBaseLayerDataBlockFragment_StoryClipBlockClip = {
-  id: ID;
-  /** ⚠️ Low confidence about: nullable */
-  slug: null | string;
-  /** ⚠️ Low confidence about: nullable */
-  isAutoCurated: null | boolean;
-  /** ⚠️ Low confidence about: nullable */
-  isCommentsEnabled: null | boolean;
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format uint32
-   */
-  topLevelCommentCount: null | number;
-  broadcastIdentifier:
-    | null
-    | StoryBaseLayerDataBlockFragment_StoryClipBlockClipBroadcastIdentifier
-    | StoryBaseLayerDataBlockFragment_StoryClipBlockClipBroadcastIdentifier[];
-  broadcaster:
-    | null
-    | StoryBaseLayerDataBlockFragment_StoryClipBlockClipBroadcaster
-    | StoryBaseLayerDataBlockFragment_StoryClipBlockClipBroadcaster[];
-  video:
-    | null
-    | StoryBaseLayerDataBlockFragment_StoryClipBlockClipVideo
-    | StoryBaseLayerDataBlockFragment_StoryClipBlockClipVideo[];
-  game:
-    | null
-    | StoryBaseLayerDataBlockFragment_StoryClipBlockClipGame
-    | StoryBaseLayerDataBlockFragment_StoryClipBlockClipGame[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type StoryBaseLayerDataBlockFragment_StoryClipBlockClipAsset = {
-  id: ID;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type StoryBaseLayerDataBlockFragment_StoryClipBlockClipBroadcastIdentifier = {
-  id: ID;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type StoryBaseLayerDataBlockFragment_StoryClipBlockClipBroadcaster = {
-  id: ID;
-  /** ⚠️ Low confidence about: nullable */
-  displayName: null | string;
-  /** ⚠️ Low confidence about: nullable */
-  login: null | string;
-  channel:
-    | null
-    | StoryBaseLayerDataBlockFragment_StoryClipBlockClipBroadcasterChannel
-    | StoryBaseLayerDataBlockFragment_StoryClipBlockClipBroadcasterChannel[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type StoryBaseLayerDataBlockFragment_StoryClipBlockClipBroadcasterChannel = {
-  id: ID;
-  clipsSettings:
-    | null
-    | StoryBaseLayerDataBlockFragment_StoryClipBlockClipBroadcasterChannelClipsSettings
-    | StoryBaseLayerDataBlockFragment_StoryClipBlockClipBroadcasterChannelClipsSettings[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type StoryBaseLayerDataBlockFragment_StoryClipBlockClipBroadcasterChannelClipsSettings = {
-  /** ⚠️ Low confidence about: nullable */
-  isClipCommentsEnabled: null | boolean;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type StoryBaseLayerDataBlockFragment_StoryClipBlockClipGame = {
-  id: ID;
-  /** ⚠️ Low confidence about: nullable */
-  displayName: null | string;
-  /** ⚠️ Low confidence about: nullable */
-  slug: null | string;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type StoryBaseLayerDataBlockFragment_StoryClipBlockClipVideo = {
-  id: ID;
-  __typename: string;
-};
 
 export type StoryConnectionFragment = {
   pageInfo: null | {
@@ -50328,9 +50235,9 @@ export type StoryFragment = {
     __typename: "User";
   };
   /** @example ["PUBLIC"] */
-  segmentType: string;
+  segmentType: StorySegmentType;
   /** @example ["STORY"] */
-  anchorType: string;
+  anchorType: StoryAnchorType;
   /**
    * @format date-time
    * @example ["2026-10-27T17:07:30.476991961Z"]
@@ -50342,7 +50249,7 @@ export type StoryFragment = {
    */
   expiredAt: string;
   /** @example ["ACTIVE"] */
-  visibilityStatus: string;
+  visibilityStatus: StoryVisibilityStatus;
   /**
    * @format int32
    * @example [0]
@@ -50350,7 +50257,7 @@ export type StoryFragment = {
   views: number;
   content: null | StoryContentFragment;
   /** @example ["DEFAULT"] */
-  sourceType: string;
+  sourceType: StorySourceType;
   __typename: "Story";
 };
 
@@ -50480,20 +50387,18 @@ export type StoryPreviewFragment_StoryPreviewAdditionalClips = {
   id: ID;
   /** ⚠️ Low confidence about: nullable */
   title: null | string;
-  game:
-    | null
-    | StoryPreviewFragment_StoryPreviewAdditionalClipsGame
-    | StoryPreviewFragment_StoryPreviewAdditionalClipsGame[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type StoryPreviewFragment_StoryPreviewAdditionalClipsGame = {
-  id: ID;
-  /** ⚠️ Low confidence about: nullable */
-  displayName: null | string;
-  /** ⚠️ Low confidence about: nullable */
-  slug: null | string;
+  game: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["509672"]
+     */
+    id: ID;
+    /** @example ["IRL", "Cyberpunk 2077", "Just Chatting", "Special Events", "Gwent: The Witcher Card Game", "Grand Theft Auto V", "DayZ"] */
+    displayName: string;
+    /** @example ["irl", "cyberpunk-2077", "just-chatting", "special-events", "grand-theft-auto-v", "overwatch-2", "counter-strike"] */
+    slug: string;
+    __typename: "Game";
+  };
   __typename: string;
 };
 
@@ -50514,7 +50419,7 @@ export type StoryPreviewFragment_StoryPreviewRecap = {
 
 export type StoryPreviewsWithOrderInput = {
   /** @example ["FULL_FLATTENING", "MENTION_STICKER", "PORTRAIT_CLIP", "VIDEO", "RESHARE"] */
-  capabilities?: null | string[];
+  capabilities?: null | StoryFeatureCapability[];
   /**
    * @format uint32
    * @example [10]
@@ -50526,6 +50431,9 @@ export type StoryPreviewsWithOrderInput = {
    */
   offset?: null | number;
 };
+
+/** ℹ️ Not real Twitch type name */
+export type StorySegmentType = "PUBLIC";
 
 /** ℹ️ Not real Twitch type name */
 export type StorySettings_StorySettings = {
@@ -50570,6 +50478,9 @@ export type StoryShelfPreviewFragment = {
   };
   __typename: "StoryPreview";
 };
+
+/** ℹ️ Not real Twitch type name */
+export type StorySourceType = "DEFAULT";
 
 export type StoryStickerBlockFragment = {
   emote:
@@ -50647,6 +50558,9 @@ export type StoryTextTokenFragment =
       userName: null | string;
       __typename: "StoryMentionToken";
     };
+
+/** ℹ️ Not real Twitch type name */
+export type StoryVisibilityStatus = "ACTIVE";
 
 export type Stream = {
   /**
@@ -50963,10 +50877,17 @@ export type StreamLabsAlert = {
         thirdPartyHandle: UnknownValue;
         /** ⚠️ Low confidence about: nullable */
         message: null | string;
-        money:
-          | null
-          | StreamLabsAlert_StreamLabsTipDataMoney
-          | StreamLabsAlert_StreamLabsTipDataMoney[];
+        money: null | {
+          /**
+           * ⚠️ Low confidence about: nullable
+           * @format uint32
+           */
+          amount: null | number;
+          /** ⚠️ Low confidence about: nullable */
+          currencyCode: null | string;
+          minorUnits: UnknownValue;
+          __typename: "Money";
+        };
         __typename: "StreamLabsTipData";
       }
     | {
@@ -50975,10 +50896,17 @@ export type StreamLabsAlert = {
         itemName: null | string;
         /** ⚠️ Low confidence about: nullable */
         message: null | string;
-        money:
-          | null
-          | StreamLabsAlert_StreamLabsMediaDataMoney
-          | StreamLabsAlert_StreamLabsMediaDataMoney[];
+        money: null | {
+          /**
+           * ⚠️ Low confidence about: nullable
+           * @format uint32
+           */
+          amount: null | number;
+          /** ⚠️ Low confidence about: nullable */
+          currencyCode: null | string;
+          minorUnits: UnknownValue;
+          __typename: "Money";
+        };
         __typename: "StreamLabsMediaData";
       }
     | {
@@ -50995,52 +50923,20 @@ export type StreamLabsAlert = {
         message: null | string;
         /** ⚠️ Low confidence about: nullable */
         charityName: null | string;
-        money:
-          | null
-          | StreamLabsAlert_StreamLabsCharityDonationDataMoney
-          | StreamLabsAlert_StreamLabsCharityDonationDataMoney[];
+        money: null | {
+          /**
+           * ⚠️ Low confidence about: nullable
+           * @format uint32
+           */
+          amount: null | number;
+          /** ⚠️ Low confidence about: nullable */
+          currencyCode: null | string;
+          minorUnits: UnknownValue;
+          __typename: "Money";
+        };
         __typename: "StreamLabsCharityDonationData";
       };
   __typename: "ActivityFeedStreamLabsAlert";
-};
-
-/** ℹ️ Not real Twitch type name */
-export type StreamLabsAlert_StreamLabsCharityDonationDataMoney = {
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format uint32
-   */
-  amount: null | number;
-  /** ⚠️ Low confidence about: nullable */
-  currencyCode: null | string;
-  minorUnits: UnknownValue;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type StreamLabsAlert_StreamLabsMediaDataMoney = {
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format uint32
-   */
-  amount: null | number;
-  /** ⚠️ Low confidence about: nullable */
-  currencyCode: null | string;
-  minorUnits: UnknownValue;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type StreamLabsAlert_StreamLabsTipDataMoney = {
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format uint32
-   */
-  amount: null | number;
-  /** ⚠️ Low confidence about: nullable */
-  currencyCode: null | string;
-  minorUnits: UnknownValue;
-  __typename: string;
 };
 
 /** ℹ️ Not real Twitch type name */
@@ -51074,12 +50970,12 @@ export type StreamOptions = {
   /** @example ["Cosplay", "247Stream", "DropsEnabled"] */
   freeformTags?: null | string[];
   /** @example ["SUB_ONLY_LIVE"] */
-  includeRestricted?: null | string[];
+  includeRestricted?: null | IncludeRestricted[];
   recommendationsContext?: null | RecommendationsContext;
   /** @example ["JIRA-VXP-2397"] */
   requestID?: null | ID;
   /** @example ["RELEVANCE"] */
-  sort?: null | string;
+  sort?: null | OptionsSort;
   tags?: null | UnknownValue[];
 };
 
@@ -51212,7 +51108,7 @@ export type StreamSummaryClipFragment = {
    */
   viewCount: number;
   /** @example ["EN", "ES", "RU"] */
-  language: string;
+  language: ClipLanguage;
   isFeatured: boolean;
   assets: ClipAssetFragment[];
   curator: null | {
@@ -51360,7 +51256,7 @@ export type StreamSummaryClipFragment = {
      */
     id: ID;
     /** @example ["ARCHIVE", "HIGHLIGHT", "UPLOAD"] */
-    broadcastType: string;
+    broadcastType: BroadcastType;
     /** @example ["Twitch Recap: 2024 according to Twitch Chat!", "REDstreams — Cyberpunk 2077: Edgerunners 2 Update (2.5) | Overview"] */
     title: null | string;
     __typename: "Video";
@@ -51598,10 +51494,24 @@ export type StreamSummaryPageGetStreamSummaryMetrics_UserStreamSummariesCostream
 /** ℹ️ Not real Twitch type name */
 export type StreamSummaryPageGetStreamSummaryMetrics_UserStreamSummariesCostreamingSummariesActiveCostreamersEdgesNode =
   {
-    user:
-      | null
-      | StreamSummaryPageGetStreamSummaryMetrics_UserStreamSummariesCostreamingSummariesActiveCostreamersEdgesNodeUser
-      | StreamSummaryPageGetStreamSummaryMetrics_UserStreamSummariesCostreamingSummariesActiveCostreamersEdgesNodeUser[];
+    user: null | {
+      /**
+       * @pattern ^[0-9]+$
+       * @example ["23161357"]
+       */
+      id: ID;
+      /** @example ["lirik", "twitch", "cdprojektred", "forsen", "tickett_", "st1mgreeen", "lipton_18"] */
+      login: string;
+      /** @example ["Twitch", "CD PROJEKT RED", "LIRIK", "forsen", "ayuuexe", "xQc", "RSDragonwilds"] */
+      displayName: string;
+      /**
+       * @format uri
+       * @example ["https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-70x70.png", "https://static-cdn.jtvnw.net/jtv_user_pictures/3c3366d7-728a-4204-bfdd-7c823858e4d9-profile_image-70x70.png"]
+       * @gqlArg `width: Int [50, 70, 300, 28, 150]`
+       */
+      profileImageURL: string;
+      __typename: "User";
+    };
     /**
      * ⚠️ Low confidence about: nullable
      * @format uint32
@@ -51612,23 +51522,6 @@ export type StreamSummaryPageGetStreamSummaryMetrics_UserStreamSummariesCostream
      * @format uint32
      */
     averageCCV: null | number;
-    __typename: string;
-  };
-
-/** ℹ️ Not real Twitch type name */
-export type StreamSummaryPageGetStreamSummaryMetrics_UserStreamSummariesCostreamingSummariesActiveCostreamersEdgesNodeUser =
-  {
-    id: ID;
-    /** ⚠️ Low confidence about: nullable */
-    login: null | string;
-    /** ⚠️ Low confidence about: nullable */
-    displayName: null | string;
-    /**
-     * ⚠️ Low confidence about: nullable
-     * @format uri
-     * @gqlArg `width: Int [50]`
-     */
-    profileImageURL: null | string;
     __typename: string;
   };
 
@@ -51752,7 +51645,7 @@ export type SubBenefit = {
    */
   endsAt: string;
   /** @example ["WEB"] */
-  platform: string;
+  platform: SubscriptionBenefitPlatform;
   gift: {
     gifter: null | SubBenefit_SubscriptionGiftGifter | SubBenefit_SubscriptionGiftGifter[];
     isGift: boolean;
@@ -51760,7 +51653,7 @@ export type SubBenefit = {
   };
   interval: {
     /** @example ["MONTH", "DAY"] */
-    unit: string;
+    unit: SubscriptionIntervalUnit;
     /**
      * @format uint32
      * @example [31]
@@ -51809,20 +51702,20 @@ export type SubEmoteFragment = {
   token: string;
   /** @example ["c23ba858-6cca-49ac-9ba1-6886e74b63b2", "408258241"] */
   setID: ID;
-  modifiers: null | SubEmoteFragment_EmoteModifiers | SubEmoteFragment_EmoteModifiers[];
+  modifiers:
+    | null
+    | (null | {
+        /** @example ["HF", "SG", "TK"] */
+        code: EmoteModifierCode;
+        /** @example ["HORIZONTAL_FLIP", "SUNGLASSES", "THINKING"] */
+        name: EmoteModifierName;
+        __typename: "EmoteModifier";
+      })[];
   /** @example ["LIMITED_TIME", "SUBSCRIPTIONS", "GLOBALS", "SMILIES", "MEGA_COMMERCE", "FOLLOWER", "TWO_FACTOR"] */
-  type: string;
+  type: EmoteType;
   /** @example ["ANIMATED", "STATIC"] */
-  assetType: string;
+  assetType: EmoteAssetType;
   __typename: "Emote";
-};
-
-/** ℹ️ Not real Twitch type name */
-export type SubEmoteFragment_EmoteModifiers = {
-  code: UnknownValue;
-  /** ⚠️ Low confidence about: nullable */
-  name: null | string;
-  __typename: string;
 };
 
 export type SubProductGiftOfferFragment = {
@@ -51831,9 +51724,9 @@ export type SubProductGiftOfferFragment = {
   /** @example ["channel_sub", "channel_sub_community_gift", "channel_sub_standard_gift", "turbo_standard_gift"] */
   tplr: string;
   /** @example ["WEB"] */
-  platform: string;
+  platform: OfferPlatform;
   /** @example ["COMMUNITY", "SINGLE_RECIPIENT"] */
-  giftType: null | string;
+  giftType: null | OfferGiftType;
   eligibility: {
     /**
      * @format date-time
@@ -51857,7 +51750,7 @@ export type SubProductGiftOfferFragment = {
           /** @example ["33d10886-ace9-466b-9060-e10013aa05a21887", "41679e35-3eaf-4acf-b861-e8941c99650f", "63967dc1-a829-453e-9425-53c0f68313723565"] */
           id: ID;
           /** @example ["EUR", "USD"] */
-          currency: string;
+          currency: PriceInfoCurrency;
           /**
            * @format int32
            * @example [2]
@@ -51896,11 +51789,11 @@ export type SubProductGiftOfferFragment = {
              */
             duration: number;
             /** @example ["MONTHS"] */
-            unit: string;
+            unit: ChargeModelPlanIntervalUnit;
             __typename: "ChargeModelPlanInterval";
           };
           /** @example ["AUTO_RENEW", "NO_RENEW"] */
-          renewalPolicy: string;
+          renewalPolicy: ChargeModelPlanRenewalPolicy;
           __typename: "ChargeModelPlan";
         };
         __typename: "InternalChargeModel";
@@ -51921,7 +51814,7 @@ export type SubProductGiftOfferFragment = {
        */
       discountPercent: number;
       /** @example ["DISCOUNT_TYPE_PERCENT"] */
-      discountType: string;
+      discountType: PromotionDisplayDiscountType;
       __typename: "PromotionDisplay";
     };
     eligibilityFilters: {
@@ -51935,7 +51828,7 @@ export type SubProductGiftOfferFragment = {
      */
     priority: number;
     /** @example ["PROMOTION_TYPE_DISCOUNT"] */
-    promoType: string;
+    promoType: OfferPromotionPromoType;
     /** @format date-time */
     endAt: null | string;
     __typename: "OfferPromotion";
@@ -51962,7 +51855,7 @@ export type SubProductOfferFragment = {
   /** @example ["channel_sub", "channel_sub_community_gift", "channel_sub_standard_gift", "turbo_standard_gift"] */
   tplr: string;
   /** @example ["WEB"] */
-  platform: string;
+  platform: OfferPlatform;
   eligibility: {
     /**
      * @format date-time
@@ -51984,7 +51877,7 @@ export type SubProductOfferFragment = {
     __typename: "OfferTagBinding";
   }[];
   /** @example ["COMMUNITY", "SINGLE_RECIPIENT"] */
-  giftType: null | string;
+  giftType: null | OfferGiftType;
   listing: {
     chargeModel: {
       internal: null | {
@@ -51992,7 +51885,7 @@ export type SubProductOfferFragment = {
           /** @example ["33d10886-ace9-466b-9060-e10013aa05a21887", "41679e35-3eaf-4acf-b861-e8941c99650f", "63967dc1-a829-453e-9425-53c0f68313723565"] */
           id: ID;
           /** @example ["EUR", "USD"] */
-          currency: string;
+          currency: PriceInfoCurrency;
           /**
            * @format int32
            * @example [2]
@@ -52031,11 +51924,11 @@ export type SubProductOfferFragment = {
              */
             duration: number;
             /** @example ["MONTHS"] */
-            unit: string;
+            unit: ChargeModelPlanIntervalUnit;
             __typename: "ChargeModelPlanInterval";
           };
           /** @example ["AUTO_RENEW", "NO_RENEW"] */
-          renewalPolicy: string;
+          renewalPolicy: ChargeModelPlanRenewalPolicy;
           __typename: "ChargeModelPlan";
         };
         __typename: "InternalChargeModel";
@@ -52056,7 +51949,7 @@ export type SubProductOfferFragment = {
        */
       discountPercent: number;
       /** @example ["DISCOUNT_TYPE_PERCENT"] */
-      discountType: string;
+      discountType: PromotionDisplayDiscountType;
       __typename: "PromotionDisplay";
     };
     eligibilityFilters: {
@@ -52070,7 +51963,7 @@ export type SubProductOfferFragment = {
      */
     priority: number;
     /** @example ["PROMOTION_TYPE_DISCOUNT"] */
-    promoType: string;
+    promoType: OfferPromotionPromoType;
     /** @format date-time */
     endAt: null | string;
     __typename: "OfferPromotion";
@@ -52103,7 +51996,7 @@ export type SubProductOfferWithPromotions = {
   /** @example ["channel_sub", "channel_sub_community_gift", "channel_sub_standard_gift", "turbo_standard_gift"] */
   tplr: string;
   /** @example ["WEB"] */
-  platform: string;
+  platform: OfferPlatform;
   eligibility: {
     /**
      * @format date-time
@@ -52125,7 +52018,7 @@ export type SubProductOfferWithPromotions = {
     __typename: "OfferTagBinding";
   }[];
   /** @example ["COMMUNITY", "SINGLE_RECIPIENT"] */
-  giftType: null | string;
+  giftType: null | OfferGiftType;
   listing: {
     chargeModel: {
       internal: null | {
@@ -52133,7 +52026,7 @@ export type SubProductOfferWithPromotions = {
           /** @example ["33d10886-ace9-466b-9060-e10013aa05a21887", "41679e35-3eaf-4acf-b861-e8941c99650f", "63967dc1-a829-453e-9425-53c0f68313723565"] */
           id: ID;
           /** @example ["EUR", "USD"] */
-          currency: string;
+          currency: PriceInfoCurrency;
           /**
            * @format int32
            * @example [2]
@@ -52172,11 +52065,11 @@ export type SubProductOfferWithPromotions = {
              */
             duration: number;
             /** @example ["MONTHS"] */
-            unit: string;
+            unit: ChargeModelPlanIntervalUnit;
             __typename: "ChargeModelPlanInterval";
           };
           /** @example ["AUTO_RENEW", "NO_RENEW"] */
-          renewalPolicy: string;
+          renewalPolicy: ChargeModelPlanRenewalPolicy;
           __typename: "ChargeModelPlan";
         };
         __typename: "InternalChargeModel";
@@ -52198,7 +52091,7 @@ export type SubProductOfferWithPromotions = {
       discountPercent: number;
       discountPrices: null | Money;
       /** @example ["DISCOUNT_TYPE_PERCENT"] */
-      discountType: string;
+      discountType: PromotionDisplayDiscountType;
       __typename: "PromotionDisplay";
     };
     eligibilityFilters: {
@@ -52212,7 +52105,7 @@ export type SubProductOfferWithPromotions = {
      */
     priority: number;
     /** @example ["PROMOTION_TYPE_DISCOUNT"] */
-    promoType: string;
+    promoType: OfferPromotionPromoType;
     /** @format date-time */
     endAt: null | string;
     __typename: "OfferPromotion";
@@ -52248,14 +52141,24 @@ export type SubProductOfferWithPromotions_OfferPromotions = {
   id: ID;
   /** ⚠️ Low confidence about: nullable */
   name: null | string;
-  promoDisplay:
-    | null
-    | SubProductOfferWithPromotions_OfferPromotionsPromoDisplay
-    | SubProductOfferWithPromotions_OfferPromotionsPromoDisplay[];
+  promoDisplay: null | {
+    /**
+     * @format int32
+     * @example [10, 15]
+     */
+    discountPercent: number;
+    discountPrices: null | Money;
+    /** @example ["DISCOUNT_TYPE_PERCENT"] */
+    discountType: PromotionDisplayDiscountType;
+    __typename: "PromotionDisplay";
+  };
   eligibilityFilters:
     | null
-    | SubProductOfferWithPromotions_OfferPromotionsEligibilityFilters
-    | SubProductOfferWithPromotions_OfferPromotionsEligibilityFilters[];
+    | (null | {
+        /** @example ["MULTIMONTH_WEB"] */
+        value: string;
+        __typename: "EligibilityFilter";
+      })[];
   priority: UnknownValue;
   promoType: UnknownValue;
   /**
@@ -52263,35 +52166,19 @@ export type SubProductOfferWithPromotions_OfferPromotions = {
    * @format date-time
    */
   endAt: null | string;
-  quantity:
-    | null
-    | SubProductOfferWithPromotions_OfferPromotionsQuantity
-    | SubProductOfferWithPromotions_OfferPromotionsQuantity[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type SubProductOfferWithPromotions_OfferPromotionsEligibilityFilters = {
-  value: UnknownValue;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type SubProductOfferWithPromotions_OfferPromotionsPromoDisplay = {
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format float
-   */
-  discountPercent: null | number;
-  discountPrices: null | Money;
-  discountType: UnknownValue;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type SubProductOfferWithPromotions_OfferPromotionsQuantity = {
-  min: UnknownValue;
-  max: UnknownValue;
+  quantity: null | {
+    /**
+     * @format int32
+     * @example [1, 5]
+     */
+    min: number;
+    /**
+     * @format int32
+     * @example [1, 200, 100, 40]
+     */
+    max: number;
+    __typename: "Range";
+  };
   __typename: string;
 };
 
@@ -52348,7 +52235,7 @@ export type SubSummary = {
     /** @example ["sumFast", "sumSmash", "sumPls", "sumMiting", "sumX", "sumKomrade", "sumPause"] */
     token: string;
     /** @example ["TIER_1", "TIER_2", "TIER_3"] */
-    subscriptionTier: null | string;
+    subscriptionTier: null | EmoteSubscriptionTier;
     __typename: "Emote";
   }[];
   /**
@@ -52357,7 +52244,7 @@ export type SubSummary = {
    */
   url: string;
   /** @example ["TIER_1", "TIER_3", "TIER_2"] */
-  tier: string;
+  tier: EmoteSubscriptionTier;
   modifiers:
     | null
     | {
@@ -52395,7 +52282,7 @@ export type SubTokenOffer = {
          */
         amount: number;
         /** @example ["SUB_TOKEN", "PRIME_TOKEN"] */
-        creditType: string;
+        creditType: CreditChargeModelCreditType;
         __typename: "CreditChargeModel";
       };
       __typename: "ChargeModel";
@@ -52446,32 +52333,26 @@ export type SubmitExternalContent_SubmitSocialSharingBadgeExternalContentError =
 };
 
 /** ℹ️ Not real Twitch type name */
+export type SubmitSponsorshipAffiliateCode_CampaignInstanceSelf = {
+  /** ⚠️ Low confidence about: nullable */
+  affiliateCode: null | string;
+  __typename: string;
+};
+
+/** ℹ️ Not real Twitch type name */
 export type SubmitSponsorshipAffiliateCode_SubmitSponsorshipAffiliateCode = {
-  campaignInstance:
-    | null
-    | SubmitSponsorshipAffiliateCode_SubmitSponsorshipAffiliateCodeCampaignInstance
-    | SubmitSponsorshipAffiliateCode_SubmitSponsorshipAffiliateCodeCampaignInstance[];
+  campaignInstance: null | {
+    id: ID;
+    self:
+      | null
+      | SubmitSponsorshipAffiliateCode_CampaignInstanceSelf
+      | SubmitSponsorshipAffiliateCode_CampaignInstanceSelf[];
+    __typename: "CampaignInstance";
+  };
   error:
     | null
     | SubmitSponsorshipAffiliateCode_SubmitSponsorshipAffiliateCodeError
     | SubmitSponsorshipAffiliateCode_SubmitSponsorshipAffiliateCodeError[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type SubmitSponsorshipAffiliateCode_SubmitSponsorshipAffiliateCodeCampaignInstance = {
-  id: ID;
-  self:
-    | null
-    | SubmitSponsorshipAffiliateCode_SubmitSponsorshipAffiliateCodeCampaignInstanceSelf
-    | SubmitSponsorshipAffiliateCode_SubmitSponsorshipAffiliateCodeCampaignInstanceSelf[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type SubmitSponsorshipAffiliateCode_SubmitSponsorshipAffiliateCodeCampaignInstanceSelf = {
-  /** ⚠️ Low confidence about: nullable */
-  affiliateCode: null | string;
   __typename: string;
 };
 
@@ -52670,7 +52551,7 @@ export type SubscriptionBenefit = {
   /** ⚠️ Low confidence about: nullable */
   isWithdrawable: null | boolean;
   /** @example ["WEB"] */
-  platform: string;
+  platform: SubscriptionBenefitPlatform;
   isFreeTrial: boolean;
   /** ⚠️ Low confidence about: nullable */
   isTurboFreeTrial: null | boolean;
@@ -52722,6 +52603,15 @@ export type SubscriptionBenefit = {
 };
 
 /** ℹ️ Not real Twitch type name */
+export type SubscriptionBenefitPlatform = "WEB";
+
+/** ℹ️ Not real Twitch type name */
+export type SubscriptionBenefit_ChannelCreatorBadgeFlair = {
+  setting: UnknownValue;
+  __typename: string;
+};
+
+/** ℹ️ Not real Twitch type name */
 export type SubscriptionBenefit_SubscriptionBenefitStates = {
   state: UnknownValue;
   /**
@@ -52739,10 +52629,14 @@ export type SubscriptionBenefit_SubscriptionBenefitUser = {
   displayName: null | string;
   /** ⚠️ Low confidence about: nullable */
   login: null | string;
-  stream:
-    | null
-    | SubscriptionBenefit_SubscriptionBenefitUserStream
-    | SubscriptionBenefit_SubscriptionBenefitUserStream[];
+  stream: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["316180784725"]
+     */
+    id: ID;
+    __typename: "Stream";
+  };
   /** ⚠️ Low confidence about: nullable */
   primaryColorHex: null | string;
   /**
@@ -52757,10 +52651,18 @@ export type SubscriptionBenefit_SubscriptionBenefitUser = {
    */
   profileImageURL: null | string;
   broadcastBadges: null | Badge;
-  channel:
-    | null
-    | SubscriptionBenefit_SubscriptionBenefitUserChannel
-    | SubscriptionBenefit_SubscriptionBenefitUserChannel[];
+  channel: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["26490481"]
+     */
+    id: ID;
+    creatorBadgeFlair:
+      | null
+      | SubscriptionBenefit_ChannelCreatorBadgeFlair
+      | SubscriptionBenefit_ChannelCreatorBadgeFlair[];
+    __typename: "Channel";
+  };
   self:
     | null
     | SubscriptionBenefit_SubscriptionBenefitUserSelf
@@ -52773,22 +52675,6 @@ export type SubscriptionBenefit_SubscriptionBenefitUser = {
     | null
     | SubscriptionBenefit_SubscriptionBenefitUserRoles
     | SubscriptionBenefit_SubscriptionBenefitUserRoles[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type SubscriptionBenefit_SubscriptionBenefitUserChannel = {
-  id: ID;
-  creatorBadgeFlair:
-    | null
-    | SubscriptionBenefit_SubscriptionBenefitUserChannelCreatorBadgeFlair
-    | SubscriptionBenefit_SubscriptionBenefitUserChannelCreatorBadgeFlair[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type SubscriptionBenefit_SubscriptionBenefitUserChannelCreatorBadgeFlair = {
-  setting: UnknownValue;
   __typename: string;
 };
 
@@ -52812,12 +52698,6 @@ export type SubscriptionBenefit_SubscriptionBenefitUserSelf = {
 };
 
 /** ℹ️ Not real Twitch type name */
-export type SubscriptionBenefit_SubscriptionBenefitUserStream = {
-  id: ID;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
 export type SubscriptionBenefit_SubscriptionBenefitUserSubscriptionProducts = {
   id: ID;
   tier: UnknownValue;
@@ -52827,16 +52707,13 @@ export type SubscriptionBenefit_SubscriptionBenefitUserSubscriptionProducts = {
     | SubscriptionBenefit_SubscriptionBenefitUserSubscriptionProductsEmotes[];
   emoteModifiers:
     | null
-    | SubscriptionBenefit_SubscriptionBenefitUserSubscriptionProductsEmoteModifiers
-    | SubscriptionBenefit_SubscriptionBenefitUserSubscriptionProductsEmoteModifiers[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type SubscriptionBenefit_SubscriptionBenefitUserSubscriptionProductsEmoteModifiers = {
-  code: UnknownValue;
-  /** ⚠️ Low confidence about: nullable */
-  name: null | string;
+    | (null | {
+        /** @example ["HF", "SG", "TK"] */
+        code: EmoteModifierCode;
+        /** @example ["HORIZONTAL_FLIP", "SUNGLASSES", "THINKING"] */
+        name: EmoteModifierName;
+        __typename: "EmoteModifier";
+      })[];
   __typename: string;
 };
 
@@ -52860,7 +52737,7 @@ export type SubscriptionBenefit_SubscriptionGiftGifter = {
 
 export type SubscriptionCountsInput = {
   /** @example ["TIER"] */
-  aggregationType: string;
+  aggregationType: SubscriptionCountsInputAggregationType;
   /**
    * @pattern ^[0-9]+$
    * @example ["23161357"]
@@ -52878,18 +52755,24 @@ export type SubscriptionCountsInput = {
   startTime: string;
 };
 
+/** ℹ️ Not real Twitch type name */
+export type SubscriptionCountsInputAggregationType = "COUNTRY" | "TIER";
+
+/** ℹ️ Not real Twitch type name */
+export type SubscriptionIntervalUnit = "DAY" | "MONTH";
+
 export type SubscriptionOfferFields = {
   /** @example ["amzn1.twitch.commerce.offer.98232214-5c3d-4da1-a9b3-c3333fb3483d", "amzn1.twitch.commerce.offer.3dedec40-a018-4790-0b9f-0f22ec580202"] */
   id: ID;
   /** @example ["WEB"] */
-  platform: string;
+  platform: OfferPlatform;
   /** @format date-time */
   endAt: null | string;
   eligibility: {
     isEligible: boolean;
     reasonCode: null | string;
     /** @example ["DEFAULT_PURCHASE"] */
-    purchaseType: string;
+    purchaseType: OfferEligibilityPurchaseType;
     promotionInstance:
       | null
       | SubscriptionOfferFields_OfferEligibilityPromotionInstance
@@ -52905,7 +52788,7 @@ export type SubscriptionOfferFields = {
           /** @example ["33d10886-ace9-466b-9060-e10013aa05a21887", "41679e35-3eaf-4acf-b861-e8941c99650f", "63967dc1-a829-453e-9425-53c0f68313723565"] */
           id: ID;
           /** @example ["EUR", "USD"] */
-          currency: string;
+          currency: PriceInfoCurrency;
           /**
            * @format int32
            * @example [2]
@@ -52922,10 +52805,24 @@ export type SubscriptionOfferFields = {
                  * @format uint32
                  */
                 total: null | number;
-                discount:
-                  | null
-                  | SubscriptionOfferFields_FixedPricingDiscount
-                  | SubscriptionOfferFields_FixedPricingDiscount[];
+                discount: null | {
+                  /**
+                   * @format int32
+                   * @example [1887, 3565, 942, 1780, 8920]
+                   */
+                  price: number;
+                  /**
+                   * @format int32
+                   * @example [0]
+                   */
+                  tax: number;
+                  /**
+                   * @format uint32
+                   * @example [1887, 3565, 942, 1780, 8920]
+                   */
+                  total: number;
+                  __typename: "DiscountBreakdown";
+                };
                 __typename: "FixedPricing";
               }
             | {
@@ -52947,18 +52844,18 @@ export type SubscriptionOfferFields = {
              */
             duration: number;
             /** @example ["MONTHS"] */
-            unit: string;
+            unit: ChargeModelPlanIntervalUnit;
             __typename: "ChargeModelPlanInterval";
           };
           /** @example ["AUTO_RENEW", "NO_RENEW"] */
-          renewalPolicy: string;
+          renewalPolicy: ChargeModelPlanRenewalPolicy;
           __typename: "ChargeModelPlan";
         };
         __typename: "InternalChargeModel";
       };
       credit: null | {
         /** @example ["SUB_TOKEN", "PRIME_TOKEN"] */
-        creditType: string;
+        creditType: CreditChargeModelCreditType;
         __typename: "CreditChargeModel";
       };
       external:
@@ -52977,7 +52874,7 @@ export type SubscriptionOfferFields = {
     /** @format date-time */
     endAt: null | string;
     /** @example ["PROMOTION_TYPE_DISCOUNT"] */
-    promoType: string;
+    promoType: OfferPromotionPromoType;
     googlePromotionReference: UnknownValue;
     promoDisplay: {
       /**
@@ -52986,7 +52883,7 @@ export type SubscriptionOfferFields = {
        */
       discountPercent: number;
       /** @example ["DISCOUNT_TYPE_PERCENT"] */
-      discountType: string;
+      discountType: PromotionDisplayDiscountType;
       __typename: "PromotionDisplay";
     };
     eligibilityFilters: {
@@ -53033,18 +52930,6 @@ export type SubscriptionOfferFields_ChargeModelExternal = {
 /** ℹ️ Not real Twitch type name */
 export type SubscriptionOfferFields_ChargeModelExternalSelf = {
   checkoutSKU: UnknownValue;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type SubscriptionOfferFields_FixedPricingDiscount = {
-  price: UnknownValue;
-  tax: UnknownValue;
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format uint32
-   */
-  total: null | number;
   __typename: string;
 };
 
@@ -53097,13 +52982,13 @@ export type SubscriptionPrimeProduct = {
    */
   tier: string;
   /** @example ["CHANSUB"] */
-  type: string;
+  type: SubscriptionProductType;
   hasAdFree: boolean;
   emotes: SubscriptionProductEmote[];
   emoteModifiers: null | SubscriptionProductEmoteModifier[];
   interval: {
     /** @example ["MONTH", "DAY"] */
-    unit: string;
+    unit: SubscriptionIntervalUnit;
     __typename: "SubscriptionInterval";
   };
   self: null | {
@@ -53143,14 +53028,14 @@ export type SubscriptionProduct = {
    */
   tier: string;
   /** @example ["CHANSUB"] */
-  type: string;
+  type: SubscriptionProductType;
   hasAdFree: boolean;
   hasGifs: boolean;
   emotes: SubscriptionProductEmote[];
   emoteModifiers: null | SubscriptionProductEmoteModifier[];
   interval: {
     /** @example ["MONTH", "DAY"] */
-    unit: string;
+    unit: SubscriptionIntervalUnit;
     __typename: "SubscriptionInterval";
   };
   self: null | {
@@ -53170,17 +53055,20 @@ export type SubscriptionProductEmote = {
   /** @example ["sumFast", "sumSmash", "sumPls", "sumMiting", "sumX", "sumKomrade", "sumPause"] */
   token: string;
   /** @example ["ANIMATED", "STATIC"] */
-  assetType: string;
+  assetType: EmoteAssetType;
   __typename: "Emote";
 };
 
 export type SubscriptionProductEmoteModifier = {
   /** @example ["HF", "SG", "TK"] */
-  code: string;
+  code: EmoteModifierCode;
   /** @example ["HORIZONTAL_FLIP", "SUNGLASSES", "THINKING"] */
-  name: string;
+  name: EmoteModifierName;
   __typename: "EmoteModifier";
 };
+
+/** ℹ️ Not real Twitch type name */
+export type SubscriptionProductType = "CHANSUB" | "TEAMSUB" | "TURBO";
 
 export type SubscriptionsManagementExpiredSubscriptionProduct = {
   /**
@@ -53262,7 +53150,7 @@ export type SubscriptionsManagementSubscriptionProduct = {
   hasSubonlyVideoArchive: null | boolean;
   interval: {
     /** @example ["MONTH", "DAY"] */
-    unit: string;
+    unit: SubscriptionIntervalUnit;
     __typename: "SubscriptionInterval";
   };
   emotes: {
@@ -53278,33 +53166,20 @@ export type SubscriptionsManagementSubscriptionProduct = {
 
 /** ℹ️ Not real Twitch type name */
 export type SunlightBanEvasionDetectionSettingsUpdateSettings_UpdateBanEvasionDetectionSettings = {
-  settings:
-    | null
-    | SunlightBanEvasionDetectionSettingsUpdateSettings_UpdateBanEvasionDetectionSettingsSettings
-    | SunlightBanEvasionDetectionSettingsUpdateSettings_UpdateBanEvasionDetectionSettingsSettings[];
-  error:
-    | null
-    | SunlightBanEvasionDetectionSettingsUpdateSettings_UpdateBanEvasionDetectionSettingsError
-    | SunlightBanEvasionDetectionSettingsUpdateSettings_UpdateBanEvasionDetectionSettingsError[];
+  settings: null | {
+    isEnabled: boolean;
+    /** @example ["ACTIVE_MONITORING"] */
+    possibleTreatment: BanEvasionDetectionSettingsPossibleTreatment;
+    /** @example ["RESTRICTED"] */
+    likelyTreatment: BanEvasionDetectionSettingsLikelyTreatment;
+    __typename: "BanEvasionDetectionSettings";
+  };
+  error: null | {
+    code: UnknownValue;
+    __typename: "BanEvasionDetectionSettingsError";
+  };
   __typename: string;
 };
-
-/** ℹ️ Not real Twitch type name */
-export type SunlightBanEvasionDetectionSettingsUpdateSettings_UpdateBanEvasionDetectionSettingsError =
-  {
-    code: UnknownValue;
-    __typename: string;
-  };
-
-/** ℹ️ Not real Twitch type name */
-export type SunlightBanEvasionDetectionSettingsUpdateSettings_UpdateBanEvasionDetectionSettingsSettings =
-  {
-    /** ⚠️ Low confidence about: nullable */
-    isEnabled: null | boolean;
-    possibleTreatment: UnknownValue;
-    likelyTreatment: UnknownValue;
-    __typename: string;
-  };
 
 /** ℹ️ Not real Twitch type name */
 export type SupportChatRecentSession_RecentSupportChatSession = {
@@ -53330,28 +53205,17 @@ export type SupportChatRecentSession_RecentSupportChatSessionMessages = {
 
 /** ℹ️ Not real Twitch type name */
 export type SupportPanelChannelTopEmotes_ChannelRecap = {
-  emoteUsage:
-    | null
-    | SupportPanelChannelTopEmotes_ChannelRecapEmoteUsage
-    | SupportPanelChannelTopEmotes_ChannelRecapEmoteUsage[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type SupportPanelChannelTopEmotes_ChannelRecapEmoteUsage = {
-  emote:
-    | null
-    | SupportPanelChannelTopEmotes_ChannelRecapEmoteUsageEmote
-    | SupportPanelChannelTopEmotes_ChannelRecapEmoteUsageEmote[];
-  totalUsage: UnknownValue;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type SupportPanelChannelTopEmotes_ChannelRecapEmoteUsageEmote = {
-  id: ID;
-  /** ⚠️ Low confidence about: nullable */
-  token: null | string;
+  emoteUsage: null | {
+    emote: null | {
+      /** @example ["emotesv2_42ba00f9d5e24c4ca189d642b9e0b0c9", "emotesv2_845e6a3e8a0a40d0afc90081defa16c1"] */
+      id: ID;
+      /** @example ["sumFast", "sumSmash", "sumPls", "sumMiting", "sumX", "sumKomrade", "sumPause"] */
+      token: string;
+      __typename: "Emote";
+    };
+    totalUsage: UnknownValue;
+    __typename: "EmoteUsage";
+  };
   __typename: string;
 };
 
@@ -53566,6 +53430,9 @@ export type TagFragment = {
   __typename: "Tag";
 };
 
+/** ℹ️ Not real Twitch type name */
+export type TagScope = "CATEGORY";
+
 export type TagType = "CONTENT";
 
 /** ℹ️ Not real Twitch type name */
@@ -53641,6 +53508,12 @@ export type TaxFormsCurrentUser_UserPayoutInviteWorkflowTaxFormOptions = {
   value: UnknownValue;
   __typename: string;
 };
+
+/** ℹ️ Not real Twitch type name */
+export type TaxIntentState = "NOT_STARTED";
+
+/** ℹ️ Not real Twitch type name */
+export type TaxIntentType = "CADPR" | "DAC7" | "ROYALTY" | "SERVICE" | "UNKNOWN";
 
 /** ℹ️ Not real Twitch type name */
 export type TaxIntents_TaxIntentForm = {
@@ -53902,21 +53775,19 @@ export type TeamLandingMemberList_TeamLiveMembersEdgesNode = {
    * @gqlArg `width: Int [50]`
    */
   profileImageURL: null | string;
-  stream:
-    | null
-    | TeamLandingMemberList_TeamLiveMembersEdgesNodeStream
-    | TeamLandingMemberList_TeamLiveMembersEdgesNodeStream[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type TeamLandingMemberList_TeamLiveMembersEdgesNodeStream = {
-  id: ID;
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format uint32
-   */
-  viewersCount: null | number;
+  stream: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["316180784725"]
+     */
+    id: ID;
+    /**
+     * @format uint32
+     * @example [0, 129, 131, 322, 29438, 11854]
+     */
+    viewersCount: number;
+    __typename: "Stream";
+  };
   __typename: string;
 };
 
@@ -54276,25 +54147,23 @@ export type TeamsDashboardCsvExportMetrics_TeamCreatorTimeseriesMetricsUniqueCha
 
 /** ℹ️ Not real Twitch type name */
 export type TeamsDashboardDeleteTeamInvitation_DeleteTeamInvitation = {
-  team:
-    | null
-    | TeamsDashboardDeleteTeamInvitation_DeleteTeamInvitationTeam
-    | TeamsDashboardDeleteTeamInvitation_DeleteTeamInvitationTeam[];
+  team: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["2351"]
+     */
+    id: ID;
+    invitedUsers:
+      | null
+      | TeamsDashboardDeleteTeamInvitation_TeamInvitedUsers
+      | TeamsDashboardDeleteTeamInvitation_TeamInvitedUsers[];
+    __typename: "Team";
+  };
   __typename: string;
 };
 
 /** ℹ️ Not real Twitch type name */
-export type TeamsDashboardDeleteTeamInvitation_DeleteTeamInvitationTeam = {
-  id: ID;
-  invitedUsers:
-    | null
-    | TeamsDashboardDeleteTeamInvitation_DeleteTeamInvitationTeamInvitedUsers
-    | TeamsDashboardDeleteTeamInvitation_DeleteTeamInvitationTeamInvitedUsers[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type TeamsDashboardDeleteTeamInvitation_DeleteTeamInvitationTeamInvitedUsers = {
+export type TeamsDashboardDeleteTeamInvitation_TeamInvitedUsers = {
   pageInfo: null | {
     hasNextPage: boolean;
     __typename: "PageInfo";
@@ -54304,15 +54173,15 @@ export type TeamsDashboardDeleteTeamInvitation_DeleteTeamInvitationTeamInvitedUs
     cursor: null | Cursor;
     node:
       | null
-      | TeamsDashboardDeleteTeamInvitation_DeleteTeamInvitationTeamInvitedUsersEdgesNode
-      | TeamsDashboardDeleteTeamInvitation_DeleteTeamInvitationTeamInvitedUsersEdgesNode[];
+      | TeamsDashboardDeleteTeamInvitation_TeamInvitedUsersEdgesNode
+      | TeamsDashboardDeleteTeamInvitation_TeamInvitedUsersEdgesNode[];
     __typename: string;
   }[];
   __typename: string;
 };
 
 /** ℹ️ Not real Twitch type name */
-export type TeamsDashboardDeleteTeamInvitation_DeleteTeamInvitationTeamInvitedUsersEdgesNode = {
+export type TeamsDashboardDeleteTeamInvitation_TeamInvitedUsersEdgesNode = {
   id: ID;
   /** ⚠️ Low confidence about: nullable */
   login: null | string;
@@ -54364,10 +54233,18 @@ export type TeamsDashboardInviteUserToTeam_InviteUserToTeam = {
     | null
     | TeamsDashboardInviteUserToTeam_InviteUserToTeamError
     | TeamsDashboardInviteUserToTeam_InviteUserToTeamError[];
-  team:
-    | null
-    | TeamsDashboardInviteUserToTeam_InviteUserToTeamTeam
-    | TeamsDashboardInviteUserToTeam_InviteUserToTeamTeam[];
+  team: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["2351"]
+     */
+    id: ID;
+    invitedUsers:
+      | null
+      | TeamsDashboardInviteUserToTeam_TeamInvitedUsers
+      | TeamsDashboardInviteUserToTeam_TeamInvitedUsers[];
+    __typename: "Team";
+  };
   __typename: string;
 };
 
@@ -54378,17 +54255,7 @@ export type TeamsDashboardInviteUserToTeam_InviteUserToTeamError = {
 };
 
 /** ℹ️ Not real Twitch type name */
-export type TeamsDashboardInviteUserToTeam_InviteUserToTeamTeam = {
-  id: ID;
-  invitedUsers:
-    | null
-    | TeamsDashboardInviteUserToTeam_InviteUserToTeamTeamInvitedUsers
-    | TeamsDashboardInviteUserToTeam_InviteUserToTeamTeamInvitedUsers[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type TeamsDashboardInviteUserToTeam_InviteUserToTeamTeamInvitedUsers = {
+export type TeamsDashboardInviteUserToTeam_TeamInvitedUsers = {
   pageInfo: null | {
     hasNextPage: boolean;
     __typename: "PageInfo";
@@ -54398,15 +54265,15 @@ export type TeamsDashboardInviteUserToTeam_InviteUserToTeamTeamInvitedUsers = {
     cursor: null | Cursor;
     node:
       | null
-      | TeamsDashboardInviteUserToTeam_InviteUserToTeamTeamInvitedUsersEdgesNode
-      | TeamsDashboardInviteUserToTeam_InviteUserToTeamTeamInvitedUsersEdgesNode[];
+      | TeamsDashboardInviteUserToTeam_TeamInvitedUsersEdgesNode
+      | TeamsDashboardInviteUserToTeam_TeamInvitedUsersEdgesNode[];
     __typename: string;
   }[];
   __typename: string;
 };
 
 /** ℹ️ Not real Twitch type name */
-export type TeamsDashboardInviteUserToTeam_InviteUserToTeamTeamInvitedUsersEdgesNode = {
+export type TeamsDashboardInviteUserToTeam_TeamInvitedUsersEdgesNode = {
   id: ID;
   /** ⚠️ Low confidence about: nullable */
   login: null | string;
@@ -54516,25 +54383,23 @@ export type TeamsDashboardMinutesWatched_TeamCreatorTimeseriesMetricsMinutesWatc
 
 /** ℹ️ Not real Twitch type name */
 export type TeamsDashboardRemoveTeamMember_RemoveUserFromTeam = {
-  team:
-    | null
-    | TeamsDashboardRemoveTeamMember_RemoveUserFromTeamTeam
-    | TeamsDashboardRemoveTeamMember_RemoveUserFromTeamTeam[];
+  team: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["2351"]
+     */
+    id: ID;
+    members:
+      | null
+      | TeamsDashboardRemoveTeamMember_TeamMembers
+      | TeamsDashboardRemoveTeamMember_TeamMembers[];
+    __typename: "Team";
+  };
   __typename: string;
 };
 
 /** ℹ️ Not real Twitch type name */
-export type TeamsDashboardRemoveTeamMember_RemoveUserFromTeamTeam = {
-  id: ID;
-  members:
-    | null
-    | TeamsDashboardRemoveTeamMember_RemoveUserFromTeamTeamMembers
-    | TeamsDashboardRemoveTeamMember_RemoveUserFromTeamTeamMembers[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type TeamsDashboardRemoveTeamMember_RemoveUserFromTeamTeamMembers = {
+export type TeamsDashboardRemoveTeamMember_TeamMembers = {
   pageInfo: null | {
     hasNextPage: boolean;
     __typename: "PageInfo";
@@ -54544,15 +54409,15 @@ export type TeamsDashboardRemoveTeamMember_RemoveUserFromTeamTeamMembers = {
     cursor: null | Cursor;
     node:
       | null
-      | TeamsDashboardRemoveTeamMember_RemoveUserFromTeamTeamMembersEdgesNode
-      | TeamsDashboardRemoveTeamMember_RemoveUserFromTeamTeamMembersEdgesNode[];
+      | TeamsDashboardRemoveTeamMember_TeamMembersEdgesNode
+      | TeamsDashboardRemoveTeamMember_TeamMembersEdgesNode[];
     __typename: string;
   }[];
   __typename: string;
 };
 
 /** ℹ️ Not real Twitch type name */
-export type TeamsDashboardRemoveTeamMember_RemoveUserFromTeamTeamMembersEdgesNode = {
+export type TeamsDashboardRemoveTeamMember_TeamMembersEdgesNode = {
   id: ID;
   /** ⚠️ Low confidence about: nullable */
   login: null | string;
@@ -54561,30 +54426,9 @@ export type TeamsDashboardRemoveTeamMember_RemoveUserFromTeamTeamMembersEdgesNod
   /**
    * ⚠️ Low confidence about: nullable
    * @format uri
-   * @gqlArg `width: Int [70]`
+   * @gqlArg `width: Int [50, 70]`
    */
   profileImageURL: null | string;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type TeamsDashboardRoot_UserOwnedTeams = {
-  id: ID;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type TeamsDashboardRoot_UserTeamMemberships = {
-  team:
-    | null
-    | TeamsDashboardRoot_UserTeamMembershipsTeam
-    | TeamsDashboardRoot_UserTeamMembershipsTeam[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type TeamsDashboardRoot_UserTeamMembershipsTeam = {
-  id: ID;
   __typename: string;
 };
 
@@ -54840,66 +54684,41 @@ export type TeamsDashboardUniqueChatters_TeamCreatorTimeseriesMetricsUniqueChatt
 
 /** ℹ️ Not real Twitch type name */
 export type TeamsDashboardUpdateTeam_UpdateTeam = {
-  team: null | TeamsDashboardUpdateTeam_UpdateTeamTeam | TeamsDashboardUpdateTeam_UpdateTeamTeam[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type TeamsDashboardUpdateTeam_UpdateTeamTeam = {
-  id: ID;
-  /** ⚠️ Low confidence about: nullable */
-  name: null | string;
-  /** ⚠️ Low confidence about: nullable */
-  displayName: null | string;
-  /** ⚠️ Low confidence about: nullable */
-  description: null | string;
-  /** ⚠️ Low confidence about: nullable */
-  logoID: null | ID;
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format uri
-   */
-  logoURL: null | string;
-  /** ⚠️ Low confidence about: nullable */
-  bannerID: null | ID;
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format uri
-   */
-  bannerURL: null | string;
-  /** ⚠️ Low confidence about: nullable */
-  backgroundImageID: null | ID;
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format uri
-   */
-  backgroundImageURL: null | string;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type TeamsDashboardVideoPlayReferrals_TeamVideoPlayReferrals = {
-  items:
-    | null
-    | TeamsDashboardVideoPlayReferrals_TeamVideoPlayReferralsItems
-    | TeamsDashboardVideoPlayReferrals_TeamVideoPlayReferralsItems[];
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format uint32
-   */
-  total: null | number;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type TeamsDashboardVideoPlayReferrals_TeamVideoPlayReferralsItems = {
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format uint32
-   */
-  count: null | number;
-  /** ⚠️ Low confidence about: nullable */
-  name: null | string;
+  team: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["2351"]
+     */
+    id: ID;
+    /** @example ["twitchcon", "ggtalentgroup", "gentlemates", "skybass", "tsm", "1gsquad", "streamdatabase"] */
+    name: string;
+    /** @example ["TwitchCon Europe 2026", "GG Talent Group", "Gentle Mates", "Team SKY BASS", "TSM", "1G SQUAD", "Stream Database"] */
+    displayName: string;
+    /** ⚠️ Low confidence about: nullable */
+    description: null | string;
+    /** ⚠️ Low confidence about: nullable */
+    logoID: null | ID;
+    /**
+     * ⚠️ Low confidence about: nullable
+     * @format uri
+     */
+    logoURL: null | string;
+    /** ⚠️ Low confidence about: nullable */
+    bannerID: null | ID;
+    /**
+     * ⚠️ Low confidence about: nullable
+     * @format uri
+     */
+    bannerURL: null | string;
+    /** ⚠️ Low confidence about: nullable */
+    backgroundImageID: null | ID;
+    /**
+     * ⚠️ Low confidence about: nullable
+     * @format uri
+     */
+    backgroundImageURL: null | string;
+    __typename: "Team";
+  };
   __typename: string;
 };
 
@@ -54931,16 +54750,14 @@ export type TeamsLandingBodyPlayerUser_TeamLiveMembersEdgesNode = {
   id: ID;
   /** ⚠️ Low confidence about: nullable */
   login: null | string;
-  stream:
-    | null
-    | TeamsLandingBodyPlayerUser_TeamLiveMembersEdgesNodeStream
-    | TeamsLandingBodyPlayerUser_TeamLiveMembersEdgesNodeStream[];
-};
-
-/** ℹ️ Not real Twitch type name */
-export type TeamsLandingBodyPlayerUser_TeamLiveMembersEdgesNodeStream = {
-  __typename: string;
-  id: ID;
+  stream: null | {
+    __typename: "Stream";
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["316180784725"]
+     */
+    id: ID;
+  };
 };
 
 /** ℹ️ Not real Twitch type name */
@@ -54997,13 +54814,10 @@ export type TerminatePollInput = { pollID?: null | ID };
 
 /** ℹ️ Not real Twitch type name */
 export type TerminatePoll_TerminatePoll = {
-  poll: null | TerminatePoll_TerminatePollPoll | TerminatePoll_TerminatePollPoll[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type TerminatePoll_TerminatePollPoll = {
-  id: ID;
+  poll: null | {
+    id: ID;
+    __typename: "Poll";
+  };
   __typename: string;
 };
 
@@ -55018,6 +54832,14 @@ export type TestAlert_TestAlert = {
   error: UnknownValue;
   __typename: string;
 };
+
+/** ℹ️ Not real Twitch type name */
+export type TextTokenLocation =
+  | "CATEGORIES_DIRECTORY"
+  | "NO_LINK"
+  | "RECAP"
+  | "STREAMS_DIRECTORY"
+  | "URL";
 
 /** ℹ️ Not real Twitch type name */
 export type ThirdPartySponsorshipOffers_ThirdPartySponsorshipOffers = {
@@ -55180,7 +55002,7 @@ export type ThreadData = {
     /** @format date-time */
     lastMarkedNotSpamAt: null | string;
     /** @example ["LOW"] */
-    likelihood: string;
+    likelihood: WhisperSpamInfoLikelihood;
     __typename: "WhisperSpamInfo";
   };
   isMuted: boolean;
@@ -55256,7 +55078,7 @@ export type ThreadListItemSpamInfo = {
   /** @format date-time */
   lastMarkedNotSpamAt: null | string;
   /** @example ["LOW"] */
-  likelihood: string;
+  likelihood: WhisperSpamInfoLikelihood;
   __typename: "WhisperSpamInfo";
 };
 
@@ -55368,10 +55190,17 @@ export type ThroneAlert = {
         thirdPartyHandle: UnknownValue;
         /** ⚠️ Low confidence about: nullable */
         itemName: null | string;
-        money:
-          | null
-          | ThroneAlert_ThroneContributionPurchasedDataMoney
-          | ThroneAlert_ThroneContributionPurchasedDataMoney[];
+        money: null | {
+          /**
+           * ⚠️ Low confidence about: nullable
+           * @format uint32
+           */
+          amount: null | number;
+          /** ⚠️ Low confidence about: nullable */
+          currencyCode: null | string;
+          minorUnits: UnknownValue;
+          __typename: "Money";
+        };
         link: UnknownValue;
         __typename: "ThroneContributionPurchasedData";
       }
@@ -55384,19 +55213,6 @@ export type ThroneAlert = {
         __typename: "ThroneBadgeEarnedData";
       };
   __typename: "ActivityFeedThroneAlert";
-};
-
-/** ℹ️ Not real Twitch type name */
-export type ThroneAlert_ThroneContributionPurchasedDataMoney = {
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format uint32
-   */
-  amount: null | number;
-  /** ⚠️ Low confidence about: nullable */
-  currencyCode: null | string;
-  minorUnits: UnknownValue;
-  __typename: string;
 };
 
 /** ℹ️ Not real Twitch type name */
@@ -55434,6 +55250,9 @@ export type TicketDescription_SubscriptionProductSelfConnectionPromotion = {
   __typename: string;
 };
 
+/** ℹ️ Not real Twitch type name */
+export type TimePeriod = "MONTH" | "WEEK";
+
 export type TimeSeriesPeriod = "DAY";
 
 export type TitleToken = {
@@ -55444,7 +55263,7 @@ export type TitleToken = {
         text: string;
         hasEmphasis: boolean;
         /** @example ["STREAMS_DIRECTORY", "CATEGORIES_DIRECTORY", "NO_LINK"] */
-        location: string;
+        location: TextTokenLocation;
         /** @format uri */
         hyperlinkURL: null | string;
         __typename: "TextToken";
@@ -55508,7 +55327,7 @@ export type ToggleAutomaticReward_UpdateCommunityPointsAutomaticReward = {
     /** @example ["71092938:RANDOM_SUB_EMOTE_UNLOCK", "71092938:CHOSEN_SUB_EMOTE_UNLOCK"] */
     id: ID;
     /** @example ["RANDOM_SUB_EMOTE_UNLOCK", "CHOSEN_SUB_EMOTE_UNLOCK", "CHOSEN_MODIFIED_SUB_EMOTE_UNLOCK", "SEND_ANIMATED_MESSAGE", "SEND_GIGANTIFIED_EMOTE", "CELEBRATION", "SINGLE_MESSAGE_BYPASS_SUB_MODE", "SEND_HIGHLIGHTED_MESSAGE"] */
-    type: string;
+    type: CommunityPointsAutomaticRewardType;
     isEnabled: boolean;
     __typename: "CommunityPointsAutomaticReward";
   };
@@ -55555,7 +55374,7 @@ export type TokenizedCustomElementFragment = {
 
 export type TokenizedGroupElementFragment = {
   /** @example ["PARAGRAPHS", "BULLETS"] */
-  type: string;
+  type: TokenizedGroupElementType;
   items:
     | null
     | {
@@ -55571,6 +55390,9 @@ export type TokenizedGroupElementFragment = {
       }[];
   __typename: "TokenizedGroupElement";
 };
+
+/** ℹ️ Not real Twitch type name */
+export type TokenizedGroupElementType = "BULLETS" | "NONE" | "PARAGRAPHS";
 
 export type TokenizedLinkElementFragment = {
   nodes: null | DecoratedTokenFragment;
@@ -55670,6 +55492,46 @@ export type TrailerVideo = {
 };
 
 /** ℹ️ Not real Twitch type name */
+export type TransactionHistoryTabUserPaymentTransactions_PaymentTransactionProduct = {
+  type: UnknownValue;
+  /** ⚠️ Low confidence about: nullable */
+  name: null | string;
+  tier: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  bundleSize: null | number;
+  owner:
+    | null
+    | TransactionHistoryTabUserPaymentTransactions_PaymentTransactionProductOwner
+    | TransactionHistoryTabUserPaymentTransactions_PaymentTransactionProductOwner[];
+  __typename: string;
+};
+
+/** ℹ️ Not real Twitch type name */
+export type TransactionHistoryTabUserPaymentTransactions_PaymentTransactionProductOwner = {
+  id: ID;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uri
+   * @gqlArg `width: Int [50]`
+   */
+  profileImageURL: null | string;
+  /** ⚠️ Low confidence about: nullable */
+  login: null | string;
+  __typename: string;
+};
+
+/** ℹ️ Not real Twitch type name */
+export type TransactionHistoryTabUserPaymentTransactions_PaymentTransactionRecipient = {
+  id: ID;
+  /** ⚠️ Low confidence about: nullable */
+  login: null | string;
+  __typename: string;
+};
+
+/** ℹ️ Not real Twitch type name */
 export type TransactionHistoryTabUserPaymentTransactions_UserPaymentTransactions = {
   pageInfo: null | {
     hasNextPage: boolean;
@@ -55693,107 +55555,55 @@ export type TransactionHistoryTabUserPaymentTransactions_UserPaymentTransactions
   edges: {
     /** ⚠️ Low confidence about: nullable */
     cursor: null | Cursor;
-    node:
-      | null
-      | TransactionHistoryTabUserPaymentTransactions_UserPaymentTransactionsEdgesNode
-      | TransactionHistoryTabUserPaymentTransactions_UserPaymentTransactionsEdgesNode[];
+    node: null | {
+      id: ID;
+      /**
+       * ⚠️ Low confidence about: nullable
+       * @format date-time
+       */
+      purchasedAt: null | string;
+      /** ⚠️ Low confidence about: nullable */
+      purchaseOrderID: null | ID;
+      product:
+        | null
+        | TransactionHistoryTabUserPaymentTransactions_PaymentTransactionProduct
+        | TransactionHistoryTabUserPaymentTransactions_PaymentTransactionProduct[];
+      /**
+       * ⚠️ Low confidence about: nullable
+       * @format uint32
+       */
+      grossAmount: null | number;
+      grossAmountDivisor: UnknownValue;
+      currency: UnknownValue;
+      /**
+       * ⚠️ Low confidence about: nullable
+       * @format uint32
+       */
+      quantity: null | number;
+      /** ⚠️ Low confidence about: nullable */
+      isGift: null | boolean;
+      recipient:
+        | null
+        | TransactionHistoryTabUserPaymentTransactions_PaymentTransactionRecipient
+        | TransactionHistoryTabUserPaymentTransactions_PaymentTransactionRecipient[];
+      paymentMethod:
+        | null
+        | (null | {
+            /** @example ["XSOLLA", "GOOGLE_IAB"] */
+            provider: PaymentProvider;
+            /** @example ["UNKNOWN"] */
+            paymentType: PaymentMethodPaymentType;
+            cardType: null;
+            lastFour: null;
+            paymentScheme: null | string;
+            __typename: "PaymentMethod";
+          })[];
+      __typename: "PaymentTransaction";
+    };
     __typename: string;
   }[];
   __typename: string;
 };
-
-/** ℹ️ Not real Twitch type name */
-export type TransactionHistoryTabUserPaymentTransactions_UserPaymentTransactionsEdgesNode = {
-  id: ID;
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format date-time
-   */
-  purchasedAt: null | string;
-  /** ⚠️ Low confidence about: nullable */
-  purchaseOrderID: null | ID;
-  product:
-    | null
-    | TransactionHistoryTabUserPaymentTransactions_UserPaymentTransactionsEdgesNodeProduct
-    | TransactionHistoryTabUserPaymentTransactions_UserPaymentTransactionsEdgesNodeProduct[];
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format uint32
-   */
-  grossAmount: null | number;
-  grossAmountDivisor: UnknownValue;
-  currency: UnknownValue;
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format uint32
-   */
-  quantity: null | number;
-  /** ⚠️ Low confidence about: nullable */
-  isGift: null | boolean;
-  recipient:
-    | null
-    | TransactionHistoryTabUserPaymentTransactions_UserPaymentTransactionsEdgesNodeRecipient
-    | TransactionHistoryTabUserPaymentTransactions_UserPaymentTransactionsEdgesNodeRecipient[];
-  paymentMethod:
-    | null
-    | TransactionHistoryTabUserPaymentTransactions_UserPaymentTransactionsEdgesNodePaymentMethod
-    | TransactionHistoryTabUserPaymentTransactions_UserPaymentTransactionsEdgesNodePaymentMethod[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type TransactionHistoryTabUserPaymentTransactions_UserPaymentTransactionsEdgesNodePaymentMethod =
-  {
-    provider: UnknownValue;
-    paymentType: UnknownValue;
-    cardType: UnknownValue;
-    lastFour: UnknownValue;
-    /** ⚠️ Low confidence about: nullable */
-    paymentScheme: null | string;
-    __typename: string;
-  };
-
-/** ℹ️ Not real Twitch type name */
-export type TransactionHistoryTabUserPaymentTransactions_UserPaymentTransactionsEdgesNodeProduct = {
-  type: UnknownValue;
-  /** ⚠️ Low confidence about: nullable */
-  name: null | string;
-  tier: UnknownValue;
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format uint32
-   */
-  bundleSize: null | number;
-  owner:
-    | null
-    | TransactionHistoryTabUserPaymentTransactions_UserPaymentTransactionsEdgesNodeProductOwner
-    | TransactionHistoryTabUserPaymentTransactions_UserPaymentTransactionsEdgesNodeProductOwner[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type TransactionHistoryTabUserPaymentTransactions_UserPaymentTransactionsEdgesNodeProductOwner =
-  {
-    id: ID;
-    /**
-     * ⚠️ Low confidence about: nullable
-     * @format uri
-     * @gqlArg `width: Int [50]`
-     */
-    profileImageURL: null | string;
-    /** ⚠️ Low confidence about: nullable */
-    login: null | string;
-    __typename: string;
-  };
-
-/** ℹ️ Not real Twitch type name */
-export type TransactionHistoryTabUserPaymentTransactions_UserPaymentTransactionsEdgesNodeRecipient =
-  {
-    id: ID;
-    /** ⚠️ Low confidence about: nullable */
-    login: null | string;
-    __typename: string;
-  };
 
 export type TreasureTrainDetails = {
   /**
@@ -55855,20 +55665,14 @@ export type TurboProductInformation_SubscriptionProductSelfConnectionBenefit = {
    * @format date-time
    */
   renewsAt: null | string;
-  pendingSubscription:
-    | null
-    | TurboProductInformation_SubscriptionProductSelfConnectionBenefitPendingSubscription
-    | TurboProductInformation_SubscriptionProductSelfConnectionBenefitPendingSubscription[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type TurboProductInformation_SubscriptionProductSelfConnectionBenefitPendingSubscription = {
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format date-time
-   */
-  startsAt: null | string;
+  pendingSubscription: null | {
+    /**
+     * ⚠️ Low confidence about: nullable
+     * @format date-time
+     */
+    startsAt: null | string;
+    __typename: "PendingSubscription";
+  };
   __typename: string;
 };
 
@@ -55911,7 +55715,7 @@ export type TurboProductOfferFragment = {
           /** @example ["33d10886-ace9-466b-9060-e10013aa05a21887", "41679e35-3eaf-4acf-b861-e8941c99650f", "63967dc1-a829-453e-9425-53c0f68313723565"] */
           id: ID;
           /** @example ["EUR", "USD"] */
-          currency: string;
+          currency: PriceInfoCurrency;
           /**
            * @format int32
            * @example [2]
@@ -55950,7 +55754,7 @@ export type TurboProductOfferFragment = {
        */
       discountPercent: number;
       /** @example ["DISCOUNT_TYPE_PERCENT"] */
-      discountType: string;
+      discountType: PromotionDisplayDiscountType;
       __typename: "PromotionDisplay";
     };
     eligibilityFilters: {
@@ -55964,7 +55768,7 @@ export type TurboProductOfferFragment = {
      */
     priority: number;
     /** @example ["PROMOTION_TYPE_DISCOUNT"] */
-    promoType: string;
+    promoType: OfferPromotionPromoType;
     /** @format date-time */
     endAt: null | string;
     __typename: "OfferPromotion";
@@ -55999,22 +55803,16 @@ export type TurboSubscriptionProduct_SubscriptionProductSelfConnectionBenefit = 
    * @format date-time
    */
   renewsAt: null | string;
-  pendingSubscription:
-    | null
-    | TurboSubscriptionProduct_SubscriptionProductSelfConnectionBenefitPendingSubscription
-    | TurboSubscriptionProduct_SubscriptionProductSelfConnectionBenefitPendingSubscription[];
+  pendingSubscription: null | {
+    /**
+     * ⚠️ Low confidence about: nullable
+     * @format date-time
+     */
+    startsAt: null | string;
+    __typename: "PendingSubscription";
+  };
   /** ⚠️ Low confidence about: nullable */
   isTurboFreeTrial: null | boolean;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type TurboSubscriptionProduct_SubscriptionProductSelfConnectionBenefitPendingSubscription = {
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format date-time
-   */
-  startsAt: null | string;
   __typename: string;
 };
 
@@ -56026,16 +55824,6 @@ export type TurboSubscriptionProduct_SubscriptionProductSelfConnectionBenefitSta
    * @format date-time
    */
   createdAt: null | string;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type TurboUpsellButton_FixedPricingDiscount = {
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format uint32
-   */
-  total: null | number;
   __typename: string;
 };
 
@@ -56103,15 +55891,16 @@ export type TwoFactorAuthSettingsAccountHealth_UserSettingsTwoFactorPhoneNumber 
 
 /** ℹ️ Not real Twitch type name */
 export type UnVIPUser_RevokeVIP = {
-  channel: null | UnVIPUser_RevokeVIPChannel | UnVIPUser_RevokeVIPChannel[];
+  channel: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["26490481"]
+     */
+    id: ID;
+    __typename: "Channel";
+  };
   revokee: null | UnVIPUser_RevokeVIPRevokee | UnVIPUser_RevokeVIPRevokee[];
   error: null | UnVIPUser_RevokeVIPError | UnVIPUser_RevokeVIPError[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type UnVIPUser_RevokeVIPChannel = {
-  id: ID;
   __typename: string;
 };
 
@@ -56195,61 +55984,51 @@ export type UnbanRequestChatMessage = {
    * @format date-time
    */
   sentAt: null | string;
-  content:
-    | null
-    | UnbanRequestChatMessage_ViewerCardModLogsChatMessageContent
-    | UnbanRequestChatMessage_ViewerCardModLogsChatMessageContent[];
+  content: null | {
+    /** @example ["NODDERS  vampire server"] */
+    text: string;
+    fragments: {
+      /** @example ["NODDERS  vampire server", "Clueless"] */
+      text: string;
+      content:
+        | null
+        | {
+            /**
+             * @example ["emotesv2_42ba00f9d5e24c4ca189d642b9e0b0c9", "emotesv2_845e6a3e8a0a40d0afc90081defa16c1"]
+             * @aliasFor id
+             */
+            emoteID: ID;
+            /** @example ["c23ba858-6cca-49ac-9ba1-6886e74b63b2", "408258241"] */
+            setID: ID;
+            /** @example ["sumFast", "sumSmash", "sumPls", "sumMiting", "sumX", "sumKomrade", "sumPause"] */
+            token: string;
+            __typename: "Emote";
+          }
+        | {
+            /**
+             * ⚠️ Low confidence about: nullable
+             * @format uint32
+             */
+            bitsAmount: null | number;
+            prefix: UnknownValue;
+            tier: UnknownValue;
+            __typename: "CheermoteToken";
+          }
+        | {
+            /**
+             * @pattern ^[0-9]+$
+             * @example ["23161357"]
+             */
+            id: ID;
+            __typename: "User";
+          }
+        | { __typename: "AutoMod" }
+        | { __typename: "GifContent" };
+      __typename: "MessageFragment";
+    }[];
+    __typename: "MessageContent";
+  };
   __typename: "ViewerCardModLogsChatMessage";
-};
-
-/** ℹ️ Not real Twitch type name */
-export type UnbanRequestChatMessage_ViewerCardModLogsChatMessageContent = {
-  /** ⚠️ Low confidence about: nullable */
-  text: null | string;
-  fragments:
-    | null
-    | UnbanRequestChatMessage_ViewerCardModLogsChatMessageContentFragments
-    | UnbanRequestChatMessage_ViewerCardModLogsChatMessageContentFragments[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type UnbanRequestChatMessage_ViewerCardModLogsChatMessageContentFragments = {
-  /** ⚠️ Low confidence about: nullable */
-  text: null | string;
-  content:
-    | {
-        /**
-         * @example ["emotesv2_42ba00f9d5e24c4ca189d642b9e0b0c9", "emotesv2_845e6a3e8a0a40d0afc90081defa16c1"]
-         * @aliasFor id
-         */
-        emoteID: ID;
-        /** @example ["c23ba858-6cca-49ac-9ba1-6886e74b63b2", "408258241"] */
-        setID: ID;
-        /** @example ["sumFast", "sumSmash", "sumPls", "sumMiting", "sumX", "sumKomrade", "sumPause"] */
-        token: string;
-        __typename: "Emote";
-      }
-    | {
-        /**
-         * ⚠️ Low confidence about: nullable
-         * @format uint32
-         */
-        bitsAmount: null | number;
-        prefix: UnknownValue;
-        tier: UnknownValue;
-        __typename: "CheermoteToken";
-      }
-    | {
-        /**
-         * @pattern ^[0-9]+$
-         * @example ["23161357"]
-         */
-        id: ID;
-        __typename: "User";
-      }
-    | { __typename: "GifContent" };
-  __typename: string;
 };
 
 /** ℹ️ Not real Twitch type name */
@@ -56356,34 +56135,6 @@ export type UnbanRequestModal_UserSelfConnectionBanStatus = {
   __typename: string;
 };
 
-/** ℹ️ Not real Twitch type name */
-export type UnbanRequestPage_UnbanRequestChannel = {
-  id: ID;
-  /** ⚠️ Low confidence about: nullable */
-  name: null | string;
-  owner:
-    | null
-    | UnbanRequestPage_UnbanRequestChannelOwner
-    | UnbanRequestPage_UnbanRequestChannelOwner[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type UnbanRequestPage_UnbanRequestChannelOwner = {
-  id: ID;
-  /** ⚠️ Low confidence about: nullable */
-  login: null | string;
-  /** ⚠️ Low confidence about: nullable */
-  displayName: null | string;
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format uri
-   * @gqlArg `width: Int [50]`
-   */
-  profileImageURL: null | string;
-  __typename: string;
-};
-
 export type UnbanRequestStatus = "PENDING";
 
 /** ℹ️ Not real Twitch type name */
@@ -56461,7 +56212,7 @@ export type UnbanRequestsItemHeaderTabs_ViewerCardModLogs = {
   __typename: string;
 };
 
-export type UnbanRequestsSortOrder = "NEWEST";
+export type UnbanRequestsSortOrder = "NEWEST" | "OLDEST";
 
 /** ℹ️ Not real Twitch type name */
 export type UnblockUser_UnblockUser = {
@@ -56726,20 +56477,14 @@ export type UnlinkYoutubeConnectionStatusMutation_UnlinkYoutubeConnection = {
 
 /** ℹ️ Not real Twitch type name */
 export type UnlinkYoutubeConnectionStatusMutation_UnlinkYoutubeConnectionConnections = {
-  youtube:
-    | null
-    | UnlinkYoutubeConnectionStatusMutation_UnlinkYoutubeConnectionConnectionsYoutube
-    | UnlinkYoutubeConnectionStatusMutation_UnlinkYoutubeConnectionConnectionsYoutube[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type UnlinkYoutubeConnectionStatusMutation_UnlinkYoutubeConnectionConnectionsYoutube = {
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format uri
-   */
-  channelURL: null | string;
+  youtube: null | {
+    /**
+     * @format uri
+     * @example ["https://www.youtube.com/channel/UCJdLmyL9ch3xfRenlpY9Zbg"]
+     */
+    channelURL: string;
+    __typename: "UserYoutubeConnectionLink";
+  };
   __typename: string;
 };
 
@@ -56782,22 +56527,17 @@ export type UnlockModifiedEmote_UnlockChosenModifiedSubscriberEmoteError = {
 /** ℹ️ Not real Twitch type name */
 export type UnlockRandomSubscriberEmote_UnlockRandomSubscriberEmote = {
   balance: UnknownValue;
-  emote:
-    | null
-    | UnlockRandomSubscriberEmote_UnlockRandomSubscriberEmoteEmote
-    | UnlockRandomSubscriberEmote_UnlockRandomSubscriberEmoteEmote[];
+  emote: null | {
+    /** @example ["emotesv2_42ba00f9d5e24c4ca189d642b9e0b0c9", "emotesv2_845e6a3e8a0a40d0afc90081defa16c1"] */
+    id: ID;
+    /** @example ["sumFast", "sumSmash", "sumPls", "sumMiting", "sumX", "sumKomrade", "sumPause"] */
+    token: string;
+    __typename: "Emote";
+  };
   error:
     | null
     | UnlockRandomSubscriberEmote_UnlockRandomSubscriberEmoteError
     | UnlockRandomSubscriberEmote_UnlockRandomSubscriberEmoteError[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type UnlockRandomSubscriberEmote_UnlockRandomSubscriberEmoteEmote = {
-  id: ID;
-  /** ⚠️ Low confidence about: nullable */
-  token: null | string;
   __typename: string;
 };
 
@@ -56839,7 +56579,24 @@ export type UnmodUser_UnmodUserTarget = {
 
 /** ℹ️ Not real Twitch type name */
 export type UnpauseRaids_UnpauseRaids = {
-  user: null | UnpauseRaids_UnpauseRaidsUser | UnpauseRaids_UnpauseRaidsUser[];
+  user: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["23161357"]
+     */
+    id: ID;
+    raidSettings: null | {
+      /** ⚠️ Low confidence about: nullable */
+      isAllowingRaids: null | boolean;
+      /**
+       * ⚠️ Low confidence about: nullable
+       * @format date-time
+       */
+      pausedUntil: null | string;
+      __typename: "RaidSettings";
+    };
+    __typename: "User";
+  };
   error: null | UnpauseRaids_UnpauseRaidsError | UnpauseRaids_UnpauseRaidsError[];
   __typename: string;
 };
@@ -56847,28 +56604,6 @@ export type UnpauseRaids_UnpauseRaids = {
 /** ℹ️ Not real Twitch type name */
 export type UnpauseRaids_UnpauseRaidsError = {
   code: UnknownValue;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type UnpauseRaids_UnpauseRaidsUser = {
-  id: ID;
-  raidSettings:
-    | null
-    | UnpauseRaids_UnpauseRaidsUserRaidSettings
-    | UnpauseRaids_UnpauseRaidsUserRaidSettings[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type UnpauseRaids_UnpauseRaidsUserRaidSettings = {
-  /** ⚠️ Low confidence about: nullable */
-  isAllowingRaids: null | boolean;
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format date-time
-   */
-  pausedUntil: null | string;
   __typename: string;
 };
 
@@ -56923,16 +56658,11 @@ export type UnsubscribePage_PaymentMethodRecurringPaymentDetails = {
   renewalPrice: UnknownValue;
   renewalCurrency: UnknownValue;
   renewalPriceDivisor: UnknownValue;
-  subscriptionBenefit:
-    | null
-    | UnsubscribePage_PaymentMethodRecurringPaymentDetailsSubscriptionBenefit
-    | UnsubscribePage_PaymentMethodRecurringPaymentDetailsSubscriptionBenefit[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type UnsubscribePage_PaymentMethodRecurringPaymentDetailsSubscriptionBenefit = {
-  id: ID;
+  subscriptionBenefit: null | {
+    /** @example ["3L7hSWPX941bMubywA98e4uYNdT", "3KyHdOj3R8PmXqz66jFOU07Ia7D"] */
+    id: ID;
+    __typename: "SubscriptionBenefit";
+  };
   __typename: string;
 };
 
@@ -56964,25 +56694,35 @@ export type UnsubscribePage_SubscriptionProductSelfConnectionBenefit = {
     | null
     | UnsubscribePage_SubscriptionProductSelfConnectionBenefitStates
     | UnsubscribePage_SubscriptionProductSelfConnectionBenefitStates[];
-  interval:
-    | null
-    | UnsubscribePage_SubscriptionProductSelfConnectionBenefitInterval
-    | UnsubscribePage_SubscriptionProductSelfConnectionBenefitInterval[];
-  user:
-    | null
-    | UnsubscribePage_SubscriptionProductSelfConnectionBenefitUser
-    | UnsubscribePage_SubscriptionProductSelfConnectionBenefitUser[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type UnsubscribePage_SubscriptionProductSelfConnectionBenefitInterval = {
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format uint32
-   */
-  duration: null | number;
-  unit: UnknownValue;
+  interval: null | {
+    /**
+     * @format uint32
+     * @example [31]
+     */
+    duration: number;
+    /** @example ["MONTH", "DAY"] */
+    unit: SubscriptionIntervalUnit;
+    __typename: "SubscriptionInterval";
+  };
+  user: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["23161357"]
+     */
+    id: ID;
+    self: null | {
+      subscriptionTenure: null | {
+        /**
+         * @format uint32
+         * @example [0, 2, 1]
+         */
+        months: number;
+        __typename: "SubscriptionTenure";
+      };
+      __typename: "UserSelfConnection";
+    };
+    __typename: "User";
+  };
   __typename: string;
 };
 
@@ -56994,35 +56734,6 @@ export type UnsubscribePage_SubscriptionProductSelfConnectionBenefitStates = {
    * @format date-time
    */
   createdAt: null | string;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type UnsubscribePage_SubscriptionProductSelfConnectionBenefitUser = {
-  id: ID;
-  self:
-    | null
-    | UnsubscribePage_SubscriptionProductSelfConnectionBenefitUserSelf
-    | UnsubscribePage_SubscriptionProductSelfConnectionBenefitUserSelf[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type UnsubscribePage_SubscriptionProductSelfConnectionBenefitUserSelf = {
-  subscriptionTenure:
-    | null
-    | UnsubscribePage_SubscriptionProductSelfConnectionBenefitUserSelfSubscriptionTenure
-    | UnsubscribePage_SubscriptionProductSelfConnectionBenefitUserSelfSubscriptionTenure[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type UnsubscribePage_SubscriptionProductSelfConnectionBenefitUserSelfSubscriptionTenure = {
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format uint32
-   */
-  months: null | number;
   __typename: string;
 };
 
@@ -57104,10 +56815,18 @@ export type UpdateAlertVariationPriority_UpdateAlertVariationPriority = {
 
 /** ℹ️ Not real Twitch type name */
 export type UpdateAutoRaidSettings_UpdateAutoRaidSettings = {
-  user:
-    | null
-    | UpdateAutoRaidSettings_UpdateAutoRaidSettingsUser
-    | UpdateAutoRaidSettings_UpdateAutoRaidSettingsUser[];
+  user: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["23161357"]
+     */
+    id: ID;
+    autoRaidSettings:
+      | null
+      | UpdateAutoRaidSettings_UserAutoRaidSettings
+      | UpdateAutoRaidSettings_UserAutoRaidSettings[];
+    __typename: "User";
+  };
   error:
     | null
     | UpdateAutoRaidSettings_UpdateAutoRaidSettingsError
@@ -57122,17 +56841,7 @@ export type UpdateAutoRaidSettings_UpdateAutoRaidSettingsError = {
 };
 
 /** ℹ️ Not real Twitch type name */
-export type UpdateAutoRaidSettings_UpdateAutoRaidSettingsUser = {
-  id: ID;
-  autoRaidSettings:
-    | null
-    | UpdateAutoRaidSettings_UpdateAutoRaidSettingsUserAutoRaidSettings
-    | UpdateAutoRaidSettings_UpdateAutoRaidSettingsUserAutoRaidSettings[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type UpdateAutoRaidSettings_UpdateAutoRaidSettingsUserAutoRaidSettings = {
+export type UpdateAutoRaidSettings_UserAutoRaidSettings = {
   /** ⚠️ Low confidence about: nullable */
   isEnabled: null | boolean;
   /** ⚠️ Low confidence about: nullable */
@@ -57143,12 +56852,33 @@ export type UpdateAutoRaidSettings_UpdateAutoRaidSettingsUserAutoRaidSettings = 
 export type UpdateAutohostSettingsInput = {
   isEnabled: boolean;
   /** @example ["ORDERED"] */
-  strategy: string;
+  strategy: AutohostSettingsStrategy;
   /**
    * @pattern ^[0-9]+$
    * @example ["23161357"]
    */
   userID: ID;
+};
+
+/** ℹ️ Not real Twitch type name */
+export type UpdateAutomaticChannelPointsReward_UpdateCommunityPointsAutomaticReward = {
+  error:
+    | null
+    | UpdateAutomaticChannelPointsReward_UpdateCommunityPointsAutomaticRewardError
+    | UpdateAutomaticChannelPointsReward_UpdateCommunityPointsAutomaticRewardError[];
+  reward: null | AutomaticRewardFragment;
+  __typename: string;
+};
+
+/** ℹ️ Not real Twitch type name */
+export type UpdateAutomaticChannelPointsReward_UpdateCommunityPointsAutomaticRewardError = {
+  code: UnknownValue;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  minimumCost: null | number;
+  __typename: string;
 };
 
 /** ℹ️ Not real Twitch type name */
@@ -57159,37 +56889,26 @@ export type UpdateAutomaticRewardCost_UpdateCommunityPointsAutomaticReward = {
 
 /** ℹ️ Not real Twitch type name */
 export type UpdateBansSharingSettings_UpdateBansSharingSettings = {
-  error:
-    | null
-    | UpdateBansSharingSettings_UpdateBansSharingSettingsError
-    | UpdateBansSharingSettings_UpdateBansSharingSettingsError[];
+  error: null | {
+    code: UnknownValue;
+    __typename: "BansSharingSettingsError";
+  };
   settings: null | BansSharingSettings;
   __typename: string;
 };
 
 /** ℹ️ Not real Twitch type name */
-export type UpdateBansSharingSettings_UpdateBansSharingSettingsError = {
-  code: UnknownValue;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
 export type UpdateBitsBadgeTierNotification_UpdateBitsBadgeTierNotification = {
-  user:
-    | null
-    | UpdateBitsBadgeTierNotification_UpdateBitsBadgeTierNotificationUser
-    | UpdateBitsBadgeTierNotification_UpdateBitsBadgeTierNotificationUser[];
+  user: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["23161357"]
+     */
+    id: ID;
+    __typename: "User";
+  };
   __typename: string;
 };
-
-/** ℹ️ Not real Twitch type name */
-export type UpdateBitsBadgeTierNotification_UpdateBitsBadgeTierNotificationUser = {
-  id: ID;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type UpdateBitsBadgeTiersTiersBadgeImageURLSize = "DOUBLE" | "NORMAL" | "QUADRUPLE";
 
 /** ℹ️ Not real Twitch type name */
 export type UpdateChannelClipSettings_UpdateChannelClipsSetting = {
@@ -57255,10 +56974,51 @@ export type UpdateChannelClipSettings_UpdateChannelClipsSettingChannelClipsSetti
   isClipThatEnabled: null | boolean;
   /** ⚠️ Low confidence about: nullable */
   isClipCommentsEnabled: null | boolean;
-  commentSettings:
-    | null
-    | UpdateChannelClipSettings_UpdateChannelClipsSettingChannelClipsSettingsCommentSettings
-    | UpdateChannelClipSettings_UpdateChannelClipsSettingChannelClipsSettingsCommentSettings[];
+  commentSettings: null | {
+    /** @format uint32 */
+    followersOnlyDurationMinutes: null | number;
+    isSubscribersOnlyEnabled: boolean;
+    /** @example ["PARTIAL"] */
+    emailVerificationMode: VerificationMode;
+    /** @example ["NONE"] */
+    phoneVerificationMode: VerificationMode;
+    partialEmailVerificationConfig: {
+      shouldRestrictFirstTimeCommenters: boolean;
+      shouldRestrictBasedOnAccountAge: boolean;
+      /**
+       * @format uint32
+       * @example [10080]
+       */
+      minimumAccountAgeInMinutes: number;
+      shouldRestrictBasedOnFollowerAge: boolean;
+      /**
+       * @format uint32
+       * @example [1440]
+       */
+      minimumFollowerAgeInMinutes: number;
+      __typename: "ClipCommentPartialVerificationConfig";
+    };
+    partialPhoneVerificationConfig: null | {
+      shouldRestrictFirstTimeCommenters: boolean;
+      shouldRestrictBasedOnAccountAge: boolean;
+      /**
+       * @format uint32
+       * @example [10080]
+       */
+      minimumAccountAgeInMinutes: number;
+      shouldRestrictBasedOnFollowerAge: boolean;
+      /**
+       * @format uint32
+       * @example [1440]
+       */
+      minimumFollowerAgeInMinutes: number;
+      __typename: "ClipCommentPartialVerificationConfig";
+    };
+    isSubscriberExempt: boolean;
+    isVIPExempt: boolean;
+    isModeratorExempt: boolean;
+    __typename: "ChannelClipCommentSettings";
+  };
   __typename: string;
 };
 
@@ -57277,79 +57037,6 @@ export type UpdateChannelClipSettings_UpdateChannelClipsSettingChannelClipsSetti
      * @gqlArg `height: Int [55]`
      */
     boxArtURL: null | string;
-    __typename: string;
-  };
-
-/** ℹ️ Not real Twitch type name */
-export type UpdateChannelClipSettings_UpdateChannelClipsSettingChannelClipsSettingsCommentSettings =
-  {
-    /**
-     * ⚠️ Low confidence about: nullable
-     * @format uint32
-     */
-    followersOnlyDurationMinutes: null | number;
-    /** ⚠️ Low confidence about: nullable */
-    isSubscribersOnlyEnabled: null | boolean;
-    emailVerificationMode: UnknownValue;
-    phoneVerificationMode: UnknownValue;
-    partialEmailVerificationConfig:
-      | null
-      | UpdateChannelClipSettings_UpdateChannelClipsSettingChannelClipsSettingsCommentSettingsPartialEmailVerificationConfig
-      | UpdateChannelClipSettings_UpdateChannelClipsSettingChannelClipsSettingsCommentSettingsPartialEmailVerificationConfig[];
-    partialPhoneVerificationConfig:
-      | null
-      | UpdateChannelClipSettings_UpdateChannelClipsSettingChannelClipsSettingsCommentSettingsPartialPhoneVerificationConfig
-      | UpdateChannelClipSettings_UpdateChannelClipsSettingChannelClipsSettingsCommentSettingsPartialPhoneVerificationConfig[];
-    /** ⚠️ Low confidence about: nullable */
-    isSubscriberExempt: null | boolean;
-    /** ⚠️ Low confidence about: nullable */
-    isVIPExempt: null | boolean;
-    /** ⚠️ Low confidence about: nullable */
-    isModeratorExempt: null | boolean;
-    __typename: string;
-  };
-
-/** ℹ️ Not real Twitch type name */
-export type UpdateChannelClipSettings_UpdateChannelClipsSettingChannelClipsSettingsCommentSettingsPartialEmailVerificationConfig =
-  {
-    /** ⚠️ Low confidence about: nullable */
-    shouldRestrictFirstTimeCommenters: null | boolean;
-    /** ⚠️ Low confidence about: nullable */
-    shouldRestrictBasedOnAccountAge: null | boolean;
-    /**
-     * ⚠️ Low confidence about: nullable
-     * @format uint32
-     */
-    minimumAccountAgeInMinutes: null | number;
-    /** ⚠️ Low confidence about: nullable */
-    shouldRestrictBasedOnFollowerAge: null | boolean;
-    /**
-     * ⚠️ Low confidence about: nullable
-     * @format uint32
-     */
-    minimumFollowerAgeInMinutes: null | number;
-    __typename: string;
-  };
-
-/** ℹ️ Not real Twitch type name */
-export type UpdateChannelClipSettings_UpdateChannelClipsSettingChannelClipsSettingsCommentSettingsPartialPhoneVerificationConfig =
-  {
-    /** ⚠️ Low confidence about: nullable */
-    shouldRestrictFirstTimeCommenters: null | boolean;
-    /** ⚠️ Low confidence about: nullable */
-    shouldRestrictBasedOnAccountAge: null | boolean;
-    /**
-     * ⚠️ Low confidence about: nullable
-     * @format uint32
-     */
-    minimumAccountAgeInMinutes: null | number;
-    /** ⚠️ Low confidence about: nullable */
-    shouldRestrictBasedOnFollowerAge: null | boolean;
-    /**
-     * ⚠️ Low confidence about: nullable
-     * @format uint32
-     */
-    minimumFollowerAgeInMinutes: null | number;
     __typename: string;
   };
 
@@ -57406,30 +57093,21 @@ export type UpdateChannelPointsNameMutation_UpdateCommunityPointsChannelSettings
     | null
     | UpdateChannelPointsNameMutation_UpdateCommunityPointsChannelSettingsError
     | UpdateChannelPointsNameMutation_UpdateCommunityPointsChannelSettingsError[];
-  channel:
-    | null
-    | UpdateChannelPointsNameMutation_UpdateCommunityPointsChannelSettingsChannel
-    | UpdateChannelPointsNameMutation_UpdateCommunityPointsChannelSettingsChannel[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type UpdateChannelPointsNameMutation_UpdateCommunityPointsChannelSettingsChannel = {
-  id: ID;
-  communityPointsSettings:
-    | null
-    | UpdateChannelPointsNameMutation_UpdateCommunityPointsChannelSettingsChannelCommunityPointsSettings
-    | UpdateChannelPointsNameMutation_UpdateCommunityPointsChannelSettingsChannelCommunityPointsSettings[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type UpdateChannelPointsNameMutation_UpdateCommunityPointsChannelSettingsChannelCommunityPointsSettings =
-  {
-    /** ⚠️ Low confidence about: nullable */
-    name: null | string;
-    __typename: string;
+  channel: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["26490481"]
+     */
+    id: ID;
+    communityPointsSettings: {
+      /** @example ["PotatoCoin", "channel loot", "Points", "meow", "V Points"] */
+      name: null | string;
+      __typename: "CommunityPointsChannelSettings";
+    };
+    __typename: "Channel";
   };
+  __typename: string;
+};
 
 /** ℹ️ Not real Twitch type name */
 export type UpdateChannelPointsNameMutation_UpdateCommunityPointsChannelSettingsError = {
@@ -57514,284 +57192,169 @@ export type UpdateCharityCampaign_UpdateCharityCampaignError = {
 
 /** ℹ️ Not real Twitch type name */
 export type UpdateChatHighlightSettings_UpdateChatHighlightSettings = {
-  chatHighlightSettings:
-    | null
-    | UpdateChatHighlightSettings_UpdateChatHighlightSettingsChatHighlightSettings
-    | UpdateChatHighlightSettings_UpdateChatHighlightSettingsChatHighlightSettings[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type UpdateChatHighlightSettings_UpdateChatHighlightSettingsChatHighlightSettings = {
-  firstTimeChatters:
-    | null
-    | UpdateChatHighlightSettings_UpdateChatHighlightSettingsChatHighlightSettingsFirstTimeChatters
-    | UpdateChatHighlightSettings_UpdateChatHighlightSettingsChatHighlightSettingsFirstTimeChatters[];
-  mentions:
-    | null
-    | UpdateChatHighlightSettings_UpdateChatHighlightSettingsChatHighlightSettingsMentions
-    | UpdateChatHighlightSettings_UpdateChatHighlightSettingsChatHighlightSettingsMentions[];
-  mods:
-    | null
-    | UpdateChatHighlightSettings_UpdateChatHighlightSettingsChatHighlightSettingsMods
-    | UpdateChatHighlightSettings_UpdateChatHighlightSettingsChatHighlightSettingsMods[];
-  raiders:
-    | null
-    | UpdateChatHighlightSettings_UpdateChatHighlightSettingsChatHighlightSettingsRaiders
-    | UpdateChatHighlightSettings_UpdateChatHighlightSettingsChatHighlightSettingsRaiders[];
-  returningChatters:
-    | null
-    | UpdateChatHighlightSettings_UpdateChatHighlightSettingsChatHighlightSettingsReturningChatters
-    | UpdateChatHighlightSettings_UpdateChatHighlightSettingsChatHighlightSettingsReturningChatters[];
-  subscribers:
-    | null
-    | UpdateChatHighlightSettings_UpdateChatHighlightSettingsChatHighlightSettingsSubscribers
-    | UpdateChatHighlightSettings_UpdateChatHighlightSettingsChatHighlightSettingsSubscribers[];
-  suspiciousUsers:
-    | null
-    | UpdateChatHighlightSettings_UpdateChatHighlightSettingsChatHighlightSettingsSuspiciousUsers
-    | UpdateChatHighlightSettings_UpdateChatHighlightSettingsChatHighlightSettingsSuspiciousUsers[];
-  vips:
-    | null
-    | UpdateChatHighlightSettings_UpdateChatHighlightSettingsChatHighlightSettingsVips
-    | UpdateChatHighlightSettings_UpdateChatHighlightSettingsChatHighlightSettingsVips[];
-  /** ⚠️ Low confidence about: nullable */
-  shouldHideIcon: null | boolean;
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format date-time
-   */
-  lastSeen: null | string;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type UpdateChatHighlightSettings_UpdateChatHighlightSettingsChatHighlightSettingsFirstTimeChatters =
-  {
-    displaySetting:
-      | null
-      | UpdateChatHighlightSettings_UpdateChatHighlightSettingsChatHighlightSettingsFirstTimeChattersDisplaySetting
-      | UpdateChatHighlightSettings_UpdateChatHighlightSettingsChatHighlightSettingsFirstTimeChattersDisplaySetting[];
+  chatHighlightSettings: null | {
+    firstTimeChatters: {
+      displaySetting: {
+        /** @example ["COMPACT", "FULL"] */
+        chatHighlightDisplayMode: ChatHighlightDisplayChatHighlightDisplayMode;
+        isEnabled: boolean;
+        /**
+         * @format uint32
+         * @example [5]
+         */
+        durationMinutes: null | number;
+        __typename: "ChatHighlightDisplay";
+      };
+      /**
+       * @format date-time
+       * @example ["2022-09-01T20:00:00Z", "2023-03-14T18:00:00Z"]
+       */
+      releaseDate: string;
+      __typename: "ChatHighlightDisplaySetting";
+    };
+    mentions: {
+      displaySetting: {
+        /** @example ["COMPACT", "FULL"] */
+        chatHighlightDisplayMode: ChatHighlightDisplayChatHighlightDisplayMode;
+        isEnabled: boolean;
+        /**
+         * @format uint32
+         * @example [5]
+         */
+        durationMinutes: null | number;
+        __typename: "ChatHighlightDisplay";
+      };
+      /**
+       * @format date-time
+       * @example ["2022-09-01T20:00:00Z", "2023-03-14T18:00:00Z"]
+       */
+      releaseDate: string;
+      __typename: "ChatHighlightDisplaySetting";
+    };
+    mods: {
+      displaySetting: {
+        /** @example ["COMPACT", "FULL"] */
+        chatHighlightDisplayMode: ChatHighlightDisplayChatHighlightDisplayMode;
+        isEnabled: boolean;
+        /**
+         * @format uint32
+         * @example [5]
+         */
+        durationMinutes: null | number;
+        __typename: "ChatHighlightDisplay";
+      };
+      /**
+       * @format date-time
+       * @example ["2022-09-01T20:00:00Z", "2023-03-14T18:00:00Z"]
+       */
+      releaseDate: string;
+      __typename: "ChatHighlightDisplaySetting";
+    };
+    raiders: {
+      displaySetting: {
+        /** @example ["COMPACT", "FULL"] */
+        chatHighlightDisplayMode: ChatHighlightDisplayChatHighlightDisplayMode;
+        isEnabled: boolean;
+        /**
+         * @format uint32
+         * @example [5]
+         */
+        durationMinutes: null | number;
+        __typename: "ChatHighlightDisplay";
+      };
+      /**
+       * @format date-time
+       * @example ["2022-09-01T20:00:00Z", "2023-03-14T18:00:00Z"]
+       */
+      releaseDate: string;
+      __typename: "ChatHighlightDisplaySetting";
+    };
+    returningChatters: {
+      displaySetting: {
+        /** @example ["COMPACT", "FULL"] */
+        chatHighlightDisplayMode: ChatHighlightDisplayChatHighlightDisplayMode;
+        isEnabled: boolean;
+        /**
+         * @format uint32
+         * @example [5]
+         */
+        durationMinutes: null | number;
+        __typename: "ChatHighlightDisplay";
+      };
+      /**
+       * @format date-time
+       * @example ["2022-09-01T20:00:00Z", "2023-03-14T18:00:00Z"]
+       */
+      releaseDate: string;
+      __typename: "ChatHighlightDisplaySetting";
+    };
+    subscribers: {
+      displaySetting: {
+        /** @example ["COMPACT", "FULL"] */
+        chatHighlightDisplayMode: ChatHighlightDisplayChatHighlightDisplayMode;
+        isEnabled: boolean;
+        /**
+         * @format uint32
+         * @example [5]
+         */
+        durationMinutes: null | number;
+        __typename: "ChatHighlightDisplay";
+      };
+      /**
+       * @format date-time
+       * @example ["2022-09-01T20:00:00Z", "2023-03-14T18:00:00Z"]
+       */
+      releaseDate: string;
+      __typename: "ChatHighlightDisplaySetting";
+    };
+    suspiciousUsers: {
+      displaySetting: {
+        /** @example ["COMPACT", "FULL"] */
+        chatHighlightDisplayMode: ChatHighlightDisplayChatHighlightDisplayMode;
+        isEnabled: boolean;
+        /**
+         * @format uint32
+         * @example [5]
+         */
+        durationMinutes: null | number;
+        __typename: "ChatHighlightDisplay";
+      };
+      /**
+       * @format date-time
+       * @example ["2022-09-01T20:00:00Z", "2023-03-14T18:00:00Z"]
+       */
+      releaseDate: string;
+      __typename: "ChatHighlightDisplaySetting";
+    };
+    vips: {
+      displaySetting: {
+        /** @example ["COMPACT", "FULL"] */
+        chatHighlightDisplayMode: ChatHighlightDisplayChatHighlightDisplayMode;
+        isEnabled: boolean;
+        /**
+         * @format uint32
+         * @example [5]
+         */
+        durationMinutes: null | number;
+        __typename: "ChatHighlightDisplay";
+      };
+      /**
+       * @format date-time
+       * @example ["2022-09-01T20:00:00Z", "2023-03-14T18:00:00Z"]
+       */
+      releaseDate: string;
+      __typename: "ChatHighlightDisplaySetting";
+    };
+    shouldHideIcon: boolean;
     /**
-     * ⚠️ Low confidence about: nullable
      * @format date-time
+     * @example ["2024-08-09T22:50:23.645082115Z"]
      */
-    releaseDate: null | string;
-    __typename: string;
+    lastSeen: string;
+    __typename: "ChatHighlightSettings";
   };
-
-/** ℹ️ Not real Twitch type name */
-export type UpdateChatHighlightSettings_UpdateChatHighlightSettingsChatHighlightSettingsFirstTimeChattersDisplaySetting =
-  {
-    chatHighlightDisplayMode: UnknownValue;
-    /** ⚠️ Low confidence about: nullable */
-    isEnabled: null | boolean;
-    /**
-     * ⚠️ Low confidence about: nullable
-     * @format uint32
-     */
-    durationMinutes: null | number;
-    __typename: string;
-  };
-
-/** ℹ️ Not real Twitch type name */
-export type UpdateChatHighlightSettings_UpdateChatHighlightSettingsChatHighlightSettingsMentions = {
-  displaySetting:
-    | null
-    | UpdateChatHighlightSettings_UpdateChatHighlightSettingsChatHighlightSettingsMentionsDisplaySetting
-    | UpdateChatHighlightSettings_UpdateChatHighlightSettingsChatHighlightSettingsMentionsDisplaySetting[];
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format date-time
-   */
-  releaseDate: null | string;
   __typename: string;
 };
-
-/** ℹ️ Not real Twitch type name */
-export type UpdateChatHighlightSettings_UpdateChatHighlightSettingsChatHighlightSettingsMentionsDisplaySetting =
-  {
-    chatHighlightDisplayMode: UnknownValue;
-    /** ⚠️ Low confidence about: nullable */
-    isEnabled: null | boolean;
-    /**
-     * ⚠️ Low confidence about: nullable
-     * @format uint32
-     */
-    durationMinutes: null | number;
-    __typename: string;
-  };
-
-/** ℹ️ Not real Twitch type name */
-export type UpdateChatHighlightSettings_UpdateChatHighlightSettingsChatHighlightSettingsMods = {
-  displaySetting:
-    | null
-    | UpdateChatHighlightSettings_UpdateChatHighlightSettingsChatHighlightSettingsModsDisplaySetting
-    | UpdateChatHighlightSettings_UpdateChatHighlightSettingsChatHighlightSettingsModsDisplaySetting[];
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format date-time
-   */
-  releaseDate: null | string;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type UpdateChatHighlightSettings_UpdateChatHighlightSettingsChatHighlightSettingsModsDisplaySetting =
-  {
-    chatHighlightDisplayMode: UnknownValue;
-    /** ⚠️ Low confidence about: nullable */
-    isEnabled: null | boolean;
-    /**
-     * ⚠️ Low confidence about: nullable
-     * @format uint32
-     */
-    durationMinutes: null | number;
-    __typename: string;
-  };
-
-/** ℹ️ Not real Twitch type name */
-export type UpdateChatHighlightSettings_UpdateChatHighlightSettingsChatHighlightSettingsRaiders = {
-  displaySetting:
-    | null
-    | UpdateChatHighlightSettings_UpdateChatHighlightSettingsChatHighlightSettingsRaidersDisplaySetting
-    | UpdateChatHighlightSettings_UpdateChatHighlightSettingsChatHighlightSettingsRaidersDisplaySetting[];
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format date-time
-   */
-  releaseDate: null | string;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type UpdateChatHighlightSettings_UpdateChatHighlightSettingsChatHighlightSettingsRaidersDisplaySetting =
-  {
-    chatHighlightDisplayMode: UnknownValue;
-    /** ⚠️ Low confidence about: nullable */
-    isEnabled: null | boolean;
-    /**
-     * ⚠️ Low confidence about: nullable
-     * @format uint32
-     */
-    durationMinutes: null | number;
-    __typename: string;
-  };
-
-/** ℹ️ Not real Twitch type name */
-export type UpdateChatHighlightSettings_UpdateChatHighlightSettingsChatHighlightSettingsReturningChatters =
-  {
-    displaySetting:
-      | null
-      | UpdateChatHighlightSettings_UpdateChatHighlightSettingsChatHighlightSettingsReturningChattersDisplaySetting
-      | UpdateChatHighlightSettings_UpdateChatHighlightSettingsChatHighlightSettingsReturningChattersDisplaySetting[];
-    /**
-     * ⚠️ Low confidence about: nullable
-     * @format date-time
-     */
-    releaseDate: null | string;
-    __typename: string;
-  };
-
-/** ℹ️ Not real Twitch type name */
-export type UpdateChatHighlightSettings_UpdateChatHighlightSettingsChatHighlightSettingsReturningChattersDisplaySetting =
-  {
-    chatHighlightDisplayMode: UnknownValue;
-    /** ⚠️ Low confidence about: nullable */
-    isEnabled: null | boolean;
-    /**
-     * ⚠️ Low confidence about: nullable
-     * @format uint32
-     */
-    durationMinutes: null | number;
-    __typename: string;
-  };
-
-/** ℹ️ Not real Twitch type name */
-export type UpdateChatHighlightSettings_UpdateChatHighlightSettingsChatHighlightSettingsSubscribers =
-  {
-    displaySetting:
-      | null
-      | UpdateChatHighlightSettings_UpdateChatHighlightSettingsChatHighlightSettingsSubscribersDisplaySetting
-      | UpdateChatHighlightSettings_UpdateChatHighlightSettingsChatHighlightSettingsSubscribersDisplaySetting[];
-    /**
-     * ⚠️ Low confidence about: nullable
-     * @format date-time
-     */
-    releaseDate: null | string;
-    __typename: string;
-  };
-
-/** ℹ️ Not real Twitch type name */
-export type UpdateChatHighlightSettings_UpdateChatHighlightSettingsChatHighlightSettingsSubscribersDisplaySetting =
-  {
-    chatHighlightDisplayMode: UnknownValue;
-    /** ⚠️ Low confidence about: nullable */
-    isEnabled: null | boolean;
-    /**
-     * ⚠️ Low confidence about: nullable
-     * @format uint32
-     */
-    durationMinutes: null | number;
-    __typename: string;
-  };
-
-/** ℹ️ Not real Twitch type name */
-export type UpdateChatHighlightSettings_UpdateChatHighlightSettingsChatHighlightSettingsSuspiciousUsers =
-  {
-    displaySetting:
-      | null
-      | UpdateChatHighlightSettings_UpdateChatHighlightSettingsChatHighlightSettingsSuspiciousUsersDisplaySetting
-      | UpdateChatHighlightSettings_UpdateChatHighlightSettingsChatHighlightSettingsSuspiciousUsersDisplaySetting[];
-    /**
-     * ⚠️ Low confidence about: nullable
-     * @format date-time
-     */
-    releaseDate: null | string;
-    __typename: string;
-  };
-
-/** ℹ️ Not real Twitch type name */
-export type UpdateChatHighlightSettings_UpdateChatHighlightSettingsChatHighlightSettingsSuspiciousUsersDisplaySetting =
-  {
-    chatHighlightDisplayMode: UnknownValue;
-    /** ⚠️ Low confidence about: nullable */
-    isEnabled: null | boolean;
-    /**
-     * ⚠️ Low confidence about: nullable
-     * @format uint32
-     */
-    durationMinutes: null | number;
-    __typename: string;
-  };
-
-/** ℹ️ Not real Twitch type name */
-export type UpdateChatHighlightSettings_UpdateChatHighlightSettingsChatHighlightSettingsVips = {
-  displaySetting:
-    | null
-    | UpdateChatHighlightSettings_UpdateChatHighlightSettingsChatHighlightSettingsVipsDisplaySetting
-    | UpdateChatHighlightSettings_UpdateChatHighlightSettingsChatHighlightSettingsVipsDisplaySetting[];
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format date-time
-   */
-  releaseDate: null | string;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type UpdateChatHighlightSettings_UpdateChatHighlightSettingsChatHighlightSettingsVipsDisplaySetting =
-  {
-    chatHighlightDisplayMode: UnknownValue;
-    /** ⚠️ Low confidence about: nullable */
-    isEnabled: null | boolean;
-    /**
-     * ⚠️ Low confidence about: nullable
-     * @format uint32
-     */
-    durationMinutes: null | number;
-    __typename: string;
-  };
 
 /** ℹ️ Not real Twitch type name */
 export type UpdateChatSettings_UpdateChatSettings = {
@@ -57824,17 +57387,14 @@ export type UpdateCoPoCustomRewardStatus_UpdateCommunityPointsCustomRewardRedemp
     id: ID;
     input: UnknownValue;
     status: UnknownValue;
-    reward:
-      | null
-      | UpdateCoPoCustomRewardStatus_UpdateCommunityPointsCustomRewardRedemptionStatusRedemptionReward
-      | UpdateCoPoCustomRewardStatus_UpdateCommunityPointsCustomRewardRedemptionStatusRedemptionReward[];
-    __typename: string;
-  };
-
-/** ℹ️ Not real Twitch type name */
-export type UpdateCoPoCustomRewardStatus_UpdateCommunityPointsCustomRewardRedemptionStatusRedemptionReward =
-  {
-    id: ID;
+    reward: null | {
+      /**
+       * @format uuid
+       * @example ["1e20a97c-c84e-11f1-b89b-0a58a9feac02"]
+       */
+      id: ID;
+      __typename: "Reward";
+    };
     __typename: string;
   };
 
@@ -57876,7 +57436,7 @@ export type UpdateCommunityPointsLastViewedContentInput = {
    */
   channelID: ID;
   /** @example ["AUTOMATIC_REWARD", "CUSTOM_REWARD"] */
-  viewedContent: string[];
+  viewedContent: CommunityPointsLastViewedContentByTypeContentType[];
 };
 
 /** ℹ️ Not real Twitch type name */
@@ -57888,52 +57448,35 @@ export type UpdateCommunityPointsLastViewedContent_UpdateCommunityPointsLastView
 
 /** ℹ️ Not real Twitch type name */
 export type UpdateConsentMutation_UpdateConsent = {
-  consent:
-    | null
-    | UpdateConsentMutation_UpdateConsentConsent
-    | UpdateConsentMutation_UpdateConsentConsent[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type UpdateConsentMutation_UpdateConsentConsent = {
-  id: ID;
-  /** ⚠️ Low confidence about: nullable */
-  isDeniedUnderage: null | boolean;
-  /** ⚠️ Low confidence about: nullable */
-  privacyLawName: null | string;
-  /** ⚠️ Low confidence about: nullable */
-  shouldShowNotification: null | boolean;
-  /** ⚠️ Low confidence about: nullable */
-  shouldShowSettingsPage: null | boolean;
-  /** ⚠️ Low confidence about: nullable */
-  shouldShowDismissButton: null | boolean;
-  /** ⚠️ Low confidence about: nullable */
-  shouldSkipDmaBanner: null | boolean;
-  vendorStatus:
-    | null
-    | UpdateConsentMutation_UpdateConsentConsentVendorStatus
-    | UpdateConsentMutation_UpdateConsentConsentVendorStatus[];
-  /** @directive include(if: $includeNewCookieConsentFields) */
-  vendorConsentStatus?:
-    | null
-    | (VendorConsentStatuses & { __typename: "GDPRVendorConsent" | "ROWVendorConsent" });
-  /** @directive include(if: $includeTCData) */
-  gdprUserPreferences?: null | GdprUserPreferences;
-  /** @directive include(if: $includeTCData) */
-  dmaUserPreferences?: null | DmaUserPreferences;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type UpdateConsentMutation_UpdateConsentConsentVendorStatus = {
-  /** ⚠️ Low confidence about: nullable */
-  name: null | string;
-  consentStatus: UnknownValue;
-  /** ⚠️ Low confidence about: nullable */
-  hasUserSetConsent: null | boolean;
-  /** ⚠️ Low confidence about: nullable */
-  isVisible: null | boolean;
+  consent: null | {
+    /** @example ["3f2be35de0af758b0c606b08a4d65e39", "58802beb7dbde6fcd8f4e2ab346803c9"] */
+    id: ID;
+    isDeniedUnderage: boolean;
+    /** @example ["ROW"] */
+    privacyLawName: ConsentPrivacyLawName;
+    shouldShowNotification: boolean;
+    shouldShowSettingsPage: boolean;
+    shouldShowDismissButton: boolean;
+    shouldSkipDmaBanner: boolean;
+    vendorStatus: {
+      /** @example ["TWITCH_AMAZON", "GOOGLE_ANALYTICS_DEVELOPER_EXTENSIONS", "SALESFORCE_DMP", "AMAZON", "BRANCH", "COMSCORE", "GOOGLE", "NIELSEN"] */
+      name: VendorConsentStatusName;
+      /** @example ["GIVEN"] */
+      consentStatus: VendorConsentStatusConsentStatus;
+      hasUserSetConsent: boolean;
+      isVisible: boolean;
+      __typename: "VendorConsentStatus";
+    }[];
+    /** @directive include(if: $includeNewCookieConsentFields) */
+    vendorConsentStatus?: VendorConsentStatuses & {
+      __typename: "GDPRVendorConsent" | "ROWVendorConsent";
+    };
+    /** @directive include(if: $includeTCData) */
+    gdprUserPreferences?: null | GdprUserPreferences;
+    /** @directive include(if: $includeTCData) */
+    dmaUserPreferences?: null | DmaUserPreferences;
+    __typename: "Consent";
+  };
   __typename: string;
 };
 
@@ -57975,46 +57518,33 @@ export type UpdateCopyrightAudioDetectionOptOutStatus_UpdateChannelVODSettingsCh
 
 /** ℹ️ Not real Twitch type name */
 export type UpdateCostreamingAllowlist_UpdateCostreamingSettings = {
-  costreamingSettings:
-    | null
-    | UpdateCostreamingAllowlist_UpdateCostreamingSettingsCostreamingSettings
-    | UpdateCostreamingAllowlist_UpdateCostreamingSettingsCostreamingSettings[];
+  costreamingSettings: null | {
+    scope: UnknownValue;
+    /**
+     * ⚠️ Low confidence about: nullable
+     * @format uint32
+     */
+    costreamingAllowlistSize: null | number;
+    costreamingAllowlist: null | CostreamingAllowlistUser;
+    __typename: "CostreamingSettings";
+  };
   error: UnknownValue;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type UpdateCostreamingAllowlist_UpdateCostreamingSettingsCostreamingSettings = {
-  scope: UnknownValue;
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format uint32
-   */
-  costreamingAllowlistSize: null | number;
-  costreamingAllowlist: null | CostreamingAllowlistUser;
   __typename: string;
 };
 
 /** ℹ️ Not real Twitch type name */
 export type UpdateCostreamingSettings_UpdateCostreamingSettings = {
-  costreamingSettings:
-    | null
-    | UpdateCostreamingSettings_UpdateCostreamingSettingsCostreamingSettings
-    | UpdateCostreamingSettings_UpdateCostreamingSettingsCostreamingSettings[];
+  costreamingSettings: null | {
+    /**
+     * ⚠️ Low confidence about: nullable
+     * @format uint32
+     */
+    costreamingAllowlistSize: null | number;
+    isEnabled: boolean;
+    scope: UnknownValue;
+    __typename: "CostreamingSettings";
+  };
   error: UnknownValue;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type UpdateCostreamingSettings_UpdateCostreamingSettingsCostreamingSettings = {
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format uint32
-   */
-  costreamingAllowlistSize: null | number;
-  /** ⚠️ Low confidence about: nullable */
-  isEnabled: null | boolean;
-  scope: UnknownValue;
   __typename: string;
 };
 
@@ -58036,16 +57566,11 @@ export type UpdateCreatorChatSettingsMutation_UpdateCreatorChatSettingsError = {
 /** ℹ️ Not real Twitch type name */
 export type UpdateCreatorCoachSettings_UpdateCreatorCoachSettings = {
   error: UnknownValue;
-  settings:
-    | null
-    | UpdateCreatorCoachSettings_UpdateCreatorCoachSettingsSettings
-    | UpdateCreatorCoachSettings_UpdateCreatorCoachSettingsSettings[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type UpdateCreatorCoachSettings_UpdateCreatorCoachSettingsSettings = {
-  optState: UnknownValue;
+  settings: null | {
+    /** @example ["UNSPECIFIED"] */
+    optState: OptState;
+    __typename: "CreatorCoachSettings";
+  };
   __typename: string;
 };
 
@@ -58076,35 +57601,22 @@ export type UpdateCreatorHomeActionDataMutation_UpdateUserError = {
 
 /** ℹ️ Not real Twitch type name */
 export type UpdateCustomBannerPreference_UpdateChannelHomePreferences = {
-  channel:
-    | null
-    | UpdateCustomBannerPreference_UpdateChannelHomePreferencesChannel
-    | UpdateCustomBannerPreference_UpdateChannelHomePreferencesChannel[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type UpdateCustomBannerPreference_UpdateChannelHomePreferencesChannel = {
-  id: ID;
-  home:
-    | null
-    | UpdateCustomBannerPreference_UpdateChannelHomePreferencesChannelHome
-    | UpdateCustomBannerPreference_UpdateChannelHomePreferencesChannelHome[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type UpdateCustomBannerPreference_UpdateChannelHomePreferencesChannelHome = {
-  preferences:
-    | null
-    | UpdateCustomBannerPreference_UpdateChannelHomePreferencesChannelHomePreferences
-    | UpdateCustomBannerPreference_UpdateChannelHomePreferencesChannelHomePreferences[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type UpdateCustomBannerPreference_UpdateChannelHomePreferencesChannelHomePreferences = {
-  heroPreset: UnknownValue;
+  channel: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["26490481"]
+     */
+    id: ID;
+    home: {
+      preferences: {
+        /** @example ["PRESET_2", "PRESET_1"] */
+        heroPreset: ChannelHomePreferencesHeroPreset;
+        __typename: "ChannelHomePreferences";
+      };
+      __typename: "ChannelHome";
+    };
+    __typename: "Channel";
+  };
   __typename: string;
 };
 
@@ -58197,18 +57709,16 @@ export type UpdateDropinRequestStatus_UpdateGuestStarDropInStatusSessionHost = {
 
 /** ℹ️ Not real Twitch type name */
 export type UpdateEmailReusable_UpdateUserEmailReusable = {
-  user:
-    | null
-    | UpdateEmailReusable_UpdateUserEmailReusableUser
-    | UpdateEmailReusable_UpdateUserEmailReusableUser[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type UpdateEmailReusable_UpdateUserEmailReusableUser = {
-  id: ID;
-  /** ⚠️ Low confidence about: nullable */
-  isEmailReusable: null | boolean;
+  user: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["23161357"]
+     */
+    id: ID;
+    /** ⚠️ Low confidence about: nullable */
+    isEmailReusable: null | boolean;
+    __typename: "User";
+  };
   __typename: string;
 };
 
@@ -58261,10 +57771,31 @@ export type UpdateFollowAcccountVerificationSettings_UpdateFollowAccountVerifica
     | null
     | UpdateFollowAcccountVerificationSettings_UpdateFollowAccountVerificationSettingsError
     | UpdateFollowAcccountVerificationSettings_UpdateFollowAccountVerificationSettingsError[];
-  followAccountVerificationSettings:
-    | null
-    | UpdateFollowAcccountVerificationSettings_UpdateFollowAccountVerificationSettingsFollowAccountVerificationSettings
-    | UpdateFollowAcccountVerificationSettings_UpdateFollowAccountVerificationSettingsFollowAccountVerificationSettings[];
+  followAccountVerificationSettings: null | {
+    /** @example ["NONE"] */
+    phoneVerificationMode: VerificationMode;
+    /** @example ["NONE"] */
+    emailVerificationMode: VerificationMode;
+    partialEmailVerificationConfig: {
+      shouldRestrictBasedOnAccountAge: boolean;
+      /**
+       * @format uint32
+       * @example [10080]
+       */
+      minimumAccountAgeInMinutes: number;
+      __typename: "FollowPartialVerificationConfig";
+    };
+    partialPhoneVerificationConfig: {
+      shouldRestrictBasedOnAccountAge: boolean;
+      /**
+       * @format uint32
+       * @example [10080]
+       */
+      minimumAccountAgeInMinutes: number;
+      __typename: "FollowPartialVerificationConfig";
+    };
+    __typename: "FollowAccountVerificationSettings";
+  };
   __typename: string;
 };
 
@@ -58276,79 +57807,24 @@ export type UpdateFollowAcccountVerificationSettings_UpdateFollowAccountVerifica
   };
 
 /** ℹ️ Not real Twitch type name */
-export type UpdateFollowAcccountVerificationSettings_UpdateFollowAccountVerificationSettingsFollowAccountVerificationSettings =
-  {
-    phoneVerificationMode: UnknownValue;
-    emailVerificationMode: UnknownValue;
-    partialEmailVerificationConfig:
-      | null
-      | UpdateFollowAcccountVerificationSettings_UpdateFollowAccountVerificationSettingsFollowAccountVerificationSettingsPartialEmailVerificationConfig
-      | UpdateFollowAcccountVerificationSettings_UpdateFollowAccountVerificationSettingsFollowAccountVerificationSettingsPartialEmailVerificationConfig[];
-    partialPhoneVerificationConfig:
-      | null
-      | UpdateFollowAcccountVerificationSettings_UpdateFollowAccountVerificationSettingsFollowAccountVerificationSettingsPartialPhoneVerificationConfig
-      | UpdateFollowAcccountVerificationSettings_UpdateFollowAccountVerificationSettingsFollowAccountVerificationSettingsPartialPhoneVerificationConfig[];
-    __typename: string;
-  };
-
-/** ℹ️ Not real Twitch type name */
-export type UpdateFollowAcccountVerificationSettings_UpdateFollowAccountVerificationSettingsFollowAccountVerificationSettingsPartialEmailVerificationConfig =
-  {
-    /** ⚠️ Low confidence about: nullable */
-    shouldRestrictBasedOnAccountAge: null | boolean;
-    /**
-     * ⚠️ Low confidence about: nullable
-     * @format uint32
-     */
-    minimumAccountAgeInMinutes: null | number;
-    __typename: string;
-  };
-
-/** ℹ️ Not real Twitch type name */
-export type UpdateFollowAcccountVerificationSettings_UpdateFollowAccountVerificationSettingsFollowAccountVerificationSettingsPartialPhoneVerificationConfig =
-  {
-    /** ⚠️ Low confidence about: nullable */
-    shouldRestrictBasedOnAccountAge: null | boolean;
-    /**
-     * ⚠️ Low confidence about: nullable
-     * @format uint32
-     */
-    minimumAccountAgeInMinutes: null | number;
-    __typename: string;
-  };
-
-/** ℹ️ Not real Twitch type name */
 export type UpdateHeroPreset_UpdateChannelHomePreferences = {
-  channel:
-    | null
-    | UpdateHeroPreset_UpdateChannelHomePreferencesChannel
-    | UpdateHeroPreset_UpdateChannelHomePreferencesChannel[];
+  channel: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["26490481"]
+     */
+    id: ID;
+    home: {
+      preferences: {
+        /** @example ["PRESET_2", "PRESET_1"] */
+        heroPreset: ChannelHomePreferencesHeroPreset;
+        __typename: "ChannelHomePreferences";
+      };
+      __typename: "ChannelHome";
+    };
+    __typename: "Channel";
+  };
   error: UnknownValue;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type UpdateHeroPreset_UpdateChannelHomePreferencesChannel = {
-  id: ID;
-  home:
-    | null
-    | UpdateHeroPreset_UpdateChannelHomePreferencesChannelHome
-    | UpdateHeroPreset_UpdateChannelHomePreferencesChannelHome[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type UpdateHeroPreset_UpdateChannelHomePreferencesChannelHome = {
-  preferences:
-    | null
-    | UpdateHeroPreset_UpdateChannelHomePreferencesChannelHomePreferences
-    | UpdateHeroPreset_UpdateChannelHomePreferencesChannelHomePreferences[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type UpdateHeroPreset_UpdateChannelHomePreferencesChannelHomePreferences = {
-  heroPreset: UnknownValue;
   __typename: string;
 };
 
@@ -58519,23 +57995,17 @@ export type UpdateOrganizationMemberRole_UpdateOrganizationMemberRole = {
     | null
     | UpdateOrganizationMemberRole_UpdateOrganizationMemberRoleError
     | UpdateOrganizationMemberRole_UpdateOrganizationMemberRoleError[];
-  organizationMember:
-    | null
-    | UpdateOrganizationMemberRole_UpdateOrganizationMemberRoleOrganizationMember
-    | UpdateOrganizationMemberRole_UpdateOrganizationMemberRoleOrganizationMember[];
+  organizationMember: null | {
+    id: ID;
+    role: UnknownValue;
+    __typename: "OrganizationMember";
+  };
   __typename: string;
 };
 
 /** ℹ️ Not real Twitch type name */
 export type UpdateOrganizationMemberRole_UpdateOrganizationMemberRoleError = {
   code: UnknownValue;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type UpdateOrganizationMemberRole_UpdateOrganizationMemberRoleOrganizationMember = {
-  id: ID;
-  role: UnknownValue;
   __typename: string;
 };
 
@@ -58548,7 +58018,7 @@ export type UpdatePanelPayload = {
          */
         id: ID;
         /** @example ["DEFAULT"] */
-        type: string;
+        type: DefaultPanelType;
         __typename: "DefaultPanel";
         /** @example ["JINNYTTY SHOULDER RIDER"] */
         title: null | string;
@@ -58573,7 +58043,7 @@ export type UpdatePanelPayload = {
          */
         id: ID;
         /** @example ["DEFAULT"] */
-        type: string;
+        type: DefaultPanelType;
         __typename: "ExtensionPanel";
         /** @example ["extension-panel-1", "extension-panel-2"] */
         slotID: ID;
@@ -58583,64 +58053,32 @@ export type UpdatePanelPayload = {
 };
 
 /** ℹ️ Not real Twitch type name */
-export type UpdatePaymentMethodForm_UserEligiblePaymentMethodsPayload = {
-  methods:
-    | null
-    | UpdatePaymentMethodForm_UserEligiblePaymentMethodsPayloadMethods
-    | UpdatePaymentMethodForm_UserEligiblePaymentMethodsPayloadMethods[];
-  error: UnknownValue;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type UpdatePaymentMethodForm_UserEligiblePaymentMethodsPayloadMethods = {
-  /** ⚠️ Low confidence about: nullable */
-  name: null | string;
-  availabilityStatus: UnknownValue;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
 export type UpdatePaymentMethodForm_UserPaymentMethodConfigs = {
   recurly:
     | null
     | UpdatePaymentMethodForm_UserPaymentMethodConfigsRecurly
     | UpdatePaymentMethodForm_UserPaymentMethodConfigsRecurly[];
-  xsolla:
-    | null
-    | UpdatePaymentMethodForm_UserPaymentMethodConfigsXsolla
-    | UpdatePaymentMethodForm_UserPaymentMethodConfigsXsolla[];
+  xsolla: null | {
+    /** @example ["deadbeefdeadbeefdeadbeefdeadbeef_lc_en"] */
+    token: string;
+    isSandbox: boolean;
+    __typename: "Xsolla";
+  };
   __typename: string;
 };
 
 /** ℹ️ Not real Twitch type name */
 export type UpdatePaymentMethodForm_UserPaymentMethodConfigsRecurly = {
   braintreeClientAuthorization: UnknownValue;
-  payWithAmazonConfigs:
-    | null
-    | UpdatePaymentMethodForm_UserPaymentMethodConfigsRecurlyPayWithAmazonConfigs
-    | UpdatePaymentMethodForm_UserPaymentMethodConfigsRecurlyPayWithAmazonConfigs[];
+  payWithAmazonConfigs: null | {
+    /** @example ["amzn1.application-oa2-client.608cce2919884a35a7fccdef39cada5c"] */
+    clientID: ID;
+    isProduction: boolean;
+    /** @example ["A25XD55Y69DBQZ"] */
+    sellerID: ID;
+    __typename: "PayWithAmazonConfigs";
+  };
   publicKey: UnknownValue;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type UpdatePaymentMethodForm_UserPaymentMethodConfigsRecurlyPayWithAmazonConfigs = {
-  /** ⚠️ Low confidence about: nullable */
-  clientID: null | ID;
-  /** ⚠️ Low confidence about: nullable */
-  isProduction: null | boolean;
-  /** ⚠️ Low confidence about: nullable */
-  sellerID: null | ID;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type UpdatePaymentMethodForm_UserPaymentMethodConfigsXsolla = {
-  /** ⚠️ Low confidence about: nullable */
-  token: null | string;
-  /** ⚠️ Low confidence about: nullable */
-  isSandbox: null | boolean;
   __typename: string;
 };
 
@@ -58697,17 +58135,10 @@ export type UpdatePhoneNumber_UpdatePhoneNumberError = {
 
 /** ℹ️ Not real Twitch type name */
 export type UpdatePinnedChatAccess_UpdatePinnedChatSettings = {
-  settings:
-    | null
-    | UpdatePinnedChatAccess_UpdatePinnedChatSettingsSettings
-    | UpdatePinnedChatAccess_UpdatePinnedChatSettingsSettings[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type UpdatePinnedChatAccess_UpdatePinnedChatSettingsSettings = {
-  /** ⚠️ Low confidence about: nullable */
-  isModAccessEnabled: null | boolean;
+  settings: null | {
+    isModAccessEnabled: boolean;
+    __typename: "PinnedChatSettings";
+  };
   __typename: string;
 };
 
@@ -58748,18 +58179,12 @@ export type UpdatePinnedChatMessage_UpdatePinnedChatMessageUpdatedChatMessagePin
 
 /** ℹ️ Not real Twitch type name */
 export type UpdatePrimeSettingsPostSubscription_UpdatePrimeSettings = {
-  primeSettings:
-    | null
-    | UpdatePrimeSettingsPostSubscription_UpdatePrimeSettingsPrimeSettings
-    | UpdatePrimeSettingsPostSubscription_UpdatePrimeSettingsPrimeSettings[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type UpdatePrimeSettingsPostSubscription_UpdatePrimeSettingsPrimeSettings = {
-  id: ID;
-  /** ⚠️ Low confidence about: nullable */
-  isSubCreditChatNotificationEnabled: null | boolean;
+  primeSettings: null | {
+    id: ID;
+    /** ⚠️ Low confidence about: nullable */
+    isSubCreditChatNotificationEnabled: null | boolean;
+    __typename: "PrimeSettings";
+  };
   __typename: string;
 };
 
@@ -58937,10 +58362,15 @@ export type UpdateRTJQueueStatus_UpdateRTJQueueStatusError = {
 
 /** ℹ️ Not real Twitch type name */
 export type UpdateRaidSettingsV2_UpdateRaidSettings = {
-  user:
-    | null
-    | UpdateRaidSettingsV2_UpdateRaidSettingsUser
-    | UpdateRaidSettingsV2_UpdateRaidSettingsUser[];
+  user: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["23161357"]
+     */
+    id: ID;
+    raidSettings: null | RaidSettingsV2;
+    __typename: "User";
+  };
   error:
     | null
     | UpdateRaidSettingsV2_UpdateRaidSettingsError
@@ -58951,13 +58381,6 @@ export type UpdateRaidSettingsV2_UpdateRaidSettings = {
 /** ℹ️ Not real Twitch type name */
 export type UpdateRaidSettingsV2_UpdateRaidSettingsError = {
   code: UnknownValue;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type UpdateRaidSettingsV2_UpdateRaidSettingsUser = {
-  id: ID;
-  raidSettings: null | RaidSettingsV2;
   __typename: string;
 };
 
@@ -58985,86 +58408,61 @@ export type UpdateReactionsSet_UpdateReactionSet = {
 /** ℹ️ Not real Twitch type name */
 export type UpdateRecapTitle_UpdateRecap = {
   error: UnknownValue;
-  recap: null | UpdateRecapTitle_UpdateRecapRecap | UpdateRecapTitle_UpdateRecapRecap[];
+  recap: null | {
+    id: ID;
+    /** ⚠️ Low confidence about: nullable */
+    title: null | string;
+    __typename: "Recap";
+  };
   __typename: string;
 };
 
 /** ℹ️ Not real Twitch type name */
-export type UpdateRecapTitle_UpdateRecapRecap = {
+export type UpdateRecentlyStreamedCategories_ChannelHomeCategorySuggestionsShelfEdgesNode = {
   id: ID;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uri
+   * @gqlArg `width: Int [144]`
+   * @gqlArg `height: Int [192]`
+   */
+  boxArtURL: null | string;
   /** ⚠️ Low confidence about: nullable */
-  title: null | string;
+  displayName: null | string;
   __typename: string;
 };
 
 /** ℹ️ Not real Twitch type name */
 export type UpdateRecentlyStreamedCategories_UpdateChannelHomePreferences = {
-  channel:
-    | null
-    | UpdateRecentlyStreamedCategories_UpdateChannelHomePreferencesChannel
-    | UpdateRecentlyStreamedCategories_UpdateChannelHomePreferencesChannel[];
+  channel: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["26490481"]
+     */
+    id: ID;
+    home: {
+      shelves: {
+        categoryShelfSuggestions: {
+          edges: {
+            /** ⚠️ Low confidence about: nullable */
+            isHidden: null | boolean;
+            node:
+              | null
+              | UpdateRecentlyStreamedCategories_ChannelHomeCategorySuggestionsShelfEdgesNode
+              | UpdateRecentlyStreamedCategories_ChannelHomeCategorySuggestionsShelfEdgesNode[];
+            __typename: string;
+          }[];
+          __typename: "ChannelHomeCategorySuggestionsShelf";
+        };
+        __typename: "ChannelHomeShelves";
+      };
+      __typename: "ChannelHome";
+    };
+    __typename: "Channel";
+  };
   error: UnknownValue;
   __typename: string;
 };
-
-/** ℹ️ Not real Twitch type name */
-export type UpdateRecentlyStreamedCategories_UpdateChannelHomePreferencesChannel = {
-  id: ID;
-  home:
-    | null
-    | UpdateRecentlyStreamedCategories_UpdateChannelHomePreferencesChannelHome
-    | UpdateRecentlyStreamedCategories_UpdateChannelHomePreferencesChannelHome[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type UpdateRecentlyStreamedCategories_UpdateChannelHomePreferencesChannelHome = {
-  shelves:
-    | null
-    | UpdateRecentlyStreamedCategories_UpdateChannelHomePreferencesChannelHomeShelves
-    | UpdateRecentlyStreamedCategories_UpdateChannelHomePreferencesChannelHomeShelves[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type UpdateRecentlyStreamedCategories_UpdateChannelHomePreferencesChannelHomeShelves = {
-  categoryShelfSuggestions:
-    | null
-    | UpdateRecentlyStreamedCategories_UpdateChannelHomePreferencesChannelHomeShelvesCategoryShelfSuggestions
-    | UpdateRecentlyStreamedCategories_UpdateChannelHomePreferencesChannelHomeShelvesCategoryShelfSuggestions[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type UpdateRecentlyStreamedCategories_UpdateChannelHomePreferencesChannelHomeShelvesCategoryShelfSuggestions =
-  {
-    edges: {
-      /** ⚠️ Low confidence about: nullable */
-      isHidden: null | boolean;
-      node:
-        | null
-        | UpdateRecentlyStreamedCategories_UpdateChannelHomePreferencesChannelHomeShelvesCategoryShelfSuggestionsEdgesNode
-        | UpdateRecentlyStreamedCategories_UpdateChannelHomePreferencesChannelHomeShelvesCategoryShelfSuggestionsEdgesNode[];
-      __typename: string;
-    }[];
-    __typename: string;
-  };
-
-/** ℹ️ Not real Twitch type name */
-export type UpdateRecentlyStreamedCategories_UpdateChannelHomePreferencesChannelHomeShelvesCategoryShelfSuggestionsEdgesNode =
-  {
-    id: ID;
-    /**
-     * ⚠️ Low confidence about: nullable
-     * @format uri
-     * @gqlArg `width: Int [144]`
-     * @gqlArg `height: Int [192]`
-     */
-    boxArtURL: null | string;
-    /** ⚠️ Low confidence about: nullable */
-    displayName: null | string;
-    __typename: string;
-  };
 
 /** ℹ️ Not real Twitch type name */
 export type UpdateRestrictStreamViewingSettings_UpdateRestrictStreamViewingSettings = {
@@ -59136,19 +58534,13 @@ export type UpdateRoomModes_UpdateRoomModesRoomModes = {
 
 /** ℹ️ Not real Twitch type name */
 export type UpdateScheduleSegment_UpdateScheduleSegment = {
-  error:
-    | null
-    | UpdateScheduleSegment_UpdateScheduleSegmentError
-    | UpdateScheduleSegment_UpdateScheduleSegmentError[];
+  error: null | {
+    code: UnknownValue;
+    maximum: UnknownValue;
+    minimum: UnknownValue;
+    __typename: "InterruptScheduleBoundsError";
+  };
   schedule: null | ScheduleFragment;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type UpdateScheduleSegment_UpdateScheduleSegmentError = {
-  code: UnknownValue;
-  maximum: UnknownValue;
-  minimum: UnknownValue;
   __typename: string;
 };
 
@@ -59284,20 +58676,14 @@ export type UpdateSocialMedia_UpdateSocialMediaChannel = {
 
 /** ℹ️ Not real Twitch type name */
 export type UpdateSponsorshipCampaignInstance_UpdateSponsorshipCampaignInstance = {
-  campaignInstance:
-    | null
-    | UpdateSponsorshipCampaignInstance_UpdateSponsorshipCampaignInstanceCampaignInstance
-    | UpdateSponsorshipCampaignInstance_UpdateSponsorshipCampaignInstanceCampaignInstance[];
+  campaignInstance: null | {
+    id: ID;
+    __typename: "CampaignInstance";
+  };
   error:
     | null
     | UpdateSponsorshipCampaignInstance_UpdateSponsorshipCampaignInstanceError
     | UpdateSponsorshipCampaignInstance_UpdateSponsorshipCampaignInstanceError[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type UpdateSponsorshipCampaignInstance_UpdateSponsorshipCampaignInstanceCampaignInstance = {
-  id: ID;
   __typename: string;
 };
 
@@ -59403,29 +58789,19 @@ export type UpdateStreamRundownSettings_UpdateStreamRundownSettings = {
     | null
     | UpdateStreamRundownSettings_UpdateStreamRundownSettingsError
     | UpdateStreamRundownSettings_UpdateStreamRundownSettingsError[];
-  channel:
-    | null
-    | UpdateStreamRundownSettings_UpdateStreamRundownSettingsChannel
-    | UpdateStreamRundownSettings_UpdateStreamRundownSettingsChannel[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type UpdateStreamRundownSettings_UpdateStreamRundownSettingsChannel = {
-  id: ID;
-  streamRundownSettings:
-    | null
-    | UpdateStreamRundownSettings_UpdateStreamRundownSettingsChannelStreamRundownSettings
-    | UpdateStreamRundownSettings_UpdateStreamRundownSettingsChannelStreamRundownSettings[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type UpdateStreamRundownSettings_UpdateStreamRundownSettingsChannelStreamRundownSettings = {
-  /** ⚠️ Low confidence about: nullable */
-  isEligible: null | boolean;
-  /** ⚠️ Low confidence about: nullable */
-  isEnabled: null | boolean;
+  channel: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["26490481"]
+     */
+    id: ID;
+    streamRundownSettings: {
+      isEligible: boolean;
+      isEnabled: boolean;
+      __typename: "StreamRundownSettings";
+    };
+    __typename: "Channel";
+  };
   __typename: string;
 };
 
@@ -59437,36 +58813,23 @@ export type UpdateStreamRundownSettings_UpdateStreamRundownSettingsError = {
 
 /** ℹ️ Not real Twitch type name */
 export type UpdateStreamerShelfPreferences_UpdateChannelHomePreferences = {
-  channel:
-    | null
-    | UpdateStreamerShelfPreferences_UpdateChannelHomePreferencesChannel
-    | UpdateStreamerShelfPreferences_UpdateChannelHomePreferencesChannel[];
+  channel: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["26490481"]
+     */
+    id: ID;
+    home: {
+      preferences: {
+        /** @example ["AUTOHOST"] */
+        streamerShelfType: ChannelHomePreferencesStreamerShelfType;
+        __typename: "ChannelHomePreferences";
+      };
+      __typename: "ChannelHome";
+    };
+    __typename: "Channel";
+  };
   error: UnknownValue;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type UpdateStreamerShelfPreferences_UpdateChannelHomePreferencesChannel = {
-  id: ID;
-  home:
-    | null
-    | UpdateStreamerShelfPreferences_UpdateChannelHomePreferencesChannelHome
-    | UpdateStreamerShelfPreferences_UpdateChannelHomePreferencesChannelHome[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type UpdateStreamerShelfPreferences_UpdateChannelHomePreferencesChannelHome = {
-  preferences:
-    | null
-    | UpdateStreamerShelfPreferences_UpdateChannelHomePreferencesChannelHomePreferences
-    | UpdateStreamerShelfPreferences_UpdateChannelHomePreferencesChannelHomePreferences[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type UpdateStreamerShelfPreferences_UpdateChannelHomePreferencesChannelHomePreferences = {
-  streamerShelfType: UnknownValue;
   __typename: string;
 };
 
@@ -59504,27 +58867,19 @@ export type UpdateUnviewableStatus_UpdateChannelVODSettingsChannelVodSettings = 
 
 /** ℹ️ Not real Twitch type name */
 export type UpdateUserIsEmailRevertSuccessMutation_UpdateUserIsEmailRevertSuccess = {
-  user:
-    | null
-    | UpdateUserIsEmailRevertSuccessMutation_UpdateUserIsEmailRevertSuccessUser
-    | UpdateUserIsEmailRevertSuccessMutation_UpdateUserIsEmailRevertSuccessUser[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type UpdateUserIsEmailRevertSuccessMutation_UpdateUserIsEmailRevertSuccessUser = {
-  id: ID;
-  settings:
-    | null
-    | UpdateUserIsEmailRevertSuccessMutation_UpdateUserIsEmailRevertSuccessUserSettings
-    | UpdateUserIsEmailRevertSuccessMutation_UpdateUserIsEmailRevertSuccessUserSettings[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type UpdateUserIsEmailRevertSuccessMutation_UpdateUserIsEmailRevertSuccessUserSettings = {
-  /** ⚠️ Low confidence about: nullable */
-  isEmailRevertSuccess: null | boolean;
+  user: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["23161357"]
+     */
+    id: ID;
+    settings: {
+      /** ⚠️ Low confidence about: nullable */
+      isEmailRevertSuccess: null | boolean;
+      __typename: "UserSettings";
+    };
+    __typename: "User";
+  };
   __typename: string;
 };
 
@@ -59543,10 +58898,10 @@ export type UpdateUserProfile_UpdateUserError = {
 
 /** ℹ️ Not real Twitch type name */
 export type UpdateUserSponsorshipSettings_UpdateUserSponsorshipSettings = {
-  settings:
-    | null
-    | UpdateUserSponsorshipSettings_UpdateUserSponsorshipSettingsSettings
-    | UpdateUserSponsorshipSettings_UpdateUserSponsorshipSettingsSettings[];
+  settings: null | {
+    activationSettings: null | SponsorshipActivationSettings;
+    __typename: "UserSponsorshipSettings";
+  };
   error:
     | null
     | UpdateUserSponsorshipSettings_UpdateUserSponsorshipSettingsError
@@ -59561,74 +58916,87 @@ export type UpdateUserSponsorshipSettings_UpdateUserSponsorshipSettingsError = {
 };
 
 /** ℹ️ Not real Twitch type name */
-export type UpdateUserSponsorshipSettings_UpdateUserSponsorshipSettingsSettings = {
-  activationSettings: null | SponsorshipActivationSettings;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
 export type UpdateUserSubscriptionSettingsFounderBadgeHidden_UpdateUserSubscriptionSettings = {
-  subscriptionSettings:
-    | null
-    | UpdateUserSubscriptionSettingsFounderBadgeHidden_UpdateUserSubscriptionSettingsSubscriptionSettings
-    | UpdateUserSubscriptionSettingsFounderBadgeHidden_UpdateUserSubscriptionSettingsSubscriptionSettings[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type UpdateUserSubscriptionSettingsFounderBadgeHidden_UpdateUserSubscriptionSettingsSubscriptionSettings =
-  {
+  subscriptionSettings: null | {
     /** ⚠️ Low confidence about: nullable */
     isFounderBadgesHidden: null | boolean;
-    __typename: string;
+    __typename: "UserSubscriptionSettings";
   };
+  __typename: string;
+};
 
 /** ℹ️ Not real Twitch type name */
 export type UpdateUserSubscriptionSettingsRENAME2_UpdateUserSubscriptionSettings = {
-  subscriptionSettings:
-    | null
-    | UpdateUserSubscriptionSettingsRENAME2_UpdateUserSubscriptionSettingsSubscriptionSettings
-    | UpdateUserSubscriptionSettingsRENAME2_UpdateUserSubscriptionSettingsSubscriptionSettings[];
+  subscriptionSettings: null | {
+    giftsToFollowedChannelsOnly: UnknownValue;
+    __typename: "UserSubscriptionSettings";
+  };
   __typename: string;
 };
-
-/** ℹ️ Not real Twitch type name */
-export type UpdateUserSubscriptionSettingsRENAME2_UpdateUserSubscriptionSettingsSubscriptionSettings =
-  {
-    giftsToFollowedChannelsOnly: UnknownValue;
-    __typename: string;
-  };
 
 /** ℹ️ Not real Twitch type name */
 export type UpdateUserSubscriptionSettingsSubscriptionStatus_UpdateUserSubscriptionSettings = {
-  subscriptionSettings:
-    | null
-    | UpdateUserSubscriptionSettingsSubscriptionStatus_UpdateUserSubscriptionSettingsSubscriptionSettings
-    | UpdateUserSubscriptionSettingsSubscriptionStatus_UpdateUserSubscriptionSettingsSubscriptionSettings[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type UpdateUserSubscriptionSettingsSubscriptionStatus_UpdateUserSubscriptionSettingsSubscriptionSettings =
-  {
+  subscriptionSettings: null | {
     /** ⚠️ Low confidence about: nullable */
     isSubscriptionStatusHidden: null | boolean;
-    __typename: string;
+    __typename: "UserSubscriptionSettings";
   };
+  __typename: string;
+};
 
 /** ℹ️ Not real Twitch type name */
 export type UpdateUserSubscriptionSettings_UpdateUserSubscriptionSettings = {
-  subscriptionSettings:
-    | null
-    | UpdateUserSubscriptionSettings_UpdateUserSubscriptionSettingsSubscriptionSettings
-    | UpdateUserSubscriptionSettings_UpdateUserSubscriptionSettingsSubscriptionSettings[];
+  subscriptionSettings: null | {
+    isGiftCountHidden: boolean;
+    __typename: "UserSubscriptionSettings";
+  };
   __typename: string;
 };
 
 /** ℹ️ Not real Twitch type name */
-export type UpdateUserSubscriptionSettings_UpdateUserSubscriptionSettingsSubscriptionSettings = {
+export type UpdateUserTeamMembership_UpdateUserTeamMembership = {
+  user:
+    | null
+    | UpdateUserTeamMembership_UpdateUserTeamMembershipUser
+    | UpdateUserTeamMembership_UpdateUserTeamMembershipUser[];
+  __typename: string;
+};
+
+/** ℹ️ Not real Twitch type name */
+export type UpdateUserTeamMembership_UpdateUserTeamMembershipUser = {
+  id: ID;
+  teamMemberships:
+    | null
+    | UpdateUserTeamMembership_UpdateUserTeamMembershipUserTeamMemberships
+    | UpdateUserTeamMembership_UpdateUserTeamMembershipUserTeamMemberships[];
+  __typename: string;
+};
+
+/** ℹ️ Not real Twitch type name */
+export type UpdateUserTeamMembership_UpdateUserTeamMembershipUserTeamMemberships = {
   /** ⚠️ Low confidence about: nullable */
-  isGiftCountHidden: null | boolean;
+  isPrimary: null | boolean;
+  /** ⚠️ Low confidence about: nullable */
+  isRevenueRevealed: null | boolean;
+  /** ⚠️ Low confidence about: nullable */
+  isStatsRevealed: null | boolean;
+  team: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["2351"]
+     */
+    id: ID;
+    /** @example ["twitchcon", "ggtalentgroup", "gentlemates", "skybass", "tsm", "1gsquad", "streamdatabase"] */
+    name: string;
+    /** @example ["TwitchCon Europe 2026", "GG Talent Group", "Gentle Mates", "Team SKY BASS", "TSM", "1G SQUAD", "Stream Database"] */
+    displayName: string;
+    /**
+     * ⚠️ Low confidence about: nullable
+     * @format uri
+     */
+    logoURL: null | string;
+    __typename: "Team";
+  };
   __typename: string;
 };
 
@@ -59649,32 +59017,27 @@ export type UpdateUserViewedVideoInput = {
    */
   videoID: ID;
   /** @example ["VOD"] */
-  videoType: string;
+  videoType: UpdateUserViewedVideoInputVideoType;
 };
+
+/** ℹ️ Not real Twitch type name */
+export type UpdateUserViewedVideoInputVideoType = "VOD";
 
 /** ℹ️ Not real Twitch type name */
 export type UpdateWhisperSettings_UpdateWhisperSettings = {
-  user:
-    | null
-    | UpdateWhisperSettings_UpdateWhisperSettingsUser
-    | UpdateWhisperSettings_UpdateWhisperSettingsUser[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type UpdateWhisperSettings_UpdateWhisperSettingsUser = {
-  id: ID;
-  whisperSettings:
-    | null
-    | UpdateWhisperSettings_UpdateWhisperSettingsUserWhisperSettings
-    | UpdateWhisperSettings_UpdateWhisperSettingsUserWhisperSettings[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type UpdateWhisperSettings_UpdateWhisperSettingsUserWhisperSettings = {
-  /** ⚠️ Low confidence about: nullable */
-  isBlockingWhispersFromStrangers: null | boolean;
+  user: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["23161357"]
+     */
+    id: ID;
+    whisperSettings: {
+      /** ⚠️ Low confidence about: nullable */
+      isBlockingWhispersFromStrangers: null | boolean;
+      __typename: "WhisperSettings";
+    };
+    __typename: "User";
+  };
   __typename: string;
 };
 
@@ -59699,7 +59062,7 @@ export type UpdatedShelf = {
   /** @example [""] */
   description: null | string;
   /** @example ["TOP_CLIPS", "LATEST_BROADCASTS", "LATEST_NON_BROADCASTS", "ALL_VIDEOS", "COLLECTION"] */
-  type: string;
+  type: VideoShelfType;
   collection: null | {
     /** @example ["KVe_rYFMGxiPsA", "JJ-N82-m4BfH4A"] */
     id: ID;
@@ -59852,6 +59215,9 @@ export type UploadConfigs_GetEmoteUploadConfigPayloadUploadConfigsImages = {
 };
 
 /** ℹ️ Not real Twitch type name */
+export type UploadVODPermissionErrorCode = "UNKNOWN";
+
+/** ℹ️ Not real Twitch type name */
 export type UpsertAlertVariation_UpsertAlertVariation = {
   alertVariation: null | AlertVariationFragment;
   error: UnknownValue;
@@ -59957,11 +59323,14 @@ export type UserBioVideo = {
       __typename: "Game";
     };
     /** @example ["RECORDED", "RECORDING"] */
-    status: string;
+    status: VideoStatus;
     __typename: "Video";
   };
   __typename: "VideoEdge";
 };
+
+/** ℹ️ Not real Twitch type name */
+export type UserBitsUserState = "ACQUIRED" | "CHEERED" | "NEW_USER" | "SKIPPED" | "UNKNOWN";
 
 export type UserByAttribute = {
   /** @example ["EphemeralEncouragingBulgogiPraiseIt-98gnj_-unqEO0uvs", "CredulousBlightedSquirrelOSkomodo-GdY_nETXjEzIz_gm", "AstuteRenownedFalconSpicyBoy-aV02Wxbe5zGQe5IT"] */
@@ -60021,7 +59390,13 @@ export type UserClipsAggregationQuery_UserClipsAggregations = {
 };
 
 /** ℹ️ Not real Twitch type name */
-export type UserClipsCriteriaSort = "CREATED_AT_DESC" | "VIEWS_DESC";
+export type UserClipsCriteriaSort =
+  | "BEST_MATCH"
+  | "CREATED_AT_ASC"
+  | "CREATED_AT_DESC"
+  | "TRENDING"
+  | "VIEWS_ASC"
+  | "VIEWS_DESC";
 
 export type UserClipsInput = {
   broadcasterIDs?: null | (null | ID)[];
@@ -60032,7 +59407,7 @@ export type UserClipsInput = {
    */
   endAt?: null | string;
   /** @example ["ALL_TIME", "LAST_WEEK", "LAST_DAY", "LAST_MONTH"] */
-  filter?: null | string;
+  filter?: null | ClipsInputFilter;
   /** ⚠️ Low confidence about: nullable */
   freeText?: null | string;
   gameIDs?: null | (null | ID)[];
@@ -60041,7 +59416,7 @@ export type UserClipsInput = {
   /** @example ["ALL_TIME"] */
   period?: null | ClipsPeriod;
   /** @example ["BROADCASTER", "CURATOR"] */
-  role?: null | string;
+  role?: null | UserClipsInputRole;
   shouldFilterByDiscoverySetting?: null | boolean;
   /** @example ["CREATED_AT_DESC", "VIEWS_DESC"] */
   sort?: null | UserClipsCriteriaSort;
@@ -60052,6 +59427,9 @@ export type UserClipsInput = {
   startAt?: null | string;
 };
 
+/** ℹ️ Not real Twitch type name */
+export type UserClipsInputRole = "BROADCASTER" | "CURATOR";
+
 export type UserConsent = {
   productConsent: {
     /** @example ["TERMS_OF_SERVICE/26/08/10", "TERMS_OF_SALE/26/08/10"] */
@@ -60059,7 +59437,7 @@ export type UserConsent = {
     /** @example ["26/08/10", "23/06/30"] */
     version: string;
     /** @example ["TERMS_OF_SERVICE", "TERMS_OF_SALE", "PRIVACY_NOTICE"] */
-    consentType: string;
+    consentType: ProductConsentResultConsentType;
     shouldShowNotification: boolean;
     /**
      * @format uri
@@ -60072,16 +59450,50 @@ export type UserConsent = {
 };
 
 /** ℹ️ Not real Twitch type name */
-export type UserEmotes_EmoteModifiers = {
-  code: UnknownValue;
-  /** ⚠️ Low confidence about: nullable */
-  name: null | string;
-  __typename: string;
-};
+export type UserDoesNotExistReason =
+  | "DEACTIVATED"
+  | "DMCA"
+  | "TOS_INDEFINITE"
+  | "TOS_TEMPORARY"
+  | "UNKNOWN";
+
+/** ℹ️ Not real Twitch type name */
+export type UserLanguage =
+  | "AR"
+  | "BG"
+  | "CS"
+  | "DA"
+  | "DE"
+  | "EL"
+  | "EN"
+  | "ES"
+  | "FI"
+  | "FR"
+  | "HI"
+  | "HU"
+  | "IT"
+  | "JA"
+  | "KO"
+  | "NL"
+  | "NO"
+  | "PL"
+  | "PT"
+  | "RO"
+  | "RU"
+  | "SK"
+  | "SV"
+  | "TH"
+  | "TR"
+  | "UK"
+  | "VI"
+  | "ZH";
 
 export type UserLookupType = "ACTIVE" | "ALL";
 
-export type UserNotificationCampaignInput = { platform: UserNotificationCampaignsInputPlatform };
+export type UserNotificationCampaignInput = {
+  /** @example ["WEB"] */
+  platform: UserNotificationCampaignsInputPlatform;
+};
 
 /** ℹ️ Not real Twitch type name */
 export type UserNotificationCampaignsInputPlatform = "WEB";
@@ -60102,19 +59514,6 @@ export type UserPointsContribution_CommunityPointsPropertiesGoalContributionsGoa
   __typename: string;
 };
 
-export type UserPredictionEventRestriction_PredictionEvent = {
-  /**
-   * @format uuid
-   * @example ["20fac95f-b388-4a66-8fd1-0f3d011d671b"]
-   */
-  id: ID;
-  self:
-    | null
-    | UserPredictionEventRestriction_PredictionEventSelf
-    | UserPredictionEventRestriction_PredictionEventSelf[];
-  __typename: "PredictionEvent";
-};
-
 /** ℹ️ Not real Twitch type name */
 export type UserPredictionEventRestriction_PredictionEventSelf = {
   restriction: UnknownValue;
@@ -60123,9 +59522,15 @@ export type UserPredictionEventRestriction_PredictionEventSelf = {
 
 /** ℹ️ Not real Twitch type name */
 export type UserRaidRecommendationsOptionsSourcesType =
+  | "LIVE_FOLLOWS"
+  | "MANUAL_ADD"
   | "RECENTLY_RAIDED_BY_YOU"
   | "RECENTLY_RAIDED_YOU"
-  | "RECOMMENDED_FOR_CATEGORY";
+  | "RECOMMENDED_FOR_CATEGORY"
+  | "RECOMMENDED_FOR_CHANNEL"
+  | "SAME_TEAM"
+  | "SIMILAR_TO_YOU"
+  | "SPECIFIC_TAG";
 
 export type UserRedemptionFragment = {
   reward: {
@@ -60162,29 +59567,21 @@ export type UserRelationshipFragment_UserRelationship = {
    * @format date-time
    */
   followedAt: null | string;
-  subscriptionBenefit:
-    | null
-    | UserRelationshipFragment_UserRelationshipSubscriptionBenefit
-    | UserRelationshipFragment_UserRelationshipSubscriptionBenefit[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type UserRelationshipFragment_UserRelationshipSubscriptionBenefit = {
-  id: ID;
-  tier: UnknownValue;
-  purchasedWithPrime: UnknownValue;
-  gift:
-    | null
-    | UserRelationshipFragment_UserRelationshipSubscriptionBenefitGift
-    | UserRelationshipFragment_UserRelationshipSubscriptionBenefitGift[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type UserRelationshipFragment_UserRelationshipSubscriptionBenefitGift = {
-  /** ⚠️ Low confidence about: nullable */
-  isGift: null | boolean;
+  subscriptionBenefit: null | {
+    /** @example ["3L7hSWPX941bMubywA98e4uYNdT", "3KyHdOj3R8PmXqz66jFOU07Ia7D"] */
+    id: ID;
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["1000"]
+     */
+    tier: string;
+    purchasedWithPrime: boolean;
+    gift: {
+      isGift: boolean;
+      __typename: "SubscriptionGift";
+    };
+    __typename: "SubscriptionBenefit";
+  };
   __typename: string;
 };
 
@@ -60264,6 +59661,57 @@ export type UserRolesCacheQuery_VIPConnectionEdgesNode = {
   __typename: string;
 };
 
+/** ℹ️ Not real Twitch type name */
+export type UserSelfConnectionChatRestrictedReasons =
+  | "CHANNEL_HAS_CONSEQUENCE"
+  | "EMAIL_ALIAS_BANNED_FROM_CHANNEL"
+  | "FOLLOWERS_ONLY"
+  | "PHONE_NUMBER_ALIAS_BANNED_FROM_CHANNEL"
+  | "REQUIRE_VERIFIED_PHONE_NUMBER"
+  | "SLOW_MODE"
+  | "SUBSCRIBERS_ONLY"
+  | "USER_HAS_CHAT_CONSEQUENCE"
+  | "VERIFIED_EMAIL_ONLY"
+  | "VERIFIED_ONLY"
+  | "VERIFIED_PHONE_NUMBER_ONLY";
+
+/** ℹ️ Not real Twitch type name */
+export type UserSelfConnectionCostreamerStatus = "DISABLED";
+
+/** ℹ️ Not real Twitch type name */
+export type UserSettingsPreferredLanguageTag =
+  | "AR"
+  | "BG"
+  | "CS"
+  | "DA"
+  | "DE"
+  | "EL"
+  | "EN"
+  | "ES"
+  | "FI"
+  | "FR"
+  | "HI"
+  | "HU"
+  | "IT"
+  | "JA"
+  | "KO"
+  | "NL"
+  | "NO"
+  | "PL"
+  | "PT"
+  | "RO"
+  | "RU"
+  | "SK"
+  | "SV"
+  | "TH"
+  | "TR"
+  | "UK"
+  | "VI"
+  | "ZH";
+
+/** ℹ️ Not real Twitch type name */
+export type UserSettingsVisibility = "IDLE" | "OFFLINE" | "ONLINE";
+
 export type UserSponsorshipSettingsInput = { userLogin?: null | string };
 
 /** ℹ️ Not real Twitch type name */
@@ -60288,15 +59736,16 @@ export type VIPArtistStatusQuery_ChannelCommunityRolesSettingsRoleSettings = {
 
 /** ℹ️ Not real Twitch type name */
 export type VIPUser_GrantVIP = {
-  channel: null | VIPUser_GrantVIPChannel | VIPUser_GrantVIPChannel[];
+  channel: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["26490481"]
+     */
+    id: ID;
+    __typename: "Channel";
+  };
   grantee: null | VIPUser_GrantVIPGrantee | VIPUser_GrantVIPGrantee[];
   error: null | VIPUser_GrantVIPError | VIPUser_GrantVIPError[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type VIPUser_GrantVIPChannel = {
-  id: ID;
   __typename: string;
 };
 
@@ -60356,10 +59805,11 @@ export type ValidGuestStarSessionData = {
   host:
     | null
     | (ValidSessionParticipantUser & {
-        sharedChatSession:
-          | null
-          | ValidGuestStarSessionData_UserSharedChatSession
-          | ValidGuestStarSessionData_UserSharedChatSession[];
+        sharedChatSession: null | {
+          id: ID;
+          status: UnknownValue;
+          __typename: "SharedChatSession";
+        };
       });
   guests: null | {
     id: ID;
@@ -60367,13 +59817,6 @@ export type ValidGuestStarSessionData = {
     __typename: "GuestStarSlot";
   };
   __typename: "GuestStarSession";
-};
-
-/** ℹ️ Not real Twitch type name */
-export type ValidGuestStarSessionData_UserSharedChatSession = {
-  id: ID;
-  status: UnknownValue;
-  __typename: string;
 };
 
 export type ValidSessionParticipantUser = {
@@ -60404,20 +59847,18 @@ export type ValidSharedChatSessionData = {
     | ValidSharedChatSessionData_SharedChatSessionHost[];
   participants: null | {
     id: ID;
-    channel:
-      | null
-      | ValidSharedChatSessionData_SharedChatParticipantChannel
-      | ValidSharedChatSessionData_SharedChatParticipantChannel[];
+    channel: null | {
+      /**
+       * @pattern ^[0-9]+$
+       * @example ["26490481"]
+       */
+      id: ID;
+      owner: ValidSessionParticipantUser;
+      __typename: "Channel";
+    };
     __typename: "SharedChatParticipant";
   };
   __typename: "SharedChatSession";
-};
-
-/** ℹ️ Not real Twitch type name */
-export type ValidSharedChatSessionData_SharedChatParticipantChannel = {
-  id: ID;
-  owner: ValidSessionParticipantUser;
-  __typename: string;
 };
 
 /** ℹ️ Not real Twitch type name */
@@ -60454,7 +59895,134 @@ export type ValidateVerificationCode_ValidateVerificationCodeRequest = {
 
 export type VariantTrainDetails = CommunityTrainDetails | MythicTrainDetails | PinataTrainDetails;
 
+/** ℹ️ Not real Twitch type name */
+export type VendorConsentStatusConsentStatus = "DENIED" | "GIVEN";
+
+/** ℹ️ Not real Twitch type name */
+export type VendorConsentStatusName =
+  | "ACXIOM"
+  | "ADALYSER"
+  | "ADELAIDE_METRICS"
+  | "ADLOOX"
+  | "ADSQUARE"
+  | "AMAZON"
+  | "AMPLIFIED_INTELLIGENCE"
+  | "APPLOVIN"
+  | "ARTSAI"
+  | "AUDIENCE_PROJECT"
+  | "AZIRA"
+  | "BANNERFLOW"
+  | "BEATGRID"
+  | "BEESWAX"
+  | "BIDSWITCH"
+  | "BRANCH"
+  | "BRAZE"
+  | "CELTRA"
+  | "CLARITAS"
+  | "CLINCH"
+  | "CLOUDFLARE"
+  | "COMSCORE"
+  | "CONNATIX"
+  | "CREATEJS"
+  | "CUEBIQ"
+  | "DAILYMOTION"
+  | "DOUBLEVERIFY"
+  | "DYNATA"
+  | "EMETRIQ"
+  | "EQUATIV"
+  | "FLASHTALKING"
+  | "FLUCT"
+  | "FREEWHEEL"
+  | "GAMESIGHT"
+  | "GAMESITE"
+  | "GOOD_LOOP"
+  | "GOOGLE"
+  | "GOOGLE_ANALYTICS_DEVELOPER_EXTENSIONS"
+  | "GUMGUM"
+  | "HABU"
+  | "HAPPYDEMICS"
+  | "HURRA"
+  | "IMPROVE_DIGITAL"
+  | "INDEX_EXCHANGE"
+  | "INMOBI"
+  | "INNOVID"
+  | "INTEGRAL_AD_SCIENCE"
+  | "IPSOS_MORI"
+  | "IRONSOURCE"
+  | "ISPOT"
+  | "JQUERY"
+  | "KANTAR"
+  | "KARGO"
+  | "KERV_INTERACTIVE"
+  | "KING"
+  | "LOOPME"
+  | "LUCID"
+  | "LUMEN_RESEARCH"
+  | "LYTICS"
+  | "MAGELLAN_AI"
+  | "MAGNITE"
+  | "MAGNITE_OUTSTREAM"
+  | "MAPP_DIGITAL"
+  | "MEDIAMETRIE"
+  | "MEDIARITHMICS"
+  | "MEDIA_NET"
+  | "METRIXLAB"
+  | "MPARTICLE"
+  | "NEURAL_ONE"
+  | "NEXXEN"
+  | "NIELSEN"
+  | "ONETAG"
+  | "ON_DEVICE_RESEARCH"
+  | "OPENX"
+  | "PODSCRIBE"
+  | "PUBMATIC"
+  | "RATEGAIN_ADARA"
+  | "REALYTICS"
+  | "REVJET"
+  | "RICH_AUDIENCE"
+  | "ROCKERBOX"
+  | "SALESFORCE_DMP"
+  | "SEENTHIS"
+  | "SEMASIO"
+  | "SHARETHROUGH"
+  | "SIRDATA"
+  | "SIZMEK"
+  | "SMAATO"
+  | "SMARTCLIP"
+  | "SMARTME"
+  | "SOVRN"
+  | "SPOTX"
+  | "SPRINGSERVE"
+  | "STREAMWISE"
+  | "STREAM_EYE"
+  | "STROER_SSP"
+  | "SUBLIME"
+  | "TABOOLA"
+  | "TEADS"
+  | "THE_TRADE_DESK"
+  | "TREASURE_DATA"
+  | "TRIPLE_LIFT"
+  | "TRUEX"
+  | "TWITCH_AMAZON"
+  | "TWITTER"
+  | "UNDERTONE"
+  | "UPWAVE"
+  | "WEBORAMA"
+  | "WPP_MEDIA"
+  | "XAD_SPOTEFFECTS"
+  | "XANDR"
+  | "XITE"
+  | "YAHOO_EMEA"
+  | "YIELDLAB"
+  | "YIELDMO"
+  | "YOC"
+  | "YOUGOV"
+  | "ZEOTAP";
+
 export type VendorConsentStatuses = GDPRVendorStatus | { __typename: "ROWVendorConsent" };
+
+/** ℹ️ Not real Twitch type name */
+export type VerificationMode = "ALL" | "NONE" | "PARTIAL";
 
 /** ℹ️ Not real Twitch type name */
 export type VerifyEmailVerification_VerifyEmailVerification = {
@@ -60504,6 +60072,9 @@ export type VerifyUserChallenge_VerifyUserChallenge = {
   errorCode: null | string;
   __typename: string;
 };
+
+/** ℹ️ Not real Twitch type name */
+export type VerticalShelfType = "COLLECTION";
 
 export type Video = {
   /**
@@ -60576,7 +60147,7 @@ export type VideoAccessTokenClipAsset = {
     /** @example ["", "https://d1ndex63qxojbr.cloudfront.net/nauth/ce4b4ef1-4e8d-4391-bff6-2bc4c5506a4d/landscape/avc/1080/index.mp4", "https://d1ndex63qxojbr.cloudfront.net/nauth/ce4b4ef1-4e8d-4391-bff6-2bc4c5506a4d/landscape/avc/720/index.mp4"] */
     sourceURL: string;
     /** @example ["AVC", "HEVC"] */
-    videoCodec: string;
+    videoCodec: VideoCodec;
     /**
      * @format int32
      * @example [0, -1, 1920, 1280, 853, 640, 900, 720, 480, 360, 854, 1170]
@@ -60638,7 +60209,7 @@ export type VideoChapter = MomentDetails & {
    */
   positionMilliseconds: number;
   /** @example ["GAME_CHANGE"] */
-  type: string;
+  type: VideoMomentType;
   /** @example ["Just Chatting", "Grand Theft Auto V", "Terraria", "End of Abyss", "South Park: Snow Day!", "4D Golf", "Bloody Ink"] */
   description: string;
   /** @example ["", "https://www.giantbomb.com/api/image/scale_avatar/2236595-nuon.jpg"] */
@@ -60806,23 +60377,22 @@ export type VideoManagerActionsDeleteAllChannelVideos_DeleteAllChannelVideosStat
 
 /** ℹ️ Not real Twitch type name */
 export type VideoManagerActionsDeleteVideoThumbnail_DeleteVideoThumbnail = {
-  video:
-    | null
-    | VideoManagerActionsDeleteVideoThumbnail_DeleteVideoThumbnailVideo
-    | VideoManagerActionsDeleteVideoThumbnail_DeleteVideoThumbnailVideo[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type VideoManagerActionsDeleteVideoThumbnail_DeleteVideoThumbnailVideo = {
-  id: ID;
-  /** ⚠️ Low confidence about: nullable */
-  thumbnailURLs: null | (null | string)[];
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format uri
-   */
-  previewThumbnailURL: null | string;
+  video: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["2323270866"]
+     */
+    id: ID;
+    /** ⚠️ Low confidence about: nullable */
+    thumbnailURLs: null | (null | string)[];
+    /**
+     * @example ["https://static-cdn.jtvnw.net/cf_vods/d1m7jfoe9zdc1j/82ef4729c6011d6072e2_twitch_43295848617_1733849129//thumb/thumb0-90x60.jpg", "https://static-cdn.jtvnw.net/cf_vods/d3fi1amfgojobc/7fbc776f6b7a4659c4e4_cdprojektred_319108158181_1793115910//thumb/thumb0-90x60.jpg"]
+     * @gqlArg `width: Int [320, 90, 640, 240, 400, 1280, 80, 160, 214]`
+     * @gqlArg `height: Int [180, 60, 360, 135, 225, 480, 720, 51, 45, 90]`
+     */
+    previewThumbnailURL: string;
+    __typename: "Video";
+  };
   __typename: string;
 };
 
@@ -60860,39 +60430,37 @@ export type VideoManagerActionsUpdateAllChannelVideosViewability_UpdateAllChanne
 
 /** ℹ️ Not real Twitch type name */
 export type VideoManagerActionsUpdateVideo_UpdateVideo = {
-  video:
-    | null
-    | VideoManagerActionsUpdateVideo_UpdateVideoVideo
-    | VideoManagerActionsUpdateVideo_UpdateVideoVideo[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type VideoManagerActionsUpdateVideo_UpdateVideoVideo = {
-  id: ID;
-  scope: UnknownValue;
-  /** ⚠️ Low confidence about: nullable */
-  title: null | string;
-  /** ⚠️ Low confidence about: nullable */
-  description: null | string;
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format uri
-   */
-  previewThumbnailURL: null | string;
-  game:
-    | null
-    | VideoManagerActionsUpdateVideo_UpdateVideoVideoGame
-    | VideoManagerActionsUpdateVideo_UpdateVideoVideoGame[];
-  language: UnknownValue;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type VideoManagerActionsUpdateVideo_UpdateVideoVideoGame = {
-  id: ID;
-  /** ⚠️ Low confidence about: nullable */
-  name: null | string;
+  video: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["2323270866"]
+     */
+    id: ID;
+    scope: UnknownValue;
+    /** @example ["Twitch Recap: 2024 according to Twitch Chat!", "REDstreams — Cyberpunk 2077: Edgerunners 2 Update (2.5) | Overview"] */
+    title: null | string;
+    /** @example ["The legendary TwitchCon Drag Showcase is back! Check out all the amazing performers right here!", "Now you know when our show happen! Nice."] */
+    description: null | string;
+    /**
+     * @example ["https://static-cdn.jtvnw.net/cf_vods/d1m7jfoe9zdc1j/82ef4729c6011d6072e2_twitch_43295848617_1733849129//thumb/thumb0-90x60.jpg", "https://static-cdn.jtvnw.net/cf_vods/d3fi1amfgojobc/7fbc776f6b7a4659c4e4_cdprojektred_319108158181_1793115910//thumb/thumb0-90x60.jpg"]
+     * @gqlArg `width: Int [320, 90, 640, 240, 400, 1280, 80, 160, 214]`
+     * @gqlArg `height: Int [180, 60, 360, 135, 225, 480, 720, 51, 45, 90]`
+     */
+    previewThumbnailURL: string;
+    game: null | {
+      /**
+       * @pattern ^[0-9]+$
+       * @example ["509672"]
+       */
+      id: ID;
+      /** @example ["IRL", "Cyberpunk 2077", "Just Chatting", "Special Events", "League of Legends", "You Know The Drill", "RuneScape: Dragonwilds"] */
+      name: string;
+      __typename: "Game";
+    };
+    /** @example ["en"] */
+    language: string;
+    __typename: "Video";
+  };
   __typename: string;
 };
 
@@ -60908,12 +60476,6 @@ export type VideoManagerActionsUpdateVideosScope_UpdateVideosViewability = {
 /** ℹ️ Not real Twitch type name */
 export type VideoManagerActionsUpdateVideosScope_UpdateVideosViewabilityError = {
   code: UnknownValue;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type VideoManagerBroadcastIDQuery_VideoBroadcast = {
-  id: ID;
   __typename: string;
 };
 
@@ -61023,7 +60585,7 @@ export type VideoManagerVideo = {
    */
   id: ID;
   /** @example ["ARCHIVE", "HIGHLIGHT", "UPLOAD"] */
-  broadcastType: string;
+  broadcastType: BroadcastType;
   /** @example ["The legendary TwitchCon Drag Showcase is back! Check out all the amazing performers right here!", "Now you know when our show happen! Nice."] */
   description: null | string;
   game: null | {
@@ -61078,7 +60640,7 @@ export type VideoManagerVideo = {
   renditions: null | VideoManagerVideoRenditions;
   scope: UnknownValue;
   /** @example ["RECORDED", "RECORDING"] */
-  status: string;
+  status: VideoStatus;
   tags: UnknownValue;
   /** ⚠️ Low confidence about: nullable */
   thumbnailURLs: null | (null | string)[];
@@ -61222,9 +60784,9 @@ export type VideoMetadataVideo = {
    */
   lengthSeconds: number;
   /** @example ["ARCHIVE", "HIGHLIGHT", "UPLOAD"] */
-  broadcastType: string;
+  broadcastType: BroadcastType;
   /** @example ["RECORDED", "RECORDING"] */
-  status: string;
+  status: VideoStatus;
   owner: null | {
     /**
      * @pattern ^[0-9]+$
@@ -61265,6 +60827,15 @@ export type VideoMomentEdge = {
   node: null | (VideoChapter & { __typename: "VideoMoment" });
   __typename: "VideoMomentEdge";
 };
+
+/** ℹ️ Not real Twitch type name */
+export type VideoMomentType =
+  | "GAME_CHANGE"
+  | "HEARTHSTONE_VCA"
+  | "OVERWATCH_VCA"
+  | "PUBG_VCA"
+  | "STREAM_MARKER"
+  | "VCA";
 
 export type VideoMutedSegment = {
   /**
@@ -61494,7 +61065,7 @@ export type VideoPlayerVideoMoment = {
    */
   positionMilliseconds: number;
   /** @example ["GAME_CHANGE"] */
-  type: string;
+  type: VideoMomentType;
   /** @example ["Just Chatting", "Grand Theft Auto V", "Terraria", "End of Abyss", "South Park: Snow Day!", "4D Golf", "Bloody Ink"] */
   description: string;
   /** @example [""] */
@@ -61551,7 +61122,7 @@ export type VideoShelfEdge = {
     /** @example [""] */
     description: null | string;
     /** @example ["TOP_CLIPS", "LATEST_BROADCASTS", "LATEST_NON_BROADCASTS", "ALL_VIDEOS", "COLLECTION"] */
-    type: string;
+    type: VideoShelfType;
     collection: null | (PreviewCollection & { __typename: "Collection" });
     items: null | (ShelfPreviewCardClip | PreviewCardVideo)[];
     __typename: "VideoShelf";
@@ -61559,7 +61130,29 @@ export type VideoShelfEdge = {
   __typename: "VideoShelfEdge";
 };
 
-export type VideoSort = "TIME" | "VIEWS";
+/** ℹ️ Not real Twitch type name */
+export type VideoShelfType =
+  | "ALL_VIDEOS"
+  | "COLLECTION"
+  | "GAME"
+  | "LATEST_BROADCASTS"
+  | "LATEST_NON_BROADCASTS"
+  | "LONG_VIDEOS"
+  | "SHORT_VIDEOS"
+  | "TOP_CLIPS";
+
+export type VideoSort = "DURATION" | "DURATION_ASC" | "TIME" | "TIME_ASC" | "VIEWS" | "VIEWS_ASC";
+
+/** ℹ️ Not real Twitch type name */
+export type VideoStatus =
+  | "CREATED"
+  | "FAILED"
+  | "PENDING_TRANSCODE"
+  | "RECORDED"
+  | "RECORDING"
+  | "TRANSCODING"
+  | "UNPROCESSED"
+  | "UPLOADING";
 
 /** ℹ️ Not real Twitch type name */
 export type ViewCountCapRemoveViewCountCap_RemoveViewCountCap = {
@@ -61771,28 +61364,27 @@ export type ViewerCardCommunityMoments_ChannelViewerEarnedCommunityMomentsEdgesN
    * @format date-time
    */
   createdAt: null | string;
-  clip:
-    | null
-    | ViewerCardCommunityMoments_ChannelViewerEarnedCommunityMomentsEdgesNodeClip
-    | ViewerCardCommunityMoments_ChannelViewerEarnedCommunityMomentsEdgesNodeClip[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type ViewerCardCommunityMoments_ChannelViewerEarnedCommunityMomentsEdgesNodeClip = {
-  id: ID;
-  /** ⚠️ Low confidence about: nullable */
-  title: null | string;
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format uri
-   */
-  thumbnailURL: null | string;
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format uri
-   */
-  url: null | string;
+  clip: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["3942697259"]
+     */
+    id: ID;
+    /** @example ["xqc makes the wrong choice", "wow"] */
+    title: string;
+    /**
+     * @example ["", "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/ce4b4ef1-4e8d-4391-bff6-2bc4c5506a4d/landscape/thumb/thumb-0000000000-1920x1080.jpg", "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/b0181c83-be87-4dab-ad46-15dde4d81647/landscape/thumb/thumb-0000000000-1920x1080.jpg"]
+     * @gqlArg `width: Int [480, 86, 147, 260]`
+     * @gqlArg `height: Int [272, 45, 260, 147]`
+     */
+    thumbnailURL: string;
+    /**
+     * @format uri
+     * @example ["https://www.twitch.tv/xqc/clip/DeliciousDelightfulPicklesWOOP", "https://www.twitch.tv/xqc/clip/NimbleProductiveAsparagusHeyGuys-s77ZvN10Yr-O2sfo"]
+     */
+    url: string;
+    __typename: "Clip";
+  };
   __typename: string;
 };
 
@@ -61813,10 +61405,65 @@ export type ViewerCardModLogsCaughtMessageFragment = {
     | null
     | ViewerCardModLogsCaughtMessageFragment_ViewerCardModLogsCaughtMessageCaughtMessageReason
     | ViewerCardModLogsCaughtMessageFragment_ViewerCardModLogsCaughtMessageCaughtMessageReason[];
-  content:
-    | null
-    | ViewerCardModLogsCaughtMessageFragment_ViewerCardModLogsCaughtMessageContent
-    | ViewerCardModLogsCaughtMessageFragment_ViewerCardModLogsCaughtMessageContent[];
+  content: null | {
+    /** @example ["NODDERS  vampire server"] */
+    text: string;
+    fragments: {
+      /** @example ["NODDERS  vampire server", "Clueless"] */
+      text: string;
+      content:
+        | null
+        | {
+            /** ⚠️ Low confidence about: nullable */
+            isCensored: null | boolean;
+            __typename: "AutoMod";
+          }
+        | {
+            /**
+             * @example ["emotesv2_42ba00f9d5e24c4ca189d642b9e0b0c9", "emotesv2_845e6a3e8a0a40d0afc90081defa16c1"]
+             * @aliasFor id
+             */
+            emoteID: ID;
+            /** @example ["c23ba858-6cca-49ac-9ba1-6886e74b63b2", "408258241"] */
+            setID: ID;
+            /** @example ["sumFast", "sumSmash", "sumPls", "sumMiting", "sumX", "sumKomrade", "sumPause"] */
+            token: string;
+            __typename: "Emote";
+          }
+        | {
+            /**
+             * ⚠️ Low confidence about: nullable
+             * @format uint32
+             */
+            bitsAmount: null | number;
+            prefix: UnknownValue;
+            tier: UnknownValue;
+            __typename: "CheermoteToken";
+          }
+        | {
+            /**
+             * @pattern ^[0-9]+$
+             * @example ["23161357"]
+             */
+            id: ID;
+            /** @example ["lirik", "twitch", "cdprojektred", "forsen", "tickett_", "st1mgreeen", "lipton_18"] */
+            login: string;
+            __typename: "User";
+          }
+        | {
+            /** @aliasFor id */
+            gifID: ID;
+            /**
+             * ⚠️ Low confidence about: nullable
+             * @format uri
+             */
+            url: null | string;
+            __typename: "GifContent";
+          };
+      __typename: "MessageFragment";
+    }[];
+    __typename: "MessageContent";
+  };
   sender:
     | null
     | ViewerCardModLogsCaughtMessageFragment_ViewerCardModLogsCaughtMessageSender
@@ -61899,73 +61546,6 @@ export type ViewerCardModLogsCaughtMessageFragment_ViewerCardModLogsCaughtMessag
   };
 
 /** ℹ️ Not real Twitch type name */
-export type ViewerCardModLogsCaughtMessageFragment_ViewerCardModLogsCaughtMessageContent = {
-  /** ⚠️ Low confidence about: nullable */
-  text: null | string;
-  fragments:
-    | null
-    | ViewerCardModLogsCaughtMessageFragment_ViewerCardModLogsCaughtMessageContentFragments
-    | ViewerCardModLogsCaughtMessageFragment_ViewerCardModLogsCaughtMessageContentFragments[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type ViewerCardModLogsCaughtMessageFragment_ViewerCardModLogsCaughtMessageContentFragments =
-  {
-    /** ⚠️ Low confidence about: nullable */
-    text: null | string;
-    content:
-      | {
-          /** ⚠️ Low confidence about: nullable */
-          isCensored: null | boolean;
-          __typename: "AutoMod";
-        }
-      | {
-          /**
-           * @example ["emotesv2_42ba00f9d5e24c4ca189d642b9e0b0c9", "emotesv2_845e6a3e8a0a40d0afc90081defa16c1"]
-           * @aliasFor id
-           */
-          emoteID: ID;
-          /** @example ["c23ba858-6cca-49ac-9ba1-6886e74b63b2", "408258241"] */
-          setID: ID;
-          /** @example ["sumFast", "sumSmash", "sumPls", "sumMiting", "sumX", "sumKomrade", "sumPause"] */
-          token: string;
-          __typename: "Emote";
-        }
-      | {
-          /**
-           * ⚠️ Low confidence about: nullable
-           * @format uint32
-           */
-          bitsAmount: null | number;
-          prefix: UnknownValue;
-          tier: UnknownValue;
-          __typename: "CheermoteToken";
-        }
-      | {
-          /**
-           * @pattern ^[0-9]+$
-           * @example ["23161357"]
-           */
-          id: ID;
-          /** @example ["lirik", "twitch", "cdprojektred", "forsen", "tickett_", "st1mgreeen", "lipton_18"] */
-          login: string;
-          __typename: "User";
-        }
-      | {
-          /** @aliasFor id */
-          gifID: ID;
-          /**
-           * ⚠️ Low confidence about: nullable
-           * @format uri
-           */
-          url: null | string;
-          __typename: "GifContent";
-        };
-    __typename: string;
-  };
-
-/** ℹ️ Not real Twitch type name */
 export type ViewerCardModLogsCaughtMessageFragment_ViewerCardModLogsCaughtMessageSender = {
   id: ID;
   /** ⚠️ Low confidence about: nullable */
@@ -62001,10 +61581,61 @@ export type ViewerCardModLogsChatMessageFragment = {
    * @format date-time
    */
   sentAt: null | string;
-  content:
-    | null
-    | ViewerCardModLogsChatMessageFragment_ViewerCardModLogsChatMessageContent
-    | ViewerCardModLogsChatMessageFragment_ViewerCardModLogsChatMessageContent[];
+  content: null | {
+    /** @example ["NODDERS  vampire server"] */
+    text: string;
+    fragments: {
+      /** @example ["NODDERS  vampire server", "Clueless"] */
+      text: string;
+      content:
+        | null
+        | {
+            /**
+             * @example ["emotesv2_42ba00f9d5e24c4ca189d642b9e0b0c9", "emotesv2_845e6a3e8a0a40d0afc90081defa16c1"]
+             * @aliasFor id
+             */
+            emoteID: ID;
+            /** @example ["c23ba858-6cca-49ac-9ba1-6886e74b63b2", "408258241"] */
+            setID: ID;
+            /** @example ["sumFast", "sumSmash", "sumPls", "sumMiting", "sumX", "sumKomrade", "sumPause"] */
+            token: string;
+            __typename: "Emote";
+          }
+        | {
+            /**
+             * ⚠️ Low confidence about: nullable
+             * @format uint32
+             */
+            bitsAmount: null | number;
+            prefix: UnknownValue;
+            tier: UnknownValue;
+            __typename: "CheermoteToken";
+          }
+        | {
+            /**
+             * @pattern ^[0-9]+$
+             * @example ["23161357"]
+             */
+            id: ID;
+            /** @example ["lirik", "twitch", "cdprojektred", "forsen", "tickett_", "st1mgreeen", "lipton_18"] */
+            login: string;
+            __typename: "User";
+          }
+        | {
+            /** @aliasFor id */
+            gifID: ID;
+            /**
+             * ⚠️ Low confidence about: nullable
+             * @format uri
+             */
+            url: null | string;
+            __typename: "GifContent";
+          }
+        | { __typename: "AutoMod" };
+      __typename: "MessageFragment";
+    }[];
+    __typename: "MessageContent";
+  };
   /** ⚠️ Low confidence about: nullable */
   isDeleted: null | boolean;
   lastUpdatedBy:
@@ -62016,67 +61647,6 @@ export type ViewerCardModLogsChatMessageFragment = {
     | ViewerCardModLogsChatMessageFragment_ViewerCardModLogsChatMessageOriginatorChannel
     | ViewerCardModLogsChatMessageFragment_ViewerCardModLogsChatMessageOriginatorChannel[];
   __typename: "ViewerCardModLogsChatMessage";
-};
-
-/** ℹ️ Not real Twitch type name */
-export type ViewerCardModLogsChatMessageFragment_ViewerCardModLogsChatMessageContent = {
-  /** ⚠️ Low confidence about: nullable */
-  text: null | string;
-  fragments:
-    | null
-    | ViewerCardModLogsChatMessageFragment_ViewerCardModLogsChatMessageContentFragments
-    | ViewerCardModLogsChatMessageFragment_ViewerCardModLogsChatMessageContentFragments[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type ViewerCardModLogsChatMessageFragment_ViewerCardModLogsChatMessageContentFragments = {
-  /** ⚠️ Low confidence about: nullable */
-  text: null | string;
-  content:
-    | {
-        /**
-         * @example ["emotesv2_42ba00f9d5e24c4ca189d642b9e0b0c9", "emotesv2_845e6a3e8a0a40d0afc90081defa16c1"]
-         * @aliasFor id
-         */
-        emoteID: ID;
-        /** @example ["c23ba858-6cca-49ac-9ba1-6886e74b63b2", "408258241"] */
-        setID: ID;
-        /** @example ["sumFast", "sumSmash", "sumPls", "sumMiting", "sumX", "sumKomrade", "sumPause"] */
-        token: string;
-        __typename: "Emote";
-      }
-    | {
-        /**
-         * ⚠️ Low confidence about: nullable
-         * @format uint32
-         */
-        bitsAmount: null | number;
-        prefix: UnknownValue;
-        tier: UnknownValue;
-        __typename: "CheermoteToken";
-      }
-    | {
-        /**
-         * @pattern ^[0-9]+$
-         * @example ["23161357"]
-         */
-        id: ID;
-        /** @example ["lirik", "twitch", "cdprojektred", "forsen", "tickett_", "st1mgreeen", "lipton_18"] */
-        login: string;
-        __typename: "User";
-      }
-    | {
-        /** @aliasFor id */
-        gifID: ID;
-        /**
-         * ⚠️ Low confidence about: nullable
-         * @format uri
-         */
-        url: null | string;
-        __typename: "GifContent";
-      };
-  __typename: string;
 };
 
 /** ℹ️ Not real Twitch type name */
@@ -62288,29 +61858,21 @@ export type ViewerCard_UserRelationship = {
    * @format date-time
    */
   followedAt: null | string;
-  subscriptionBenefit:
-    | null
-    | ViewerCard_UserRelationshipSubscriptionBenefit
-    | ViewerCard_UserRelationshipSubscriptionBenefit[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type ViewerCard_UserRelationshipSubscriptionBenefit = {
-  id: ID;
-  tier: UnknownValue;
-  purchasedWithPrime: UnknownValue;
-  gift:
-    | null
-    | ViewerCard_UserRelationshipSubscriptionBenefitGift
-    | ViewerCard_UserRelationshipSubscriptionBenefitGift[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type ViewerCard_UserRelationshipSubscriptionBenefitGift = {
-  /** ⚠️ Low confidence about: nullable */
-  isGift: null | boolean;
+  subscriptionBenefit: null | {
+    /** @example ["3L7hSWPX941bMubywA98e4uYNdT", "3KyHdOj3R8PmXqz66jFOU07Ia7D"] */
+    id: ID;
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["1000"]
+     */
+    tier: string;
+    purchasedWithPrime: boolean;
+    gift: {
+      isGift: boolean;
+      __typename: "SubscriptionGift";
+    };
+    __typename: "SubscriptionBenefit";
+  };
   __typename: string;
 };
 
@@ -62320,6 +61882,17 @@ export type ViewerCard_UserSelfConnectionBanStatus = {
   isPermanent: null | boolean;
   __typename: string;
 };
+
+/** ℹ️ Not real Twitch type name */
+export type ViewerMilestoneCategory = "WATCH_STREAK";
+
+/** ℹ️ Not real Twitch type name */
+export type ViewerMilestoneShareStatus =
+  | "CAN_NOT_SHARE"
+  | "CAN_SHARE"
+  | "DO_NOT_SHARE"
+  | "SHARED"
+  | "UNKNOWN";
 
 export type ViewerProgressCardFragment = {
   previousValue: UnknownValue;
@@ -62431,14 +62004,14 @@ export type WatchStreakMilestoneFragment = {
      */
     value: string;
     /** @example ["WATCH_STREAK"] */
-    category: string;
+    category: ViewerMilestoneCategory;
     /**
      * @format date-time
      * @example ["2026-10-27T22:32:21Z", "2026-10-26T17:00:43Z"]
      */
     achievementTimestamp: null | string;
     /** @example ["CAN_SHARE", "CAN_NOT_SHARE"] */
-    shareStatus: string;
+    shareStatus: ViewerMilestoneShareStatus;
     __typename: "ViewerMilestone";
   };
   /**
@@ -62452,7 +62025,7 @@ export type WatchStreakMilestoneFragment = {
    */
   watchStreakCopoBonus: number;
   /** @example ["ACTIVE", "SUSPENDED", "NONE"] */
-  state: string;
+  state: WatchStreakState;
   missedStreams: null | WatchStreakMissedStreamFragment[];
   /**
    * @format date-time
@@ -62482,7 +62055,7 @@ export type WatchStreakMissedStreamFragment = {
    */
   endedAt: string;
   /** @example ["SUSPENDED"] */
-  state: string;
+  state: WatchStreakMissedStreamState;
   channel: {
     /**
      * @pattern ^[0-9]+$
@@ -62503,6 +62076,12 @@ export type WatchStreakMissedStreamFragment = {
   __typename: "WatchStreakMissedStream";
 };
 
+/** ℹ️ Not real Twitch type name */
+export type WatchStreakMissedStreamState = "SUSPENDED";
+
+/** ℹ️ Not real Twitch type name */
+export type WatchStreakState = "ACTIVE" | "NONE" | "SUSPENDED";
+
 export type WatchTrackBroadcastFragment = {
   /**
    * @pattern ^[0-9]+$
@@ -62510,7 +62089,7 @@ export type WatchTrackBroadcastFragment = {
    */
   id: ID;
   /** @example ["EN", "ES"] */
-  language: string;
+  language: BroadcastSettingsLanguage;
   __typename: "BroadcastSettings";
 };
 
@@ -62581,6 +62160,9 @@ export type WeeklyVisitRewardsQuery_ChannelSelfEdgeWeeklyVisitRewardsEventConfig
 };
 
 /** ℹ️ Not real Twitch type name */
+export type WhisperSpamInfoLikelihood = "HIGH" | "LOW" | "MEDIUM";
+
+/** ℹ️ Not real Twitch type name */
 export type WhisperThreadReportUser_ReportContent = {
   /** ⚠️ Low confidence about: nullable */
   contentID: null | ID;
@@ -62599,21 +62181,13 @@ export type WhisperThreadSetThreadSpamStatus_UpdateWhisperThread = {
 /** ℹ️ Not real Twitch type name */
 export type WhisperThreadSetThreadSpamStatus_UpdateWhisperThreadThread = {
   id: ID;
-  spamInfo:
-    | null
-    | WhisperThreadSetThreadSpamStatus_UpdateWhisperThreadThreadSpamInfo
-    | WhisperThreadSetThreadSpamStatus_UpdateWhisperThreadThreadSpamInfo[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type WhisperThreadSetThreadSpamStatus_UpdateWhisperThreadThreadSpamInfo = {
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format date-time
-   */
-  lastMarkedNotSpamAt: null | string;
-  likelihood: UnknownValue;
+  spamInfo: null | {
+    /** @format date-time */
+    lastMarkedNotSpamAt: null | string;
+    /** @example ["LOW"] */
+    likelihood: WhisperSpamInfoLikelihood;
+    __typename: "WhisperSpamInfo";
+  };
   __typename: string;
 };
 
@@ -62731,7 +62305,7 @@ export type YourCommunityCardFragment = {
   asset: null | YourCommunityUserFragment | YourCommunityGameFragment;
   similarity: null;
   /** @example ["UNKNOWN"] */
-  relationshipToChannel: string;
+  relationshipToChannel: CommunityCreatorHomeCardRelationshipToChannel;
   isLive: boolean;
   error:
     | null
@@ -62810,16 +62384,14 @@ export type YourCommunityUserFragment = {
 
 /** ℹ️ Not real Twitch type name */
 export type YoutubeExportModalExportVideoToYoutube_ExportVideoToYoutube = {
-  video:
-    | null
-    | YoutubeExportModalExportVideoToYoutube_ExportVideoToYoutubeVideo
-    | YoutubeExportModalExportVideoToYoutube_ExportVideoToYoutubeVideo[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type YoutubeExportModalExportVideoToYoutube_ExportVideoToYoutubeVideo = {
-  id: ID;
+  video: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["2323270866"]
+     */
+    id: ID;
+    __typename: "Video";
+  };
   __typename: string;
 };
 
@@ -63331,6 +62903,10 @@ export type AccessIsSocialGiftSubsEligibleData = {
       isAcquiredCreator: null | boolean;
       __typename: "Payout";
     };
+    subReferrals:
+      | null
+      | AccessIsSocialGiftSubsEligible_UserSubReferrals
+      | AccessIsSocialGiftSubsEligible_UserSubReferrals[];
     __typename: "User";
   };
 };
@@ -63616,7 +63192,7 @@ export type AchievementsPageData = {
         reward: null | {
           __typename: "CreatorMilestone";
           /** @example ["IN_PROGRESS"] */
-          redemptionStatus: string;
+          redemptionStatus: CreatorMilestoneRedemptionStatus;
           /** @format uri */
           redemptionURL: null | string;
           redemptionCode: null | string;
@@ -63684,7 +63260,7 @@ export type ActiveCostreamDetailsData = {
     id: ID;
     activeCostreamDetails: {
       /** @example ["NONE"] */
-      role: string;
+      role: ActiveCostreamDetailsRole;
       organizer:
         | null
         | ActiveCostreamDetails_ActiveCostreamDetailsOrganizer
@@ -63827,7 +63403,7 @@ export type ActivityFeedClipData = {
       /** @example ["ce4b4ef1-4e8d-4391-bff6-2bc4c5506a4d/LANDSCAPE", "c8e52370-1429-4023-9ce8-9d016939e3c2/LANDSCAPE"] */
       id: ID;
       /** @example ["CREATED", "FAILED"] */
-      creationState: string;
+      creationState: ClipAssetCreationState;
       __typename: "ClipAsset";
     }[];
     game: null | {
@@ -64044,7 +63620,7 @@ export type AdBreaksInSecondsTimeseriesStatsStreamSummaryData = {
     login: string;
     timeseriesStats: {
       /** @example ["DAY", "WEEK", "MONTH"] */
-      granularity: string;
+      granularity: Granularity;
       adBreaksInSeconds:
         | null
         | AdBreaksInSecondsTimeseriesStatsStreamSummary_TimeseriesStatsAdBreaksInSeconds
@@ -65107,6 +64683,20 @@ export type AnnouncementCreatorColorResponse = QueryResponse<
   "Announcement_CreatorColor"
 >;
 
+export type AnnouncementsIconData = {
+  user: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["23161357"]
+     */
+    id: ID;
+    hasUnreadChangelogItems: boolean;
+    __typename: "User";
+  };
+};
+
+export type AnnouncementsIconResponse = QueryResponse<AnnouncementsIconData, "AnnouncementsIcon">;
+
 export type AnnualRecap2023Variables = { channelID: ID };
 
 export type AnnualRecap2023Data = {
@@ -65863,12 +65453,12 @@ export type B2BCheckoutPriceData = {
           self: {
             checkoutPrice: {
               /** @example ["UNKNOWN_USER_RESIDENCE"] */
-              errorCode: null | string;
+              errorCode: null | ProductPurchaseErrorCode;
               checkoutPriceSummary: null | {
                 /** @example ["aba55ea20a59cf1d233bd7dee3685b8f", "cf0c0e5f2eac857e660f2ae997e450e2"] */
                 id: ID;
                 /** @example ["EUR"] */
-                currency: string;
+                currency: PriceInfoCurrency;
                 /**
                  * @format int32
                  * @example [2]
@@ -65930,9 +65520,9 @@ export type B2BCheckoutQueryData = {
       eligiblePaymentMethodsPayload: {
         methods: {
           /** @example ["XSOLLA"] */
-          name: string;
+          name: EligiblePaymentMethodName;
           /** @example ["AVAILABLE"] */
-          availabilityStatus: string;
+          availabilityStatus: EligiblePaymentMethodAvailabilityStatus;
           /** ⚠️ Low confidence about: nullable */
           paymentScheme: null | string;
           authorizationAgreement:
@@ -65969,9 +65559,9 @@ export type B2BCheckoutQueryData = {
           /** @example [""] */
           chargeInstrumentID: ID;
           /** @example ["XSOLLA", "GOOGLE_IAB"] */
-          provider: string;
+          provider: PaymentProvider;
           /** @example ["UNKNOWN"] */
-          paymentType: string;
+          paymentType: PaymentMethodPaymentType;
           billingCountry: null;
           billingEmail: null | string;
           billingFirstName: null | string;
@@ -66015,10 +65605,51 @@ export type BadgeCollectionEarnedRewardsResponse = QueryResponse<
 export type BadgeRewardsGetQuestCampaignVariables = { campaignID: ID };
 
 export type BadgeRewardsGetQuestCampaignData = {
-  questCampaign:
-    | null
-    | BadgeRewardsGetQuestCampaign_QuestCampaign
-    | BadgeRewardsGetQuestCampaign_QuestCampaign[];
+  questCampaign: null | {
+    id: ID;
+    /** ⚠️ Low confidence about: nullable */
+    name: null | string;
+    status: UnknownValue;
+    /**
+     * ⚠️ Low confidence about: nullable
+     * @format date-time
+     */
+    startsAt: null | string;
+    /**
+     * ⚠️ Low confidence about: nullable
+     * @format date-time
+     */
+    endsAt: null | string;
+    /**
+     * ⚠️ Low confidence about: nullable
+     * @format uri
+     */
+    imageURL: null | string;
+    rewardGroups: null | {
+      id: ID;
+      unlockRequirements:
+        | null
+        | BadgeRewardsGetQuestCampaign_QuestRewardGroupUnlockRequirements
+        | BadgeRewardsGetQuestCampaign_QuestRewardGroupUnlockRequirements[];
+      rewards: null | {
+        id: ID;
+        /** ⚠️ Low confidence about: nullable */
+        name: null | string;
+        /**
+         * ⚠️ Low confidence about: nullable
+         * @format uri
+         */
+        imageAssetURL: null | string;
+        __typename: "QuestReward";
+      };
+      leaderboardConfig:
+        | null
+        | BadgeRewardsGetQuestCampaign_QuestCampaignRewardGroupsLeaderboardConfig
+        | BadgeRewardsGetQuestCampaign_QuestCampaignRewardGroupsLeaderboardConfig[];
+      __typename: "QuestRewardGroup";
+    };
+    __typename: "QuestCampaign";
+  };
 };
 
 export type BadgeRewardsGetQuestCampaignResponse = QueryResponse<
@@ -66101,7 +65732,7 @@ export type BadgesPageQueryData = {
       /** @example [""] */
       name: string;
       /** @example ["UNKNOWN"] */
-      state: string;
+      state: EmoticonPrefixState;
       __typename: "EmoticonPrefix";
     };
     relationship: null | BadgesPageQuery_UserRelationship | BadgesPageQuery_UserRelationship[];
@@ -66147,9 +65778,9 @@ export type BanEvasionDetectionSettingsData = {
         | {
             isEnabled: boolean;
             /** @example ["ACTIVE_MONITORING"] */
-            possibleTreatment: string;
+            possibleTreatment: BanEvasionDetectionSettingsPossibleTreatment;
             /** @example ["RESTRICTED"] */
-            likelyTreatment: string;
+            likelyTreatment: BanEvasionDetectionSettingsLikelyTreatment;
             __typename: "BanEvasionDetectionSettings";
           }
         | {
@@ -66288,7 +65919,7 @@ export type BatchGetWatchStreaksData = {
     achievedAt: string;
     isSuspended: boolean;
     /** @example ["ACTIVE", "SUSPENDED"] */
-    state: string;
+    state: WatchStreakState;
     /**
      * @format date-time
      * @example ["2026-10-28T10:15:44Z", "2026-10-28T16:58:09Z"]
@@ -66442,7 +66073,7 @@ export type BitsCardBitsData = {
     /** @example ["lirik", "twitch", "cdprojektred", "forsen", "tickett_", "st1mgreeen", "lipton_18"] */
     login: string;
     /** @example ["ACQUIRED"] */
-    bitsUserState: string;
+    bitsUserState: UserBitsUserState;
     bitsUserSettings: null | BitsUserSettings;
     __typename: "User";
   };
@@ -66735,10 +66366,10 @@ export type BitsOneClickCheckoutData = {
             /** @aliasFor checkoutPrice */
             recurlyCheckoutPrice: {
               /** @example ["UNKNOWN_USER_RESIDENCE"] */
-              errorCode: null | string;
+              errorCode: null | ProductPurchaseErrorCode;
               checkoutPriceSummary: null | {
                 /** @example ["EUR"] */
-                currency: string;
+                currency: PriceInfoCurrency;
                 /** ⚠️ Low confidence about: nullable */
                 description: null | string;
                 /**
@@ -67011,7 +66642,7 @@ export type BonusBitsChannelBannerEligibleRewardsData = {
               isEnabled: boolean;
               isPaused: boolean;
               /** @example ["POINTS"] */
-              pricingType: string;
+              pricingType: CommunityPointsCustomRewardPricingType;
               /**
                * @format uint32
                * @example [0]
@@ -67108,7 +66739,7 @@ export type BroadcastLanguageQueryData = {
        */
       id: ID;
       /** @example ["EN", "ES"] */
-      language: string;
+      language: BroadcastSettingsLanguage;
       __typename: "BroadcastSettings";
     };
     __typename: "User";
@@ -67278,7 +66909,7 @@ export type BrowsePagePromotedEventCardsData = {
   curatedTags: {
     /** @example ["stream-o-ween-2026", "nopixel-v"] */
     id: ID;
-    /** @example ["Stream-o-Ween", "Nopixel V", "EPL Katowice", "Valorant Champions 2026", "Shopping"] */
+    /** @example ["Stream-o-Ween", "Nopixel V", "EPL Katowice", "Valorant Champions 2026", "Shopping", "TwitchCon"] */
     displayName: string;
     /**
      * @format uri
@@ -67423,7 +67054,7 @@ export type BulkActiveHypeTrainStatusesQueryData = {
     isTreasureTrain: boolean;
     isSharedTrain: boolean;
     /** @example ["REGULAR", "TREASURE"] */
-    hypeTrainType: string;
+    hypeTrainType: ActiveHypeTrainStatusHypeTrainType;
     __typename: "ActiveHypeTrainStatus";
   }[];
 };
@@ -67457,7 +67088,7 @@ export type BulkAllActiveHypeTrainStatusesQueryData = {
     isTreasureTrain: boolean;
     isSharedTrain: boolean;
     /** @example ["REGULAR", "TREASURE"] */
-    hypeTrainType: string;
+    hypeTrainType: ActiveHypeTrainStatusHypeTrainType;
     __typename: "ActiveHypeTrainStatus";
   }[];
 };
@@ -67510,7 +67141,7 @@ export type BuyBitsCheckoutData = {
      */
     id: ID;
     /** @example ["ACQUIRED"] */
-    bitsUserState: string;
+    bitsUserState: UserBitsUserState;
     __typename: "User";
   };
 };
@@ -67603,7 +67234,7 @@ export type CanCreateClipData = {
   canCreateClip: {
     isAllowed: boolean;
     /** @example ["DJ_CATEGORY_NOT_CLIPPABLE"] */
-    errorCode: null | string;
+    errorCode: null | ClipCreationPermissionEligibilityErrorCode;
     /**
      * @format uint32
      * @example [0]
@@ -67635,7 +67266,7 @@ export type CanUploadVODData = {
   canUploadVOD: {
     isAllowed: boolean;
     /** @example ["UNKNOWN"] */
-    errorCode: null | string;
+    errorCode: null | UploadVODPermissionErrorCode;
     __typename: "UploadVODPermission";
   };
 };
@@ -67786,7 +67417,7 @@ export type CategoryRankingQueryData = {
   categoryRanking: {
     categories: CategoryRankingFragment[];
     /** @example ["NO_SUGGESTIONS"] */
-    error: null | string;
+    error: null | CategoryRankingListError;
     __typename: "CategoryRankingList";
   };
 };
@@ -68012,7 +67643,7 @@ export type CelebrationEmotesData = {
               /** @example ["sumFast", "sumSmash", "sumPls", "sumMiting", "sumX", "sumKomrade", "sumPause"] */
               token: string;
               /** @example ["ANIMATED", "STATIC"] */
-              assetType: string;
+              assetType: EmoteAssetType;
               __typename: "Emote";
             }[];
             __typename: "EmoteSet";
@@ -68128,7 +67759,7 @@ export type ChannelAnalyticsAdBreaksTimeseriesStatsData = {
     login: string;
     timeseriesStats: {
       /** @example ["DAY", "WEEK", "MONTH"] */
-      granularity: string;
+      granularity: Granularity;
       adBreaksInSeconds:
         | null
         | ChannelAnalyticsAdBreaksTimeseriesStats_TimeseriesStatsAdBreaksInSeconds
@@ -68165,7 +67796,7 @@ export type ChannelAnalyticsAdTimePerHourTimeseriesStatsData = {
     login: string;
     timeseriesStats: {
       /** @example ["DAY", "WEEK", "MONTH"] */
-      granularity: string;
+      granularity: Granularity;
       adTimePerHour:
         | null
         | ChannelAnalyticsAdTimePerHourTimeseriesStats_TimeseriesStatsAdTimePerHour
@@ -68202,7 +67833,7 @@ export type ChannelAnalyticsAverageViewersTimeseriesStatsData = {
     login: string;
     timeseriesStats: {
       /** @example ["DAY", "WEEK", "MONTH"] */
-      granularity: string;
+      granularity: Granularity;
       averageViewers: {
         /**
          * @format int32
@@ -68248,7 +67879,7 @@ export type ChannelAnalyticsChatMessagesTimeseriesStatsData = {
     login: string;
     timeseriesStats: {
       /** @example ["DAY", "WEEK", "MONTH"] */
-      granularity: string;
+      granularity: Granularity;
       chatMessages:
         | null
         | ChannelAnalyticsChatMessagesTimeseriesStats_TimeseriesStatsChatMessages
@@ -68285,7 +67916,7 @@ export type ChannelAnalyticsChattersTimeseriesStatsData = {
     login: string;
     timeseriesStats: {
       /** @example ["DAY", "WEEK", "MONTH"] */
-      granularity: string;
+      granularity: Granularity;
       uniqueChatters: {
         /**
          * @format int32
@@ -68331,7 +67962,7 @@ export type ChannelAnalyticsClipsCreatedTimeseriesStatsData = {
     login: string;
     timeseriesStats: {
       /** @example ["DAY", "WEEK", "MONTH"] */
-      granularity: string;
+      granularity: Granularity;
       clipsCreated:
         | null
         | ChannelAnalyticsClipsCreatedTimeseriesStats_TimeseriesStatsClipsCreated
@@ -68368,7 +67999,7 @@ export type ChannelAnalyticsClipViewsTimeseriesStatsData = {
     login: string;
     timeseriesStats: {
       /** @example ["DAY", "WEEK", "MONTH"] */
-      granularity: string;
+      granularity: Granularity;
       clipViews:
         | null
         | ChannelAnalyticsClipViewsTimeseriesStats_TimeseriesStatsClipViews
@@ -68445,7 +68076,7 @@ export type ChannelAnalyticsCSVExporterData = {
     login: string;
     timeseriesStats: {
       /** @example ["DAY", "WEEK", "MONTH"] */
-      granularity: string;
+      granularity: Granularity;
       adBreaksInSeconds:
         | null
         | ChannelAnalyticsCSVExporter_TimeseriesStatsAdBreaksInSeconds
@@ -68608,7 +68239,7 @@ export type ChannelAnalyticsFollowsTimeseriesStatsData = {
     login: string;
     timeseriesStats: {
       /** @example ["DAY", "WEEK", "MONTH"] */
-      granularity: string;
+      granularity: Granularity;
       follows: {
         /**
          * @format int32
@@ -68688,7 +68319,7 @@ export type ChannelAnalyticsHostAndRaidViewersTimeseriesStatsData = {
     login: string;
     timeseriesStats: {
       /** @example ["DAY", "WEEK", "MONTH"] */
-      granularity: string;
+      granularity: Granularity;
       hostRaidViewers:
         | null
         | ChannelAnalyticsHostAndRaidViewersTimeseriesStats_TimeseriesStatsHostRaidViewers
@@ -68725,7 +68356,7 @@ export type ChannelAnalyticsLiveViewsTimeseriesStatsData = {
     login: string;
     timeseriesStats: {
       /** @example ["DAY", "WEEK", "MONTH"] */
-      granularity: string;
+      granularity: Granularity;
       liveViews:
         | null
         | ChannelAnalyticsLiveViewsTimeseriesStats_TimeseriesStatsLiveViews
@@ -68762,7 +68393,7 @@ export type ChannelAnalyticsMaxViewersTimeseriesStatsData = {
     login: string;
     timeseriesStats: {
       /** @example ["DAY", "WEEK", "MONTH"] */
-      granularity: string;
+      granularity: Granularity;
       maxViewers:
         | null
         | ChannelAnalyticsMaxViewersTimeseriesStats_TimeseriesStatsMaxViewers
@@ -68799,7 +68430,7 @@ export type ChannelAnalyticsMinutesWatchedTimeseriesStatsData = {
     login: string;
     timeseriesStats: {
       /** @example ["DAY", "WEEK", "MONTH"] */
-      granularity: string;
+      granularity: Granularity;
       minutesWatched: {
         /**
          * @format int32
@@ -68947,7 +68578,7 @@ export type ChannelAnalyticsPromotionClickTimeseriesStatsData = {
     login: string;
     timeseriesStats: {
       /** @example ["DAY", "WEEK", "MONTH"] */
-      granularity: string;
+      granularity: Granularity;
       promotionClick:
         | null
         | ChannelAnalyticsPromotionClickTimeseriesStats_TimeseriesStatsPromotionClick
@@ -68984,7 +68615,7 @@ export type ChannelAnalyticsPromotionDisplayTimeseriesStatsData = {
     login: string;
     timeseriesStats: {
       /** @example ["DAY", "WEEK", "MONTH"] */
-      granularity: string;
+      granularity: Granularity;
       promotionDisplay:
         | null
         | ChannelAnalyticsPromotionDisplayTimeseriesStats_TimeseriesStatsPromotionDisplay
@@ -69011,7 +68642,7 @@ export type ChannelAnalyticsRevenueTermsQueryData = {
     id: ID;
     djStatus: {
       /** @example ["NOT_DJ"] */
-      programState: string;
+      programState: DJStatusProgramState;
       __typename: "DJStatus";
     };
     payoutPlans:
@@ -69094,7 +68725,7 @@ export type ChannelAnalyticsTimeStreamedTimeseriesStatsData = {
     login: string;
     timeseriesStats: {
       /** @example ["DAY", "WEEK", "MONTH"] */
-      granularity: string;
+      granularity: Granularity;
       timeStreamed: {
         /**
          * @format int32
@@ -69140,7 +68771,7 @@ export type ChannelAnalyticsUniqueViewersTimeseriesStatsData = {
     login: string;
     timeseriesStats: {
       /** @example ["DAY", "WEEK", "MONTH"] */
-      granularity: string;
+      granularity: Granularity;
       uniqueViewers: {
         /**
          * @format int32
@@ -69221,7 +68852,7 @@ export type ChannelAuditData = {
          */
         id: ID;
         /** @example ["CHANNEL_ROLE_CHANGE", "TITLE_UPDATE", "GAME_UPDATE"] */
-        action: string;
+        action: ChannelAuditAction;
         /** @example ["MOD", "test stream title", "Science & Technology", "Balatro"] */
         newValue: string;
         /** @example ["test stream title", "Balatro", "Science & Technology"] */
@@ -69397,7 +69028,7 @@ export type ChannelCollaborationEligibilityQueryData = {
        */
       id: ID;
       /** @example ["UNDEFINED", "NONE"] */
-      canJoinStatus: string;
+      canJoinStatus: GuestStarChannelCollaborationCanJoinStatus;
       __typename: "GuestStarChannelCollaboration";
     }[];
     __typename: "GuestStarCollaborationStatuses";
@@ -69535,7 +69166,7 @@ export type ChannelDropsCampaignsData = {
           name: string;
           progressCriteria: {
             /** @example ["WATCH", "SUB"] */
-            requirementType: string;
+            requirementType: DropsProgressCriteriaRequirementType;
             requirements: {
               /**
                * @format uint32
@@ -69597,7 +69228,7 @@ export type ChannelDropsCampaignsData = {
              */
             thumbnailURL: string;
             /** @example ["DIRECT_ENTITLEMENT", "POOL", "CODE", "BADGE"] */
-            distributionType: string;
+            distributionType: DropsRewardDistributionType;
             __typename: "DropsReward";
           }[];
           __typename: "DropsRewardGroup";
@@ -69736,7 +69367,7 @@ export type ChannelLayoutData = {
          */
         userDoesNotExist: string;
         /** @example ["UNKNOWN", "DMCA", "TOS_TEMPORARY", "TOS_INDEFINITE"] */
-        reason: string;
+        reason: UserDoesNotExistReason;
         __typename: "UserDoesNotExist";
       }
     | {
@@ -69794,7 +69425,7 @@ export type ChannelLeaderboardsData = {
        */
       id: ID;
       /** @example ["WEEK", "MONTH"] */
-      leaderboardTimePeriod: string;
+      leaderboardTimePeriod: TimePeriod;
       leaderboardSet: {
         bits: null | (ChannelLeaderboardWithRankContext & { __typename: "UserLeaderboard" });
         subGift: null | (ChannelLeaderboardWithRankContext & { __typename: "UserLeaderboard" });
@@ -70040,7 +69671,7 @@ export type ChannelPageSubscribeButtonUserData = {
         isDNRd: boolean;
         isFreeTrial: boolean;
         /** @example ["WEB"] */
-        platform: string;
+        platform: SubscriptionBenefitPlatform;
         pendingSubscription: null | PendingSubscription;
         gift: {
           isGift: boolean;
@@ -70924,10 +70555,16 @@ export type ChannelScheduleSegmentVariables = {
 
 export type ChannelScheduleSegmentData = {
   /** @directive include(if: $isSegmentID) */
-  scheduleSegment?:
-    | null
-    | ChannelScheduleSegment_ScheduleSegment
-    | ChannelScheduleSegment_ScheduleSegment[];
+  scheduleSegment?: null | {
+    /** @example ["eyJzZWdtZW50SUQiOiJiNzU0MDEzZC1iOTRlLTRlNmEtYWFmYi03YmM0NmMzNDEzODciLCJpc29ZZWFyIjoyMDI2LCJpc29XZWVrIjozOH0=", "eyJzZWdtZW50SUQiOiI1ZDhiZjNmYi1mN2I0LTRlYTMtOTZhNC1lZTI2MDBlNDNkNzEiLCJpc29ZZWFyIjoyMDI2LCJpc29XZWVrIjo0NH0="] */
+    id: ID;
+    /**
+     * @format date-time
+     * @example ["2026-09-20T16:00:00Z", "2026-10-28T01:00:00Z"]
+     */
+    startAt: string;
+    __typename: "ScheduleSegment";
+  };
   /** @directive include(if: $isVodID) */
   video?: null | {
     /**
@@ -70989,7 +70626,7 @@ export type ChannelShellData = {
          */
         userDoesNotExist: string;
         /** @example ["UNKNOWN", "DMCA", "TOS_TEMPORARY", "TOS_INDEFINITE"] */
-        reason: string;
+        reason: UserDoesNotExistReason;
         __typename: "UserDoesNotExist";
       }
     | {
@@ -71098,11 +70735,11 @@ export type ChannelSocialButtonsData = {
             /** @example ["sumFast", "sumSmash", "sumPls", "sumMiting", "sumX", "sumKomrade", "sumPause"] */
             token: string;
             /** @example ["LIMITED_TIME", "SUBSCRIPTIONS", "GLOBALS", "SMILIES", "MEGA_COMMERCE", "FOLLOWER", "TWO_FACTOR"] */
-            type: string;
+            type: EmoteType;
             __typename: "Emote";
           }[];
           /** @example ["NONE"] */
-          productType: string;
+          productType: EmoteSetProductType;
           __typename: "EmoteSet";
         }[];
     __typename: "Channel";
@@ -71334,9 +70971,9 @@ export type ChannelSubSuccessScreenData = {
               | null
               | {
                   /** @example ["HF", "SG", "TK"] */
-                  code: string;
+                  code: EmoteModifierCode;
                   /** @example ["HORIZONTAL_FLIP", "SUNGLASSES", "THINKING"] */
-                  name: string;
+                  name: EmoteModifierName;
                   __typename: "EmoteModifier";
                 }[];
             __typename: "SubscriptionProduct";
@@ -71472,7 +71109,7 @@ export type ChannelTrailerReviewData = {
        */
       id: ID;
       /** @example ["EN", "ES"] */
-      language: string;
+      language: BroadcastSettingsLanguage;
       __typename: "BroadcastSettings";
     };
     __typename: "User";
@@ -71757,6 +71394,40 @@ export type CharityDiscoveryPageSearchCharitiesResponse = QueryResponse<
   "CharityDiscoveryPage_SearchCharities"
 >;
 
+export type CharityNavItemVariables = { channelLogin: string };
+
+export type CharityNavItemData = {
+  channel: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["26490481"]
+     */
+    id: ID;
+    activeCharityCampaign: null | {
+      id: ID;
+      __typename: "CharityCampaign";
+    };
+    charityCampaigns: {
+      edges: {
+        node: null | {
+          id: ID;
+          __typename: "CharityCampaign";
+        };
+        __typename: string;
+      }[];
+      __typename: "CharityCampaignConnection";
+    };
+    __typename: "Channel";
+  };
+  requestInfo: {
+    /** @example ["DE"] */
+    countryCode: string;
+    __typename: "RequestInfo";
+  };
+};
+
+export type CharityNavItemResponse = QueryResponse<CharityNavItemData, "CharityNavItem">;
+
 export type CharityPanelOfferQueryVariables = {
   channelLogin: string;
   withEligibility: boolean;
@@ -71917,10 +71588,16 @@ export type CharityRootData = {
      * @example ["26490481"]
      */
     id: ID;
-    charityCampaigns:
-      | null
-      | CharityRoot_ChannelCharityCampaigns
-      | CharityRoot_ChannelCharityCampaigns[];
+    charityCampaigns: {
+      edges: {
+        node: null | {
+          id: ID;
+          __typename: "CharityCampaign";
+        };
+        __typename: string;
+      }[];
+      __typename: "CharityCampaignConnection";
+    };
     __typename: "Channel";
   };
   requestInfo: {
@@ -71983,7 +71660,7 @@ export type ChatBadgeListGetBadgeTiersData = {
       /** @example [""] */
       name: string;
       /** @example ["UNKNOWN"] */
-      state: string;
+      state: EmoticonPrefixState;
       __typename: "EmoticonPrefix";
     };
     __typename: "User";
@@ -72090,7 +71767,7 @@ export type ChatClipData = {
       /** @example ["ce4b4ef1-4e8d-4391-bff6-2bc4c5506a4d/LANDSCAPE", "c8e52370-1429-4023-9ce8-9d016939e3c2/LANDSCAPE"] */
       id: ID;
       /** @example ["SOURCE", "RECOMPOSED"] */
-      type: string;
+      type: ClipAssetType;
       curator: null | {
         /**
          * @pattern ^[0-9]+$
@@ -72614,7 +72291,7 @@ export type ChatMessagesTimeseriesStatsStreamSummaryData = {
     login: string;
     timeseriesStats: {
       /** @example ["DAY", "WEEK", "MONTH"] */
-      granularity: string;
+      granularity: Granularity;
       chatMessages:
         | null
         | ChatMessagesTimeseriesStatsStreamSummary_TimeseriesStatsChatMessages
@@ -72826,7 +72503,7 @@ export type ChatRestrictionsData = {
     id: ID;
     self: null | {
       /** @example ["SUBSCRIBERS_ONLY", "FOLLOWERS_ONLY", "SLOW_MODE"] */
-      chatRestrictedReasons: null | string[];
+      chatRestrictedReasons: null | UserSelfConnectionChatRestrictedReasons[];
       /** @format date-time */
       lastRecentChatMessageAt: null | string;
       follower: null | {
@@ -73366,7 +73043,7 @@ export type ChattersTimeseriesStatsStreamSummaryData = {
     login: string;
     timeseriesStats: {
       /** @example ["DAY", "WEEK", "MONTH"] */
-      granularity: string;
+      granularity: Granularity;
       uniqueChatters: {
         /**
          * @format int32
@@ -73531,7 +73208,7 @@ export type CheckoutCreatorSubGoalData = {
           /** @example ["2iTRUeViGHhZmNv7MT9XfpMSu14", "3BP4EHza6gw8kXlziOieegxpvrn"] */
           id: ID;
           /** @example ["NEW_SUBS", "FOLLOWERS", "NEW_BITS", "SUBS"] */
-          contributionType: string;
+          contributionType: ChannelGoalContributionType;
           /**
            * @format uint32
            * @example [0, 2430015, 2459534, 1131904, 143093, 5]
@@ -73615,14 +73292,14 @@ export type CheckoutFormScreenManagerData = {
             /** @aliasFor checkoutPrice */
             recurlyCheckoutPrice: {
               /** @example ["UNKNOWN_USER_RESIDENCE"] */
-              errorCode: null | string;
+              errorCode: null | ProductPurchaseErrorCode;
               taxRegion:
                 | null
                 | CheckoutFormScreenManager_ProductPurchaseTaxRegion
                 | CheckoutFormScreenManager_ProductPurchaseTaxRegion[];
               checkoutPriceSummary: null | {
                 /** @example ["EUR"] */
-                currency: string;
+                currency: PriceInfoCurrency;
                 /**
                  * @format int32
                  * @example [2]
@@ -73682,10 +73359,10 @@ export type CheckoutFormScreenManagerData = {
             /** @aliasFor checkoutPrice */
             xsollaCheckoutPrice: {
               /** @example ["UNKNOWN_USER_RESIDENCE"] */
-              errorCode: null | string;
+              errorCode: null | ProductPurchaseErrorCode;
               checkoutPriceSummary: null | {
                 /** @example ["EUR"] */
-                currency: string;
+                currency: PriceInfoCurrency;
                 /**
                  * @format int32
                  * @example [2]
@@ -73746,7 +73423,7 @@ export type CheckoutFormScreenManagerData = {
           };
           plan: {
             /** @example ["AUTO_RENEW", "NO_RENEW"] */
-            renewalPolicy: string;
+            renewalPolicy: ChargeModelPlanRenewalPolicy;
             interval: {
               /**
                * @format uint32
@@ -73754,14 +73431,14 @@ export type CheckoutFormScreenManagerData = {
                */
               duration: number;
               /** @example ["MONTHS"] */
-              unit: string;
+              unit: ChargeModelPlanIntervalUnit;
               __typename: "ChargeModelPlanInterval";
             };
             __typename: "ChargeModelPlan";
           };
           previewPrice: {
             /** @example ["EUR", "USD"] */
-            currency: string;
+            currency: PriceInfoCurrency;
             /**
              * @format int32
              * @example [2]
@@ -73800,7 +73477,7 @@ export type CheckoutFormScreenManagerData = {
     eligibility: {
       isEligible: boolean;
       /** @example ["DEFAULT_PURCHASE"] */
-      purchaseType: string;
+      purchaseType: OfferEligibilityPurchaseType;
       reasonCode: null | string;
       /**
        * @format date-time
@@ -73812,7 +73489,7 @@ export type CheckoutFormScreenManagerData = {
     /** @format date-time */
     endAt: null | string;
     /** @example ["COMMUNITY", "SINGLE_RECIPIENT"] */
-    giftType: null | string;
+    giftType: null | OfferGiftType;
     /** @example ["amzn1.twitch.commerce.offer.98232214-5c3d-4da1-a9b3-c3333fb3483d", "amzn1.twitch.commerce.offer.3dedec40-a018-4790-0b9f-0f22ec580202"] */
     id: ID;
     quantity: {
@@ -73838,7 +73515,12 @@ export type CheckoutFormScreenManagerData = {
       /** @gqlArg `paymentSession: PaymentSession` */
       promoActions: null;
       eligiblePaymentMethodsPayload: {
-        methods: EligiblePaymentMethodFragment[];
+        methods: (EligiblePaymentMethodFragment & {
+          authorizationAgreement:
+            | null
+            | CheckoutFormScreenManager_EligiblePaymentMethodAuthorizationAgreement
+            | CheckoutFormScreenManager_EligiblePaymentMethodAuthorizationAgreement[];
+        })[];
         error: null;
         __typename: "EligiblePaymentMethodsPayload";
       };
@@ -73883,7 +73565,7 @@ export type CheckoutFormScreenManagerData = {
     __typename: "User";
   };
   /** @example ["NOT_APPLICABLE"] */
-  recurlySubscriptionBillingAddressCompleteness: null | string;
+  recurlySubscriptionBillingAddressCompleteness: null | RecurlySubscriptionBillingAddressCompleteness;
   requestInfo: {
     /** @example ["DE"] */
     countryCode: string;
@@ -73898,6 +73580,7 @@ export type CheckoutFormScreenManagerData = {
       sellerID: ID;
       __typename: "PayWithAmazonConfigs";
     };
+    adyenPublicKey: UnknownValue;
     /** @example ["eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZWRhY3RlZCI6dHJ1ZX0.ZGVkYWN0ZWQ"] */
     braintreeClientAuthorization: string;
     /** @example ["ewr1-vn374r7mAweyweeux3BBdB"] */
@@ -74119,7 +73802,7 @@ export type CheckoutPartnerPlusGoalData = {
     partnerPlusProgram: {
       canShowWidget: boolean;
       /** @example ["OFF", "LEVEL_2", "LEVEL_1"] */
-      widgetSetting: string;
+      widgetSetting: PartnerPlusProgramPublicWidgetSetting;
       /**
        * @format int32
        * @example [100, 50]
@@ -74237,14 +73920,14 @@ export type CheckoutPriceData = {
           self: {
             checkoutPrice: {
               /** @example ["UNKNOWN_USER_RESIDENCE"] */
-              errorCode: null | string;
+              errorCode: null | ProductPurchaseErrorCode;
               taxRegion:
                 | null
                 | CheckoutPrice_ProductPurchaseTaxRegion
                 | CheckoutPrice_ProductPurchaseTaxRegion[];
               checkoutPriceSummary: null | {
                 /** @example ["EUR"] */
-                currency: string;
+                currency: PriceInfoCurrency;
                 /**
                  * @format int32
                  * @example [2]
@@ -74356,6 +74039,20 @@ export type CheckoutRecentSubscribedChattersData = {
 export type CheckoutRecentSubscribedChattersResponse = QueryResponse<
   CheckoutRecentSubscribedChattersData,
   "CheckoutRecentSubscribedChatters"
+>;
+
+export type CheckoutV2PendingPurchaseOrderVariables = { pendingID: ID };
+
+export type CheckoutV2PendingPurchaseOrderData = {
+  pendingPurchaseOrder:
+    | null
+    | CheckoutV2PendingPurchaseOrder_PendingPurchaseOrder
+    | CheckoutV2PendingPurchaseOrder_PendingPurchaseOrder[];
+};
+
+export type CheckoutV2PendingPurchaseOrderResponse = QueryResponse<
+  CheckoutV2PendingPurchaseOrderData,
+  "CheckoutV2_PendingPurchaseOrder"
 >;
 
 export type CheckoutWatchStreaksData = {
@@ -74559,7 +74256,19 @@ export type ClipCommentRepliesData = {
      * @example ["01a12bf8-f62c-72c0-b8f7-2040c4cfa87c"]
      */
     id: ID;
-    replies: null | ClipCommentReplies_ClipCommentReplies | ClipCommentReplies_ClipCommentReplies[];
+    replies: null | {
+      edges: {
+        cursor: Cursor;
+        node: ClipCommentFragment;
+        __typename: "ClipCommentEdge";
+      }[];
+      pageInfo: null | {
+        hasNextPage: boolean;
+        endCursor: null | Cursor;
+        __typename: "PageInfo";
+      };
+      __typename: "ClipCommentConnection";
+    };
     __typename: "ClipComment";
   };
 };
@@ -74809,6 +74518,33 @@ export type ClipMetadataVodInfoQueryResponse = QueryResponse<
   "ClipMetadataVodInfoQuery"
 >;
 
+export type ClipPagePlayerVariables = { slug: ID };
+
+export type ClipPagePlayerData = {
+  clip:
+    | null
+    | (ClipStageMetadata & {
+        /**
+         * @pattern ^[0-9]+$
+         * @example ["3942697259"]
+         */
+        id: ID;
+        /**
+         * @format uint32
+         * @example [44, 26, 25, 42, 30, 59, 36, 41, 60, 29]
+         */
+        durationSeconds: number;
+        /**
+         * @example ["", "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/ce4b4ef1-4e8d-4391-bff6-2bc4c5506a4d/landscape/thumb/thumb-0000000000-1920x1080.jpg", "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/b0181c83-be87-4dab-ad46-15dde4d81647/landscape/thumb/thumb-0000000000-1920x1080.jpg"]
+         * @gqlArg `width: Int [480, 86, 147, 260]`
+         * @gqlArg `height: Int [272, 45, 260, 147]`
+         */
+        thumbnailURL: string;
+      });
+};
+
+export type ClipPagePlayerResponse = QueryResponse<ClipPagePlayerData, "ClipPagePlayer">;
+
 export type ClipRecapsVariables = {
   filter: RecapFilter;
   sort: RecapSort;
@@ -74886,7 +74622,7 @@ export type ClipsCardsGameData = {
     displayName: string;
     clips: null | {
       /** @example ["MAY_CONTAIN_MATURE_CONTENT"] */
-      banners: null | string[];
+      banners: null | ConnectionBanners[];
       pageInfo: null | {
         hasNextPage: boolean;
         __typename: "PageInfo";
@@ -74990,7 +74726,7 @@ export type ClipsChatCardClipData = {
        */
       aspectRatio: number;
       /** @example ["SOURCE", "RECOMPOSED"] */
-      type: string;
+      type: ClipAssetType;
       __typename: "ClipAsset";
     }[];
     __typename: "Clip";
@@ -75020,7 +74756,7 @@ export type ClipsCreatedTimeseriesStatsStreamSummaryData = {
     login: string;
     timeseriesStats: {
       /** @example ["DAY", "WEEK", "MONTH"] */
-      granularity: string;
+      granularity: Granularity;
       clipsCreated:
         | null
         | ClipsCreatedTimeseriesStatsStreamSummary_TimeseriesStatsClipsCreated
@@ -75097,7 +74833,7 @@ export type ClipsDownloadButtonData = {
       /** @example ["ce4b4ef1-4e8d-4391-bff6-2bc4c5506a4d/LANDSCAPE", "c8e52370-1429-4023-9ce8-9d016939e3c2/LANDSCAPE"] */
       id: ID;
       /** @example ["SOURCE", "RECOMPOSED"] */
-      type: string;
+      type: ClipAssetType;
       downloadQualities: {
         /** @example ["", "https://d1ndex63qxojbr.cloudfront.net/nauth/ce4b4ef1-4e8d-4391-bff6-2bc4c5506a4d/landscape/avc/1080/index.mp4", "https://d1ndex63qxojbr.cloudfront.net/nauth/ce4b4ef1-4e8d-4391-bff6-2bc4c5506a4d/landscape/avc/720/index.mp4"] */
         sourceURL: string;
@@ -75310,7 +75046,7 @@ export type ClipViewsTimeseriesStatsStreamSummaryData = {
     login: string;
     timeseriesStats: {
       /** @example ["DAY", "WEEK", "MONTH"] */
-      granularity: string;
+      granularity: Granularity;
       clipViews:
         | null
         | ClipViewsTimeseriesStatsStreamSummary_TimeseriesStatsClipViews
@@ -75375,10 +75111,11 @@ export type CollaborationInviteLinkExistingGuestStarSessionResponse = QueryRespo
 export type CollaborationPromoPrivateCalloutVariables = { channelID: ID };
 
 export type CollaborationPromoPrivateCalloutData = {
-  sharedChatSession:
-    | null
-    | CollaborationPromoPrivateCallout_SharedChatSession
-    | CollaborationPromoPrivateCallout_SharedChatSession[];
+  sharedChatSession: null | {
+    id: ID;
+    status: UnknownValue;
+    __typename: "SharedChatSession";
+  };
 };
 
 export type CollaborationPromoPrivateCalloutResponse = QueryResponse<
@@ -75555,10 +75292,18 @@ export type CollectionEditorSearchCreatorVideosData = {
      * @example ["23161357"]
      */
     id: ID;
-    searchVideos:
-      | null
-      | CollectionEditorSearchCreatorVideos_UserSearchVideos
-      | CollectionEditorSearchCreatorVideos_UserSearchVideos[];
+    searchVideos: null | {
+      edges: {
+        cursor: null | Cursor;
+        node: null | SearchCardVideo;
+        __typename: "VideoEdge";
+      }[];
+      pageInfo: null | {
+        hasNextPage: boolean;
+        __typename: "PageInfo";
+      };
+      __typename: "VideoConnection";
+    };
     __typename: "User";
   };
   collection: null | (CollectionEditorFields & ItemConnection);
@@ -76098,10 +75843,83 @@ export type CommonHooksSearchVideosData = {
      * @example ["23161357"]
      */
     id: ID;
-    searchVideos:
-      | null
-      | CommonHooksSearchVideos_UserSearchVideos
-      | CommonHooksSearchVideos_UserSearchVideos[];
+    searchVideos: null | {
+      edges: {
+        cursor: null | Cursor;
+        node: null | {
+          contentTags: null | TagFragment[];
+          /**
+           * @format date-time
+           * @example ["2024-12-10T16:45:35Z", "2026-10-27T15:45:17Z"]
+           */
+          createdAt: string;
+          owner: null | {
+            /**
+             * @pattern ^[0-9]+$
+             * @example ["23161357"]
+             */
+            id: ID;
+            /** @example ["Twitch", "CD PROJEKT RED", "LIRIK", "forsen", "ayuuexe", "xQc", "RSDragonwilds"] */
+            displayName: string;
+            /** @example ["lirik", "twitch", "cdprojektred", "forsen", "tickett_", "st1mgreeen", "lipton_18"] */
+            login: string;
+            roles: null | {
+              isPartner: boolean;
+              __typename: "UserRoles";
+            };
+            __typename: "User";
+          };
+          /**
+           * @pattern ^[0-9]+$
+           * @example ["2323270866"]
+           */
+          id: ID;
+          game: null | {
+            /**
+             * @pattern ^[0-9]+$
+             * @example ["509672"]
+             */
+            id: ID;
+            /** @example ["IRL", "Cyberpunk 2077", "Just Chatting", "Special Events", "League of Legends", "You Know The Drill", "RuneScape: Dragonwilds"] */
+            name: string;
+            /** @example ["IRL", "Cyberpunk 2077", "Just Chatting", "Special Events", "Gwent: The Witcher Card Game", "Grand Theft Auto V", "DayZ"] */
+            displayName: string;
+            __typename: "Game";
+          };
+          /**
+           * @format uint32
+           * @example [15389, 4359, 4621, 621, 4472]
+           */
+          lengthSeconds: number;
+          /**
+           * @example ["https://static-cdn.jtvnw.net/cf_vods/d1m7jfoe9zdc1j/82ef4729c6011d6072e2_twitch_43295848617_1733849129//thumb/thumb0-90x60.jpg", "https://static-cdn.jtvnw.net/cf_vods/d3fi1amfgojobc/7fbc776f6b7a4659c4e4_cdprojektred_319108158181_1793115910//thumb/thumb0-90x60.jpg"]
+           * @gqlArg `width: Int [320, 90, 640, 240, 400, 1280, 80, 160, 214]`
+           * @gqlArg `height: Int [180, 60, 360, 135, 225, 480, 720, 51, 45, 90]`
+           */
+          previewThumbnailURL: string;
+          /** @example ["Twitch Recap: 2024 according to Twitch Chat!", "REDstreams — Cyberpunk 2077: Edgerunners 2 Update (2.5) | Overview"] */
+          title: null | string;
+          /**
+           * @format uint32
+           * @example [0, 772963, 277364, 171376, 171377, 163669]
+           */
+          viewCount: number;
+          __typename: "Video";
+        };
+        __typename: "VideoEdge";
+      }[];
+      /**
+       * @format uint32
+       * @example [0]
+       */
+      totalCount: number;
+      pageInfo: null | {
+        hasNextPage: boolean;
+        hasPreviousPage: boolean;
+        __typename: "PageInfo";
+      };
+      __typename: "VideoConnection";
+    };
     __typename: "User";
   };
 };
@@ -76266,9 +76084,9 @@ export type CommunitySupportSettingsData = {
         isSubGiftEnabled: boolean;
         isClipEnabled: boolean;
         /** @example ["SUBGIFT", "CLIP"] */
-        defaultLeaderboard: string;
+        defaultLeaderboard: LeaderboardSettingsDefaultLeaderboard;
         /** @example ["WEEK", "MONTH"] */
-        timePeriod: string;
+        timePeriod: TimePeriod;
         __typename: "LeaderboardSettings";
       };
       __typename: "UserSettings";
@@ -76431,7 +76249,7 @@ export type ComscoreStreamingQueryData = {
      */
     id: ID;
     /** @example ["ARCHIVE", "HIGHLIGHT", "UPLOAD"] */
-    broadcastType: string;
+    broadcastType: BroadcastType;
     /**
      * @format date-time
      * @example ["2024-12-10T16:45:35Z", "2026-10-27T15:45:17Z"]
@@ -76535,7 +76353,7 @@ export type ConcurrentViewersTimeseriesStatsStreamSummaryData = {
     login: string;
     timeseriesStats: {
       /** @example ["DAY", "WEEK", "MONTH"] */
-      granularity: string;
+      granularity: Granularity;
       averageViewers: {
         /**
          * @format int32
@@ -76604,16 +76422,16 @@ export type ConsentData = {
     id: ID;
     isDeniedUnderage: boolean;
     /** @example ["ROW"] */
-    privacyLawName: string;
+    privacyLawName: ConsentPrivacyLawName;
     shouldShowNotification: boolean;
     shouldShowSettingsPage: boolean;
     shouldShowDismissButton: boolean;
     shouldSkipDmaBanner: boolean;
     vendorStatus: {
       /** @example ["TWITCH_AMAZON", "GOOGLE_ANALYTICS_DEVELOPER_EXTENSIONS", "SALESFORCE_DMP", "AMAZON", "BRANCH", "COMSCORE", "GOOGLE", "NIELSEN"] */
-      name: string;
+      name: VendorConsentStatusName;
       /** @example ["GIVEN"] */
-      consentStatus: string;
+      consentStatus: VendorConsentStatusConsentStatus;
       hasUserSetConsent: boolean;
       isVisible: boolean;
       __typename: "VendorConsentStatus";
@@ -76671,7 +76489,7 @@ export type ContentClassificationContextData = {
      */
     id: ID;
     /** @example ["ARCHIVE", "HIGHLIGHT", "UPLOAD"] */
-    broadcastType: string;
+    broadcastType: BroadcastType;
     game: null | GameTrackingFields;
     owner: null | BroadcasterInfo;
     contentClassificationLabels: ContentClassificationLabelFields[];
@@ -76938,9 +76756,9 @@ export type ContentMatchedExtensionConfigureData = {
       id: ID;
       activationConfig: {
         /** @example ["PANEL", "VIDEO_OVERLAY", "COMPONENT"] */
-        anchor: string;
+        anchor: ExtensionActivationConfigAnchor;
         /** @example ["ACTIVE"] */
-        state: string;
+        state: ExtensionActivationConfigState;
         __typename: "ExtensionActivationConfig";
       };
       extension: null | {
@@ -77087,7 +76905,7 @@ export type CopoGoalSnackbarActiveChallengesQueryData = {
                */
               id: ID;
               /** @example ["UNSTARTED", "FULFILLED"] */
-              status: string;
+              status: CommunityPointsCommunityGoalStatus;
               __typename: "CommunityPointsCommunityGoal";
             }[];
         __typename: "CommunityPointsChannelSettings";
@@ -77352,7 +77170,7 @@ export type CoreActionsCurrentUserData = {
     };
     settings: {
       /** @example ["EN"] */
-      preferredLanguageTag: string;
+      preferredLanguageTag: UserSettingsPreferredLanguageTag;
       __typename: "UserSettings";
     };
     __typename: "User";
@@ -77453,7 +77271,7 @@ export type CoreServicesSpadeCurrentUserData = {
     hasTurbo: boolean;
     hasPrime: boolean;
     /** @example ["EN"] */
-    language: string;
+    language: UserLanguage;
     __typename: "User";
   };
 };
@@ -77507,7 +77325,7 @@ export type CoreServicesSpadeVideoData = {
      */
     id: ID;
     /** @example ["ARCHIVE", "HIGHLIGHT", "UPLOAD"] */
-    broadcastType: string;
+    broadcastType: BroadcastType;
     __typename: "Video";
   };
 };
@@ -77558,7 +77376,7 @@ export type CostreamersTileQueryData = {
         costreamersCount: number;
         organizer: null | CostreamingUserWithViewcount;
         /** @example ["ORGANIZER", "COSTREAMER"] */
-        role: string;
+        role: CostreamDetailsRole;
         topCostreamers: CostreamingUserWithViewcount[];
         /**
          * @format uint32
@@ -77697,7 +77515,7 @@ export type CostreamingInfoData = {
     login: string;
     self: null | {
       /** @example ["DISABLED"] */
-      costreamerStatus: string;
+      costreamerStatus: UserSelfConnectionCostreamerStatus;
       __typename: "UserSelfConnection";
     };
     __typename: "User";
@@ -77972,16 +77790,16 @@ export type CreatorCoachPageData = {
     };
     settings: {
       /** @example ["EN"] */
-      preferredLanguageTag: string;
+      preferredLanguageTag: UserSettingsPreferredLanguageTag;
       __typename: "UserSettings";
     };
     __typename: "User";
   };
   creatorCoachSettings: {
     /** @example ["UNSPECIFIED"] */
-    optState: string;
+    optState: OptState;
     /** @example ["INELIGIBLE"] */
-    eligibility: string;
+    eligibility: CreatorCoachSettingsEligibility;
     __typename: "CreatorCoachSettings";
   };
 };
@@ -78098,10 +77916,15 @@ export type CreatorCollaborationChannelDataData = {
     relationship:
       | null
       | {
-          subscriptionBenefit:
-            | null
-            | CreatorCollaborationChannelData_UserRelationshipSubscriptionBenefit
-            | CreatorCollaborationChannelData_UserRelationshipSubscriptionBenefit[];
+          subscriptionBenefit: null | {
+            /** @example ["3L7hSWPX941bMubywA98e4uYNdT", "3KyHdOj3R8PmXqz66jFOU07Ia7D"] */
+            id: ID;
+            gift: {
+              isGift: boolean;
+              __typename: "SubscriptionGift";
+            };
+            __typename: "SubscriptionBenefit";
+          };
           subscriptionTenure: null | {
             /**
              * @format uint32
@@ -78123,10 +77946,15 @@ export type CreatorCollaborationChannelDataData = {
           __typename: string;
         }
       | {
-          subscriptionBenefit:
-            | null
-            | CreatorCollaborationChannelData_UserRelationshipSubscriptionBenefit
-            | CreatorCollaborationChannelData_UserRelationshipSubscriptionBenefit[];
+          subscriptionBenefit: null | {
+            /** @example ["3L7hSWPX941bMubywA98e4uYNdT", "3KyHdOj3R8PmXqz66jFOU07Ia7D"] */
+            id: ID;
+            gift: {
+              isGift: boolean;
+              __typename: "SubscriptionGift";
+            };
+            __typename: "SubscriptionBenefit";
+          };
           subscriptionTenure: null | {
             /**
              * @format uint32
@@ -78963,7 +78791,7 @@ export type CustomRewardsCollectionData = {
                */
               id: ID;
               /** @example ["POINTS"] */
-              pricingType: string;
+              pricingType: CommunityPointsCustomRewardPricingType;
               /** ⚠️ Low confidence about: nullable */
               templateID: null | ID;
               __typename: "CommunityPointsCustomReward";
@@ -78997,7 +78825,7 @@ export type CustomSubBenefitsQueryData = {
       /** @example ["csb-1"] */
       id: ID;
       /** @example ["ACTIVE"] */
-      state: string;
+      state: CustomSubBenefitState;
       __typename: "CustomSubBenefit";
     }[];
     __typename: "Channel";
@@ -79495,7 +79323,7 @@ export type DashboardSettingsAutohostSettingsData = {
     autohostSettings: {
       enabled: boolean;
       /** @example ["ORDERED"] */
-      strategy: string;
+      strategy: AutohostSettingsStrategy;
       __typename: "AutohostSettings";
     };
     __typename: "User";
@@ -79592,6 +79420,80 @@ export type DashboardSettingsUserColorResponse = QueryResponse<
   "DashboardSettingsUserColor"
 >;
 
+export type DashboardTeamSettingsData = {
+  currentUser: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["23161357"]
+     */
+    id: ID;
+    ownedTeams:
+      | null
+      | {
+          id: ID;
+          /** ⚠️ Low confidence about: nullable */
+          name: null | string;
+          /** ⚠️ Low confidence about: nullable */
+          displayName: null | string;
+          /**
+           * ⚠️ Low confidence about: nullable
+           * @format uri
+           */
+          logoURL: null | string;
+          __typename: string;
+        }[];
+    teamMemberships:
+      | null
+      | {
+          /** ⚠️ Low confidence about: nullable */
+          isPrimary: null | boolean;
+          /** ⚠️ Low confidence about: nullable */
+          isRevenueRevealed: null | boolean;
+          /** ⚠️ Low confidence about: nullable */
+          isStatsRevealed: null | boolean;
+          team: null | {
+            /**
+             * @pattern ^[0-9]+$
+             * @example ["2351"]
+             */
+            id: ID;
+            /** @example ["twitchcon", "ggtalentgroup", "gentlemates", "skybass", "tsm", "1gsquad", "streamdatabase"] */
+            name: string;
+            /** @example ["TwitchCon Europe 2026", "GG Talent Group", "Gentle Mates", "Team SKY BASS", "TSM", "1G SQUAD", "Stream Database"] */
+            displayName: string;
+            /**
+             * ⚠️ Low confidence about: nullable
+             * @format uri
+             */
+            logoURL: null | string;
+            __typename: "Team";
+          };
+          __typename: string;
+        }[];
+    invitedTeams:
+      | null
+      | {
+          id: ID;
+          /** ⚠️ Low confidence about: nullable */
+          name: null | string;
+          /** ⚠️ Low confidence about: nullable */
+          displayName: null | string;
+          /**
+           * ⚠️ Low confidence about: nullable
+           * @format uri
+           */
+          logoURL: null | string;
+          __typename: string;
+        }[];
+    __typename: "User";
+  };
+};
+
+export type DashboardTeamSettingsResponse = QueryResponse<
+  DashboardTeamSettingsData,
+  "DashboardTeamSettings"
+>;
+
 export type DashboardTopClipsVariables = {
   login: string;
   /** @format int32 */
@@ -79675,7 +79577,7 @@ export type DefaultAlertVariationsData = {
     /** @example ["New Follow", "New Subscriber", "Prime Subscription", "Resubscription", "Gifted Subscription", "Community Gifts", "Cheering of Any Amount"] */
     name: string;
     /** @example ["ENABLED"] */
-    state: string;
+    state: AlertVariationState;
     /** @example [""] */
     ownerID: ID;
     /**
@@ -79701,7 +79603,7 @@ export type DefaultAlertVariationsData = {
       volume: number;
       isMuted: boolean;
       /** @example ["AUDIO"] */
-      assetType: string;
+      assetType: AlertSoundAssetType;
       /** @example ["audio/wav"] */
       assetMimeType: string;
       __typename: "AlertSound";
@@ -79721,7 +79623,7 @@ export type DefaultAlertVariationsData = {
       url: string;
       volume: null;
       /** @example ["VIDEO"] */
-      assetType: string;
+      assetType: AlertImageAssetType;
       /** @example ["video/webm"] */
       assetMimeType: string;
       __typename: "AlertImage";
@@ -79816,10 +79718,15 @@ export type DemandChannelCreatorSponsorshipHighlightsResponse = QueryResponse<
 export type DevCommonUtilsFetchGamesVariables = { orgId: ID };
 
 export type DevCommonUtilsFetchGamesData = {
-  organization:
-    | null
-    | DevCommonUtilsFetchGames_Organization
-    | DevCommonUtilsFetchGames_Organization[];
+  organization: null | {
+    /**
+     * @format uuid
+     * @example ["beda0fa5-d8c5-4465-be03-fded75d8c01e"]
+     */
+    id: ID;
+    games: null | FetchedGame;
+    __typename: "Organization";
+  };
 };
 
 export type DevCommonUtilsFetchGamesResponse = QueryResponse<
@@ -79854,10 +79761,18 @@ export type DevCurrentUserAppsResponse = QueryResponse<
 export type DevDashboardUserCompanySettingsVariables = { orgId: ID };
 
 export type DevDashboardUserCompanySettingsData = {
-  organization:
-    | null
-    | DevDashboardUserCompanySettings_Organization
-    | DevDashboardUserCompanySettings_Organization[];
+  organization: null | {
+    /**
+     * @format uuid
+     * @example ["beda0fa5-d8c5-4465-be03-fded75d8c01e"]
+     */
+    id: ID;
+    brandPortalSettings:
+      | null
+      | DevDashboardUserCompanySettings_OrganizationBrandPortalSettings
+      | DevDashboardUserCompanySettings_OrganizationBrandPortalSettings[];
+    __typename: "Organization";
+  };
 };
 
 export type DevDashboardUserCompanySettingsResponse = QueryResponse<
@@ -79890,10 +79805,29 @@ export type DeveloperBadgeDescriptionResponse = QueryResponse<
 export type DevExtensionEligibleBillingManagerVariables = { orgId: ID };
 
 export type DevExtensionEligibleBillingManagerData = {
-  organization:
-    | null
-    | DevExtensionEligibleBillingManager_Organization
-    | DevExtensionEligibleBillingManager_Organization[];
+  organization: null | {
+    /**
+     * @format uuid
+     * @example ["beda0fa5-d8c5-4465-be03-fded75d8c01e"]
+     */
+    id: ID;
+    /** @aliasFor members */
+    billingManagers:
+      | null
+      | DevExtensionEligibleBillingManager_OrganizationMembers
+      | DevExtensionEligibleBillingManager_OrganizationMembers[];
+    /** @aliasFor members */
+    administrators:
+      | null
+      | DevExtensionEligibleBillingManager_OrganizationMembers
+      | DevExtensionEligibleBillingManager_OrganizationMembers[];
+    /** @aliasFor members */
+    owner:
+      | null
+      | DevExtensionEligibleBillingManager_OrganizationMembers
+      | DevExtensionEligibleBillingManager_OrganizationMembers[];
+    __typename: "Organization";
+  };
 };
 
 export type DevExtensionEligibleBillingManagerResponse = QueryResponse<
@@ -79938,10 +79872,11 @@ export type DevExtensionListPageCurrentUserResponse = QueryResponse<
 export type DevExtensionMonetizationAssignedBillingManagerVariables = { id: ID };
 
 export type DevExtensionMonetizationAssignedBillingManagerData = {
-  extensionClient:
-    | null
-    | DevExtensionMonetizationAssignedBillingManager_ExtensionClient
-    | DevExtensionMonetizationAssignedBillingManager_ExtensionClient[];
+  extensionClient: null | {
+    id: ID;
+    assignedBillingManager: null | BillingManager;
+    __typename: "ExtensionClient";
+  };
 };
 
 export type DevExtensionMonetizationAssignedBillingManagerResponse = QueryResponse<
@@ -79981,10 +79916,11 @@ export type DevExtensionPayoutInviteStatusCurrentUserResponse = QueryResponse<
 export type DevExtensionSettingsAssignedBillingManagerVariables = { id: ID };
 
 export type DevExtensionSettingsAssignedBillingManagerData = {
-  extensionClient:
-    | null
-    | DevExtensionSettingsAssignedBillingManager_ExtensionClient
-    | DevExtensionSettingsAssignedBillingManager_ExtensionClient[];
+  extensionClient: null | {
+    id: ID;
+    assignedBillingManager: null | BillingManager;
+    __typename: "ExtensionClient";
+  };
 };
 
 export type DevExtensionSettingsAssignedBillingManagerResponse = QueryResponse<
@@ -80106,10 +80042,18 @@ export type DevGetExtensionSecretsResponse = QueryResponse<
 export type DevIsEventTriggeredDropsEligibleVariables = { orgId: ID };
 
 export type DevIsEventTriggeredDropsEligibleData = {
-  organization:
-    | null
-    | DevIsEventTriggeredDropsEligible_Organization
-    | DevIsEventTriggeredDropsEligible_Organization[];
+  organization: null | {
+    /**
+     * @format uuid
+     * @example ["beda0fa5-d8c5-4465-be03-fded75d8c01e"]
+     */
+    id: ID;
+    quests:
+      | null
+      | DevIsEventTriggeredDropsEligible_OrganizationQuests
+      | DevIsEventTriggeredDropsEligible_OrganizationQuests[];
+    __typename: "Organization";
+  };
 };
 
 export type DevIsEventTriggeredDropsEligibleResponse = QueryResponse<
@@ -80385,10 +80329,22 @@ export type DevOnlySuspenseQuery2Response = QueryResponse<
 export type DevOrganizationPanelGamesDropsVariables = { id: ID };
 
 export type DevOrganizationPanelGamesDropsData = {
-  organization:
-    | null
-    | DevOrganizationPanelGamesDrops_Organization
-    | DevOrganizationPanelGamesDrops_Organization[];
+  organization: null | {
+    /**
+     * @format uuid
+     * @example ["beda0fa5-d8c5-4465-be03-fded75d8c01e"]
+     */
+    id: ID;
+    games: null | {
+      /**
+       * @pattern ^[0-9]+$
+       * @example ["509672"]
+       */
+      id: ID;
+      __typename: "Game";
+    };
+    __typename: "Organization";
+  };
 };
 
 export type DevOrganizationPanelGamesDropsResponse = QueryResponse<
@@ -80407,7 +80363,17 @@ export type DevOrgMembersVariables = {
 };
 
 export type DevOrgMembersData = {
-  organization: null | DevOrgMembers_Organization | DevOrgMembers_Organization[];
+  organization: null | {
+    /**
+     * @format uuid
+     * @example ["beda0fa5-d8c5-4465-be03-fded75d8c01e"]
+     */
+    id: ID;
+    members: null | DevOrgMembers_OrganizationMembers | DevOrgMembers_OrganizationMembers[];
+    invites: null | DevOrgMembers_OrganizationInvites | DevOrgMembers_OrganizationInvites[];
+    self: null | DevOrgMembers_OrganizationSelf | DevOrgMembers_OrganizationSelf[];
+    __typename: "Organization";
+  };
 };
 
 export type DevOrgMembersResponse = QueryResponse<DevOrgMembersData, "DevOrgMembers">;
@@ -80450,10 +80416,26 @@ export type DevPlaygroundClipViewQueryResponse = QueryResponse<
 export type DevQuestCampaignDetailsPageOrgGameClientIDQueryVariables = { id: ID };
 
 export type DevQuestCampaignDetailsPageOrgGameClientIDQueryData = {
-  organization:
-    | null
-    | DevQuestCampaignDetailsPageOrgGameClientIDQuery_Organization
-    | DevQuestCampaignDetailsPageOrgGameClientIDQuery_Organization[];
+  organization: null | {
+    /**
+     * @format uuid
+     * @example ["beda0fa5-d8c5-4465-be03-fded75d8c01e"]
+     */
+    id: ID;
+    games: null | {
+      /**
+       * @pattern ^[0-9]+$
+       * @example ["509672"]
+       */
+      id: ID;
+      dropAccountLink:
+        | null
+        | DevQuestCampaignDetailsPageOrgGameClientIDQuery_OrganizationGamesDropAccountLink
+        | DevQuestCampaignDetailsPageOrgGameClientIDQuery_OrganizationGamesDropAccountLink[];
+      __typename: "Game";
+    };
+    __typename: "Organization";
+  };
 };
 
 export type DevQuestCampaignDetailsPageOrgGameClientIDQueryResponse = QueryResponse<
@@ -80631,10 +80613,27 @@ export type DirectoryDirectoryBannerResponse = QueryResponse<
 export type DirectoryEventCuratedBannerVariables = { slug: string };
 
 export type DirectoryEventCuratedBannerData = {
-  curatedTag:
-    | null
-    | DirectoryEventCuratedBanner_CuratedTag
-    | DirectoryEventCuratedBanner_CuratedTag[];
+  curatedTag: null | {
+    /** @example ["stream-o-ween-2026", "nopixel-v"] */
+    id: ID;
+    /** ⚠️ Low confidence about: nullable */
+    slug: null | string;
+    /** @example ["Stream-o-Ween", "Nopixel V", "EPL Katowice", "Valorant Champions 2026", "Shopping", "TwitchCon"] */
+    displayName: string;
+    /** ⚠️ Low confidence about: nullable */
+    description: null | string;
+    /**
+     * @format uri
+     * @example ["https://static-cdn.jtvnw.net/tag-box-art/nopixel-v-18bfb553.png", "https://static-cdn.jtvnw.net/tag-box-art/epl-katowice-2026-5e0199a9.png"]
+     */
+    boxartURL: string;
+    /**
+     * @format uint32
+     * @example [21191, 298, 25701, 43238, 160]
+     */
+    viewersCount: null | number;
+    __typename: "CuratedTag";
+  };
 };
 
 export type DirectoryEventCuratedBannerResponse = QueryResponse<
@@ -80880,7 +80879,7 @@ export type DirectoryPageGameData = {
     displayName: string;
     streams: null | {
       /** @example ["MAY_CONTAIN_MATURE_CONTENT"] */
-      banners: null | string[];
+      banners: null | ConnectionBanners[];
       edges: DirectoryPageGameStreamWithTagsEdge[];
       pageInfo: null | {
         hasNextPage: boolean;
@@ -80963,7 +80962,7 @@ export type DirectoryVideosGameData = {
     name: string;
     videos: {
       /** @example ["MAY_CONTAIN_MATURE_CONTENT"] */
-      banners: null | string[];
+      banners: null | ConnectionBanners[];
       edges: VideoEdge[];
       pageInfo: null | {
         hasNextPage: boolean;
@@ -81163,7 +81162,7 @@ export type DJSignupGetDJStateData = {
     id: ID;
     djStatus: {
       /** @example ["NOT_DJ"] */
-      programState: string;
+      programState: DJStatusProgramState;
       __typename: "DJStatus";
     };
     djEligibility:
@@ -81312,7 +81311,7 @@ export type DropChannelCampaignsProgressData = {
         | DropChannelCampaignsProgress_ChannelDropCampaignsProgressRewardGroupsLeaderboardConfig[];
       progressCriteria: {
         /** @example ["WATCH", "SUB"] */
-        requirementType: string;
+        requirementType: DropsProgressCriteriaRequirementType;
         requirements: {
           /**
            * @format uint32
@@ -81374,7 +81373,7 @@ export type DropChannelCampaignsProgressData = {
          */
         thumbnailURL: string;
         /** @example ["DIRECT_ENTITLEMENT", "POOL", "CODE", "BADGE"] */
-        distributionType: string;
+        distributionType: DropsRewardDistributionType;
         /**
          * ⚠️ Low confidence about: nullable
          * @format uri
@@ -81543,10 +81542,43 @@ export type DropsPrivateCalloutResponse = QueryResponse<
 export type DropV3OrganizationGamesVariables = { orgId: ID };
 
 export type DropV3OrganizationGamesData = {
-  organization:
-    | null
-    | DropV3OrganizationGames_Organization
-    | DropV3OrganizationGames_Organization[];
+  organization: null | {
+    /**
+     * @format uuid
+     * @example ["beda0fa5-d8c5-4465-be03-fded75d8c01e"]
+     */
+    id: ID;
+    games: null | {
+      /**
+       * @pattern ^[0-9]+$
+       * @example ["509672"]
+       */
+      id: ID;
+      /** @example ["IRL", "Cyberpunk 2077", "Just Chatting", "Special Events", "League of Legends", "You Know The Drill", "RuneScape: Dragonwilds"] */
+      name: string;
+      /** @example ["IRL", "Cyberpunk 2077", "Just Chatting", "Special Events", "Gwent: The Witcher Card Game", "Grand Theft Auto V", "DayZ"] */
+      displayName: string;
+      /**
+       * @example ["https://static-cdn.jtvnw.net/ttv-boxart/509672-{width}x{height}.jpg", "https://static-cdn.jtvnw.net/ttv-boxart/65876-{width}x{height}.jpg"]
+       * @aliasFor boxArtURL
+       * @gqlArg `width: Int [52, 144, 40, 285, 250, 188, 90, 85, 200, 120]`
+       * @gqlArg `height: Int [72, 192, 56, 380, 300, 250, 55, 120, 113, 160]`
+       */
+      boxArtURLSmall: string;
+      /**
+       * @example ["https://static-cdn.jtvnw.net/ttv-boxart/509672-{width}x{height}.jpg", "https://static-cdn.jtvnw.net/ttv-boxart/65876-{width}x{height}.jpg"]
+       * @gqlArg `width: Int [52, 144, 40, 285, 250, 188, 90, 85, 200, 120]`
+       * @gqlArg `height: Int [72, 192, 56, 380, 300, 250, 55, 120, 113, 160]`
+       */
+      boxArtURL: string;
+      dropAccountLink:
+        | null
+        | DropV3OrganizationGames_OrganizationGamesDropAccountLink
+        | DropV3OrganizationGames_OrganizationGamesDropAccountLink[];
+      __typename: "Game";
+    };
+    __typename: "Organization";
+  };
 };
 
 export type DropV3OrganizationGamesResponse = QueryResponse<
@@ -81944,16 +81976,16 @@ export type EditBroadcastContextQueryData = {
        */
       id: ID;
       /** @directive include(if: $isChannelOwner) */
-      contentPolicyProperties?:
-        | null
-        | EditBroadcastContextQuery_BroadcastSettingsContentPolicyProperties
-        | EditBroadcastContextQuery_BroadcastSettingsContentPolicyProperties[];
+      contentPolicyProperties?: null | {
+        hasBrandedContent: boolean;
+        __typename: "ContentPolicyProperties";
+      };
       contentClassificationLabelBroadcasterPolicyProperties:
         | null
         | EditBroadcastContextQuery_BroadcastSettingsContentClassificationLabelBroadcasterPolicyProperties
         | EditBroadcastContextQuery_BroadcastSettingsContentClassificationLabelBroadcasterPolicyProperties[];
       /** @example ["EN", "ES"] */
-      language: string;
+      language: BroadcastSettingsLanguage;
       /** @directive include(if: $isChannelOwner) */
       liveUpNotificationInfo?:
         | null
@@ -82167,11 +82199,19 @@ export type EmoteByIdQueryData = {
     token: string;
     /** @example ["c23ba858-6cca-49ac-9ba1-6886e74b63b2", "408258241"] */
     setID: ID;
-    modifiers: null | EmoteByIdQuery_EmoteModifiers | EmoteByIdQuery_EmoteModifiers[];
+    modifiers:
+      | null
+      | (null | {
+          /** @example ["HF", "SG", "TK"] */
+          code: EmoteModifierCode;
+          /** @example ["HORIZONTAL_FLIP", "SUNGLASSES", "THINKING"] */
+          name: EmoteModifierName;
+          __typename: "EmoteModifier";
+        })[];
     /** @example ["LIMITED_TIME", "SUBSCRIPTIONS", "GLOBALS", "SMILIES", "MEGA_COMMERCE", "FOLLOWER", "TWO_FACTOR"] */
-    type: string;
+    type: EmoteType;
     /** @example ["ANIMATED", "STATIC"] */
-    assetType: string;
+    assetType: EmoteAssetType;
     __typename: "Emote";
   };
 };
@@ -82188,9 +82228,9 @@ export type EmoteCardData = {
     /** @example ["emotesv2_42ba00f9d5e24c4ca189d642b9e0b0c9", "emotesv2_845e6a3e8a0a40d0afc90081defa16c1"] */
     id: ID;
     /** @example ["LIMITED_TIME", "SUBSCRIPTIONS", "GLOBALS", "SMILIES", "MEGA_COMMERCE", "FOLLOWER", "TWO_FACTOR"] */
-    type: string;
+    type: EmoteType;
     /** @example ["TIER_1", "TIER_2", "TIER_3"] */
-    subscriptionTier: null | string;
+    subscriptionTier: null | EmoteSubscriptionTier;
     /** @example ["sumFast", "sumSmash", "sumPls", "sumMiting", "sumX", "sumKomrade", "sumPause"] */
     token: string;
     /** @example ["c23ba858-6cca-49ac-9ba1-6886e74b63b2", "408258241"] */
@@ -82436,7 +82476,7 @@ export type EmotePickerEmotePickerUserSubscriptionProductsData = {
              */
             tier: string;
             /** @example ["WEB"] */
-            platform: string;
+            platform: SubscriptionBenefitPlatform;
             __typename: "SubscriptionBenefit";
           };
           __typename: "UserSelfConnection";
@@ -82604,7 +82644,7 @@ export type EmotesSettingsDashboardQueryData = {
       /** @example [""] */
       name: string;
       /** @example ["UNKNOWN"] */
-      state: string;
+      state: EmoticonPrefixState;
       isEditable: boolean;
       __typename: "EmoticonPrefix";
     };
@@ -82792,11 +82832,11 @@ export type ExtensionConfigureData = {
       id: ID;
       activationConfig: {
         /** @example ["PANEL", "VIDEO_OVERLAY", "COMPONENT"] */
-        anchor: string;
+        anchor: ExtensionActivationConfigAnchor;
         /** @example ["extension-panel-3", "extension-panel-1", "extension-overlay-1", "extension-component-1", "extension-panel-2"] */
         slot: string;
         /** @example ["ACTIVE"] */
-        state: string;
+        state: ExtensionActivationConfigState;
         __typename: "ExtensionActivationConfig";
       };
       extension: null | {
@@ -82813,13 +82853,13 @@ export type ExtensionConfigureData = {
         hasChatSupport: null | boolean;
         isBitsEnabled: boolean;
         /** @example ["OPTIONAL", "NONE"] */
-        bitsSupportLevel: string;
+        bitsSupportLevel: ExtensionBitsSupportLevel;
         /** @example ["CozyCafe", "Blerp 🎉", "🥳 Free & Animated Panels - OWN3D", "Sound Alerts", "Viewer Geolocation", "nopixel V Companion", "StreamElements Leaderboards"] */
         name: string;
         /** @example [""] */
         sku: string;
         /** @example ["RELEASED"] */
-        state: string;
+        state: ExtensionState;
         subscriptionsSupportLevel: UnknownValue;
         /** @example [""] */
         vendorCode: string;
@@ -82897,7 +82937,7 @@ export type ExtensionConfigureData = {
            */
           id: ID;
           /** @example ["DEFAULT"] */
-          type: string;
+          type: DefaultPanelType;
           __typename: "ExtensionPanel";
           /** @example ["extension-panel-1", "extension-panel-2"] */
           slotID: ID;
@@ -82909,7 +82949,7 @@ export type ExtensionConfigureData = {
            */
           id: ID;
           /** @example ["DEFAULT"] */
-          type: string;
+          type: DefaultPanelType;
           __typename: "DefaultPanel";
         }[];
     __typename: "User";
@@ -83004,7 +83044,7 @@ export type ExtensionDetailsPageData = {
     hasChatSupport: null | boolean;
     isBitsEnabled: boolean;
     /** @example ["OPTIONAL", "NONE"] */
-    bitsSupportLevel: string;
+    bitsSupportLevel: ExtensionBitsSupportLevel;
     /** @example ["CozyCafe", "Blerp 🎉", "🥳 Free & Animated Panels - OWN3D", "Sound Alerts", "Viewer Geolocation", "nopixel V Companion", "StreamElements Leaderboards"] */
     name: string;
     /**
@@ -83018,7 +83058,7 @@ export type ExtensionDetailsPageData = {
     /** @example [""] */
     sku: string;
     /** @example ["RELEASED"] */
-    state: string;
+    state: ExtensionState;
     /** @example ["Serve drinks, customize your café aesthetic, interact with chat, and watch cute café animations live on stream.", "Blerp is the best alert builder on Twitch! Easily create a unique alert for every goal, sub, channel point or tip! "] */
     summary: string;
     /** ⚠️ Low confidence about: nullable */
@@ -83120,7 +83160,7 @@ export type ExtensionLiveConfigureModalData = {
       id: ID;
       activationConfig: {
         /** @example ["PANEL", "VIDEO_OVERLAY", "COMPONENT"] */
-        anchor: string;
+        anchor: ExtensionActivationConfigAnchor;
         __typename: "ExtensionActivationConfig";
       };
       extension: null | {
@@ -83163,7 +83203,7 @@ export type ExtensionManagementPageData = {
            */
           id: ID;
           /** @example ["DEFAULT"] */
-          type: string;
+          type: DefaultPanelType;
           __typename: "ExtensionPanel";
           /** @example ["extension-panel-1", "extension-panel-2"] */
           slotID: ID;
@@ -83175,7 +83215,7 @@ export type ExtensionManagementPageData = {
            */
           id: ID;
           /** @example ["DEFAULT"] */
-          type: string;
+          type: DefaultPanelType;
           __typename: "DefaultPanel";
         }[];
     __typename: "User";
@@ -83339,7 +83379,7 @@ export type ExtensionPermissionsPageData = {
         hasChatSupport: null | boolean;
         isBitsEnabled: boolean;
         /** @example ["OPTIONAL", "NONE"] */
-        bitsSupportLevel: string;
+        bitsSupportLevel: ExtensionBitsSupportLevel;
         /** @example ["CozyCafe", "Blerp 🎉", "🥳 Free & Animated Panels - OWN3D", "Sound Alerts", "Viewer Geolocation", "nopixel V Companion", "StreamElements Leaderboards"] */
         name: string;
         /** @example ["0.5.1", "3.2.17", "2.0.1", "5.2.2", "1.3.1", "1.1.2", "3.2.7"] */
@@ -83434,11 +83474,11 @@ export type ExtensionRecommendationsData = {
       id: ID;
       activationConfig: {
         /** @example ["PANEL", "VIDEO_OVERLAY", "COMPONENT"] */
-        anchor: string;
+        anchor: ExtensionActivationConfigAnchor;
         /** @example ["extension-panel-3", "extension-panel-1", "extension-overlay-1", "extension-component-1", "extension-panel-2"] */
         slot: string;
         /** @example ["ACTIVE"] */
-        state: string;
+        state: ExtensionActivationConfigState;
         __typename: "ExtensionActivationConfig";
       };
       extension: null | {
@@ -83953,14 +83993,14 @@ export type FeaturedClipsShelfCoverData = {
             /** @example ["emotesv2_42ba00f9d5e24c4ca189d642b9e0b0c9", "emotesv2_845e6a3e8a0a40d0afc90081defa16c1"] */
             id: ID;
             /** @example ["ANIMATED", "STATIC"] */
-            assetType: string;
+            assetType: EmoteAssetType;
             /**
              * @format int32
              * @example [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
              */
             order: number;
             /** @example ["TIER_1", "TIER_2", "TIER_3"] */
-            subscriptionTier: null | string;
+            subscriptionTier: null | EmoteSubscriptionTier;
             /** @example ["sumFast", "sumSmash", "sumPls", "sumMiting", "sumX", "sumKomrade", "sumPause"] */
             token: string;
             __typename: "Emote";
@@ -83998,7 +84038,7 @@ export type FeaturedContentCarouselStreamsData = {
      */
     priorityLevel: number;
     /** @example ["PROMOTION"] */
-    sourceType: string;
+    sourceType: FeaturedStreamSourceType;
     /** @example ["", "RuneScape: Dragonwilds has launched its 1.0 update! Watch over 30 creators go from zero to hero in a race to bring down the first Dragon General and win prizes for chat, live right here on Twitch!", "Logan Paul's nonstop stream as he attempts to catch his first ever Shiny Pokémon (1 in 8,192 odds)."] */
     description: string;
     stream: {
@@ -84257,7 +84297,7 @@ export type FeedInteractionHookGetClipBySlugData = {
      */
     viewCount: number;
     /** @example ["EN", "ES", "RU"] */
-    language: string;
+    language: ClipLanguage;
     /**
      * @format uint32
      * @example [44, 26, 25, 42, 30, 59, 36, 41, 60, 29]
@@ -84320,7 +84360,49 @@ export type FetchAdsServiceFetchAdsResponse = QueryResponse<
 
 export type FFZFetchPollVariables = { id: ID };
 
-export type FFZFetchPollData = { poll: null | FFZFetchPoll_Poll | FFZFetchPoll_Poll[] };
+export type FFZFetchPollData = {
+  poll: null | {
+    id: ID;
+    status: UnknownValue;
+    /** ⚠️ Low confidence about: nullable */
+    title: null | string;
+    ownedBy: null | FFZFetchPoll_PollOwnedBy | FFZFetchPoll_PollOwnedBy[];
+    /**
+     * ⚠️ Low confidence about: nullable
+     * @format uint32
+     */
+    durationSeconds: null | number;
+    /**
+     * ⚠️ Low confidence about: nullable
+     * @format date-time
+     */
+    endedAt: null | string;
+    /**
+     * ⚠️ Low confidence about: nullable
+     * @format date-time
+     */
+    startedAt: null | string;
+    totalVoters: UnknownValue;
+    choices: null | {
+      id: ID;
+      /** ⚠️ Low confidence about: nullable */
+      title: null | string;
+      votes: null | {
+        id: ID;
+        base: UnknownValue;
+        bits: UnknownValue;
+        /**
+         * ⚠️ Low confidence about: nullable
+         * @format uint32
+         */
+        total: null | number;
+        __typename: "PollVoteBreakdown";
+      };
+      __typename: "PollChoice";
+    };
+    __typename: "Poll";
+  };
+};
 
 export type FFZFetchPollResponse = QueryResponse<FFZFetchPollData, "FFZ_FetchPoll">;
 
@@ -84942,9 +85024,9 @@ export type FollowAccountVerificationSettingsVariables = { channelID: ID };
 export type FollowAccountVerificationSettingsData = {
   followAccountVerificationSettings: {
     /** @example ["NONE"] */
-    emailVerificationMode: string;
+    emailVerificationMode: VerificationMode;
     /** @example ["NONE"] */
-    phoneVerificationMode: string;
+    phoneVerificationMode: VerificationMode;
     partialEmailVerificationConfig: {
       /**
        * @format uint32
@@ -85190,11 +85272,11 @@ export type FollowedStreamsData = {
                      */
                     order: number;
                     /** @example ["TIER_1", "TIER_2", "TIER_3"] */
-                    subscriptionTier: null | string;
+                    subscriptionTier: null | EmoteSubscriptionTier;
                     /** @example ["sumFast", "sumSmash", "sumPls", "sumMiting", "sumX", "sumKomrade", "sumPause"] */
                     token: string;
                     /** @example ["ANIMATED", "STATIC"] */
-                    assetType: string;
+                    assetType: EmoteAssetType;
                     __typename: "Emote";
                   }[];
                   __typename: "SubscriptionProduct";
@@ -85700,7 +85782,7 @@ export type FollowsTimeseriesStatsStreamSummaryData = {
     login: string;
     timeseriesStats: {
       /** @example ["DAY", "WEEK", "MONTH"] */
-      granularity: string;
+      granularity: Granularity;
       follows: {
         /**
          * @format int32
@@ -85767,7 +85849,7 @@ export type FollowUserData = {
     };
     settings: {
       /** @example ["ONLINE"] */
-      visibility: string;
+      visibility: UserSettingsVisibility;
       __typename: "UserSettings";
     };
     followers: {
@@ -85884,7 +85966,7 @@ export type FundraiserSetupPageData = {
               /** @example ["33d10886-ace9-466b-9060-e10013aa05a21887", "41679e35-3eaf-4acf-b861-e8941c99650f", "63967dc1-a829-453e-9425-53c0f68313723565"] */
               id: ID;
               /** @example ["EUR", "USD"] */
-              currency: string;
+              currency: PriceInfoCurrency;
               /**
                * @format int32
                * @example [2]
@@ -85924,10 +86006,19 @@ export type FundraisersManagementPageData = {
      */
     id: ID;
     activeCharityCampaign: null | CharityCampaignItem;
-    charityCampaigns:
-      | null
-      | FundraisersManagementPage_ChannelCharityCampaigns
-      | FundraisersManagementPage_ChannelCharityCampaigns[];
+    charityCampaigns: {
+      edges: {
+        node: null | CharityCampaignItem;
+        /** ⚠️ Low confidence about: nullable */
+        cursor: null | Cursor;
+        __typename: string;
+      }[];
+      pageInfo: null | {
+        hasNextPage: boolean;
+        __typename: "PageInfo";
+      };
+      __typename: "CharityCampaignConnection";
+    };
     __typename: "Channel";
   };
 };
@@ -86176,7 +86267,7 @@ export type GetBitsButtonBitsData = {
     bitsOffers: null | (BitsOffer & { __typename: "BitsAdOffer" | "BitsBundleOffer" })[];
     bitsUserSettings: null | BitsUserSettings;
     /** @example ["ACQUIRED"] */
-    bitsUserState: string;
+    bitsUserState: UserBitsUserState;
     __typename: "User";
   };
   /** @directive include(if: $withChannel) */
@@ -86936,9 +87027,9 @@ export type GetHourlyViewersHeatmapQueryData = {
       __typename: "HourlyViewers";
     }[];
     /** @example ["EMPTY", "NORMAL"] */
-    dataStatus: string;
+    dataStatus: HourlyViewersListDataStatus;
     /** @example ["UNKNOWN"] */
-    releaseStatus: string;
+    releaseStatus: HourlyViewersListReleaseStatus;
     error: null;
     __typename: "HourlyViewersList";
   };
@@ -87038,9 +87129,9 @@ export type GetHourlyViewersReportQueryData = {
           __typename: "HourlyViewers";
         }[];
         /** @example ["EMPTY", "NORMAL"] */
-        dataStatus: string;
+        dataStatus: HourlyViewersListDataStatus;
         /** @example ["UNKNOWN"] */
-        releaseStatus: string;
+        releaseStatus: HourlyViewersListReleaseStatus;
         error: null;
         __typename: "HourlyViewersList";
       };
@@ -87331,7 +87422,7 @@ export type GetOptInStateVariables = { input: FeatureOptInStateInput };
 export type GetOptInStateData = {
   featureOptInState: {
     /** @example ["NONE"] */
-    optInState: string;
+    optInState: FeatureOptInStateResultOptInState;
     __typename: "FeatureOptInStateResult";
   };
 };
@@ -87433,7 +87524,7 @@ export type GetPinnedChatData = {
            */
           id: ID;
           /** @example ["MOD"] */
-          type: string;
+          type: MessageType;
           pinnedMessage: {
             /**
              * @format uuid
@@ -87635,7 +87726,18 @@ export type GetPremiumEventSettingsResponse = QueryResponse<
 export type GetQuestCampaignsByOrgVariables = { orgId: ID };
 
 export type GetQuestCampaignsByOrgData = {
-  organization: null | GetQuestCampaignsByOrg_Organization | GetQuestCampaignsByOrg_Organization[];
+  organization: null | {
+    /**
+     * @format uuid
+     * @example ["beda0fa5-d8c5-4465-be03-fded75d8c01e"]
+     */
+    id: ID;
+    quests:
+      | null
+      | GetQuestCampaignsByOrg_OrganizationQuests
+      | GetQuestCampaignsByOrg_OrganizationQuests[];
+    __typename: "Organization";
+  };
 };
 
 export type GetQuestCampaignsByOrgResponse = QueryResponse<
@@ -87646,10 +87748,71 @@ export type GetQuestCampaignsByOrgResponse = QueryResponse<
 export type GetQuestCampaignWithRewardGroupsVariables = { campaignID: ID };
 
 export type GetQuestCampaignWithRewardGroupsData = {
-  questCampaign:
-    | null
-    | GetQuestCampaignWithRewardGroups_QuestCampaign
-    | GetQuestCampaignWithRewardGroups_QuestCampaign[];
+  questCampaign: null | {
+    /**
+     * ⚠️ Low confidence about: nullable
+     * @format uri
+     */
+    redemptionURL: null | string;
+    /** ⚠️ Low confidence about: nullable */
+    description: null | string;
+    /**
+     * ⚠️ Low confidence about: nullable
+     * @format uri
+     */
+    detailsURL: null | string;
+    /**
+     * ⚠️ Low confidence about: nullable
+     * @format date-time
+     */
+    endsAt: null | string;
+    id: ID;
+    /** ⚠️ Low confidence about: nullable */
+    name: null | string;
+    owner:
+      | null
+      | GetQuestCampaignWithRewardGroups_QuestCampaignOwner
+      | GetQuestCampaignWithRewardGroups_QuestCampaignOwner[];
+    /**
+     * ⚠️ Low confidence about: nullable
+     * @format date-time
+     */
+    startsAt: null | string;
+    status: UnknownValue;
+    testViewers:
+      | null
+      | GetQuestCampaignWithRewardGroups_QuestCampaignTestViewers
+      | GetQuestCampaignWithRewardGroups_QuestCampaignTestViewers[];
+    channelAllowlist:
+      | null
+      | GetQuestCampaignWithRewardGroups_QuestCampaignChannelAllowlist
+      | GetQuestCampaignWithRewardGroups_QuestCampaignChannelAllowlist[];
+    /** ⚠️ Low confidence about: nullable */
+    shouldAllowOfflineMonetizedProgress: null | boolean;
+    game: null | {
+      /**
+       * @pattern ^[0-9]+$
+       * @example ["509672"]
+       */
+      id: ID;
+      /** @example ["IRL", "Cyberpunk 2077", "Just Chatting", "Special Events", "League of Legends", "You Know The Drill", "RuneScape: Dragonwilds"] */
+      name: string;
+      /**
+       * @example ["https://static-cdn.jtvnw.net/ttv-boxart/509672-{width}x{height}.jpg", "https://static-cdn.jtvnw.net/ttv-boxart/65876-{width}x{height}.jpg"]
+       * @gqlArg `width: Int [52, 144, 40, 285, 250, 188, 90, 85, 200, 120]`
+       * @gqlArg `height: Int [72, 192, 56, 380, 300, 250, 55, 120, 113, 160]`
+       */
+      boxArtURL: string;
+      __typename: "Game";
+    };
+    rewardGroups: null | DevQuestRewardGroupFragment;
+    /**
+     * ⚠️ Low confidence about: nullable
+     * @format uri
+     */
+    imageURL: null | string;
+    __typename: "QuestCampaign";
+  };
 };
 
 export type GetQuestCampaignWithRewardGroupsResponse = QueryResponse<
@@ -87660,7 +87823,18 @@ export type GetQuestCampaignWithRewardGroupsResponse = QueryResponse<
 export type GetQuestRewardsByOrgVariables = { orgId: ID };
 
 export type GetQuestRewardsByOrgData = {
-  organization: null | GetQuestRewardsByOrg_Organization | GetQuestRewardsByOrg_Organization[];
+  organization: null | {
+    /**
+     * @format uuid
+     * @example ["beda0fa5-d8c5-4465-be03-fded75d8c01e"]
+     */
+    id: ID;
+    quests:
+      | null
+      | GetQuestRewardsByOrg_OrganizationQuests
+      | GetQuestRewardsByOrg_OrganizationQuests[];
+    __typename: "Organization";
+  };
 };
 
 export type GetQuestRewardsByOrgResponse = QueryResponse<
@@ -87801,7 +87975,7 @@ export type GetSingleGiftPricingData = {
                 /** @example ["amzn1.twitch.commerce.offer.98232214-5c3d-4da1-a9b3-c3333fb3483d", "amzn1.twitch.commerce.offer.3dedec40-a018-4790-0b9f-0f22ec580202"] */
                 id: ID;
                 /** @example ["WEB"] */
-                platform: string;
+                platform: OfferPlatform;
                 eligibility: {
                   isEligible: boolean;
                   __typename: "OfferEligibility";
@@ -87813,7 +87987,7 @@ export type GetSingleGiftPricingData = {
                         /** @example ["33d10886-ace9-466b-9060-e10013aa05a21887", "41679e35-3eaf-4acf-b861-e8941c99650f", "63967dc1-a829-453e-9425-53c0f68313723565"] */
                         id: ID;
                         /** @example ["EUR", "USD"] */
-                        currency: string;
+                        currency: PriceInfoCurrency;
                         /**
                          * @format int32
                          * @example [2]
@@ -87852,11 +88026,11 @@ export type GetSingleGiftPricingData = {
                            */
                           duration: number;
                           /** @example ["MONTHS"] */
-                          unit: string;
+                          unit: ChargeModelPlanIntervalUnit;
                           __typename: "ChargeModelPlanInterval";
                         };
                         /** @example ["AUTO_RENEW", "NO_RENEW"] */
-                        renewalPolicy: string;
+                        renewalPolicy: ChargeModelPlanRenewalPolicy;
                         __typename: "ChargeModelPlan";
                       };
                       __typename: "InternalChargeModel";
@@ -87884,7 +88058,7 @@ export type GetSingleGiftPricingData = {
                      */
                     discountPercent: number;
                     /** @example ["DISCOUNT_TYPE_PERCENT"] */
-                    discountType: string;
+                    discountType: PromotionDisplayDiscountType;
                     __typename: "PromotionDisplay";
                   };
                   eligibilityFilters: {
@@ -88303,7 +88477,7 @@ export type GetSubscriptionPricingData = {
            */
           tier: string;
           /** @example ["CHANSUB"] */
-          type: string;
+          type: SubscriptionProductType;
           /** @example ["summit1g", "summit1g_2000", "summit1g_3000", "cohh", "cohh_2000", "cohh_3000", "streamdatabase"] */
           name: string;
           /** @example ["Channel Subscription (summit1g)", "Channel Subscription (summit1g): $9.99 Sub", "Channel Subscription (summit1g): $24.99 Sub", "Subscription (Cohh)", "Subscription (Cohh): Tier 2 Sub", "Subscription (Cohh): Tier 3 Sub", "Subscription (streamdatabase)"] */
@@ -89472,7 +89646,20 @@ export type GuestStarTeamData = {
      * @example ["23161357"]
      */
     id: ID;
-    teamMemberships: null | GuestStarTeam_UserTeamMemberships | GuestStarTeam_UserTeamMemberships[];
+    teamMemberships:
+      | null
+      | {
+          team: null | {
+            /**
+             * @pattern ^[0-9]+$
+             * @example ["2351"]
+             */
+            id: ID;
+            members: null | GuestStarTeam_TeamMembers | GuestStarTeam_TeamMembers[];
+            __typename: "Team";
+          };
+          __typename: string;
+        }[];
     __typename: "User";
   };
 };
@@ -89853,7 +90040,7 @@ export type HighlighterPageVideoData = {
          */
         id: ID;
         /** @example ["ARCHIVE", "HIGHLIGHT", "UPLOAD"] */
-        broadcastType: string;
+        broadcastType: BroadcastType;
         /**
          * @format uint32
          * @example [15389, 4359, 4621, 621, 4472]
@@ -89924,10 +90111,45 @@ export type HighlighterVODSelectorSearchCreatorVideosData = {
     id: ID;
     /** @example ["lirik", "twitch", "cdprojektred", "forsen", "tickett_", "st1mgreeen", "lipton_18"] */
     login: string;
-    searchVideos:
-      | null
-      | HighlighterVODSelectorSearchCreatorVideos_UserSearchVideos
-      | HighlighterVODSelectorSearchCreatorVideos_UserSearchVideos[];
+    searchVideos: null | {
+      edges: {
+        cursor: null | Cursor;
+        node: null | {
+          /**
+           * @pattern ^[0-9]+$
+           * @example ["2323270866"]
+           */
+          id: ID;
+          /**
+           * @format uint32
+           * @example [15389, 4359, 4621, 621, 4472]
+           */
+          lengthSeconds: number;
+          /**
+           * @example ["https://static-cdn.jtvnw.net/cf_vods/d1m7jfoe9zdc1j/82ef4729c6011d6072e2_twitch_43295848617_1733849129//thumb/thumb0-90x60.jpg", "https://static-cdn.jtvnw.net/cf_vods/d3fi1amfgojobc/7fbc776f6b7a4659c4e4_cdprojektred_319108158181_1793115910//thumb/thumb0-90x60.jpg"]
+           * @gqlArg `width: Int [320, 90, 640, 240, 400, 1280, 80, 160, 214]`
+           * @gqlArg `height: Int [180, 60, 360, 135, 225, 480, 720, 51, 45, 90]`
+           */
+          previewThumbnailURL: string;
+          /**
+           * @format date-time
+           * @example ["2024-12-10T16:45:35Z", "2026-10-27T15:45:17Z"]
+           */
+          publishedAt: string;
+          /** @example ["Twitch Recap: 2024 according to Twitch Chat!", "REDstreams — Cyberpunk 2077: Edgerunners 2 Update (2.5) | Overview"] */
+          title: null | string;
+          /** @example ["ARCHIVE", "HIGHLIGHT", "UPLOAD"] */
+          broadcastType: BroadcastType;
+          __typename: "Video";
+        };
+        __typename: "VideoEdge";
+      }[];
+      pageInfo: null | {
+        hasNextPage: boolean;
+        __typename: "PageInfo";
+      };
+      __typename: "VideoConnection";
+    };
     __typename: "User";
   };
 };
@@ -90166,7 +90388,7 @@ export type HomeShelfUsersData = {
         shelves: {
           streamerShelf: {
             /** @example ["AUTOHOST", "DISABLED"] */
-            type: string;
+            type: ChannelHomeStreamerShelfType;
             edges: {
               /** @format uuid */
               trackingID: ID;
@@ -90222,7 +90444,7 @@ export type HomeShelfVideosData = {
           /** @example [""] */
           description: null | string;
           /** @example ["TOP_CLIPS", "LATEST_BROADCASTS", "LATEST_NON_BROADCASTS", "ALL_VIDEOS", "COLLECTION"] */
-          type: string;
+          type: VideoShelfType;
           items: null | (HomeShelfVideosVideo | ChannelHomeClip)[];
           __typename: "VideoShelf";
         };
@@ -90294,6 +90516,7 @@ export type HostTrainContentResponse = QueryResponse<HostTrainContentData, "Host
 export type HostTrainPollVariables = { hostChannelID: ID };
 
 export type HostTrainPollData = {
+  hostTrain: null | HostTrainPoll_HostTrain | HostTrainPoll_HostTrain[];
   user: null | {
     /**
      * @pattern ^[0-9]+$
@@ -90370,7 +90593,7 @@ export type HostTrainStationChannelResponse = QueryResponse<
 export type IdentityVerificationRequirementData = {
   identityVerificationRequirement: {
     /** @example ["NOTREQUIRED"] */
-    status: string;
+    status: IdentityVerificationRequirementStatus;
     __typename: "IdentityVerificationRequirement";
   };
 };
@@ -90397,7 +90620,7 @@ export type IdentityVerificationRequirementMoneyBannerData = {
   };
   identityVerificationRequirement: {
     /** @example ["NOTREQUIRED"] */
-    status: string;
+    status: IdentityVerificationRequirementStatus;
     __typename: "IdentityVerificationRequirement";
   };
 };
@@ -90732,7 +90955,7 @@ export type IsWatchStreakSharedData = {
           /** @example ["", "99bb51de-5845-4a2d-9c21-f9b30535cdc5"] */
           id: ID;
           /** @example ["CAN_SHARE", "CAN_NOT_SHARE"] */
-          shareStatus: string;
+          shareStatus: ViewerMilestoneShareStatus;
           __typename: "ViewerMilestone";
         };
         __typename: "WatchStreakMilestone";
@@ -90795,7 +91018,7 @@ export type LeaderboardBadgePeriodData = {
      */
     id: ID;
     /** @example ["WEEK", "MONTH"] */
-    leaderboardTimePeriod: string;
+    leaderboardTimePeriod: TimePeriod;
     __typename: "Channel";
   };
 };
@@ -90822,9 +91045,9 @@ export type LeaderboardSettingsGetLeaderboardSettingsData = {
         isSubGiftEnabled: boolean;
         isClipEnabled: boolean;
         /** @example ["SUBGIFT", "CLIP"] */
-        defaultLeaderboard: string;
+        defaultLeaderboard: LeaderboardSettingsDefaultLeaderboard;
         /** @example ["WEEK", "MONTH"] */
-        timePeriod: string;
+        timePeriod: TimePeriod;
         __typename: "LeaderboardSettings";
       };
       __typename: "UserSettings";
@@ -90836,6 +91059,30 @@ export type LeaderboardSettingsGetLeaderboardSettingsData = {
 export type LeaderboardSettingsGetLeaderboardSettingsResponse = QueryResponse<
   LeaderboardSettingsGetLeaderboardSettingsData,
   "LeaderboardSettings_GetLeaderboardSettings"
+>;
+
+export type LeftNavPayoutCategoryData = {
+  currentUser: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["23161357"]
+     */
+    id: ID;
+    onboardingInvitations: {
+      payout: null | {
+        id: ID;
+        category: UnknownValue;
+        __typename: "PayoutInvite";
+      };
+      __typename: "OnboardingInvitations";
+    };
+    __typename: "User";
+  };
+};
+
+export type LeftNavPayoutCategoryResponse = QueryResponse<
+  LeftNavPayoutCategoryData,
+  "LeftNavPayoutCategory"
 >;
 
 export type LegacyViewsTileQueryVariables = { login: string };
@@ -91035,7 +91282,7 @@ export type LiveViewsTimeseriesStatsStreamSummaryData = {
     login: string;
     timeseriesStats: {
       /** @example ["DAY", "WEEK", "MONTH"] */
-      granularity: string;
+      granularity: Granularity;
       liveViews:
         | null
         | LiveViewsTimeseriesStatsStreamSummary_TimeseriesStatsLiveViews
@@ -91303,7 +91550,7 @@ export type ManagePlusGoalPromptData = {
        */
       l2Threshold: number;
       /** @example ["OFF", "LEVEL_2", "LEVEL_1"] */
-      widgetSetting: string;
+      widgetSetting: PartnerPlusProgramPublicWidgetSetting;
       __typename: "PartnerPlusProgramPublic";
     };
     __typename: "CreatorProgramInfoPublic";
@@ -91684,8 +91931,13 @@ export type ModifyEmoteOwnedEmotesData = {
         id: ID;
         modifiers:
           | null
-          | ModifyEmoteOwnedEmotes_EmoteModifiers
-          | ModifyEmoteOwnedEmotes_EmoteModifiers[];
+          | (null | {
+              /** @example ["HF", "SG", "TK"] */
+              code: EmoteModifierCode;
+              /** @example ["HORIZONTAL_FLIP", "SUNGLASSES", "THINKING"] */
+              name: EmoteModifierName;
+              __typename: "EmoteModifier";
+            })[];
         __typename: "Emote";
       }[];
       __typename: "EmoteSet";
@@ -92284,7 +92536,7 @@ export type MwebChannelAboutPageQueryData = {
                */
               id: ID;
               /** @example ["DEFAULT"] */
-              type: string;
+              type: DefaultPanelType;
             })
           | {
               /**
@@ -92293,7 +92545,7 @@ export type MwebChannelAboutPageQueryData = {
                */
               id: ID;
               /** @example ["DEFAULT"] */
-              type: string;
+              type: DefaultPanelType;
               __typename: "ExtensionPanel";
             }
         )[];
@@ -92511,7 +92763,7 @@ export type MwebChannelLiveQueryData = {
           collaborationViewersCount: null | number;
           costreamDetails: null | {
             /** @example ["ORGANIZER", "COSTREAMER"] */
-            role: string;
+            role: CostreamDetailsRole;
             /**
              * @format uint32
              * @example [53318, 665, 54790, 55713, 54158]
@@ -93499,7 +93751,17 @@ export type MWebSkylineViewerSheetResponse = QueryResponse<
 export type MwebSubfeedByIdQueryVariables = { input: EnumOrInput };
 
 export type MwebSubfeedByIdQueryData = {
-  subfeed: null | MwebSubfeedByIdQuery_Subfeed | MwebSubfeedByIdQuery_Subfeed[];
+  subfeed: null | {
+    id: ID;
+    /** ⚠️ Low confidence about: nullable */
+    name: null | string;
+    feedLocation: UnknownValue;
+    locationAttributes:
+      | null
+      | MwebSubfeedByIdQuery_SubfeedLocationAttributes
+      | MwebSubfeedByIdQuery_SubfeedLocationAttributes[];
+    __typename: "Subfeed";
+  };
 };
 
 export type MwebSubfeedByIdQueryResponse = QueryResponse<
@@ -93864,6 +94126,131 @@ export type NativeChannelLiveQueryResponse = QueryResponse<
   "NativeChannelLiveQuery"
 >;
 
+export type NewAllCampaignsCampaignDetailsVariables = { campaignID: ID };
+
+export type NewAllCampaignsCampaignDetailsData = {
+  dropsCampaign: null | {
+    /**
+     * @format uuid
+     * @example ["b444df04-11b1-4bfe-94d1-3545d48a077c"]
+     */
+    id: ID;
+    /** @example ["Release Drops: Week I", "First Partners Collection", "1 Month of Apple TV", "Ted Lasso Badges", "True Damage Chat Badge", "Pokemon Evolutions"] */
+    name: string;
+    /** @example ["", "Pokemon", "Apple"] */
+    brandName: string;
+    /** ⚠️ Low confidence about: nullable */
+    description: null | string;
+    status: UnknownValue;
+    /**
+     * @format date-time
+     * @example ["2026-09-18T15:00:00Z", "2026-08-24T17:00:00Z"]
+     */
+    startAt: string;
+    /**
+     * @format date-time
+     * @example ["2026-09-25T14:59:59.999Z", "2026-11-01T07:00:00Z"]
+     */
+    endAt: string;
+    game: null | {
+      /**
+       * @pattern ^[0-9]+$
+       * @example ["509672"]
+       */
+      id: ID;
+      /** @example ["IRL", "Cyberpunk 2077", "Just Chatting", "Special Events", "Gwent: The Witcher Card Game", "Grand Theft Auto V", "DayZ"] */
+      displayName: string;
+      /**
+       * @example ["https://static-cdn.jtvnw.net/ttv-boxart/509672-{width}x{height}.jpg", "https://static-cdn.jtvnw.net/ttv-boxart/65876-{width}x{height}.jpg"]
+       * @gqlArg `width: Int [52, 144, 40, 285, 250, 188, 90, 85, 200, 120]`
+       * @gqlArg `height: Int [72, 192, 56, 380, 300, 250, 55, 120, 113, 160]`
+       */
+      boxArtURL: string;
+      __typename: "Game";
+    };
+    rewardGroups: {
+      /**
+       * @format uuid
+       * @example ["01f42e84-b34e-11f1-b729-0a58a9feac02"]
+       */
+      id: ID;
+      /** @example ["Weapon kit", "Shadow Sleeve", "Beacon", "Medical kit", "Small weapon kit", "Dog tag", "Large safe container"] */
+      name: string;
+      progressCriteria: {
+        categories: {
+          /**
+           * @pattern ^[0-9]+$
+           * @example ["509672"]
+           */
+          id: ID;
+          __typename: "Game";
+        }[];
+        /** @example ["WATCH", "SUB"] */
+        requirementType: DropsProgressCriteriaRequirementType;
+        requirements: {
+          /**
+           * @format uint32
+           * @example [360, 420, 60, 120, 180, 240, 300, 20, 30]
+           */
+          minutesWatched: null | number;
+          /**
+           * @format int32
+           * @example [1]
+           */
+          subs: null | number;
+          turboSubs: null;
+          __typename: "DropsUnlockRequirement";
+        };
+        repeatableConfig: null | {
+          /**
+           * @format int32
+           * @example [3]
+           */
+          repeatableTimes: number;
+          shouldCompleteAllRepeatsToEarn: boolean;
+          __typename: "DropsRepeatableConfig";
+        };
+        __typename: "DropsProgressCriteria";
+      };
+      rewards: {
+        /**
+         * @format uuid
+         * @example ["81070d47-b0ff-11f1-97ab-0a58a9feac02"]
+         */
+        id: ID;
+        /** @example ["DP-12", "SCAR-H", "Gun Camo: Pixel", "Gun Camo: Reptile", "Shadow", "Beacon", "Big first aid kit"] */
+        name: string;
+        /**
+         * @format uri
+         * @example ["https://static-cdn.jtvnw.net/twitch-quests-assets/REWARD/7c9311b4-d6f5-4c09-be75-a4efb26e1a07.png", "https://static-cdn.jtvnw.net/twitch-quests-assets/REWARD/a98046f1-49ab-414a-997f-7c8414c24491.png"]
+         */
+        thumbnailURL: string;
+        /** @example ["DIRECT_ENTITLEMENT", "POOL", "CODE", "BADGE"] */
+        distributionType: DropsRewardDistributionType;
+        /** ⚠️ Low confidence about: nullable */
+        isAccountConnected: null | boolean;
+        /**
+         * ⚠️ Low confidence about: nullable
+         * @format uri
+         */
+        accountLinkURL: null | string;
+        __typename: "DropsReward";
+      }[];
+      self:
+        | null
+        | NewAllCampaignsCampaignDetails_DropsRewardGroupSelf
+        | NewAllCampaignsCampaignDetails_DropsRewardGroupSelf[];
+      __typename: "DropsRewardGroup";
+    }[];
+    __typename: "DropsCampaign";
+  };
+};
+
+export type NewAllCampaignsCampaignDetailsResponse = QueryResponse<
+  NewAllCampaignsCampaignDetailsData,
+  "NewAllCampaignsCampaignDetails"
+>;
+
 export type NewAllCampaignsPageData = {
   dropsCampaigns: null | NewAllCampaignsPage_DropsCampaigns | NewAllCampaignsPage_DropsCampaigns[];
 };
@@ -93943,7 +94330,7 @@ export type NewSubscriptionsTimeseriesStatsStreamSummaryData = {
     login: string;
     timeseriesStats: {
       /** @example ["DAY", "WEEK", "MONTH"] */
-      granularity: string;
+      granularity: Granularity;
       newSubscriptions:
         | null
         | NewSubscriptionsTimeseriesStatsStreamSummary_TimeseriesStatsNewSubscriptions
@@ -94486,7 +94873,7 @@ export type OnboardingSectionCurrentUserData = {
   };
   identityVerificationRequirement: {
     /** @example ["NOTREQUIRED"] */
-    status: string;
+    status: IdentityVerificationRequirementStatus;
     __typename: "IdentityVerificationRequirement";
   };
 };
@@ -94593,10 +94980,10 @@ export type OneClickCheckoutCustomGiftingCheckoutPriceData = {
             /** @aliasFor checkoutPrice */
             recurlyCheckoutPrice: {
               /** @example ["UNKNOWN_USER_RESIDENCE"] */
-              errorCode: null | string;
+              errorCode: null | ProductPurchaseErrorCode;
               checkoutPriceSummary: null | {
                 /** @example ["EUR"] */
-                currency: string;
+                currency: PriceInfoCurrency;
                 /**
                  * @format int32
                  * @example [2]
@@ -94677,7 +95064,7 @@ export type OneClickCheckoutCustomGiftingCheckoutPriceData = {
         discountPercent: number;
         discountPrices: null | Money;
         /** @example ["DISCOUNT_TYPE_PERCENT"] */
-        discountType: string;
+        discountType: PromotionDisplayDiscountType;
         __typename: "PromotionDisplay";
       };
       eligibilityFilters: {
@@ -94720,10 +95107,10 @@ export type OneClickCheckoutCustomGiftingCheckoutPriceData = {
             /** @aliasFor checkoutPrice */
             recurlyCheckoutPrice: {
               /** @example ["UNKNOWN_USER_RESIDENCE"] */
-              errorCode: null | string;
+              errorCode: null | ProductPurchaseErrorCode;
               checkoutPriceSummary: null | {
                 /** @example ["EUR"] */
-                currency: string;
+                currency: PriceInfoCurrency;
                 /**
                  * @format int32
                  * @example [2]
@@ -94804,7 +95191,7 @@ export type OneClickCheckoutCustomGiftingCheckoutPriceData = {
         discountPercent: number;
         discountPrices: null | Money;
         /** @example ["DISCOUNT_TYPE_PERCENT"] */
-        discountType: string;
+        discountType: PromotionDisplayDiscountType;
         __typename: "PromotionDisplay";
       };
       eligibilityFilters: {
@@ -94882,7 +95269,7 @@ export type OneClickEligibilityData = {
     __typename: "User";
   };
   /** @example ["NOT_APPLICABLE"] */
-  recurlySubscriptionBillingAddressCompleteness: null | string;
+  recurlySubscriptionBillingAddressCompleteness: null | RecurlySubscriptionBillingAddressCompleteness;
   recurlyConfigs: {
     payWithAmazonConfigs: {
       /** @example ["amzn1.application-oa2-client.608cce2919884a35a7fccdef39cada5c"] */
@@ -95159,7 +95546,7 @@ export type PartnerPlusPublicQueryData = {
        */
       l2Threshold: number;
       /** @example ["LEVEL_2", "LEVEL_1", "NONE"] */
-      level: string;
+      level: PartnerPlusProgramPublicLevel;
       canShowWidget: boolean;
       subPoints: {
         /**
@@ -95182,7 +95569,7 @@ export type PartnerPlusPublicQueryData = {
         __typename: "YearMonthCategoryBreakdownPublic";
       }[];
       /** @example ["OFF", "LEVEL_2", "LEVEL_1"] */
-      widgetSetting: string;
+      widgetSetting: PartnerPlusProgramPublicWidgetSetting;
       __typename: "PartnerPlusProgramPublic";
     };
     __typename: "CreatorProgramInfoPublic";
@@ -95205,7 +95592,7 @@ export type PartnerPlusQueryData = {
   plusStatus: null | {
     partnerPlusProgram: {
       /** @example ["LEVEL_2", "LEVEL_1", "NONE"] */
-      level: string;
+      level: PartnerPlusProgramPublicLevel;
       /**
        * @format int32
        * @example [100, 50]
@@ -95221,7 +95608,7 @@ export type PartnerPlusQueryData = {
         | PartnerPlusQuery_PartnerPlusProgramPublicQualification
         | PartnerPlusQuery_PartnerPlusProgramPublicQualification[];
       /** @example ["OFF", "LEVEL_2", "LEVEL_1"] */
-      widgetSetting: string;
+      widgetSetting: PartnerPlusProgramPublicWidgetSetting;
       /** ⚠️ Low confidence about: nullable */
       hasMetCriteria: null | boolean;
       __typename: "PartnerPlusProgramPublic";
@@ -95270,7 +95657,7 @@ export type PartnershipSignupPageApplicationFormData = {
        */
       id: ID;
       /** @example ["EN", "ES"] */
-      language: string;
+      language: BroadcastSettingsLanguage;
       __typename: "BroadcastSettings";
     };
     /** @example ["user@example.com"] */
@@ -95318,7 +95705,7 @@ export type PartnershipSignupPageUserData = {
        */
       id: ID;
       /** @example ["EN", "ES"] */
-      language: string;
+      language: BroadcastSettingsLanguage;
       __typename: "BroadcastSettings";
     };
     __typename: "User";
@@ -95410,19 +95797,26 @@ export type PaymentMethodsTabUserPaymentMethodsData = {
      * @gqlArg `width: Int [50, 70, 300, 28, 150]`
      */
     profileImageURL: string;
-    eligiblePaymentMethodsPayload:
-      | null
-      | PaymentMethodsTabUserPaymentMethods_UserEligiblePaymentMethodsPayload
-      | PaymentMethodsTabUserPaymentMethods_UserEligiblePaymentMethodsPayload[];
+    eligiblePaymentMethodsPayload: null | {
+      methods: {
+        /** @example ["XSOLLA"] */
+        name: EligiblePaymentMethodName;
+        /** @example ["AVAILABLE"] */
+        availabilityStatus: EligiblePaymentMethodAvailabilityStatus;
+        __typename: "EligiblePaymentMethod";
+      }[];
+      error: null;
+      __typename: "EligiblePaymentMethodsPayload";
+    };
     paymentMethods:
       | null
       | {
           /** @example [""] */
           chargeInstrumentID: ID;
           /** @example ["XSOLLA", "GOOGLE_IAB"] */
-          provider: string;
+          provider: PaymentProvider;
           /** @example ["UNKNOWN"] */
-          paymentType: string;
+          paymentType: PaymentMethodPaymentType;
           paymentScheme: null | string;
           billingEmail: null | string;
           billingUsername: null;
@@ -95469,7 +95863,7 @@ export type PaymentMethodsTabUserPaymentMethodsData = {
     | PaymentMethodsTabUserPaymentMethods_PaymentPastDueStatuses
     | PaymentMethodsTabUserPaymentMethods_PaymentPastDueStatuses[];
   /** @example ["NOT_APPLICABLE"] */
-  recurlySubscriptionBillingAddressCompleteness: null | string;
+  recurlySubscriptionBillingAddressCompleteness: null | RecurlySubscriptionBillingAddressCompleteness;
   requestInfo: {
     /** @example ["DE"] */
     countryCode: string;
@@ -95531,7 +95925,7 @@ export type PayoutEligibilityV2Data = {
   };
   identityVerificationRequirement: {
     /** @example ["NOTREQUIRED"] */
-    status: string;
+    status: IdentityVerificationRequirementStatus;
     __typename: "IdentityVerificationRequirement";
   };
 };
@@ -95754,7 +96148,7 @@ export type PayoutOnboardingContainerCurrentUserData = {
   };
   accountLimitStatus: {
     /** @example ["NOTRESTRICTED"] */
-    status: string;
+    status: AccountLimitStatus;
     __typename: "AccountLimit";
   };
 };
@@ -95767,7 +96161,7 @@ export type PayoutOnboardingContainerCurrentUserResponse = QueryResponse<
 export type PayoutOnboardingContainerV3IdvRequirementData = {
   identityVerificationRequirement: {
     /** @example ["NOTREQUIRED"] */
-    status: string;
+    status: IdentityVerificationRequirementStatus;
     __typename: "IdentityVerificationRequirement";
   };
 };
@@ -95807,7 +96201,7 @@ export type PayoutOnboardingContainerV3QueryData = {
   };
   accountLimitStatus: {
     /** @example ["NOTRESTRICTED"] */
-    status: string;
+    status: AccountLimitStatus;
     __typename: "AccountLimit";
   };
 };
@@ -95900,9 +96294,9 @@ export type PayoutOnboardingTaxInterviewV2CurrentUserData = {
     payout: {
       taxIntents: {
         /** @example ["NOT_STARTED"] */
-        state: string;
+        state: TaxIntentState;
         /** @example ["ROYALTY", "SERVICE"] */
-        type: string;
+        type: TaxIntentType;
         taxMismatchErrors: UnknownValue;
         isUserActionRequired: boolean;
         /**
@@ -95980,7 +96374,7 @@ export type PayoutThresholdV2Data = {
       };
       status: {
         /** @example ["AUTOMATIC"] */
-        payoutPreference: string;
+        payoutPreference: SpendableBalanceStatusPayoutPreference;
         __typename: "SpendableBalanceStatus";
       };
       __typename: "SpendableBalance";
@@ -96042,10 +96436,12 @@ export type PbyPGameData = {
 export type PbyPGameResponse = QueryResponse<PbyPGameData, "PbyPGame">;
 
 export type PendingOrganizationApplicationData = {
-  pendingOrganizationApplication:
-    | null
-    | PendingOrganizationApplication_PendingOrganizationApplication
-    | PendingOrganizationApplication_PendingOrganizationApplication[];
+  pendingOrganizationApplication: null | {
+    /** ⚠️ Low confidence about: nullable */
+    organizationName: null | string;
+    status: UnknownValue;
+    __typename: "OrganizationApplication";
+  };
 };
 
 export type PendingOrganizationApplicationResponse = QueryResponse<
@@ -96218,8 +96614,8 @@ export type PlaybackAccessTokenData = {
     signature: string;
     authorization: {
       isForbidden: boolean;
-      /** @example ["NONE"] */
-      forbiddenReasonCode: string;
+      /** @example ["NONE", "GEOBLOCKED"] */
+      forbiddenReasonCode: PlaybackAccessTokenAuthorizationForbiddenReasonCode;
       __typename: "PlaybackAccessTokenAuthorization";
     };
     __typename: "PlaybackAccessToken";
@@ -96296,12 +96692,12 @@ export type PlayerTrackingContextQueryData = {
             /** @example ["vod:2397382584"] */
             id: ID;
             /** @example ["ALLOW_ALL_TIERS"] */
-            options: string[];
+            options: ResourceRestrictionOptions[];
             /** @example ["SUB_ONLY_LIVE"] */
-            type: string;
+            type: ResourceRestrictionType;
             exemptions: {
               /** @example ["STAFF", "SITE_ADMIN", "PRODUCT", "PREVIEW"] */
-              type: string;
+              type: ResourceRestrictionExemptionType;
               __typename: "ResourceRestrictionExemption";
             }[];
             __typename: "ResourceRestriction";
@@ -96405,7 +96801,7 @@ export type PlusProgramPanelQueryData = {
         | PlusProgramPanelQuery_PartnerPlusProgramPublicQualification
         | PlusProgramPanelQuery_PartnerPlusProgramPublicQualification[];
       /** @example ["LEVEL_2", "LEVEL_1", "NONE"] */
-      level: string;
+      level: PartnerPlusProgramPublicLevel;
       /** ⚠️ Low confidence about: nullable */
       hasMetCriteria: null | boolean;
       /**
@@ -96733,8 +97129,8 @@ export type PrefetchPlaybackAccessTokenData = {
     expiresAt: string;
     authorization: {
       isForbidden: boolean;
-      /** @example ["NONE"] */
-      forbiddenReasonCode: string;
+      /** @example ["NONE", "GEOBLOCKED"] */
+      forbiddenReasonCode: PlaybackAccessTokenAuthorizationForbiddenReasonCode;
       __typename: "PlaybackAccessTokenAuthorization";
     };
     __typename: "PlaybackAccessToken";
@@ -97169,7 +97565,7 @@ export type PrimeSubscribeUserPrimeDataData = {
          */
         tier: string;
         /** @example ["WEB"] */
-        platform: string;
+        platform: SubscriptionBenefitPlatform;
         /** @format date-time */
         renewsAt: null | string;
         /**
@@ -97270,7 +97666,7 @@ export type ProfileBannerPreferencesData = {
       home: {
         preferences: {
           /** @example ["PRESET_2", "PRESET_1"] */
-          heroPreset: string;
+          heroPreset: ChannelHomePreferencesHeroPreset;
           __typename: "ChannelHomePreferences";
         };
         __typename: "ChannelHome";
@@ -97645,7 +98041,7 @@ export type QuickActionManagePartnerPlusData = {
         __typename: "YearMonthCategoryBreakdownPublic";
       }[];
       /** @example ["OFF", "LEVEL_2", "LEVEL_1"] */
-      widgetSetting: string;
+      widgetSetting: PartnerPlusProgramPublicWidgetSetting;
       /**
        * @format int32
        * @example [100, 50]
@@ -97759,7 +98155,7 @@ export type QuickActionsContextExtensionsQueryData = {
       id: ID;
       activationConfig: {
         /** @example ["ACTIVE"] */
-        state: string;
+        state: ExtensionActivationConfigState;
         __typename: "ExtensionActivationConfig";
       };
       extension: null | {
@@ -97859,7 +98255,7 @@ export type QuickActionsMomentClipDownloadData = {
       /** @example ["ce4b4ef1-4e8d-4391-bff6-2bc4c5506a4d/LANDSCAPE", "c8e52370-1429-4023-9ce8-9d016939e3c2/LANDSCAPE"] */
       id: ID;
       /** @example ["SOURCE", "RECOMPOSED"] */
-      type: string;
+      type: ClipAssetType;
       downloadQualities: {
         /** @example ["", "https://d1ndex63qxojbr.cloudfront.net/nauth/ce4b4ef1-4e8d-4391-bff6-2bc4c5506a4d/landscape/avc/1080/index.mp4", "https://d1ndex63qxojbr.cloudfront.net/nauth/ce4b4ef1-4e8d-4391-bff6-2bc4c5506a4d/landscape/avc/720/index.mp4"] */
         sourceURL: string;
@@ -98221,7 +98617,7 @@ export type RecapClipPlaybackData = {
          */
         height: number;
         /** @example ["AVC", "HEVC"] */
-        videoCodec: string;
+        videoCodec: VideoCodec;
         __typename: "ClipVideoQuality";
       }[];
       __typename: "ClipAsset";
@@ -98258,12 +98654,12 @@ export type RecapClipProcessingStateData = {
        */
       createdAt: string;
       /** @example ["CREATED", "FAILED"] */
-      creationState: string;
+      creationState: ClipAssetCreationState;
       videoQualities: {
         /** @example ["", "avc1.64002A,mp4a.40.2", "hvc1.1.6.L123.90", "hvc1.1.6.L120.90", "hvc1.1.6.L90.90", "hvc1.1.6.L63.90", "hvc1.1.6.L150.90", "avc1.640028,mp4a.40.2"] */
         codecs: string;
         /** @example ["AVC", "HEVC"] */
-        videoCodec: string;
+        videoCodec: VideoCodec;
         __typename: "ClipVideoQuality";
       }[];
       __typename: "ClipAsset";
@@ -98445,7 +98841,7 @@ export type RecommendedExtensionData = {
         /** @example ["extension-panel-3", "extension-panel-1", "extension-overlay-1", "extension-component-1", "extension-panel-2"] */
         slot: string;
         /** @example ["ACTIVE"] */
-        state: string;
+        state: ExtensionActivationConfigState;
         __typename: "ExtensionActivationConfig";
       };
       extension: null | {
@@ -98457,7 +98853,7 @@ export type RecommendedExtensionData = {
         clientID: ID;
         isBitsEnabled: boolean;
         /** @example ["OPTIONAL", "NONE"] */
-        bitsSupportLevel: string;
+        bitsSupportLevel: ExtensionBitsSupportLevel;
         __typename: "Extension";
       };
       permittedFeatures: null | {
@@ -98490,7 +98886,7 @@ export type RecommendedExtensionData = {
     version: string;
     isBitsEnabled: boolean;
     /** @example ["OPTIONAL", "NONE"] */
-    bitsSupportLevel: string;
+    bitsSupportLevel: ExtensionBitsSupportLevel;
     /** ⚠️ Low confidence about: nullable */
     hasChatSupport: null | boolean;
     subscriptionsSupportLevel: UnknownValue;
@@ -98999,7 +99395,7 @@ export type ReportUserModalReportWizardDataData = {
         /** @example ["user is supposed to be suspended from Twitch", "Ex. targeted abuse, advocating abuse, coordinating harassment, unwanted sexual advances"] */
         description: string;
         /** @example ["REPORTABLE", "LINK_DMCA_GUIDELINES", "MISINFORMATION"] */
-        deadEndType: string;
+        deadEndType: ReportReasonDeadEndType;
         detailedReasons:
           | null
           | {
@@ -99021,12 +99417,12 @@ export type ReportUserModalReportWizardDataData = {
       /** @example ["LIVESTREAM_REPORT", "CHAT_REPORT", "WHISPER_REPORT", "ALERT_REPORT", "USERNAME_REPORT", "USER_REPORT", "COLLAB_REQUEST", "OFF_PLATFORM_REPORT"] */
       id: ID;
       /** @example ["LIVESTREAM_REPORT", "CHAT_REPORT", "WHISPER_REPORT", "ALERT_REPORT", "USERNAME_REPORT", "USER_REPORT", "COLLAB_REQUEST", "OFF_PLATFORM_REPORT"] */
-      type: string;
+      type: ReportContentType;
       applicableReasons: {
         /** @example ["livestream_report:terrorism_mass_violence", "livestream_report:sexual_content"] */
         id: ID;
         /** @example ["MAIN", "SEARCH"] */
-        visibility: string;
+        visibility: ReportableContentReasonVisibility;
         reportReason: {
           /** @example ["tos_ban_evasion", "harassment"] */
           id: ID;
@@ -99035,7 +99431,7 @@ export type ReportUserModalReportWizardDataData = {
         __typename: "ReportableContentReason";
       }[];
       /** @example ["REPORTABLE", "LINK_OFF_PLATFORM_GUIDELINES"] */
-      deadEndType: string;
+      deadEndType: ReportableContentDeadEndType;
       __typename: "ReportableContent";
     }[];
     __typename: "ReportWizard";
@@ -100134,7 +100530,7 @@ export type SettingsChannelClipsSettingsData = {
           | SettingsChannelClipsSettings_ChannelClipsSettingsFeaturingRestrictedTo
           | SettingsChannelClipsSettings_ChannelClipsSettingsFeaturingRestrictedTo[];
         /** @example ["UNSPECIFIED"] */
-        discoverySetting: string;
+        discoverySetting: ChannelClipsSettingsDiscoverySetting;
         isAutoClipsEnabled: null | boolean;
         isAutopubRecapsEnabled: boolean;
         isSpotlightEnrolled: null | boolean;
@@ -100148,9 +100544,9 @@ export type SettingsChannelClipsSettingsData = {
           followersOnlyDurationMinutes: null | number;
           isSubscribersOnlyEnabled: boolean;
           /** @example ["PARTIAL"] */
-          emailVerificationMode: string;
+          emailVerificationMode: VerificationMode;
           /** @example ["NONE"] */
-          phoneVerificationMode: string;
+          phoneVerificationMode: VerificationMode;
           partialEmailVerificationConfig: {
             shouldRestrictFirstTimeCommenters: boolean;
             shouldRestrictBasedOnAccountAge: boolean;
@@ -100167,10 +100563,22 @@ export type SettingsChannelClipsSettingsData = {
             minimumFollowerAgeInMinutes: number;
             __typename: "ClipCommentPartialVerificationConfig";
           };
-          partialPhoneVerificationConfig:
-            | null
-            | SettingsChannelClipsSettings_ChannelClipCommentSettingsPartialPhoneVerificationConfig
-            | SettingsChannelClipsSettings_ChannelClipCommentSettingsPartialPhoneVerificationConfig[];
+          partialPhoneVerificationConfig: null | {
+            shouldRestrictFirstTimeCommenters: boolean;
+            shouldRestrictBasedOnAccountAge: boolean;
+            /**
+             * @format uint32
+             * @example [10080]
+             */
+            minimumAccountAgeInMinutes: number;
+            shouldRestrictBasedOnFollowerAge: boolean;
+            /**
+             * @format uint32
+             * @example [1440]
+             */
+            minimumFollowerAgeInMinutes: number;
+            __typename: "ClipCommentPartialVerificationConfig";
+          };
           isSubscriberExempt: boolean;
           isVIPExempt: boolean;
           isModeratorExempt: boolean;
@@ -100824,13 +101232,13 @@ export type SetupToolsSectionPayoutMethodData = {
       };
       status: {
         /** @example ["UNSPECIFIED"] */
-        optState: string;
+        optState: OptState;
         /** @example ["INELIGIBLE"] */
-        eligibility: string;
+        eligibility: SpendableBalanceStatusEligibility;
         /** @example ["INVALID_COUNTRY"] */
-        ineligibilityReasons: string[];
+        ineligibilityReasons: SpendableBalanceStatusIneligibilityReasons[];
         /** @example ["AUTOMATIC"] */
-        payoutPreference: string;
+        payoutPreference: SpendableBalanceStatusPayoutPreference;
         __typename: "SpendableBalanceStatus";
       };
       __typename: "SpendableBalance";
@@ -100910,10 +101318,31 @@ export type SharedChatModeratorStrikesResponse = QueryResponse<
 export type SharedChatSessionVariables = { channelID: ID };
 
 export type SharedChatSessionData = {
-  sharedChatSession:
-    | null
-    | SharedChatSession_SharedChatSession
-    | SharedChatSession_SharedChatSession[];
+  sharedChatSession: null | {
+    id: ID;
+    host:
+      | null
+      | SharedChatSession_SharedChatSessionHost
+      | SharedChatSession_SharedChatSessionHost[];
+    status: UnknownValue;
+    participants: null | SharedChatParticipant;
+    /**
+     * ⚠️ Low confidence about: nullable
+     * @format date-time
+     */
+    createdAt: null | string;
+    /**
+     * ⚠️ Low confidence about: nullable
+     * @format date-time
+     */
+    updatedAt: null | string;
+    /**
+     * ⚠️ Low confidence about: nullable
+     * @format date-time
+     */
+    autoStartsAt: null | string;
+    __typename: "SharedChatSession";
+  };
 };
 
 export type SharedChatSessionResponse = QueryResponse<SharedChatSessionData, "SharedChatSession">;
@@ -101332,55 +101761,18 @@ export type SideNavData = {
 
 export type SideNavResponse = QueryResponse<SideNavData, "SideNav">;
 
-export type SideNavCreatorBadgeDropVariables = { channelID: ID };
+export type SideNavCreatorBadgeDropsVariables = { channelIDs: ID[] };
 
-export type SideNavCreatorBadgeDropData = {
-  channelDropCampaigns:
+export type SideNavCreatorBadgeDropsData = {
+  channelOwnedDropCampaigns:
     | null
-    | {
-        /**
-         * @format uuid
-         * @example ["b444df04-11b1-4bfe-94d1-3545d48a077c"]
-         */
-        id: ID;
-        /** @example ["", "Pokemon", "Apple"] */
-        brandName: string;
-        status: UnknownValue;
-        /**
-         * @format date-time
-         * @example ["2026-09-18T15:00:00Z", "2026-08-24T17:00:00Z"]
-         */
-        startAt: string;
-        /**
-         * @format date-time
-         * @example ["2026-09-25T14:59:59.999Z", "2026-11-01T07:00:00Z"]
-         */
-        endAt: string;
-        rewardGroups: {
-          /**
-           * @format uuid
-           * @example ["01f42e84-b34e-11f1-b729-0a58a9feac02"]
-           */
-          id: ID;
-          rewards: {
-            /**
-             * @format uuid
-             * @example ["81070d47-b0ff-11f1-97ab-0a58a9feac02"]
-             */
-            id: ID;
-            /** @example ["DIRECT_ENTITLEMENT", "POOL", "CODE", "BADGE"] */
-            distributionType: string;
-            __typename: "DropsReward";
-          }[];
-          __typename: "DropsRewardGroup";
-        }[];
-        __typename: "DropsCampaign";
-      }[];
+    | SideNavCreatorBadgeDrops_ChannelOwnedDropCampaigns
+    | SideNavCreatorBadgeDrops_ChannelOwnedDropCampaigns[];
 };
 
-export type SideNavCreatorBadgeDropResponse = QueryResponse<
-  SideNavCreatorBadgeDropData,
-  "SideNavCreatorBadgeDrop"
+export type SideNavCreatorBadgeDropsResponse = QueryResponse<
+  SideNavCreatorBadgeDropsData,
+  "SideNavCreatorBadgeDrops"
 >;
 
 export type SideNavShoppingProductsVariables = {
@@ -101694,7 +102086,7 @@ export type SpendableBalanceOptStateQueryData = {
     spendableBalance: null | {
       status: {
         /** @example ["UNSPECIFIED"] */
-        optState: string;
+        optState: OptState;
         __typename: "SpendableBalanceStatus";
       };
       __typename: "SpendableBalance";
@@ -101915,7 +102307,7 @@ export type SponsorshipsCreatorProfileCommunityStatsData = {
     /** @aliasFor timeseriesStats */
     minutesWatchedStats: {
       /** @example ["DAY", "WEEK", "MONTH"] */
-      granularity: string;
+      granularity: Granularity;
       minutesWatched: {
         /**
          * @format int32
@@ -102781,7 +103173,7 @@ export type StreamerShelfSettingsData = {
       home: {
         preferences: {
           /** @example ["AUTOHOST"] */
-          streamerShelfType: string;
+          streamerShelfType: ChannelHomePreferencesStreamerShelfType;
           __typename: "ChannelHomePreferences";
         };
         __typename: "ChannelHome";
@@ -102844,7 +103236,7 @@ export type StreamEventsActiveCelebrationCalloutQueryData = {
        */
       id: ID;
       /** @example ["EN", "ES"] */
-      language: string;
+      language: BroadcastSettingsLanguage;
       __typename: "BroadcastSettings";
     };
     __typename: "User";
@@ -103130,7 +103522,7 @@ export type StreamPageSignupCurrentUserData = {
        */
       id: ID;
       /** @example ["EN", "ES"] */
-      language: string;
+      language: BroadcastSettingsLanguage;
       __typename: "BroadcastSettings";
     };
     accountConnections: {
@@ -103841,7 +104233,7 @@ export type StreamTogetherCanStartSessionData = {
     id: ID;
     hostSettings: {
       /** @example ["VALID"] */
-      canStartSession: string;
+      canStartSession: GuestStarHostSettingsCanStartSession;
       __typename: "GuestStarHostSettings";
     };
     __typename: "GuestStarUserSettings";
@@ -103883,7 +104275,7 @@ export type StreamTogetherCollabStatusData = {
     id: ID;
     hostSettings: {
       /** @example ["COLLAB_STATUS_ONLY_FAVORITES"] */
-      collabStatus: string;
+      collabStatus: GuestStarHostSettingsCollabStatus;
       __typename: "GuestStarHostSettings";
     };
     __typename: "GuestStarUserSettings";
@@ -104582,7 +104974,7 @@ export type SubsProductDescriptionData = {
     /** @example ["amzn1.twitch.commerce.offer.98232214-5c3d-4da1-a9b3-c3333fb3483d", "amzn1.twitch.commerce.offer.3dedec40-a018-4790-0b9f-0f22ec580202"] */
     id: ID;
     /** @example ["COMMUNITY", "SINGLE_RECIPIENT"] */
-    giftType: null | string;
+    giftType: null | OfferGiftType;
     eligibility: {
       /**
        * @format date-time
@@ -104590,7 +104982,7 @@ export type SubsProductDescriptionData = {
        */
       benefitsStartAt: null | string;
       /** @example ["DEFAULT_PURCHASE"] */
-      purchaseType: string;
+      purchaseType: OfferEligibilityPurchaseType;
       __typename: "OfferEligibility";
     };
     listing: {
@@ -104598,7 +104990,7 @@ export type SubsProductDescriptionData = {
         internal: null | {
           plan: {
             /** @example ["AUTO_RENEW", "NO_RENEW"] */
-            renewalPolicy: string;
+            renewalPolicy: ChargeModelPlanRenewalPolicy;
             __typename: "ChargeModelPlan";
           };
           __typename: "InternalChargeModel";
@@ -104826,7 +105218,7 @@ export type SunlightHomePageCardsData = {
     }[];
     panels: {
       /** @example ["HERO", "SPOTLIGHT", "FEATURES", "COMMUNITY", "INSIGHTS"] */
-      type: string;
+      type: CreatorHomePanelType;
       cards: (CreatorHomeCardsFragment & {
         __typename:
           | "CommunityCreatorHomeCard"
@@ -104847,6 +105239,66 @@ export type SunlightHomePageCardsData = {
 export type SunlightHomePageCardsResponse = QueryResponse<
   SunlightHomePageCardsData,
   "SunlightHomePageCards"
+>;
+
+export type SunlightLoggedInUserMenuQueryVariables = { userLogin: string };
+
+export type SunlightLoggedInUserMenuQueryData = {
+  user: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["23161357"]
+     */
+    id: ID;
+    /**
+     * @format uri
+     * @example ["https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-70x70.png", "https://static-cdn.jtvnw.net/jtv_user_pictures/3c3366d7-728a-4204-bfdd-7c823858e4d9-profile_image-70x70.png"]
+     * @gqlArg `width: Int [50, 70, 300, 28, 150]`
+     */
+    profileImageURL: string;
+    hasUnreadChangelogItems: boolean;
+    __typename: "User";
+  };
+};
+
+export type SunlightLoggedInUserMenuQueryResponse = QueryResponse<
+  SunlightLoggedInUserMenuQueryData,
+  "SunlightLoggedInUserMenuQuery"
+>;
+
+export type SunlightUserMenuItemQueryVariables = { withRoles: boolean };
+
+export type SunlightUserMenuItemQueryData = {
+  /** @aliasFor currentUser */
+  channel: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["23161357"]
+     */
+    id: ID;
+    /** @example ["Twitch", "CD PROJEKT RED", "LIRIK", "forsen", "ayuuexe", "xQc", "RSDragonwilds"] */
+    displayName: string;
+    /** @example ["lirik", "twitch", "cdprojektred", "forsen", "tickett_", "st1mgreeen", "lipton_18"] */
+    login: string;
+    /**
+     * @format uri
+     * @example ["https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-70x70.png", "https://static-cdn.jtvnw.net/jtv_user_pictures/3c3366d7-728a-4204-bfdd-7c823858e4d9-profile_image-70x70.png"]
+     * @gqlArg `width: Int [50, 70, 300, 28, 150]`
+     */
+    profileImageURL: string;
+    /** @directive include(if: $withRoles) */
+    roles?: null | {
+      isPartner: boolean;
+      isAffiliate: boolean;
+      __typename: "UserRoles";
+    };
+    __typename: "User";
+  };
+};
+
+export type SunlightUserMenuItemQueryResponse = QueryResponse<
+  SunlightUserMenuItemQueryData,
+  "SunlightUserMenuItemQuery"
 >;
 
 export type SupportChatCurrentUserData = {
@@ -105371,7 +105823,7 @@ export type SupportPanelPartnerPlusGoalData = {
     partnerPlusProgram: {
       canShowWidget: boolean;
       /** @example ["OFF", "LEVEL_2", "LEVEL_1"] */
-      widgetSetting: string;
+      widgetSetting: PartnerPlusProgramPublicWidgetSetting;
       /**
        * @format int32
        * @example [100, 50]
@@ -105460,13 +105912,13 @@ export type SupportPanelSingleGiftingGiftingOptionsData = {
            */
           tier: string;
           /** @example ["CHANSUB"] */
-          type: string;
+          type: SubscriptionProductType;
           hasAdFree: boolean;
           emotes: SubscriptionProductEmote[];
           emoteModifiers: null | SubscriptionProductEmoteModifier[];
           interval: {
             /** @example ["MONTH", "DAY"] */
-            unit: string;
+            unit: SubscriptionIntervalUnit;
             __typename: "SubscriptionInterval";
           };
           self: null | {
@@ -106242,7 +106694,7 @@ export type SyncedSettingsChatPauseSettingData = {
     id: ID;
     chatUISettings: {
       /** @example ["SCROLL_ONLY"] */
-      chatPauseSetting: string;
+      chatPauseSetting: ChatUISettingsChatPauseSetting;
       __typename: "ChatUISettings";
     };
     __typename: "User";
@@ -106263,7 +106715,7 @@ export type SyncedSettingsDeletedMessageDisplaySettingData = {
     id: ID;
     chatUISettings: {
       /** @example ["DETAILED"] */
-      deletedMessageDisplaySetting: string;
+      deletedMessageDisplaySetting: ChatUISettingsDeletedMessageDisplaySetting;
       __typename: "ChatUISettings";
     };
     __typename: "User";
@@ -106427,9 +106879,9 @@ export type TaxEscalationQueryData = {
     payout: {
       taxIntents: {
         /** @example ["ROYALTY", "SERVICE"] */
-        type: string;
+        type: TaxIntentType;
         /** @example ["NOT_STARTED"] */
-        state: string;
+        state: TaxIntentState;
         /**
          * @format date-time
          * @example ["1970-01-01T00:00:00Z"]
@@ -106463,14 +106915,14 @@ export type TaxExpiryQueryData = {
     payout: {
       taxIntents: {
         /** @example ["NOT_STARTED"] */
-        state: string;
+        state: TaxIntentState;
         /**
          * @format date-time
          * @example ["1970-01-01T00:00:00Z"]
          */
         formExpiryDate: string;
         /** @example ["ROYALTY", "SERVICE"] */
-        type: string;
+        type: TaxIntentType;
         __typename: "TaxIntent";
       }[];
       __typename: "Payout";
@@ -106493,9 +106945,9 @@ export type TaxFormsCurrentUserData = {
     payout: {
       taxIntents: {
         /** @example ["ROYALTY", "SERVICE"] */
-        type: string;
+        type: TaxIntentType;
         /** @example ["NOT_STARTED"] */
-        state: string;
+        state: TaxIntentState;
         __typename: "TaxIntent";
       }[];
       __typename: "Payout";
@@ -106525,10 +106977,10 @@ export type TaxIntentsData = {
     payout: {
       taxIntents: {
         /** @example ["NOT_STARTED"] */
-        state: string;
+        state: TaxIntentState;
         isUserActionRequired: boolean;
         /** @example ["ROYALTY", "SERVICE"] */
-        type: string;
+        type: TaxIntentType;
         /**
          * @format date-time
          * @example ["1970-01-01T00:00:00Z"]
@@ -106572,9 +107024,9 @@ export type TaxInterviewPageCurrentUserData = {
     payout: {
       taxIntents: {
         /** @example ["NOT_STARTED"] */
-        state: string;
+        state: TaxIntentState;
         /** @example ["ROYALTY", "SERVICE"] */
-        type: string;
+        type: TaxIntentType;
         taxMismatchErrors: UnknownValue;
         isUserActionRequired: boolean;
         /**
@@ -107039,11 +107491,25 @@ export type TeamsDashboardRootData = {
       isStaff: null | boolean;
       __typename: "UserRoles";
     };
-    ownedTeams: null | TeamsDashboardRoot_UserOwnedTeams | TeamsDashboardRoot_UserOwnedTeams[];
+    ownedTeams:
+      | null
+      | {
+          id: ID;
+          __typename: string;
+        }[];
     teamMemberships:
       | null
-      | TeamsDashboardRoot_UserTeamMemberships
-      | TeamsDashboardRoot_UserTeamMemberships[];
+      | {
+          team: null | {
+            /**
+             * @pattern ^[0-9]+$
+             * @example ["2351"]
+             */
+            id: ID;
+            __typename: "Team";
+          };
+          __typename: string;
+        }[];
     __typename: "User";
   };
 };
@@ -107304,25 +107770,89 @@ export type TeamsDashboardVideoPlayReferralsData = {
      */
     id: ID;
     /** @aliasFor videoPlayReferrals */
-    countries:
-      | null
-      | TeamsDashboardVideoPlayReferrals_TeamVideoPlayReferrals
-      | TeamsDashboardVideoPlayReferrals_TeamVideoPlayReferrals[];
+    countries: null | {
+      items:
+        | null
+        | {
+            /**
+             * ⚠️ Low confidence about: nullable
+             * @format uint32
+             */
+            count: null | number;
+            /** ⚠️ Low confidence about: nullable */
+            name: null | string;
+            __typename: "AggregatedReferrals";
+          }[];
+      /**
+       * @format uint32
+       * @example [0]
+       */
+      total: number;
+      __typename: "VideoPlayReferrals";
+    };
     /** @aliasFor videoPlayReferrals */
-    platforms:
-      | null
-      | TeamsDashboardVideoPlayReferrals_TeamVideoPlayReferrals
-      | TeamsDashboardVideoPlayReferrals_TeamVideoPlayReferrals[];
+    platforms: null | {
+      items:
+        | null
+        | {
+            /**
+             * ⚠️ Low confidence about: nullable
+             * @format uint32
+             */
+            count: null | number;
+            /** ⚠️ Low confidence about: nullable */
+            name: null | string;
+            __typename: "AggregatedReferrals";
+          }[];
+      /**
+       * @format uint32
+       * @example [0]
+       */
+      total: number;
+      __typename: "VideoPlayReferrals";
+    };
     /** @aliasFor videoPlayReferrals */
-    internal:
-      | null
-      | TeamsDashboardVideoPlayReferrals_TeamVideoPlayReferrals
-      | TeamsDashboardVideoPlayReferrals_TeamVideoPlayReferrals[];
+    internal: null | {
+      items:
+        | null
+        | {
+            /**
+             * ⚠️ Low confidence about: nullable
+             * @format uint32
+             */
+            count: null | number;
+            /** ⚠️ Low confidence about: nullable */
+            name: null | string;
+            __typename: "AggregatedReferrals";
+          }[];
+      /**
+       * @format uint32
+       * @example [0]
+       */
+      total: number;
+      __typename: "VideoPlayReferrals";
+    };
     /** @aliasFor videoPlayReferrals */
-    external:
-      | null
-      | TeamsDashboardVideoPlayReferrals_TeamVideoPlayReferrals
-      | TeamsDashboardVideoPlayReferrals_TeamVideoPlayReferrals[];
+    external: null | {
+      items:
+        | null
+        | {
+            /**
+             * ⚠️ Low confidence about: nullable
+             * @format uint32
+             */
+            count: null | number;
+            /** ⚠️ Low confidence about: nullable */
+            name: null | string;
+            __typename: "AggregatedReferrals";
+          }[];
+      /**
+       * @format uint32
+       * @example [0]
+       */
+      total: number;
+      __typename: "VideoPlayReferrals";
+    };
     __typename: "Team";
   };
 };
@@ -107439,7 +107969,7 @@ export type TicketDescriptionData = {
     displayName: string;
     priceInfo: {
       /** @example ["EUR", "USD"] */
-      currency: string;
+      currency: PriceInfoCurrency;
       /**
        * @format int32
        * @example [2]
@@ -107467,7 +107997,7 @@ export type TicketDescriptionData = {
     };
     interval: {
       /** @example ["MONTH", "DAY"] */
-      unit: string;
+      unit: SubscriptionIntervalUnit;
       __typename: "SubscriptionInterval";
     };
     hasAdFree: boolean;
@@ -107902,7 +108432,7 @@ export type TurboSubscriptionProductData = {
                   /** @example ["33d10886-ace9-466b-9060-e10013aa05a21887", "41679e35-3eaf-4acf-b861-e8941c99650f", "63967dc1-a829-453e-9425-53c0f68313723565"] */
                   id: ID;
                   /** @example ["EUR", "USD"] */
-                  currency: string;
+                  currency: PriceInfoCurrency;
                   /**
                    * @format int32
                    * @example [2]
@@ -107986,10 +108516,14 @@ export type TurboUpsellButtonData = {
                          * @format uint32
                          */
                         total: null | number;
-                        discount:
-                          | null
-                          | TurboUpsellButton_FixedPricingDiscount
-                          | TurboUpsellButton_FixedPricingDiscount[];
+                        discount: null | {
+                          /**
+                           * @format uint32
+                           * @example [1887, 3565, 942, 1780, 8920]
+                           */
+                          total: number;
+                          __typename: "DiscountBreakdown";
+                        };
                         __typename: "FixedPricing";
                       }
                     | { __typename: "RangedPricing" };
@@ -108186,10 +108720,34 @@ export type UnbanRequestPageVariables = { id: ID };
 export type UnbanRequestPageData = {
   channelUnbanRequest:
     | (UnbanRequestFragment & {
-        channel:
-          | null
-          | UnbanRequestPage_UnbanRequestChannel
-          | UnbanRequestPage_UnbanRequestChannel[];
+        channel: null | {
+          /**
+           * @pattern ^[0-9]+$
+           * @example ["26490481"]
+           */
+          id: ID;
+          /** @example ["julie", "miaramer", "hthaze", "lirik", "gamesdonequick", "cdprojektred", "rachelkay"] */
+          name: string;
+          owner: {
+            /**
+             * @pattern ^[0-9]+$
+             * @example ["23161357"]
+             */
+            id: ID;
+            /** @example ["lirik", "twitch", "cdprojektred", "forsen", "tickett_", "st1mgreeen", "lipton_18"] */
+            login: string;
+            /** @example ["Twitch", "CD PROJEKT RED", "LIRIK", "forsen", "ayuuexe", "xQc", "RSDragonwilds"] */
+            displayName: string;
+            /**
+             * @format uri
+             * @example ["https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-70x70.png", "https://static-cdn.jtvnw.net/jtv_user_pictures/3c3366d7-728a-4204-bfdd-7c823858e4d9-profile_image-70x70.png"]
+             * @gqlArg `width: Int [50, 70, 300, 28, 150]`
+             */
+            profileImageURL: string;
+            __typename: "User";
+          };
+          __typename: "Channel";
+        };
       })
     | {
         code: UnknownValue;
@@ -108539,17 +109097,24 @@ export type UpdatePaymentMethodFormData = {
       | null
       | {
           /** @example ["XSOLLA", "GOOGLE_IAB"] */
-          provider: string;
+          provider: PaymentProvider;
           billingCountry: null;
           billingZip: null;
           billingFirstName: null | string;
           billingLastName: null | string;
           __typename: "PaymentMethod";
         }[];
-    eligiblePaymentMethodsPayload:
-      | null
-      | UpdatePaymentMethodForm_UserEligiblePaymentMethodsPayload
-      | UpdatePaymentMethodForm_UserEligiblePaymentMethodsPayload[];
+    eligiblePaymentMethodsPayload: null | {
+      methods: {
+        /** @example ["XSOLLA"] */
+        name: EligiblePaymentMethodName;
+        /** @example ["AVAILABLE"] */
+        availabilityStatus: EligiblePaymentMethodAvailabilityStatus;
+        __typename: "EligiblePaymentMethod";
+      }[];
+      error: null;
+      __typename: "EligiblePaymentMethodsPayload";
+    };
     paymentMethodConfigs:
       | null
       | UpdatePaymentMethodForm_UserPaymentMethodConfigs
@@ -108574,9 +109139,9 @@ export type UpdatePaymentMethodModalData = {
       | null
       | {
           /** @example ["XSOLLA", "GOOGLE_IAB"] */
-          provider: string;
+          provider: PaymentProvider;
           /** @example ["UNKNOWN"] */
-          paymentType: string;
+          paymentType: PaymentMethodPaymentType;
           billingEmail: null | string;
           billingUsername: null;
           cardType: null;
@@ -108791,7 +109356,7 @@ export type UseCreatorHomeActionDataQueryData = {
       home: {
         preferences: {
           /** @example ["PRESET_2", "PRESET_1"] */
-          heroPreset: string;
+          heroPreset: ChannelHomePreferencesHeroPreset;
           __typename: "ChannelHomePreferences";
         };
         __typename: "ChannelHome";
@@ -109164,7 +109729,7 @@ export type UserDJStatusQueryData = {
     id: ID;
     djStatus: {
       /** @example ["NOT_DJ"] */
-      programState: string;
+      programState: DJStatusProgramState;
       /** @example ["0001-01-01T00:00:00Z"] */
       lastProgramUpdate: string;
       isOptOutBlocked: boolean;
@@ -109195,9 +109760,17 @@ export type UserEmotesData = {
         setID: ID;
         /** @example ["sumFast", "sumSmash", "sumPls", "sumMiting", "sumX", "sumKomrade", "sumPause"] */
         token: string;
-        modifiers: null | UserEmotes_EmoteModifiers | UserEmotes_EmoteModifiers[];
+        modifiers:
+          | null
+          | (null | {
+              /** @example ["HF", "SG", "TK"] */
+              code: EmoteModifierCode;
+              /** @example ["HORIZONTAL_FLIP", "SUNGLASSES", "THINKING"] */
+              name: EmoteModifierName;
+              __typename: "EmoteModifier";
+            })[];
         /** @example ["LIMITED_TIME", "SUBSCRIPTIONS", "GLOBALS", "SMILIES", "MEGA_COMMERCE", "FOLLOWER", "TWO_FACTOR"] */
-        type: string;
+        type: EmoteType;
         __typename: "Emote";
       }[];
       /** @directive include(if: $withOwner) */
@@ -109240,7 +109813,7 @@ export type UserEmoticonPrefixQueryData = {
       /** @example [""] */
       name: string;
       /** @example ["UNKNOWN"] */
-      state: string;
+      state: EmoticonPrefixState;
       isEditable: boolean;
       __typename: "EmoticonPrefix";
     };
@@ -109360,7 +109933,7 @@ export type UserMenuCurrentUserData = {
     settings: {
       isSharingActivity: boolean;
       /** @example ["ONLINE"] */
-      visibility: string;
+      visibility: UserSettingsVisibility;
       __typename: "UserSettings";
     };
     __typename: "User";
@@ -109478,10 +110051,18 @@ export type UserPointsContributionResponse = QueryResponse<
 export type UserPredictionEventRestrictionVariables = { eventID: ID };
 
 export type UserPredictionEventRestrictionData = {
-  predictionEvent:
-    | null
-    | UserPredictionEventRestriction_PredictionEvent
-    | UserPredictionEventRestriction_PredictionEvent[];
+  predictionEvent: null | {
+    /**
+     * @format uuid
+     * @example ["20fac95f-b388-4a66-8fd1-0f3d011d671b"]
+     */
+    id: ID;
+    self:
+      | null
+      | UserPredictionEventRestriction_PredictionEventSelf
+      | UserPredictionEventRestriction_PredictionEventSelf[];
+    __typename: "PredictionEvent";
+  };
 };
 
 export type UserPredictionEventRestrictionResponse = QueryResponse<
@@ -109803,9 +110384,9 @@ export type UserStreamCoachEligibleQueryVariables = { channelID: ID };
 export type UserStreamCoachEligibleQueryData = {
   creatorCoachSettings: {
     /** @example ["UNSPECIFIED"] */
-    optState: string;
+    optState: OptState;
     /** @example ["INELIGIBLE"] */
-    eligibility: string;
+    eligibility: CreatorCoachSettingsEligibility;
     __typename: "CreatorCoachSettings";
   };
 };
@@ -110006,7 +110587,7 @@ export type VerifyAchievementsQuestsData = {
       };
       pathToPartnerTwo: {
         /** @example ["INCOMPLETE"] */
-        status: string;
+        status: PathToPartnerTwoStatus;
         /** @format date-time */
         eligibleUntil: null | string;
         __typename: "PathToPartnerTwo";
@@ -110385,7 +110966,7 @@ export type VideoCommentsData = GlobalCheerInfo & {
      */
     id: ID;
     /** @example ["ARCHIVE", "HIGHLIGHT", "UPLOAD"] */
-    broadcastType: string;
+    broadcastType: BroadcastType;
     /**
      * @format uint32
      * @example [15389, 4359, 4621, 621, 4472]
@@ -110624,10 +111205,14 @@ export type VideoManagerBroadcastIDQueryData = {
      * @example ["2323270866"]
      */
     id: ID;
-    broadcast:
-      | null
-      | VideoManagerBroadcastIDQuery_VideoBroadcast
-      | VideoManagerBroadcastIDQuery_VideoBroadcast[];
+    broadcast: null | {
+      /**
+       * @pattern ^[0-9]+$
+       * @example ["317528086118"]
+       */
+      id: null | ID;
+      __typename: "Broadcast";
+    };
     owner: null | {
       /**
        * @pattern ^[0-9]+$
@@ -111385,9 +111970,9 @@ export type VideoPlayerPremiumContentOverlayChannelData = {
         /** @example ["vod:2397382584"] */
         id: ID;
         /** @example ["ALLOW_ALL_TIERS"] */
-        options: string[];
+        options: ResourceRestrictionOptions[];
         /** @example ["SUB_ONLY_LIVE"] */
-        type: string;
+        type: ResourceRestrictionType;
         __typename: "ResourceRestriction";
       };
       __typename: "Stream";
@@ -111991,7 +112576,7 @@ export type VideoShareBoxTrackingVideoContextData = {
      */
     id: ID;
     /** @example ["ARCHIVE", "HIGHLIGHT", "UPLOAD"] */
-    broadcastType: string;
+    broadcastType: BroadcastType;
     owner: null | {
       /**
        * @pattern ^[0-9]+$
@@ -112660,7 +113245,7 @@ export type ViewersTileQueryData = {
       viewersCount: number;
       costreamDetails: null | {
         /** @example ["ORGANIZER", "COSTREAMER"] */
-        role: string;
+        role: CostreamDetailsRole;
         /**
          * @format uint32
          * @example [53318, 665, 54790, 55713, 54158]
@@ -112844,7 +113429,7 @@ export type VODMidrollManagerData = {
      */
     id: ID;
     /** @example ["ARCHIVE", "HIGHLIGHT", "UPLOAD"] */
-    broadcastType: string;
+    broadcastType: BroadcastType;
     owner: null | VODMidrollManagerBroadcaster;
     __typename: "Video";
   };
@@ -112861,7 +113446,7 @@ export type VODMidrollManagerData = {
            */
           id: ID;
           /** @example ["ARCHIVE", "HIGHLIGHT", "UPLOAD"] */
-          broadcastType: string;
+          broadcastType: BroadcastType;
           __typename: "Video";
         };
         __typename: "CollectionItemEdge";
@@ -113017,7 +113602,7 @@ export type WatchTrackQueryData = {
      */
     id: ID;
     /** @example ["ARCHIVE", "HIGHLIGHT", "UPLOAD"] */
-    broadcastType: string;
+    broadcastType: BroadcastType;
     /** @example ["en"] */
     language: string;
     game: null | WatchTrackGameFragment;
@@ -113461,7 +114046,7 @@ export type WithholdingRatePanelQueryData = {
     payout: {
       taxIntents: {
         /** @example ["ROYALTY", "SERVICE"] */
-        type: string;
+        type: TaxIntentType;
         /**
          * @format date-time
          * @example ["1970-01-01T00:00:00Z"]
@@ -115083,6 +115668,20 @@ export type CheckoutPersonalizationSetMessageData = {
 export type CheckoutPersonalizationSetMessageResponse = QueryResponse<
   CheckoutPersonalizationSetMessageData,
   "CheckoutPersonalization_SetMessage"
+>;
+
+export type CheckoutV2InitiatePendingPurchaseOfferVariables = { input: EnumOrInput };
+
+export type CheckoutV2InitiatePendingPurchaseOfferData = {
+  initiatePendingPurchaseOffer:
+    | null
+    | CheckoutV2InitiatePendingPurchaseOffer_InitiatePendingPurchaseOffer
+    | CheckoutV2InitiatePendingPurchaseOffer_InitiatePendingPurchaseOffer[];
+};
+
+export type CheckoutV2InitiatePendingPurchaseOfferResponse = QueryResponse<
+  CheckoutV2InitiatePendingPurchaseOfferData,
+  "CheckoutV2_InitiatePendingPurchaseOffer"
 >;
 
 export type CheerSettingsFormOnboardUserVariables = { input: EnumOrInput };
@@ -117912,7 +118511,7 @@ export type ExtensionConfigureCreatePanelData = {
            */
           id: ID;
           /** @example ["DEFAULT"] */
-          type: string;
+          type: DefaultPanelType;
           __typename: "ExtensionPanel";
           /** @example ["extension-panel-1", "extension-panel-2"] */
           slotID: ID;
@@ -117924,7 +118523,7 @@ export type ExtensionConfigureCreatePanelData = {
            */
           id: ID;
           /** @example ["DEFAULT"] */
-          type: string;
+          type: DefaultPanelType;
           __typename: "DefaultPanel";
         };
     __typename: "CreatePanelPayload";
@@ -118005,7 +118604,7 @@ export type ExtensionManagementPageCreatePanelData = {
            */
           id: ID;
           /** @example ["DEFAULT"] */
-          type: string;
+          type: DefaultPanelType;
           __typename: "ExtensionPanel";
           /** @example ["extension-panel-1", "extension-panel-2"] */
           slotID: ID;
@@ -118017,7 +118616,7 @@ export type ExtensionManagementPageCreatePanelData = {
            */
           id: ID;
           /** @example ["DEFAULT"] */
-          type: string;
+          type: DefaultPanelType;
           __typename: "DefaultPanel";
         };
     __typename: "CreatePanelPayload";
@@ -119891,6 +120490,20 @@ export type RemoveReactionByContentKeyResponse = QueryResponse<
   "removeReactionByContentKey"
 >;
 
+export type RemoveSelfFromTeamVariables = { input: EnumOrInput };
+
+export type RemoveSelfFromTeamData = {
+  removeSelfFromTeam:
+    | null
+    | RemoveSelfFromTeam_RemoveSelfFromTeam
+    | RemoveSelfFromTeam_RemoveSelfFromTeam[];
+};
+
+export type RemoveSelfFromTeamResponse = QueryResponse<
+  RemoveSelfFromTeamData,
+  "RemoveSelfFromTeam"
+>;
+
 export type RemoveSocialMediaVariables = { input: EnumOrInput };
 
 export type RemoveSocialMediaData = {
@@ -120026,6 +120639,20 @@ export type ResolvePredictionData = {
 };
 
 export type ResolvePredictionResponse = QueryResponse<ResolvePredictionData, "ResolvePrediction">;
+
+export type RespondToTeamInvitationVariables = { input: EnumOrInput };
+
+export type RespondToTeamInvitationData = {
+  respondToTeamInvitation:
+    | null
+    | RespondToTeamInvitation_RespondToTeamInvitation
+    | RespondToTeamInvitation_RespondToTeamInvitation[];
+};
+
+export type RespondToTeamInvitationResponse = QueryResponse<
+  RespondToTeamInvitationData,
+  "respondToTeamInvitation"
+>;
 
 export type ResumeHostTrainHoldVariables = { input: EnumOrInput };
 
@@ -120316,6 +120943,15 @@ export type SetBusinessDetailsResponse = QueryResponse<
   SetBusinessDetailsData,
   "SetBusinessDetails"
 >;
+
+export type SetChangelogReadData = {
+  updateChangelogReadTime:
+    | null
+    | SetChangelogRead_UpdateChangelogReadTime
+    | SetChangelogRead_UpdateChangelogReadTime[];
+};
+
+export type SetChangelogReadResponse = QueryResponse<SetChangelogReadData, "setChangelogRead">;
 
 export type SetChatScreenReaderAutoAnnounceVariables = { input: EnumOrInput };
 
@@ -122181,7 +122817,7 @@ export type UpdateAutohostSettingsData = {
       autohostSettings: {
         enabled: boolean;
         /** @example ["ORDERED"] */
-        strategy: string;
+        strategy: AutohostSettingsStrategy;
         __typename: "AutohostSettings";
       };
       __typename: "User";
@@ -122193,6 +122829,20 @@ export type UpdateAutohostSettingsData = {
 export type UpdateAutohostSettingsResponse = QueryResponse<
   UpdateAutohostSettingsData,
   "updateAutohostSettings"
+>;
+
+export type UpdateAutomaticChannelPointsRewardVariables = { input: EnumOrInput };
+
+export type UpdateAutomaticChannelPointsRewardData = {
+  updateCommunityPointsAutomaticReward:
+    | null
+    | UpdateAutomaticChannelPointsReward_UpdateCommunityPointsAutomaticReward
+    | UpdateAutomaticChannelPointsReward_UpdateCommunityPointsAutomaticReward[];
+};
+
+export type UpdateAutomaticChannelPointsRewardResponse = QueryResponse<
+  UpdateAutomaticChannelPointsRewardData,
+  "UpdateAutomaticChannelPointsReward"
 >;
 
 export type UpdateAutomaticRewardCostVariables = { input: EnumOrInput };
@@ -123378,6 +124028,20 @@ export type UpdateUserSubscriptionSettingsSubscriptionStatusResponse = QueryResp
   "UpdateUserSubscriptionSettingsSubscriptionStatus"
 >;
 
+export type UpdateUserTeamMembershipVariables = { input: EnumOrInput };
+
+export type UpdateUserTeamMembershipData = {
+  updateUserTeamMembership:
+    | null
+    | UpdateUserTeamMembership_UpdateUserTeamMembership
+    | UpdateUserTeamMembership_UpdateUserTeamMembership[];
+};
+
+export type UpdateUserTeamMembershipResponse = QueryResponse<
+  UpdateUserTeamMembershipData,
+  "updateUserTeamMembership"
+>;
+
 export type UpdateUserViewedVideoVariables = { input: UpdateUserViewedVideoInput };
 
 export type UpdateUserViewedVideoData = {
@@ -123885,6 +124549,7 @@ export type QueryVariablesMap = {
   AmazonAccountConnectionQuery: Record<string, never>;
   AnimatedTag_TagData: AnimatedTagTagDataVariables;
   Announcement_CreatorColor: AnnouncementCreatorColorVariables;
+  AnnouncementsIcon: Record<string, never>;
   AnnualRecap2023: AnnualRecap2023Variables;
   AnnualRecap2024: AnnualRecap2024Variables;
   AnnualRecap2025: AnnualRecap2025Variables;
@@ -124075,6 +124740,7 @@ export type QueryVariablesMap = {
   ChannelViewerMilestoneSettings: ChannelViewerMilestoneSettingsVariables;
   CharityDiscoveryPage: CharityDiscoveryPageVariables;
   CharityDiscoveryPage_SearchCharities: CharityDiscoveryPageSearchCharitiesVariables;
+  CharityNavItem: CharityNavItemVariables;
   CharityPanelOffer_Query: CharityPanelOfferQueryVariables;
   CharityPanel_PreviewWidgetQuery: CharityPanelPreviewWidgetQueryVariables;
   CharityPanel_Query: CharityPanelQueryVariables;
@@ -124142,6 +124808,7 @@ export type QueryVariablesMap = {
   CheckoutPersonalizationPreview_Query: CheckoutPersonalizationPreviewQueryVariables;
   CheckoutPrice: CheckoutPriceVariables;
   CheckoutRecentSubscribedChatters: CheckoutRecentSubscribedChattersVariables;
+  CheckoutV2_PendingPurchaseOrder: CheckoutV2PendingPurchaseOrderVariables;
   CheckoutWatchStreaks: Record<string, never>;
   CheerSettingsForm_GetBitsOnboardedSettings: CheerSettingsFormGetBitsOnboardedSettingsVariables;
   ChoiceBreakdown: ChoiceBreakdownVariables;
@@ -124156,6 +124823,7 @@ export type QueryVariablesMap = {
   ClipMetadata: ClipMetadataVariables;
   ClipMetadataBroadcastInfoQuery: ClipMetadataBroadcastInfoQueryVariables;
   ClipMetadataVodInfoQuery: ClipMetadataVodInfoQueryVariables;
+  ClipPagePlayer: ClipPagePlayerVariables;
   ClipRecaps: ClipRecapsVariables;
   ClipRecapsPlayer: ClipRecapsPlayerVariables;
   ClipsCards__Game: ClipsCardsGameVariables;
@@ -124303,6 +124971,7 @@ export type QueryVariablesMap = {
   DashboardSettingsPage: Record<string, never>;
   DashboardSettingsRaidSettingsV2: DashboardSettingsRaidSettingsV2Variables;
   DashboardSettingsUserColor: DashboardSettingsUserColorVariables;
+  DashboardTeamSettings: Record<string, never>;
   Dashboard_TopClips: DashboardTopClipsVariables;
   DataAccessCategories: Record<string, never>;
   DataAccessRequestReportDownloadLink: DataAccessRequestReportDownloadLinkVariables;
@@ -124661,6 +125330,7 @@ export type QueryVariablesMap = {
   LastUnbanRequest: LastUnbanRequestVariables;
   LeaderboardBadgePeriod: LeaderboardBadgePeriodVariables;
   LeaderboardSettings_GetLeaderboardSettings: LeaderboardSettingsGetLeaderboardSettingsVariables;
+  LeftNavPayoutCategory: Record<string, never>;
   LegacyViewsTileQuery: LegacyViewsTileQueryVariables;
   LegendaryEmoteSeason: LegendaryEmoteSeasonVariables;
   LegendaryEmotesOptOutToggle_ChannelSettings: LegendaryEmotesOptOutToggleChannelSettingsVariables;
@@ -124754,6 +125424,7 @@ export type QueryVariablesMap = {
   MyCollaborationsShelf: MyCollaborationsShelfVariables;
   MyEditableChannels: MyEditableChannelsVariables;
   NativeChannelLiveQuery: NativeChannelLiveQueryVariables;
+  NewAllCampaignsCampaignDetails: NewAllCampaignsCampaignDetailsVariables;
   NewAllCampaignsPage: Record<string, never>;
   NewPollModalQuery: NewPollModalQueryVariables;
   NewSubscriptionsTimeseriesStats_StreamSummary: NewSubscriptionsTimeseriesStatsStreamSummaryVariables;
@@ -124979,7 +125650,7 @@ export type QueryVariablesMap = {
   ShoutsMetrics: ShoutsMetricsVariables;
   ShoutsPromoAvatars: ShoutsPromoAvatarsVariables;
   SideNav: SideNavVariables;
-  SideNavCreatorBadgeDrop: SideNavCreatorBadgeDropVariables;
+  SideNavCreatorBadgeDrops: SideNavCreatorBadgeDropsVariables;
   SideNavShoppingProducts: SideNavShoppingProductsVariables;
   SinceLastAdTileQuery: SinceLastAdTileQueryVariables;
   Snackbar_AdProperties: SnackbarAdPropertiesVariables;
@@ -125085,6 +125756,8 @@ export type QueryVariablesMap = {
   SunlightHomeCardsPage: SunlightHomeCardsPageVariables;
   SunlightHomePage: SunlightHomePageVariables;
   SunlightHomePageCards: SunlightHomePageCardsVariables;
+  SunlightLoggedInUserMenuQuery: SunlightLoggedInUserMenuQueryVariables;
+  SunlightUserMenuItemQuery: SunlightUserMenuItemQueryVariables;
   SupportChatCurrentUser: Record<string, never>;
   SupportChatRecentSession: Record<string, never>;
   SupportPanelBenefitPackBadge: SupportPanelBenefitPackBadgeVariables;
@@ -125450,6 +126123,7 @@ export type QueryVariablesMap = {
   CheckoutPersonalization_DeleteMessage: CheckoutPersonalizationDeleteMessageVariables;
   CheckoutPersonalization_SetEnabled: CheckoutPersonalizationSetEnabledVariables;
   CheckoutPersonalization_SetMessage: CheckoutPersonalizationSetMessageVariables;
+  CheckoutV2_InitiatePendingPurchaseOffer: CheckoutV2InitiatePendingPurchaseOfferVariables;
   CheerSettingsForm_OnboardUser: CheerSettingsFormOnboardUserVariables;
   ClaimCommunityPoints: ClaimCommunityPointsVariables;
   ClaimCreatorMessageAction: ClaimCreatorMessageActionVariables;
@@ -125817,6 +126491,7 @@ export type QueryVariablesMap = {
   RemoveInviteFromSession: RemoveInviteFromSessionVariables;
   RemoveOrgMember: RemoveOrgMemberVariables;
   removeReactionByContentKey: RemoveReactionByContentKeyVariables;
+  RemoveSelfFromTeam: RemoveSelfFromTeamVariables;
   RemoveSocialMedia: RemoveSocialMediaVariables;
   RemoveUserFromNotificationCampaign: RemoveUserFromNotificationCampaignVariables;
   RemoveViewerFromRTJQueue: RemoveViewerFromRTJQueueVariables;
@@ -125828,6 +126503,7 @@ export type QueryVariablesMap = {
   ResetOauthAppSecret: ResetOauthAppSecretVariables;
   ResetUsername: ResetUsernameVariables;
   ResolvePrediction: ResolvePredictionVariables;
+  respondToTeamInvitation: RespondToTeamInvitationVariables;
   ResumeHostTrainHold: ResumeHostTrainHoldVariables;
   ResumeSchedule: ResumeScheduleVariables;
   revokeCommunityRole: RevokeCommunityRoleVariables;
@@ -125851,6 +126527,7 @@ export type QueryVariablesMap = {
   setAutohostChannels: SetAutohostChannelsVariables;
   SetBitsUserSettings: SetBitsUserSettingsVariables;
   SetBusinessDetails: SetBusinessDetailsVariables;
+  setChangelogRead: Record<string, never>;
   SetChatScreenReaderAutoAnnounce: SetChatScreenReaderAutoAnnounceVariables;
   SetClipCommentsEnabled: SetClipCommentsEnabledVariables;
   SetCreatorWalletSubscriptionSetting: SetCreatorWalletSubscriptionSettingVariables;
@@ -125991,6 +126668,7 @@ export type QueryVariablesMap = {
   UpdateAlertSet: UpdateAlertSetVariables;
   UpdateAlertVariationPriority: UpdateAlertVariationPriorityVariables;
   updateAutohostSettings: UpdateAutohostSettingsVariables;
+  UpdateAutomaticChannelPointsReward: UpdateAutomaticChannelPointsRewardVariables;
   UpdateAutomaticRewardCost: UpdateAutomaticRewardCostVariables;
   updateAutoRaidSettings: UpdateAutoRaidSettingsVariables;
   UpdateBansSharingSettings: UpdateBansSharingSettingsVariables;
@@ -126077,6 +126755,7 @@ export type QueryVariablesMap = {
   UpdateUserSubscriptionSettingsFounderBadgeHidden: UpdateUserSubscriptionSettingsFounderBadgeHiddenVariables;
   UpdateUserSubscriptionSettings_RENAME2: UpdateUserSubscriptionSettingsRENAME2Variables;
   UpdateUserSubscriptionSettingsSubscriptionStatus: UpdateUserSubscriptionSettingsSubscriptionStatusVariables;
+  updateUserTeamMembership: UpdateUserTeamMembershipVariables;
   updateUserViewedVideo: UpdateUserViewedVideoVariables;
   UpdateWhisperSettings: UpdateWhisperSettingsVariables;
   UpgradeTermsPage_AcceptProgramAgreement: UpgradeTermsPageAcceptProgramAgreementVariables;
@@ -126198,6 +126877,7 @@ export type QueryResponseMap = {
   AmazonAccountConnectionQuery: AmazonAccountConnectionQueryResponse;
   AnimatedTag_TagData: AnimatedTagTagDataResponse;
   Announcement_CreatorColor: AnnouncementCreatorColorResponse;
+  AnnouncementsIcon: AnnouncementsIconResponse;
   AnnualRecap2023: AnnualRecap2023Response;
   AnnualRecap2024: AnnualRecap2024Response;
   AnnualRecap2025: AnnualRecap2025Response;
@@ -126388,6 +127068,7 @@ export type QueryResponseMap = {
   ChannelViewerMilestoneSettings: ChannelViewerMilestoneSettingsResponse;
   CharityDiscoveryPage: CharityDiscoveryPageResponse;
   CharityDiscoveryPage_SearchCharities: CharityDiscoveryPageSearchCharitiesResponse;
+  CharityNavItem: CharityNavItemResponse;
   CharityPanelOffer_Query: CharityPanelOfferQueryResponse;
   CharityPanel_PreviewWidgetQuery: CharityPanelPreviewWidgetQueryResponse;
   CharityPanel_Query: CharityPanelQueryResponse;
@@ -126455,6 +127136,7 @@ export type QueryResponseMap = {
   CheckoutPersonalizationPreview_Query: CheckoutPersonalizationPreviewQueryResponse;
   CheckoutPrice: CheckoutPriceResponse;
   CheckoutRecentSubscribedChatters: CheckoutRecentSubscribedChattersResponse;
+  CheckoutV2_PendingPurchaseOrder: CheckoutV2PendingPurchaseOrderResponse;
   CheckoutWatchStreaks: CheckoutWatchStreaksResponse;
   CheerSettingsForm_GetBitsOnboardedSettings: CheerSettingsFormGetBitsOnboardedSettingsResponse;
   ChoiceBreakdown: ChoiceBreakdownResponse;
@@ -126469,6 +127151,7 @@ export type QueryResponseMap = {
   ClipMetadata: ClipMetadataResponse;
   ClipMetadataBroadcastInfoQuery: ClipMetadataBroadcastInfoQueryResponse;
   ClipMetadataVodInfoQuery: ClipMetadataVodInfoQueryResponse;
+  ClipPagePlayer: ClipPagePlayerResponse;
   ClipRecaps: ClipRecapsResponse;
   ClipRecapsPlayer: ClipRecapsPlayerResponse;
   ClipsCards__Game: ClipsCardsGameResponse;
@@ -126616,6 +127299,7 @@ export type QueryResponseMap = {
   DashboardSettingsPage: DashboardSettingsPageResponse;
   DashboardSettingsRaidSettingsV2: DashboardSettingsRaidSettingsV2Response;
   DashboardSettingsUserColor: DashboardSettingsUserColorResponse;
+  DashboardTeamSettings: DashboardTeamSettingsResponse;
   Dashboard_TopClips: DashboardTopClipsResponse;
   DataAccessCategories: DataAccessCategoriesResponse;
   DataAccessRequestReportDownloadLink: DataAccessRequestReportDownloadLinkResponse;
@@ -126974,6 +127658,7 @@ export type QueryResponseMap = {
   LastUnbanRequest: LastUnbanRequestResponse;
   LeaderboardBadgePeriod: LeaderboardBadgePeriodResponse;
   LeaderboardSettings_GetLeaderboardSettings: LeaderboardSettingsGetLeaderboardSettingsResponse;
+  LeftNavPayoutCategory: LeftNavPayoutCategoryResponse;
   LegacyViewsTileQuery: LegacyViewsTileQueryResponse;
   LegendaryEmoteSeason: LegendaryEmoteSeasonResponse;
   LegendaryEmotesOptOutToggle_ChannelSettings: LegendaryEmotesOptOutToggleChannelSettingsResponse;
@@ -127067,6 +127752,7 @@ export type QueryResponseMap = {
   MyCollaborationsShelf: MyCollaborationsShelfResponse;
   MyEditableChannels: MyEditableChannelsResponse;
   NativeChannelLiveQuery: NativeChannelLiveQueryResponse;
+  NewAllCampaignsCampaignDetails: NewAllCampaignsCampaignDetailsResponse;
   NewAllCampaignsPage: NewAllCampaignsPageResponse;
   NewPollModalQuery: NewPollModalQueryResponse;
   NewSubscriptionsTimeseriesStats_StreamSummary: NewSubscriptionsTimeseriesStatsStreamSummaryResponse;
@@ -127292,7 +127978,7 @@ export type QueryResponseMap = {
   ShoutsMetrics: ShoutsMetricsResponse;
   ShoutsPromoAvatars: ShoutsPromoAvatarsResponse;
   SideNav: SideNavResponse;
-  SideNavCreatorBadgeDrop: SideNavCreatorBadgeDropResponse;
+  SideNavCreatorBadgeDrops: SideNavCreatorBadgeDropsResponse;
   SideNavShoppingProducts: SideNavShoppingProductsResponse;
   SinceLastAdTileQuery: SinceLastAdTileQueryResponse;
   Snackbar_AdProperties: SnackbarAdPropertiesResponse;
@@ -127398,6 +128084,8 @@ export type QueryResponseMap = {
   SunlightHomeCardsPage: SunlightHomeCardsPageResponse;
   SunlightHomePage: SunlightHomePageResponse;
   SunlightHomePageCards: SunlightHomePageCardsResponse;
+  SunlightLoggedInUserMenuQuery: SunlightLoggedInUserMenuQueryResponse;
+  SunlightUserMenuItemQuery: SunlightUserMenuItemQueryResponse;
   SupportChatCurrentUser: SupportChatCurrentUserResponse;
   SupportChatRecentSession: SupportChatRecentSessionResponse;
   SupportPanelBenefitPackBadge: SupportPanelBenefitPackBadgeResponse;
@@ -127763,6 +128451,7 @@ export type QueryResponseMap = {
   CheckoutPersonalization_DeleteMessage: CheckoutPersonalizationDeleteMessageResponse;
   CheckoutPersonalization_SetEnabled: CheckoutPersonalizationSetEnabledResponse;
   CheckoutPersonalization_SetMessage: CheckoutPersonalizationSetMessageResponse;
+  CheckoutV2_InitiatePendingPurchaseOffer: CheckoutV2InitiatePendingPurchaseOfferResponse;
   CheerSettingsForm_OnboardUser: CheerSettingsFormOnboardUserResponse;
   ClaimCommunityPoints: ClaimCommunityPointsResponse;
   ClaimCreatorMessageAction: ClaimCreatorMessageActionResponse;
@@ -128130,6 +128819,7 @@ export type QueryResponseMap = {
   RemoveInviteFromSession: RemoveInviteFromSessionResponse;
   RemoveOrgMember: RemoveOrgMemberResponse;
   removeReactionByContentKey: RemoveReactionByContentKeyResponse;
+  RemoveSelfFromTeam: RemoveSelfFromTeamResponse;
   RemoveSocialMedia: RemoveSocialMediaResponse;
   RemoveUserFromNotificationCampaign: RemoveUserFromNotificationCampaignResponse;
   RemoveViewerFromRTJQueue: RemoveViewerFromRTJQueueResponse;
@@ -128141,6 +128831,7 @@ export type QueryResponseMap = {
   ResetOauthAppSecret: ResetOauthAppSecretResponse;
   ResetUsername: ResetUsernameResponse;
   ResolvePrediction: ResolvePredictionResponse;
+  respondToTeamInvitation: RespondToTeamInvitationResponse;
   ResumeHostTrainHold: ResumeHostTrainHoldResponse;
   ResumeSchedule: ResumeScheduleResponse;
   revokeCommunityRole: RevokeCommunityRoleResponse;
@@ -128164,6 +128855,7 @@ export type QueryResponseMap = {
   setAutohostChannels: SetAutohostChannelsResponse;
   SetBitsUserSettings: SetBitsUserSettingsResponse;
   SetBusinessDetails: SetBusinessDetailsResponse;
+  setChangelogRead: SetChangelogReadResponse;
   SetChatScreenReaderAutoAnnounce: SetChatScreenReaderAutoAnnounceResponse;
   SetClipCommentsEnabled: SetClipCommentsEnabledResponse;
   SetCreatorWalletSubscriptionSetting: SetCreatorWalletSubscriptionSettingResponse;
@@ -128304,6 +128996,7 @@ export type QueryResponseMap = {
   UpdateAlertSet: UpdateAlertSetResponse;
   UpdateAlertVariationPriority: UpdateAlertVariationPriorityResponse;
   updateAutohostSettings: UpdateAutohostSettingsResponse;
+  UpdateAutomaticChannelPointsReward: UpdateAutomaticChannelPointsRewardResponse;
   UpdateAutomaticRewardCost: UpdateAutomaticRewardCostResponse;
   updateAutoRaidSettings: UpdateAutoRaidSettingsResponse;
   UpdateBansSharingSettings: UpdateBansSharingSettingsResponse;
@@ -128390,6 +129083,7 @@ export type QueryResponseMap = {
   UpdateUserSubscriptionSettingsFounderBadgeHidden: UpdateUserSubscriptionSettingsFounderBadgeHiddenResponse;
   UpdateUserSubscriptionSettings_RENAME2: UpdateUserSubscriptionSettingsRENAME2Response;
   UpdateUserSubscriptionSettingsSubscriptionStatus: UpdateUserSubscriptionSettingsSubscriptionStatusResponse;
+  updateUserTeamMembership: UpdateUserTeamMembershipResponse;
   updateUserViewedVideo: UpdateUserViewedVideoResponse;
   UpdateWhisperSettings: UpdateWhisperSettingsResponse;
   UpgradeTermsPage_AcceptProgramAgreement: UpgradeTermsPageAcceptProgramAgreementResponse;
