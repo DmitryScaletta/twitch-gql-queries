@@ -23,35 +23,29 @@ export type Badge = {
    * @format uri
    * @example ["https://static-cdn.jtvnw.net/badges/v1/73b5c3fb-24f9-4a82-a852-2f475b59411c/1", "https://static-cdn.jtvnw.net/badges/v1/73b5c3fb-24f9-4a82-a852-2f475b59411c/2"]
    * @aliasFor imageURL
-   * @gqlArg `size: BadgeImageURLSize`
+   * @gqlArg `size: ImageURLSize`
    */
   image1x: string;
   /**
    * @format uri
    * @example ["https://static-cdn.jtvnw.net/badges/v1/73b5c3fb-24f9-4a82-a852-2f475b59411c/1", "https://static-cdn.jtvnw.net/badges/v1/73b5c3fb-24f9-4a82-a852-2f475b59411c/2"]
    * @aliasFor imageURL
-   * @gqlArg `size: BadgeImageURLSize`
+   * @gqlArg `size: ImageURLSize`
    */
   image2x: string;
   /**
    * @format uri
    * @example ["https://static-cdn.jtvnw.net/badges/v1/73b5c3fb-24f9-4a82-a852-2f475b59411c/1", "https://static-cdn.jtvnw.net/badges/v1/73b5c3fb-24f9-4a82-a852-2f475b59411c/2"]
    * @aliasFor imageURL
-   * @gqlArg `size: BadgeImageURLSize`
+   * @gqlArg `size: ImageURLSize`
    */
   image4x: string;
   /** @example ["VISIT_URL", "SUBSCRIBE", "GET_TURBO"] */
-  clickAction: null | BadgeClickAction;
+  clickAction: null | ClickAction;
   /** @example ["https://www.twitch.tv/directory/category/destiny-2\t", "https://bits.twitch.tv", "https://help.twitch.tv/s/article/guide-to-cheering-with-bits"] */
   clickURL: null | string;
   __typename: "Badge";
 };
-
-/** ℹ️ Not real Twitch type name */
-export type BadgeClickAction = "GET_BITS" | "GET_TURBO" | "SUBSCRIBE" | "VISIT_URL";
-
-/** ℹ️ Not real Twitch type name */
-export type BadgeImageURLSize = "DOUBLE" | "NORMAL" | "QUADRUPLE";
 
 export type BitsCheermoteCampaign = {
   id: ID;
@@ -111,12 +105,53 @@ export type BitsCheermoteCampaign_CheermoteCampaignThresholds = {
   __typename: string;
 };
 
+/** ℹ️ Not real Twitch type name */
+export type BlurReason = "BLUR_NOT_REQUIRED" | "BLUR_REASON_TYPE_SEXUAL_THEMES";
+
 export type BroadcastType =
   | "ARCHIVE"
   | "HIGHLIGHT"
   | "PAST_PREMIERE"
   | "PREMIERE_UPLOAD"
   | "UPLOAD";
+
+/** ℹ️ Not real Twitch type name */
+export type BroadcasterLanguages =
+  | "AR"
+  | "ASL"
+  | "BG"
+  | "CA"
+  | "CS"
+  | "DA"
+  | "DE"
+  | "EL"
+  | "EN"
+  | "ES"
+  | "FI"
+  | "FR"
+  | "HI"
+  | "HU"
+  | "ID"
+  | "IT"
+  | "JA"
+  | "KO"
+  | "MS"
+  | "NL"
+  | "NO"
+  | "OTHER"
+  | "PL"
+  | "PT"
+  | "RO"
+  | "RU"
+  | "SK"
+  | "SV"
+  | "TH"
+  | "TL"
+  | "TR"
+  | "UK"
+  | "VI"
+  | "ZH"
+  | "ZH_HK";
 
 export type BrowsePageDirectoriesWithTagsEdge = {
   cursor: Cursor;
@@ -154,12 +189,6 @@ export type BrowsePageGame = {
   originalReleaseDate: null | string;
   __typename: "Game";
 };
-
-/** ℹ️ Not real Twitch type name */
-export type ChannelHomePreferencesHeroPreset = "PRESET_1" | "PRESET_2";
-
-/** ℹ️ Not real Twitch type name */
-export type ChannelSelfEdgeRestrictionType = "UNKNOWN";
 
 export type CheerDisplayConfig = {
   /** @example ["light", "dark"] */
@@ -209,6 +238,9 @@ export type CheermoteType =
   | "SPONSORED"
   | "THIRD_PARTY"
   | "UNKNOWN";
+
+/** ℹ️ Not real Twitch type name */
+export type ClickAction = "GET_BITS" | "GET_TURBO" | "SUBSCRIBE" | "VISIT_URL";
 
 export type Clip = {
   /**
@@ -318,7 +350,7 @@ export type Clip = {
    * @example [44, 26, 25, 42, 30, 59, 36, 41, 60, 29]
    */
   durationSeconds: number;
-  champBadge: null | Clip_ClipChampBadge | Clip_ClipChampBadge[];
+  champBadge: null | Clip_ChampBadge | Clip_ChampBadge[];
   isFeatured: boolean;
   isAutoCurated: boolean;
   guestStarParticipants: null | {
@@ -329,9 +361,6 @@ export type Clip = {
   };
   __typename: "Clip";
 };
-
-/** ℹ️ Not real Twitch type name */
-export type ClipAssetCreationState = "CREATED" | "FAILED";
 
 export type ClipAssetFragment = {
   /** @example ["ce4b4ef1-4e8d-4391-bff6-2bc4c5506a4d/LANDSCAPE", "c8e52370-1429-4023-9ce8-9d016939e3c2/LANDSCAPE"] */
@@ -347,7 +376,7 @@ export type ClipAssetFragment = {
    */
   createdAt: string;
   /** @example ["CREATED", "FAILED"] */
-  creationState: ClipAssetCreationState;
+  creationState: CreationState;
   curator: null | {
     /**
      * @pattern ^[0-9]+$
@@ -480,7 +509,7 @@ export type ClipLanguage =
   | "ZH";
 
 /** ℹ️ Not real Twitch type name */
-export type Clip_ClipChampBadge = {
+export type Clip_ChampBadge = {
   id: ID;
   __typename: string;
 };
@@ -723,10 +752,7 @@ export type ContentClipsManagerClip = {
    * @example [44, 26, 25, 42, 30, 59, 36, 41, 60, 29]
    */
   durationSeconds: number;
-  champBadge:
-    | null
-    | ContentClipsManagerClip_ClipChampBadge
-    | ContentClipsManagerClip_ClipChampBadge[];
+  champBadge: null | ContentClipsManagerClip_ChampBadge | ContentClipsManagerClip_ChampBadge[];
   playbackAccessToken: {
     /** @example ["deadbeefdeadbeefdeadbeefdeadbeefdeadbeef"] */
     signature: string;
@@ -773,7 +799,7 @@ export type ContentClipsManagerClip = {
 };
 
 /** ℹ️ Not real Twitch type name */
-export type ContentClipsManagerClip_ClipChampBadge = {
+export type ContentClipsManagerClip_ChampBadge = {
   id: ID;
   __typename: string;
 };
@@ -806,7 +832,7 @@ export type CoreChannelWithHomePrefsFragment = CoreUserFragment & {
       id: ID;
       isAuthorized: boolean;
       /** @example ["UNKNOWN"] */
-      restrictionType: null | ChannelSelfEdgeRestrictionType;
+      restrictionType: null | RestrictionType;
       __typename: "ChannelSelfEdge";
     };
     trailer: {
@@ -834,7 +860,7 @@ export type CoreChannelWithHomePrefsFragment = CoreUserFragment & {
     home: {
       preferences: {
         /** @example ["PRESET_2", "PRESET_1"] */
-        heroPreset: ChannelHomePreferencesHeroPreset;
+        heroPreset: HeroPreset;
         __typename: "ChannelHomePreferences";
       };
       __typename: "ChannelHome";
@@ -958,6 +984,9 @@ export type CostreamingUserWithViewcount = {
   __typename: "User";
 };
 
+/** ℹ️ Not real Twitch type name */
+export type CreationState = "CREATED" | "FAILED";
+
 export type CuratedTagFragment = {
   /** @example ["stream-o-ween-2026", "nopixel-v"] */
   id: ID;
@@ -1079,7 +1108,7 @@ export type DirectoryPageGameStreamWithTagsNode = {
   };
   previewThumbnailProperties: {
     /** @example ["BLUR_NOT_REQUIRED", "BLUR_REASON_TYPE_SEXUAL_THEMES"] */
-    blurReason: PreviewThumbnailPropertiesBlurReason;
+    blurReason: BlurReason;
     __typename: "PreviewThumbnailProperties";
   };
   contentClassificationLabels:
@@ -1093,6 +1122,14 @@ export type DirectoryPageGameStreamWithTagsNode = {
   costreamDetails?: null | CostreamingDiscoveryDetails;
   __typename: "Stream";
 };
+
+/** ℹ️ Not real Twitch type name */
+export type ForbiddenReasonCode =
+  | "CHANNEL_RESTRICTED_BANNED_USER"
+  | "GEOBLOCKED"
+  | "NONE"
+  | "UNAUTHORIZED"
+  | "UNAUTHORIZED_ENTITLEMENTS";
 
 export type FreeformTagFragment = {
   /** @example ["fft:CHANNEL:71092938:0", "fft:CHANNEL:71092938:1"] */
@@ -1158,7 +1195,7 @@ export type GameOptions = {
 
 export type GameStreamOptions = {
   /** @example ["EN", "ID", "CA", "DA", "DE", "ES", "FR", "IT", "HU", "NL", "NO", "PL", "PT", "RO", "SK", "FI", "SV", "TL", "VI", "TR", "CS", "EL", "BG", "RU", "UK", "AR", "MS", "HI", "TH", "ZH", "JA", "KO", "ASL", "OTHER"] */
-  broadcasterLanguages?: null | GameStreamOptionsBroadcasterLanguages[];
+  broadcasterLanguages?: null | BroadcasterLanguages[];
   /** @example ["DropsEnabeled", "AskMeAnything", "DropsEnabled", "GTARP"] */
   freeformTags?: null | string[];
   /** @example ["SUB_ONLY_LIVE"] */
@@ -1171,44 +1208,6 @@ export type GameStreamOptions = {
   systemFilters?: null | UnknownValue[];
   tags?: null | UnknownValue[];
 };
-
-/** ℹ️ Not real Twitch type name */
-export type GameStreamOptionsBroadcasterLanguages =
-  | "AR"
-  | "ASL"
-  | "BG"
-  | "CA"
-  | "CS"
-  | "DA"
-  | "DE"
-  | "EL"
-  | "EN"
-  | "ES"
-  | "FI"
-  | "FR"
-  | "HI"
-  | "HU"
-  | "ID"
-  | "IT"
-  | "JA"
-  | "KO"
-  | "MS"
-  | "NL"
-  | "NO"
-  | "OTHER"
-  | "PL"
-  | "PT"
-  | "RO"
-  | "RU"
-  | "SK"
-  | "SV"
-  | "TH"
-  | "TL"
-  | "TR"
-  | "UK"
-  | "VI"
-  | "ZH"
-  | "ZH_HK";
 
 export type GlobalCheerInfo = {
   cheerConfig: {
@@ -1243,6 +1242,12 @@ export type GuestStarUser = {
   description: null | string;
   __typename: "User";
 };
+
+/** ℹ️ Not real Twitch type name */
+export type HeroPreset = "PRESET_1" | "PRESET_2";
+
+/** ℹ️ Not real Twitch type name */
+export type ImageURLSize = "DOUBLE" | "NORMAL" | "QUADRUPLE";
 
 /** ℹ️ Not real Twitch type name */
 export type IncludeRestricted = "OWL_ALL_ACCESS_PASS" | "SUB_ONLY_LIVE";
@@ -1281,17 +1286,9 @@ export type OptionsSort =
   | "VIEWER_COUNT"
   | "VIEWER_COUNT_ASC";
 
-/** ℹ️ Not real Twitch type name */
-export type PlaybackAccessTokenAuthorizationForbiddenReasonCode =
-  | "CHANNEL_RESTRICTED_BANNED_USER"
-  | "GEOBLOCKED"
-  | "NONE"
-  | "UNAUTHORIZED"
-  | "UNAUTHORIZED_ENTITLEMENTS";
-
 export type PortraitClipCropping = {
   /** @example ["FULL", "STACKED"] */
-  portraitClipLayout: PortraitClipCroppingPortraitClipLayout;
+  portraitClipLayout: PortraitClipLayout;
   fullTemplateMetadata: null | {
     mainFrame: null | PortraitCropMetadata;
     __typename: "FullTemplateMetadata";
@@ -1305,7 +1302,7 @@ export type PortraitClipCropping = {
 };
 
 /** ℹ️ Not real Twitch type name */
-export type PortraitClipCroppingPortraitClipLayout = "FULL" | "FULL_HEIGHT" | "SPLIT" | "STACKED";
+export type PortraitClipLayout = "FULL" | "FULL_HEIGHT" | "SPLIT" | "STACKED";
 
 export type PortraitCropMetadata = {
   topLeft: {
@@ -1443,7 +1440,7 @@ export type PreviewCardClip = {
   };
   previewThumbnailProperties: {
     /** @example ["BLUR_NOT_REQUIRED", "BLUR_REASON_TYPE_SEXUAL_THEMES"] */
-    blurReason: PreviewThumbnailPropertiesBlurReason;
+    blurReason: BlurReason;
     __typename: "PreviewThumbnailProperties";
   };
   __typename: "Clip";
@@ -1560,18 +1557,13 @@ export type PreviewCardVideo = {
   /** @directive include(if: $includePreviewBlur) */
   previewThumbnailProperties?: {
     /** @example ["BLUR_NOT_REQUIRED", "BLUR_REASON_TYPE_SEXUAL_THEMES"] */
-    blurReason: PreviewThumbnailPropertiesBlurReason;
+    blurReason: BlurReason;
     __typename: "PreviewThumbnailProperties";
   };
   __typename: "Video";
 };
 
 export type PreviewCollection = CollectionFields & { items: null | CollectionConnectionFields };
-
-/** ℹ️ Not real Twitch type name */
-export type PreviewThumbnailPropertiesBlurReason =
-  | "BLUR_NOT_REQUIRED"
-  | "BLUR_REASON_TYPE_SEXUAL_THEMES";
 
 export type RecommendationsContext = {
   /** @example ["twilight"] */
@@ -1653,6 +1645,9 @@ export type ResourceRestrictionOptions =
 
 /** ℹ️ Not real Twitch type name */
 export type ResourceRestrictionType = "SUB_ONLY_LIVE";
+
+/** ℹ️ Not real Twitch type name */
+export type RestrictionType = "UNKNOWN";
 
 export type SearchForChannelsFragment = {
   cursor: Cursor;
@@ -1797,7 +1792,7 @@ export type SearchForFeaturedClipFragment = {
   };
   previewThumbnailProperties: {
     /** @example ["BLUR_NOT_REQUIRED", "BLUR_REASON_TYPE_SEXUAL_THEMES"] */
-    blurReason: PreviewThumbnailPropertiesBlurReason;
+    blurReason: BlurReason;
     __typename: "PreviewThumbnailProperties";
   };
   __typename: "Clip";
@@ -1857,7 +1852,7 @@ export type SearchForFeaturedVideoFragment = {
   templatePreviewThumbnailURL: string;
   previewThumbnailProperties: {
     /** @example ["BLUR_NOT_REQUIRED", "BLUR_REASON_TYPE_SEXUAL_THEMES"] */
-    blurReason: PreviewThumbnailPropertiesBlurReason;
+    blurReason: BlurReason;
     __typename: "PreviewThumbnailProperties";
   };
   __typename: "Video";
@@ -2165,7 +2160,7 @@ export type SearchForUserFragment = {
         }[];
     previewThumbnailProperties: {
       /** @example ["BLUR_NOT_REQUIRED", "BLUR_REASON_TYPE_SEXUAL_THEMES"] */
-      blurReason: PreviewThumbnailPropertiesBlurReason;
+      blurReason: BlurReason;
       __typename: "PreviewThumbnailProperties";
     };
     __typename: "Stream";
@@ -2241,7 +2236,7 @@ export type SearchForVideoFragment = {
   viewCount: number;
   previewThumbnailProperties: {
     /** @example ["BLUR_NOT_REQUIRED", "BLUR_REASON_TYPE_SEXUAL_THEMES"] */
-    blurReason: PreviewThumbnailPropertiesBlurReason;
+    blurReason: BlurReason;
     __typename: "PreviewThumbnailProperties";
   };
   __typename: "Video";
@@ -2366,7 +2361,7 @@ export type SearchRelatedLiveChannelFragment = {
     };
     previewThumbnailProperties: {
       /** @example ["BLUR_NOT_REQUIRED", "BLUR_REASON_TYPE_SEXUAL_THEMES"] */
-      blurReason: PreviewThumbnailPropertiesBlurReason;
+      blurReason: BlurReason;
       __typename: "PreviewThumbnailProperties";
     };
     __typename: "Stream";
@@ -3715,7 +3710,7 @@ export type PlaybackAccessTokenData = {
     authorization: {
       isForbidden: boolean;
       /** @example ["NONE", "GEOBLOCKED"] */
-      forbiddenReasonCode: PlaybackAccessTokenAuthorizationForbiddenReasonCode;
+      forbiddenReasonCode: ForbiddenReasonCode;
       __typename: "PlaybackAccessTokenAuthorization";
     };
     __typename: "PlaybackAccessToken";
