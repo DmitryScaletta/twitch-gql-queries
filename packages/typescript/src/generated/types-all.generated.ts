@@ -17531,11 +17531,14 @@ export type CuratedTagFragment = {
    */
   iconURL: null | string;
   /** @example ["EVENT_PAGE"] */
-  routeTo: string;
+  routeTo: RouteTo;
   /** @example ["EVENT"] */
-  type: string;
+  type: CuratedTagType;
   __typename: "CuratedTag";
 };
+
+/** ℹ️ Not real Twitch type name */
+export type CuratedTagType = "EVENT";
 
 /** ℹ️ Not real Twitch type name */
 export type CurrencyCode =
@@ -42363,6 +42366,9 @@ export type RocketBoostOpportunityPurchasableUnits_RocketBoostProducts = {
 
 /** ℹ️ Not real Twitch type name */
 export type RollType = "MIDROLL" | "POSTROLL" | "PREROLL";
+
+/** ℹ️ Not real Twitch type name */
+export type RouteTo = "EVENT_PAGE";
 
 /** ℹ️ Not real Twitch type name */
 export type ScheduleEditorSearchCategories_SearchCategories = {

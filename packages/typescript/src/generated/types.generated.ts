@@ -998,11 +998,14 @@ export type CuratedTagFragment = {
    */
   iconURL: null | string;
   /** @example ["EVENT_PAGE"] */
-  routeTo: string;
+  routeTo: RouteTo;
   /** @example ["EVENT"] */
-  type: string;
+  type: CuratedTagType;
   __typename: "CuratedTag";
 };
+
+/** ℹ️ Not real Twitch type name */
+export type CuratedTagType = "EVENT";
 
 export type DirectoryPageGameStreamWithTagsEdge = {
   cursor: Cursor;
@@ -1648,6 +1651,9 @@ export type ResourceRestrictionType = "SUB_ONLY_LIVE";
 
 /** ℹ️ Not real Twitch type name */
 export type RestrictionType = "UNKNOWN";
+
+/** ℹ️ Not real Twitch type name */
+export type RouteTo = "EVENT_PAGE";
 
 export type SearchForChannelsFragment = {
   cursor: Cursor;
