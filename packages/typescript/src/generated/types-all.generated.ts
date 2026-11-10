@@ -3914,6 +3914,23 @@ export type AssignAgentRole_AssignChannelRoleError = {
 };
 
 /** ℹ️ Not real Twitch type name */
+export type AssignApprenticeMod_AssignChannelRole = {
+  /** ⚠️ Low confidence about: nullable */
+  isAssigned: null | boolean;
+  error:
+    | null
+    | AssignApprenticeMod_AssignChannelRoleError
+    | AssignApprenticeMod_AssignChannelRoleError[];
+  __typename: string;
+};
+
+/** ℹ️ Not real Twitch type name */
+export type AssignApprenticeMod_AssignChannelRoleError = {
+  code: UnknownValue;
+  __typename: string;
+};
+
+/** ℹ️ Not real Twitch type name */
 export type AssignChannelRole_AssignChannelRole = {
   /** ⚠️ Low confidence about: nullable */
   isAssigned: null | boolean;
@@ -29177,10 +29194,14 @@ export type GuestStarRequestUser = {
 
 /** ℹ️ Not real Twitch type name */
 export type GuestStarSendJoinRequest_JoinRequest = {
-  callee:
-    | null
-    | GuestStarSendJoinRequest_JoinRequestCallee
-    | GuestStarSendJoinRequest_JoinRequestCallee[];
+  callee: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["23161357"]
+     */
+    id: ID;
+    __typename: "User";
+  };
   host: null | {
     /**
      * @pattern ^[0-9]+$
@@ -29193,12 +29214,6 @@ export type GuestStarSendJoinRequest_JoinRequest = {
   };
   id: ID;
   status: UnknownValue;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type GuestStarSendJoinRequest_JoinRequestCallee = {
-  id: ID;
   __typename: string;
 };
 
@@ -31193,6 +31208,11 @@ export type JoinHostTrain_JoinHostTrainTrain = {
   state: UnknownValue;
   /** ⚠️ Low confidence about: nullable */
   isAboard: null | boolean;
+  /**
+   * ⚠️ Low confidence about: nullable
+   * @format uint32
+   */
+  passengerCount: null | number;
   /**
    * ⚠️ Low confidence about: nullable
    * @format uint32
@@ -35396,6 +35416,72 @@ export type OauthFields = {
   /** ⚠️ Low confidence about: nullable */
   isPublic: null | boolean;
   __typename: "OAuthApp";
+};
+
+export type OcpTopSlotVideo = {
+  /**
+   * @pattern ^[0-9]+$
+   * @example ["2323270866"]
+   */
+  id: ID;
+  /** @example ["Twitch Recap: 2024 according to Twitch Chat!", "REDstreams — Cyberpunk 2077: Edgerunners 2 Update (2.5) | Overview"] */
+  title: null | string;
+  /** @example ["The legendary TwitchCon Drag Showcase is back! Check out all the amazing performers right here!", "Now you know when our show happen! Nice."] */
+  description: null | string;
+  /**
+   * @example ["https://static-cdn.jtvnw.net/cf_vods/d1m7jfoe9zdc1j/82ef4729c6011d6072e2_twitch_43295848617_1733849129//thumb/thumb0-90x60.jpg", "https://static-cdn.jtvnw.net/cf_vods/d3fi1amfgojobc/7fbc776f6b7a4659c4e4_cdprojektred_319108158181_1793115910//thumb/thumb0-90x60.jpg"]
+   * @gqlArg `width: Int [320, 90, 640, 240, 400, 1280, 80, 160, 214]`
+   * @gqlArg `height: Int [180, 60, 360, 135, 225, 480, 720, 51, 45, 90]`
+   */
+  previewThumbnailURL: string;
+  /**
+   * @format date-time
+   * @example ["2024-12-10T16:45:35Z", "2026-10-27T15:45:17Z"]
+   */
+  publishedAt: string;
+  /**
+   * @format uint32
+   * @example [15389, 4359, 4621, 621, 4472]
+   */
+  lengthSeconds: number;
+  /**
+   * @format uint32
+   * @example [0, 772963, 277364, 171376, 171377, 163669]
+   */
+  viewCount: number;
+  owner: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["23161357"]
+     */
+    id: ID;
+    /** @example ["lirik", "twitch", "cdprojektred", "forsen", "tickett_", "st1mgreeen", "lipton_18"] */
+    login: string;
+    /** @example ["Twitch", "CD PROJEKT RED", "LIRIK", "forsen", "ayuuexe", "xQc", "RSDragonwilds"] */
+    displayName: string;
+    __typename: "User";
+  };
+  game: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["509672"]
+     */
+    id: ID;
+    /** @example ["IRL", "Cyberpunk 2077", "Just Chatting", "Special Events", "League of Legends", "You Know The Drill", "RuneScape: Dragonwilds"] */
+    name: string;
+    /** @example ["IRL", "Cyberpunk 2077", "Just Chatting", "Special Events", "Gwent: The Witcher Card Game", "Grand Theft Auto V", "DayZ"] */
+    displayName: string;
+    __typename: "Game";
+  };
+  __typename: "Video";
+};
+
+export type OcpTopSlotVideoConnection = {
+  edges: {
+    node: null | OcpTopSlotVideo;
+    __typename: "VideoEdge";
+  }[];
+  __typename: "VideoConnection";
 };
 
 export type OfferEligibilityFragment = {
@@ -51812,22 +51898,6 @@ export type SupportChatRecentSession_RecentSupportChatSessionMessages = {
 };
 
 /** ℹ️ Not real Twitch type name */
-export type SupportPanelChannelTopEmotes_ChannelRecap = {
-  emoteUsage: null | {
-    emote: null | {
-      /** @example ["emotesv2_42ba00f9d5e24c4ca189d642b9e0b0c9", "emotesv2_845e6a3e8a0a40d0afc90081defa16c1"] */
-      id: ID;
-      /** @example ["sumFast", "sumSmash", "sumPls", "sumMiting", "sumX", "sumKomrade", "sumPause"] */
-      token: string;
-      __typename: "Emote";
-    };
-    totalUsage: UnknownValue;
-    __typename: "EmoteUsage";
-  };
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
 export type SupportPanelGiftingGifterBadgeProgressV2_GifterBadgeStatus = {
   version: UnknownValue;
   /** ⚠️ Low confidence about: nullable */
@@ -57896,7 +57966,7 @@ export type UserLookupType = "ACTIVE" | "ALL";
 
 export type UserNotificationCampaignInput = {
   /** @example ["WEB"] */
-  platform: UserNotificationCampaignsInputPlatform;
+  platform?: null | UserNotificationCampaignsInputPlatform;
 };
 
 /** ℹ️ Not real Twitch type name */
@@ -59852,6 +59922,16 @@ export type ViewerCardModLogsCaughtMessageFragment_CaughtMessageReason = {
     | null
     | ViewerCardModLogsCaughtMessageFragment_BlockedTermFailure
     | ViewerCardModLogsCaughtMessageFragment_BlockedTermFailure[];
+  highNoiseFailure:
+    | null
+    | ViewerCardModLogsCaughtMessageFragment_HighNoiseFailure
+    | ViewerCardModLogsCaughtMessageFragment_HighNoiseFailure[];
+  __typename: string;
+};
+
+/** ℹ️ Not real Twitch type name */
+export type ViewerCardModLogsCaughtMessageFragment_HighNoiseFailure = {
+  category: UnknownValue;
   __typename: string;
 };
 
@@ -61190,6 +61270,26 @@ export type AccessIsSiteAdminQueryData = {
 export type AccessIsSiteAdminQueryResponse = QueryResponse<
   AccessIsSiteAdminQueryData,
   "AccessIsSiteAdminQuery"
+>;
+
+export type AccessIsSocialGiftSubsCampaignEligibleVariables = {
+  args: UserNotificationCampaignInput;
+};
+
+export type AccessIsSocialGiftSubsCampaignEligibleData = {
+  userNotificationCampaigns: {
+    /**
+     * @format uuid
+     * @example ["8fced223-2493-453c-8a8d-6316908c0eeb"]
+     */
+    id: ID;
+    __typename: "NotificationCampaign";
+  }[];
+};
+
+export type AccessIsSocialGiftSubsCampaignEligibleResponse = QueryResponse<
+  AccessIsSocialGiftSubsCampaignEligibleData,
+  "AccessIsSocialGiftSubsCampaignEligible"
 >;
 
 export type AccessIsSocialGiftSubsEligibleData = {
@@ -74486,6 +74586,32 @@ export type CommunityTabWhisperUserResponse = QueryResponse<
   CommunityTabWhisperUserData,
   "CommunityTabWhisperUser"
 >;
+
+export type CompactHeaderVariables = { channelLogin: string };
+
+export type CompactHeaderData = {
+  user: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["23161357"]
+     */
+    id: ID;
+    /** @example ["", "Twitch is where thousands of communities come together for whatever, every day. "] */
+    description: null | string;
+    channel: {
+      /**
+       * @pattern ^[0-9]+$
+       * @example ["26490481"]
+       */
+      id: ID;
+      socialMedias: null | SocialMedia[];
+      __typename: "Channel";
+    };
+    __typename: "User";
+  };
+};
+
+export type CompactHeaderResponse = QueryResponse<CompactHeaderData, "CompactHeader">;
 
 export type ComscoreStreamingQueryVariables = {
   channel: string;
@@ -88890,6 +89016,8 @@ export type HomeTrackQueryData = {
      * @example ["23161357"]
      */
     id: ID;
+    /** @example ["lirik", "twitch", "cdprojektred", "forsen", "tickett_", "st1mgreeen", "lipton_18"] */
+    login: string;
     lastBroadcast: null | {
       /**
        * @pattern ^[0-9]+$
@@ -88921,6 +89049,25 @@ export type HomeTrackQueryData = {
        */
       id: ID;
       __typename: "Stream";
+    };
+    channel: {
+      /**
+       * @pattern ^[0-9]+$
+       * @example ["26490481"]
+       */
+      id: ID;
+      trailer: {
+        video: null | {
+          /**
+           * @pattern ^[0-9]+$
+           * @example ["2323270866"]
+           */
+          id: ID;
+          __typename: "Video";
+        };
+        __typename: "Trailer";
+      };
+      __typename: "Channel";
     };
     __typename: "User";
   };
@@ -92946,6 +93093,76 @@ export type NudgeQueryData = {
 };
 
 export type NudgeQueryResponse = QueryResponse<NudgeQueryData, "NudgeQuery">;
+
+export type OcpTopSlotVariables = {
+  channelLogin: string;
+  includePastVideos: boolean;
+};
+
+export type OcpTopSlotData = {
+  user: null | {
+    /**
+     * @pattern ^[0-9]+$
+     * @example ["23161357"]
+     */
+    id: ID;
+    /** @example ["Twitch", "CD PROJEKT RED", "LIRIK", "forsen", "ayuuexe", "xQc", "RSDragonwilds"] */
+    displayName: string;
+    /** @example ["", "Twitch is where thousands of communities come together for whatever, every day. "] */
+    description: null | string;
+    channel: {
+      /**
+       * @pattern ^[0-9]+$
+       * @example ["26490481"]
+       */
+      id: ID;
+      socialMedias: null | SocialMedia[];
+      schedule: null | {
+        /** @example ["schedule-12826", "schedule-23161357"] */
+        id: ID;
+        nextSegment: null | {
+          /** @example ["eyJzZWdtZW50SUQiOiJiNzU0MDEzZC1iOTRlLTRlNmEtYWFmYi03YmM0NmMzNDEzODciLCJpc29ZZWFyIjoyMDI2LCJpc29XZWVrIjozOH0=", "eyJzZWdtZW50SUQiOiI1ZDhiZjNmYi1mN2I0LTRlYTMtOTZhNC1lZTI2MDBlNDNkNzEiLCJpc29ZZWFyIjoyMDI2LCJpc29XZWVrIjo0NH0="] */
+          id: ID;
+          /**
+           * @format date-time
+           * @example ["2026-09-20T16:00:00Z", "2026-10-28T01:00:00Z"]
+           */
+          startAt: string;
+          __typename: "ScheduleSegment";
+        };
+        __typename: "Schedule";
+      };
+      trailer: {
+        video: null | OcpTopSlotVideo;
+        __typename: "Trailer";
+      };
+      __typename: "Channel";
+    };
+    /**
+     * @aliasFor videos
+     * @directive include(if: $includePastVideos)
+     */
+    archiveVideos?: null | OcpTopSlotVideoConnection;
+    roles: null | {
+      isPartner: boolean;
+      isAffiliate: boolean;
+      isStaff: null | boolean;
+      __typename: "UserRoles";
+    };
+    self: null | {
+      isEditor: boolean;
+      follower: null | {
+        disableNotifications: boolean;
+        notificationSettings: null | FollowEdgeNotificationSettingsFragment;
+        __typename: "FollowerEdge";
+      };
+      __typename: "UserSelfConnection";
+    };
+    __typename: "User";
+  };
+};
+
+export type OcpTopSlotResponse = QueryResponse<OcpTopSlotData, "OcpTopSlot">;
 
 export type OfferEligibilityVariables = { login: string };
 
@@ -103848,32 +104065,6 @@ export type SupportPanelBenefitsSectionUserResponse = QueryResponse<
   "SupportPanelBenefitsSectionUser"
 >;
 
-export type SupportPanelChannelTopEmotesVariables = {
-  channelID: ID;
-  /** @format time */
-  endsAt: string;
-};
-
-export type SupportPanelChannelTopEmotesData = {
-  channel: null | {
-    /**
-     * @pattern ^[0-9]+$
-     * @example ["26490481"]
-     */
-    id: ID;
-    recap:
-      | null
-      | SupportPanelChannelTopEmotes_ChannelRecap
-      | SupportPanelChannelTopEmotes_ChannelRecap[];
-    __typename: "Channel";
-  };
-};
-
-export type SupportPanelChannelTopEmotesResponse = QueryResponse<
-  SupportPanelChannelTopEmotesData,
-  "SupportPanelChannelTopEmotes"
->;
-
 export type SupportPanelCheckoutServiceVariables = {
   login: string;
   /** @default  */
@@ -104598,7 +104789,32 @@ export type SupportPanelSubscriptionDetailsData = {
         | SupportPanelSubscriptionDetails_ResubNotification[];
       __typename: "UserSelfConnection";
     };
-    subscriptionProducts: null | SubscriptionProduct[];
+    subscriptionProducts:
+      | null
+      | (SubscriptionProduct & {
+          offers:
+            | null
+            | {
+                /** @example ["amzn1.twitch.commerce.offer.98232214-5c3d-4da1-a9b3-c3333fb3483d", "amzn1.twitch.commerce.offer.3dedec40-a018-4790-0b9f-0f22ec580202"] */
+                id: ID;
+                listing: {
+                  chargeModel: {
+                    internal: null | {
+                      previewPrice: {
+                        /** @example ["33d10886-ace9-466b-9060-e10013aa05a21887", "41679e35-3eaf-4acf-b861-e8941c99650f", "63967dc1-a829-453e-9425-53c0f68313723565"] */
+                        id: ID;
+                        isTaxInclusive: boolean;
+                        __typename: "PriceInfo";
+                      };
+                      __typename: "InternalChargeModel";
+                    };
+                    __typename: "ChargeModel";
+                  };
+                  __typename: "OfferListing";
+                };
+                __typename: "Offer";
+              }[];
+        })[];
     __typename: "User";
   };
 };
@@ -113134,6 +113350,20 @@ export type AssignAgentRoleData = {
 };
 
 export type AssignAgentRoleResponse = QueryResponse<AssignAgentRoleData, "AssignAgentRole">;
+
+export type AssignApprenticeModVariables = { input: EnumOrInput };
+
+export type AssignApprenticeModData = {
+  assignChannelRole:
+    | null
+    | AssignApprenticeMod_AssignChannelRole
+    | AssignApprenticeMod_AssignChannelRole[];
+};
+
+export type AssignApprenticeModResponse = QueryResponse<
+  AssignApprenticeModData,
+  "AssignApprenticeMod"
+>;
 
 export type AssignChannelRoleVariables = { input: EnumOrInput };
 
@@ -122888,6 +123118,7 @@ export type QueryVariablesMap = {
   AccessIsMonetizedQuery: AccessIsMonetizedQueryVariables;
   AccessIsPartnerQuery: AccessIsPartnerQueryVariables;
   AccessIsSiteAdminQuery: AccessIsSiteAdminQueryVariables;
+  AccessIsSocialGiftSubsCampaignEligible: AccessIsSocialGiftSubsCampaignEligibleVariables;
   AccessIsSocialGiftSubsEligible: Record<string, never>;
   AccessIsStreamDelayEnabledQuery: AccessIsStreamDelayEnabledQueryVariables;
   AccessIsSubscriptionsEnabledQuery: AccessIsSubscriptionsEnabledQueryVariables;
@@ -123285,6 +123516,7 @@ export type QueryVariablesMap = {
   CommunitySupportSettings: CommunitySupportSettingsVariables;
   CommunityTab: CommunityTabVariables;
   CommunityTabWhisperUser: CommunityTabWhisperUserVariables;
+  CompactHeader: CompactHeaderVariables;
   ComscoreStreamingQuery: ComscoreStreamingQueryVariables;
   ConcurrentViewersTimeseriesStats_StreamSummary: ConcurrentViewersTimeseriesStatsStreamSummaryVariables;
   ConfirmCountryOfResidence: Record<string, never>;
@@ -123840,6 +124072,7 @@ export type QueryVariablesMap = {
   NotificationCampaignsQuery: NotificationCampaignsQueryVariables;
   NotMePage_verificationRequest: NotMePageVerificationRequestVariables;
   NudgeQuery: Record<string, never>;
+  OcpTopSlot: OcpTopSlotVariables;
   Offer_Eligibility: OfferEligibilityVariables;
   OfflineBannerOverlay: OfflineBannerOverlayVariables;
   OfflineEmbedVODAndSchedule: OfflineEmbedVODAndScheduleVariables;
@@ -124171,7 +124404,6 @@ export type QueryVariablesMap = {
   SupportPanelBenefitsSectionBadges: SupportPanelBenefitsSectionBadgesVariables;
   SupportPanelBenefitsSectionEmotes: SupportPanelBenefitsSectionEmotesVariables;
   SupportPanelBenefitsSectionUser: SupportPanelBenefitsSectionUserVariables;
-  SupportPanelChannelTopEmotes: SupportPanelChannelTopEmotesVariables;
   SupportPanelCheckoutService: SupportPanelCheckoutServiceVariables;
   SupportPanelCommunituyGifting_UserInfo: SupportPanelCommunituyGiftingUserInfoVariables;
   SupportPanelCommunityGifting_GifterBadgeProgress: SupportPanelCommunityGiftingGifterBadgeProgressVariables;
@@ -124458,6 +124690,7 @@ export type QueryVariablesMap = {
   ArtistAttribution_UpdateEmote: ArtistAttributionUpdateEmoteVariables;
   ArtistAttribution_UpdateGlobalSetting: ArtistAttributionUpdateGlobalSettingVariables;
   AssignAgentRole: AssignAgentRoleVariables;
+  AssignApprenticeMod: AssignApprenticeModVariables;
   AssignChannelRole: AssignChannelRoleVariables;
   AssignEmoteToBitsTier: AssignEmoteToBitsTierVariables;
   AssignEmoteToFollowerSlot: AssignEmoteToFollowerSlotVariables;
@@ -125216,6 +125449,7 @@ export type QueryResponseMap = {
   AccessIsMonetizedQuery: AccessIsMonetizedQueryResponse;
   AccessIsPartnerQuery: AccessIsPartnerQueryResponse;
   AccessIsSiteAdminQuery: AccessIsSiteAdminQueryResponse;
+  AccessIsSocialGiftSubsCampaignEligible: AccessIsSocialGiftSubsCampaignEligibleResponse;
   AccessIsSocialGiftSubsEligible: AccessIsSocialGiftSubsEligibleResponse;
   AccessIsStreamDelayEnabledQuery: AccessIsStreamDelayEnabledQueryResponse;
   AccessIsSubscriptionsEnabledQuery: AccessIsSubscriptionsEnabledQueryResponse;
@@ -125613,6 +125847,7 @@ export type QueryResponseMap = {
   CommunitySupportSettings: CommunitySupportSettingsResponse;
   CommunityTab: CommunityTabResponse;
   CommunityTabWhisperUser: CommunityTabWhisperUserResponse;
+  CompactHeader: CompactHeaderResponse;
   ComscoreStreamingQuery: ComscoreStreamingQueryResponse;
   ConcurrentViewersTimeseriesStats_StreamSummary: ConcurrentViewersTimeseriesStatsStreamSummaryResponse;
   ConfirmCountryOfResidence: ConfirmCountryOfResidenceResponse;
@@ -126168,6 +126403,7 @@ export type QueryResponseMap = {
   NotificationCampaignsQuery: NotificationCampaignsQueryResponse;
   NotMePage_verificationRequest: NotMePageVerificationRequestResponse;
   NudgeQuery: NudgeQueryResponse;
+  OcpTopSlot: OcpTopSlotResponse;
   Offer_Eligibility: OfferEligibilityResponse;
   OfflineBannerOverlay: OfflineBannerOverlayResponse;
   OfflineEmbedVODAndSchedule: OfflineEmbedVODAndScheduleResponse;
@@ -126499,7 +126735,6 @@ export type QueryResponseMap = {
   SupportPanelBenefitsSectionBadges: SupportPanelBenefitsSectionBadgesResponse;
   SupportPanelBenefitsSectionEmotes: SupportPanelBenefitsSectionEmotesResponse;
   SupportPanelBenefitsSectionUser: SupportPanelBenefitsSectionUserResponse;
-  SupportPanelChannelTopEmotes: SupportPanelChannelTopEmotesResponse;
   SupportPanelCheckoutService: SupportPanelCheckoutServiceResponse;
   SupportPanelCommunituyGifting_UserInfo: SupportPanelCommunituyGiftingUserInfoResponse;
   SupportPanelCommunityGifting_GifterBadgeProgress: SupportPanelCommunityGiftingGifterBadgeProgressResponse;
@@ -126786,6 +127021,7 @@ export type QueryResponseMap = {
   ArtistAttribution_UpdateEmote: ArtistAttributionUpdateEmoteResponse;
   ArtistAttribution_UpdateGlobalSetting: ArtistAttributionUpdateGlobalSettingResponse;
   AssignAgentRole: AssignAgentRoleResponse;
+  AssignApprenticeMod: AssignApprenticeModResponse;
   AssignChannelRole: AssignChannelRoleResponse;
   AssignEmoteToBitsTier: AssignEmoteToBitsTierResponse;
   AssignEmoteToFollowerSlot: AssignEmoteToFollowerSlotResponse;
