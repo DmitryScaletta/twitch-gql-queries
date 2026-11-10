@@ -4639,14 +4639,6 @@ export type B2BCheckoutQuery_BusinessContactInfo = {
 };
 
 /** ℹ️ Not real Twitch type name */
-export type B2BCheckoutQuery_EligiblePaymentMethods = {
-  /** ⚠️ Low confidence about: nullable */
-  name: null | string;
-  availabilityStatus: UnknownValue;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
 export type B2BCheckoutQuery_Fields = {
   key: UnknownValue;
   value: UnknownValue;
@@ -6592,36 +6584,31 @@ export type BuildACommunityQuest = {
 export type BulkApproveUnbanRequests_BulkApproveUnbanRequest = {
   unbanRequests:
     | null
-    | BulkApproveUnbanRequests_UnbanRequests
-    | BulkApproveUnbanRequests_UnbanRequests[];
+    | (null | {
+        id: ID;
+        status: UnknownValue;
+        __typename: "UnbanRequest";
+      })[];
   error: null | {
     code: UnknownValue;
     __typename: "UnbanRequestError";
   };
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type BulkApproveUnbanRequests_UnbanRequests = {
-  id: ID;
-  status: UnknownValue;
   __typename: string;
 };
 
 /** ℹ️ Not real Twitch type name */
 export type BulkDenyUnbanRequests_BulkDenyUnbanRequest = {
-  unbanRequests: null | BulkDenyUnbanRequests_UnbanRequests | BulkDenyUnbanRequests_UnbanRequests[];
+  unbanRequests:
+    | null
+    | (null | {
+        id: ID;
+        status: UnknownValue;
+        __typename: "UnbanRequest";
+      })[];
   error: null | {
     code: UnknownValue;
     __typename: "UnbanRequestError";
   };
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type BulkDenyUnbanRequests_UnbanRequests = {
-  id: ID;
-  status: UnknownValue;
   __typename: string;
 };
 
@@ -8159,12 +8146,6 @@ export type ChannelDescription = {
     __typename: "VideoConnection";
   };
   __typename: "User";
-};
-
-/** ℹ️ Not real Twitch type name */
-export type ChannelDropsCampaigns_ProgressCriteriaChannels = {
-  id: ID;
-  __typename: string;
 };
 
 export type ChannelEmoteUsage = {
@@ -12310,15 +12291,18 @@ export type ClipsCreatedTimeseriesStatsStreamSummary_ClipsCreated = {
 
 /** ℹ️ Not real Twitch type name */
 export type ClipsDeleteClips_DeleteClips = {
-  clips: null | ClipsDeleteClips_DeleteClipsClips | ClipsDeleteClips_DeleteClipsClips[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type ClipsDeleteClips_DeleteClipsClips = {
-  id: ID;
-  /** ⚠️ Low confidence about: nullable */
-  slug: null | string;
+  clips:
+    | null
+    | (null | {
+        /**
+         * @pattern ^[0-9]+$
+         * @example ["3942697259"]
+         */
+        id: ID;
+        /** @example ["EphemeralEncouragingBulgogiPraiseIt-98gnj_-unqEO0uvs", "CredulousBlightedSquirrelOSkomodo-GdY_nETXjEzIz_gm"] */
+        slug: string;
+        __typename: "Clip";
+      })[];
   __typename: string;
 };
 
@@ -17135,8 +17119,39 @@ export type CreatorMessageFragment = {
   lastSeenAt: null | string;
   clips:
     | null
-    | CreatorMessageFragment_CreatorMessageClips
-    | CreatorMessageFragment_CreatorMessageClips[];
+    | (null | {
+        /**
+         * @pattern ^[0-9]+$
+         * @example ["3942697259"]
+         */
+        id: ID;
+        /** @example ["EphemeralEncouragingBulgogiPraiseIt-98gnj_-unqEO0uvs", "CredulousBlightedSquirrelOSkomodo-GdY_nETXjEzIz_gm"] */
+        slug: string;
+        /** @example ["xqc makes the wrong choice", "wow"] */
+        title: string;
+        /**
+         * @format uint32
+         * @example [957063, 957456, 899934, 944919, 773854]
+         */
+        viewCount: number;
+        assets: ClipAssetFragment[];
+        /**
+         * @format uri
+         * @example ["https://www.twitch.tv/xqc/clip/DeliciousDelightfulPicklesWOOP", "https://www.twitch.tv/xqc/clip/NimbleProductiveAsparagusHeyGuys-s77ZvN10Yr-O2sfo"]
+         */
+        url: string;
+        curator: null | {
+          /**
+           * @pattern ^[0-9]+$
+           * @example ["23161357"]
+           */
+          id: ID;
+          /** @example ["Twitch", "CD PROJEKT RED", "LIRIK", "forsen", "ayuuexe", "xQc", "RSDragonwilds"] */
+          displayName: string;
+          __typename: "User";
+        };
+        __typename: "Clip";
+      })[];
   actions:
     | null
     | CreatorMessageFragment_CreatorMessageActions
@@ -17155,37 +17170,6 @@ export type CreatorMessageFragment_CreatorMessageActions = {
    */
   claimedAt: null | string;
   value: UnknownValue;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type CreatorMessageFragment_CreatorMessageClips = {
-  id: ID;
-  /** ⚠️ Low confidence about: nullable */
-  slug: null | string;
-  /** ⚠️ Low confidence about: nullable */
-  title: null | string;
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format uint32
-   */
-  viewCount: null | number;
-  assets: null | ClipAssetFragment;
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format uri
-   */
-  url: null | string;
-  curator: null | {
-    /**
-     * @pattern ^[0-9]+$
-     * @example ["23161357"]
-     */
-    id: ID;
-    /** @example ["Twitch", "CD PROJEKT RED", "LIRIK", "forsen", "ayuuexe", "xQc", "RSDragonwilds"] */
-    displayName: string;
-    __typename: "User";
-  };
   __typename: string;
 };
 
@@ -17391,40 +17375,40 @@ export type CreatorSentMessageFragment = {
   viewCount: null | number;
   clips:
     | null
-    | CreatorSentMessageFragment_CreatorSentMessageClips
-    | CreatorSentMessageFragment_CreatorSentMessageClips[];
+    | (null | {
+        /**
+         * @pattern ^[0-9]+$
+         * @example ["3942697259"]
+         */
+        id: ID;
+        /** @example ["EphemeralEncouragingBulgogiPraiseIt-98gnj_-unqEO0uvs", "CredulousBlightedSquirrelOSkomodo-GdY_nETXjEzIz_gm"] */
+        slug: string;
+        /** @example ["xqc makes the wrong choice", "wow"] */
+        title: string;
+        /**
+         * @format uint32
+         * @example [957063, 957456, 899934, 944919, 773854]
+         */
+        viewCount: number;
+        assets: ClipAssetFragment[];
+        /**
+         * @format uri
+         * @example ["https://www.twitch.tv/xqc/clip/DeliciousDelightfulPicklesWOOP", "https://www.twitch.tv/xqc/clip/NimbleProductiveAsparagusHeyGuys-s77ZvN10Yr-O2sfo"]
+         */
+        url: string;
+        curator: null | {
+          /**
+           * @pattern ^[0-9]+$
+           * @example ["23161357"]
+           */
+          id: ID;
+          /** @example ["Twitch", "CD PROJEKT RED", "LIRIK", "forsen", "ayuuexe", "xQc", "RSDragonwilds"] */
+          displayName: string;
+          __typename: "User";
+        };
+        __typename: "Clip";
+      })[];
   __typename: "CreatorSentMessage";
-};
-
-/** ℹ️ Not real Twitch type name */
-export type CreatorSentMessageFragment_CreatorSentMessageClips = {
-  id: ID;
-  /** ⚠️ Low confidence about: nullable */
-  slug: null | string;
-  /** ⚠️ Low confidence about: nullable */
-  title: null | string;
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format uint32
-   */
-  viewCount: null | number;
-  assets: null | ClipAssetFragment;
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format uri
-   */
-  url: null | string;
-  curator: null | {
-    /**
-     * @pattern ^[0-9]+$
-     * @example ["23161357"]
-     */
-    id: ID;
-    /** @example ["Twitch", "CD PROJEKT RED", "LIRIK", "forsen", "ayuuexe", "xQc", "RSDragonwilds"] */
-    displayName: string;
-    __typename: "User";
-  };
-  __typename: string;
 };
 
 /** ℹ️ Not real Twitch type name */
@@ -21233,12 +21217,6 @@ export type DropChannelCampaignsProgress_Pool = {
 };
 
 /** ℹ️ Not real Twitch type name */
-export type DropChannelCampaignsProgress_ProgressCriteriaChannels = {
-  id: ID;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
 export type DropChannelCampaignsProgress_RewardGroupsSelf = {
   status: UnknownValue;
   currentMinutesWatched: UnknownValue;
@@ -21804,16 +21782,6 @@ export type EditBroadcastContextQuery_ChannelRestriction = {
 /** ℹ️ Not real Twitch type name */
 export type EditBroadcastContextQuery_ContentClassificationLabelBroadcasterPolicyProperties = {
   contentClassificationLabelsAllowed: UnknownValue;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type EditBroadcastContextQuery_CuratedTags = {
-  id: ID;
-  /** ⚠️ Low confidence about: nullable */
-  slug: null | string;
-  /** ⚠️ Low confidence about: nullable */
-  displayName: null | string;
   __typename: string;
 };
 
@@ -23573,8 +23541,18 @@ export type ExtensionDiscoveryManifest = {
   description: null | string;
   games:
     | null
-    | ExtensionDiscoveryManifest_DiscoveryManifestGames
-    | ExtensionDiscoveryManifest_DiscoveryManifestGames[];
+    | (null | {
+        /**
+         * @pattern ^[0-9]+$
+         * @example ["509672"]
+         */
+        id: ID;
+        /** @example ["IRL", "Cyberpunk 2077", "Just Chatting", "Special Events", "League of Legends", "You Know The Drill", "RuneScape: Dragonwilds"] */
+        name: string;
+        /** @example ["IRL", "Cyberpunk 2077", "Just Chatting", "Special Events", "Gwent: The Witcher Card Game", "Grand Theft Auto V", "DayZ"] */
+        displayName: string;
+        __typename: "Game";
+      })[];
   iconURLs: null | {
     /** @example ["https://extensions-discovery-images.twitch.tv/9zqhb3hba48m0c382uno7k2t74isfi/1.1.0/discoveryfbbf81b5-734d-4c7f-9f3a-ee0ac69d0e6e", "https://extensions-discovery-images.twitch.tv/nstuq90nghenyqwqme61jgvmtp253a/1.0.0/discovery26490c9b-90b5-4a2b-9cb8-1739935e2113"] */
     discoverySplash: string;
@@ -23612,16 +23590,6 @@ export type ExtensionDiscoveryManifest_DiscoveryManifestCategories = {
   id: ID;
   /** ⚠️ Low confidence about: nullable */
   name: null | string;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type ExtensionDiscoveryManifest_DiscoveryManifestGames = {
-  id: ID;
-  /** ⚠️ Low confidence about: nullable */
-  name: null | string;
-  /** ⚠️ Low confidence about: nullable */
-  displayName: null | string;
   __typename: string;
 };
 
@@ -23980,8 +23948,18 @@ export type ExtensionManifest = {
     description: null | string;
     games:
       | null
-      | ExtensionManifest_DiscoveryManifestGames
-      | ExtensionManifest_DiscoveryManifestGames[];
+      | (null | {
+          /**
+           * @pattern ^[0-9]+$
+           * @example ["509672"]
+           */
+          id: ID;
+          /** @example ["IRL", "Cyberpunk 2077", "Just Chatting", "Special Events", "League of Legends", "You Know The Drill", "RuneScape: Dragonwilds"] */
+          name: string;
+          /** @example ["IRL", "Cyberpunk 2077", "Just Chatting", "Special Events", "Gwent: The Witcher Card Game", "Grand Theft Auto V", "DayZ"] */
+          displayName: string;
+          __typename: "Game";
+        })[];
     iconURLs: null | {
       /** @example ["https://extensions-discovery-images.twitch.tv/9zqhb3hba48m0c382uno7k2t74isfi/1.1.0/discoveryfbbf81b5-734d-4c7f-9f3a-ee0ac69d0e6e", "https://extensions-discovery-images.twitch.tv/nstuq90nghenyqwqme61jgvmtp253a/1.0.0/discovery26490c9b-90b5-4a2b-9cb8-1739935e2113"] */
       discoverySplash: string;
@@ -24078,16 +24056,6 @@ export type ExtensionManifest_DiscoveryManifestCategories = {
   id: ID;
   /** ⚠️ Low confidence about: nullable */
   name: null | string;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type ExtensionManifest_DiscoveryManifestGames = {
-  id: ID;
-  /** ⚠️ Low confidence about: nullable */
-  name: null | string;
-  /** ⚠️ Low confidence about: nullable */
-  displayName: null | string;
   __typename: string;
 };
 
@@ -32233,85 +32201,70 @@ export type MWebBitsBuyCardOffers_BitsProducts = {
   promo: null | MWebBitsBuyCardOffers_Promo | MWebBitsBuyCardOffers_Promo[];
   offers:
     | null
-    | MWebBitsBuyCardOffers_BitsProductsOffers
-    | MWebBitsBuyCardOffers_BitsProductsOffers[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type MWebBitsBuyCardOffers_BitsProductsOffers = {
-  id: ID;
-  eligibility:
-    | null
-    | MWebBitsBuyCardOffers_BitsProductsOffersEligibility
-    | MWebBitsBuyCardOffers_BitsProductsOffersEligibility[];
-  platform: UnknownValue;
-  listing:
-    | null
-    | MWebBitsBuyCardOffers_BitsProductsOffersListing
-    | MWebBitsBuyCardOffers_BitsProductsOffersListing[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type MWebBitsBuyCardOffers_BitsProductsOffersEligibility = {
-  /** ⚠️ Low confidence about: nullable */
-  isEligible: null | boolean;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type MWebBitsBuyCardOffers_BitsProductsOffersListing = {
-  chargeModel: null | {
-    internal: null | {
-      previewPrice: {
-        /** @example ["33d10886-ace9-466b-9060-e10013aa05a21887", "41679e35-3eaf-4acf-b861-e8941c99650f", "63967dc1-a829-453e-9425-53c0f68313723565"] */
+    | (null | {
+        /** @example ["amzn1.twitch.commerce.offer.98232214-5c3d-4da1-a9b3-c3333fb3483d", "amzn1.twitch.commerce.offer.3dedec40-a018-4790-0b9f-0f22ec580202"] */
         id: ID;
-        /** @example ["EUR", "USD"] */
-        currency: CurrencyCode;
-        /**
-         * @format int32
-         * @example [2]
-         */
-        exponent: number;
-        isTaxInclusive: boolean;
-        productPricing:
-          | null
-          | {
-              price: UnknownValue;
-              tax: UnknownValue;
-              /**
-               * ⚠️ Low confidence about: nullable
-               * @format uint32
-               */
-              total: null | number;
-              discount: null | {
+        eligibility: {
+          isEligible: boolean;
+          __typename: "OfferEligibility";
+        };
+        /** @example ["WEB"] */
+        platform: OfferPlatform;
+        listing: {
+          chargeModel: {
+            internal: null | {
+              previewPrice: {
+                /** @example ["33d10886-ace9-466b-9060-e10013aa05a21887", "41679e35-3eaf-4acf-b861-e8941c99650f", "63967dc1-a829-453e-9425-53c0f68313723565"] */
+                id: ID;
+                /** @example ["EUR", "USD"] */
+                currency: CurrencyCode;
                 /**
                  * @format int32
-                 * @example [1887, 3565, 942, 1780, 8920]
+                 * @example [2]
                  */
-                price: number;
-                /**
-                 * @format int32
-                 * @example [0]
-                 */
-                tax: number;
-                /**
-                 * @format uint32
-                 * @example [1887, 3565, 942, 1780, 8920]
-                 */
-                total: number;
-                __typename: "DiscountBreakdown";
+                exponent: number;
+                isTaxInclusive: boolean;
+                productPricing:
+                  | null
+                  | {
+                      price: UnknownValue;
+                      tax: UnknownValue;
+                      /**
+                       * ⚠️ Low confidence about: nullable
+                       * @format uint32
+                       */
+                      total: null | number;
+                      discount: null | {
+                        /**
+                         * @format int32
+                         * @example [1887, 3565, 942, 1780, 8920]
+                         */
+                        price: number;
+                        /**
+                         * @format int32
+                         * @example [0]
+                         */
+                        tax: number;
+                        /**
+                         * @format uint32
+                         * @example [1887, 3565, 942, 1780, 8920]
+                         */
+                        total: number;
+                        __typename: "DiscountBreakdown";
+                      };
+                      __typename: "FixedPricing";
+                    }
+                  | { __typename: "RangedPricing" };
+                __typename: "PriceInfo";
               };
-              __typename: "FixedPricing";
-            }
-          | { __typename: "RangedPricing" };
-        __typename: "PriceInfo";
-      };
-      __typename: "InternalChargeModel";
-    };
-    __typename: "ChargeModel";
-  };
+              __typename: "InternalChargeModel";
+            };
+            __typename: "ChargeModel";
+          };
+          __typename: "OfferListing";
+        };
+        __typename: "Offer";
+      })[];
   __typename: string;
 };
 
@@ -35133,77 +35086,6 @@ export type NewAllCampaignsCampaignDetails_RewardGroupsSelf = {
    * @format uint32
    */
   grantCount: null | number;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type NewAllCampaignsPage_DropsCampaigns = {
-  id: ID;
-  /** ⚠️ Low confidence about: nullable */
-  name: null | string;
-  /** ⚠️ Low confidence about: nullable */
-  brandName: null | string;
-  status: UnknownValue;
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format date-time
-   */
-  startAt: null | string;
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format date-time
-   */
-  endAt: null | string;
-  game: null | {
-    /**
-     * @pattern ^[0-9]+$
-     * @example ["509672"]
-     */
-    id: ID;
-    /** @example ["IRL", "Cyberpunk 2077", "Just Chatting", "Special Events", "Gwent: The Witcher Card Game", "Grand Theft Auto V", "DayZ"] */
-    displayName: string;
-    /**
-     * @example ["https://static-cdn.jtvnw.net/ttv-boxart/509672-{width}x{height}.jpg", "https://static-cdn.jtvnw.net/ttv-boxart/65876-{width}x{height}.jpg"]
-     * @gqlArg `width: Int [52, 144, 40, 285, 250, 188, 90, 85, 200, 120]`
-     * @gqlArg `height: Int [72, 192, 56, 380, 300, 250, 55, 120, 113, 160]`
-     */
-    boxArtURL: string;
-    __typename: "Game";
-  };
-  rewardGroups: null | {
-    /**
-     * @format uuid
-     * @example ["01f42e84-b34e-11f1-b729-0a58a9feac02"]
-     */
-    id: ID;
-    progressCriteria: {
-      categories: {
-        /**
-         * @pattern ^[0-9]+$
-         * @example ["509672"]
-         */
-        id: ID;
-        __typename: "Game";
-      }[];
-      __typename: "DropsProgressCriteria";
-    };
-    rewards: {
-      /**
-       * @format uuid
-       * @example ["81070d47-b0ff-11f1-97ab-0a58a9feac02"]
-       */
-      id: ID;
-      /** @example ["DP-12", "SCAR-H", "Gun Camo: Pixel", "Gun Camo: Reptile", "Shadow", "Beacon", "Big first aid kit"] */
-      name: string;
-      /**
-       * @format uri
-       * @example ["https://static-cdn.jtvnw.net/twitch-quests-assets/REWARD/7c9311b4-d6f5-4c09-be75-a4efb26e1a07.png", "https://static-cdn.jtvnw.net/twitch-quests-assets/REWARD/a98046f1-49ab-414a-997f-7c8414c24491.png"]
-       */
-      thumbnailURL: string;
-      __typename: "DropsReward";
-    }[];
-    __typename: "DropsRewardGroup";
-  };
   __typename: string;
 };
 
@@ -38288,16 +38170,6 @@ export type PremiumEventChannelSettings_PremiumEventSettingsEvent = {
   isCostreamingChannelSkinSyncEligible: null | boolean;
   /** ⚠️ Low confidence about: nullable */
   isCostreamingMidrollSyncEligible: null | boolean;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type PremiumEventCuratedTags_CuratedTags = {
-  id: ID;
-  /** ⚠️ Low confidence about: nullable */
-  slug: null | string;
-  /** ⚠️ Low confidence about: nullable */
-  displayName: null | string;
   __typename: string;
 };
 
@@ -44556,18 +44428,18 @@ export type SetCreatorWalletSubscriptionSetting_SetCreatorWalletSubscriptionSett
 };
 
 /** ℹ️ Not real Twitch type name */
-export type SetCuratedTags_CuratedTags = {
-  id: ID;
-  /** ⚠️ Low confidence about: nullable */
-  slug: null | string;
-  /** ⚠️ Low confidence about: nullable */
-  displayName: null | string;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
 export type SetCuratedTags_SetCuratedTags = {
-  curatedTags: null | SetCuratedTags_CuratedTags | SetCuratedTags_CuratedTags[];
+  curatedTags:
+    | null
+    | (null | {
+        /** @example ["stream-o-ween-2026", "nopixel-v"] */
+        id: ID;
+        /** ⚠️ Low confidence about: nullable */
+        slug: null | string;
+        /** @example ["Stream-o-Ween", "Nopixel V", "EPL Katowice", "Valorant Champions 2026", "Shopping", "TwitchCon"] */
+        displayName: string;
+        __typename: "CuratedTag";
+      })[];
   error: null | SetCuratedTags_SetCuratedTagsError | SetCuratedTags_SetCuratedTagsError[];
   __typename: string;
 };
@@ -50036,18 +49908,6 @@ export type StreamSummaryPageGetRecapCandidates_StreamSummaries = {
 };
 
 /** ℹ️ Not real Twitch type name */
-export type StreamSummaryPageGetRecentStreamSessions_StreamSessionsBroadcasts = {
-  id: ID;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type StreamSummaryPageGetStreamSession_StreamSessionsBroadcasts = {
-  id: ID;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
 export type StreamSummaryPageGetStreamSummaryMetrics_ActiveCostreamers = {
   edges: {
     node:
@@ -51376,8 +51236,35 @@ export type SubscriptionBenefit_SubscriptionBenefitUser = {
     | SubscriptionBenefit_SubscriptionBenefitUserSelf[];
   subscriptionProducts:
     | null
-    | SubscriptionBenefit_SubscriptionProducts
-    | SubscriptionBenefit_SubscriptionProducts[];
+    | (null | {
+        /**
+         * @pattern ^[0-9]+$
+         * @example ["358"]
+         */
+        id: ID;
+        /**
+         * @pattern ^[0-9]+$
+         * @example ["1000", "2000", "3000"]
+         */
+        tier: string;
+        emotes: {
+          /** @example ["emotesv2_42ba00f9d5e24c4ca189d642b9e0b0c9", "emotesv2_845e6a3e8a0a40d0afc90081defa16c1"] */
+          id: ID;
+          /** @example ["sumFast", "sumSmash", "sumPls", "sumMiting", "sumX", "sumKomrade", "sumPause"] */
+          token: string;
+          __typename: "Emote";
+        }[];
+        emoteModifiers:
+          | null
+          | {
+              /** @example ["HF", "SG", "TK"] */
+              code: EmoteModifierCode;
+              /** @example ["HORIZONTAL_FLIP", "SUNGLASSES", "THINKING"] */
+              name: EmoteModifierName;
+              __typename: "EmoteModifier";
+            }[];
+        __typename: "SubscriptionProduct";
+      })[];
   roles:
     | null
     | SubscriptionBenefit_SubscriptionBenefitUserRoles
@@ -51401,34 +51288,6 @@ export type SubscriptionBenefit_SubscriptionBenefitUserSelf = {
   cumulativeTenure: null | Tenure;
   /** @aliasFor subscriptionTenure */
   streakTenure: null | Tenure;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type SubscriptionBenefit_SubscriptionProducts = {
-  id: ID;
-  tier: UnknownValue;
-  emotes:
-    | null
-    | SubscriptionBenefit_SubscriptionProductsEmotes
-    | SubscriptionBenefit_SubscriptionProductsEmotes[];
-  emoteModifiers:
-    | null
-    | (null | {
-        /** @example ["HF", "SG", "TK"] */
-        code: EmoteModifierCode;
-        /** @example ["HORIZONTAL_FLIP", "SUNGLASSES", "THINKING"] */
-        name: EmoteModifierName;
-        __typename: "EmoteModifier";
-      })[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type SubscriptionBenefit_SubscriptionProductsEmotes = {
-  id: ID;
-  /** ⚠️ Low confidence about: nullable */
-  token: null | string;
   __typename: string;
 };
 
@@ -58780,14 +58639,14 @@ export type VideoManagerActionsDeleteVideoThumbnail_DeleteVideoThumbnail = {
 export type VideoManagerActionsDeleteVideos_DeleteVideos = {
   videos:
     | null
-    | VideoManagerActionsDeleteVideos_DeleteVideosVideos
-    | VideoManagerActionsDeleteVideos_DeleteVideosVideos[];
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type VideoManagerActionsDeleteVideos_DeleteVideosVideos = {
-  id: ID;
+    | (null | {
+        /**
+         * @pattern ^[0-9]+$
+         * @example ["2323270866"]
+         */
+        id: ID;
+        __typename: "Video";
+      })[];
   __typename: string;
 };
 
@@ -63920,8 +63779,13 @@ export type B2BCheckoutQueryData = {
     self: {
       eligiblePaymentMethods:
         | null
-        | B2BCheckoutQuery_EligiblePaymentMethods
-        | B2BCheckoutQuery_EligiblePaymentMethods[];
+        | (null | {
+            /** @example ["XSOLLA"] */
+            name: EligiblePaymentMethodName;
+            /** @example ["AVAILABLE"] */
+            availabilityStatus: AvailabilityStatus;
+            __typename: "EligiblePaymentMethod";
+          })[];
       eligiblePaymentMethodsPayload: {
         methods: {
           /** @example ["XSOLLA"] */
@@ -67612,8 +67476,14 @@ export type ChannelDropsCampaignsData = {
             };
             channels:
               | null
-              | ChannelDropsCampaigns_ProgressCriteriaChannels
-              | ChannelDropsCampaigns_ProgressCriteriaChannels[];
+              | (null | {
+                  /**
+                   * @pattern ^[0-9]+$
+                   * @example ["26490481"]
+                   */
+                  id: ID;
+                  __typename: "Channel";
+                })[];
             categories: {
               /**
                * @pattern ^[0-9]+$
@@ -79884,8 +79754,14 @@ export type DropChannelCampaignsProgressData = {
         };
         channels:
           | null
-          | DropChannelCampaignsProgress_ProgressCriteriaChannels
-          | DropChannelCampaignsProgress_ProgressCriteriaChannels[];
+          | (null | {
+              /**
+               * @pattern ^[0-9]+$
+               * @example ["26490481"]
+               */
+              id: ID;
+              __typename: "Channel";
+            })[];
         categories: {
           /**
            * @pattern ^[0-9]+$
@@ -80575,8 +80451,15 @@ export type EditBroadcastContextQueryData = {
     /** @directive include(if: $isPremiumEventsEnabled) */
     curatedTags?:
       | null
-      | EditBroadcastContextQuery_CuratedTags
-      | EditBroadcastContextQuery_CuratedTags[];
+      | (null | {
+          /** @example ["stream-o-ween-2026", "nopixel-v"] */
+          id: ID;
+          /** ⚠️ Low confidence about: nullable */
+          slug: null | string;
+          /** @example ["Stream-o-Ween", "Nopixel V", "EPL Katowice", "Valorant Champions 2026", "Shopping", "TwitchCon"] */
+          displayName: string;
+          __typename: "CuratedTag";
+        })[];
     __typename: "User";
   };
 };
@@ -92816,7 +92699,81 @@ export type NewAllCampaignsCampaignDetailsResponse = QueryResponse<
 >;
 
 export type NewAllCampaignsPageData = {
-  dropsCampaigns: null | NewAllCampaignsPage_DropsCampaigns | NewAllCampaignsPage_DropsCampaigns[];
+  dropsCampaigns:
+    | null
+    | (null | {
+        /**
+         * @format uuid
+         * @example ["b444df04-11b1-4bfe-94d1-3545d48a077c"]
+         */
+        id: ID;
+        /** @example ["Release Drops: Week I", "First Partners Collection", "1 Month of Apple TV", "Ted Lasso Badges", "True Damage Chat Badge", "Pokemon Evolutions"] */
+        name: string;
+        /** @example ["", "Pokemon", "Apple"] */
+        brandName: string;
+        status: UnknownValue;
+        /**
+         * @format date-time
+         * @example ["2026-09-18T15:00:00Z", "2026-08-24T17:00:00Z"]
+         */
+        startAt: string;
+        /**
+         * @format date-time
+         * @example ["2026-09-25T14:59:59.999Z", "2026-11-01T07:00:00Z"]
+         */
+        endAt: string;
+        game: null | {
+          /**
+           * @pattern ^[0-9]+$
+           * @example ["509672"]
+           */
+          id: ID;
+          /** @example ["IRL", "Cyberpunk 2077", "Just Chatting", "Special Events", "Gwent: The Witcher Card Game", "Grand Theft Auto V", "DayZ"] */
+          displayName: string;
+          /**
+           * @example ["https://static-cdn.jtvnw.net/ttv-boxart/509672-{width}x{height}.jpg", "https://static-cdn.jtvnw.net/ttv-boxart/65876-{width}x{height}.jpg"]
+           * @gqlArg `width: Int [52, 144, 40, 285, 250, 188, 90, 85, 200, 120]`
+           * @gqlArg `height: Int [72, 192, 56, 380, 300, 250, 55, 120, 113, 160]`
+           */
+          boxArtURL: string;
+          __typename: "Game";
+        };
+        rewardGroups: {
+          /**
+           * @format uuid
+           * @example ["01f42e84-b34e-11f1-b729-0a58a9feac02"]
+           */
+          id: ID;
+          progressCriteria: {
+            categories: {
+              /**
+               * @pattern ^[0-9]+$
+               * @example ["509672"]
+               */
+              id: ID;
+              __typename: "Game";
+            }[];
+            __typename: "DropsProgressCriteria";
+          };
+          rewards: {
+            /**
+             * @format uuid
+             * @example ["81070d47-b0ff-11f1-97ab-0a58a9feac02"]
+             */
+            id: ID;
+            /** @example ["DP-12", "SCAR-H", "Gun Camo: Pixel", "Gun Camo: Reptile", "Shadow", "Beacon", "Big first aid kit"] */
+            name: string;
+            /**
+             * @format uri
+             * @example ["https://static-cdn.jtvnw.net/twitch-quests-assets/REWARD/7c9311b4-d6f5-4c09-be75-a4efb26e1a07.png", "https://static-cdn.jtvnw.net/twitch-quests-assets/REWARD/a98046f1-49ab-414a-997f-7c8414c24491.png"]
+             */
+            thumbnailURL: string;
+            __typename: "DropsReward";
+          }[];
+          __typename: "DropsRewardGroup";
+        }[];
+        __typename: "DropsCampaign";
+      })[];
 };
 
 export type NewAllCampaignsPageResponse = QueryResponse<
@@ -95796,7 +95753,17 @@ export type PremiumEventCuratedTagsData = {
      * @example ["23161357"]
      */
     id: ID;
-    curatedTags: null | PremiumEventCuratedTags_CuratedTags | PremiumEventCuratedTags_CuratedTags[];
+    curatedTags:
+      | null
+      | (null | {
+          /** @example ["stream-o-ween-2026", "nopixel-v"] */
+          id: ID;
+          /** ⚠️ Low confidence about: nullable */
+          slug: null | string;
+          /** @example ["Stream-o-Ween", "Nopixel V", "EPL Katowice", "Valorant Champions 2026", "Shopping", "TwitchCon"] */
+          displayName: string;
+          __typename: "CuratedTag";
+        })[];
     __typename: "User";
   };
 };
@@ -102720,8 +102687,14 @@ export type StreamSummaryPageGetRecentStreamSessionsData = {
           endedAt: null | string;
           broadcasts:
             | null
-            | StreamSummaryPageGetRecentStreamSessions_StreamSessionsBroadcasts
-            | StreamSummaryPageGetRecentStreamSessions_StreamSessionsBroadcasts[];
+            | (null | {
+                /**
+                 * @pattern ^[0-9]+$
+                 * @example ["317528086118"]
+                 */
+                id: null | ID;
+                __typename: "Broadcast";
+              })[];
           __typename: string;
         }[];
     __typename: "User";
@@ -102761,8 +102734,14 @@ export type StreamSummaryPageGetStreamSessionData = {
           endedAt: null | string;
           broadcasts:
             | null
-            | StreamSummaryPageGetStreamSession_StreamSessionsBroadcasts
-            | StreamSummaryPageGetStreamSession_StreamSessionsBroadcasts[];
+            | (null | {
+                /**
+                 * @pattern ^[0-9]+$
+                 * @example ["317528086118"]
+                 */
+                id: null | ID;
+                __typename: "Broadcast";
+              })[];
           __typename: string;
         }[];
     __typename: "User";
