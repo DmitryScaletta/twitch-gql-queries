@@ -794,7 +794,7 @@ export type ContentClipsManagerClip = {
   /** @example ["", "eeAgyb4gAol17uiUTwj3Pg", "U72tR3s8eZsbbSDJl_rXPw", "ex73m3w-qqIlYs3m6L_k1Q", "X5AWQgz7Cer05i0-Lsla3g", "pb7x6sEVqt-Ft5rsWMu30A", "kbG1Iz25XHHgjY45U9Qdvw", "0dxhjlxYvMnAyOl46Y7f_Q"] */
   rawMediaKey: string;
   isCatalogDetected: null | boolean;
-  catalogCheckState: null;
+  catalogCheckState: UnknownValue;
   __typename: "Clip";
 };
 
@@ -1709,7 +1709,7 @@ export type SearchForCollectionFragment = {
   /** @example ["collection-just-chatting-irl-streams", "collection-stream-o-ween"] */
   id: ID;
   /** @aliasFor name */
-  collectionName: null | {
+  collectionName: {
     /** @example ["Just Chatting & IRL", "Stream-o-Ween"] */
     fallbackLocalizedTitle: null | string;
     __typename: "BrowsableCollectionTitle";
@@ -1946,7 +1946,7 @@ export type SearchForQuerySubstitutionFragment = {
     item: null | {
       /** @example ["collection-just-chatting-irl-streams", "collection-stream-o-ween"] */
       id: ID;
-      name: null | {
+      name: {
         /** @example ["Just Chatting & IRL", "Stream-o-Ween"] */
         fallbackLocalizedTitle: null | string;
         __typename: "BrowsableCollectionTitle";
@@ -3746,7 +3746,7 @@ export type SearchResultsPageSearchResultsVariables = {
 
 export type SearchResultsPageSearchResultsData = {
   searchFor: {
-    banners: null;
+    banners: UnknownValue;
     querySubstitution: SearchForQuerySubstitutionFragment;
     channels: null | SearchForChannelsFragment;
     channelsWithTag: SearchForChannelsWithTagFragment;

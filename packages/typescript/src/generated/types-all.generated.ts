@@ -453,7 +453,6 @@ export type ActivityFeedEventDetailItem = {
   title: null | ActivityFeedTokens;
   content: null | ActivityFeedTokens;
   value:
-    | null
     | {
         value: UnknownValue;
         __typename: "ActivityFeedEventDetailItemNumber";
@@ -902,7 +901,7 @@ export type AdScheduleSettings = {
   isAdScheduleEnabled: boolean;
   /** ⚠️ Low confidence about: nullable */
   isAutoSnoozeEnabled: null | boolean;
-  partnershipStatus: null;
+  partnershipStatus: UnknownValue;
   interval: null | AllAdScheduleFields;
   duration: null | AllAdScheduleFields;
   startDelay: null | AllAdScheduleFields;
@@ -1848,14 +1847,12 @@ export type AlertEvent =
        */
       bitsAmount: null | number;
       featureType: UnknownValue;
-      featureData:
-        | null
-        | (BitsSpendFeatureData & {
-            __typename:
-              | "BitsSpendAutomaticPowerUpData"
-              | "BitsSpendCheerData"
-              | "BitsSpendCustomPowerUpData";
-          });
+      featureData: BitsSpendFeatureData & {
+        __typename:
+          | "BitsSpendAutomaticPowerUpData"
+          | "BitsSpendCheerData"
+          | "BitsSpendCustomPowerUpData";
+      };
     }
   | {
       __typename: "ActivityFeedCommunityGiftSubscriptionAlert";
@@ -2204,7 +2201,6 @@ export type AlertEvent =
       /** ⚠️ Low confidence about: nullable */
       description: null | string;
       contributions:
-        | null
         | {
             /**
              * ⚠️ Low confidence about: nullable
@@ -2470,7 +2466,6 @@ export type AlertIntegerComparisonConditionFragment = {
 
 export type AlertMessageContent = {
   fragments:
-    | null
     | {
         /** ⚠️ Low confidence about: nullable */
         text: null | string;
@@ -2580,7 +2575,7 @@ export type AlertVariationFragment = {
      * @example ["https://static-cdn.jtvnw.net/default-alert-asset/v1/video/Follow.webm", "https://static-cdn.jtvnw.net/default-alert-asset/v1/video/FirstTimeSub.webm"]
      */
     url: string;
-    volume: null;
+    volume: UnknownValue;
     /** @example ["VIDEO"] */
     assetType: AlertAssetType;
     /** @example ["video/webm"] */
@@ -4193,7 +4188,7 @@ export type AutoBannerTerms_AutoBanner = {
 };
 
 export type AutoModConfiguration = {
-  overallLevel: null;
+  overallLevel: UnknownValue;
   isEnabled: boolean;
   detailedLevels: {
     /**
@@ -4490,7 +4485,7 @@ export type AutomaticRewardFragment = {
   /** @format date-time */
   cooldownExpiresAt: null | string;
   isInStock: boolean;
-  redemptionsRedeemedCurrentStream: null;
+  redemptionsRedeemedCurrentStream: UnknownValue;
   /**
    * @format uint32
    * @example [0, 80, 10]
@@ -8635,13 +8630,8 @@ export type ChannelPanelsDefaultPanel = {
 export type ChannelPanelsDeletePanel_DeletePanel = {
   panel:
     | {
-        /**
-         * @pattern ^[0-9]+$
-         * @example ["125957370"]
-         */
-        id: ID;
-        /** @example ["DEFAULT"] */
-        type: DefaultPanelType;
+        id: string;
+        type: string;
         __typename: "DefaultPanel";
         /** @example ["JINNYTTY SHOULDER RIDER"] */
         title: null | string;
@@ -8659,13 +8649,8 @@ export type ChannelPanelsDeletePanel_DeletePanel = {
         description: null | string;
       }
     | {
-        /**
-         * @pattern ^[0-9]+$
-         * @example ["125957370"]
-         */
-        id: ID;
-        /** @example ["DEFAULT"] */
-        type: DefaultPanelType;
+        id: string;
+        type: string;
         __typename: "ExtensionPanel";
         /** @example ["extension-panel-1", "extension-panel-2"] */
         slotID: ID;
@@ -8690,13 +8675,8 @@ export type ChannelPanelsExtensionPanel = {
 export type ChannelPanelsOrderPanels_OrderPanels = {
   panels:
     | {
-        /**
-         * @pattern ^[0-9]+$
-         * @example ["125957370"]
-         */
-        id: ID;
-        /** @example ["DEFAULT"] */
-        type: DefaultPanelType;
+        id: string;
+        type: string;
         __typename: "DefaultPanel";
         /** @example ["JINNYTTY SHOULDER RIDER"] */
         title: null | string;
@@ -8714,13 +8694,8 @@ export type ChannelPanelsOrderPanels_OrderPanels = {
         description: null | string;
       }
     | {
-        /**
-         * @pattern ^[0-9]+$
-         * @example ["125957370"]
-         */
-        id: ID;
-        /** @example ["DEFAULT"] */
-        type: DefaultPanelType;
+        id: string;
+        type: string;
         __typename: "ExtensionPanel";
         /** @example ["extension-panel-1", "extension-panel-2"] */
         slotID: ID;
@@ -9702,7 +9677,7 @@ export type CharityPurchasableOfferFragment = CharityOffer & {
   self: {
     eligiblePaymentMethodsPayload: {
       methods: EligiblePaymentMethodFragment[];
-      error: null;
+      error: UnknownValue;
       __typename: "EligiblePaymentMethodsPayload";
     };
     checkoutConfiguration: null | BraintreeCheckoutConfigurationFragment;
@@ -14141,7 +14116,7 @@ export type ContentClipsManagerClip = {
   /** @example ["", "eeAgyb4gAol17uiUTwj3Pg", "U72tR3s8eZsbbSDJl_rXPw", "ex73m3w-qqIlYs3m6L_k1Q", "X5AWQgz7Cer05i0-Lsla3g", "pb7x6sEVqt-Ft5rsWMu30A", "kbG1Iz25XHHgjY45U9Qdvw", "0dxhjlxYvMnAyOl46Y7f_Q"] */
   rawMediaKey: string;
   isCatalogDetected: null | boolean;
-  catalogCheckState: null;
+  catalogCheckState: UnknownValue;
   __typename: "Clip";
 };
 
@@ -15403,13 +15378,8 @@ export type CreatePanelPayload = {
   panel:
     | null
     | {
-        /**
-         * @pattern ^[0-9]+$
-         * @example ["125957370"]
-         */
-        id: ID;
-        /** @example ["DEFAULT"] */
-        type: DefaultPanelType;
+        id: string;
+        type: string;
         __typename: "DefaultPanel";
         /** @example ["JINNYTTY SHOULDER RIDER"] */
         title: null | string;
@@ -15428,13 +15398,8 @@ export type CreatePanelPayload = {
         altText: null | string;
       }
     | {
-        /**
-         * @pattern ^[0-9]+$
-         * @example ["125957370"]
-         */
-        id: ID;
-        /** @example ["DEFAULT"] */
-        type: DefaultPanelType;
+        id: string;
+        type: string;
         __typename: "ExtensionPanel";
         /** @example ["extension-panel-1", "extension-panel-2"] */
         slotID: ID;
@@ -16607,17 +16572,16 @@ export type CreatorGoalType = "ANY";
 
 export type CreatorHomeCardActionFragment = {
   event:
-    | null
     | {
         /**
          * @format uri
-         * @example ["https://www.twitch.tv/drops/campaigns", "https://help.twitch.tv/s/article/how-to-use-automod", "https://www.twitch.tv/gassymexican"]
+         * @example ["https://www.twitch.tv/gassymexican", "https://help.twitch.tv/s/article/how-to-use-automod", "https://www.twitch.tv/drops/campaigns"]
          */
         url: string;
         __typename: "CreatorHomeCardUrlEvent";
       }
     | {
-        /** @example ["feedback", "goals", "add-social-media-link", "choose-accent-color", "raid-browser", "stream-schedule"] */
+        /** @example ["goals", "add-social-media-link", "choose-accent-color", "raid-browser", "stream-schedule", "feedback"] */
         modalName: string;
         __typename: "CreatorHomeCardModalEvent";
       }
@@ -16626,7 +16590,7 @@ export type CreatorHomeCardActionFragment = {
         pageType: PageType;
         /** @example ["settings/moderation/automod", "settings/stream?open_modal=viewer_exports#clips-settings", "settings/channel/brand", "extensions"] */
         subpath: string;
-        channel: null | {
+        channel: {
           /**
            * @pattern ^[0-9]+$
            * @example ["26490481"]
@@ -16647,7 +16611,6 @@ export type CreatorHomeCardActionFragment = {
         /** @example ["submit-chat-rules", "save-bio"] */
         identifier: string;
         value:
-          | null
           | {
               /** @aliasFor value */
               stringValue: UnknownValue;
@@ -16664,7 +16627,6 @@ export type CreatorHomeCardActionFragment = {
         __typename: "CreatorHomeCardSubmitEvent";
       };
   trigger:
-    | null
     | {
         /** @example ["PRIMARY_BUTTON", "FOOTER"] */
         fieldType: FieldType;
@@ -16685,15 +16647,15 @@ export type CreatorHomeCardActionFragment = {
   __typename: "CreatorHomeCardAction";
 };
 
-/** ℹ️ Not real Twitch type name */
-export type CreatorHomeCardColorTheme = "BLUE" | "DEFAULT";
-
 export type CreatorHomeCardDecoratorsFragment = {
-  /** @example ["", "https://static-cdn.jtvnw.net/dartapi-assets/Creator Home - Drops.png", "https://static-cdn.jtvnw.net/twitch-creator-home-prod/subscriptions-insight.svg"] */
+  /** @example ["", "https://static-cdn.jtvnw.net/twitch-creator-home-prod/22_Q4_115_CreatorHome_GassyMexicanTipCard4_204x272.png", "https://static-cdn.jtvnw.net/twitch-creator-home-prod/goalstar.svg"] */
   imageURL: string;
-  /** @format uri */
+  /**
+   * @format uri
+   * @example ["https://static-cdn.jtvnw.net/twitch-creator-home-prod/RocketSmall.png", "https://static-cdn.jtvnw.net/twitch-creator-home-prod/Extensions_Dark.png"]
+   */
   imageDarkThemeURL: null | string;
-  /** @example [""] */
+  /** @example ["", "https://static-cdn.jtvnw.net/twitch-creator-home-prod/ch_features_viewer_exports.png"] */
   backgroundImageURL: string;
   vod:
     | null
@@ -16722,55 +16684,35 @@ export type CreatorHomeCardDecoratorsFragment_CreatorHomeCardDecoratorsVod = {
 /** ℹ️ Not real Twitch type name */
 export type CreatorHomeCardDismissalMetadataType = "CARD_ID" | "CATEGORY_NAME" | "CHANNEL_ID";
 
-/** ℹ️ Not real Twitch type name */
-export type CreatorHomeCardTemplate =
-  | "ANALYTICS_IMPACT"
-  | "ANALYTICS_IMPACT_EMOTE"
-  | "ANALYTICS_SUMMARY_NUMBER_CHANGE"
-  | "ANNOUNCEMENT_IMAGE_LINK_OUT"
-  | "COMMUNITY_IMAGE"
-  | "COMMUNITY_PAIR_IMAGE_AND_TEXT"
-  | "COMMUNITY_TIP"
-  | "EXTERNAL_VIDEO_AND_DESCRIPTION_16_BY_9"
-  | "FEATURE_IMAGE_LINK_OUT"
-  | "FEATURE_LINK_OUT_IMAGE_BELOW_TEXT"
-  | "FEATURE_WITH_CTA"
-  | "FEATURE_WITH_TEXT_AREA"
-  | "HERO_DEFAULT"
-  | "IMAGE_AND_DESCRIPTION"
-  | "INSIGHTS_IMAGE"
-  | "INSIGHTS_TIP"
-  | "NONE"
-  | "TARGET_PROGRESS"
-  | "TIP_CARD"
-  | "VOD_AND_DESCRIPTION_16_BY_9";
-
 export type CreatorHomeCardsBaseFragment = {
-  /** @example ["HERO_GENERIC_GET_BACK_TO_STREAMING_WITH_SCHEDULE", "spotlight_halloween_drops_2026_0d40363e-6245-4b73-a339-295a5976124a"] */
   identifier: string;
-  /** @example ["NONE", "IMAGE_AND_DESCRIPTION", "TARGET_PROGRESS", "TIP_CARD"] */
-  template: CreatorHomeCardTemplate;
+  template: string;
   decorators: null | CreatorHomeCardDecoratorsFragment;
   actions: null | CreatorHomeCardActionFragment[];
   tokenizedTextSections: null | CreatorHomeTokenizedTextFragment[];
-  pollingOptions:
-    | null
-    | CreatorHomeCardsBaseFragment_PollingOptions
-    | CreatorHomeCardsBaseFragment_PollingOptions[];
+  pollingOptions: null | {
+    frequency: UnknownValue;
+    /**
+     * ⚠️ Low confidence about: nullable
+     * @format uint32
+     */
+    timeout: null | number;
+    __typename: string;
+  };
   dismissalOptions: null | {
-    /** @example ["spotlight_halloween_drops_2026_0d40363e-6245-4b73-a339-295a5976124a"] */
+    /** @example ["INSIGHTS_AMBASSADOR_TIP_GASSY_MEXICAN_STREAMING_SUCCESS", "FEATURES_CHAT_RULES"] */
     identifier: string;
     /** @example ["CARD_ID"] */
     type: CreatorHomeCardDismissalMetadataType;
-    featureState: null | string;
+    /** @example ["NOT_STARTED", "COMPLETED"] */
+    featureState: null | FeatureState;
     __typename: "CreatorHomeCardDismissalMetadata";
   };
   testPageMetadata: null | {
     isCardVariant: boolean;
     __typename: "CreatorHomeTestPageMetadata";
   };
-  /** @example ["DEFAULT", "BLUE"] */
-  colorTheme: CreatorHomeCardColorTheme;
+  colorTheme: string;
   customContent:
     | null
     | (CreatorHomeCustomContentFragment & {
@@ -16790,6 +16732,7 @@ export type CreatorHomeCardsBaseFragment = {
   trackingMetadata: {
     /** @example ["NONE", "MARKETING"] */
     itemRole: ItemRole;
+    /** @example ["not_started", "completed"] */
     variantName: null | string;
     __typename: "CreatorHomeTrackingMetadata";
   };
@@ -16802,17 +16745,6 @@ export type CreatorHomeCardsBaseFragment = {
     | "StatCreatorHomeCard"
     | "StreamSummaryCreatorHomeCard"
     | "ViewerProgressCreatorHomeCard";
-};
-
-/** ℹ️ Not real Twitch type name */
-export type CreatorHomeCardsBaseFragment_PollingOptions = {
-  frequency: UnknownValue;
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format uint32
-   */
-  timeout: null | number;
-  __typename: string;
 };
 
 export type CreatorHomeCardsFragment =
@@ -16878,7 +16810,7 @@ export type CreatorHomeCustomContentFragment =
       input: null | {
         /** @example ["TEXT_AREA"] */
         hintTextField: FieldType;
-        initialValue: null;
+        initialValue: UnknownValue;
         /** @example ["DEFAULT"] */
         state: CreatorHomeCustomContentInputFieldTextAreaState;
         /** @example ["MULTI_LINE"] */
@@ -16907,7 +16839,7 @@ export type CreatorHomeCustomContentFragment =
       __typename: "CreatorHomeCustomContentSocialMedia";
     }
   | {
-      requirements: null | CreatorHomeTargetProgressRequirementFragment[];
+      requirements: CreatorHomeTargetProgressRequirementFragment[];
       __typename: "CreatorHomeCustomContentTargetProgress";
     };
 
@@ -17009,7 +16941,7 @@ export type CreatorHomeTargetProgressRequirementFragment = {
   isCompleted: boolean;
   /** @example ["GREEN", "BLUE", "MAGENTA", "YELLOW"] */
   progressColor: ProgressColor;
-  icon: null | {
+  icon: {
     /** @example ["Target", "FollowHollow", "DateStart", "GlyphLength", "GlyphViews"] */
     name: string;
     /** @example ["RED", "DEFAULT"] */
@@ -17030,11 +16962,12 @@ export type CreatorHomeTargetProgressRequirementFragment = {
 };
 
 export type CreatorHomeTokenizedTextFragment = {
-  /** @example ["PRIMARY_BUTTON", "CONTENT", "TITLE", "FOOTER", "SUBTITLE", "CONTENT_LIST_ITEMS", "HEADER"] */
+  /** @example ["PRIMARY_BUTTON", "TITLE", "CONTENT", "BOTTOM_PILL", "TOP_PILL", "TEXT_AREA", "SUBTITLE", "DISMISSED_CARD_CONTENT", "FOOTER", "CONTENT_LIST_ITEMS", "HEADER"] */
   fieldType: FieldType;
   content: null | TokenizedTextFragment;
   style: null | {
-    pillStyle: string;
+    /** @example ["SUBTLE", "SUCCESS"] */
+    pillStyle: PillStyle;
     __typename: "CreatorHomeFieldStyle";
   };
   __typename: "CreatorHomeTokenizedText";
@@ -17499,7 +17432,6 @@ export type CrowdControlAlert = {
   /** @aliasFor type */
   crowdControlType: UnknownValue;
   data:
-    | null
     | {
         thirdPartyHandle: UnknownValue;
         /** ⚠️ Low confidence about: nullable */
@@ -18895,9 +18827,8 @@ export type DeclineSponsorshipCampaignInvitation_DeclineSponsorshipCampaignInvit
 
 export type DecoratedTokenFragment = {
   value:
-    | null
     | {
-        /** @example ["AMBASSADOR TIPS", "You have met "] */
+        /** @example ["AMBASSADOR TIPS", "/GassyMexican"] */
         text: string;
         __typename: "TokenizedTextToken";
       }
@@ -18999,7 +18930,7 @@ export type DecoratedTokenFragment = {
         format: UnknownValue;
         __typename: "TokenizedDateToken";
       };
-  decorator: null | {
+  decorator: {
     hasEmphasis: boolean;
     hasHighlight: boolean;
     /** @example [""] */
@@ -20408,7 +20339,7 @@ export type DirectoryCollectionContentCollection = {
 export type DirectoryCollectionHeaderCollection = {
   /** @example ["collection-just-chatting-irl-streams", "collection-stream-o-ween"] */
   id: ID;
-  name: null | DirectoryCollectionTitle;
+  name: DirectoryCollectionTitle;
   description: DirectoryCollectionTitle;
   __typename: "BrowsableCollection";
 };
@@ -25402,17 +25333,9 @@ export type FeatureClipsUpdateClips_UpdateFeaturedClipsResults = {
   __typename: string;
 };
 
-/** ℹ️ Not real Twitch type name */
-export type FeatureCompletionState =
-  | "COMPLETED"
-  | "IN_PROGRESS"
-  | "NOT_STARTED"
-  | "OPT_OUT"
-  | "UNKNOWN";
-
 export type FeatureCreatorHomeCardFragment = {
   /** @example ["NOT_STARTED", "COMPLETED"] */
-  featureCompletionState: FeatureCompletionState;
+  featureCompletionState: FeatureState;
   emoteAssets: null | SubEmoteFragment;
   badgeAsset:
     | null
@@ -25496,8 +25419,8 @@ export type FeatureCreatorHomeCardFragment = {
        * @example [0]
        */
       sexualityLevel: number;
-      nWordLevel: null;
-      whiteNationalistLevel: null;
+      nWordLevel: UnknownValue;
+      whiteNationalistLevel: UnknownValue;
       /**
        * @format int32
        * @example [2]
@@ -25505,7 +25428,7 @@ export type FeatureCreatorHomeCardFragment = {
       smartDetectionLevel: number;
       __typename: "DetailedAutoModConfiguration";
     };
-    overallLevel: null;
+    overallLevel: UnknownValue;
     __typename: "AutoModConfiguration";
   };
   chatSettingsAsset:
@@ -25578,6 +25501,9 @@ export type FeatureOptInStateInput = {
   /** @example ["23161357"] */
   userID: ID;
 };
+
+/** ℹ️ Not real Twitch type name */
+export type FeatureState = "COMPLETED" | "IN_PROGRESS" | "NOT_STARTED" | "OPT_OUT" | "UNKNOWN";
 
 /** ℹ️ Not real Twitch type name */
 export type FeatureType = "CHEER";
@@ -26937,7 +26863,7 @@ export type FreeformTagItemFragment = {
 export type FreeformTagSort = "CONVERSIONS" | "IMPRESSIONS";
 
 export type GDPRVendorStatus = {
-  status: null | TcfVendorStatus | NonTCFVendorStatus;
+  status: TcfVendorStatus | NonTCFVendorStatus;
   __typename: "GDPRVendorConsent";
 };
 
@@ -28109,7 +28035,7 @@ export type GetRequestToJoinQueue_RequestToJoinQueue = {
      * @example ["23161357"]
      */
     id: ID;
-    availability: null;
+    availability: UnknownValue;
     __typename: "User";
   };
   status: UnknownValue;
@@ -29652,7 +29578,7 @@ export type HearthstoneDetails_OpponentHero = {
 };
 
 export type HeroNoStreamSummaryCardFragment = {
-  display: null;
+  display: UnknownValue;
   error:
     | null
     | HeroNoStreamSummaryCardFragment_GenericCreatorHomeCardError
@@ -29671,7 +29597,6 @@ export type HeroPreset = "PRESET_1" | "PRESET_2";
 
 export type HeroStreamSummaryCardFragment = {
   cards:
-    | null
     | (CreatorHomeCardsBaseFragment & ViewerProgressCardFragment)
     | (CreatorHomeCardsBaseFragment & ProgressCardFragment)
     | CreatorHomeCardsBaseFragment;
@@ -30838,7 +30763,6 @@ export type InsightsCardFragment = {
 
 export type InsightsTrendCardFragment = {
   cards:
-    | null
     | (CreatorHomeCardsBaseFragment & ViewerProgressCardFragment)
     | (CreatorHomeCardsBaseFragment & ProgressCardFragment)
     | CreatorHomeCardsBaseFragment;
@@ -34445,7 +34369,7 @@ export type MwebFrontPageShelfTitleToken =
        */
       collectionSlug: string;
       /** @aliasFor name */
-      collectionName: null | {
+      collectionName: {
         /** @example ["Just Chatting & IRL", "Stream-o-Ween"] */
         fallbackLocalizedTitle: null | string;
         __typename: "BrowsableCollectionTitle";
@@ -36688,7 +36612,7 @@ export type PathToAffiliateQuest = {
     goal: number;
     __typename: "QuestGoalInt";
   };
-  affiliateInvitationStatus: null;
+  affiliateInvitationStatus: UnknownValue;
   hasAffiliateInviteRestriction: boolean;
   __typename: "PathToAffiliate";
 };
@@ -36862,16 +36786,16 @@ export type PaymentMethodFragment = {
   provider: PaymentProvider;
   /** @example ["UNKNOWN"] */
   paymentType: PaymentType;
-  billingCountry: null;
+  billingCountry: UnknownValue;
   billingEmail: null | string;
-  billingUsername: null;
+  billingUsername: UnknownValue;
   billingFirstName: null | string;
   billingLastName: null | string;
-  billingZip: null;
-  cardType: null;
-  lastFour: null;
-  expirationMonth: null;
-  expirationYear: null;
+  billingZip: UnknownValue;
+  cardType: UnknownValue;
+  lastFour: UnknownValue;
+  expirationMonth: UnknownValue;
+  expirationYear: UnknownValue;
   paymentScheme: null | string;
   __typename: "PaymentMethod";
 };
@@ -37064,8 +36988,8 @@ export type PaymentTransaction = {
         provider: PaymentProvider;
         /** @example ["UNKNOWN"] */
         paymentType: PaymentType;
-        cardType: null;
-        lastFour: null;
+        cardType: UnknownValue;
+        lastFour: UnknownValue;
         paymentScheme: null | string;
         __typename: "PaymentMethod";
       })[];
@@ -37478,6 +37402,21 @@ export type PermittedTerm = {
   contentType: UnknownValue;
   __typename: "ChannelPermittedTerm";
 };
+
+/** ℹ️ Not real Twitch type name */
+export type PillStyle =
+  | "ALERT"
+  | "BRAND"
+  | "DEFAULT"
+  | "INFO"
+  | "LIVE"
+  | "NEW"
+  | "NOTIFICATION"
+  | "OVERLAY"
+  | "POSITIVE_DELTA"
+  | "SUBTLE"
+  | "SUCCESS"
+  | "WARN";
 
 /** ℹ️ Not real Twitch type name */
 export type PinChatMessage_PinChatMessage = {
@@ -42819,7 +42758,7 @@ export type SearchForCollectionFragment = {
   /** @example ["collection-just-chatting-irl-streams", "collection-stream-o-ween"] */
   id: ID;
   /** @aliasFor name */
-  collectionName: null | {
+  collectionName: {
     /** @example ["Just Chatting & IRL", "Stream-o-Ween"] */
     fallbackLocalizedTitle: null | string;
     __typename: "BrowsableCollectionTitle";
@@ -43056,7 +42995,7 @@ export type SearchForQuerySubstitutionFragment = {
     item: null | {
       /** @example ["collection-just-chatting-irl-streams", "collection-stream-o-ween"] */
       id: ID;
-      name: null | {
+      name: {
         /** @example ["Just Chatting & IRL", "Stream-o-Ween"] */
         fallbackLocalizedTitle: null | string;
         __typename: "BrowsableCollectionTitle";
@@ -46043,8 +45982,8 @@ export type Shelf = {
     rowName: string;
     /** @example [""] */
     reasonType: string;
-    reasonTarget: null;
-    reasonTargetType: null;
+    reasonTarget: UnknownValue;
+    reasonTargetType: UnknownValue;
     __typename: "TrackingInfo";
   };
   __typename: "Shelf";
@@ -47181,15 +47120,38 @@ export type SponsorshipActivity =
   | (SponsorshipGiftSubMatch & { __typename: "GiftSubMatch" });
 
 export type SponsorshipActivityBase = {
-  activation: null | SponsorshipActivityBase_Activation | SponsorshipActivityBase_Activation[];
+  activation: null | {
+    id: ID;
+    /**
+     * ⚠️ Low confidence about: nullable
+     * @format date-time
+     */
+    startsAt: null | string;
+    /**
+     * ⚠️ Low confidence about: nullable
+     * @format date-time
+     */
+    endsAt: null | string;
+    /**
+     * ⚠️ Low confidence about: nullable
+     * @format uint32
+     */
+    autoDisableDelaySeconds: null | number;
+    carouselPriority: UnknownValue;
+    version: UnknownValue;
+    __typename: string;
+  };
   progress:
     | null
     | SponsorshipActivityBase_ChannelSkinProgress
     | SponsorshipActivityBase_ChannelSkinProgress[];
-  communityProgress:
-    | null
-    | SponsorshipActivityBase_CommunityProgress
-    | SponsorshipActivityBase_CommunityProgress[];
+  communityProgress: null | {
+    current: UnknownValue;
+    target: UnknownValue;
+    /** ⚠️ Low confidence about: nullable */
+    isUnlimited: null | boolean;
+    __typename: string;
+  };
   state: UnknownValue;
   /** ⚠️ Low confidence about: nullable */
   isPrimary: null | boolean;
@@ -47198,39 +47160,7 @@ export type SponsorshipActivityBase = {
 };
 
 /** ℹ️ Not real Twitch type name */
-export type SponsorshipActivityBase_Activation = {
-  id: ID;
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format date-time
-   */
-  startsAt: null | string;
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format date-time
-   */
-  endsAt: null | string;
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format uint32
-   */
-  autoDisableDelaySeconds: null | number;
-  carouselPriority: UnknownValue;
-  version: UnknownValue;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
 export type SponsorshipActivityBase_ChannelSkinProgress = {
-  current: UnknownValue;
-  target: UnknownValue;
-  /** ⚠️ Low confidence about: nullable */
-  isUnlimited: null | boolean;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type SponsorshipActivityBase_CommunityProgress = {
   current: UnknownValue;
   target: UnknownValue;
   /** ⚠️ Low confidence about: nullable */
@@ -47912,14 +47842,29 @@ export type SponsorshipToolsActivity =
         | null
         | SponsorshipToolsActivity_ChannelSkinProgress
         | SponsorshipToolsActivity_ChannelSkinProgress[];
-      communityProgress:
-        | null
-        | SponsorshipToolsActivity_CommunityProgress
-        | SponsorshipToolsActivity_CommunityProgress[];
-      activation:
-        | null
-        | SponsorshipToolsActivity_Activation
-        | SponsorshipToolsActivity_Activation[];
+      communityProgress: null | {
+        current: UnknownValue;
+        target: UnknownValue;
+        /** ⚠️ Low confidence about: nullable */
+        isUnlimited: null | boolean;
+        __typename: string;
+      };
+      activation: null | {
+        id: ID;
+        /**
+         * ⚠️ Low confidence about: nullable
+         * @format date-time
+         */
+        startsAt: null | string;
+        /**
+         * ⚠️ Low confidence about: nullable
+         * @format date-time
+         */
+        endsAt: null | string;
+        carouselPriority: UnknownValue;
+        version: UnknownValue;
+        __typename: string;
+      };
       __typename: "HostReadAd";
       /** ⚠️ Low confidence about: nullable */
       advertiserName: null | string;
@@ -47935,14 +47880,29 @@ export type SponsorshipToolsActivity =
         | null
         | SponsorshipToolsActivity_ChannelSkinProgress
         | SponsorshipToolsActivity_ChannelSkinProgress[];
-      communityProgress:
-        | null
-        | SponsorshipToolsActivity_CommunityProgress
-        | SponsorshipToolsActivity_CommunityProgress[];
-      activation:
-        | null
-        | SponsorshipToolsActivity_Activation
-        | SponsorshipToolsActivity_Activation[];
+      communityProgress: null | {
+        current: UnknownValue;
+        target: UnknownValue;
+        /** ⚠️ Low confidence about: nullable */
+        isUnlimited: null | boolean;
+        __typename: string;
+      };
+      activation: null | {
+        id: ID;
+        /**
+         * ⚠️ Low confidence about: nullable
+         * @format date-time
+         */
+        startsAt: null | string;
+        /**
+         * ⚠️ Low confidence about: nullable
+         * @format date-time
+         */
+        endsAt: null | string;
+        carouselPriority: UnknownValue;
+        version: UnknownValue;
+        __typename: string;
+      };
       __typename: "ChannelSkin";
       advertiser: null | AdvertiserFragment;
     }
@@ -47955,14 +47915,29 @@ export type SponsorshipToolsActivity =
         | null
         | SponsorshipToolsActivity_ChannelSkinProgress
         | SponsorshipToolsActivity_ChannelSkinProgress[];
-      communityProgress:
-        | null
-        | SponsorshipToolsActivity_CommunityProgress
-        | SponsorshipToolsActivity_CommunityProgress[];
-      activation:
-        | null
-        | SponsorshipToolsActivity_Activation
-        | SponsorshipToolsActivity_Activation[];
+      communityProgress: null | {
+        current: UnknownValue;
+        target: UnknownValue;
+        /** ⚠️ Low confidence about: nullable */
+        isUnlimited: null | boolean;
+        __typename: string;
+      };
+      activation: null | {
+        id: ID;
+        /**
+         * ⚠️ Low confidence about: nullable
+         * @format date-time
+         */
+        startsAt: null | string;
+        /**
+         * ⚠️ Low confidence about: nullable
+         * @format date-time
+         */
+        endsAt: null | string;
+        carouselPriority: UnknownValue;
+        version: UnknownValue;
+        __typename: string;
+      };
       __typename: "SubsidizedSubscriptions";
       advertiser: null | SubSubAdvertiserFragment;
     }
@@ -47975,47 +47950,35 @@ export type SponsorshipToolsActivity =
         | null
         | SponsorshipToolsActivity_ChannelSkinProgress
         | SponsorshipToolsActivity_ChannelSkinProgress[];
-      communityProgress:
-        | null
-        | SponsorshipToolsActivity_CommunityProgress
-        | SponsorshipToolsActivity_CommunityProgress[];
-      activation:
-        | null
-        | SponsorshipToolsActivity_Activation
-        | SponsorshipToolsActivity_Activation[];
+      communityProgress: null | {
+        current: UnknownValue;
+        target: UnknownValue;
+        /** ⚠️ Low confidence about: nullable */
+        isUnlimited: null | boolean;
+        __typename: string;
+      };
+      activation: null | {
+        id: ID;
+        /**
+         * ⚠️ Low confidence about: nullable
+         * @format date-time
+         */
+        startsAt: null | string;
+        /**
+         * ⚠️ Low confidence about: nullable
+         * @format date-time
+         */
+        endsAt: null | string;
+        carouselPriority: UnknownValue;
+        version: UnknownValue;
+        __typename: string;
+      };
       __typename: "GiftSubMatch";
       advertiser: null | GiftSubMatchAdvertiserFragment;
     };
 
 /** ℹ️ Not real Twitch type name */
-export type SponsorshipToolsActivity_Activation = {
-  id: ID;
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format date-time
-   */
-  startsAt: null | string;
-  /**
-   * ⚠️ Low confidence about: nullable
-   * @format date-time
-   */
-  endsAt: null | string;
-  carouselPriority: UnknownValue;
-  version: UnknownValue;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
 export type SponsorshipToolsActivity_ChannelSkinProgress = {
-  current: UnknownValue;
-  target: UnknownValue;
-  /** ⚠️ Low confidence about: nullable */
-  isUnlimited: null | boolean;
-  __typename: string;
-};
-
-/** ℹ️ Not real Twitch type name */
-export type SponsorshipToolsActivity_CommunityProgress = {
   current: UnknownValue;
   target: UnknownValue;
   /** ⚠️ Low confidence about: nullable */
@@ -49706,7 +49669,6 @@ export type StreamLabsAlert = {
   /** @aliasFor type */
   streamLabsType: UnknownValue;
   data:
-    | null
     | {
         thirdPartyHandle: UnknownValue;
         /** ⚠️ Low confidence about: nullable */
@@ -50952,7 +50914,7 @@ export type SubSummary = {
         __typename: string;
       }[];
   self: {
-    subscribedTier: null;
+    subscribedTier: UnknownValue;
     /**
      * @format int32
      * @example [0]
@@ -53757,7 +53719,6 @@ export type ThroneAlert = {
   /** @aliasFor type */
   throneType: UnknownValue;
   data:
-    | null
     | {
         type: UnknownValue;
         thirdPartyHandle: UnknownValue;
@@ -53889,7 +53850,7 @@ export type TitleToken = {
         /** @example ["just-chatting-irl-streams", "stream-o-ween", "moba-games", "drops-enabled", "hype-train", "speedrun-challenge-run", "music-dj-streams"] */
         slug: string;
         /** @aliasFor name */
-        collectionName: null | {
+        collectionName: {
           /** @example ["Just Chatting & IRL", "Stream-o-Ween"] */
           fallbackLocalizedTitle: null | string;
           __typename: "BrowsableCollectionTitle";
@@ -53947,29 +53908,25 @@ export type ToggleCustomReward_UpdateCommunityPointsCustomRewardError = {
 };
 
 export type TokenizedCustomElementFragment = {
-  nodes: null | DecoratedTokenFragment[];
+  nodes: DecoratedTokenFragment[];
   /** @example ["highlight", "cta"] */
   name: string;
-  identifier: null;
+  identifier: UnknownValue;
   __typename: "TokenizedCustomElement";
 };
 
 export type TokenizedGroupElementFragment = {
-  /** @example ["PARAGRAPHS", "BULLETS"] */
+  /** @example ["BULLETS", "PARAGRAPHS"] */
   type: TokenizedGroupElementType;
-  items:
-    | null
-    | {
-        nodes:
-          | null
-          | (
-              | DecoratedTokenFragment
-              | TokenizedCustomElementFragment
-              | TokenizedLinkElementFragment
-              | { __typename: "TokenizedGroupElement" }
-            )[];
-        __typename: "TokenizedText";
-      }[];
+  items: {
+    nodes: (
+      | DecoratedTokenFragment
+      | TokenizedCustomElementFragment
+      | TokenizedLinkElementFragment
+      | { __typename: "TokenizedGroupElement" }
+    )[];
+    __typename: "TokenizedText";
+  }[];
   __typename: "TokenizedGroupElement";
 };
 
@@ -53987,14 +53944,12 @@ export type TokenizedLinkElementFragment = {
 };
 
 export type TokenizedTextFragment = {
-  nodes:
-    | null
-    | (
-        | DecoratedTokenFragment
-        | TokenizedCustomElementFragment
-        | TokenizedLinkElementFragment
-        | TokenizedGroupElementFragment
-      )[];
+  nodes: (
+    | DecoratedTokenFragment
+    | TokenizedCustomElementFragment
+    | TokenizedLinkElementFragment
+    | TokenizedGroupElementFragment
+  )[];
   __typename: "TokenizedText";
 };
 
@@ -54171,8 +54126,8 @@ export type TransactionHistoryTabUserPaymentTransactions_PaymentTransactions = {
             provider: PaymentProvider;
             /** @example ["UNKNOWN"] */
             paymentType: PaymentType;
-            cardType: null;
-            lastFour: null;
+            cardType: UnknownValue;
+            lastFour: UnknownValue;
             paymentScheme: null | string;
             __typename: "PaymentMethod";
           })[];
@@ -56533,13 +56488,8 @@ export type UpdateOrganizationMemberRole_UpdateOrganizationMemberRoleError = {
 export type UpdatePanelPayload = {
   panel:
     | {
-        /**
-         * @pattern ^[0-9]+$
-         * @example ["125957370"]
-         */
-        id: ID;
-        /** @example ["DEFAULT"] */
-        type: DefaultPanelType;
+        id: string;
+        type: string;
         __typename: "DefaultPanel";
         /** @example ["JINNYTTY SHOULDER RIDER"] */
         title: null | string;
@@ -56558,13 +56508,8 @@ export type UpdatePanelPayload = {
         altText: null | string;
       }
     | {
-        /**
-         * @pattern ^[0-9]+$
-         * @example ["125957370"]
-         */
-        id: ID;
-        /** @example ["DEFAULT"] */
-        type: DefaultPanelType;
+        id: string;
+        type: string;
         __typename: "ExtensionPanel";
         /** @example ["extension-panel-1", "extension-panel-2"] */
         slotID: ID;
@@ -60649,7 +60594,7 @@ export type WithholdingRatePanelQuery_WithholdingTaxDetail = {
 
 export type YourCommunityCardFragment = {
   asset: null | YourCommunityUserFragment | YourCommunityGameFragment;
-  similarity: null;
+  similarity: UnknownValue;
   /** @example ["UNKNOWN"] */
   relationshipToChannel: RelationshipToChannel;
   isLive: boolean;
@@ -60842,7 +60787,7 @@ export type AccessIsAdsForAllEligibleData = {
     id: ID;
     adProperties: null | {
       density: null | {
-        partnershipStatus: null;
+        partnershipStatus: UnknownValue;
         __typename: "Density";
       };
       __typename: "AdProperties";
@@ -63930,7 +63875,7 @@ export type B2BCheckoutQueryData = {
             | B2BCheckoutQuery_AuthorizationAgreement[];
           __typename: "EligiblePaymentMethod";
         }[];
-        error: null;
+        error: UnknownValue;
         __typename: "EligiblePaymentMethodsPayload";
       };
       __typename: "OfferSelfEdge";
@@ -63961,17 +63906,17 @@ export type B2BCheckoutQueryData = {
           provider: PaymentProvider;
           /** @example ["UNKNOWN"] */
           paymentType: PaymentType;
-          billingCountry: null;
+          billingCountry: UnknownValue;
           billingEmail: null | string;
           billingFirstName: null | string;
           billingLastName: null | string;
-          billingZip: null;
-          cardType: null;
-          lastFour: null;
+          billingZip: UnknownValue;
+          cardType: UnknownValue;
+          lastFour: UnknownValue;
           lastTwo: UnknownValue;
           nameOnAccount: UnknownValue;
-          expirationMonth: null;
-          expirationYear: null;
+          expirationMonth: UnknownValue;
+          expirationYear: UnknownValue;
           paymentScheme: null | string;
           __typename: "PaymentMethod";
         }[];
@@ -64372,8 +64317,7 @@ export type BitsBundleSuccessScreenData = {
     bitsOffers:
       | null
       | {
-          /** @example ["AD-5"] */
-          id: ID;
+          id: string;
           /**
            * @format int32
            * @example [5]
@@ -64383,8 +64327,7 @@ export type BitsBundleSuccessScreenData = {
           asin: UnknownValue;
         }
       | {
-          /** @example ["AD-5"] */
-          id: ID;
+          id: string;
           /**
            * @format int32
            * @example [5]
@@ -64544,7 +64487,7 @@ export type BitsCardMainCardData = {
          * @example [200, 1, 300, 69, 10, 500, 5]
          */
         cheerMinimumBits: number;
-        event: null;
+        event: UnknownValue;
         /**
          * ⚠️ Low confidence about: nullable
          * @directive include(if: $withCheerBombEventEnabled)
@@ -64598,8 +64541,7 @@ export type BitsCheckoutRootData = {
       | null
       | (
           | (BitsBundleOfferOnCheckout & {
-              /** @example ["AD-5"] */
-              id: ID;
+              id: string;
               /**
                * @format int32
                * @example [5]
@@ -64607,8 +64549,7 @@ export type BitsCheckoutRootData = {
               bits: number;
             })
           | {
-              /** @example ["AD-5"] */
-              id: ID;
+              id: string;
               /**
                * @format int32
                * @example [5]
@@ -64851,8 +64792,7 @@ export type BitsProductDescriptionData = {
     bitsOffers:
       | null
       | {
-          /** @example ["AD-5"] */
-          id: ID;
+          id: string;
           /**
            * @format int32
            * @example [5]
@@ -64862,8 +64802,7 @@ export type BitsProductDescriptionData = {
           asin: UnknownValue;
         }
       | {
-          /** @example ["AD-5"] */
-          id: ID;
+          id: string;
           /**
            * @format int32
            * @example [5]
@@ -65926,12 +65865,12 @@ export type CategoryReportQueryData = {
     };
     /** @example ["Any"] */
     defaultTagName: string;
-    error: null;
+    error: UnknownValue;
     /** @example ["en"] */
     language: string;
     /** @example ["en", "es", "de", "pt", "fr", "ru", "ko", "ja", "it", "zh", "tr", "pl", "ar", "th", "cs", "nl", "hu", "sv", "fi", "da", "el", "no", "id", "bg", "ro", "sk", "tl", "uk", "vi", "ca", "hi", "ms", "asl", "zh-hk", "other"] */
     filteredLanguages: string[];
-    channelCcv: null;
+    channelCcv: UnknownValue;
     __typename: "CategoryReport";
   };
 };
@@ -67587,7 +67526,7 @@ export type ChannelDropsCampaignsData = {
                * @example [1]
                */
               subs: null | number;
-              turboSubs: null;
+              turboSubs: UnknownValue;
               __typename: "DropsUnlockRequirement";
             };
             isRepeatable: boolean;
@@ -70518,7 +70457,7 @@ export type ChatInputData = {
          * @example [200, 1, 300, 69, 10, 500, 5]
          */
         cheerMinimumBits: number;
-        event: null;
+        event: UnknownValue;
         __typename: "CheerSettings";
       };
       __typename: "CheerInfo";
@@ -71923,7 +71862,7 @@ export type CheckoutFormScreenManagerData = {
        */
       checkoutActions: UnknownValue[];
       /** @gqlArg `paymentSession: PaymentSession` */
-      promoActions: null;
+      promoActions: UnknownValue;
       eligiblePaymentMethodsPayload: {
         methods: (EligiblePaymentMethodFragment & {
           authorizationAgreement:
@@ -71931,7 +71870,7 @@ export type CheckoutFormScreenManagerData = {
             | CheckoutFormScreenManager_AuthorizationAgreement
             | CheckoutFormScreenManager_AuthorizationAgreement[];
         })[];
-        error: null;
+        error: UnknownValue;
         __typename: "EligiblePaymentMethodsPayload";
       };
       checkoutConfiguration: null | {
@@ -71939,8 +71878,8 @@ export type CheckoutFormScreenManagerData = {
           /** @example ["deadbeefdeadbeefdeadbeefdeadbeef_lc_en"] */
           token: string;
           isSandbox: boolean;
-          ineligibilityReason: null;
-          error: null;
+          ineligibilityReason: UnknownValue;
+          error: UnknownValue;
           __typename: "Xsolla";
         };
         __typename: "CheckoutConfiguration";
@@ -72613,7 +72552,7 @@ export type ClipCommentEligibilityData = {
     self: {
       commentCreationEligibility: {
         isAllowed: boolean;
-        errorCodes: null;
+        errorCodes: UnknownValue;
         /** @format uint32 */
         requiredFollowingLengthMinutes: null | number;
         __typename: "ClipCommentCreationEligibility";
@@ -72740,7 +72679,7 @@ export type ClipCommentsData = {
     self: {
       commentCreationEligibility: {
         isAllowed: boolean;
-        errorCodes: null;
+        errorCodes: UnknownValue;
         /** @format uint32 */
         requiredFollowingLengthMinutes: null | number;
         __typename: "ClipCommentCreationEligibility";
@@ -73825,7 +73764,7 @@ export type CollectionLocalizedTitleData = {
     id: ID;
     /** @example ["just-chatting-irl-streams", "stream-o-ween", "moba-games", "drops-enabled", "hype-train", "speedrun-challenge-run", "music-dj-streams"] */
     slug: string;
-    name: null | {
+    name: {
       /** @example ["Just Chatting & IRL", "Stream-o-Ween"] */
       fallbackLocalizedTitle: null | string;
       __typename: "BrowsableCollectionTitle";
@@ -76536,7 +76475,6 @@ export type CreatorHomeCardsByIdsData = {
     /** @example ["23161357"] */
     id: ID;
     cards: CreatorHomeCardsFragment & {
-      /** @example ["HERO_GENERIC_GET_BACK_TO_STREAMING_WITH_SCHEDULE", "spotlight_halloween_drops_2026_0d40363e-6245-4b73-a339-295a5976124a"] */
       identifier: string;
       __typename:
         | "CommunityCreatorHomeCard"
@@ -78117,7 +78055,7 @@ export type DefaultAlertVariationsData = {
        * @example ["https://static-cdn.jtvnw.net/default-alert-asset/v1/video/Follow.webm", "https://static-cdn.jtvnw.net/default-alert-asset/v1/video/FirstTimeSub.webm"]
        */
       url: string;
-      volume: null;
+      volume: UnknownValue;
       /** @example ["VIDEO"] */
       assetType: AlertAssetType;
       /** @example ["video/webm"] */
@@ -79885,7 +79823,7 @@ export type DropChannelCampaignsProgressData = {
            * @example [1]
            */
           subs: null | number;
-          turboSubs: null;
+          turboSubs: UnknownValue;
           __typename: "DropsUnlockRequirement";
         };
         isRepeatable: boolean;
@@ -81185,7 +81123,7 @@ export type EmotesSettingsData = {
        * @example [0]
        */
       current: number;
-      next: null;
+      next: UnknownValue;
       /**
        * ⚠️ Low confidence about: nullable
        * @format uint32
@@ -81520,25 +81458,15 @@ export type ExtensionConfigureData = {
     panels:
       | null
       | {
-          /**
-           * @pattern ^[0-9]+$
-           * @example ["125957370"]
-           */
-          id: ID;
-          /** @example ["DEFAULT"] */
-          type: DefaultPanelType;
+          id: string;
+          type: string;
           __typename: "ExtensionPanel";
           /** @example ["extension-panel-1", "extension-panel-2"] */
           slotID: ID;
         }
       | {
-          /**
-           * @pattern ^[0-9]+$
-           * @example ["125957370"]
-           */
-          id: ID;
-          /** @example ["DEFAULT"] */
-          type: DefaultPanelType;
+          id: string;
+          type: string;
           __typename: "DefaultPanel";
         }[];
     __typename: "User";
@@ -81783,25 +81711,15 @@ export type ExtensionManagementPageData = {
     panels:
       | null
       | {
-          /**
-           * @pattern ^[0-9]+$
-           * @example ["125957370"]
-           */
-          id: ID;
-          /** @example ["DEFAULT"] */
-          type: DefaultPanelType;
+          id: string;
+          type: string;
           __typename: "ExtensionPanel";
           /** @example ["extension-panel-1", "extension-panel-2"] */
           slotID: ID;
         }
       | {
-          /**
-           * @pattern ^[0-9]+$
-           * @example ["125957370"]
-           */
-          id: ID;
-          /** @example ["DEFAULT"] */
-          type: DefaultPanelType;
+          id: string;
+          type: string;
           __typename: "DefaultPanel";
         }[];
     __typename: "User";
@@ -85626,7 +85544,7 @@ export type GetHourlyViewersHeatmapQueryData = {
     dataStatus: DataStatus;
     /** @example ["UNKNOWN"] */
     releaseStatus: ReleaseStatus;
-    error: null;
+    error: UnknownValue;
     __typename: "HourlyViewersList";
   };
 };
@@ -85728,7 +85646,7 @@ export type GetHourlyViewersReportQueryData = {
         dataStatus: DataStatus;
         /** @example ["UNKNOWN"] */
         releaseStatus: ReleaseStatus;
-        error: null;
+        error: UnknownValue;
         __typename: "HourlyViewersList";
       };
       /** @example ["en"] */
@@ -85737,7 +85655,7 @@ export type GetHourlyViewersReportQueryData = {
       filteredLanguages: string[];
       __typename: "HourlyViewersReport";
     };
-    error: null;
+    error: UnknownValue;
     __typename: "HourlyViewersReportResult";
   };
 };
@@ -91191,22 +91109,12 @@ export type MwebChannelAboutPageQueryData = {
       | null
       | (
           | (MwebChannelAboutPageDefaultPanelFragment & {
-              /**
-               * @pattern ^[0-9]+$
-               * @example ["125957370"]
-               */
-              id: ID;
-              /** @example ["DEFAULT"] */
-              type: DefaultPanelType;
+              id: string;
+              type: string;
             })
           | {
-              /**
-               * @pattern ^[0-9]+$
-               * @example ["125957370"]
-               */
-              id: ID;
-              /** @example ["DEFAULT"] */
-              type: DefaultPanelType;
+              id: string;
+              type: string;
               __typename: "ExtensionPanel";
             }
         )[];
@@ -91671,7 +91579,7 @@ export type MwebDirectoryCollectionQueryData = {
     id: ID;
     /** @example ["just-chatting-irl-streams", "stream-o-ween", "moba-games", "drops-enabled", "hype-train", "speedrun-challenge-run", "music-dj-streams"] */
     slug: string;
-    name: null | {
+    name: {
       /** @example ["Just Chatting & IRL", "Stream-o-Ween"] */
       fallbackLocalizedTitle: null | string;
       __typename: "BrowsableCollectionTitle";
@@ -92622,7 +92530,7 @@ export type MyCollaborationsShelfData = {
       hasNextPage: boolean;
       __typename: "PageInfo";
     };
-    verboseResults: null;
+    verboseResults: UnknownValue;
     __typename: "ShelfConnection";
   };
 };
@@ -92859,7 +92767,7 @@ export type NewAllCampaignsCampaignDetailsData = {
            * @example [1]
            */
           subs: null | number;
-          turboSubs: null;
+          turboSubs: UnknownValue;
           __typename: "DropsUnlockRequirement";
         };
         repeatableConfig: null | {
@@ -93383,13 +93291,9 @@ export type OfferEligibilityData = {
     bitsOffers:
       | null
       | (
-          | (BitsBundleOffer & {
-              /** @example ["AD-5"] */
-              id: ID;
-            })
+          | (BitsBundleOffer & { id: string })
           | {
-              /** @example ["AD-5"] */
-              id: ID;
+              id: string;
               __typename: "BitsAdOffer";
             }
         )[];
@@ -94608,7 +94512,7 @@ export type PaymentMethodsTabUserPaymentMethodsData = {
         availabilityStatus: AvailabilityStatus;
         __typename: "EligiblePaymentMethod";
       }[];
-      error: null;
+      error: UnknownValue;
       __typename: "EligiblePaymentMethodsPayload";
     };
     paymentMethods:
@@ -94622,11 +94526,11 @@ export type PaymentMethodsTabUserPaymentMethodsData = {
           paymentType: PaymentType;
           paymentScheme: null | string;
           billingEmail: null | string;
-          billingUsername: null;
-          cardType: null;
-          lastFour: null;
-          expirationMonth: null;
-          expirationYear: null;
+          billingUsername: UnknownValue;
+          cardType: UnknownValue;
+          lastFour: UnknownValue;
+          expirationMonth: UnknownValue;
+          expirationYear: UnknownValue;
           /** ⚠️ Low confidence about: nullable */
           extMethodID: null | ID;
           purchaseProfiles:
@@ -94699,7 +94603,7 @@ export type PayoutChannelRevenuesData = {
             | PayoutChannelRevenues_RefundAmount[];
           __typename: "PayoutChannelRevenues";
         }[];
-    error: null;
+    error: UnknownValue;
     __typename: "PayoutChannelRevenues";
   };
 };
@@ -94792,7 +94696,7 @@ export type PayoutMethodInfoQueryData = {
     };
     payout: {
       id: ID;
-      method: null;
+      method: UnknownValue;
       __typename: "Payout";
     };
     __typename: "User";
@@ -96654,8 +96558,7 @@ export type PurchaseOrderSuccessSnackbarData = {
     bitsOffers:
       | null
       | {
-          /** @example ["AD-5"] */
-          id: ID;
+          id: string;
           /**
            * @format int32
            * @example [5]
@@ -98985,7 +98888,7 @@ export type SearchResultsPageSearchResultsVariables = {
 
 export type SearchResultsPageSearchResultsData = {
   searchFor: {
-    banners: null;
+    banners: UnknownValue;
     querySubstitution: SearchForQuerySubstitutionFragment;
     channels: null | SearchForChannelsFragment;
     channelsWithTag: SearchForChannelsWithTagFragment;
@@ -99783,11 +99686,11 @@ export type SettingsContentAccessSettingsData = {
       id: ID;
       vodSettings: {
         isUnviewable: boolean;
-        unviewableExpirationTime: null;
+        unviewableExpirationTime: UnknownValue;
         publishSettings: {
           wasDisabled: boolean;
-          disableReason: null;
-          lastDisableTime: null;
+          disableReason: UnknownValue;
+          lastDisableTime: UnknownValue;
           isDisableOptOut: boolean;
           __typename: "ChannelVODClipsPublishSettings";
         };
@@ -100055,7 +99958,7 @@ export type SetupToolsSectionPayoutMethodData = {
     displayName: string;
     payout: {
       id: ID;
-      method: null;
+      method: UnknownValue;
       __typename: "Payout";
     };
     spendableBalance: null | {
@@ -100302,7 +100205,7 @@ export type ShelvesData = {
       hasNextPage: boolean;
       __typename: "PageInfo";
     };
-    verboseResults: null;
+    verboseResults: UnknownValue;
     __typename: "ShelfConnection";
   };
 };
@@ -101443,7 +101346,7 @@ export type StatsWidgetData = {
        * @example [0]
        */
       current: number;
-      next: null;
+      next: UnknownValue;
       __typename: "SubscriberScore";
     };
     __typename: "User";
@@ -101770,7 +101673,7 @@ export type StreamerAdsManagerPanelAdPropertiesQueryData = {
     adProperties: null | {
       density: null | {
         isAdScheduleEnabled: boolean;
-        partnershipStatus: null;
+        partnershipStatus: UnknownValue;
         __typename: "Density";
       };
       __typename: "AdProperties";
@@ -103639,7 +103542,7 @@ export type SubscriptionCountsData = {
           timestamp: UnknownValue;
           __typename: string;
         }[];
-    error: null;
+    error: UnknownValue;
     __typename: "SubscriptionCountsResult";
   };
 };
@@ -104072,7 +103975,7 @@ export type SubsTileQueryData = {
        * @example [0]
        */
       current: number;
-      next: null;
+      next: UnknownValue;
       __typename: "SubscriberScore";
     };
     __typename: "User";
@@ -108074,8 +107977,8 @@ export type UpdatePaymentMethodFormData = {
       | {
           /** @example ["XSOLLA", "GOOGLE_IAB"] */
           provider: PaymentProvider;
-          billingCountry: null;
-          billingZip: null;
+          billingCountry: UnknownValue;
+          billingZip: UnknownValue;
           billingFirstName: null | string;
           billingLastName: null | string;
           __typename: "PaymentMethod";
@@ -108088,7 +107991,7 @@ export type UpdatePaymentMethodFormData = {
         availabilityStatus: AvailabilityStatus;
         __typename: "EligiblePaymentMethod";
       }[];
-      error: null;
+      error: UnknownValue;
       __typename: "EligiblePaymentMethodsPayload";
     };
     paymentMethodConfigs:
@@ -108119,11 +108022,11 @@ export type UpdatePaymentMethodModalData = {
           /** @example ["UNKNOWN"] */
           paymentType: PaymentType;
           billingEmail: null | string;
-          billingUsername: null;
-          cardType: null;
-          lastFour: null;
-          expirationMonth: null;
-          expirationYear: null;
+          billingUsername: UnknownValue;
+          cardType: UnknownValue;
+          lastFour: UnknownValue;
+          expirationMonth: UnknownValue;
+          expirationYear: UnknownValue;
           recurringPaymentDetails:
             | null
             | UpdatePaymentMethodModal_RecurringPaymentDetails
@@ -108904,7 +108807,7 @@ export type UserMenuCurrentUserData = {
      * @example ["23161357"]
      */
     id: ID;
-    availability: null;
+    availability: UnknownValue;
     /**
      * @format uri
      * @example ["https://static-cdn.jtvnw.net/jtv_user_pictures/7db44749-286f-4db0-9c99-574b16170d44-profile_image-70x70.png", "https://static-cdn.jtvnw.net/jtv_user_pictures/3c3366d7-728a-4204-bfdd-7c823858e4d9-profile_image-70x70.png"]
@@ -112832,7 +112735,7 @@ export type WhispersTrackingCurrentUserData = {
      */
     id: ID;
     hasTurbo: boolean;
-    availability: null;
+    availability: UnknownValue;
     /** @example ["lirik", "twitch", "cdprojektred", "forsen", "tickett_", "st1mgreeen", "lipton_18"] */
     login: string;
     __typename: "User";
@@ -117509,25 +117412,15 @@ export type ExtensionConfigureCreatePanelData = {
     panel:
       | null
       | {
-          /**
-           * @pattern ^[0-9]+$
-           * @example ["125957370"]
-           */
-          id: ID;
-          /** @example ["DEFAULT"] */
-          type: DefaultPanelType;
+          id: string;
+          type: string;
           __typename: "ExtensionPanel";
           /** @example ["extension-panel-1", "extension-panel-2"] */
           slotID: ID;
         }
       | {
-          /**
-           * @pattern ^[0-9]+$
-           * @example ["125957370"]
-           */
-          id: ID;
-          /** @example ["DEFAULT"] */
-          type: DefaultPanelType;
+          id: string;
+          type: string;
           __typename: "DefaultPanel";
         };
     __typename: "CreatePanelPayload";
@@ -117602,25 +117495,15 @@ export type ExtensionManagementPageCreatePanelData = {
     panel:
       | null
       | {
-          /**
-           * @pattern ^[0-9]+$
-           * @example ["125957370"]
-           */
-          id: ID;
-          /** @example ["DEFAULT"] */
-          type: DefaultPanelType;
+          id: string;
+          type: string;
           __typename: "ExtensionPanel";
           /** @example ["extension-panel-1", "extension-panel-2"] */
           slotID: ID;
         }
       | {
-          /**
-           * @pattern ^[0-9]+$
-           * @example ["125957370"]
-           */
-          id: ID;
-          /** @example ["DEFAULT"] */
-          type: DefaultPanelType;
+          id: string;
+          type: string;
           __typename: "DefaultPanel";
         };
     __typename: "CreatePanelPayload";
